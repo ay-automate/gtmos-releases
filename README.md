@@ -40,6 +40,12 @@ Manual setup, without Claude:
 
 ```bash
 gtm setup ./instance --org "Acme" --email you@acme.com --approver-email ops@acme.com --version 0.2.2
+```
+
+The owner and approver passwords are saved in `./instance/.env`. Sign in to the console (http://localhost:3000), create an agent key in **Settings > Developer**, then connect the CLI and check the install:
+
+```bash
+gtm init --url http://localhost:3001 --key <agent key>
 gtm doctor --strict
 ```
 
