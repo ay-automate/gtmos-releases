@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<title>GTM OS Product Documentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f2ec;
+  --surface:#fbf9f5;
+  --surface-2:#efe9df;
+  --fg:#1f1b16;
+  --muted:#62594d;
+  --line:#ddd4c6;
+  --line-strong:#c9bdab;
+  --ember:#f26a43;
+  --ember-ink:#b5421d;
+  --ember-tint:#fbe6dc;
+  --gate:#e07b2a;
+  --gate-ink:#9a4f12;
+  --gate-tint:#f8ead9;
+  --tech-tint:#ebe7df;
+  --code-bg:#ebe4d8;
+  --code-fg:#3a2f24;
+  --ok:#3c7650;
+  --ok-tint:#e2efe3;
+  --warn:#9a5a12;
+  --warn-tint:#f6e7cf;
+  --shadow:0 1px 0 rgba(60,40,20,.04),0 6px 20px -12px rgba(60,40,20,.18);
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --header-h:56px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15120e;
+    --surface:#1d1914;
+    --surface-2:#25201a;
+    --fg:#ece5da;
+    --muted:#a99d8d;
+    --line:#352e25;
+    --line-strong:#4a4135;
+    --ember:#f47b56;
+    --ember-ink:#f89b7c;
+    --ember-tint:#3a2219;
+    --gate:#ec9350;
+    --gate-ink:#f2b07a;
+    --gate-tint:#352616;
+    --tech-tint:#221e19;
+    --code-bg:#221d17;
+    --code-fg:#e9d9c4;
+    --ok:#7cc293;
+    --ok-tint:#1d2c21;
+    --warn:#e9b06a;
+    --warn-tint:#33281a;
+    --shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -14px rgba(0,0,0,.6);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15120e;
+  --surface:#1d1914;
+  --surface-2:#25201a;
+  --fg:#ece5da;
+  --muted:#a99d8d;
+  --line:#352e25;
+  --line-strong:#4a4135;
+  --ember:#f47b56;
+  --ember-ink:#f89b7c;
+  --ember-tint:#3a2219;
+  --gate:#ec9350;
+  --gate-ink:#f2b07a;
+  --gate-tint:#352616;
+  --tech-tint:#221e19;
+  --code-bg:#221d17;
+  --code-fg:#e9d9c4;
+  --ok:#7cc293;
+  --ok-tint:#1d2c21;
+  --warn:#e9b06a;
+  --warn-tint:#33281a;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 8px 24px -14px rgba(0,0,0,.6);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--fg);margin:0;font-family:var(--font-body);font-size:16.5px;line-height:1.62;overflow-x:hidden}
+a{color:var(--ember-ink);text-decoration-thickness:1px;text-underline-offset:2px}
+a:hover{color:var(--ember)}
+code,kbd,.mono{font-family:var(--font-mono);font-size:.86em}
+:not(pre)>code{background:var(--code-bg);color:var(--code-fg);padding:.08em .38em;border-radius:4px;overflow-wrap:anywhere}
+pre{font-family:var(--font-mono);font-size:13.5px;line-height:1.55;background:var(--code-bg);color:var(--code-fg);padding:14px 16px;border-radius:10px;overflow-x:auto;border:1px solid var(--line);margin:14px 0}
+pre.mermaid{background:var(--surface);color:var(--fg);text-align:center;font-family:var(--font-body)}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.15;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(1.6rem,1.2rem + 1.6vw,2.2rem);font-weight:700;margin:0 0 6px}
+h3{font-size:1.28rem;font-weight:650;margin:30px 0 8px}
+h4{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin:0 0 8px;font-family:var(--font-mono)}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 12px;padding-left:1.3em}
+li{margin:3px 0}
+strong{font-weight:600}
+
+/* header */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+.topbar-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 24px;min-height:var(--header-h)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;white-space:nowrap}
+.brand-mark{width:26px;height:26px;border-radius:7px;background:var(--ember);display:grid;place-items:center;color:#fff;font-family:var(--font-mono);font-size:12px;font-weight:500}
+.brand small{font-family:var(--font-mono);font-weight:400;font-size:.72rem;color:var(--muted);margin-left:2px}
+.spacer{flex:1}
+.seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;padding:2px;background:var(--surface)}
+.seg button{font:500 .8rem/1 var(--font-body);color:var(--muted);background:transparent;border:0;border-radius:999px;padding:7px 11px;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+.seg button:focus-visible,.icon-btn:focus-visible{outline:2px solid var(--ember);outline-offset:2px}
+.icon-btn{border:1px solid var(--line-strong);background:var(--surface);color:var(--fg);border-radius:999px;width:34px;height:34px;display:grid;place-items:center;cursor:pointer;font-size:15px}
+
+/* layout */
+.shell{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:250px minmax(0,1fr);gap:48px;padding:0 24px}
+.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--header-h) + 16px);align-self:start;max-height:calc(100vh - var(--header-h) - 32px);overflow:auto;padding:24px 0 40px}
+.toc-label{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+.toc ol{list-style:none;padding:0;margin:0;counter-reset:toc}
+.toc li{margin:0}
+.toc a{display:flex;gap:10px;padding:6px 10px;border-radius:8px;color:var(--muted);text-decoration:none;font-size:.92rem;line-height:1.35;border-left:2px solid transparent}
+.toc a::before{counter-increment:toc;content:counter(toc,decimal-leading-zero);font-family:var(--font-mono);font-size:.74rem;color:var(--line-strong);padding-top:2px}
+.toc a:hover{color:var(--fg);background:var(--surface-2)}
+.toc a.active{color:var(--fg);background:var(--surface);border-left-color:var(--ember);box-shadow:var(--shadow)}
+.toc a.active::before{color:var(--ember)}
+.toc-meta{margin-top:22px;font-size:.8rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
+main{min-width:0;padding:28px 0 96px;max-width:900px}
+section.doc{padding-top:36px;margin-top:36px;border-top:1px solid var(--line);scroll-margin-top:calc(var(--header-h) + 12px)}
+section.doc:first-of-type{border-top:0;margin-top:0;padding-top:12px}
+.kicker{font-family:var(--font-mono);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ember-ink);margin:0 0 8px}
+.lede{font-size:1.1rem;color:var(--fg);max-width:70ch}
+.prose{max-width:70ch}
+
+/* hero */
+.hero{padding:30px 0 8px}
+.hero h1{font-size:clamp(2.1rem,1.4rem + 3.4vw,3.6rem);font-weight:800;letter-spacing:-.025em;margin:0 0 14px;max-width:18ch}
+.hero h1 em{font-style:normal;color:var(--ember)}
+.hero .lede{font-size:1.15rem}
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
+.pill{font-family:var(--font-mono);font-size:.76rem;border:1px solid var(--line-strong);background:var(--surface);border-radius:999px;padding:4px 10px;color:var(--muted)}
+.pill b{color:var(--fg);font-weight:500}
+
+/* dual audience */
+.dual{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.dual > div{border-radius:12px;padding:16px 18px;border:1px solid var(--line)}
+.dual > div > :last-child{margin-bottom:0}
+.dual .gtm{background:var(--ember-tint);border-color:color-mix(in srgb,var(--ember) 28%,var(--line))}
+.dual .gtm h4{color:var(--ember-ink)}
+.dual .tech{background:var(--tech-tint)}
+.dual .tech h4{color:var(--muted)}
+#app[data-aud="gtm"] .tech,#app[data-aud="tech"] .gtm{display:none}
+#app[data-aud="gtm"] .dual,#app[data-aud="tech"] .dual{grid-template-columns:1fr}
+.dual.stacked{grid-template-columns:minmax(0,1fr)}
+.dual.stacked > div{padding:20px 24px}
+.aud-note{font-size:.85rem;color:var(--muted);margin:4px 0 0}
+
+/* cards */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:16px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 16px;box-shadow:var(--shadow)}
+.tile h3,.tile h5{margin:0 0 6px;font-family:var(--font-display);font-size:1.05rem;font-weight:650}
+.tile p{font-size:.94rem;margin:0}
+.tile .tag{font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
+.engine{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px 22px 14px;margin:20px 0;box-shadow:var(--shadow);scroll-margin-top:calc(var(--header-h) + 12px)}
+.engine-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin-bottom:4px}
+.engine-head h3{margin:0;font-size:1.35rem}
+.engine-head .pkg{font-family:var(--font-mono);font-size:.78rem;color:var(--muted)}
+.engine .dual{margin:12px 0}
+.facts{display:grid;grid-template-columns:150px minmax(0,1fr);gap:0;margin:8px 0 6px;font-size:.92rem;border-top:1px solid var(--line)}
+.facts dt,.facts dd{padding:8px 0;border-bottom:1px solid var(--line);margin:0}
+.facts dt{font-family:var(--font-mono);font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-right:12px;padding-top:10px}
+.facts dd{min-width:0;overflow-wrap:anywhere}
+
+/* callouts */
+.callout{border-radius:12px;padding:14px 16px;margin:16px 0;border:1px solid var(--line);background:var(--surface)}
+.callout.gate{background:var(--gate-tint);border-color:color-mix(in srgb,var(--gate) 35%,var(--line))}
+.callout.gate strong:first-child{color:var(--gate-ink)}
+.callout.ok{background:var(--ok-tint);border-color:color-mix(in srgb,var(--ok) 35%,var(--line))}
+.callout.warn{background:var(--warn-tint);border-color:color-mix(in srgb,var(--warn) 35%,var(--line))}
+.callout > :last-child{margin-bottom:0}
+
+/* tables */
+.tbl{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{font-family:var(--font-mono);font-weight:500;font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);background:var(--surface-2);white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td code{white-space:nowrap}
+td.wrap code{white-space:normal}
+.yes{color:var(--ok);font-weight:600}
+.no{color:var(--ember-ink);font-weight:600}
+
+/* glossary */
+.gloss{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 28px}
+.gloss dl{margin:0}
+.gloss dt{font-family:var(--font-display);font-weight:650;margin-top:12px}
+.gloss dt span{font-family:var(--font-mono);font-weight:400;font-size:.7rem;color:var(--muted);margin-left:6px;text-transform:uppercase;letter-spacing:.06em}
+.gloss dd{margin:2px 0 0;font-size:.93rem;color:var(--fg)}
+
+.steps{counter-reset:step;list-style:none;padding:0}
+.steps > li{position:relative;padding:0 0 12px 40px;margin:0}
+.steps > li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--fg);color:var(--bg);font:500 .78rem/26px var(--font-mono);text-align:center}
+.foot{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+
+@media (max-width:1040px){
+  .shell{grid-template-columns:minmax(0,1fr);gap:0}
+  .toc{position:static;max-height:none;padding:18px 0 4px;border-bottom:1px solid var(--line)}
+  .toc ol{columns:2;column-gap:12px}
+  .toc a{break-inside:avoid}
+  .toc-meta{display:none}
+  main{max-width:none}
+}
+@media (max-width:760px){
+  .dual,.grid2{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr 1fr}
+  .gloss{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .facts dt{border-bottom:0;padding-bottom:0}
+  .seg button{padding:7px 9px}
+  .brand small{display:none}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .topbar-inner{padding:8px 16px;gap:8px;flex-wrap:wrap}
+  .shell{padding:0 16px}
+  .toc ol{columns:1}
+  .grid3{grid-template-columns:1fr}
+  .seg button{font-size:.74rem;padding:6px 8px}
+  .engine{padding:16px 14px 10px}
+  pre{font-size:12.5px;padding:12px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div id="app" data-aud="both">
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="#what"><span class="brand-mark">os</span>GTM OS <small>product documentation · v0.2.2</small></a>
+    <div class="spacer"></div>
+    <div class="seg" role="group" aria-label="Audience">
+      <button type="button" data-aud="both" aria-pressed="true">Both views</button>
+      <button type="button" data-aud="gtm" aria-pressed="false">GTM teams</button>
+      <button type="button" data-aud="tech" aria-pressed="false">Engineers</button>
+    </div>
+    <button type="button" class="icon-btn" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+  </div>
+</header>
+
+<div class="shell">
+<nav class="toc" aria-label="Contents">
+  <p class="toc-label">Contents</p>
+  <ol>
+    <li><a href="#what">What GTM OS is</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#concepts">Core concepts</a></li>
+    <li><a href="#ontology">Ontology and data</a></li>
+    <li><a href="#engines">The engines</a></li>
+    <li><a href="#flows">End-to-end flows</a></li>
+    <li><a href="#integrations">Integrations</a></li>
+    <li><a href="#customize">Flexibility and customization</a></li>
+    <li><a href="#security">Security and governance</a></li>
+    <li><a href="#glossary">Glossary</a></li>
+    <li><a href="#not-built">What is not built yet</a></li>
+  </ol>
+  <div class="toc-meta">Written against the code at gtmos <code>main</code> commit <code>e29e84f9</code> (release 0.2.2). When this page and a live instance disagree, the live registry (<code>gtm_describe</code>) wins.</div>
+</nav>
+
+<main>
+
+<!-- 1 -->
+<section class="doc" id="what">
+  <div class="hero">
+    <p class="kicker">01 · What GTM OS is</p>
+    <h1>An operating system for <em>go-to-market</em> that you host and agents run.</h1>
+    <p class="lede">GTM OS is an open-source, self-hosted platform that holds your go-to-market data in one typed model, runs the GTM work through engines, and lets humans and AI agents operate all of it through one governed interface where every customer-facing action waits for a second person to approve it.</p>
+    <div class="pillrow">
+      <span class="pill"><b>7</b> engines</span>
+      <span class="pill"><b>401</b> operations</span>
+      <span class="pill"><b>35</b> canon object types</span>
+      <span class="pill"><b>23</b> definition kinds</span>
+      <span class="pill"><b>36</b> first-party packages</span>
+      <span class="pill"><b>10</b> blueprints</span>
+    </div>
+  </div>
+
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>Most GTM teams run on a stack of tools that each hold a slice of the customer and none of which agree. GTM OS replaces that with one system: your accounts, contacts, deals, signals and activity live in one place, and the work on top of them (finding intent, enriching records, scoring accounts, routing, sequencing, SEO, paid ads) runs as engines you configure.</p>
+      <p>You describe your motion once (who your ICP is, which signals matter, how many emails a mailbox may send, who must never be contacted) and the engines follow it. Nothing reaches a customer, a CRM or an ad account until a person on your team approves it.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>A small kernel holds the runtimes and the meta-model and contains no GTM business objects. Everything a company recognizes as GTM ships as packages on top (engines, ontology modules, connectors, screens, packs, blueprints). Every capability is an <strong>operation</strong> in one registry; REST, the TypeScript SDK, the <code>gtm</code> CLI and the MCP server are all generated from it and all call the same <code>runOperation</code> pipeline, so authorization and approvals cannot be bypassed.</p>
+      <p>Stack: Next.js console, NestJS API, Postgres with pgvector, Prisma, Better Auth, Cedar authorization, CEL expressions, a Postgres-native durable flow runtime, pnpm and Turborepo.</p>
+    </div>
+  </div>
+
+  <h3>Who it is for</h3>
+  <div class="grid3">
+    <div class="tile"><h5>GTM engineers</h5><p>The person who designs the scoring, routing, sequencing and data rules, usually working through Claude Code or Codex.</p></div>
+    <div class="tile"><h5>Revenue and marketing leaders</h5><p>Owners and admins who approve sends, merges, budget changes and config before they go live.</p></div>
+    <div class="tile"><h5>Agencies</h5><p>Teams that run GTM inside client orgs through delegations, with the client keeping approval rights.</p></div>
+  </div>
+
+  <h3>The core idea</h3>
+  <p class="prose">GTM OS is built so that an AI agent can do the work of a GTM engineer without being trusted blindly. The agent gets the same operations a human admin has. What it cannot do is approve its own work, widen its own authority, consent to OAuth in a browser, or switch off the safety switch. Those stay with people. In plain terms: the agent builds and proposes, a second human decides, and the kernel records who did what.</p>
+  <p class="prose">The README compares it to WordPress: a stable core you install on your own infrastructure, plus packages that deliver the work. You own the data and the deployment, and you can take your data out at any time with <code>gtm org export</code>.</p>
+
+  <h3>How it is delivered</h3>
+  <div class="dual stacked">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p><strong>What you get.</strong> A complete go-to-market workspace that runs on your own machine or cloud: a web console with your CRM (companies, contacts, deals), the engines that find, score, route and reach accounts, an approvals inbox, and a built-in agent workspace so Claude Code or Codex can set up and run the system with you. It is open source and self-hosted, so your pipeline data never sits in someone else's SaaS.</p>
+      <p><strong>How you set it up.</strong> You do not configure it by hand. In an empty folder you open Claude Code and run <code>gtm init</code>, then <code>/setup-gtmos</code>. Claude installs GTM OS, creates your organization with an owner and a second approver, connects it to itself, and asks you only for the things a person has to provide:</p>
+      <ul>
+        <li>your organization name and the two people's emails (the approver must be a different person);</li>
+        <li>one click on <strong>Connect Composio</strong>, after which the apps you already use (CRM, Gmail, Calendar, Slack, Search Console, Ahrefs) are discovered and linked;</li>
+        <li>the API keys you choose to add (an AI model, looot for data, an email sender), which you paste in the console;</li>
+        <li>the DNS records for your sending domain, if you will send email.</li>
+      </ul>
+      <p><strong>From setup to working system.</strong> Then <code>/build-gtm-system</code>: the agent interviews you about your ICP, offer, markets, channels and goals, proposes the engine settings, and builds them. You review and approve. When you are happy, one card in <strong>Environments &gt; Go live</strong> signs everything and promotes it to production with a single approval. Expect roughly an hour for a first setup, most of it answering questions and approving.</p>
+      <p><strong>Safe by default.</strong> A new install runs in <strong>live mode</strong>: anything not connected says so plainly and names the missing key, instead of showing invented numbers. Nothing is sent, merged or published without a person approving it, and the person who proposed a change (or whose agent did) can never approve it. A separate demo mode with sample data exists only for walkthroughs; never use it with real prospects.</p>
+      <p><strong>Who does what.</strong> A GTM lead owns the decisions and approvals; the agent (or a GTM engineer) does the building; an IT person is only needed if you host it on company servers. Day to day, the team works in the console: the Hot list, company pages, outreach approvals and the engine dashboards.</p>
+      <p><strong>What it costs to run.</strong> The software itself has no license fee. You pay only for what you connect: the AI model you choose, looot data credits for enrichment and signals (with per-run spend caps), your Composio plan, and the machine it runs on.</p>
+      <p><strong>Staying current.</strong> New versions arrive as an upgrade command that snapshots your data first and rolls back automatically if anything fails. Your configuration, data and approvals history carry over.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>Four images, <code>gtmos-api</code>, <code>gtmos-console</code>, <code>gtmos-worker</code> and <code>gtmos-mcp</code> (0.2.2), plus <code>pgvector/pgvector:pg16</code>, wired by a generated <code>docker-compose.yml</code>. Default ports: console 3000, API 3001, MCP 3004. The <code>gtm</code> CLI (0.2.2) installs from npm (<code>@gtmos/cli</code>); the images are public on GHCR (<code>ghcr.io/walidboulanouar/gtmos-{api,worker,mcp,console}</code>, tags <code>0.2.2</code> and <code>stable</code>), so <code>gtm setup</code> pulls them. Locally built images can still be used with <code>--version &lt;tag&gt; --no-pull</code>.</p>
+<pre>npm i -g @gtmos/cli@0.2.2
+mkdir my-gtm &amp;&amp; cd my-gtm &amp;&amp; claude
+! gtm init                      # agent workspace + docs, even with no instance yet
+/setup-gtmos                    # Claude runs gtm setup, the agent key, connections
+
+# by hand instead:
+gtm setup ./instance --org Acme --email you@x.com --approver-email ops@x.com --version 0.2.2
+gtm doctor --strict             # what is live, unverified, missing</pre>
+      <p><code>gtm init</code> writes <code>CLAUDE.md</code> at the project root, <code>AGENTS.md</code>, <code>.mcp.json</code> (the key is read from <code>GTMOS_AGENT_TOKEN</code>, never written to a file), the skills and commands, and <code>docs/gtmos/</code> (reference generated from the live registry, plus the guides). <code>GTMOS_LIVE=true</code> is written into a new <code>.env</code>; <code>--demo</code> writes the keyless demo floor. Upgrades: <code>gtm upgrade --check</code>, then <code>gtm upgrade --to &lt;version&gt; --dry-run</code> and <code>--yes</code> (pin current images, pull, guard destructive migrations, snapshot, migrate inside the new image, health check, automatic rollback).</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="doc" id="architecture">
+  <p class="kicker">02 · Architecture</p>
+  <h2>Kernel, stdlib, apps, SDK, packages</h2>
+  <p class="lede">The repo has four layers. The kernel is the stable core; stdlib is the first-party GTM content built on it; apps are the processes you run; the SDK is the public API that packages build against.</p>
+
+  <pre class="mermaid">
+flowchart TB
+  subgraph People["Humans and agents"]
+    H["Console users"]
+    AG["Claude Code, Codex, any MCP agent"]
+    OP["Operator with the gtm CLI"]
+  end
+  subgraph Apps["apps"]
+    CON["console (Next.js)"]
+    API["api (REST, tRPC, OpenAPI)"]
+    MCP["mcp (streamable HTTP)"]
+    WK["worker (jobs, plays, agent loops)"]
+  end
+  subgraph Kernel["kernel"]
+    REG["Operation registry and pipeline"]
+    POL["Policy: Cedar, gate, Dry Mode"]
+    DP["Data plane: observe, resolve, project"]
+    BR["Broker and cost ledger"]
+    MG["Model gateway"]
+    FL["Flow runtime, plays, lanes"]
+    CFG["Config store, environments"]
+  end
+  subgraph Stdlib["stdlib packages"]
+    ENG["7 engines"]
+    ONT["Ontology modules"]
+    CNX["Connectors"]
+    SCR["Screens and packs"]
+  end
+  DB[("Postgres with RLS and pgvector")]
+  H --> CON
+  AG --> MCP
+  OP --> API
+  CON --> API
+  API --> REG
+  MCP --> REG
+  WK --> REG
+  REG --> POL
+  REG --> DP
+  REG --> BR
+  REG --> MG
+  REG --> FL
+  REG --> CFG
+  ENG --> REG
+  CNX --> BR
+  DP --> DB
+  CFG --> DB
+  </pre>
+
+  <h3>The kernel</h3>
+  <p class="prose">The kernel lives in <code>kernel/*</code>. It imports nothing from stdlib, and packages never get a raw database connection: the only database access goes through kernel stores under row-level security. CI enforces these boundaries with dependency-cruiser.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Part</th><th>In plain words</th><th>Technically</th></tr></thead>
+    <tbody>
+      <tr><td><code>operations</code></td><td>The single list of everything the system can do.</td><td class="wrap">Operation registry and the unified pipeline: validate, org context, authz, guards, disposition, approval, execute, events and audit. Generates the SDK and OpenAPI.</td></tr>
+      <tr><td><code>runtime</code></td><td>The approval queue and the record of what ran.</td><td class="wrap">Runs, actions, approvals, executions, receipts, the claim-due queue and fair scheduler.</td></tr>
+      <tr><td><code>policy</code>, <code>cel</code></td><td>Who may do what, and the rule language for criteria.</td><td class="wrap">Two layers: Cedar authorization ("can this principal do this at all") and an ordered decision table for disposition (allow, require approval, draft, deny). CEL (pinned <code>@bufbuild/cel</code>) for segment, persona, predicate and scoring conditions.</td></tr>
+      <tr><td><code>data-plane</code></td><td>How outside data becomes one clean record.</td><td class="wrap">Observe (append-only observations) → normalize → resolve (identity) → project, with survivorship, monitors, lineage and privacy.</td></tr>
+      <tr><td><code>broker</code></td><td>Every paid call is priced and logged.</td><td class="wrap"><code>capability.acquire</code> resolves a <code>definition.binding</code>, quotes and holds spend on a double-entry cost ledger, runs the backend, settles at actual cost.</td></tr>
+      <tr><td><code>model-gateway</code></td><td>One door for every LLM and embedding call.</td><td class="wrap"><code>model.call</code> resolves <code>definition.model_policy</code> (and <code>definition.model_pin</code>), meters on the same ledger, applies region and budget constraints.</td></tr>
+      <tr><td><code>flow</code>, <code>flow-play</code>, <code>lanes</code></td><td>Automations that survive restarts, and send limits per channel.</td><td class="wrap">Postgres-native step journaling with durable sleep; <code>definition.play</code> compiled to versioned flows; lanes enforce the pre-send gate, deliverability and compliance.</td></tr>
+      <tr><td><code>config</code></td><td>Settings as reviewable, versioned files.</td><td class="wrap">Resource envelopes with per-kind JSON Schema, the config store, mixed-kind ChangeSets, environments and promotion.</td></tr>
+      <tr><td><code>ontology</code></td><td>The shared data model.</td><td class="wrap">Catalog parser and validator, core pack, ontology ChangeSets and the extension layer for custom fields and objects.</td></tr>
+      <tr><td><code>auth</code>, <code>db</code></td><td>Sign-in and tenant isolation.</td><td class="wrap">Better Auth, role mapping; Prisma schema and migrations, RLS with a <code>NOBYPASSRLS</code> app role.</td></tr>
+      <tr><td><code>indexing</code>, <code>memory</code></td><td>Search across records, and what agents remember.</td><td class="wrap">Hybrid retrieval (Postgres full-text plus pgvector) built by a background job; agent memory as a governed view over records, decisions and run history.</td></tr>
+      <tr><td><code>agent-runtime</code></td><td>Agents that run step by step and pause for approval.</td><td class="wrap">Durable perceive, decide, act, observe loop; decisions go through <code>model.call</code>, actions through operations.</td></tr>
+      <tr><td><code>channels</code>, <code>connectors</code>, <code>observability</code></td><td>Notifications, outside systems, monitoring.</td><td class="wrap">Push delivery (Slack adapter); capability contracts and fixture adapters only (real adapters live in stdlib); OpenTelemetry traces, logs and metrics.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>stdlib, apps and the SDK</h3>
+  <div class="grid2">
+    <div class="tile"><h5>stdlib</h5><p>First-party packages: the 7 engines (<code>stdlib/qualification</code>, <code>outreach</code>, <code>performance-ads</code>, <code>search</code>, <code>identity-dq</code>, <code>enrichment</code>, <code>signals</code>), ontology modules (<code>gtm-base</code>, <code>gtm-pipeline</code>, <code>gtm-motion</code>, <code>gtm-intelligence</code> always on; <code>gtm-company</code>, <code>gtm-partner</code>, <code>gtm-ads</code>, <code>gtm-b2c</code>, <code>gtm-search</code> optional), <code>gtm-routing</code>, <code>gtm-plays</code>, <code>gtm-compliance</code>, connectors, packs and the stdlib apps (Mission Control, Focus Queue, Account Workspace).</p></div>
+    <div class="tile"><h5>apps</h5><p><strong>api</strong>: NestJS, tRPC, OpenAPI; the only database writer besides the worker. <strong>worker</strong>: multi-org durable jobs, plays, agent loops, outbox relay. <strong>mcp</strong>: MCP server on the official SDK with the same authorization path as the API. <strong>console</strong>: the Next.js operator UI and CRM. <strong>cli</strong>: install, org lifecycle, plan and apply, packages, harness.</p></div>
+    <div class="tile"><h5>sdk</h5><p><code>@gtmos/sdk</code> is the typed client generated from the operation registry plus the <code>define*</code> kit (for example <code>defineEngine</code>, <code>definePlay</code>). Stdlib and third-party packages import only the SDK, never kernel internals.</p></div>
+    <div class="tile"><h5>Packages</h5><p>Everything installable is a package with a manifest (<code>gtmos.package.yaml</code>), declared permissions and one of three execution tiers. Install, enable, upgrade and rollback are proposals a second human approves. Details below.</p></div>
+  </div>
+
+  <h3>Packages and execution tiers</h3>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>Think of packages as apps for your GTM system. Most are configuration only (a blueprint, a set of scoring rules, a screen layout) and carry no code at all. Packages that do carry code must be signed by a publisher the instance trusts, and third-party code runs in a sandbox that cannot touch your session or other data.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <div class="tbl"><table>
+        <thead><tr><th>Tier</th><th>Runs</th><th>Signature</th></tr></thead>
+        <tbody>
+          <tr><td><code>declarative</code></td><td>No code (definitions, apps, blueprints)</td><td>Optional; verified if present</td></tr>
+          <tr><td><code>trusted</code></td><td>Code in-process</td><td>Required and verified</td></tr>
+          <tr><td><code>sandboxed</code></td><td>Code in an isolated iframe</td><td>Required and verified</td></tr>
+        </tbody>
+      </table></div>
+      <p>Ed25519 (or sigstore keyless) against the first-party key plus <code>GTMOS_TRUSTED_PUBLISHER_KEYS</code>. A trust ladder (<code>community</code>, <code>verified</code>, <code>certified</code>) grades versions; <code>community</code> runs only sandboxed and outside prod.</p>
+    </div>
+  </div>
+  <p class="prose">Package lifecycle operations: <code>packages.install</code>, <code>packages.enable</code> and <code>packages.disable</code> (per environment), <code>packages.upgrade</code>, <code>packages.rollback</code>, <code>packages.uninstall</code>, with <code>packages.preview_upgrade</code> as a read-only diff. The CLI mirrors them under <code>gtm pkg</code>, plus offline tooling to <code>scaffold</code>, <code>validate</code>, <code>build</code> (hash and SBOM) and <code>sign</code>.</p>
+
+  <h3>The operation pipeline: an agent asks, a human decides</h3>
+  <p class="prose">This is the path every call takes, whether it comes from the console, the CLI or an agent over MCP. A read runs straight through. A customer-facing effect stops at the gate and waits.</p>
+  <pre class="mermaid">
+sequenceDiagram
+  participant A as Agent
+  participant M as MCP server
+  participant K as runOperation
+  participant G as Approval gate
+  participant H as Second human
+  A->>M: gtm_describe outreach.send_message
+  A->>M: gtm_act outreach.send_message
+  M->>K: validate, org context, authz, guards
+  K->>G: disposition is require approval
+  G-->>A: approval id, state proposed
+  H->>G: runtime.approve_action
+  H->>G: runtime.execute_approval
+  G->>K: execute
+  K->>K: outbox event and hash-chained audit row
+  </pre>
+  <p class="prose">The pipeline stages, in order: validate the input against the operation's schema, resolve the org context, authorize (Cedar plus scope checks), run guards and transforms, compute the disposition (gate policy, Dry Mode, autonomy caps, lane controls, binding mode), create an approval if one is needed, execute, then write the outbox event and the audit record in the same org transaction.</p>
+</section>
+
+<!-- 3 -->
+<section class="doc" id="concepts">
+  <p class="kicker">03 · Core concepts</p>
+  <h2>The ideas you need before anything else</h2>
+
+  <h3>Operations and their classes</h3>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>Every action in GTM OS has a name, such as <code>score.score_account</code> or <code>outreach.send_message</code>. Reading data is free to run. Writing your own data is logged. Anything a customer, a CRM or an ad platform would see is only proposed until someone approves it.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>401 operations: 158 Q, 159 D, 5 T, 22 E, 57 M. Q runs as <code>GET /v1/operations/&lt;name&gt;?input=&lt;json&gt;</code>; the rest as <code>POST /v1/operations/&lt;name&gt;</code>. Each descriptor declares its class, input and output schema, required scopes and whether it needs approval.</p>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Class</th><th>Meaning</th><th>Example</th><th>Gate</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Q</strong></td><td>Query: read</td><td><code>query.list_qualifications</code></td><td>None</td></tr>
+      <tr><td><strong>D</strong></td><td>Data write inside GTM OS</td><td><code>signals.record</code></td><td>Logged; some agent writes become proposals</td></tr>
+      <tr><td><strong>T</strong></td><td>Stage transition</td><td><code>lane.activate</code>, <code>play.trigger</code></td><td>Per operation</td></tr>
+      <tr><td><strong>E</strong></td><td>Customer-facing effect</td><td><code>crm.update_record</code>, <code>perf_ads.update_campaign</code></td><td>Always proposed; a different human approves and executes</td></tr>
+      <tr><td><strong>M</strong></td><td>Meta: config, ontology, platform</td><td><code>policy.set_dry_mode</code></td><td>Many are human-only</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Definitions</h3>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>A definition is one piece of your GTM playbook written down: an ICP segment, a persona, a scoring model, a sending lane, a play, a brand voice, a suppression rule. Engines read your definitions instead of hard-coded settings. Change the definition and the engine changes behavior, after review.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>23 definition kinds plus 4 other config kinds (<code>ontology.object</code>, <code>ontology.field</code>, <code>ontology.relationship</code>, <code>package.manifest</code>). Each is a resource envelope (<code>apiVersion</code>, <code>kind</code>, <code>metadata.key</code>, <code>spec</code>) validated by a strict per-kind JSON Schema; unknown keys are rejected.</p>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Kind</th><th>What it sets</th><th>Read by</th></tr></thead>
+    <tbody>
+      <tr><td><code>definition.segment</code></td><td>Which records a motion works (CEL criteria)</td><td>Plays, lists, Mission Control</td></tr>
+      <tr><td><code>definition.persona</code></td><td>Who to target inside an account</td><td>Score, plays, Outreach</td></tr>
+      <tr><td><code>definition.scoring_model</code></td><td>Weighted rules and thresholds (keys <code>default</code>, <code>icp_fit</code>, <code>signals</code>)</td><td>Score, Signals</td></tr>
+      <tr><td><code>definition.committee_model</code></td><td>Required buying-committee roles</td><td>Score (ABM)</td></tr>
+      <tr><td><code>definition.lane</code></td><td>A sending channel with caps, checks, budget and domain</td><td>Outreach</td></tr>
+      <tr><td><code>definition.brand_voice</code></td><td>Tone and vocabulary for generated copy</td><td>Outreach drafting</td></tr>
+      <tr><td><code>definition.suppression_rule</code>, <code>definition.compliance_policy</code></td><td>Who must never be contacted; regulatory rules</td><td>Pre-send gate</td></tr>
+      <tr><td><code>definition.play</code></td><td>Trigger, filter, steps, gate and guardrails</td><td>Flow runtime</td></tr>
+      <tr><td><code>definition.binding</code></td><td>Which backend serves a capability, and the price cap</td><td>Broker</td></tr>
+      <tr><td><code>definition.source_mapping</code></td><td>How an app's list maps into the ontology</td><td>Source sync</td></tr>
+      <tr><td><code>definition.identity_rule</code>, <code>definition.data_monitor</code></td><td>Matching and survivorship; data-quality checks</td><td>Data plane, Identity &amp; DQ</td></tr>
+      <tr><td><code>definition.metric</code>, <code>definition.stage_machine</code>, <code>definition.predicate</code></td><td>KPIs as SQL aggregates; legal stage transitions; reusable CEL</td><td>Apps, ontology, segments</td></tr>
+      <tr><td><code>definition.model_policy</code>, <code>definition.model_pin</code></td><td>Which model serves each task class</td><td>Model gateway</td></tr>
+      <tr><td><code>definition.unit_economics</code></td><td>Margin, AOV, CAC targets</td><td>Performance Ads</td></tr>
+      <tr><td><code>definition.agent</code>, <code>definition.skill</code></td><td>Agent authority, skills and run bounds</td><td>Agent runtime</td></tr>
+      <tr><td><code>definition.app</code>, <code>definition.brand_kit</code></td><td>Declarative screens; console theme tokens</td><td>Console</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Lifecycle: draft, propose, sign, promote</h3>
+  <p class="prose">A definition cannot be published straight into prod. It is drafted in <code>dev</code> through a ChangeSet, proposed for signing, signed by a human who did not propose it, then promoted. Engines read only the <strong>signed</strong> version in the call's environment; with none, they fall back to their stdlib default. Editing a definition creates a new version that must be signed again. <code>definition.data_monitor</code> is the one sign-exempt kind.</p>
+<pre>config.propose_changeset      -> draft ChangeSet         (gtm plan / gtm apply --env dev)
+config.validate_changeset     -> issues, nothing applied
+config.apply                  -> approval; a different human approves -> published in dev
+definition.propose_for_signing-> proposed                (gtm definition propose-for-signing)
+definition.sign_many          -> signed, by a human, not the proposer   (gtm definition sign-all)
+env.promote dev -> prod       -> ONE approval            (gtm promote --all dev prod)</pre>
+
+  <h3>Environments</h3>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>Every org has three spaces: <code>dev</code> to build, <code>staging</code> to check, <code>prod</code> where things run for real. Emails sent from dev or staging go to a sink and never reach anyone. The console shows a banner ("N definitions are in dev, not live") until you sign and promote.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p><code>prod</code> is the default for MCP and REST calls that name no environment. MCP takes an <code>environment</code> argument or the <code>x-gtmos-environment</code> header; an unknown key is refused. <code>env.promote</code> plans every changed resource, proposes one approval and walks dev → staging → prod; backward is refused. <code>config.promotion_status</code> reports what is not live.</p>
+    </div>
+  </div>
+
+  <h3>Approvals and four-eyes</h3>
+  <div class="callout gate">
+    <p><strong>The four-eyes rule.</strong> The person or agent who proposed an action cannot approve it, sign it or execute it. Neither can the human an agent acts for. An agent cannot approve anything at all. Only an owner or admin can approve. The proposer can still <strong>withdraw</strong> a proposal, and any approver can <strong>reject</strong> (veto) it.</p>
+  </div>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>Every send, CRM write-back, record merge, page publish, ad budget change and config change that goes live lands in <strong>Approvals</strong> or <strong>Needs a human</strong>. A teammate reviews it, approves, then executes. If your org has only one admin, nothing can go live: add a second approver first.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>An E-class call creates an <code>ActionApproval</code> in state <code>proposed</code>. States: proposed, approved, rejected, withdrawn, revoked, expired (after 7 days), executing, executed, failed. Ops: <code>runtime.approve_action</code>, <code>runtime.reject_action</code>, <code>runtime.execute_approval</code>, <code>runtime.withdraw_action</code>. At execution the gate re-checks that a valid, distinct human approver is stored. Actions auto-approved by a gate policy or a pre-approval envelope are exempt: the standing rule is their approver.</p>
+    </div>
+  </div>
+
+  <h3>Dry Mode</h3>
+  <p class="prose">An org-wide safety switch (Settings &gt; Safety, <code>policy.set_dry_mode</code>, human only). While it is on, every E-class operation becomes a draft: logged, never executed, no approval created. D, T and M operations still run. Every console page shows a banner. Read it with <code>policy.get_dry_mode</code>.</p>
+
+  <h3>Budgets and spend caps</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Cap</th><th>Set where</th><th>When exceeded</th></tr></thead>
+    <tbody>
+      <tr><td>Per-call data cap</td><td><code>LOOOT_MAX_COST_USD</code> (default 0.05) and binding <code>maxUnitCostUsd</code></td><td><code>APPROVAL_REQUIRED</code>; waits for a human</td></tr>
+      <tr><td>Ledger budgets</td><td>Mission runs, agents, plays (internal)</td><td><code>BUDGET_EXCEEDED</code>; acquire and model calls turn into proposals</td></tr>
+      <tr><td>Lane envelope</td><td><code>envelopeBudgetEur</code> over <code>windowDays</code></td><td>Sends stop until re-approval</td></tr>
+      <tr><td>Play guardrails</td><td><code>maxBudgetUsd</code>, <code>maxActionsPerRun</code></td><td>The play stops</td></tr>
+      <tr><td>Model policy</td><td><code>maxUsd</code> per route</td><td>Per route</td></tr>
+      <tr><td>Pre-approval envelope</td><td><code>envelope.grant</code> (human only)</td><td>Scoped, time-bound auto-approval ends</td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose">Spend is visible in Operate &gt; Cost (<code>ledger.list</code>). Price before running with <code>capability.quote</code> or <code>enrichment.enrich_accounts {estimate: true}</code>.</p>
+
+  <h3>Provenance and lineage</h3>
+  <p class="prose">Every value on a record knows where it came from: the winning observation, the others that competed, the survivorship rule, a confidence from 0 to 1, a band (<code>VERIFIED</code>, <code>PROBABLE</code>, <code>POSSIBLE</code>) and a status. A human edit is <code>VERIFIED</code> and automation never overwrites it. Read it with <code>records.provenance</code> and <code>lineage.trace</code> (MCP <code>gtm_lineage_trace</code>); the CRM record pages show a provenance panel.</p>
+
+  <h3>Readiness and required connections</h3>
+  <p class="prose"><code>instance.readiness</code> (CLI <code>gtm doctor</code>) lists every seam with a status: <code>live</code>, <code>configured_unverified</code>, <code>failed</code>, <code>fixture</code> or <code>not_configured</code>. Items are <code>required</code> while the engine that needs them is in use, otherwise informational. Applying a blueprint makes its declared connections required. The console shows the same list as <strong>Required connections</strong> on Integrations &gt; Connections.</p>
+</section>
+
+<!-- 4 -->
+<section class="doc" id="ontology">
+  <p class="kicker">04 · Ontology and data</p>
+  <h2>One model of your market</h2>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>The ontology is the shared vocabulary every engine uses: accounts, contacts, deals, signals, activities and more. Your CRM data, enrichment results, form fills and intent data all land on the same records. You can add your own fields (an account tier, a product line) and your own objects (partners, projects) without waiting for a release.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>35 canon object types in the reserved <code>gtm.*</code> namespace (ontology 0.1.0-draft), interfaces <code>Subject</code>, <code>Engageable</code>, <code>Touch</code>, <code>Monetary</code>, and stage machines such as <code>gtm.pipeline.deal_stage</code>. Every object carries common fields (<code>id</code>, <code>revision</code>, timestamps, <code>owner_principal_id</code>, <code>archived_at</code>, a <code>custom</code> JSON bag). Live list: <code>query.object_types</code>.</p>
+    </div>
+  </div>
+
+  <h3>Canon objects you will use most</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Object</th><th>Key fields</th></tr></thead>
+    <tbody>
+      <tr><td><code>gtm.account</code></td><td class="wrap"><code>name</code>, <code>domain</code>, <code>relationship_status</code> (prospect, customer, partner, former_customer, other), <code>industry</code>, <code>employee_count</code>, <code>country_code</code></td></tr>
+      <tr><td><code>gtm.contact</code></td><td class="wrap"><code>display_name</code>, <code>primary_email</code>, <code>phone</code>, <code>linkedin_url</code>, <code>contactability</code> (unknown, allowed, restricted, do_not_contact)</td></tr>
+      <tr><td><code>gtm.deal</code></td><td class="wrap"><code>name</code>, <code>account_id</code>, <code>pipeline_id</code>, <code>stage_id</code>, <code>value</code>, <code>status</code> (open, won, lost, cancelled)</td></tr>
+      <tr><td><code>gtm.signal</code></td><td class="wrap"><code>kind</code>, <code>subject</code>, <code>observed_at</code>, <code>summary</code>, <code>verification_status</code></td></tr>
+      <tr><td><code>gtm.employment</code>, <code>gtm.deal_contact</code></td><td>Links contact to account, and contacts to a deal (the buying committee)</td></tr>
+      <tr><td><code>gtm.activity</code>, <code>gtm.task</code>, <code>gtm.meeting</code>, <code>gtm.message</code></td><td>Timeline and work items</td></tr>
+      <tr><td><code>gtm.campaign</code>, <code>gtm.campaign_member</code></td><td>Sequences and their rosters</td></tr>
+      <tr><td><code>gtm.qualification</code>, <code>gtm.outcome</code>, <code>gtm.suppression</code></td><td>Engine outputs and lifecycle</td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose">Optional ontology modules add more when enabled: <code>stdlib/gtm.partner</code> (partners, tiers, partner deals, referrals, commissions), <code>gtm.search</code> (properties, pages, keywords, SERP positions), <code>gtm.ads</code>, <code>gtm.b2c</code>, <code>gtm.company</code> (products, price books, territories, quotas). Check <code>packages.catalog</code> before inventing an object a module already provides.</p>
+
+  <h3>Custom fields and custom objects at runtime</h3>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>Add a field to companies, contacts or deals in Settings &gt; Custom fields: text, number, date, checkbox, select, URL, email, phone or user. It appears in tables and filters at once. A new object type (say, "Partner") is designed in CRM &gt; Model and goes live after a second person approves it.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>Fields: <code>field.create</code> (no approval, owner/admin or their agent with <code>engine.configure</code>), plus <code>field.update</code>, <code>field.archive</code>, <code>field.coverage</code>, <code>field.backfill</code>. Objects: <code>ontology.propose_changeset</code> with <code>create_object</code>, <code>add_field</code>, <code>add_relationship</code> (keys <code>custom.&lt;slug&gt;</code>), <code>ontology.validate_changeset</code>, then <code>ontology.publish_changeset</code> (human only, approval). Canon fields can be extended, never redefined.</p>
+    </div>
+  </div>
+
+  <h3>Identity resolution</h3>
+  <p class="prose">Two layers keep one record per real company and person.</p>
+  <ol class="prose">
+    <li><strong>Observation to entity</strong> (data plane). An account matches on <code>domain</code> (authoritative) and <code>name</code> (corroborating); a contact on <code>primaryEmail</code> and <code>displayName</code>. Matching runs deterministic, then blocking, then probabilistic; unsafe matches go to a human review (<code>resolve.review.decide</code>). A signed <code>definition.identity_rule</code> overrides the keys and survivorship (<code>most_recent</code>, <code>highest_confidence</code>, <code>first_write_wins</code>, <code>longest_non_empty</code>, <code>source_priority</code>).</li>
+    <li><strong>Record dedupe</strong> (Identity &amp; DQ engine). <code>identity_dq.scan_duplicates</code>, then <code>identity_dq.merge_records</code> as an approval, reversible with <code>identity_dq.unmerge_records</code>.</li>
+  </ol>
+  <p class="prose">Automated writes onto an existing record must resolve to that record by domain, email or source id. A write that cannot resolve never creates a duplicate; source mappings report it as <code>unresolved</code>.</p>
+
+  <h3>Mirror (binding) modes</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Mode</th><th>What happens to outside data</th></tr></thead>
+    <tbody>
+      <tr><td><code>replicate</code> (default)</td><td>Full local copy, authoritative, metered</td></tr>
+      <tr><td><code>soft_merge</code></td><td>Overlay that never overwrites a human-set value</td></tr>
+      <tr><td><code>federate</code></td><td>No local row; read through</td></tr>
+      <tr><td><code>in_zone</code></td><td>No row-level data leaves the customer's zone; aggregates only; fails closed</td></tr>
+      <tr><td><code>sheet</code></td><td>Low-trust overlay; effects need explicit human confirmation</td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose">Set per object type with <code>binding.set_mode</code> or <code>gtm connect &lt;provider&gt; --mode &lt;mode&gt;</code>. CRM sync and source mappings respect it.</p>
+
+  <h3>Vectors and search</h3>
+  <p class="prose"><code>search_records</code> (MCP) fuses Postgres full-text rank with pgvector similarity over accounts, contacts, deals and activities. Embeddings come from OpenAI (<code>text-embedding-3-small</code>) or Gemini (<code>gemini-embedding-001</code>), whichever key the org has. Anthropic has no embedding model; without OpenAI or Gemini, results come back <code>mode: "text_only"</code>. Indexing runs as a daily background sweep; <code>search.index_status</code> shows coverage and <code>search.reindex_now</code> runs it on demand.</p>
+
+  <h3>The CRM</h3>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>The console includes a full CRM: Hot list, Companies, Contacts, Deals with managed pipelines and stage moves, Tasks, a timeline per record, saved and shared list views, CSV import, a Data quality page, AI chat, Sequences and Research. It can be your system of record, or mirror the CRM you already use.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>CRM screens live in <code>apps/console</code> under <code>/org/&lt;orgId&gt;/</code>. Writes: <code>canon.edit</code> / <code>canon.edit_many</code> for canon objects (an agent's call becomes a proposal), <code>records.create</code> for custom objects, <code>canon.import</code> (max 1000 rows per call), <code>deal.move_stage</code>, <code>deal.close</code>, <code>pipeline.create</code>, <code>view.create</code>, <code>task.create</code>. Reporting currency and FX conversion for deals shipped in 0.2.1.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="doc" id="engines">
+  <p class="kicker">05 · The engines</p>
+  <h2>What does the work</h2>
+  <p class="lede">Seven engine packages ship and are installed for every org. Around them sit routing, plays, the research agent, CRM sync, source mappings, the search index and agent chat. Every engine runs on your <strong>signed</strong> definitions in the call's environment and falls back to a stdlib default. Build in this order: data first, then scoring, then routing and plays, then the outbound channels.</p>
+
+  <!-- Signals -->
+  <div class="engine" id="eng-signals">
+    <div class="engine-head"><h3>Signals and intent</h3><span class="pkg">stdlib/engine.signals 1.0.0</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Captures the reasons to reach out: funding, hiring, expansion, a pricing-page visit, a booked call, an intent-topic surge. Each signal gets a strength that fades over time, so last month's funding round counts less than this week's. Accounts above your thresholds become hot or warm.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Records typed <code>gtm.signal</code> rows (idempotent, 1 to 1000 per call), computes recency-weighted strength (default half-life 30 days, hot at 60, warm at 30) and surge reports. Intent comes from looot capabilities such as <code>intent.topic_surge</code> and <code>intent.visitor_identification</code>.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>signals.record</code>, <code>signals.ingest_intent</code>, <code>signals.score</code>, <code>signals.surge_report</code>, <code>signals.retract_signals</code>, <code>signals.undo_retraction</code></dd>
+      <dt>Definitions</dt><dd><code>definition.scoring_model</code> key <code>signals</code> (a <code>signalStrength</code> block); <code>definition.binding</code> for <code>intent.*</code></dd>
+      <dt>Jobs</dt><dd>Signal scans per play schedule; workflow flag <code>signals.reaction</code> (on by default) re-scores, routes unowned accounts, enrols on strong signals (≥ 50), alerts the owner (≥ 60)</dd>
+      <dt>Connections</dt><dd>looot; website tracking (<code>tracking.site.create</code>) for page visits; Cal.com and webform for inbound</dd>
+      <dt>Console</dt><dd>CRM &gt; Hot list (signals behind each score). No dedicated Signals page.</dd>
+      <dt>KPIs</dt><dd>Hot and warm accounts from the surge report</dd>
+    </dl>
+  </div>
+
+  <!-- Enrichment -->
+  <div class="engine" id="eng-enrichment">
+    <div class="engine-head"><h3>Enrichment</h3><span class="pkg">stdlib/engine.enrichment 1.0.0</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Fills in what is missing on companies and contacts: emails, phones, headcount, technographics. It only fills <strong>empty</strong> fields and never overwrites what your team typed. It always prices a batch first, so you see the cost before you spend.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>A provider waterfall over <code>capability.acquire</code>: per-field try order, first satisfactory result stops the chain. Capabilities <code>enrich.company</code>, <code>enrich.find_email</code>, <code>enrich.verify_email</code>, <code>enrich.find_phone</code>, <code>enrich.technographics</code>, <code>enrich.headcount</code>, resolved by <code>definition.binding</code> with a price cap.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>enrichment.enrich_accounts</code>, <code>enrichment.enrich_contacts</code> (default 25, max 500; <code>estimate: true</code> prices without running), <code>enrichment.coverage_report</code></dd>
+      <dt>Definitions</dt><dd><code>definition.binding</code> per capability (blueprints seed <code>enrich.find_email</code> on looot, max $0.05 per call)</dd>
+      <dt>Jobs</dt><dd>On demand; research-agent re-checks</dd>
+      <dt>Connections</dt><dd>looot (required)</dd>
+      <dt>Console</dt><dd>CRM &gt; Companies and Contacts (enriched fields)</dd>
+      <dt>KPIs</dt><dd>Field coverage</dd>
+    </dl>
+  </div>
+
+  <!-- Score -->
+  <div class="engine" id="eng-score">
+    <div class="engine-head"><h3>Scoring and qualification (Hot list)</h3><span class="pkg">stdlib/engine.score 0.1.0 · stdlib/qualification</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Decides which accounts deserve attention now. It combines two views: <strong>fit</strong> (does this company match your ICP by region, size, industry) and <strong>intent</strong> (are they showing buying signals). Each verdict comes with the evidence behind it, and qualified accounts appear on the Hot list.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Rule-based scoring of <code>gtm.signal</code> against a versioned policy, producing <code>gtm.qualification</code>. Key <code>default</code> scores intent (default <code>score.default.v1</code>: qualified ≥ 60, review ≥ 30); key <code>icp_fit</code> matches the synthetic <code>firmographic</code> kind with CEL conditions over account fields. The stdlib <code>icp_fit</code> fallback is a pilot hypothesis: always sign your own.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>score.score_account</code>, <code>score.explain_qualification</code>, <code>score.rescan_organization</code>, <code>score.ingest_market_signals</code>, <code>query.list_qualifications</code></dd>
+      <dt>Definitions</dt><dd><code>definition.scoring_model</code> (<code>default</code>, <code>icp_fit</code>), <code>definition.committee_model</code> (ABM), <code>definition.segment</code>, <code>definition.persona</code></dd>
+      <dt>Jobs</dt><dd>Scheduled <code>score.rescan_organization</code>; hooks for signal scans and the qualified handoff</dd>
+      <dt>Connections</dt><dd>A model provider for explanations</dd>
+      <dt>Console</dt><dd>Engines &gt; Score (<code>/a/score</code>), CRM &gt; Hot list</dd>
+      <dt>KPIs</dt><dd>Qualified coverage (Mission Control), hot-list size</dd>
+    </dl>
+    <p class="aud-note">Verify: <code>score.score_account</code> on a real account must report <code>definition.scoring_model:default:vN</code> (your model), not <code>score.default.v1</code>.</p>
+  </div>
+
+  <!-- Routing / plays -->
+  <div class="engine" id="eng-plays">
+    <div class="engine-head"><h3>Routing, plays and workflow automation</h3><span class="pkg">kernel/flow-play · stdlib/gtm-routing · stdlib/gtm-plays</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>When an account qualifies, someone has to own it and something has to happen. Out of the box, a qualified account gets an owner (round-robin over members, or a list you set), a follow-up task due in two days, and its contact enrolled in the right sequence. Customers, partners and former customers are skipped, and an open deal blocks enrolment. Plays let you add your own automations: daily re-scores, speed-to-lead on a form fill, reactivation of dormant accounts.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p><code>routing.assign</code> sets the owner and records an auditable decision (no routing definition kind). Workflow flags <code>qualification.handoff</code> and <code>signals.reaction</code> are toggled with <code>flags.set</code>. <code>definition.play</code> compiles to a versioned flow: triggers <code>manual</code>, <code>event</code>, <code>schedule</code>, <code>metric</code>, <code>webhook</code>, <code>segment</code>, <code>mission_step</code>; steps <code>action</code>, <code>wait</code>, <code>branch</code>; guardrails cap actions and budget per run.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>play.simulate</code> (zero writes, always first), <code>play.trigger</code>, <code>runs.list</code>, <code>runs.get</code>, <code>flow.cancel</code>, <code>routing.assign</code>, <code>flags.set</code></dd>
+      <dt>Definitions</dt><dd><code>definition.play</code>, <code>definition.segment</code></dd>
+      <dt>Shipped plays</dt><dd><code>signal_based_outbound</code>, <code>inbound_speed_to_lead</code>, <code>dormant_account_reactivation</code> in <code>stdlib/gtm-plays</code>; blueprints add first-touch-outreach, daily-rescore, daily-seo-audit and more</dd>
+      <dt>Console</dt><dd>Settings &gt; Workflow automation (<code>/workflow</code>); Operate &gt; Runs</dd>
+    </dl>
+  </div>
+
+  <!-- Outreach -->
+  <div class="engine" id="eng-outreach">
+    <div class="engine-head"><h3>Outreach</h3><span class="pkg">stdlib/engine.outreach 0.1.0</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Drafts, personalizes, sequences and sends email (and LinkedIn steps through Unipile). Every send is a proposal a teammate approves. Sends go out through a <strong>lane</strong>: a channel with a daily cap, a minimum gap between touches, a monthly budget, automatic pause on high bounce or complaint rates, and a checked sending domain. Your brand voice shapes the copy.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p><code>outreach.send_message</code> is E-class and needs an active lane and a bound mailbox, otherwise <code>lane_required</code> or <code>mailbox_required</code>. Pre-send checks: <code>suppression</code>, <code>consent</code>, <code>mailbox_health</code>, <code>daily_cap</code>, <code>template_integrity</code>, <code>declared_params</code>, <code>recent_touch</code>, <code>open_deal</code>, <code>reply_stop</code>. New mailboxes warm up from 20 per day, +20 per day, to 200.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>outreach.draft_message</code>, <code>outreach.draft_personalized_message</code>, <code>outreach.send_message</code>, <code>sequence.create</code>, <code>sequence.enroll</code> (max 500), <code>sequence.update</code>, <code>lane.activate</code>, <code>outreach.sending_mailboxes</code></dd>
+      <dt>Definitions</dt><dd><code>definition.lane</code>, <code>definition.brand_voice</code> (<code>default</code>), <code>definition.suppression_rule</code>, <code>definition.compliance_policy</code> (seed with <code>compliance.seed_policies</code>)</dd>
+      <dt>Jobs</dt><dd><code>outreach.rescan_cadences</code>, <code>outreach.advance_cadence</code>, Gmail and LinkedIn reply ingestion, mail and calendar auto-logging</dd>
+      <dt>Sending domain</dt><dd><code>lane.activate</code> checks SPF, DKIM and DMARC for the lane's <code>sendingDomain</code>; prod refuses activation unless all three pass</dd>
+      <dt>Connections</dt><dd>Gmail or Microsoft 365 connected mailbox (preferred) or Resend; Unipile for LinkedIn; a model provider</dd>
+      <dt>Console</dt><dd>Engines &gt; Outreach (<code>/a/outreach</code>), CRM &gt; Sequences, Needs a human</dd>
+      <dt>KPIs</dt><dd>Reply rate, sends per lane against the daily cap, bounce and complaint rate</dd>
+    </dl>
+    <p class="aud-note">A sent email cannot be un-sent: <code>outreach.undo_send_message</code> only records a retraction.</p>
+  </div>
+
+  <!-- Identity DQ -->
+  <div class="engine" id="eng-dq">
+    <div class="engine-head"><h3>Identity and data quality</h3><span class="pkg">stdlib/engine.identity-dq 1.0.0</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Keeps the database clean: finds duplicate companies and contacts, normalizes formats, flags invalid records, fills missing company domains from work emails at no cost, and scores overall data quality. Merges are proposals and can be undone.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Deterministic, reversible normalization; zero-spend domain backfill; looot-backed firmographic enrichment through the broker. Thresholds live in the flag <code>identity_dq.thresholds</code> (defaults <code>maxDupRate 0.05</code>, <code>minMeanQuality 0.5</code>, <code>maxStaleRate 0.8</code>; daily scan).</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>identity_dq.quality_report</code>, <code>identity_dq.scan_duplicates</code>, <code>identity_dq.normalize_records</code>, <code>identity_dq.backfill_domains</code>, <code>identity_dq.merge_records</code> (E), <code>identity_dq.unmerge_records</code></dd>
+      <dt>Definitions</dt><dd><code>definition.identity_rule</code>, <code>definition.data_monitor</code></dd>
+      <dt>Jobs</dt><dd><code>identity_dq.scan</code> data monitors on the claim-due loop</dd>
+      <dt>Console</dt><dd>CRM &gt; Data quality; Operate &gt; Monitors</dd>
+      <dt>KPIs</dt><dd>Fill rate, duplicate rate, staleness, mean quality score</dd>
+    </dl>
+  </div>
+
+  <!-- SEO -->
+  <div class="engine" id="eng-seo">
+    <div class="engine-head"><h3>SEO and GEO</h3><span class="pkg">stdlib/engine.search 0.1.0</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Tracks your important pages, audits technical SEO and readiness for AI search engines (GEO), recommends fixes, and records whole-site visibility from Search Console (and Ahrefs if you have it). A content change to your site is a proposal a teammate approves.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Audits <code>gtm.content_asset</code> pages and proposes content, meta and schema publishes. <strong>Google Search Console is required</strong> for orgs that use this engine, through a Google connected account or the Composio <code>google_search_console</code> toolkit, plus the property <code>gsc/site_url</code>. Without it, <code>gtm doctor</code> reports an error and blueprint SEO plays are held back.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>seo_geo.create_tracked_page</code>, <code>seo_geo.audit_page</code>, <code>seo_geo.scan_all_pages</code>, <code>seo_geo.run_visibility</code>, <code>seo_geo.get_visibility</code>, <code>seo_geo.get_recommendation</code>, <code>seo_geo.gsc_properties</code>, <code>seo_geo.publish_content_change</code> (E)</dd>
+      <dt>Definitions</dt><dd><code>definition.play</code> (daily <code>seo_geo.scan_all_pages</code>), <code>definition.metric</code> (search KPIs)</dd>
+      <dt>Connections</dt><dd>Search Console (required), Ahrefs optional (Composio), GA4 optional, looot for keyword data</dd>
+      <dt>Console</dt><dd>Engines &gt; SEO &amp; GEO (<code>/a/seo-geo</code>) and the page workbench</dd>
+      <dt>KPIs</dt><dd><code>search_organic_traffic</code>, <code>search_avg_rank</code>, <code>search_geo_readiness</code>, <code>search_tracked_pages</code></dd>
+    </dl>
+  </div>
+
+  <!-- Ads -->
+  <div class="engine" id="eng-ads">
+    <div class="engine-head"><h3>Performance Ads</h3><span class="pkg">stdlib/engine.performance-ads 0.1.0</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Pulls spend and conversions from Google Ads and Meta Ads, compares them with the economics you set (margin, CAC target, order value), and recommends pacing. Any budget or status change is real money, so it is a proposal.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Reads performance into <code>gtm.outcome</code>, proposes changes on <code>gtm.campaign</code> through the gate. The economics gate reads <code>definition.unit_economics</code> key <code>default</code>; the first-order-profit gate is wired and live-verified in 0.2.1.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>perf_ads.sync_performance</code>, <code>perf_ads.scan_all_campaigns</code>, <code>perf_ads.get_pacing_recommendation</code>, <code>perf_ads.update_campaign</code> (E), <code>perf_ads.undo_campaign_change</code></dd>
+      <dt>Connections</dt><dd>Google Ads through the connected Google account (<code>ads</code> feature) and <code>google_ads/customer_id</code>; Meta through a <code>meta_ads</code> Connection</dd>
+      <dt>Console</dt><dd>Engines &gt; Performance Ads (<code>/a/perf-ads</code>) and the campaign workbench</dd>
+      <dt>KPIs</dt><dd><code>perf_ads_spend_total</code>, <code>perf_ads_conversions_total</code>, <code>perf_ads_campaign_count</code></dd>
+    </dl>
+  </div>
+
+  <!-- Research -->
+  <div class="engine" id="eng-research">
+    <div class="engine-head"><h3>Research agent</h3><span class="pkg">kernel agent runtime</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Researches people and companies for you: identity, social profiles, company profile, meeting prep 24 hours before a call, and periodic re-checks. It proposes facts with the evidence attached. It also builds your own "who we are" workspace profile from your website.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Defaults: enabled, auto-applies verified facts, daily budget $5, re-checks at 14, 90 and 365 days. Uses looot capabilities (<code>enrich.person</code>, <code>research.web_search</code>, <code>research.extract_page</code>). Switching <code>autoApplyVerified</code> on stays a human decision. Writes must resolve onto the existing record by domain or email.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>research.request</code>, <code>research.queue</code>, <code>research.subject.get</code>, <code>research.fact.decide</code> (human), <code>research.settings.set</code>, <code>research.workspace_profile.refresh</code></dd>
+      <dt>Console</dt><dd>CRM &gt; Research</dd>
+    </dl>
+  </div>
+
+  <!-- CRM sync -->
+  <div class="engine" id="eng-crm">
+    <div class="engine-head"><h3>CRM sync (CRM of record)</h3><span class="pkg">hosted by stdlib/engine.score · stdlib/connector.composio</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Keep using HubSpot, Salesforce, Pipedrive, Attio or Zoho. GTM OS mirrors its companies, contacts and deals every six hours (or on demand), scores and enriches them, and can write results back, such as an account tier, after approval.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Through Composio: <code>crm.settings.set {crmOfRecord}</code> (needs an ACTIVE Composio account), <code>crm.sync</code> (one job per org, 10,000 records per object cap), <code>crm.sync_status</code>. Records are keyed on <code>custom.crm = {toolkit, object, recordId}</code>. Write-back: <code>crm.update_record</code> (E), undo with <code>crm.undo_update_record</code>.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Console</dt><dd>Integrations &gt; Connections &gt; Composio, section "CRM of record", <strong>Sync now</strong></dd>
+      <dt>After sync</dt><dd>Run <code>identity_dq.quality_report</code> and <code>identity_dq.scan_duplicates</code></dd>
+    </dl>
+  </div>
+
+  <!-- Source mappings -->
+  <div class="engine" id="eng-sources">
+    <div class="engine-head"><h3>Source mappings (any app to the ontology)</h3><span class="pkg">source.* operations</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Any other app you connect (Typeform, Stripe, Intercom, Airtable, Notion, an internal tool) can feed records into GTM OS. You preview real rows from the app, map its fields to companies, contacts, signals or your own objects, and schedule it.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>A signed <code>definition.source_mapping</code>: <code>source {backend: composio | mcp, toolkit, listTool, args, pagination, itemsPath}</code>, <code>target {objectType}</code>, <code>idField</code>, <code>fields[{from, to, transform}]</code>, <code>match</code>, <code>mode: mirror | append</code> (signals must append), <code>schedule</code>, optional approval-gated <code>writeBack</code>. Only a signed version runs.</p></div>
+    </div>
+    <dl class="facts">
+      <dt>Key ops</dt><dd><code>source.list_tools</code>, <code>source.preview</code> (no writes), <code>source.targets</code>, <code>source.suggest_mapping</code>, <code>source.sync</code>, <code>source.sync_status</code>, <code>source.update_record</code> (E)</dd>
+      <dt>Console</dt><dd>Composio card &gt; a connected app &gt; <strong>Map to ontology</strong></dd>
+      <dt>Outcome counts</dt><dd>created, updated, unchanged, skipped, invalid, unresolved, truncated</dd>
+    </dl>
+  </div>
+
+  <!-- Search index -->
+  <div class="engine" id="eng-search">
+    <div class="engine-head"><h3>Search index</h3><span class="pkg">kernel/indexing</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>Lets people and agents ask in plain language ("SaaS companies in Germany that raised money this year") and get matching records, not just exact keyword hits.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Hybrid retrieval over a <code>search_index</code> table: tsvector plus pgvector, with content-hash skip. No configuration beyond an embedding key. <code>search.index_status</code> reports records, indexed and vector coverage per type and the embedding model.</p></div>
+    </div>
+  </div>
+
+  <!-- Chat -->
+  <div class="engine" id="eng-chat">
+    <div class="engine-head"><h3>Agent chat</h3><span class="pkg">chat.* operations</span></div>
+    <div class="dual">
+      <div class="gtm"><h4>For GTM teams</h4><p>An AI assistant inside the CRM. Ask about an account, log an activity, create a task, move a deal. Anything it would change is proposed, and a teammate other than the person who asked approves it.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p><code>chat.conversation.create</code>, <code>chat.message.send</code>: a bounded tool loop through the model gateway (8 steps, 120 s). Write tools (<code>activity.log</code>, <code>task.create</code>, <code>task.update</code>, <code>canon.edit</code>, <code>deal.move_stage</code>, <code>sequence.enroll</code>) are only proposed. Needs a model provider. Console: CRM &gt; AI chat (<code>/chat</code>).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="doc" id="flows">
+  <p class="kicker">06 · End-to-end flows</p>
+  <h2>How the pieces move together</h2>
+
+  <h3>From signal to approved send</h3>
+  <p class="prose">This is the default path with both workflow flags on (<code>signals.reaction</code>, <code>qualification.handoff</code>). No custom play is needed.</p>
+  <pre class="mermaid">
+flowchart TD
+  S["Signal recorded: funding, hiring, visit, form"] --> R["signals.reaction re-scores the account"]
+  R --> Q{"Qualified by your scoring model?"}
+  Q -- "no" --> W["Stays warm, watched by scans"]
+  Q -- "yes" --> HO["qualification.handoff"]
+  HO --> O["Owner assigned, round-robin or your list"]
+  HO --> T["Follow-up task due in 2 days"]
+  HO --> E["Contact enrolled in the lane-bound sequence"]
+  E --> D["Message drafted in your brand voice"]
+  D --> P["outreach.send_message proposed"]
+  P --> C{"Pre-send checks pass?"}
+  C -- "no" --> X["Blocked: suppression, cap, open deal"]
+  C -- "yes" --> A["Second human approves and executes"]
+  A --> M["Sent from the lane mailbox, logged"]
+  </pre>
+  <div class="dual">
+    <div class="gtm"><h4>For GTM teams</h4><p>Your reps see qualified accounts on the Hot list with an owner and a task already set. Sends wait in Needs a human. Customers, partners and former customers are excluded by default, and an open deal stops enrolment.</p></div>
+    <div class="tech"><h4>Under the hood</h4><p>Strong buying or intent signals (strength ≥ 50) enrol directly; ≥ 60 alerts the owner. Owner pool: members round-robin, or <code>route.ownerIds</code> in the flag. Both flags are edited with <code>flags.set</code> (keep the other keys). The lane's envelope, daily cap and DNS state apply at send time.</p></div>
+  </div>
+
+  <h3>Connect an app with Composio and sync it into the ontology</h3>
+  <pre class="mermaid">
+flowchart LR
+  A["Connect Composio: sign-in, ck_ or ak_ key"] --> B["composio.connect an app, human consent"]
+  A --> SC["composio.sync_connections finds apps already connected"]
+  SC --> C
+  B --> C{"Is it your CRM?"}
+  C -- "yes" --> D["crm.settings.set, then crm.sync every 6 hours"]
+  C -- "no" --> E["source.preview and source.suggest_mapping"]
+  E --> F["definition.source_mapping, signed by a human"]
+  F --> G["source.sync on its schedule"]
+  D --> H["gtm.account, gtm.contact, gtm.deal, gtm.signal"]
+  G --> H
+  H --> I["Identity resolution and dedupe review"]
+  </pre>
+
+  <h3>Build and go live</h3>
+  <pre class="mermaid">
+flowchart LR
+  A["Discovery interview"] --> B["blueprint.apply into dev"]
+  B --> C["Customize definitions in dev"]
+  C --> D["config.apply approved by a second human"]
+  D --> E["definition.propose_for_signing"]
+  E --> F["definition.sign_many by a human, not the proposer"]
+  F --> G["env.promote dev to prod, one approval"]
+  G --> H["lane.activate, SPF DKIM DMARC checked"]
+  H --> I["go-live-check returns GO"]
+  </pre>
+  <p class="prose">In the console, Environments &gt; Go live does the sign and promote in two clicks: "Review &amp; sign all proposed (N)", then "Promote dev → prod". The <code>/go-live-check</code> command runs a read-only GO / NO-GO list: live mode, <code>gtm doctor --strict</code>, readiness, the Search Console requirement (if SEO is used), engines enabled, definitions signed in the target environment, a live check per engine, a second approver, Dry Mode off, and caps.</p>
+</section>
+
+<!-- 7 -->
+<section class="doc" id="integrations">
+  <p class="kicker">07 · Integrations</p>
+  <h2>What GTM OS connects to, and why</h2>
+  <div class="callout">
+    <p><strong>The split that matters.</strong> looot is for buying third-party <em>data</em>. Composio is for <em>your own apps</em> and actions in them. Never use Composio to buy data, and never use looot to write into your CRM.</p>
+  </div>
+
+  <h3>looot: third-party data</h3>
+  <div class="dual">
+    <div class="gtm"><h4>For GTM teams</h4><p>The single source for outside data: company and people search, lookalikes, email and phone finding and verification, intent, news, jobs, web search, page extraction and SEO keyword data. Every call is priced, capped and recorded with its source.</p></div>
+    <div class="tech"><h4>Under the hood</h4><p>Reached only through capabilities (<code>capability.quote</code>, <code>capability.acquire</code>) resolved by a <code>definition.binding</code> with <code>backend: looot</code>; there are no <code>looot.*</code> operations. Credential: instance <code>LOOOT_TOKEN</code> or a per-org <code>looot</code> Connection. Values carry provenance <code>looot:&lt;capability&gt;:&lt;runId&gt;</code>. Pin an endpoint with <code>gtm capabilities discover</code>.</p></div>
+  </div>
+
+  <h3>Composio: your own apps and actions</h3>
+  <div class="dual">
+    <div class="gtm"><h4>For GTM teams</h4><p>Composio connects GTM OS to the SaaS accounts you already use, from a catalog of 1,000+ toolkits: your CRM, Slack, Typeform, Stripe, Ahrefs, Search Console and more. Click <strong>Connect Composio</strong>, sign in, and apps you already connected in Composio are picked up automatically.</p></div>
+    <div class="tech"><h4>Under the hood</h4><p>Three credential modes, one per org (the newest replaces the previous): <strong>Connect Composio</strong> (OAuth 2.1 + PKCE, tokens sealed and refreshed: <code>composio.oauth_start</code> → <code>composio.oauth_callback</code>), a <code>ck_</code> Connect key, or an <code>ak_</code> project key (<code>composio.set_api_key</code>, verified live). <code>uak_</code> user keys are refused. Precedence: sign-in, then <code>ck_</code>, then <code>ak_</code>, then instance <code>COMPOSIO_API_KEY</code>. Auto-discovery: <code>composio.sync_connections</code>; status: <code>composio.status</code>.</p></div>
+  </div>
+
+  <h3>Per-org MCP servers</h3>
+  <p class="prose">Any streamable-HTTP MCP server can become a capability backend for one org, without a restart. <code>mcp_servers.add</code> stores the URL and auth header sealed, <code>mcp_servers.test</code> runs a live <code>initialize</code> and <code>tools/list</code>, and a human marks each tool <code>read</code> or <code>write</code> with <code>mcp_servers.set_tool_effects</code>. Bind it with <code>definition.binding {backend: "mcp", opId: "mcp:&lt;server&gt;:&lt;tool&gt;"}</code>. An undeclared tool is unusable; a write tool needs <code>riskClass: "high_risk"</code>, <code>broker.accept_high_risk</code> and a second human's approval on every call.</p>
+
+  <h3>Native connections</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Connection</th><th>Used for</th><th>How</th></tr></thead>
+    <tbody>
+      <tr><td>Google account (OAuth)</td><td>Search Console, GA4, Google Ads, Gmail send and sync, Calendar</td><td>Settings &gt; Connected accounts; "Use for org" for the org default</td></tr>
+      <tr><td>Microsoft account (OAuth)</td><td>Mail, send, calendar</td><td>Settings &gt; Connected accounts</td></tr>
+      <tr><td>Slack (OAuth)</td><td>Alerts, channels, member matching; agents can post</td><td>Settings &gt; Slack</td></tr>
+      <tr><td>Resend</td><td>Email sending when no mailbox is connected</td><td><code>resend</code> Connection or <code>RESEND_API_KEY</code></td></tr>
+      <tr><td>Unipile</td><td>LinkedIn reads and (high-risk, off by default) sends</td><td>Unipile card: API key + DSN</td></tr>
+      <tr><td>Webform, Cal.com</td><td>Inbound forms and bookings as signals</td><td>HMAC-verified webhooks</td></tr>
+      <tr><td>Website tracking</td><td>Page views, sources, first and last touch</td><td><code>tracking.site.create</code> snippet, <code>tracking.verify</code></td></tr>
+      <tr><td>Meta Ads</td><td>Ad performance and changes</td><td><code>meta_ads</code> Connection</td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose">Mail and calendar sync every 10 minutes and auto-log activities with known contacts.</p>
+
+  <h3>Model providers</h3>
+  <p class="prose">At least one of Anthropic, OpenAI or Gemini must be live, as an org Connection or an instance key. Default models: <code>claude-sonnet-5-5</code>, <code>gpt-4o</code>, <code>gemini-3.8-flash</code>, overridable per provider with <code>GTMOS_DEFAULT_MODEL_&lt;PROVIDER&gt;</code>. Pin routes per task class (<code>reasoning</code>, <code>drafting</code>, <code>classification</code>, <code>extraction</code>, <code>embedding</code>) with <code>definition.model_policy</code>. Region-specific routing fails closed without a configured regional endpoint.</p>
+</section>
+
+<!-- 8 -->
+<section class="doc" id="customize">
+  <p class="kicker">08 · Flexibility and customization</p>
+  <h2>Change almost anything, through an agent, under review</h2>
+  <p class="lede">GTM OS is designed so that you, through Claude Code, Codex or any MCP agent, can reshape the system to fit your motion. Engines, data model, data sources, integrations, starting templates, packages and screens are all configuration. The agent writes it; your team signs it; it goes live.</p>
+
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>You do not file a feature request to change how leads are scored or which accounts get a sequence. You tell the agent what you want ("weight hiring signals higher, and only DACH companies with 200 to 5,000 people"). It writes the definition in dev, shows you the diff, and a teammate signs it. The same goes for a new field, a new object, a new data source or a new automation.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>Every customization point is an operation or a definition kind with a strict schema, so the agent never guesses a field (<code>gtm_describe</code> returns the exact JSON Schema). Config changes travel as ChangeSets, are validated before anything applies, and go through the same sign and promote path as anything else. Nothing is edited in the database directly.</p>
+    </div>
+  </div>
+
+  <h3>What you can customize</h3>
+  <div class="grid2">
+    <div class="tile"><h5>Engines</h5><p>Scoring models and thresholds (<code>definition.scoring_model</code>), buying committees, segments, personas, lanes (caps, checks, budget, domain), sequences, brand voice, suppression and compliance, unit economics, workflow flags (<code>qualification.handoff</code>, <code>signals.reaction</code>, <code>identity_dq.thresholds</code>) and routing owners.</p></div>
+    <div class="tile"><h5>Ontology</h5><p>Custom fields on accounts, contacts and deals (<code>field.create</code>, immediate). Custom objects and relationships (<code>ontology.propose_changeset</code>, published after approval). Optional modules such as <code>stdlib/gtm.partner</code>. Pipelines and stages.</p></div>
+    <div class="tile"><h5>Data</h5><p>Source mappings from any Composio app or MCP server into any canon or custom object, with transforms, match keys, schedule and optional gated write-back. Identity rules and survivorship. Mirror modes per object type. CSV import.</p></div>
+    <div class="tile"><h5>Integrations</h5><p>Connect any Composio app; add your own MCP servers; bind any capability to looot, Composio, MCP or native backends with a price cap and fallbacks (<code>definition.binding</code>). Build Composio-powered automations as plays whose steps call operations, or as agents with triggers.</p></div>
+    <div class="tile"><h5>Blueprints</h5><p>Start from the closest general blueprint (<code>blueprint.apply</code>), then change only what your motion needs. Blueprints are general templates: no customer-specific blueprint ships, and you should not create one.</p></div>
+    <div class="tile"><h5>Packages</h5><p>Ship your standard setup as a declarative package of definitions and parameters (<code>gtm pkg scaffold --tier declarative</code>). Code goes in a signed trusted or sandboxed package. Example: <code>examples/acme-cyber-outbound/</code>.</p></div>
+    <div class="tile"><h5>Apps and screens</h5><p>Declarative screens with <code>definition.app</code> (routes, audiences, pages composed from view types over operations), served at <code>/org/&lt;org&gt;/a/&lt;key&gt;</code>. Sandboxed code apps for custom UI. Console theme tokens via <code>definition.brand_kit</code>. Saved views and nav settings per org.</p></div>
+    <div class="tile"><h5>Agents and automations</h5><p>Register agents with a signed <code>definition.agent</code> (scopes, skills, step, cost and deadline bounds), and fire them manually, on a schedule or on CRM events (<code>agent.trigger.create</code>). Long jobs run as missions with one human approval moment.</p></div>
+  </div>
+
+  <h3>Agent parity</h3>
+  <p class="prose">An agent key with the <strong>Full GTM engineer</strong> preset (the Claude Code default), acting for an owner or admin, can do everything that person can do in the console through operations: records, fields, pipelines, definitions (proposed), research settings, CRM settings, workflow flags, connections and keys the user hands over, MCP servers, syncs, scans. Four things stay human and return <code>FORBIDDEN</code>:</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Stays human</th><th>Why</th><th>Examples</th></tr></thead>
+    <tbody>
+      <tr><td>Approve, reject, execute, sign, publish</td><td>Four-eyes</td><td class="wrap"><code>runtime.approve_action</code>, <code>runtime.execute_approval</code>, <code>definition.sign</code>, <code>ontology.publish_changeset</code>, <code>mission.approve</code>, <code>research.fact.decide</code></td></tr>
+      <tr><td>Widen its own authority</td><td>No self-escalation</td><td class="wrap"><code>agent.create_key</code>, <code>agent.revive</code>, <code>policy.set_gate_policy</code>, <code>envelope.grant</code>, <code>delegation.grant</code>, <code>mcp_servers.set_tool_effects</code></td></tr>
+      <tr><td>Give browser OAuth consent</td><td>A person must click</td><td class="wrap"><code>composio.oauth_start</code>, <code>composio.connect</code>, Google, Microsoft and Slack sign-ins (the agent gets the link)</td></tr>
+      <tr><td>Toggle Dry Mode</td><td>Safety switch</td><td><code>policy.set_dry_mode</code></td></tr>
+    </tbody>
+  </table></div>
+  <p class="prose">Effective authority is the intersection of the key's scopes, the agent's scopes and the creating human's <strong>current</strong> role, re-checked on every call. Demote the human and the key shrinks. <code>action.approve</code> can never be granted to a key. Kill an agent everywhere with <code>agent.kill</code>.</p>
+
+  <h3>The harness: <code>gtm init</code></h3>
+  <div class="dual">
+    <div class="gtm"><h4>For GTM teams</h4><p>Open an empty folder in Claude Code, run <code>gtm init</code>, then type <code>/setup-gtmos</code>. Claude installs or connects GTM OS, sets up the agent key, connections and second approver with you, then runs <code>/build-gtm-system</code>: an interview about your business, a blueprint recommendation, and an engine-by-engine build. It stops wherever a human must act. <code>/go-live-check</code> tells you GO or NO-GO.</p></div>
+    <div class="tech"><h4>Under the hood</h4><p><code>gtm init</code> (alias of <code>gtm harness</code>) scaffolds: <code>CLAUDE.md</code> and <code>AGENTS.md</code>; 11 subagents (lead <code>gtm-architect</code>); 13 slash commands; 21 skills, including <code>gtmos-setup</code>, <code>gtmos-engine-catalog</code>, <code>gtmos-source-mapping</code>, <code>gtmos-looot</code> and <code>composio</code>; <code>.mcp.json</code>; a session-start hook; <code>.claude/gtm-context.md</code> generated from the live registry; memory seeds; and <code>docs/gtmos/</code> with the 10 guides and generated reference. Idempotent; never overwrites edits without <code>--force</code>.</p></div>
+  </div>
+  <p class="prose">The agent's tools over MCP: <code>gtm_describe</code> (always first), <code>gtm_query</code>, <code>gtm_get</code>, <code>gtm_search</code>, <code>gtm_act</code>, <code>gtm_approvals</code>, <code>gtm_lineage</code>, <code>gtm_lineage_trace</code>, <code>search_records</code>.</p>
+
+  <h3>Customizable now, or needs a new release</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Change</th><th>Config, today</th><th>Needs a release</th></tr></thead>
+    <tbody>
+      <tr><td>Scoring rules, thresholds, segments, personas, committees</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>Lanes, sequences, brand voice, suppression, compliance</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>Plays, schedules, workflow flags, routing owners</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>Custom fields, custom objects, relationships, pipelines</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>New data source from any Composio app or MCP server</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>Capability backends, price caps, model routing</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>Declarative screens, theme tokens, saved views</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>Agents, skills, triggers</td><td class="yes">Yes</td><td></td></tr>
+      <tr><td>Your own declarative, trusted or sandboxed package</td><td class="yes">Yes, signed if it carries code</td><td></td></tr>
+      <tr><td>Redefining a canon <code>gtm.*</code> field</td><td></td><td class="no">Ontology release</td></tr>
+      <tr><td>A new definition kind or operation class</td><td></td><td class="no">Kernel release</td></tr>
+      <tr><td>A new first-party engine, native connector adapter or model provider</td><td></td><td class="no">Stdlib release</td></tr>
+      <tr><td>Weakening four-eyes, agent limits or tenant isolation</td><td></td><td class="no">Not possible by design</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 9 -->
+<section class="doc" id="security">
+  <p class="kicker">09 · Security and governance</p>
+  <h2>Who can see, do and approve what</h2>
+  <div class="dual">
+    <div class="gtm"><h4>For GTM teams</h4><p>Each organization's data is walled off from every other organization at the database level. API keys and OAuth tokens are encrypted and never shown again after you save them. Every action, by a person or an agent, is written to a tamper-evident audit log with who proposed it, which agent did it, for whom, and who approved it.</p></div>
+    <div class="tech"><h4>Under the hood</h4><p>Every tenant table is under Postgres row-level security and the app connects as a non-superuser <code>NOBYPASSRLS</code> role. Credentials are AES-256-GCM encrypted under a per-org data key (envelope encryption), rotatable with <code>secret.rotate_org_key</code>. The operation audit log is hash-chained per org with signed daily checkpoints.</p></div>
+  </div>
+
+  <h3>Roles</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Role</th><th>Permissions</th></tr></thead>
+    <tbody>
+      <tr><td><code>owner</code>, <code>admin</code></td><td><code>record.read</code>, <code>record.write</code>, <code>engine.configure</code>, <code>connection.manage</code>, <code>action.approve</code></td></tr>
+      <tr><td><code>builder</code> (delegated agency role)</td><td>Everything except <code>action.approve</code></td></tr>
+      <tr><td><code>member</code></td><td><code>record.read</code>, <code>record.write</code></td></tr>
+      <tr><td><code>service</code></td><td><code>record.write</code></td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Controls at a glance</h3>
+  <div class="grid2">
+    <div class="tile"><h5>Sign-in</h5><p>Better Auth sessions, Google and Microsoft sign-in, SSO (<code>sso.*</code>) and allow-listed sign-in (<code>auth.allowlist.*</code>), all human-only to configure.</p></div>
+    <div class="tile"><h5>Agent keys</h5><p><code>gtm_</code> keys shown once, default expiry 90 days (1 to 365 or never), revocable; 15-minute exchanged tokens; kill switch <code>agent.kill</code>.</p></div>
+    <div class="tile"><h5>Signing</h5><p>Definitions are signed by a human other than the proposer. Packages are Ed25519-signed. Container images are cosign-signed.</p></div>
+    <div class="tile"><h5>Sandboxing</h5><p>Sandboxed code apps run in an opaque-origin iframe with a strict CSP, deny-by-default egress, and a bridge that only runs operations listed in the manifest.</p></div>
+    <div class="tile"><h5>Privacy</h5><p><code>privacy.erase</code> (right to erasure with a re-ingest guard), <code>retention.set_policy</code> per class, governed <code>org.offboard</code>.</p></div>
+    <div class="tile"><h5>Audit and lineage</h5><p><code>audit.list</code> (Settings &gt; Audit log), <code>runtime.get_approval</code> with full attribution, <code>lineage.trace</code> per value. OpenTelemetry tracing across the pipeline.</p></div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="doc" id="glossary">
+  <p class="kicker">10 · Glossary</p>
+  <h2>Terms, GTM and technical</h2>
+  <div class="gloss">
+    <dl>
+      <dt>ABM <span>gtm</span></dt><dd>Account-based marketing: selling to a named list of accounts and covering their buying committee.</dd>
+      <dt>ACV <span>gtm</span></dt><dd>Annual contract value of a deal.</dd>
+      <dt>Buying committee <span>gtm</span></dt><dd>The people who sign off a purchase. Modelled with <code>definition.committee_model</code>.</dd>
+      <dt>GEO <span>gtm</span></dt><dd>Generative engine optimization: being cited by AI search engines.</dd>
+      <dt>GSC <span>gtm</span></dt><dd>Google Search Console. Required for the SEO &amp; GEO engine.</dd>
+      <dt>Hot list <span>gtm</span></dt><dd>CRM view of qualified accounts with the signals behind each score.</dd>
+      <dt>ICP <span>gtm</span></dt><dd>Ideal customer profile. Scored by the <code>icp_fit</code> model.</dd>
+      <dt>Intent surge <span>gtm</span></dt><dd>A spike of research activity on topics you care about at an account.</dd>
+      <dt>Lane <span>gtm</span></dt><dd>A sending channel with caps, checks, budget and a sending domain.</dd>
+      <dt>Persona <span>gtm</span></dt><dd>A role you target inside an account, defined by title and seniority criteria.</dd>
+      <dt>Play <span>gtm</span></dt><dd>An automation: a trigger, optional filter, steps and guardrails.</dd>
+      <dt>PLG, PQL <span>gtm</span></dt><dd>Product-led growth; a product-qualified lead or account.</dd>
+      <dt>Segment <span>gtm</span></dt><dd>A rule that selects which records a motion works.</dd>
+      <dt>Signal <span>gtm</span></dt><dd>A dated reason to engage (funding, hiring, visit, booking), stored as <code>gtm.signal</code>.</dd>
+      <dt>SPF, DKIM, DMARC <span>gtm</span></dt><dd>DNS records that prove a sending domain is yours; checked at lane activation.</dd>
+      <dt>Suppression <span>gtm</span></dt><dd>People or companies who must never be contacted.</dd>
+    </dl>
+    <dl>
+      <dt>Binding <span>tech</span></dt><dd>Config that says which backend serves a capability, at what price cap.</dd>
+      <dt>Capability <span>tech</span></dt><dd>A named outside ability (for example <code>enrich.find_email</code>) acquired through the broker.</dd>
+      <dt>CEL, Cedar <span>tech</span></dt><dd>Common Expression Language for criteria; Cedar for authorization policy.</dd>
+      <dt>ChangeSet <span>tech</span></dt><dd>A batch of config or ontology changes validated and applied together.</dd>
+      <dt>Definition <span>tech</span></dt><dd>A signed, versioned piece of config an engine reads at run time.</dd>
+      <dt>Dry Mode <span>tech</span></dt><dd>Org-wide switch that turns every customer-facing effect into a draft.</dd>
+      <dt>Envelope <span>tech</span></dt><dd>A scoped, time-bound pre-approval with a budget (for example a lane's send budget).</dd>
+      <dt>Fixture <span>tech</span></dt><dd>Deterministic fake data served only in demo mode.</dd>
+      <dt>Four-eyes <span>tech</span></dt><dd>The proposer, and the human an agent acts for, can never approve, sign or execute.</dd>
+      <dt>Ledger <span>tech</span></dt><dd>Double-entry record of every quoted, held and settled cost.</dd>
+      <dt>MCP <span>tech</span></dt><dd>Model Context Protocol: how Claude Code, Codex and other agents call GTM OS.</dd>
+      <dt>Mirror mode <span>tech</span></dt><dd>How outside data materializes per object type (replicate, soft_merge, federate, in_zone, sheet).</dd>
+      <dt>Observation <span>tech</span></dt><dd>An immutable raw fact from a source, before resolution and projection.</dd>
+      <dt>Outbox <span>tech</span></dt><dd>Events written in the same transaction as the change, relayed by the worker.</dd>
+      <dt>Provenance <span>tech</span></dt><dd>Per-value evidence: source, confidence, band and survivorship rule.</dd>
+      <dt>RLS <span>tech</span></dt><dd>Postgres row-level security isolating each tenant's rows.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="doc" id="not-built">
+  <p class="kicker">11 · What is not built yet</p>
+  <h2>Honest limits in 0.2.2</h2>
+  <p class="prose">These come from the shipped guides, the changelog and the code. Plan around them rather than discovering them during a pilot.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Area</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr><td>White-label for agencies</td><td>Custom branding or domain per client is not available. Delegations, <code>agency.overview</code> and agency-private packages exist; <code>definition.brand_kit</code> re-themes one app only.</td></tr>
+      <tr><td>Expansion and reorder motion</td><td>Not shipped. Defaults exclude customers. You can compose a customer segment plus a custom play, recorded as custom.</td></tr>
+      <tr><td>More engines</td><td>Seven ship. GTM rules that need new engines remain deferred; the ads spend-ceiling rule still needs an aMER curve.</td></tr>
+      <tr><td>Lineage</td><td>Derived and metric lineage are stubbed (empty). Value lineage works.</td></tr>
+      <tr><td>Relationships</td><td>Custom relationship cardinality is recorded, not enforced.</td></tr>
+      <tr><td>Org-wide spend budget</td><td>No public operation sets one. Use per-call caps, lane envelopes, play guardrails and model policy limits.</td></tr>
+      <tr><td>Gate policies</td><td>One org-wide gate policy per org; per-operation-family policies are supported in storage, not routed yet.</td></tr>
+      <tr><td>Routing</td><td>No routing definition kind; routing runs through <code>routing.assign</code> and the handoff flag.</td></tr>
+      <tr><td>Console gaps</td><td>No dedicated Signals page; no button to activate a lane (use <code>gtm lane activate</code>).</td></tr>
+      <tr><td>Salesforce native adapter</td><td>Fixture-first and unverified; connect Salesforce through Composio instead.</td></tr>
+      <tr><td>LinkedIn sends</td><td>High-risk, off by default, human-send only.</td></tr>
+      <tr><td>Roles</td><td>No viewer role.</td></tr>
+      <tr><td>Ontology version</td><td>Canon ontology is 0.1.0-draft.</td></tr>
+      <tr><td>Open project decisions</td><td>Final licensing (AGPL counsel review) and the product name are still open in the architecture notes.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="foot">
+    <p>Source of truth: gtmos <code>origin/main</code> at <code>e29e84f9</code>. Primary sources: <code>apps/cli/src/harness/docs/guides/*</code>, the generated reference in <code>apps/cli/src/harness/docs/reference/*</code>, <code>ARCHITECTURE.md</code>, <code>README.md</code>, <code>CHANGELOG.md</code>, <code>docs/HARNESS.md</code>, <code>docs/SANDBOXED-CODE-APPS.md</code> and the kernel and stdlib packages. Counts come from the registry at that commit; your instance may differ.</p>
+  </div>
+</section>
+
+</main>
+</div>
+</div>
+
+<script>
+(function(){
+  var app = document.getElementById('app');
+  var root = document.documentElement;
+  function store(k, v){ try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } return null; }
+
+  // audience toggle
+  var segBtns = Array.prototype.slice.call(document.querySelectorAll('.seg button'));
+  function setAud(a){
+    if (['both','gtm','tech'].indexOf(a) < 0) a = 'both';
+    app.setAttribute('data-aud', a);
+    segBtns.forEach(function(b){ b.setAttribute('aria-pressed', String(b.getAttribute('data-aud') === a)); });
+    store('gtmos-doc-aud', a);
+  }
+  segBtns.forEach(function(b){ b.addEventListener('click', function(){ setAud(b.getAttribute('data-aud')); }); });
+  setAud(store('gtmos-doc-aud') || 'both');
+
+  // theme toggle
+  var themeBtn = document.getElementById('themeBtn');
+  var savedTheme = store('gtmos-doc-theme');
+  if (savedTheme === 'light' || savedTheme === 'dark') root.setAttribute('data-theme', savedTheme);
+  themeBtn.addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme');
+    if (!cur) cur = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    store('gtmos-doc-theme', next);
+  });
+
+  // scrollspy
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc a'));
+  var map = {};
+  links.forEach(function(l){ map[l.getAttribute('href').slice(1)] = l; });
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section.doc'));
+  function activate(id){
+    links.forEach(function(l){ l.classList.toggle('active', l === map[id]); });
+  }
+  if ('IntersectionObserver' in window) {
+    var visible = {};
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ visible[e.target.id] = e.isIntersecting; });
+      for (var i = 0; i < sections.length; i++) {
+        if (visible[sections[i].id]) { activate(sections[i].id); return; }
+      }
+    }, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+    sections.forEach(function(s){ io.observe(s); });
+  }
+  activate(sections.length ? sections[0].id : '');
+})();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+<script>(function(){var d=document.documentElement.getAttribute("data-theme")==="dark"||(!document.documentElement.getAttribute("data-theme")&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);mermaid.initialize({startOnLoad:true,securityLevel:"strict",theme:d?"dark":"neutral"});})();</script>
+
+</body>
+</html>

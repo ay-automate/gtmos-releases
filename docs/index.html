@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GTM OS Docs</title>
+<style>
+:root{--bg:#f5f2ec;--fg:#1f1b16;--muted:#62594d;--line:#ddd4c6;--card:#fbf9f5;--accent:#b5421d;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#15120e;--fg:#ece5da;--muted:#a99d8d;--line:#352e25;--card:#1d1914;--accent:#f89b7c;color-scheme:dark}}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:720px;margin:0 auto;padding:64px 16px}
+h1{font-size:2.2rem;margin:0 0 8px}
+p{color:var(--muted);margin:0 0 28px}
+a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;color:var(--fg);text-decoration:none}
+a.card:hover{border-color:var(--accent)}
+a.card b{display:block;font-size:1.1rem;color:var(--accent)}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.9em}
+</style>
+</head>
+<body>
+<main>
+<h1>GTM OS documentation</h1>
+<p>Release 0.2.2. Install with <code>npm i -g @gtmos/cli@0.2.2</code>, then <code>gtm init</code> and <code>/setup-gtmos</code> in Claude Code.</p>
+<a class="card" href="user-guide.html"><b>User guide</b>Quickstart, then how-to for every task: connections, agents, building your system, approvals, going live, troubleshooting.</a>
+<a class="card" href="product-documentation.html"><b>Product documentation</b>Architecture, core concepts, ontology, the engines, end-to-end flows, integrations, customization and security, for GTM teams and engineers.</a>
+<a class="card" href="https://github.com/ay-automate/gtmos-releases"><b>Releases</b>Release notes and downloads on GitHub.</a>
+</main>
+</body>
+</html>

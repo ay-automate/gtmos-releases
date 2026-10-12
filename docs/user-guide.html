@@ -1,0 +1,1068 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+</head>
+<body>
+<title>GTM OS User Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=DM+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f2ec;--surface:#fffdf9;--fg:#1d1a16;--muted:#655e54;--line:#e2dbcf;--tint:#ece5d9;--tint-fg:#3a332b;
+  --ember:#f26a43;--ember-ink:#b9431d;--ember-bg:#fde6dc;
+  --gate:#e07b2a;--gate-ink:#8f4a12;--gate-bg:#fbe9d6;
+  --ok:#2c7448;--ok-bg:#e1f0e6;
+  --code-bg:#1f1b17;--code-fg:#f2ece2;--code-muted:#a99f91;
+  --shadow:0 1px 2px rgba(40,30,20,.06),0 4px 18px rgba(40,30,20,.05);
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --r:10px;--hdr:56px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#151311;--surface:#1e1b18;--fg:#ece6dc;--muted:#a49b8e;--line:#342e28;--tint:#2a2520;--tint-fg:#e2d9cc;
+    --ember:#f47c58;--ember-ink:#ff9d7c;--ember-bg:#3a2219;
+    --gate:#eb9450;--gate-ink:#f6b580;--gate-bg:#3a2a1b;
+    --ok:#83cfa1;--ok-bg:#1c3326;
+    --code-bg:#0e0c0a;--code-fg:#efe8dd;--code-muted:#8d8476;
+    --shadow:0 1px 2px rgba(0,0,0,.4);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#151311;--surface:#1e1b18;--fg:#ece6dc;--muted:#a49b8e;--line:#342e28;--tint:#2a2520;--tint-fg:#e2d9cc;
+  --ember:#f47c58;--ember-ink:#ff9d7c;--ember-bg:#3a2219;
+  --gate:#eb9450;--gate-ink:#f6b580;--gate-bg:#3a2a1b;
+  --ok:#83cfa1;--ok-bg:#1c3326;
+  --code-bg:#0e0c0a;--code-fg:#efe8dd;--code-muted:#8d8476;
+  --shadow:0 1px 2px rgba(0,0,0,.4);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:15.5px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--ember-ink);text-underline-offset:2px}
+a:hover{color:var(--ember)}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.15;letter-spacing:-.01em;color:var(--fg)}
+h1{font-size:clamp(30px,5vw,44px);margin:.2em 0 .35em;font-weight:700}
+h2{font-size:clamp(23px,3.4vw,30px);margin:0 0 .4em;font-weight:700;scroll-margin-top:calc(var(--hdr) + 16px)}
+h3{font-size:19px;margin:0 0 .4em;font-weight:700;scroll-margin-top:calc(var(--hdr) + 16px)}
+h4{font-size:15.5px;margin:1.2em 0 .3em;font-weight:700;scroll-margin-top:calc(var(--hdr) + 16px)}
+p{margin:.5em 0}
+ul,ol{padding-left:1.25em;margin:.5em 0}
+li{margin:.28em 0}
+code{font-family:var(--mono);font-size:.86em;background:var(--tint);color:var(--tint-fg);padding:.08em .36em;border-radius:5px;overflow-wrap:anywhere}
+kbd{font-family:var(--mono);font-size:.82em;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;padding:0 .35em;background:var(--surface)}
+.ui{font-weight:600;color:var(--fg);background:var(--ember-bg);padding:.04em .34em;border-radius:5px;white-space:normal}
+strong{font-weight:600}
+
+/* header */
+.hdr{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;height:var(--hdr);display:flex;align-items:center;gap:12px;padding:0 16px;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.2) blur(8px);-webkit-backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:17px;color:var(--fg);text-decoration:none;min-width:0}
+.mark{width:26px;height:26px;border-radius:7px;background:var(--ember);color:#fff;display:grid;place-items:center;font-size:14px;flex:none}
+.brand span.sub{font-family:var(--sans);font-weight:500;font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hdr .sp{flex:1}
+.btn{font:500 13px/1 var(--sans);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 11px;cursor:pointer}
+.btn:hover{border-color:var(--ember)}
+.navbtn{display:none}
+
+/* layout */
+.wrap{display:grid;grid-template-columns:268px minmax(0,1fr);max-width:1240px;margin:0 auto}
+nav.side{position:sticky;top:calc(var(--hdr) + env(safe-area-inset-top,0px));align-self:start;height:calc(100vh - var(--hdr));overflow-y:auto;padding:20px 14px 40px 16px;border-right:1px solid var(--line)}
+.search{width:100%;font:14px var(--sans);color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px;margin-bottom:12px}
+.search:focus{outline:2px solid var(--ember);outline-offset:1px}
+nav.side .grp{font:600 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 6px 6px}
+nav.side a{display:block;padding:5px 8px;border-radius:6px;color:var(--fg);text-decoration:none;font-size:13.6px;line-height:1.35}
+nav.side a:hover{background:var(--tint)}
+nav.side a.on{background:var(--ember-bg);color:var(--ember-ink);font-weight:600}
+nav.side a.hot{border-left:3px solid var(--ember);border-radius:0 6px 6px 0;font-weight:600}
+nav.side .none{display:none;font-size:13px;color:var(--muted);padding:6px 8px}
+main{min-width:0;padding:28px 40px 80px}
+section.sec{padding:34px 0 10px;border-top:1px solid var(--line)}
+section.sec:first-of-type{border-top:0;padding-top:4px}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--ember-ink);margin-bottom:8px}
+.lede{font-size:17px;color:var(--muted);max-width:62ch}
+.meta{font:13px var(--mono);color:var(--muted)}
+
+/* hero tiles */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0 6px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 15px;box-shadow:var(--shadow);text-decoration:none;color:var(--fg)}
+.tile b{display:block;font-family:var(--display);font-size:16px;margin-bottom:3px}
+.tile span{font-size:13.5px;color:var(--muted)}
+.tile.em{border-color:var(--ember);background:var(--ember-bg)}
+.tile.em span{color:var(--fg)}
+
+/* quickstart */
+ol.qs{list-style:none;counter-reset:qs;padding:0;margin:18px 0}
+ol.qs>li{counter-increment:qs;position:relative;padding:0 0 22px 52px;margin:0}
+ol.qs>li::before{content:counter(qs);position:absolute;left:0;top:0;width:34px;height:34px;border-radius:50%;background:var(--ember);color:#fff;font:700 15px/34px var(--display);text-align:center}
+ol.qs>li::after{content:"";position:absolute;left:16px;top:40px;bottom:6px;width:2px;background:var(--line)}
+ol.qs>li:last-child::after{display:none}
+ol.qs>li>h3{font-size:18px;margin:5px 0 6px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.time{font:500 12px var(--mono);color:var(--muted)}
+
+/* cards */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px 22px;margin:18px 0;box-shadow:var(--shadow)}
+.card>h3{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.goal{color:var(--muted);margin:.2em 0 .7em}
+.goal b{color:var(--fg)}
+ol.steps{padding-left:1.4em}
+ol.steps>li::marker{color:var(--ember-ink);font-weight:700}
+.see{border-left:3px solid var(--ok);background:var(--ok-bg);padding:8px 12px;border-radius:0 8px 8px 0;margin:10px 0}
+.see::before{content:"You should see";display:block;font:600 11px/1.4 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--ok);margin-bottom:2px}
+.note{border-left:3px solid var(--gate);background:var(--gate-bg);padding:8px 12px;border-radius:0 8px 8px 0;margin:10px 0}
+.chip{display:inline-flex;align-items:center;gap:5px;font:600 11.5px/1 var(--sans);letter-spacing:.02em;padding:5px 8px;border-radius:99px;white-space:nowrap;vertical-align:middle}
+.chip.human{background:var(--gate-bg);color:var(--gate-ink);border:1px solid color-mix(in srgb,var(--gate) 45%,transparent)}
+.chip.human::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gate)}
+.chip.claude{background:var(--tint);color:var(--tint-fg);border:1px solid var(--line)}
+details.err{margin:12px 0 0;border:1px solid var(--line);border-radius:8px;background:var(--bg)}
+details.err>summary{cursor:pointer;padding:8px 12px;font-weight:600;font-size:14px}
+details.err>div{padding:0 12px 10px}
+details.err ul{margin:.2em 0}
+
+/* code */
+.code{position:relative;margin:10px 0}
+pre{margin:0;background:var(--code-bg);color:var(--code-fg);font:13px/1.6 var(--mono);border-radius:9px;padding:13px 76px 13px 14px;overflow-x:auto;white-space:pre}
+pre code{background:none;color:inherit;padding:0;font-size:inherit;overflow-wrap:normal}
+pre .c{color:var(--code-muted)}
+.copy{position:absolute;top:7px;right:7px;font:500 12px/1 var(--sans);color:var(--code-fg);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:6px;padding:6px 9px;cursor:pointer}
+.copy:hover{background:rgba(255,255,255,.16)}
+.copy.done{background:var(--ok);border-color:var(--ok);color:#fff}
+
+/* tables */
+.tbl{overflow-x:auto;margin:10px 0;border:1px solid var(--line);border-radius:9px}
+table{border-collapse:collapse;width:100%;font-size:13.8px;min-width:520px}
+th,td{text-align:left;vertical-align:top;padding:8px 11px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{background:var(--tint);color:var(--tint-fg);font:600 12px/1.3 var(--sans);letter-spacing:.03em;text-transform:uppercase}
+
+/* flexibility */
+.flex-hero{background:linear-gradient(135deg,var(--ember-bg),var(--surface));border:2px solid var(--ember);border-radius:14px;padding:22px 22px 14px;margin:6px 0 18px}
+.flex-hero h2{margin-top:0}
+.prompts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:14px 0}
+.prompt{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 15px;box-shadow:var(--shadow);min-width:0}
+.prompt h4{margin:0 0 6px}
+.prompt .code pre{white-space:pre-wrap;padding-right:70px}
+.prompt dl{margin:8px 0 0;font-size:14px}
+.prompt dt{font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.prompt dd{margin:2px 0 0}
+.callout{display:flex;gap:12px;align-items:flex-start;background:var(--ember-bg);border:1px solid var(--ember);border-radius:var(--r);padding:12px 14px;margin:16px 0}
+.callout b{font-family:var(--display)}
+dl.gloss{display:grid;grid-template-columns:200px minmax(0,1fr);gap:6px 18px;margin:12px 0}
+dl.gloss dt{font-weight:600}
+dl.gloss dd{margin:0;color:var(--fg)}
+.hidden-by-search{display:none !important}
+footer{color:var(--muted);font-size:13px;padding:30px 0 0;border-top:1px solid var(--line);margin-top:30px}
+
+@media (max-width:900px){
+  .wrap{grid-template-columns:minmax(0,1fr)}
+  .navbtn{display:inline-block}
+  nav.side{display:none;position:fixed;left:0;right:0;top:calc(var(--hdr) + env(safe-area-inset-top,0px));height:auto;max-height:calc(100vh - var(--hdr) - env(safe-area-inset-top,0px));background:var(--bg);z-index:25;border-right:0;border-bottom:1px solid var(--line);box-shadow:var(--shadow)}
+  nav.side.open{display:block}
+  main{padding:20px 16px 60px}
+  .tiles{grid-template-columns:minmax(0,1fr)}
+  .prompts{grid-template-columns:minmax(0,1fr)}
+  dl.gloss{grid-template-columns:minmax(0,1fr);gap:2px}
+  dl.gloss dd{margin-bottom:10px}
+  .card{padding:16px 14px}
+  ol.qs>li{padding-left:44px}
+  ol.qs>li::before{width:30px;height:30px;line-height:30px;font-size:14px}
+  ol.qs>li::after{left:14px;top:36px}
+  .brand span.sub{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<header class="hdr">
+  <button class="btn navbtn" id="navToggle" type="button" aria-expanded="false" aria-controls="sideNav">Contents</button>
+  <a class="brand" href="#top"><span class="mark">G</span>GTM OS <span class="sub">User guide</span></a>
+  <span class="sp"></span>
+  <button class="btn" id="themeToggle" type="button" aria-label="Switch color theme">Theme</button>
+</header>
+
+<div class="wrap" id="top">
+<nav class="side" id="sideNav" aria-label="Guide contents">
+  <input class="search" id="navSearch" type="search" placeholder="Search sections" aria-label="Search sections">
+  <div class="grp">Start</div>
+  <a href="#intro" data-k="overview what is gtm os">What GTM OS is</a>
+  <a href="#quickstart" data-k="quickstart install setup docker claude init setup-gtmos console composio build go live">Quickstart (10 steps)</a>
+  <a href="#by-hand" data-k="manual by hand gtm setup login token init doctor">Prefer to do it by hand?</a>
+  <a href="#flexibility" class="hot" data-k="customize anything agent mcp prompts flexibility claude codex">Customize anything with your agent</a>
+  <div class="grp">How-to</div>
+  <a href="#team" data-k="accounts team owner approver members roles invite">Accounts and team</a>
+  <a href="#connect" data-k="connect tools composio api keys looot resend model">Connect your tools</a>
+  <a href="#composio" data-k="composio oauth connect key project key sync connected apps existing connection crm of record map to ontology">Composio and your apps</a>
+  <a href="#api-keys" data-k="api keys anthropic gemini openai looot resend add a connection test">API keys</a>
+  <a href="#google" data-k="google microsoft connected accounts search console gsc ga4 mail calendar">Google and Microsoft accounts</a>
+  <a href="#slack" data-k="slack channels">Slack</a>
+  <a href="#email" data-k="email sending resend domain dns spf dkim dmarc activate lane mailbox">Email sending</a>
+  <a href="#linkedin" data-k="linkedin unipile dsn">LinkedIn (Unipile)</a>
+  <a href="#mcp-servers" data-k="mcp servers internal api tool effects">MCP servers</a>
+  <a href="#required" data-k="required connections readiness doctor">Required connections</a>
+  <a href="#agent" data-k="agent key claude code codex developer preset env var mcp gtmos_agent_token">Connect Claude Code / Codex</a>
+  <a href="#build" data-k="build gtm system discovery interview blueprint">Build your GTM system</a>
+  <a href="#customize" data-k="customize engines scoring routing plays sequences lanes workflow research profile brand voice">Customize engines</a>
+  <a href="#data-model" data-k="data model custom fields custom objects ontology changeset">Customize the data model</a>
+  <a href="#data-in" data-k="bring data in crm sync csv import source mapping looot lists">Bring data in</a>
+  <a href="#engines" data-k="engines day to day hot list companies contacts deals enrichment score outreach identity data quality seo geo ads research search index agent chat">Use each engine day to day</a>
+  <a href="#approvals" data-k="approvals four eyes approve execute withdraw veto dry mode safety">Approvals</a>
+  <a href="#environments" data-k="environments go live dev prod sign promote rollback switcher">Environments and going live</a>
+  <a href="#packages" data-k="packages install upgrade enable disable">Packages</a>
+  <a href="#upgrade" data-k="upgrade gtm os version check">Upgrade GTM OS</a>
+  <a href="#troubleshooting" data-k="troubleshooting errors fix forbidden unauthorized not_configured">Troubleshooting</a>
+  <div class="grp">Reference</div>
+  <a href="#glossary" data-k="glossary terms">Glossary</a>
+  <a href="#not-built" data-k="not built yet limits roadmap">What is not built yet</a>
+  <p class="none" id="navNone">No section matches.</p>
+</nav>
+
+<main>
+
+<section class="sec" id="intro">
+  <div class="eyebrow">GTM OS user guide</div>
+  <h1>Run your go-to-market on GTM OS</h1>
+  <p class="lede">GTM OS is a governed system for your revenue team: a CRM, seven engines (Score, Enrichment, Signals, Outreach, SEO &amp; GEO, Performance Ads, Identity &amp; data quality) and a research agent. Your coding agent builds and runs it. A person approves anything that touches a customer or goes live.</p>
+  <p class="meta">Written against GTM OS main <code>e29e84f9</code>. Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
+  <div class="tiles">
+    <a class="tile" href="#quickstart"><b>Quickstart</b><span>Empty folder to a live system in 10 steps, with Claude Code doing the work.</span></a>
+    <a class="tile em" href="#flexibility"><b>Customize anything</b><span>Ask your agent to change engines, the data model, data, integrations and screens.</span></a>
+    <a class="tile" href="#troubleshooting"><b>Something broke?</b><span>Real error messages and the fix for each.</span></a>
+  </div>
+  <h4>Three rules that explain most of what you will see</h4>
+  <ul>
+    <li><b>Four-eyes.</b> Whoever proposes a change can never approve it. You need a second person (the <em>approver</em>) from day one.</li>
+    <li><b>Dev first, then prod.</b> Config your agent writes lands in <code>dev</code>. It goes live only after a person signs it and promotes it to <code>prod</code>.</li>
+    <li><b>looot for outside data, Composio for your own apps.</b> looot supplies enrichment, emails, lists and intent. Composio connects your CRM, Slack, Search Console and other apps.</li>
+  </ul>
+</section>
+
+<section class="sec" id="quickstart">
+  <div class="eyebrow">Quickstart</div>
+  <h2>From an empty folder to live engines</h2>
+  <p>Claude Code runs the install and the configuration. It stops and asks you only for what a person must do: sign-ins, keys, DNS records and approvals. Plan for about an hour.</p>
+
+  <ol class="qs">
+    <li id="qs-1">
+      <h3>Check the prerequisites <span class="time">5 min</span></h3>
+      <ul>
+        <li><b>Docker Desktop</b> installed and running.</li>
+        <li><b>10 GB or more</b> free disk on the drive you install to (images plus database).</li>
+        <li><b>4 GB or more free RAM</b> for the stack (Postgres, API, worker, MCP, console). Close heavy apps. On Windows, Docker runs in WSL 2: if containers get killed, raise the memory limit in <code>%UserProfile%\.wslconfig</code> and restart Docker.</li>
+        <li><b>Node 22</b> or newer, and <b>Claude Code</b>.</li>
+        <li>The <b>gtm CLI</b>, from npm:</li>
+      </ul>
+      <div class="code"><pre><code>npm i -g @gtmos/cli@0.2.2</code></pre></div>
+      <div class="code"><pre><code>docker info --format '{{.ServerVersion}}'
+node -v
+gtm version --offline</code></pre></div>
+      <div class="see">A Docker server version, <code>v22.x</code> or newer, and the gtm CLI version.</div>
+    </li>
+
+    <li id="qs-2">
+      <h3>Make an empty folder and start Claude <span class="time">1 min</span></h3>
+      <div class="code"><pre><code>mkdir my-gtm &amp;&amp; cd my-gtm
+claude</code></pre></div>
+      <p>This folder becomes your agent workspace. The GTM OS instance itself goes in a subfolder later.</p>
+    </li>
+
+    <li id="qs-3">
+      <h3>Run <code>gtm init</code> inside Claude, then restart Claude <span class="time">1 min</span></h3>
+      <p>In the Claude prompt, the <kbd>!</kbd> prefix runs a shell command:</p>
+      <div class="code"><pre><code>! gtm init</code></pre></div>
+      <div class="see">"No GTM OS instance connected yet. Open Claude Code here and run /setup-gtmos". The folder now holds <code>.claude/</code> (skills, slash commands), <code>.mcp.json</code> and <code>docs/gtmos/</code>.</div>
+      <p>Quit Claude Code and start it again in the same folder (<code>claude</code>). Claude reads new commands only at startup.</p>
+    </li>
+
+    <li id="qs-4">
+      <h3>Run <code>/setup-gtmos</code> <span class="time">20 to 40 min</span></h3>
+      <div class="code"><pre><code>/setup-gtmos</code></pre></div>
+      <p>Claude checks the prerequisites, then asks you <b>one grouped question</b>:</p>
+      <ul>
+        <li>use an instance already running on this machine, or install a new one;</li>
+        <li>organization name, owner email (you), approver email (a <b>different</b> person or identity);</li>
+        <li>version (<code>stable</code>, or a local image tag) and ports (defaults 3000 console, 3001 API, 3004 MCP, 5432 Postgres);</li>
+        <li>which keys you have ready: a model provider (Anthropic, Gemini or OpenAI; one is required), looot, Resend.</li>
+      </ul>
+      <div class="tbl"><table>
+        <tr><th>Phase</th><th>Claude does</th><th>You do</th></tr>
+        <tr><td>Install</td><td>Runs <code>gtm setup instance ... --no-harness</code> into <code>./instance</code> (a few minutes; safe to re-run).</td><td>Nothing.</td></tr>
+        <tr><td>Passwords</td><td>Tells you they are in <code>instance/.env</code> as <code>GTMOS_OWNER_PASSWORD</code> and <code>GTMOS_APPROVER_PASSWORD</code>. Never prints them.</td><td>Give the approver password to the approver privately.</td></tr>
+        <tr><td>Agent key</td><td>Mints its own agent key (preset Full GTM engineer), runs <code>gtm init --url ... --key ...</code> and <code>gtm doctor</code>.</td><td>Set <code>GTMOS_AGENT_TOKEN</code> in your environment and restart Claude (see <a href="#agent">Connect Claude Code</a>). Then run <code>/mcp</code>: <b>gtmos</b> shows connected.</td></tr>
+        <tr><td>Connections</td><td>Stores and checks keys, links your Composio apps, sets the CRM of record and the Search Console property.</td><td>Steps 5 and 6 below.</td></tr>
+        <tr><td>Sending domain</td><td>Prints the SPF, DKIM and DMARC records and checks them with <code>nslookup</code>.</td><td>Add the records at your DNS host.</td></tr>
+      </table></div>
+    </li>
+
+    <li id="qs-5">
+      <h3>Log in to the console as owner and as approver <span class="chip human">Needs a human</span></h3>
+      <ol class="steps">
+        <li>Open the console URL Claude printed (default <code>http://localhost:3000</code>).</li>
+        <li>Sign in as the <b>owner</b> with <code>GTMOS_OWNER_PASSWORD</code>.</li>
+        <li>Open a <b>second browser profile</b> (or a private window) and sign in as the <b>approver</b> with <code>GTMOS_APPROVER_PASSWORD</code>. Keep both windows open.</li>
+      </ol>
+      <div class="see">Mission Control (the home page) in both windows. The approver also sees <b>Settings</b>, because the approver is an admin.</div>
+    </li>
+
+    <li id="qs-6">
+      <h3>Connect your tools in Integrations &gt; Connections <span class="chip human">Needs a human</span></h3>
+      <ol class="steps">
+        <li>Owner window: <b>Integrations &gt; Connections</b>.</li>
+        <li>On the <b>Composio</b> card click <span class="ui">Connect Composio</span>, sign in to Composio, accept. You come back to the console.</li>
+        <li>Claude then links your apps. To do it yourself click <span class="ui">Sync connected apps</span>: every app already connected in your Composio account appears under <b>Connected apps</b> as <code>ACTIVE</code>.</li>
+        <li>Under <b>Add a connection</b>, pick the provider, paste the key, add it: <code>anthropic</code> or <code>gemini</code> or <code>openai</code> (one required), <code>looot</code> (data), <code>resend</code> (email, if you do not send from Gmail or Microsoft 365). Then run <b>Test</b> on each.</li>
+        <li>Using SEO &amp; GEO? Make sure Search Console is connected (through Composio or <a href="#google">Settings &gt; Connected accounts</a>). It is required for that engine.</li>
+      </ol>
+      <div class="see"><b>Required connections</b> at the top of the page: your model provider, looot and Composio read <b>Connected</b>. Anything left reads <b>Required: missing</b> with the fix.</div>
+      <p class="note">You can paste a key to Claude instead and it stores it with <code>connections.create</code>. A key pasted in chat stays in the transcript, so the console is the private option.</p>
+    </li>
+
+    <li id="qs-7">
+      <h3>Build your system with <code>/build-gtm-system</code> <span class="time">20 to 40 min</span></h3>
+      <div class="code"><pre><code>/build-gtm-system</code></pre></div>
+      <ol class="steps">
+        <li>Answer the discovery interview (offer, ICP, signals, personas, regions, channels, CRM, volumes, approver). Pasting a one-page brief saves time.</li>
+        <li>Claude recommends the closest blueprint, applies it in <code>dev</code>, then customizes each engine for you.</li>
+        <li>When Claude says a proposal is waiting: approver window, <b>Approvals</b>, open it, <span class="ui">Approve</span>, then <span class="ui">Execute</span>.</li>
+      </ol>
+      <div class="see">Claude reports each engine as built and verified, and lists Open items in <code>.claude/memory/setup-status.md</code>. A banner says "N definitions are in dev, not live".</div>
+    </li>
+
+    <li id="qs-8">
+      <h3>Go live: sign, promote, approve <span class="chip human">Needs a human</span></h3>
+      <p>Open <b>CRM &gt; Environments</b>. The <b>Go live</b> card is at the top.</p>
+      <ol class="steps">
+        <li><b>Approver window:</b> click <span class="ui">Review &amp; sign all proposed (N)</span>, read the diffs, confirm. (The owner cannot sign what the owner's agent proposed.)</li>
+        <li><b>Owner window:</b> click <span class="ui">Promote dev → prod</span>, check the list, confirm. This proposes one approval.</li>
+        <li><b>Approver window:</b> <b>Approvals</b>, open the promotion, <span class="ui">Approve</span>, then <span class="ui">Execute</span>.</li>
+      </ol>
+      <div class="see">The Go live card reads "Everything is live." and the "in dev, not live" banner is gone.</div>
+      <p>Sending email? Activate the lane once it is in prod: <a href="#email">Email sending</a>, step 4.</p>
+    </li>
+
+    <li id="qs-9">
+      <h3>See the engines working <span class="time">15 min</span></h3>
+      <ul>
+        <li><b>Signals:</b> CRM &gt; Hot list, click <span class="ui">Scan for signals now</span> (owner or admin; capped per run).</li>
+        <li><b>Accounts:</b> CRM &gt; Companies, open one; its Overview shows the score and <b>Why this score</b>.</li>
+        <li><b>Score:</b> Engines &gt; Score, click <span class="ui">Qualify</span> on an account.</li>
+        <li><b>Workflow:</b> Settings &gt; Workflow automation; the qualified-account handoff and signal reactions are on by default.</li>
+        <li><b>Outreach:</b> the approver sees proposed messages in Approvals.</li>
+        <li><b>SEO &amp; GEO:</b> Engines &gt; SEO &amp; GEO, open the page workbench link, <b>Site visibility</b>, click <span class="ui">Run visibility</span>.</li>
+        <li><b>Search:</b> Settings &gt; Search index, click <span class="ui">Reindex now</span>.</li>
+        <li><b>Agent:</b> open a company, <b>Agent</b> tab, ask "Why is this account a fit for us?".</li>
+      </ul>
+    </li>
+
+    <li id="qs-10">
+      <h3>Run the go-live check <span class="time">5 min</span></h3>
+      <div class="code"><pre><code>/go-live-check</code></pre></div>
+      <div class="see">One line per check marked GO, NO-GO or N-A with its evidence, then one overall result. NO-GO comes with an ordered list of fixes.</div>
+    </li>
+  </ol>
+
+  <div class="callout"><div><b>Next:</b> everything Claude built can be changed by asking it. See <a href="#flexibility">Customize anything with your agent</a>.</div></div>
+
+  <div class="card" id="by-hand">
+    <h3>Prefer to do it by hand?</h3>
+    <p class="goal"><b>Goal:</b> install an instance and connect an agent workspace without <code>/setup-gtmos</code>. Commands are bash; on PowerShell use <code>$env:NAME = "value"</code> instead of <code>export</code>.</p>
+    <ol class="steps">
+      <li>Install the instance into its own folder (owner plus approver; passwords are generated into its <code>.env</code>):
+        <div class="code"><pre><code>gtm setup gtm-instance --org "Acme" --email you@acme.com --approver-email cofounder@acme.com</code></pre></div>
+        Port busy? Add <code>--console-port</code>, <code>--api-port</code>, <code>--mcp-port</code> or <code>--postgres-port</code>. Local images only? Add <code>--version &lt;tag&gt; --no-pull</code>.</li>
+      <li>Sign in as the owner (it prompts for the password, or reads <code>GTMOS_PASSWORD</code>). Your org id is <code>ORGANIZATION_ID</code> in <code>gtm-instance/.env</code>.
+        <div class="code"><pre><code>export GTMOS_API_URL=http://127.0.0.1:3001 GTMOS_ORG=&lt;org id&gt;
+gtm login --email you@acme.com --console-url http://localhost:3000</code></pre></div>
+        Run the <code>export GTMOS_TOKEN=...</code> line it prints.</li>
+      <li>Create the agent key (shown once):
+        <div class="code"><pre><code>gtm token create --name claude-code --client claude-code --preset full-gtm-engineer --expires-days 90</code></pre></div></li>
+      <li>Put the key in <code>GTMOS_AGENT_TOKEN</code> (<a href="#agent">per OS</a>), then connect your workspace folder and check:
+        <div class="code"><pre><code>gtm init --url http://127.0.0.1:3001 --key &lt;agent key&gt; --yes
+gtm doctor</code></pre></div></li>
+      <li>Start <code>claude</code> in the workspace and run <code>/mcp</code>.</li>
+    </ol>
+    <div class="see"><code>gtm doctor</code> prints one line per provider (LIVE, UNVERIF, FAILED, FIXTURE or MISSING) with the remediation for each.</div>
+  </div>
+</section>
+
+<section class="sec" id="howto">
+  <div class="eyebrow">How-to</div>
+  <h2>How-to guides</h2>
+  <p>Each guide: the goal, the steps, what you should see, and the common errors. <span class="chip human">Needs a human</span> marks steps your agent cannot do for you.</p>
+
+  <!-- TEAM -->
+  <div class="card" id="team">
+    <h3>Accounts and team</h3>
+    <p class="goal"><b>Goal:</b> the right people with the right roles, including a second approver.</p>
+    <div class="tbl"><table>
+      <tr><th>Role</th><th>Can do</th></tr>
+      <tr><td><code>owner</code>, <code>admin</code></td><td>Everything, including approve, reject and execute proposals. Only these roles approve.</td></tr>
+      <tr><td><code>member</code></td><td>Read and write records. Cannot approve or change settings.</td></tr>
+      <tr><td><code>builder</code></td><td>Delegated agency role: everything except approve.</td></tr>
+    </table></div>
+    <p>There is no read-only viewer role.</p>
+    <ol class="steps">
+      <li><b>Settings &gt; Members</b>, <b>Invite a member</b>: email, role (member, admin or owner), <span class="ui">Invite</span>. Pending invitations are listed below.</li>
+      <li>Or provision a verified teammate from a terminal (run it yourself, so your agent never sees the password):
+        <div class="code"><pre><code>gtm member add --email approver@acme.com --password '&lt;password&gt;' --role admin --org &lt;org id&gt;</code></pre></div></li>
+      <li>Stop an agent everywhere: <b>Settings &gt; Agents</b>, <span class="ui">Kill</span>. Revive it there later.</li>
+      <li>Agencies: <b>Settings &gt; Delegations</b> lists access granted to an agency org; revoke it there.</li>
+    </ol>
+    <div class="see">At least two people with owner or admin. Without a second one, nothing your agent proposes can go live.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li><code>Role "member" does not hold action.approve</code>: ask an owner or admin.</li>
+      <li>"An action proposed by your own agent must be approved by a different person": you created the agent key, so a second admin approves.</li>
+    </ul></div></details>
+  </div>
+
+  <!-- CONNECT -->
+  <div class="card" id="connect">
+    <h3>Connect your tools</h3>
+    <p class="goal"><b>Goal:</b> every engine you use has what it needs. Where things live:</p>
+    <div class="tbl"><table>
+      <tr><th>What</th><th>Where</th></tr>
+      <tr><td>Model keys, looot, Resend, HubSpot, Meta Ads, Cal.com, webform</td><td>Integrations &gt; Connections, <b>Add a connection</b></td></tr>
+      <tr><td>Your own apps (CRM, Slack, Typeform, Stripe, Ahrefs, Search Console...)</td><td>Integrations &gt; Connections, <b>Composio</b> card</td></tr>
+      <tr><td>Internal tools</td><td>Integrations &gt; Connections, <b>MCP servers</b> card</td></tr>
+      <tr><td>LinkedIn</td><td>Integrations &gt; Connections, <b>Unipile</b> card</td></tr>
+      <tr><td>Google / Microsoft mail, calendar, Search Console, GA4, Google Ads</td><td>Settings &gt; Connected accounts</td></tr>
+      <tr><td>Slack alerts and channels</td><td>Settings &gt; Slack</td></tr>
+    </table></div>
+    <p>Keys are sealed on save and never shown again. Connecting needs an owner or admin, or their agent (the Full GTM engineer key can store keys you give it). Sign-in buttons (OAuth) always need a person to click.</p>
+  </div>
+
+  <div class="card" id="composio">
+    <h3>Composio: connect your own apps <span class="chip human">Needs a human</span></h3>
+    <p class="goal"><b>Goal:</b> GTM OS can read and act in your CRM and other SaaS apps. Composio is never used to buy data.</p>
+    <ol class="steps">
+      <li><b>Integrations &gt; Connections</b>, Composio card, click <span class="ui">Connect Composio</span> (recommended: OAuth sign-in, tokens refresh on their own).</li>
+      <li>Prefer a key? Click <b>Advanced</b>: paste a Connect key <code>ck_...</code> (connect.composio.dev) or a project key <code>ak_...</code> (platform.composio.dev, project, Settings, API Keys). The key is verified live before it is saved. One Composio credential per org; the last one saved wins.</li>
+      <li>Click <span class="ui">Sync connected apps</span>: apps already connected in your Composio account become <code>ACTIVE</code>; apps no longer connected become inactive.</li>
+      <li>A new app: search the <b>App catalog</b>, click <span class="ui">Connect</span>, finish the hosted sign-in (the link lasts about 10 minutes).</li>
+      <li>Several accounts for one app? Next to the app click <span class="ui">Use an existing connection</span>, then <b>Use this</b> on the right one.</li>
+      <li><b>CRM of record</b> section: pick HubSpot, Salesforce, Pipedrive, Attio or Zoho, then <span class="ui">Sync now</span>. It also syncs every 6 hours.</li>
+      <li>Any other app: on the connected app click <span class="ui">Map to ontology</span> (see <a href="#data-in">Bring data in</a>).</li>
+    </ol>
+    <div class="see">"Signed in to Composio", your apps listed as <code>ACTIVE</code>, and under CRM of record a <b>Last sync</b> with counts.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li>"This is a Composio user API key (uak_...) ... Nothing was saved.": use <b>Connect Composio</b>, a <code>ck_</code> or an <code>ak_</code> key.</li>
+      <li><code>AUTH_EXPIRED</code> "Composio sign-in expired or was revoked": click <b>Reconnect Composio</b>.</li>
+      <li>"Composio: hubspot is not connected for this organization": connect it on the card, then check it reads ACTIVE.</li>
+      <li>App stuck <code>INITIATED</code> or <code>EXPIRED</code>: the sign-in link timed out; click <b>Reconnect</b>.</li>
+      <li>A project key (<code>ak_</code>) sees only its own developer project, not apps connected in Composio Connect.</li>
+      <li>Pipedrive, Meta Ads, LinkedIn Ads, Webflow and some others need your own auth app in Composio ("Needs your own auth app").</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="api-keys">
+    <h3>API keys: model, looot, email</h3>
+    <p class="goal"><b>Goal:</b> a model provider and looot are live (and Resend if you send through it).</p>
+    <ol class="steps">
+      <li><b>Integrations &gt; Connections</b>, <b>Add a connection</b>.</li>
+      <li>Provider: <code>anthropic</code>, <code>gemini</code> or <code>openai</code> (at least one), <code>looot</code>, <code>resend</code>. Give it a label, paste the key, add it.</li>
+      <li>Run <b>Test</b> on the new connection. A stored but untested key reads "Stored, not verified".</li>
+    </ol>
+    <div class="see">Required connections shows the provider as <b>Connected</b>. Keys are live at once, with no restart.</div>
+    <p>Semantic search needs an OpenAI or Gemini key (Anthropic has no embedding model). Without one, search is full-text only.</p>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li>Do not put keys in <code>instance/.env</code> after install: env changes apply only when containers are recreated.</li>
+      <li>looot <code>402 insufficient_balance</code>: top up your looot balance.</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="google">
+    <h3>Google and Microsoft accounts <span class="chip human">Needs a human</span></h3>
+    <p class="goal"><b>Goal:</b> mail and calendar sync, sending from your mailbox, and Search Console, GA4 and Google Ads data.</p>
+    <ol class="steps">
+      <li><b>Settings &gt; Connected accounts</b>.</li>
+      <li>Choose <b>Google</b> or <b>Microsoft</b>, tick the features (Read mail, Send mail, Calendar; Google also Search Console, Google Ads), connect and accept the consent screen.</li>
+      <li>For Search Console, GA4 and Google Ads, click <span class="ui">Use for org</span> on the Google account. Those read through the org default account.</li>
+      <li>Ask your agent to set the Search Console property, or give it: <code>sc-domain:acme.com</code> or <code>https://www.acme.com/</code>.</li>
+    </ol>
+    <div class="see">The account marked <b>Connected</b> and <b>Org default</b>. Mail and calendar sync every 10 minutes and log activity with known contacts. <span class="ui">Sync now</span> forces a sync.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li><code>NOT_CONFIGURED</code> "Google Search Console is required for SEO &amp; GEO": connect Search Console here (or through Composio) and set the property.</li>
+      <li>"Needs reconnect": click <b>Reconnect</b>.</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="slack">
+    <h3>Slack <span class="chip human">Needs a human</span></h3>
+    <p class="goal"><b>Goal:</b> alerts and approvals reach your team in Slack.</p>
+    <ol class="steps">
+      <li><b>Settings &gt; Slack</b>, connect the workspace and accept the consent.</li>
+      <li><b>Channels</b>: search, join, or <span class="ui">Create</span> a channel with the GTM OS bot in it.</li>
+      <li><b>People matching</b>: <span class="ui">Match by email</span> links members to Slack users; fix the rest with <b>Set match</b>.</li>
+    </ol>
+    <div class="see"><b>Connected workspace</b> with the bot user and granted scopes.</div>
+    <p>For alerts, the native Slack connection is preferred over Composio's Slack toolkit.</p>
+  </div>
+
+  <div class="card" id="email">
+    <h3>Email sending: domain, lane, mailbox</h3>
+    <p class="goal"><b>Goal:</b> real emails can go out, only through an approved lane and a bound mailbox.</p>
+    <ol class="steps">
+      <li><b>Sender.</b> Best: a Gmail or Microsoft 365 account with <b>Send mail</b> in Settings &gt; Connected accounts. Otherwise a <code>resend</code> connection (verify your domain in Resend first).</li>
+      <li><b>DNS</b> <span class="chip human">Needs a human</span>: at your DNS host add SPF (one TXT starting <code>v=spf1</code>), DKIM (the record your provider shows at <code>&lt;selector&gt;._domainkey.&lt;domain&gt;</code>) and DMARC (TXT at <code>_dmarc.&lt;domain&gt;</code>, for example <code>v=DMARC1; p=none; rua=mailto:dmarc@&lt;domain&gt;</code>). Check:
+        <div class="code"><pre><code>nslookup -type=TXT acme.com
+nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
+      <li><b>Lane.</b> Your agent writes the lane (<code>definition.lane</code>: daily cap, sending domain, sender postal address, budget). Sign and promote it (<a href="#environments">Environments</a>).</li>
+      <li><b>Activate the lane.</b> Engines &gt; Outreach, open the <b>Outreach workbench</b> link, <b>Sending lanes</b>, click <span class="ui">Activate lane</span> (optional DKIM selector). Or:
+        <div class="code"><pre><code>gtm lane activate &lt;laneKey&gt; --env prod</code></pre></div>
+        A different person approves and executes it in Approvals.</li>
+      <li><b>Mailbox.</b> Bind it when you send: pick it in <b>Sending mailbox</b> on the workbench or on a new sequence.</li>
+    </ol>
+    <div class="see">The activation result shows SPF, DKIM and DMARC checks. In prod all three must pass. New mailboxes warm up (20 a day, +20 a day, up to 200).</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li><code>lane_required</code> "refusing an un-laned email send": pick a sending lane, and activate it first.</li>
+      <li><code>mailbox_required</code>: connect a mailbox with Send mail and pick it.</li>
+      <li><code>mailbox_daily_cap</code>: wait, or add mailboxes.</li>
+      <li>"lane ... envelope budget exhausted ... re-approval required": activate the lane again, or raise its budget.</li>
+      <li>Lane activation refused in prod: fix DNS, activate again.</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="linkedin">
+    <h3>LinkedIn through Unipile <span class="chip human">Needs a human</span></h3>
+    <p class="goal"><b>Goal:</b> read LinkedIn profiles, inbox and connections; send only by hand.</p>
+    <ol class="steps">
+      <li><b>Integrations &gt; Connections</b>, <b>Unipile (LinkedIn sending)</b> card.</li>
+      <li>Fill <b>API key</b>, <b>DSN</b> (your account's API host, for example <code>api8.unipile.com:13814</code>) and optionally the LinkedIn account id.</li>
+      <li>Click <span class="ui">Save and test</span>.</li>
+    </ol>
+    <div class="see">"Unipile connected." LinkedIn sends are high-risk, off by default, and human-sent only.</div>
+  </div>
+
+  <div class="card" id="mcp-servers">
+    <h3>Add your own MCP server</h3>
+    <p class="goal"><b>Goal:</b> an internal tool becomes a data source or capability for GTM OS (the opposite direction from your agent's MCP).</p>
+    <ol class="steps">
+      <li><b>Integrations &gt; Connections</b>, <b>MCP servers</b> card, <b>Add an MCP server</b>: server name (lowercase), server URL (a streamable-HTTP endpoint, usually ending <code>/mcp</code>), optional auth header name and value. Credentials go in the header, never in the URL.</li>
+      <li>Test it: the tool catalog loads.</li>
+      <li><span class="chip human">Needs a human</span> Mark each tool <b>Read</b> or <b>Write (approval)</b>. An unmarked tool cannot be used.</li>
+      <li>Ask your agent to bind a capability to it, or map its records (see <a href="#flexibility">example prompt</a>).</li>
+    </ol>
+    <div class="see">The server marked <b>Connected</b> with its tools listed.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li>"initialize failed ... did not answer with a JSON-RPC result": the URL is not an MCP endpoint (often missing <code>/mcp</code>).</li>
+      <li><code>FORBIDDEN</code> "no declared effect": mark the tool Read or Write.</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="required">
+    <h3>Required connections and readiness</h3>
+    <p class="goal"><b>Goal:</b> know what is live and what is missing.</p>
+    <ol class="steps">
+      <li>Top of <b>Integrations &gt; Connections</b>: <b>Required connections</b>. States: Connected, Stored not verified, Failed, Required: missing, Not connected, Not needed.</li>
+      <li>From a terminal:
+        <div class="code"><pre><code>gtm doctor --strict</code></pre></div></li>
+    </ol>
+    <div class="see">Exit code 0 with <code>--strict</code> means every needed item is live. A model provider is always required; looot while you use Signals or Enrichment; a sender while you use Outreach; Search Console while you use SEO &amp; GEO. An applied blueprint makes its declared connections required.</div>
+  </div>
+
+  <!-- AGENT -->
+  <div class="card" id="agent">
+    <h3>Connect Claude Code, Codex or any MCP agent</h3>
+    <p class="goal"><b>Goal:</b> your agent talks to GTM OS through MCP with its own key, acting for you.</p>
+    <ol class="steps">
+      <li><b>Settings &gt; Developer</b>, <b>Connect Claude Code / Codex</b>: choose the <b>Coding agent</b> (Claude Code, Codex or Other MCP client), an <b>Agent name</b>, <b>Preset: Full GTM engineer</b>, then <span class="ui">Create agent key</span>. Copy the key now: it is shown once. The page also shows the org id, the MCP endpoint and setup snippets.</li>
+      <li>Or from a terminal with your owner session (<code>gtm login</code> first):
+        <div class="code"><pre><code>gtm token create --name claude-code --client claude-code --preset full-gtm-engineer --expires-days 90</code></pre></div></li>
+      <li>Put the key in your environment, never in a file.
+        <p><b>Windows PowerShell</b> (persistent; then open a new terminal):</p>
+        <div class="code"><pre><code>[Environment]::SetEnvironmentVariable('GTMOS_AGENT_TOKEN', '&lt;agent key&gt;', 'User')</code></pre></div>
+        <p><b>macOS / Linux</b>: add this line to <code>~/.zshrc</code> or <code>~/.bashrc</code>, then open a new terminal:</p>
+        <div class="code"><pre><code>export GTMOS_AGENT_TOKEN='&lt;agent key&gt;'</code></pre></div></li>
+      <li>In your workspace folder, connect it to the instance (writes <code>.mcp.json</code> with <code>Bearer ${GTMOS_AGENT_TOKEN}</code>, <code>AGENTS.md</code> for Codex, <code>.claude/</code> and <code>docs/gtmos/</code>):
+        <div class="code"><pre><code>gtm init --url http://127.0.0.1:3001 --key &lt;agent key&gt; --yes</code></pre></div></li>
+      <li>Restart the agent in that folder. In Claude Code run <code>/mcp</code>.</li>
+      <li>Later, pull fresh docs from your live org:
+        <div class="code"><pre><code>gtm init --refresh --yes</code></pre></div></li>
+    </ol>
+    <div class="see"><code>/mcp</code> lists <b>gtmos</b> as connected. The agent's first call is usually <code>gtm_describe</code>.</div>
+    <div class="tbl"><table>
+      <tr><th>Your agent can (Full GTM engineer)</th><th>Your agent cannot</th></tr>
+      <tr><td>Everything an owner or admin does in the console: records, custom fields, pipelines, definitions (proposed), research profile and settings, CRM settings, workflow flags, connections and keys you give it, MCP servers, syncs, scans, blueprints, proposals.</td><td>Approve, reject or execute; sign definitions or publish ontology changes; create keys, agents, roles or members; click OAuth consent (it gives you the link); switch Dry Mode; mark MCP tool effects; turn on research auto-apply.</td></tr>
+    </table></div>
+    <p>Codex and other clients default to <code>record.read</code>, <code>record.write</code>, <code>engine.configure</code>. Choose the Full GTM engineer preset if they should manage connections too.</p>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li><code>UNAUTHORIZED</code> "No valid session or agent token": the variable is missing, wrong, revoked or expired (keys default to 90 days). Create a new key, set it, restart.</li>
+      <li>MCP tools fail after an upgrade or restart of the stack: run <code>/mcp</code> to reconnect.</li>
+      <li>"This agent key does not hold the "engine.configure" scope": create a new key with the Full GTM engineer preset.</li>
+      <li>"GTMOS_TOKEN holds an API key. Keys cannot mint keys": use <code>gtm login</code> and its session token.</li>
+      <li><code>gtm init</code> warns that <code>.mcp.json</code> held a literal key: it rewrote it; revoke that key (<code>gtm token revoke &lt;key-id&gt;</code>) and use a fresh one.</li>
+    </ul></div></details>
+  </div>
+
+  <!-- BUILD -->
+  <div class="card" id="build">
+    <h3>Build your GTM system with your agent</h3>
+    <p class="goal"><b>Goal:</b> a full, customized setup from one conversation.</p>
+    <ol class="steps">
+      <li>Run <code>/build-gtm-system</code> (optionally with a goal, for example <code>/build-gtm-system B2B SaaS sales-led, outbound + SEO</code>).</li>
+      <li>Answer the discovery interview, asked in batches: business and offer, ICP and tiers, personas, markets and compliance, channels, CRM and tools, data volumes, team and approver.</li>
+      <li>Claude reads the live state, recommends the closest general blueprint with a reason, and applies it in <code>dev</code>.</li>
+      <li>Engine by engine (data first, then Score, routing and plays, then Outreach, SEO &amp; GEO, Ads), it explains, shows defaults, asks only what matters, writes the definitions, and verifies live.</li>
+      <li>You approve proposals (approver window), then go live with <a href="#environments">sign and promote</a>.</li>
+    </ol>
+    <div class="see">Each engine reported as verified, decisions in <code>.claude/memory/decision-records.md</code>, and human tasks as Open items in <code>.claude/memory/setup-status.md</code>.</div>
+    <p>Blueprints you can start from: <code>b2b-saas-sales-led</code>, <code>enterprise-abm</code>, <code>b2b-saas-plg</code>, <code>devtools</code>, <code>agency-services</code>, <code>b2b-marketplace</code>, <code>dtc-b2c</code>, and the starters <code>outbound</code>, <code>seo</code>, <code>full-gtm</code> (the last two require Search Console). Browse them in <b>CRM &gt; Blueprints</b>, <b>View &amp; apply</b>.</p>
+  </div>
+
+  <div class="card" id="customize">
+    <h3>Customize engines</h3>
+    <p class="goal"><b>Goal:</b> the engines follow your rules, not the defaults. Ask your agent in plain words; it edits the definition in <code>dev</code>, and you sign and promote it.</p>
+    <div class="tbl"><table>
+      <tr><th>What</th><th>What changes</th><th>Where you check it</th></tr>
+      <tr><td>Scoring model</td><td><code>definition.scoring_model</code>: key <code>default</code> (signal weights, qualified and review thresholds), key <code>icp_fit</code> (firmographic fit; always set your own), key <code>signals</code> (half-life, hot and warm)</td><td>Company page, Why this score; Engines &gt; Score</td></tr>
+      <tr><td>Routing</td><td>Owner assignment (<code>routing.assign</code>) and the handoff's owner pool. There is no routing definition kind.</td><td>Hot list owner column</td></tr>
+      <tr><td>Plays</td><td><code>definition.play</code>: trigger (manual, event, schedule, metric, webhook, segment), steps, guardrails</td><td>Operate &gt; Runs</td></tr>
+      <tr><td>Lanes and sequences</td><td><code>definition.lane</code> (daily cap, checks, budget, sending domain); sequences with a lane and mailbox</td><td>CRM &gt; Sequences</td></tr>
+      <tr><td>Brand voice</td><td><code>definition.brand_voice</code> key <code>default</code> (tone, preferred and avoided words)</td><td>Drafted messages</td></tr>
+      <tr><td>Workflow automation</td><td>Qualified-account handoff (owner, follow-up task, enrol in sequence) and signal reactions (re-score, route, enrol, alert). On by default.</td><td>Settings &gt; Workflow automation</td></tr>
+      <tr><td>Research agent</td><td>Workspace profile, enabled, auto-apply verified facts, daily budget, re-check days, meeting-prep lead time</td><td>CRM &gt; Research, Settings</td></tr>
+    </table></div>
+    <p>Simulate a play before it runs (zero writes):</p>
+    <div class="code"><pre><code>gtm play simulate &lt;playKey&gt; --env dev --since 30d</code></pre></div>
+    <div class="see">After sign and promote, scoring an account shows your model version (<code>definition.scoring_model:default:vN</code>), not <code>score.default.v1</code>.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li>"My change is not used": it is still in dev, unsigned, or you checked another environment. Engines read only signed definitions in the call's environment.</li>
+      <li><code>CONFLICT</code> "ChangeSet ... is stale": a newer version landed; ask your agent to re-propose from the current state.</li>
+    </ul></div></details>
+  </div>
+
+  <!-- DATA MODEL -->
+  <div class="card" id="data-model">
+    <h3>Customize the data model</h3>
+    <p class="goal"><b>Goal:</b> track the fields and objects your business needs.</p>
+    <h4>Custom fields (companies, contacts, deals)</h4>
+    <ol class="steps">
+      <li><b>Settings &gt; Custom fields</b>, pick Companies, Contacts or Deals.</li>
+      <li><b>Create a field</b>: label, type (text, long text, number, date, checkbox, select, url, email, phone, user), options for a select, then <b>Show in tables</b>, <b>Allow filtering</b>, <b>Allow agent fill</b> (with instructions) as needed.</li>
+      <li><span class="ui">Create field</span>. It takes effect at once, no approval.</li>
+    </ol>
+    <h4>Custom objects</h4>
+    <ol class="steps">
+      <li>Check first whether a module already has it (for partners: <code>stdlib/gtm.partner</code> in Settings &gt; Packages).</li>
+      <li><b>CRM &gt; Model</b>, <b>Define a custom object</b>: label, description, fields. <span class="ui">Validate</span>.</li>
+      <li><span class="chip human">Needs a human</span> <span class="ui">Publish</span>; a different person approves it in Approvals.</li>
+    </ol>
+    <div class="see">The field on record pages and tables; the object under <b>CRM &gt; Records</b>.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li><code>FORBIDDEN</code> "... cannot change custom fields (field.create)": the key lacks engine.configure or acts for a member.</li>
+      <li>Object keys must start with <code>custom.</code>. You can add fields to a built-in object but never redefine its fields.</li>
+    </ul></div></details>
+  </div>
+
+  <!-- DATA IN -->
+  <div class="card" id="data-in">
+    <h3>Bring data in</h3>
+    <p class="goal"><b>Goal:</b> your accounts, contacts and deals in GTM OS, clean and de-duplicated.</p>
+    <h4>From your CRM</h4>
+    <ol class="steps">
+      <li>Connect the CRM on the Composio card, pick it under <b>CRM of record</b>, click <span class="ui">Sync now</span>.</li>
+    </ol>
+    <div class="see"><b>Last sync</b> with counts. Records land as companies, contacts and deals. A run reads up to 10,000 records per object ("Truncated" if more).</div>
+    <h4>From any other app</h4>
+    <ol class="steps">
+      <li>On the connected app in the Composio card, click <span class="ui">Map to ontology</span>.</li>
+      <li>Pick a list tool, preview live sample data, map fields to a target (company, contact, deal, signal or a custom object).</li>
+      <li>Propose it; a person signs it (and promotes it if prod should run it); then <span class="ui">Sync now</span>.</li>
+    </ol>
+    <div class="see">Sync counts: created, updated, unchanged, skipped, invalid, unresolved. "Unresolved" means the contact or company is not in GTM OS yet; nothing is invented.</div>
+    <h4>From a CSV</h4>
+    <ol class="steps">
+      <li><b>CRM &gt; Import</b>, <b>What are you importing?</b>: companies, contacts or deals.</li>
+      <li>Choose the CSV file (or paste it). The first row is read as headers.</li>
+      <li><b>Map your columns</b>, then <span class="ui">Preview</span>: every row shows Create, Update or an error.</li>
+      <li><span class="ui">Commit</span>. Up to 1,000 rows per import.</li>
+    </ol>
+    <div class="see">"Import complete" with a result per row.</div>
+    <h4>From looot (lists and enrichment)</h4>
+    <p>Ask your agent, for example "find 50 logistics companies in Germany with 200 to 2,000 staff". It prices the request first and asks before more than about 100 paid calls. Each call is capped (default $0.05); above the cap it waits for an approval.</p>
+    <h4>After every import</h4>
+    <p>Run the data-quality pass in <b>CRM &gt; Data quality</b>, or ask your agent to normalize, backfill domains, scan duplicates and propose merges.</p>
+  </div>
+
+  <!-- ENGINES -->
+  <div class="card" id="engines">
+    <h3>Use each engine day to day</h3>
+    <p class="goal"><b>Goal:</b> know which button does what.</p>
+
+    <h4 id="e-hot">Hot list and signals</h4>
+    <ol class="steps">
+      <li><b>CRM &gt; Hot list</b>: accounts ranked by score, latest signal, verdict, owner. Filter by verdict, signal, owner, activity; sort by score, latest signal or name.</li>
+      <li>Click <b>Why this score</b> on a row for the reasons.</li>
+      <li><span class="ui">Scan for signals now</span> runs the daily looot signal scan on demand (owner or admin; capped per run, never above $1; disabled in Dry Mode).</li>
+    </ol>
+    <div class="see">The last scan's result: signals created, spend against the cap.</div>
+
+    <h4 id="e-crm">Companies, contacts, deals</h4>
+    <ul>
+      <li><b>CRM &gt; Companies / Contacts</b>: search, filter, create, bulk actions. A company page has tabs: Overview (firmographics, score, signals, custom fields), Contacts, Deals, Tasks, Activity, Research, Evidence, Agent.</li>
+      <li><b>CRM &gt; Deals</b>: pipeline board and table. Edit pipelines and stages in <b>Settings &gt; Pipelines</b>.</li>
+      <li><b>CRM &gt; Tasks</b>: due today, overdue, done.</li>
+      <li>The <b>Evidence</b> tab shows where each value came from. A value you edit by hand is never overwritten by automation.</li>
+    </ul>
+
+    <h4 id="e-enrich">Enrichment</h4>
+    <ol class="steps">
+      <li><b>CRM &gt; Companies</b>, select rows, choose <b>Enrich</b> in the bulk actions.</li>
+      <li>Read the cost preview, confirm.</li>
+    </ol>
+    <div class="see">Empty fields filled (enrichment never overwrites). Spend above the cap shows "This spend needs approval before it runs."</div>
+
+    <h4 id="e-score">Score</h4>
+    <ol class="steps">
+      <li><b>Engines &gt; Score</b>: <b>To score</b>, <b>Accounts</b>, <b>Rescan</b>. Click <span class="ui">Qualify</span> on an account.</li>
+      <li>Open the account for its qualifications, or the company page for <b>Why this score</b>.</li>
+    </ol>
+    <div class="see">A verdict (Qualified, Needs review, Not qualified) with evidence.</div>
+
+    <h4 id="e-outreach">Outreach</h4>
+    <ol class="steps">
+      <li><b>Engines &gt; Outreach</b> lists pending sends. Click the <b>Outreach workbench</b> link (top right).</li>
+      <li>Pick a contact, <span class="ui">Draft message</span>, edit subject and body.</li>
+      <li>Pick the <b>Sending lane</b> and the <b>Sending mailbox</b> (Choose a mailbox…), then <span class="ui">Propose send</span>.</li>
+      <li><span class="chip human">Needs a human</span> A different person approves and executes it in Approvals.</li>
+      <li>Cadences: <b>CRM &gt; Sequences</b>, <b>New sequence</b> (name, goal, sending lane, sending mailbox). Enrol people from a company page with <b>Enroll people in sequence</b>. Members, Messages and Replies tabs track it.</li>
+    </ol>
+    <div class="see">The proposed message with an approval link. A sent email cannot be un-sent.</div>
+
+    <h4 id="e-dq">Identity and data quality</h4>
+    <ol class="steps">
+      <li><b>CRM &gt; Data quality</b>: quality score, field fill rate, <b>Duplicate candidates</b>.</li>
+      <li>Choose the survivor, <span class="ui">Merge</span>. The merge is a proposal; once executed it can be reversed with <b>Unmerge</b>.</li>
+      <li>Uncertain identity matches wait in <b>Operate &gt; Needs a human</b>.</li>
+    </ol>
+
+    <h4 id="e-seo">SEO &amp; GEO <span class="chip human">Search Console required</span></h4>
+    <ol class="steps">
+      <li><b>Engines &gt; SEO &amp; GEO</b>: readiness metrics and pages. Click the <b>Page workbench</b> link.</li>
+      <li><b>Track a new page</b>, <span class="ui">Track page</span>, then <span class="ui">Audit page</span>, <span class="ui">Get recommendation</span>, <span class="ui">Propose change</span> (a person approves).</li>
+      <li><b>Site visibility</b>: <span class="ui">Run visibility</span> for Search Console totals, top queries and pages (and Ahrefs metrics when Ahrefs is connected through Composio).</li>
+    </ol>
+    <div class="see">Audit findings, a recommendation, and visibility for your domain.</div>
+
+    <h4 id="e-ads">Performance Ads</h4>
+    <ol class="steps">
+      <li>Connect Google Ads (connected Google account with Google Ads) or a <code>meta_ads</code> connection.</li>
+      <li><b>Engines &gt; Performance Ads</b>, then the <b>Campaign workbench</b> link: pacing and performance per campaign.</li>
+      <li><b>Propose a change</b>: new budget (increases capped at 2x) or status, <span class="ui">Propose change</span>. A person approves: this is real money.</li>
+    </ol>
+
+    <h4 id="e-research">Research agent</h4>
+    <ul>
+      <li><b>CRM &gt; Research</b>: what it researches now, scheduled re-checks, failures to retry or cancel.</li>
+      <li><b>Settings</b> there: <b>Workspace profile</b> (enter your website, Refresh), Research enabled, Auto-apply verified facts, Daily budget (USD), re-check days, meeting-prep lead time.</li>
+      <li>Per company: the <b>Research</b> tab.</li>
+    </ul>
+
+    <h4 id="e-search">Search index</h4>
+    <ol class="steps"><li><b>Settings &gt; Search index</b>: records indexed and with vectors per type, the embedding model. <span class="ui">Reindex now</span> (owner or admin).</li></ol>
+    <div class="see">"Reindex queued." Vectors need an OpenAI or Gemini key.</div>
+
+    <h4 id="e-chat">Agent tab and AI chat</h4>
+    <ul>
+      <li>Open a company, contact or deal, <b>Agent</b> tab: ask about that record.</li>
+      <li><b>CRM &gt; AI chat</b>: ask about the workspace. Its changes (log activity, tasks, edits, stage moves, enrolments) are only proposed. Needs a model provider.</li>
+    </ul>
+
+    <h4 id="e-operate">Watch the system</h4>
+    <ul>
+      <li><b>Mission Control</b>: today's move, KPIs, risks, the overnight engine log.</li>
+      <li><b>Operate</b>: Needs a human, Runs (step-by-step traces), Monitors, Cost (every cost line back to the run that spent it).</li>
+      <li><b>Settings &gt; Navigation</b>: hide whole tab groups you do not use.</li>
+    </ul>
+  </div>
+
+  <!-- APPROVALS -->
+  <div class="card" id="approvals">
+    <h3>Approvals <span class="chip human">Needs a human</span></h3>
+    <p class="goal"><b>Goal:</b> nothing customer-facing or live happens without a second person.</p>
+    <ol class="steps">
+      <li><b>Approvals</b> (top of the sidebar) or <b>Operate &gt; Needs a human</b>. Open a proposal: <b>The change</b> shows exactly what will run.</li>
+      <li>Approver: <span class="ui">Approve</span> or <span class="ui">Reject</span>. Then <span class="ui">Execute</span> runs it.</li>
+      <li>Veto your agent's proposal: as the person the agent acts for, open it and click <span class="ui">Withdraw (veto my agent's proposal)</span>.</li>
+      <li>Pause everything customer-facing: <b>Settings &gt; Safety</b>, <span class="ui">Enable dry mode</span>. Effects become drafts; a banner shows on every page.</li>
+    </ol>
+    <div class="tbl"><table>
+      <tr><th>Who</th><th>Can approve?</th><th>Can execute?</th></tr>
+      <tr><td>The proposer</td><td>No</td><td>No</td></tr>
+      <tr><td>The person whose agent proposed it</td><td>No (the button shows; the server refuses)</td><td>No</td></tr>
+      <tr><td>Another owner or admin</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Any agent</td><td>Never</td><td>Never</td></tr>
+    </table></div>
+    <div class="see">The approval timeline: Proposed, Approved, Executed (or Rejected, Withdrawn, Expired). Proposals expire after 7 days.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li><code>CONFLICT</code> "ActionApproval has expired": propose it again.</li>
+      <li>"Action payload no longer matches the approved payload hash": it changed after approval; propose again.</li>
+      <li>"Lane "x" is paused": a monitor paused it after failures; investigate, then resume it in Operate &gt; Monitors.</li>
+    </ul></div></details>
+  </div>
+
+  <!-- ENVIRONMENTS -->
+  <div class="card" id="environments">
+    <h3>Environments and going live</h3>
+    <p class="goal"><b>Goal:</b> config moves from <code>dev</code> to <code>prod</code> safely. Every org has <code>dev</code>, <code>staging</code> and <code>prod</code>. The runtime reads <code>prod</code>. Effects in dev and staging go to a sink.</p>
+    <ol class="steps">
+      <li>The <b>environment switcher</b> in the console header picks which environment you view (default prod).</li>
+      <li><b>CRM &gt; Environments</b>, <b>Go live</b> card:
+        <ul>
+          <li><span class="chip human">Needs a human</span> <span class="ui">Review &amp; sign all proposed (N)</span>: someone other than the proposer (and other than the person whose agent proposed) signs.</li>
+          <li><span class="ui">Promote dev → prod</span>: proposes one approval for everything signed; another member approves and executes it.</li>
+        </ul></li>
+      <li>Same from a terminal:
+        <div class="code"><pre><code>gtm definition sign-all --env dev
+gtm promote --all dev prod --preview
+gtm promote --all dev prod</code></pre></div></li>
+      <li>One resource only, or roll back:
+        <div class="code"><pre><code>gtm promote definition.lane primary-email dev prod
+gtm rollback definition.scoring_model default --to-version 3 --env prod</code></pre></div></li>
+    </ol>
+    <div class="see">"Everything is live." on the Go live card; no "N definitions are in dev, not live" banner.</div>
+    <details class="err"><summary>Common errors</summary><div><ul>
+      <li>"Definitions cannot be published directly into a prod-class environment": publish to dev, sign, promote.</li>
+      <li>"Cannot promote ... the source version (vN) is "draft", not "signed"": sign it first.</li>
+      <li>"Cannot sign: you proposed this version for signing -- a different person must sign it (four-eyes)": another admin signs.</li>
+      <li>"Illegal promotion prod -> dev": promote upward only.</li>
+    </ul></div></details>
+  </div>
+
+  <!-- PACKAGES -->
+  <div class="card" id="packages">
+    <h3>Packages</h3>
+    <p class="goal"><b>Goal:</b> install, enable and upgrade engines, screens, connectors and modules.</p>
+    <ol class="steps">
+      <li><b>Settings &gt; Packages</b>. Tabs: <b>Installed</b> and <b>Available</b>.</li>
+      <li>Install: <b>Available</b>, <span class="ui">Install</span> (a proposal).</li>
+      <li>Enable or disable per environment with the toggle on the installed package (a proposal).</li>
+      <li>Upgrade: <span class="ui">Preview upgrade vX -&gt; vY</span> (changes, breaking or not), then <span class="ui">Propose upgrade to vY</span>.</li>
+      <li>Remove: <span class="ui">Uninstall</span>, then <span class="ui">Propose uninstall</span> (your data is never deleted).</li>
+      <li><span class="chip human">Needs a human</span> Another admin approves each in Approvals.</li>
+    </ol>
+    <p>CLI equivalents:</p>
+    <div class="code"><pre><code>gtm pkg enable &lt;name&gt; --env &lt;env&gt;
+gtm pkg upgrade &lt;name&gt; --dry-run</code></pre></div>
+    <div class="see">The 7 engine packages installed and enabled in every environment. <code>gtm doctor</code> prints the exact enable command if one is missing.</div>
+  </div>
+
+  <!-- UPGRADE -->
+  <div class="card" id="upgrade">
+    <h3>Upgrade GTM OS</h3>
+    <p class="goal"><b>Goal:</b> move your installed instance to a newer release safely.</p>
+    <ol class="steps">
+      <li>See what is available:
+        <div class="code"><pre><code>gtm upgrade --check --dir instance</code></pre></div></li>
+      <li>Preview, then apply (pull images, snapshot, migrate, verify, auto-rollback on failure):
+        <div class="code"><pre><code>gtm upgrade --dir instance --to &lt;version&gt; --dry-run
+gtm upgrade --dir instance --to &lt;version&gt; --yes</code></pre></div></li>
+      <li>In Claude Code run <code>/mcp</code> to reconnect, then <code>gtm init --refresh --yes</code> for fresh docs.</li>
+    </ol>
+    <div class="see">The current and available versions, then a verified upgrade. <code>--dir</code> is the folder that holds the instance's compose file and <code>.env</code>.</div>
+  </div>
+
+  <!-- TROUBLESHOOTING -->
+  <div class="card" id="troubleshooting">
+    <h3>Troubleshooting</h3>
+    <p class="goal">Errors carry a <code>remediation</code> field: read it first. If nothing matches, ask your agent to read <code>docs/gtmos/guides/08-troubleshooting.md</code>.</p>
+    <div class="tbl"><table>
+      <tr><th>You see</th><th>Fix</th></tr>
+      <tr><td>"No commands match /setup-gtmos"</td><td>Restart Claude Code in the folder after <code>gtm init</code>.</td></tr>
+      <tr><td><code>/mcp</code> shows gtmos failed, or <code>UNAUTHORIZED</code> "No valid session or agent token"</td><td>Set <code>GTMOS_AGENT_TOKEN</code>, open a new terminal, restart Claude. Expired or revoked key: create a new one.</td></tr>
+      <tr><td>MCP tools stop working after a stack restart or upgrade</td><td>Run <code>/mcp</code> to reconnect.</td></tr>
+      <tr><td>A port is already in use during setup</td><td>Re-run setup with <code>--console-port</code>, <code>--api-port</code>, <code>--mcp-port</code> or <code>--postgres-port</code>.</td></tr>
+      <tr><td>"An action proposed by your own agent must be approved by a different person"</td><td>The approver (second admin) approves.</td></tr>
+      <tr><td>"An action cannot be executed by the identity that proposed it"</td><td>The approver or another member executes.</td></tr>
+      <tr><td>Banner "N definitions are in dev, not live"</td><td>CRM &gt; Environments &gt; Go live: sign all, promote, approve.</td></tr>
+      <tr><td>Score shows <code>score.default.v1</code></td><td>Sign and promote your <code>definition.scoring_model</code> <code>default</code>.</td></tr>
+      <tr><td>"This is a Composio user API key (uak_...)"</td><td>Use <b>Connect Composio</b>.</td></tr>
+      <tr><td><code>AUTH_EXPIRED</code> Composio sign-in expired</td><td>Click <b>Reconnect Composio</b>.</td></tr>
+      <tr><td><code>lane_required</code></td><td>Pick a sending lane; activate it first.</td></tr>
+      <tr><td><code>mailbox_required</code></td><td>Connect Gmail or Microsoft 365 with Send mail; pick the mailbox.</td></tr>
+      <tr><td>Sends stay drafts, no approval appears</td><td>Dry Mode is on: Settings &gt; Safety.</td></tr>
+      <tr><td><code>NOT_CONFIGURED</code> "Google Search Console is required for SEO &amp; GEO"; <code>gtm doctor</code> ERROR <code>connector.gsc</code></td><td>Connect Search Console (Connected accounts, Use for org, or Composio) and set the property.</td></tr>
+      <tr><td>"The GSC property must be a Search Console property"</td><td>Use <code>sc-domain:acme.com</code> or <code>https://www.acme.com/</code>.</td></tr>
+      <tr><td>"... does not hold the "engine.configure" scope" / "connection.manage"</td><td>New agent key with the Full GTM engineer preset.</td></tr>
+      <tr><td><code>APPROVAL_REQUIRED</code> on enrichment or data</td><td>Spend is above the per-call cap; approve it, or price smaller batches.</td></tr>
+      <tr><td><code>402 insufficient_balance</code></td><td>Top up looot. Do not retry.</td></tr>
+      <tr><td>Search results say <code>mode: "text_only"</code></td><td>Add an OpenAI or Gemini key, then Settings &gt; Search index &gt; Reindex now.</td></tr>
+      <tr><td>"Sent" in demo mode but nothing arrived</td><td>Demo mode uses a fixture sender. Run live with a real sender.</td></tr>
+      <tr><td>Readiness says FIXTURE</td><td>Demo data, not real. Configure the provider; never present it as real.</td></tr>
+      <tr><td><code>VALIDATION_FAILED</code> "Unknown environment"</td><td>Typo in the environment name; use <code>dev</code>, <code>staging</code> or <code>prod</code>.</td></tr>
+      <tr><td>Disk or RAM low, Docker stuck</td><td>Close heavy apps, restart Docker Desktop. Never delete volumes of a stack you need.</td></tr>
+    </table></div>
+  </div>
+</section>
+
+<section class="sec" id="flexibility">
+  <div class="flex-hero">
+    <div class="eyebrow">Flexibility</div>
+    <h2>Customize anything with your agent</h2>
+    <p>Your agent (Claude Code, Codex, or any MCP agent) reaches GTM OS through the same operations the console uses. If you can do it in the console, your agent can do it, and much more you would not want to click through: engines, the data model, data, integrations, blueprints and screens. You describe the outcome. It reads the live schema, writes the change in <code>dev</code>, verifies it, and tells you what a person must approve.</p>
+  </div>
+
+  <div class="tbl"><table>
+    <tr><th>Area</th><th>Your agent can change</th></tr>
+    <tr><td>Engines</td><td>Scoring models and thresholds, ICP fit, signal weights, plays and triggers, lanes, sequences, brand voice, workflow flags, research settings, model routing</td></tr>
+    <tr><td>Data model</td><td>Custom fields, custom objects and relationships, identity rules</td></tr>
+    <tr><td>Data</td><td>Imports, CRM sync, any-app source mappings, enrichment runs, de-duplication, record fixes (as proposals)</td></tr>
+    <tr><td>Integrations</td><td>Connections and keys you give it, Composio apps already authorized, MCP servers, capability bindings</td></tr>
+    <tr><td>Blueprints and packages</td><td>Apply the closest blueprint, customize it, propose package installs and upgrades</td></tr>
+    <tr><td>Screens</td><td>Declarative apps (record page, queue, table, dashboard) under <b>Apps</b></td></tr>
+  </table></div>
+
+  <p>Slash commands in your workspace: <code>/build-gtm-system</code>, <code>/go-live-check</code>, <code>/define-object</code>, <code>/create-play</code>, <code>/wire-connector</code>, <code>/build-app</code>, <code>/onboard-blueprint</code>, <code>/describe-ops</code>, <code>/compile-rule</code>, <code>/tune-economics</code>, <code>/design-abm</code>, <code>/set-brand-split</code>.</p>
+
+  <h3>Example prompts</h3>
+  <div class="prompts">
+    <div class="prompt">
+      <h4>Add a custom object</h4>
+      <div class="code"><pre><code>Add a custom object Partner with a name, a tier (gold, silver, bronze) and a link to the company. Let deals point to the partner who referred them.</code></pre></div>
+      <dl><dt>Claude does</dt><dd>Checks the <code>stdlib/gtm.partner</code> module first; otherwise proposes and validates an ontology ChangeSet.</dd>
+      <dt>You do</dt><dd>Publish it in CRM &gt; Model; another admin approves.</dd></dl>
+    </div>
+    <div class="prompt">
+      <h4>Map an app to signals</h4>
+      <div class="code"><pre><code>Map our Typeform demo-request responses to signals, every hour, matched to contacts by email.</code></pre></div>
+      <dl><dt>Claude does</dt><dd>Previews the Typeform list tool live, writes a source mapping (append mode, hourly), proposes it, syncs once signed.</dd>
+      <dt>You do</dt><dd>Connect Typeform on the Composio card; sign the mapping.</dd></dl>
+    </div>
+    <div class="prompt">
+      <h4>Post qualified accounts to Slack</h4>
+      <div class="code"><pre><code>Create a Slack bot that posts every newly qualified account to #sales with its top reasons, and wire it in. Use Composio if that is simpler.</code></pre></div>
+      <dl><dt>Claude does</dt><dd>Recommends the native Slack connection for alerts (or Composio's Slack toolkit), creates or joins the channel, writes a play that reacts to qualification and posts, and simulates it.</dd>
+      <dt>You do</dt><dd>Click the Slack consent; sign and promote the play; approve posts that go out through the gate.</dd></dl>
+    </div>
+    <div class="prompt">
+      <h4>Tune scoring</h4>
+      <div class="code"><pre><code>Change the scoring weights: hiring signals 35, funding 25, and qualify accounts at 65 instead of 60.</code></pre></div>
+      <dl><dt>Claude does</dt><dd>Edits <code>definition.scoring_model</code> key <code>default</code> in dev and shows the diff; after promotion, scores an account to prove your version is used.</dd>
+      <dt>You do</dt><dd>Sign and promote (Environments &gt; Go live).</dd></dl>
+    </div>
+    <div class="prompt">
+      <h4>Use an internal API</h4>
+      <div class="code"><pre><code>Add our internal API as an MCP server (https://tools.acme.com/mcp) and use its company lookup tool in enrichment.</code></pre></div>
+      <dl><dt>Claude does</dt><dd>Registers and tests the server, binds an enrichment capability to the tool, verifies it in readiness.</dd>
+      <dt>You do</dt><dd>Paste the auth value in the MCP servers card if you keep it private; mark the tool Read; sign the binding.</dd></dl>
+    </div>
+    <div class="prompt">
+      <h4>Add a screen</h4>
+      <div class="code"><pre><code>Build a table app of open deals by stage with value and owner, and a queue of accounts that need review.</code></pre></div>
+      <dl><dt>Claude does</dt><dd>Scaffolds declarative apps from the object types and proposes them.</dd>
+      <dt>You do</dt><dd>Approve; open them under Apps.</dd></dl>
+    </div>
+  </div>
+
+  <h3>What always needs a person</h3>
+  <ul>
+    <li><b>Approve, reject, execute</b> any proposal, <b>sign</b> definitions and <b>publish</b> ontology changes (four-eyes).</li>
+    <li><b>OAuth consent clicks</b>: Composio sign-in and app connects, Google, Microsoft, Slack. Your agent gives you the link.</li>
+    <li><b>Dry Mode</b> on or off (Settings &gt; Safety).</li>
+    <li>Agent keys, agents, roles, members, gate policies, and MCP tool effects (no agent can widen its own authority).</li>
+    <li><b>Keys you choose to keep private</b>: paste them in the console instead of the chat.</li>
+    <li>DNS records at your domain host, and turning on research auto-apply.</li>
+  </ul>
+</section>
+
+<section class="sec" id="glossary">
+  <div class="eyebrow">Reference</div>
+  <h2>Glossary</h2>
+  <dl class="gloss">
+    <dt>Operation</dt><dd>One capability (for example <code>score.score_account</code>). Console, CLI, API and MCP all call the same operations. Classes: Q read, D data write, T stage change, E customer-facing effect, M config.</dd>
+    <dt>Engine</dt><dd>An installed package that does one GTM job: Score, Enrichment, Signals, Outreach, SEO &amp; GEO, Performance Ads, Identity &amp; data quality.</dd>
+    <dt>Definition</dt><dd>Versioned config an engine reads: scoring model, lane, play, binding, source mapping, segment, persona.</dd>
+    <dt>Blueprint</dt><dd>A general template that seeds a whole motion (definitions, plays, lanes, metrics) in one change.</dd>
+    <dt>Package</dt><dd>Anything installable: engines, screens, connectors, ontology modules, blueprints.</dd>
+    <dt>Ontology</dt><dd>The data model: built-in <code>gtm.*</code> objects plus your custom fields and <code>custom.*</code> objects.</dd>
+    <dt>Proposal / approval</dt><dd>A pending action that runs only after another person approves and executes it.</dd>
+    <dt>Four-eyes</dt><dd>The proposer, and the person whose agent proposed, can never approve, sign or execute it.</dd>
+    <dt>Environment</dt><dd><code>dev</code>, <code>staging</code>, <code>prod</code>. Runtime reads prod.</dd>
+    <dt>Sign / promote</dt><dd>A person signs a definition in dev; promoting copies signed versions up to prod.</dd>
+    <dt>Lane</dt><dd>A sending channel with caps, checks, budget and domain. Every send needs an activated lane.</dd>
+    <dt>Agent key</dt><dd>A <code>gtm_...</code> key your agent uses. It acts for you and can never approve.</dd>
+    <dt>Dry Mode</dt><dd>Org-wide switch that turns customer-facing actions into drafts.</dd>
+    <dt>looot</dt><dd>The third-party data provider: enrichment, emails, phones, lists, intent, SEO keyword data.</dd>
+    <dt>Composio</dt><dd>The bridge to your own apps: CRM, Slack, Typeform, Search Console, Ahrefs and more.</dd>
+    <dt>Source mapping</dt><dd>A signed rule that maps any app's records into GTM OS objects.</dd>
+    <dt>Readiness</dt><dd>The live status of every connection: live, stored not verified, failed, fixture, not configured.</dd>
+    <dt>Demo vs live mode</dt><dd>Demo serves fake fixture data where a key is missing. Live fails with <code>NOT_CONFIGURED</code> instead. Real go-live needs live mode.</dd>
+  </dl>
+</section>
+
+<section class="sec" id="not-built">
+  <h2>What is not built yet</h2>
+  <ul>
+    <li><b>White-label</b> (custom branding or domain per client) is not available. Agencies use delegations.</li>
+    <li><b>Expansion and reorder</b> for existing customers is not a shipped motion; defaults exclude customers. Your agent can compose a custom segment and play.</li>
+    <li>No dedicated <b>Signals</b> or <b>Enrichment</b> page: use the Hot list scan and the Companies bulk action.</li>
+    <li>No <b>DNS</b> operation: lane activation checks SPF, DKIM and DMARC, but you add records at your DNS host.</li>
+    <li>No org-wide <b>spend budget</b> setting; spend is capped per call, per lane and per play.</li>
+    <li><b>LinkedIn sending</b> is off by default and human-sent only.</li>
+    <li>No live provider yet for <b>market-events</b> signals.</li>
+    <li>Derived and metric <b>lineage</b> is empty; relationship cardinality is recorded but not enforced.</li>
+    <li>No <b>dashboards</b> section yet; build declarative apps instead.</li>
+  </ul>
+  <footer>GTM OS user guide. Source of truth: GTM OS main <code>e29e84f9</code>, its CLI help and the harness guides in <code>docs/gtmos/</code> of your workspace (refresh with <code>gtm init --refresh</code>). When this page and your live instance disagree, the instance wins.</footer>
+</section>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  function store(k,v){try{if(v===undefined){return window.localStorage.getItem(k);}window.localStorage.setItem(k,v);}catch(e){return null;}return null;}
+  var saved=store("gtmos-guide-theme");
+  if(saved==="light"||saved==="dark"){root.setAttribute("data-theme",saved);}
+  var tbtn=document.getElementById("themeToggle");
+  function isDark(){var t=root.getAttribute("data-theme");if(t){return t==="dark";}return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;}
+  function label(){tbtn.textContent=isDark()?"Light":"Dark";}
+  label();
+  tbtn.addEventListener("click",function(){var next=isDark()?"light":"dark";root.setAttribute("data-theme",next);store("gtmos-guide-theme",next);label();});
+
+  // copy buttons on every command block
+  var pres=document.querySelectorAll("pre");
+  Array.prototype.forEach.call(pres,function(pre){
+    var b=document.createElement("button");
+    b.type="button";b.className="copy";b.textContent="Copy";b.setAttribute("aria-label","Copy command");
+    b.addEventListener("click",function(){
+      var text=pre.innerText.replace(/\n$/,"");
+      function selectIt(){try{var r=document.createRange();r.selectNodeContents(pre.querySelector("code")||pre);var s=window.getSelection();s.removeAllRanges();s.addRange(r);}catch(e){}b.textContent="Selected: press Ctrl+C";}
+      function ok(){b.textContent="Copied";b.classList.add("done");setTimeout(function(){b.textContent="Copy";b.classList.remove("done");},1600);}
+      if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(ok).catch(selectIt);}else{selectIt();}
+    });
+    pre.parentNode.appendChild(b);
+  });
+
+  // nav search
+  var nav=document.getElementById("sideNav");
+  var links=nav.querySelectorAll("a");
+  var none=document.getElementById("navNone");
+  document.getElementById("navSearch").addEventListener("input",function(e){
+    var q=e.target.value.trim().toLowerCase();var shown=0;
+    Array.prototype.forEach.call(links,function(a){var hay=(a.textContent+" "+(a.getAttribute("data-k")||"")).toLowerCase();var hit=!q||hay.indexOf(q)>-1;a.classList.toggle("hidden-by-search",!hit);if(hit){shown++;}});
+    Array.prototype.forEach.call(nav.querySelectorAll(".grp"),function(g){g.classList.toggle("hidden-by-search",!!q);});
+    none.style.display=shown?"none":"block";
+  });
+
+  // mobile nav
+  var nt=document.getElementById("navToggle");
+  nt.addEventListener("click",function(){var open=nav.classList.toggle("open");nt.setAttribute("aria-expanded",open?"true":"false");});
+  Array.prototype.forEach.call(links,function(a){a.addEventListener("click",function(){if(nav.classList.contains("open")){nav.classList.remove("open");nt.setAttribute("aria-expanded","false");}});});
+
+  // active section highlight
+  if("IntersectionObserver" in window){
+    var map={};Array.prototype.forEach.call(links,function(a){var id=a.getAttribute("href").slice(1);map[id]=a;});
+    var obs=new IntersectionObserver(function(entries){entries.forEach(function(en){if(en.isIntersecting&&map[en.target.id]){Array.prototype.forEach.call(links,function(l){l.classList.remove("on");});map[en.target.id].classList.add("on");}});},{rootMargin:"-20% 0px -70% 0px"});
+    Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el){obs.observe(el);}});
+  }
+})();
+</script>
+
+</body>
+</html>
