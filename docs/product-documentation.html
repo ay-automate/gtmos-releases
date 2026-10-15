@@ -334,7 +334,7 @@ td.wrap code{white-space:normal}
     </div>
     <div class="tech">
       <h4>Under the hood</h4>
-      <p>Four images, <code>gtmos-api</code>, <code>gtmos-console</code>, <code>gtmos-worker</code> and <code>gtmos-mcp</code> (0.2.2), plus <code>pgvector/pgvector:pg16</code>, wired by a generated <code>docker-compose.yml</code>. Default ports: console 3000, API 3001, MCP 3004. The <code>gtm</code> CLI installs from npm (<code>@gtmos/cli</code>, 0.2.3 or later); the images are public on GHCR (<code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}</code>, tags <code>0.2.2</code> and <code>stable</code>, linked to <a href="https://github.com/ay-automate/gtmos-releases">github.com/ay-automate/gtmos-releases</a>), so <code>gtm setup</code> pulls them. Locally built images can still be used with <code>--version &lt;tag&gt; --no-pull</code>.</p>
+      <p>Four images, <code>gtmos-api</code>, <code>gtmos-console</code>, <code>gtmos-worker</code> and <code>gtmos-mcp</code> (0.2.2), plus <code>pgvector/pgvector:pg16</code>, wired by a generated <code>docker-compose.yml</code>. Default ports: console 3000, API 3001, MCP 3004. The <code>gtm</code> CLI installs from npm (<code>@gtmos/cli</code>, 0.2.4 or later); the images are public on GHCR (<code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}</code>, tags <code>0.2.2</code> and <code>stable</code>, linked to <a href="https://github.com/ay-automate/gtmos-releases">github.com/ay-automate/gtmos-releases</a>), so <code>gtm setup</code> pulls them. Locally built images can still be used with <code>--version &lt;tag&gt; --no-pull</code>.</p>
 <pre>npm i -g @gtmos/cli
 mkdir my-gtm &amp;&amp; cd my-gtm &amp;&amp; claude
 ! gtm init                      # agent workspace + docs, even with no instance yet

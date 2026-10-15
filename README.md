@@ -4,11 +4,11 @@ Public releases of **GTM OS**, the self-hosted operating system for go-to-market
 
 This repository holds **releases and documentation only**. The source code is not published here.
 
-## Latest: GTM OS 0.2.2 (CLI 0.2.3)
+## Latest: GTM OS 0.2.2 (CLI 0.2.4)
 
 | What | Where |
 |---|---|
-| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) (0.2.3) |
+| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) (0.2.4) |
 | Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.2` (also `stable`), listed under this repo's Packages |
 | Release notes | [releases/0.2.2.md](releases/0.2.2.md) and [GitHub release v0.2.2](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.2) |
 | User guide | https://ay-automate.github.io/gtmos-releases/user-guide.html |
