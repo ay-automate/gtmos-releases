@@ -1,0 +1,4 @@
+/* Self-hosted brand fonts (same files as the GTM OS product UI). No external requests. */
+@font-face{font-family:"Bricolage Grotesque";src:url("fonts/bricolage-grotesque.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Mono";src:url("fonts/dm-mono-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"DM Mono";src:url("fonts/dm-mono-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}

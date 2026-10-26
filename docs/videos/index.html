@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GTM OS video series</title>
+<meta name="description" content="41 short clips in six parts that take you from install to a trusted, running GTM system. Each clip shows the console and the prompt to ask your agent.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/site.js"></script>
+<script src="videos.js" defer></script>
+</head>
+<body data-page="series">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">G</span>GTM OS</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">Overview</a>
+      <a href="index.html" aria-current="page">Videos</a>
+      <a href="../user-guide.html">User guide</a>
+      <a href="../product-documentation.html">Product docs</a>
+      <a href="https://github.com/ay-automate/gtmos-releases/releases">Releases</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme" aria-pressed="false"></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap page-h">
+    <p class="eyebrow">Video series</p>
+    <h1>From install to a system you trust</h1>
+    <p>Six parts, 41 short clips, one per idea. Each clip shows the console and the exact prompt to ask your agent. New clips appear here as they are recorded.</p>
+    <div class="stats" id="stats"></div>
+  </div>
+
+  <nav class="ladder-nav" aria-label="Levels ladder, jump to a part" id="ladder-nav" hidden>
+    <div class="wrap"><ol class="ladder" id="ladder"></ol></div>
+  </nav>
+
+  <div class="wrap">
+    <section class="start" aria-labelledby="start-h" id="start" hidden>
+      <h2 id="start-h">Start here: the shortest path to a first win</h2>
+      <p>Six clips, <span id="start-min"></span> minutes in all. Watch them in order.</p>
+      <ol class="path" id="path"></ol>
+    </section>
+
+    <div class="filters" id="filters" role="group" aria-label="Filter clips" hidden></div>
+    <div id="parts" aria-live="polite"></div>
+
+    <noscript>
+      <div class="fallback">
+        <h2>All clips</h2>
+        <p style="color:var(--muted)">Turn on JavaScript to see which clips are published and to watch them. The full list and its status is in <a href="videos.json">videos.json</a>.</p>
+        <ol>
+          <li><b>Part 1, Plan.</b> Clips 1 to 9: What is GTM OS, First setup with Claude, Your first organization and your agent, The onboarding steps, Blueprints and motions, Connections and integrations, Skills, Predefined agents, Your first week.</li>
+          <li><b>Part 2, Build.</b> Clips 10 to 14: Bring your data in, Your CRM kept in sync, The CRM workspace, Identity and data quality, Ask your data anything.</li>
+          <li><b>Part 3, Operate.</b> Clips 16 to 20: Definitions as code and environments, Your ICP and scoring model, Journeys and revenue truth, Voice proof and claims, Consent and privacy.</li>
+          <li><b>Part 4, Automate.</b> Clips 21 to 29 and 31: Score, Enrichment, Signals and intent, Routing, Outreach, SEO and GEO, Performance ads, Research agent, Plays and Studio, How the engines work together.</li>
+          <li><b>Part 5, Optimize.</b> Clips 32 to 39: Approvals, Dry Mode and guardrails, Why you can trust it, Dashboards and your daily rhythm, Environments, Going live, Teams and roles, Your first month.</li>
+          <li><b>Part 6, Scale.</b> Clips 40 to 43: Apps and packages, Self-hosting, Upgrading, When something looks wrong.</li>
+        </ol>
+        <p>Shortest path to a first win: clips 1, 2, 3, 4, 6 and 9.</p>
+      </div>
+    </noscript>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>GTM OS by AY Automate. Clips are for GTM engineers and strategists.</p>
+    <ul>
+      <li><a href="../index.html">Overview</a></li>
+      <li><a href="../user-guide.html">User guide</a></li>
+      <li><a href="https://github.com/ay-automate/gtmos-releases/issues">Support</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

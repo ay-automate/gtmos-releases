@@ -3,27 +3,169 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>GTM OS Docs</title>
-<style>
-:root{--bg:#f5f2ec;--fg:#1f1b16;--muted:#62594d;--line:#ddd4c6;--card:#fbf9f5;--accent:#b5421d;color-scheme:light}
-@media (prefers-color-scheme:dark){:root{--bg:#15120e;--fg:#ece5da;--muted:#a99d8d;--line:#352e25;--card:#1d1914;--accent:#f89b7c;color-scheme:dark}}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
-main{max-width:720px;margin:0 auto;padding:64px 16px}
-h1{font-size:2.2rem;margin:0 0 8px}
-p{color:var(--muted);margin:0 0 28px}
-a.card{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;color:var(--fg);text-decoration:none}
-a.card:hover{border-color:var(--accent)}
-a.card b{display:block;font-size:1.1rem;color:var(--accent)}
-code{font-family:ui-monospace,Consolas,monospace;font-size:.9em}
-</style>
+<title>GTM OS: the operating system for go-to-market</title>
+<meta name="description" content="GTM OS is a self-hosted operating system for go-to-market. One record of who you sell to, engines that do the work, and agents that never act alone on anything that leaves the building.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
 </head>
 <body>
-<main>
-<h1>GTM OS documentation</h1>
-<p>Release 0.2.2. Install with <code>npm i -g @gtmos/cli</code>, then <code>gtm init</code> and <code>/setup-gtmos</code> in Claude Code.</p>
-<a class="card" href="user-guide.html"><b>User guide</b>Quickstart, then how-to for every task: connections, agents, building your system, approvals, going live, troubleshooting.</a>
-<a class="card" href="product-documentation.html"><b>Product documentation</b>Architecture, core concepts, ontology, the engines, end-to-end flows, integrations, customization and security, for GTM teams and engineers.</a>
-<a class="card" href="https://github.com/ay-automate/gtmos-releases"><b>Releases</b>Release notes and downloads on GitHub.</a>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">G</span>GTM OS</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Overview</a>
+      <a href="videos/index.html">Videos</a>
+      <a href="user-guide.html">User guide</a>
+      <a href="product-documentation.html">Product docs</a>
+      <a href="https://github.com/ay-automate/gtmos-releases/releases">Releases</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme" aria-pressed="false"></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Self-hosted. Agent-first. Approved by people.</p>
+        <h1 id="hero-h">Your go-to-market, run by <em>agents you can trust.</em></h1>
+        <p class="lede">GTM OS is a self-hosted operating system for go-to-market that keeps one typed record of who you sell to, runs the engines that find, score, route and reach them, and lets your agents act only after a second person approves.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="videos/index.html">Start the video series</a>
+          <a class="btn btn-ghost" href="user-guide.html">Read the quickstart</a>
+        </div>
+        <pre class="codebox" aria-label="Install commands"><span class="p">$ </span>npm i -g @gtmos/cli
+<span class="p">$ </span>gtm init<button class="copy" type="button" data-copy="npm i -g @gtmos/cli&#10;gtm init" aria-label="Copy install commands">Copy</button></pre>
+      </div>
+      <div class="queue" role="img" aria-label="Illustration, simplified example: an agent proposes an email and waits for a second person to approve it">
+        <div class="queue-h">Needs a human <small>Example, simplified</small></div>
+        <div class="q-item">
+          <b>Send first email to the buying committee</b>
+          <span>Proposed by an agent for Acme. Claims checked against your proof library.</span>
+          <div class="q-row"><span class="pill pill-gate">Waiting for approval</span><span class="pill">Dry Mode on</span></div>
+        </div>
+        <div class="q-item">
+          <b>Move budget to the better channel</b>
+          <span>The allocator proposes. It cannot execute.</span>
+          <div class="q-row"><span class="pill pill-ok">Approved by a second person</span></div>
+        </div>
+        <div class="q-item">
+          <b>Merge two duplicate accounts</b>
+          <span>Undo stays available after the merge.</span>
+          <div class="q-row"><span class="pill pill-ember">Reviewed</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" aria-labelledby="gains-h">
+    <div class="wrap">
+      <div class="block-h">
+        <h2 id="gains-h">Four gains, from the first day</h2>
+        <p>Built for GTM engineers who wire the system and strategists who run it.</p>
+      </div>
+      <div class="grid g4">
+        <article class="card gain"><span class="n">01</span><h3>One source of truth for who you sell to</h3><p>Accounts, contacts, deals and signals live in one typed model. Your ICP, scoring and voice are defined once, and every engine obeys.</p></article>
+        <article class="card gain"><span class="n">02</span><h3>Agents that never act alone</h3><p>Anything that leaves the building waits for a second person. The proposer can never approve their own action.</p></article>
+        <article class="card gain"><span class="n">03</span><h3>Safe by default with Dry Mode</h3><p>Start in Dry Mode, see exactly what would have happened, then go live one engine at a time with caps and quiet hours.</p></article>
+        <article class="card gain"><span class="n">04</span><h3>Updates that never touch your data</h3><p>Every upgrade takes a verified backup first and adds only. If a step fails, you roll back to where you were.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="install" aria-labelledby="install-h">
+    <div class="wrap">
+      <div class="block-h">
+        <h2 id="install-h">Install and upgrade</h2>
+        <p>You need Docker Desktop, Node 22 or later, and Claude Code, which runs the setup with you.</p>
+      </div>
+      <div class="grid g2">
+        <div class="card">
+          <p class="step-label">Install</p>
+          <pre class="codebox"><span class="p">$ </span>npm i -g @gtmos/cli
+<span class="p">$ </span>mkdir my-gtm &amp;&amp; cd my-gtm
+<span class="p">$ </span>gtm init<button class="copy" type="button" data-copy="npm i -g @gtmos/cli&#10;mkdir my-gtm &amp;&amp; cd my-gtm&#10;gtm init" aria-label="Copy install commands">Copy</button></pre>
+          <p class="hint">Open Claude Code in that folder and run <code>/setup-gtmos</code>. Claude asks only for what a person has to provide.</p>
+        </div>
+        <div class="card">
+          <p class="step-label">Upgrade</p>
+          <pre class="codebox"><span class="p">$ </span>npm i -g @gtmos/cli@latest
+<span class="p">$ </span>gtm upgrade --check
+<span class="p">$ </span>gtm upgrade --to &lt;version&gt; --yes<button class="copy" type="button" data-copy="npm i -g @gtmos/cli@latest&#10;gtm upgrade --check&#10;gtm upgrade --to &lt;version&gt; --yes" aria-label="Copy upgrade commands">Copy</button></pre>
+          <p class="hint">Upgrades snapshot your data first. Use <code>--dry-run</code> to rehearse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" aria-labelledby="rel-h">
+    <div class="wrap">
+      <div class="block-h"><h2 id="rel-h">Latest release</h2></div>
+      <div class="card release">
+        <div>
+          <p class="step-label">Release</p>
+          <p class="big-ver">GTM OS 0.2.2</p>
+          <p style="color:var(--muted);margin-top:10px">The stabilization release. Everything that exists works in live mode, end to end, driven by Claude Code or any MCP agent.</p>
+          <ul>
+            <li>Claude-driven setup from an empty folder</li>
+            <li>An agent key can do every setup operation, scoped and audited</li>
+            <li>Go live from one card: review, sign and promote together</li>
+            <li>Four-eyes on everything that leaves the building</li>
+          </ul>
+          <p style="margin-top:20px"><a class="btn btn-ghost btn-sm" href="https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.2">Release notes</a></p>
+        </div>
+        <dl>
+          <dt>CLI</dt><dd><a href="https://www.npmjs.com/package/@gtmos/cli"><code>@gtmos/cli</code></a> 0.2.4</dd>
+          <dt>Images</dt><dd><code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.2</code></dd>
+          <dt>Docs</dt><dd><a href="user-guide.html">User guide</a>, <a href="product-documentation.html">Product documentation</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="vid-h">
+    <div class="wrap">
+      <div class="block-h">
+        <h2 id="vid-h">Learn it in six parts</h2>
+        <p>A video series that follows the real order of building a GTM system. Each clip shows the console and the exact prompt to ask your agent. Clips are published as they are recorded.</p>
+      </div>
+      <ol class="ladder" aria-label="The levels ladder">
+        <li><a style="--i:0" href="videos/index.html#part-1"><span class="pt">Part 1</span><span class="lv">Plan</span><span class="tt">Understand and get running</span></a></li>
+        <li><a style="--i:1" href="videos/index.html#part-2"><span class="pt">Part 2</span><span class="lv">Build</span><span class="tt">Your data</span></a></li>
+        <li><a style="--i:2" href="videos/index.html#part-3"><span class="pt">Part 3</span><span class="lv">Operate</span><span class="tt">Your definitions</span></a></li>
+        <li><a style="--i:3" href="videos/index.html#part-4"><span class="pt">Part 4</span><span class="lv">Automate</span><span class="tt">The engines</span></a></li>
+        <li><a style="--i:4" href="videos/index.html#part-5"><span class="pt">Part 5</span><span class="lv">Optimize</span><span class="tt">Trust and going live</span></a></li>
+        <li><a style="--i:5" href="videos/index.html#part-6"><span class="pt">Part 6</span><span class="lv">Scale</span><span class="tt">Extending and operating</span></a></li>
+      </ol>
+      <p style="margin-top:26px"><a class="btn btn-primary" href="videos/index.html">Open the video series</a></p>
+    </div>
+  </section>
+
+  <section class="block alt" aria-labelledby="docs-h">
+    <div class="wrap">
+      <div class="block-h"><h2 id="docs-h">Documentation</h2></div>
+      <div class="grid g3">
+        <a class="card linkcard" href="user-guide.html"><h3>User guide</h3><p>Quickstart, then how to do every task: connections, agents, approvals, going live, troubleshooting.</p></a>
+        <a class="card linkcard" href="product-documentation.html"><h3>Product documentation</h3><p>Architecture, core concepts, the engines, end-to-end flows, integrations and security.</p></a>
+        <a class="card linkcard" href="https://github.com/ay-automate/gtmos-releases"><h3>Releases on GitHub</h3><p>Release notes, images and support. Open an issue and the team answers.</p></a>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>GTM OS by AY Automate. This site holds releases and documentation only.</p>
+    <ul>
+      <li><a href="videos/index.html">Videos</a></li>
+      <li><a href="user-guide.html">User guide</a></li>
+      <li><a href="product-documentation.html">Product docs</a></li>
+      <li><a href="https://github.com/ay-automate/gtmos-releases/issues">Support</a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>

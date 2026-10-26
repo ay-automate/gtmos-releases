@@ -1,0 +1,754 @@
+{
+  "_howto": "Add a clip: copy its files to docs/videos/media/ and fill mp4, vtt, poster and transcript for its entry below. Paths are relative to docs/videos/. See README.md.",
+  "parts": [
+    {
+      "part": 1,
+      "title": "Understand and get running",
+      "level": "Plan",
+      "blurb": "Install, create your organization, connect your agent, get a first win."
+    },
+    {
+      "part": 2,
+      "title": "Your data",
+      "level": "Build",
+      "blurb": "Bring accounts in, keep your CRM in step, keep records clean."
+    },
+    {
+      "part": 3,
+      "title": "Your definitions",
+      "level": "Operate",
+      "blurb": "Say who you sell to and how you speak once. Every engine obeys."
+    },
+    {
+      "part": 4,
+      "title": "The engines",
+      "level": "Automate",
+      "blurb": "Score, enrich, route, reach and learn, one engine per clip."
+    },
+    {
+      "part": 5,
+      "title": "Trust, running it and going live",
+      "level": "Optimize",
+      "blurb": "Approvals, Dry Mode, environments and your first real send."
+    },
+    {
+      "part": 6,
+      "title": "Extending and operating",
+      "level": "Scale",
+      "blurb": "Apps, self-hosting, upgrades and troubleshooting."
+    }
+  ],
+  "startHere": [
+    1,
+    2,
+    3,
+    4,
+    6,
+    9
+  ],
+  "clips": [
+    {
+      "id": "c01",
+      "number": 1,
+      "part": 1,
+      "title": "What is GTM OS",
+      "outcome": "Your go-to-market, run by agents you can trust.",
+      "durationSeconds": 180,
+      "type": "Concept",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Explain GTM OS to my team in five sentences and tell me which of our current tools it would replace."
+      ]
+    },
+    {
+      "id": "c02",
+      "number": 2,
+      "part": 1,
+      "title": "First setup with Claude",
+      "outcome": "From an empty folder to a working GTM project in minutes.",
+      "durationSeconds": 300,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Set up GTM OS for my company.",
+        "Run gtm doctor and explain every line of the result."
+      ]
+    },
+    {
+      "id": "c03",
+      "number": 3,
+      "part": 1,
+      "title": "Your first organization and your agent",
+      "outcome": "Your agent gets a private workspace and starts working.",
+      "durationSeconds": 300,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Start the GTM OS setup for my organization.",
+        "Initialise the onboarding agents."
+      ]
+    },
+    {
+      "id": "c04",
+      "number": 4,
+      "part": 1,
+      "title": "The onboarding steps",
+      "outcome": "Answer a few questions and the system configures itself.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Set up GTM OS for my company and walk me through each onboarding step."
+      ]
+    },
+    {
+      "id": "c05",
+      "number": 5,
+      "part": 1,
+      "title": "Blueprints and motions",
+      "outcome": "Pick a motion, get a working system.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Which blueprint fits us, and what does it need before I apply it?"
+      ]
+    },
+    {
+      "id": "c06",
+      "number": 6,
+      "part": 1,
+      "title": "Connections and integrations",
+      "outcome": "Plug in what you already use and keep what you own.",
+      "durationSeconds": 360,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "What connections do I need, and which ones are missing?"
+      ]
+    },
+    {
+      "id": "c07",
+      "number": 7,
+      "part": 1,
+      "title": "Skills",
+      "outcome": "Agents that already know GTM OS.",
+      "durationSeconds": 240,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "List the skills installed in this project and tell me which one to use for scoring."
+      ]
+    },
+    {
+      "id": "c08",
+      "number": 8,
+      "part": 1,
+      "title": "Predefined agents",
+      "outcome": "A team that works while you sleep, inside rules you set.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Show my agents and what triggers each one."
+      ]
+    },
+    {
+      "id": "c09",
+      "number": 9,
+      "part": 1,
+      "title": "Tutorial: your first week",
+      "outcome": "A first real result in days, not quarters.",
+      "durationSeconds": 360,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Where am I on the first-win checklist, and what is the next step?"
+      ]
+    },
+    {
+      "id": "c10",
+      "number": 10,
+      "part": 2,
+      "title": "Bring your data in",
+      "outcome": "Your whole book in one afternoon.",
+      "durationSeconds": 360,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Import this CSV and show me which companies did not match."
+      ]
+    },
+    {
+      "id": "c11",
+      "number": 11,
+      "part": 2,
+      "title": "Your CRM, kept in sync",
+      "outcome": "Your CRM stays the record; GTM OS stays in step.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "How complete is the Salesforce mirror, and which fields are missing?"
+      ]
+    },
+    {
+      "id": "c12",
+      "number": 12,
+      "part": 2,
+      "title": "The CRM workspace",
+      "outcome": "A CRM that explains itself.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Show the company page for Acme and explain why it is hot."
+      ]
+    },
+    {
+      "id": "c13",
+      "number": 13,
+      "part": 2,
+      "title": "Identity and data quality",
+      "outcome": "One customer, one record.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Find duplicate accounts and propose merges."
+      ]
+    },
+    {
+      "id": "c14",
+      "number": 14,
+      "part": 2,
+      "title": "Ask your data anything, and what it remembers",
+      "outcome": "Questions in plain words, answers with sources.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Which accounts replied this month, and where did each reply label come from?"
+      ]
+    },
+    {
+      "id": "c16",
+      "number": 16,
+      "part": 3,
+      "title": "Definitions as code and environments",
+      "outcome": "Say it once; every engine obeys.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "What is in dev and not live?"
+      ]
+    },
+    {
+      "id": "c17",
+      "number": 17,
+      "part": 3,
+      "title": "Your ICP and scoring model",
+      "outcome": "Your idea of a good fit, scored on every account.",
+      "durationSeconds": 360,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Draft an ICP scoring model from our best customers."
+      ]
+    },
+    {
+      "id": "c18",
+      "number": 18,
+      "part": 3,
+      "title": "Journeys, pipelines and revenue truth",
+      "outcome": "Numbers finance would sign.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Which pipeline stages are unmapped, and what happens to those deals today?"
+      ]
+    },
+    {
+      "id": "c19",
+      "number": 19,
+      "part": 3,
+      "title": "Voice, proof and claims",
+      "outcome": "Say only what you can prove, in your own voice.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Which claims in my drafts have no proof in the library?"
+      ]
+    },
+    {
+      "id": "c20",
+      "number": 20,
+      "part": 3,
+      "title": "Consent, suppression and privacy",
+      "outcome": "Compliance that runs by itself.",
+      "durationSeconds": 240,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Show the consent basis and suppression rules for email."
+      ]
+    },
+    {
+      "id": "c21",
+      "number": 21,
+      "part": 4,
+      "title": "Score",
+      "outcome": "Know who to call before they call.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Score account Acme and explain it."
+      ]
+    },
+    {
+      "id": "c22",
+      "number": 22,
+      "part": 4,
+      "title": "Enrichment",
+      "outcome": "Fill the gaps without overpaying.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "What is our enrichment coverage, and which fields are still empty?"
+      ]
+    },
+    {
+      "id": "c23",
+      "number": 23,
+      "part": 4,
+      "title": "Signals and intent",
+      "outcome": "Hear the market before your competitors do.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Show this week's intent surge report and what is waiting in the review queue."
+      ]
+    },
+    {
+      "id": "c24",
+      "number": 24,
+      "part": 4,
+      "title": "Routing",
+      "outcome": "The right owner in seconds.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Who owns Acme, and why was it routed that way?"
+      ]
+    },
+    {
+      "id": "c25",
+      "number": 25,
+      "part": 4,
+      "title": "Outreach",
+      "outcome": "Personal at scale, approved by a person.",
+      "durationSeconds": 420,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Draft a first email to the buying committee at Acme and send it for approval.",
+        "What is working in our outreach this month?"
+      ]
+    },
+    {
+      "id": "c26",
+      "number": 26,
+      "part": 4,
+      "title": "SEO and GEO",
+      "outcome": "Be found by search and by AI answers.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Audit our site for GEO readiness and propose three content clusters."
+      ]
+    },
+    {
+      "id": "c27",
+      "number": 27,
+      "part": 4,
+      "title": "Performance ads",
+      "outcome": "Spend follows the payback.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Show CAC payback by channel and propose budget moves for approval."
+      ]
+    },
+    {
+      "id": "c28",
+      "number": 28,
+      "part": 4,
+      "title": "Research agent",
+      "outcome": "A researcher on every account.",
+      "durationSeconds": 240,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Brief me on Acme before tomorrow's meeting."
+      ]
+    },
+    {
+      "id": "c29",
+      "number": 29,
+      "part": 4,
+      "title": "Plays and Studio",
+      "outcome": "Automations you can simulate before you trust, and build from a sentence.",
+      "durationSeconds": 480,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Simulate the speed to lead play on last week's inbound leads.",
+        "Studio: build a play that alerts me when a customer's champion changes jobs."
+      ]
+    },
+    {
+      "id": "c31",
+      "number": 31,
+      "part": 4,
+      "title": "How the engines work together",
+      "outcome": "One loop, not eight tools.",
+      "durationSeconds": 240,
+      "type": "Concept",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Walk me through the loop for one real account, from signal to outcome."
+      ]
+    },
+    {
+      "id": "c32",
+      "number": 32,
+      "part": 5,
+      "title": "Approvals and the human queue",
+      "outcome": "Nothing leaves without a second pair of eyes.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "What is waiting for approval, and what changed in each request?"
+      ]
+    },
+    {
+      "id": "c33",
+      "number": 33,
+      "part": 5,
+      "title": "Dry Mode and guardrails",
+      "outcome": "Go live at your own speed.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Which engines are Dry and which are Live, and what are the caps?"
+      ]
+    },
+    {
+      "id": "c34",
+      "number": 34,
+      "part": 5,
+      "title": "Why you can trust it",
+      "outcome": "Built so you can verify, not just believe.",
+      "durationSeconds": 240,
+      "type": "Concept",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Show me the audit trail for the last approved action."
+      ]
+    },
+    {
+      "id": "c35",
+      "number": 35,
+      "part": 5,
+      "title": "Dashboards, your daily rhythm and what it costs",
+      "outcome": "Start every day knowing the one move.",
+      "durationSeconds": 480,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "What is my one move today, and what did the agents spend this week?"
+      ]
+    },
+    {
+      "id": "c36",
+      "number": 36,
+      "part": 5,
+      "title": "Environments: dev, staging and production",
+      "outcome": "Change anything safely, then promote it with confidence.",
+      "durationSeconds": 420,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "What is in dev and not live?",
+        "Preview promoting everything from dev to prod.",
+        "Roll back the scoring model to the previous version."
+      ]
+    },
+    {
+      "id": "c37",
+      "number": 37,
+      "part": 5,
+      "title": "Tutorial: going live",
+      "outcome": "Your first real send, safely.",
+      "durationSeconds": 420,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Walk me through leaving Dry Mode for the email lane, one step at a time."
+      ]
+    },
+    {
+      "id": "c38",
+      "number": 38,
+      "part": 5,
+      "title": "Teams, roles and seats",
+      "outcome": "Everyone sees what they need.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Depth",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Who can approve what in this organization, and which agent keys expire soon?"
+      ]
+    },
+    {
+      "id": "c39",
+      "number": 39,
+      "part": 5,
+      "title": "Tutorial: your first month",
+      "outcome": "From first send to a system that learns.",
+      "durationSeconds": 360,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Review last week's results and suggest two definition changes."
+      ]
+    },
+    {
+      "id": "c40",
+      "number": 40,
+      "part": 6,
+      "title": "Apps, packages and extending GTM OS",
+      "outcome": "Add your own views and automations without forking anything.",
+      "durationSeconds": 300,
+      "type": "Mixed",
+      "tier": "Reference",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Generate an app that shows open deals by stage."
+      ]
+    },
+    {
+      "id": "c41",
+      "number": 41,
+      "part": 6,
+      "title": "Self-hosting on a server",
+      "outcome": "Run GTM OS on your own server, with a domain and HTTPS.",
+      "durationSeconds": 300,
+      "type": "Tutorial",
+      "tier": "Reference",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Check that my server install is local-only behind the reverse proxy."
+      ]
+    },
+    {
+      "id": "c42",
+      "number": 42,
+      "part": 6,
+      "title": "Upgrading",
+      "outcome": "Upgrade with a backup behind you and your data untouched.",
+      "durationSeconds": 360,
+      "type": "Mixed",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Check which version I run and what the next upgrade would change."
+      ]
+    },
+    {
+      "id": "c43",
+      "number": 43,
+      "part": 6,
+      "title": "Tutorial: when something looks wrong",
+      "outcome": "Find the cause in minutes, and know when to ask for help.",
+      "durationSeconds": 300,
+      "type": "Tutorial",
+      "tier": "Core",
+      "mp4": "",
+      "vtt": "",
+      "poster": "",
+      "transcript": "",
+      "prompts": [
+        "Run gtm doctor and tell me what to fix first."
+      ]
+    }
+  ]
+}
