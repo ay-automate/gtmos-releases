@@ -1,0 +1,351 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.033
+Everyone now has the reach they were
+given, and nobody can widen their own.
+
+00:00:04.033 --> 00:00:06.167
+Now the month that
+follows your first send.
+
+00:00:06.167 --> 00:00:09.300
+By week four, your definitions
+reflect what actually worked,
+
+00:00:09.300 --> 00:00:11.167
+and your first win card is green.
+
+00:00:11.233 --> 00:00:14.733
+By the end you'll run a weekly
+review, tune scoring from evidence,
+
+00:00:14.733 --> 00:00:16.567
+and add a motion without guessing.
+
+00:00:16.633 --> 00:00:20.100
+Mia changes scoring, a lane
+and a play in the same week.
+
+00:00:20.100 --> 00:00:22.667
+Replies move, and the cause stays a guess.
+
+00:00:22.667 --> 00:00:26.900
+Month one is one loop instead: read
+the results, change one definition,
+
+00:00:26.900 --> 00:00:28.100
+sign it, read again.
+
+00:00:28.100 --> 00:00:31.533
+Every change takes the road
+you know, dev, sign, promote,
+
+00:00:31.533 --> 00:00:34.167
+so learning never means
+guessing in production.
+
+00:00:34.200 --> 00:00:36.267
+Step one, week one, the data.
+
+00:00:36.267 --> 00:00:38.667
+A score is only as good
+as the records behind it,
+
+00:00:38.667 --> 00:00:40.833
+so close the gaps before
+you tune anything.
+
+00:00:40.833 --> 00:00:43.267
+In the console: CRM, Data health.
+
+00:00:43.267 --> 00:00:46.600
+Compare the source against what
+GTM OS holds for each object,
+
+00:00:46.600 --> 00:00:48.567
+and read the flags below threshold.
+
+00:00:48.567 --> 00:00:52.833
+Or ask your agent: "Show source coverage
+and flag what is below threshold".
+
+00:00:52.867 --> 00:00:55.567
+Step two, a weekly review,
+on the same day each week.
+
+00:00:55.567 --> 00:00:59.533
+In the console: Engines, Outreach
+for the K P Is, then Plays, Results,
+
+00:00:59.533 --> 00:01:00.200
+then Operate, Cost.
+
+00:01:00.200 --> 00:01:03.733
+Or ask your agent: "Give me my weekly
+review of what worked, what did not,
+
+00:01:03.733 --> 00:01:04.967
+and what it cost". Here's the trap.
+
+00:01:04.967 --> 00:01:08.333
+What's working shows a group
+only once it has enough sends.
+
+00:01:08.333 --> 00:01:10.067
+Early weeks may say not enough yet.
+
+00:01:10.067 --> 00:01:13.600
+That is the honest answer, because a
+rate on a handful of sends is noise.
+
+00:01:13.667 --> 00:01:17.600
+Step three, week two, read what the
+market and your buyers told you.
+
+00:01:17.600 --> 00:01:20.133
+In the console: CRM,
+Signals, Review queue.
+
+00:01:20.133 --> 00:01:22.500
+New organizations start
+on the Strict gate,
+
+00:01:22.500 --> 00:01:26.600
+so an unverified third party signal
+neither scores nor reaches a seller.
+
+00:01:26.600 --> 00:01:29.467
+Verify the good ones and
+dispute the bad ones,
+
+00:01:29.467 --> 00:01:31.400
+and the account rescores either way.
+
+00:01:31.400 --> 00:01:35.933
+Or ask your agent: "List unverified
+signals and verify the funding ones".
+
+00:01:35.967 --> 00:01:39.433
+Then the replies. In the
+console: CRM, Conversations.
+
+00:01:39.433 --> 00:01:41.000
+Every reply carries a
+label and its effect,
+
+00:01:41.000 --> 00:01:44.067
+and a reply that asks to
+stop becomes a suppression.
+
+00:01:44.067 --> 00:01:46.567
+The next action on a reply
+is always a proposal.
+
+00:01:46.567 --> 00:01:50.333
+Or ask your agent: "What replies
+came in, and what do they want".
+
+00:01:50.400 --> 00:01:52.600
+Step four, tune scoring
+from what happened.
+
+00:01:52.600 --> 00:01:55.967
+Score keeps a snapshot of every
+verdict, then measures the outcomes:
+
+00:01:55.967 --> 00:01:58.667
+positive replies, meetings,
+opportunities, wins.
+
+00:01:58.667 --> 00:02:01.067
+It computes lift for each
+criterion and proposes
+
+00:02:01.067 --> 00:02:03.367
+a new scoring model with
+the evidence attached.
+
+00:02:03.367 --> 00:02:06.567
+A criterion needs enough outcomes
+on both sides before it counts,
+
+00:02:06.567 --> 00:02:08.967
+and a weight moves only
+a limited step per run.
+
+00:02:08.967 --> 00:02:12.567
+Reps can flag a score they disagree
+with, and that counts as learning input.
+
+00:02:12.567 --> 00:02:16.167
+An agent's flag does not. In the
+console: Engines, Score, Learning.
+
+00:02:16.167 --> 00:02:17.133
+Or ask your agent:
+
+00:02:17.133 --> 00:02:20.200
+"Run the learning loop for scoring
+and show the proposed changes".
+
+00:02:20.200 --> 00:02:22.667
+A person other than the
+proposer approves it.
+
+00:02:22.667 --> 00:02:25.833
+Pro move: preview the rescan first,
+because scores can move once.
+
+00:02:25.867 --> 00:02:29.967
+Step five, week three, add a motion,
+but only when the first one is healthy.
+
+00:02:29.967 --> 00:02:31.533
+In the console: Blueprints.
+
+00:02:31.533 --> 00:02:34.033
+Open a second blueprint
+and read what it sets up,
+
+00:02:34.033 --> 00:02:36.767
+the engines it uses and
+the connections it needs.
+
+00:02:36.767 --> 00:02:40.300
+Or ask your agent: "Which blueprint
+would add a product led motion,
+
+00:02:40.300 --> 00:02:41.400
+and what would it need".
+
+00:02:41.400 --> 00:02:45.100
+Applying it lands one ChangeSet in
+dev, a different person approves,
+
+00:02:45.100 --> 00:02:46.933
+and you sign and promote as before.
+
+00:02:46.933 --> 00:02:50.000
+For a single play, ask
+Studio for it in a sentence.
+
+00:02:50.067 --> 00:02:51.567
+Then read the play results.
+
+00:02:51.567 --> 00:02:55.933
+In the console: Engines, Plays, Results
+shows each play's runs, outcomes,
+
+00:02:55.933 --> 00:02:57.533
+credited revenue and spend.
+
+00:02:57.533 --> 00:03:02.300
+Keep the plays that earn more than they
+cost, and rework or retire the rest.
+
+00:03:02.300 --> 00:03:06.033
+Operator tip: before you change
+a play, run gtm play simulate.
+
+00:03:06.033 --> 00:03:08.300
+It replays recent days with zero writes.
+
+00:03:08.300 --> 00:03:10.867
+And event plays never fire on bulk writes,
+
+00:03:10.867 --> 00:03:13.467
+so an import can't set
+off your whole book.
+
+00:03:13.500 --> 00:03:15.233
+Two habits keep the loop honest.
+
+00:03:15.233 --> 00:03:18.467
+Change one definition at a time,
+so you know what moved the result.
+
+00:03:18.467 --> 00:03:21.200
+And wait for enough sends
+before you judge a group,
+
+00:03:21.200 --> 00:03:23.133
+because a bad Tuesday is not a trend.
+
+00:03:23.200 --> 00:03:25.633
+Last, week four, set cost against results.
+
+00:03:25.633 --> 00:03:29.033
+In the console: Operate,
+Cost, beside Plays, Results.
+
+00:03:29.033 --> 00:03:33.200
+Or ask your agent: "Which plays earned
+more than they cost this month".
+
+00:03:33.200 --> 00:03:35.867
+Decide play by play what
+to widen, trim or retire.
+
+00:03:35.867 --> 00:03:39.567
+Widening is a cap or lane
+change, so a person approves it.
+
+00:03:39.600 --> 00:03:43.000
+Then open the first win card, on
+the organization home and in Setup.
+
+00:03:43.000 --> 00:03:46.433
+Every milestone is computed from
+real facts, never ticked by hand,
+
+00:03:46.433 --> 00:03:48.933
+and an unknown shows its
+reason instead of a guess.
+
+00:03:48.933 --> 00:03:51.900
+Or ask your agent: "What
+is my next first win step".
+
+00:03:51.933 --> 00:03:55.267
+Fair concern: a loop that rewrites
+its own scoring will drift.
+
+00:03:55.267 --> 00:03:57.433
+It can't, because it only proposes.
+
+00:03:57.433 --> 00:04:01.100
+The evidence is attached, and a person
+other than the proposer approves.
+
+00:04:01.100 --> 00:04:05.200
+Weights move a limited step per run,
+and every version can be rolled back.
+
+00:04:05.233 --> 00:04:10.033
+Replay: First close the data gaps.
+Then verify signals and tune scoring.
+
+00:04:10.033 --> 00:04:12.433
+Add one play or one motion in week three,
+
+00:04:12.433 --> 00:04:14.900
+and set cost against results in week four.
+
+00:04:14.900 --> 00:04:17.700
+Read, change one thing,
+sign it, read again.
+
+00:04:17.767 --> 00:04:20.633
+Mia's first win card is
+green, and she can say why.
+
+00:04:20.633 --> 00:04:22.367
+Keep the weekly review on the calendar.
+
+00:04:22.367 --> 00:04:25.233
+After this comes Apps,
+packages and extending GTM OS,
+
+00:04:25.233 --> 00:04:29.200
+where you build the screens and
+packages your own method needs.

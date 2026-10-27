@@ -1,0 +1,330 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.400
+Last clip, the loop stopped at one
+gate. Now you're standing at it.
+
+00:00:03.400 --> 00:00:06.267
+Nothing leaves without a second
+pair of eyes: every message,
+
+00:00:06.267 --> 00:00:08.067
+every budget move and every live change
+
+00:00:08.067 --> 00:00:10.133
+waits for a person who didn't propose it.
+
+00:00:10.200 --> 00:00:12.733
+In this clip you'll read an
+approval, work the queue,
+
+00:00:12.733 --> 00:00:15.067
+and know exactly who can approve and why.
+
+00:00:15.100 --> 00:00:19.133
+Sophia approves a send on Monday.
+By Tuesday the draft has changed,
+
+00:00:19.133 --> 00:00:21.400
+and the message that went
+out isn't the one she read.
+
+00:00:21.400 --> 00:00:22.800
+Here, that can't happen.
+
+00:00:22.833 --> 00:00:25.600
+An approval is the record of a
+proposal waiting for a person.
+
+00:00:25.600 --> 00:00:27.367
+Any external effect, like a send,
+
+00:00:27.367 --> 00:00:29.600
+and any live configuration
+change becomes one.
+
+00:00:29.600 --> 00:00:33.033
+The rule is four eyes: the proposer,
+or the human an agent acts for,
+
+00:00:33.033 --> 00:00:35.167
+can never approve, sign or execute.
+
+00:00:35.233 --> 00:00:38.333
+First, the states, so you know
+what's waiting and for how long.
+
+00:00:38.333 --> 00:00:42.200
+An approval moves from proposed to
+approved, then executing, then executed.
+
+00:00:42.200 --> 00:00:45.767
+It can also be rejected, withdrawn
+by its proposer, revoked, or fail.
+
+00:00:45.767 --> 00:00:47.900
+A proposal nobody decides
+expires after seven days.
+
+00:00:47.900 --> 00:00:51.800
+In the console: Approvals, and open
+any approval to see its timeline.
+
+00:00:51.800 --> 00:00:54.533
+Or ask your agent: "What
+is waiting for approval,
+
+00:00:54.533 --> 00:00:55.833
+and what is the oldest one".
+
+00:00:55.867 --> 00:00:58.733
+Second, read the payload. It's
+frozen the moment it's proposed,
+
+00:00:58.733 --> 00:01:00.200
+and you see a diff of what would change.
+
+00:01:00.200 --> 00:01:02.133
+Configuration changes
+add an impact preview.
+
+00:01:02.133 --> 00:01:04.167
+The approval is bound
+to the exact payload,
+
+00:01:04.167 --> 00:01:05.567
+so what you approve is what runs.
+
+00:01:05.567 --> 00:01:08.600
+In the console: Approvals, open
+the approval, and read the diff.
+
+00:01:08.633 --> 00:01:11.067
+Third, the claims panel,
+for outbound content.
+
+00:01:11.067 --> 00:01:13.800
+Every factual claim, like a
+statistic or a named customer,
+
+00:01:13.800 --> 00:01:15.567
+is checked against proof you've approved.
+
+00:01:15.567 --> 00:01:17.300
+Each one shows as backed,
+close, or no proof.
+
+00:01:17.300 --> 00:01:18.067
+Close is never treated as backed.
+
+00:01:18.067 --> 00:01:20.300
+By default an unbacked
+claim blocks the send.
+
+00:01:20.300 --> 00:01:24.767
+In the other mode it routes to the
+approver, who acknowledges each claim.
+
+00:01:24.767 --> 00:01:25.400
+The proposer and the agent can't.
+
+00:01:25.400 --> 00:01:28.867
+The check runs when the message is
+proposed, and again when it's sent.
+
+00:01:28.867 --> 00:01:31.767
+If the proof is archived or
+expires in between, the run fails.
+
+00:01:31.833 --> 00:01:34.800
+Fourth, the receipt. If the
+approval ran in dev or staging,
+
+00:01:34.800 --> 00:01:36.767
+a real customer facing
+effect is recorded, not sent,
+
+00:01:36.767 --> 00:01:38.467
+and the receipt says not applied, dev.
+
+00:01:38.467 --> 00:01:42.000
+Configuration changes do apply in the
+environment they were proposed for,
+
+00:01:42.000 --> 00:01:43.167
+whatever environment you're viewing.
+
+00:01:43.167 --> 00:01:45.433
+Read the receipt before you
+tell anyone it went out.
+
+00:01:45.467 --> 00:01:49.467
+Last, decide. In the console: Mission
+Control shows today's one move,
+
+00:01:49.467 --> 00:01:52.033
+the oldest pending approval,
+with one click to approve.
+
+00:01:52.033 --> 00:01:55.233
+Or open Approvals, read the
+payload, the claims and the impact,
+
+00:01:55.233 --> 00:01:55.833
+and approve or reject.
+
+00:01:55.833 --> 00:01:59.233
+Each decision is attributed to
+you and kept in the history.
+
+00:01:59.300 --> 00:02:02.533
+Every approval records who proposed
+it, which agent was involved,
+
+00:02:02.533 --> 00:02:05.333
+which human that agent
+acted for, and who approved.
+
+00:02:05.333 --> 00:02:09.533
+Months later, you can answer who let
+this happen, and why, without guessing.
+
+00:02:09.567 --> 00:02:10.767
+Not everything waiting is a send.
+
+00:02:10.767 --> 00:02:14.667
+Needs a human is the queue for exactly
+what waits on a person right now:
+
+00:02:14.667 --> 00:02:17.100
+effect approvals, configuration
+decisions with an impact preview,
+
+00:02:17.100 --> 00:02:20.967
+and entity resolution reviews. In
+the console: Operate, Needs a human.
+
+00:02:20.967 --> 00:02:23.500
+Or ask your agent: "Show me
+everything that needs a human".
+
+00:02:23.500 --> 00:02:26.300
+Advanced move: clear it once in the
+morning and once before you leave,
+
+00:02:26.300 --> 00:02:28.367
+so the seven day expiry
+never catches anything.
+
+00:02:28.433 --> 00:02:31.300
+Open asks cover the rest:
+questions, document requests,
+
+00:02:31.300 --> 00:02:32.700
+access requests and data gaps.
+
+00:02:32.700 --> 00:02:34.867
+Each is numbered, with
+an owner and a due date,
+
+00:02:34.867 --> 00:02:37.500
+and GTM OS chases the owner
+every day until it's answered.
+
+00:02:37.500 --> 00:02:39.467
+In the console: Operate, Open asks.
+
+00:02:39.467 --> 00:02:42.500
+Or ask your agent: "Which open asks
+are mine, and which are overdue".
+
+00:02:42.500 --> 00:02:45.467
+Agents open asks too, so a missing
+answer becomes a visible item,
+
+00:02:45.467 --> 00:02:46.567
+not a silent guess.
+
+00:02:46.600 --> 00:02:48.800
+So who can approve? Agents never can.
+
+00:02:48.800 --> 00:02:50.867
+The person needs a role
+with the approve permission,
+
+00:02:50.867 --> 00:02:52.067
+which is owner or admin.
+
+00:02:52.067 --> 00:02:55.133
+And they can't be the proposer,
+or the human an agent acts for.
+
+00:02:55.167 --> 00:02:56.700
+One rule closes a loophole.
+
+00:02:56.700 --> 00:02:59.233
+The person who created an
+agent key can't approve,
+
+00:02:59.233 --> 00:03:01.400
+reject or execute that agent's proposals.
+
+00:03:01.400 --> 00:03:04.000
+Executing an approved
+action is human only too,
+
+00:03:04.000 --> 00:03:05.533
+and it needs a second person.
+
+00:03:05.567 --> 00:03:07.700
+So when you ask an agent
+to approve something,
+
+00:03:07.700 --> 00:03:09.700
+it stops and names the
+screen and the button.
+
+00:03:09.700 --> 00:03:11.600
+That's the system working, not failing.
+
+00:03:11.600 --> 00:03:15.267
+On a one person team, name a second
+identity as approver. That's by design.
+
+00:03:15.333 --> 00:03:18.400
+The worry: a second approver on
+everything will slow us down.
+
+00:03:18.400 --> 00:03:19.700
+Three things keep it fast.
+
+00:03:19.700 --> 00:03:22.300
+Mission Control puts the
+oldest approval one click away.
+
+00:03:22.300 --> 00:03:24.833
+A person can grant an agent an
+envelope for a narrow scope,
+
+00:03:24.833 --> 00:03:28.333
+with a budget and an expiry. And the
+queue shows only what needs a person.
+
+00:03:28.367 --> 00:03:31.833
+Run it back: The payload is frozen,
+the claims are checked twice,
+
+00:03:31.833 --> 00:03:35.000
+and the person who approves is
+never the person who proposed.
+
+00:03:35.033 --> 00:03:36.533
+You always know what you're approving,
+
+00:03:36.533 --> 00:03:40.000
+and why nobody approves their own
+work. Read one approval timeline today.
+
+00:03:40.000 --> 00:03:43.600
+After this comes Dry Mode and guardrails,
+which sets how fast you go live.

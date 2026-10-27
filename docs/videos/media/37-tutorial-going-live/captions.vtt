@@ -1,0 +1,363 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.900
+Last clip you learned to promote
+a change with confidence.
+
+00:00:02.900 --> 00:00:05.267
+Now the change that reaches a real inbox.
+
+00:00:05.267 --> 00:00:08.533
+One real message leaves your system,
+a second person has approved it,
+
+00:00:08.533 --> 00:00:10.900
+and every other engine stays on Dry Mode.
+
+00:00:10.967 --> 00:00:14.567
+Over the next few minutes you'll
+have a live sender, an active lane,
+
+00:00:14.567 --> 00:00:16.433
+and only Outreach set to Live.
+
+00:00:16.467 --> 00:00:20.733
+Most teams flip one switch and hope.
+Mia turns Dry Mode off on a Friday,
+
+00:00:20.733 --> 00:00:23.200
+and every engine that inherits
+from it goes live with it.
+
+00:00:23.200 --> 00:00:26.867
+By Monday, a stranger has a cold
+email with a number nobody can prove.
+
+00:00:26.867 --> 00:00:28.100
+Order prevents that.
+
+00:00:28.167 --> 00:00:31.300
+Step one, ask whether you're
+ready. The check is read only.
+
+00:00:31.300 --> 00:00:34.167
+It covers live mode,
+readiness, your lanes,
+
+00:00:34.167 --> 00:00:36.600
+and whether definitions
+are signed and promoted.
+
+00:00:36.600 --> 00:00:38.333
+In Claude Code, type /go-live-check.
+
+00:00:38.333 --> 00:00:40.700
+In the console: Integrations, Connections.
+
+00:00:40.700 --> 00:00:43.433
+Or ask your agent: "Run
+the go live check".
+
+00:00:43.467 --> 00:00:44.467
+Now the sender.
+
+00:00:44.467 --> 00:00:48.600
+Outreach needs a real mailbox bound to
+the lane, so caps apply per mailbox.
+
+00:00:48.600 --> 00:00:52.733
+In the console: Settings, Connected
+accounts, with the send feature on.
+
+00:00:52.733 --> 00:00:56.200
+Or ask your agent: "Which sender
+is live and which lane uses it".
+
+00:00:56.200 --> 00:00:59.800
+The sign in is yours, because an agent
+can't click through that consent.
+
+00:00:59.800 --> 00:01:04.300
+In live mode a fixture sender is refused,
+so a fake success can't fool you.
+
+00:01:04.333 --> 00:01:05.733
+Step two, activate a lane.
+
+00:01:05.733 --> 00:01:09.833
+A lane is the guardrail around
+sending: channel, daily cap,
+
+00:01:09.833 --> 00:01:11.767
+touch window and sending domain.
+
+00:01:11.767 --> 00:01:16.867
+Activation is a proposal, so a different
+human approves it, and Sophia does,
+
+00:01:16.867 --> 00:01:20.933
+never the proposer. In the console:
+Engines, Outreach, lanes, Activate.
+
+00:01:20.933 --> 00:01:26.200
+Or ask your agent: "Activate lane
+primary-email in prod". Watch this one.
+
+00:01:26.200 --> 00:01:30.600
+With a sending domain, activation
+refuses until SPF, DKIM and DMARC verify.
+
+00:01:30.667 --> 00:01:33.133
+Step three, rehearse
+with Dry Mode still on,
+
+00:01:33.133 --> 00:01:36.100
+by proposing a first touch
+to a teammate anyway.
+
+00:01:36.100 --> 00:01:39.467
+You get a logged draft, nothing
+sends, and no approval exists.
+
+00:01:39.467 --> 00:01:42.967
+In the console: the Outreach
+workbench, then Operate, Actions.
+
+00:01:42.967 --> 00:01:43.867
+Or ask your agent:
+
+00:01:43.867 --> 00:01:45.833
+"Draft a first touch to our internal
+
+00:01:45.833 --> 00:01:48.767
+test contact on lane
+primary-email and propose it".
+
+00:01:48.800 --> 00:01:50.633
+Read the claims check in that draft.
+
+00:01:50.633 --> 00:01:53.933
+Every factual claim is checked
+against active proof twice,
+
+00:01:53.933 --> 00:01:57.400
+when the action is proposed
+and again when it's sent.
+
+00:01:57.400 --> 00:02:00.033
+Each claim comes back
+backed, close, or no proof.
+
+00:02:00.033 --> 00:02:03.333
+Close never counts as backed,
+and no proof blocks the send.
+
+00:02:03.400 --> 00:02:04.933
+Step four starts with guardrails,
+
+00:02:04.933 --> 00:02:06.967
+which apply to every
+engine and every agent.
+
+00:02:06.967 --> 00:02:09.167
+Set emails a day, new accounts a week,
+
+00:02:09.167 --> 00:02:11.633
+and a send window in the
+recipient's timezone.
+
+00:02:11.633 --> 00:02:14.733
+A hit doesn't drop the action.
+It holds it, then runs it later.
+
+00:02:14.733 --> 00:02:16.733
+In the console: Settings, Safety.
+
+00:02:16.733 --> 00:02:19.567
+Or ask your agent: "Show my
+guardrails and today's usage".
+
+00:02:19.567 --> 00:02:21.700
+Pro move: set them tight for week one.
+
+00:02:21.733 --> 00:02:24.133
+Now one engine live.
+Dry Mode has two layers,
+
+00:02:24.133 --> 00:02:27.300
+the organization switch and
+a Live switch per engine,
+
+00:02:27.300 --> 00:02:30.167
+and the stricter one wins.
+Check the engines card first:
+
+00:02:30.167 --> 00:02:33.500
+an engine that inherits from the
+organization goes live with it,
+
+00:02:33.500 --> 00:02:35.400
+so set the others to Dry.
+
+00:02:35.400 --> 00:02:37.633
+Then an owner or admin
+turns the organization
+
+00:02:37.633 --> 00:02:39.733
+switch off and sets only Outreach to Live.
+
+00:02:39.733 --> 00:02:42.467
+Both steps are human only,
+confirmed and audited,
+
+00:02:42.467 --> 00:02:44.600
+so your agent points you to the screen.
+
+00:02:44.600 --> 00:02:46.867
+Leave autonomy and envelopes off for now.
+
+00:02:46.900 --> 00:02:50.833
+Step five, propose the internal send
+again. This time an approval appears,
+
+00:02:50.833 --> 00:02:54.100
+and Sophia opens it to read the
+frozen message and the claims panel.
+
+00:02:54.100 --> 00:02:56.333
+The approval is bound
+to the exact payload,
+
+00:02:56.333 --> 00:02:58.233
+so what she approves is what goes out.
+
+00:02:58.233 --> 00:03:00.367
+Someone other than the
+proposer executes it,
+
+00:03:00.367 --> 00:03:04.400
+and the message lands in a real inbox,
+which proves the chain end to end.
+
+00:03:04.467 --> 00:03:07.967
+Now read what happened. In the console:
+Outreach, then Operate, Monitors.
+
+00:03:07.967 --> 00:03:09.000
+Or ask your agent:
+
+00:03:09.000 --> 00:03:12.700
+"Show deliverability for lane
+primary-email and the suppression rules".
+
+00:03:12.700 --> 00:03:14.767
+Monitors watch bounce and complaint rates,
+
+00:03:14.767 --> 00:03:17.100
+and can pause a lane when they spike.
+
+00:03:17.100 --> 00:03:19.800
+A paused lane blocks approved
+sends until a person resumes it.
+
+00:03:19.800 --> 00:03:22.533
+One honest limit: bounce reports
+from a connected mailbox,
+
+00:03:22.533 --> 00:03:25.267
+and delivery events from some providers,
+
+00:03:25.267 --> 00:03:26.933
+aren't checked against real accounts yet.
+
+00:03:26.933 --> 00:03:29.267
+Your first internal send
+is where you check them.
+
+00:03:29.333 --> 00:03:33.533
+Who approves matters as much as
+how. Have a second owner or admin.
+
+00:03:33.533 --> 00:03:37.100
+With only one, add another using
+gtm member add and the admin role.
+
+00:03:37.100 --> 00:03:40.000
+Proposals expire after seven days,
+
+00:03:40.000 --> 00:03:41.833
+so a queue nobody reads
+quietly blocks you.
+
+00:03:41.833 --> 00:03:44.100
+For the first few days, keep Outreach,
+
+00:03:44.100 --> 00:03:46.667
+Needs a human and the Actions ledger open.
+
+00:03:46.667 --> 00:03:49.833
+If anything surprises you,
+set the engine back to Dry,
+
+00:03:49.833 --> 00:03:52.000
+since going dry is always allowed.
+
+00:03:52.033 --> 00:03:56.267
+Then widen one step at a time: raise
+the daily cap a notch, add a segment,
+
+00:03:56.267 --> 00:03:59.533
+then add a second engine
+set to Live on its own.
+
+00:03:59.533 --> 00:04:03.567
+Every step repeats the pattern:
+draft in Dry, read, approve, go live.
+
+00:04:03.633 --> 00:04:07.133
+The objection: one slip, and a
+bad email reaches a real customer.
+
+00:04:07.133 --> 00:04:08.300
+Here's what has to line up.
+
+00:04:08.300 --> 00:04:11.400
+A first message to a new person
+always waits for a human.
+
+00:04:11.400 --> 00:04:14.767
+No proof means a blocked claim.
+Any cap hit holds the action.
+
+00:04:14.767 --> 00:04:16.167
+Only Outreach is live,
+
+00:04:16.167 --> 00:04:19.033
+and the person who executes
+isn't the person who proposed.
+
+00:04:19.067 --> 00:04:22.567
+Keep these: Check readiness and
+connect a sender. Activate a lane.
+
+00:04:22.567 --> 00:04:25.633
+Rehearse in Dry Mode. Then
+take Outreach live alone,
+
+00:04:25.633 --> 00:04:27.867
+with a second person
+approving the first send.
+
+00:04:27.900 --> 00:04:31.933
+One lane, one engine, one real send,
+and a second person who approved it.
+
+00:04:31.933 --> 00:04:33.967
+Keep the Actions ledger open for a week.
+
+00:04:33.967 --> 00:04:37.167
+Up next, Teams, roles and
+seats: who gets which reach,
+
+00:04:37.167 --> 00:04:38.900
+and how your agents inherit it.

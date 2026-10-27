@@ -65,8 +65,8 @@
       ],
       "slug": "what-is-gtmos",
       "status": "published",
-      "bytes": 16590500,
-      "sha256": "1d8a33c1dffc64eb74928e6b56ba13b5bdd40521985be5b34ed62c37b1ee3e0a"
+      "bytes": 16926574,
+      "sha256": "deab7c01c675c9df34f5346d1d948262e21011654f72317b20d25482a334dc51"
     },
     {
       "id": "c02",
@@ -87,8 +87,8 @@
       ],
       "slug": "first-setup-with-claude",
       "status": "published",
-      "bytes": 21029132,
-      "sha256": "5441a0c60e8f9d4f0826394047796c7fd97808105e2b65f57026d96d2bbe35aa"
+      "bytes": 22010339,
+      "sha256": "9198b6202dfc834a63e0d3a6fa00c9d541e3fe6e0f4bcef6c8572c1fa50ed1b9"
     },
     {
       "id": "c03",
@@ -130,8 +130,8 @@
       ],
       "slug": "the-onboarding-steps",
       "status": "published",
-      "bytes": 23218148,
-      "sha256": "17d1272fd1c2d766a7b60d878639ea43c7e42f8fb776d76e1ef6ef8244a1d7bd"
+      "bytes": 24816694,
+      "sha256": "9af1d7ee09aec06bdb4ca50faa78c10899c88b26d7bc9a69970938fcfc40e5f4"
     },
     {
       "id": "c05",
@@ -193,8 +193,8 @@
       ],
       "slug": "skills",
       "status": "published",
-      "bytes": 20265884,
-      "sha256": "d7bb47f67e8c5ff9062f5925268fb36c64be830177dd9b7c58fa270338e3eb30"
+      "bytes": 21840925,
+      "sha256": "53a7265ac09b22d2b205d23abc9e2b88b15dccf5d88b8eb33ee8b33ce7f1897c"
     },
     {
       "id": "c08",
@@ -354,16 +354,20 @@
       "part": 3,
       "title": "Your ICP and scoring model",
       "outcome": "Your idea of a good fit, scored on every account.",
-      "durationSeconds": 360,
+      "durationSeconds": 233,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/17-your-icp-and-scoring-model.mp4",
+      "vtt": "media/17-your-icp-and-scoring-model/captions.vtt",
+      "poster": "media/17-your-icp-and-scoring-model/poster.jpg",
+      "transcript": "media/17-your-icp-and-scoring-model/transcript.md",
       "prompts": [
         "Draft an ICP scoring model from our best customers."
-      ]
+      ],
+      "slug": "your-icp-and-scoring-model",
+      "status": "published",
+      "bytes": 19649530,
+      "sha256": "f991836f91aaedcee93f59c08caaab9de3caa3fc448d93cb2f97f950bf7c3485"
     },
     {
       "id": "c18",
@@ -388,16 +392,20 @@
       "part": 3,
       "title": "Voice, proof and claims",
       "outcome": "Say only what you can prove, in your own voice.",
-      "durationSeconds": 300,
+      "durationSeconds": 236,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/19-voice-proof-and-claims.mp4",
+      "vtt": "media/19-voice-proof-and-claims/captions.vtt",
+      "poster": "media/19-voice-proof-and-claims/poster.jpg",
+      "transcript": "media/19-voice-proof-and-claims/transcript.md",
       "prompts": [
         "Which claims in my drafts have no proof in the library?"
-      ]
+      ],
+      "slug": "voice-proof-and-claims",
+      "status": "published",
+      "bytes": 19278365,
+      "sha256": "f443e527d75788d729d9b1021da0ce4b515594215edb6cd768b6242106c1721f"
     },
     {
       "id": "c20",
@@ -422,16 +430,20 @@
       "part": 4,
       "title": "Score",
       "outcome": "Know who to call before they call.",
-      "durationSeconds": 360,
+      "durationSeconds": 275,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/21-score.mp4",
+      "vtt": "media/21-score/captions.vtt",
+      "poster": "media/21-score/poster.jpg",
+      "transcript": "media/21-score/transcript.md",
       "prompts": [
         "Score account Acme and explain it."
-      ]
+      ],
+      "slug": "score",
+      "status": "published",
+      "bytes": 22977276,
+      "sha256": "ec4cd0ac4f2713f6af250997e4a0fec1a2be7f88b29913cfa54e9db94c956906"
     },
     {
       "id": "c22",
@@ -439,16 +451,20 @@
       "part": 4,
       "title": "Enrichment",
       "outcome": "Fill the gaps without overpaying.",
-      "durationSeconds": 300,
+      "durationSeconds": 226,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/22-enrichment.mp4",
+      "vtt": "media/22-enrichment/captions.vtt",
+      "poster": "media/22-enrichment/poster.jpg",
+      "transcript": "media/22-enrichment/transcript.md",
       "prompts": [
         "What is our enrichment coverage, and which fields are still empty?"
-      ]
+      ],
+      "slug": "enrichment",
+      "status": "published",
+      "bytes": 19486470,
+      "sha256": "42afd9ce262f98bec45737ccdd3fe10f91721043dc8c5d7b8b187129dbaa4c53"
     },
     {
       "id": "c23",
@@ -456,16 +472,20 @@
       "part": 4,
       "title": "Signals and intent",
       "outcome": "Hear the market before your competitors do.",
-      "durationSeconds": 300,
+      "durationSeconds": 284,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/23-signals-and-intent.mp4",
+      "vtt": "media/23-signals-and-intent/captions.vtt",
+      "poster": "media/23-signals-and-intent/poster.jpg",
+      "transcript": "media/23-signals-and-intent/transcript.md",
       "prompts": [
         "Show this week's intent surge report and what is waiting in the review queue."
-      ]
+      ],
+      "slug": "signals-and-intent",
+      "status": "published",
+      "bytes": 23332487,
+      "sha256": "c7db544f8d9f625d25fef4e08334683ade183d873411a740100e905f3556356f"
     },
     {
       "id": "c24",
@@ -490,17 +510,21 @@
       "part": 4,
       "title": "Outreach",
       "outcome": "Personal at scale, approved by a person.",
-      "durationSeconds": 420,
+      "durationSeconds": 338,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/25-outreach.mp4",
+      "vtt": "media/25-outreach/captions.vtt",
+      "poster": "media/25-outreach/poster.jpg",
+      "transcript": "media/25-outreach/transcript.md",
       "prompts": [
         "Draft a first email to the buying committee at Acme and send it for approval.",
         "What is working in our outreach this month?"
-      ]
+      ],
+      "slug": "outreach",
+      "status": "published",
+      "bytes": 27518243,
+      "sha256": "317277e20c8d3b50cec653f56f96d880ce1954d6457e767e8b63e55ac7942dc4"
     },
     {
       "id": "c26",
@@ -559,17 +583,21 @@
       "part": 4,
       "title": "Plays and Studio",
       "outcome": "Automations you can simulate before you trust, and build from a sentence.",
-      "durationSeconds": 480,
+      "durationSeconds": 351,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/29-plays-and-studio.mp4",
+      "vtt": "media/29-plays-and-studio/captions.vtt",
+      "poster": "media/29-plays-and-studio/poster.jpg",
+      "transcript": "media/29-plays-and-studio/transcript.md",
       "prompts": [
         "Simulate the speed to lead play on last week's inbound leads.",
         "Studio: build a play that alerts me when a customer's champion changes jobs."
-      ]
+      ],
+      "slug": "plays-and-studio",
+      "status": "published",
+      "bytes": 29250770,
+      "sha256": "2e49102ac5f8259fbbcb14e7aefda086e930badb7004a28ab105ae7d4adb5ab4"
     },
     {
       "id": "c31",
@@ -577,16 +605,20 @@
       "part": 4,
       "title": "How the engines work together",
       "outcome": "One loop, not eight tools.",
-      "durationSeconds": 240,
+      "durationSeconds": 227,
       "type": "Concept",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/31-how-the-engines-work-together.mp4",
+      "vtt": "media/31-how-the-engines-work-together/captions.vtt",
+      "poster": "media/31-how-the-engines-work-together/poster.jpg",
+      "transcript": "media/31-how-the-engines-work-together/transcript.md",
       "prompts": [
         "Walk me through the loop for one real account, from signal to outcome."
-      ]
+      ],
+      "slug": "how-the-engines-work-together",
+      "status": "published",
+      "bytes": 20299046,
+      "sha256": "0bf7a4b532877fc518d55d9135c5179964c1cd5bbd8c30bc1ef7c3d0a7139afa"
     },
     {
       "id": "c32",
@@ -594,16 +626,20 @@
       "part": 5,
       "title": "Approvals and the human queue",
       "outcome": "Nothing leaves without a second pair of eyes.",
-      "durationSeconds": 300,
+      "durationSeconds": 224,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/32-approvals-and-the-human-queue.mp4",
+      "vtt": "media/32-approvals-and-the-human-queue/captions.vtt",
+      "poster": "media/32-approvals-and-the-human-queue/poster.jpg",
+      "transcript": "media/32-approvals-and-the-human-queue/transcript.md",
       "prompts": [
         "What is waiting for approval, and what changed in each request?"
-      ]
+      ],
+      "slug": "approvals-and-the-human-queue",
+      "status": "published",
+      "bytes": 19825555,
+      "sha256": "a3d560a0ffa2a8158d584738091072feb26514130b8893cda116069e7f766bab"
     },
     {
       "id": "c33",
@@ -611,16 +647,20 @@
       "part": 5,
       "title": "Dry Mode and guardrails",
       "outcome": "Go live at your own speed.",
-      "durationSeconds": 360,
+      "durationSeconds": 226,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/33-dry-mode-and-guardrails.mp4",
+      "vtt": "media/33-dry-mode-and-guardrails/captions.vtt",
+      "poster": "media/33-dry-mode-and-guardrails/poster.jpg",
+      "transcript": "media/33-dry-mode-and-guardrails/transcript.md",
       "prompts": [
         "Which engines are Dry and which are Live, and what are the caps?"
-      ]
+      ],
+      "slug": "dry-mode-and-guardrails",
+      "status": "published",
+      "bytes": 21553778,
+      "sha256": "99a051054a057602c9726f773c4886da10f0c75075d5e77a99c4ff9929ffc241"
     },
     {
       "id": "c34",
@@ -628,16 +668,20 @@
       "part": 5,
       "title": "Why you can trust it",
       "outcome": "Built so you can verify, not just believe.",
-      "durationSeconds": 240,
+      "durationSeconds": 153,
       "type": "Concept",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/34-why-you-can-trust-it.mp4",
+      "vtt": "media/34-why-you-can-trust-it/captions.vtt",
+      "poster": "media/34-why-you-can-trust-it/poster.jpg",
+      "transcript": "media/34-why-you-can-trust-it/transcript.md",
       "prompts": [
         "Show me the audit trail for the last approved action."
-      ]
+      ],
+      "slug": "why-you-can-trust-it",
+      "status": "published",
+      "bytes": 13172501,
+      "sha256": "4f4d8c8a8845ae31d167bb1a96d4b5e38965184db21203baa391f24e9f19c0a6"
     },
     {
       "id": "c35",
@@ -645,16 +689,20 @@
       "part": 5,
       "title": "Dashboards, your daily rhythm and what it costs",
       "outcome": "Start every day knowing the one move.",
-      "durationSeconds": 480,
+      "durationSeconds": 255,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/35-dashboards-daily-rhythm-and-cost.mp4",
+      "vtt": "media/35-dashboards-daily-rhythm-and-cost/captions.vtt",
+      "poster": "media/35-dashboards-daily-rhythm-and-cost/poster.jpg",
+      "transcript": "media/35-dashboards-daily-rhythm-and-cost/transcript.md",
       "prompts": [
         "What is my one move today, and what did the agents spend this week?"
-      ]
+      ],
+      "slug": "dashboards-daily-rhythm-and-cost",
+      "status": "published",
+      "bytes": 24786670,
+      "sha256": "986d83c0f9a0654d606b8c1a9cbb1860aea67b21afd26e78f8cd1d8f78309347"
     },
     {
       "id": "c36",
@@ -662,18 +710,22 @@
       "part": 5,
       "title": "Environments: dev, staging and production",
       "outcome": "Change anything safely, then promote it with confidence.",
-      "durationSeconds": 420,
+      "durationSeconds": 263,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/36-environments-dev-staging-production.mp4",
+      "vtt": "media/36-environments-dev-staging-production/captions.vtt",
+      "poster": "media/36-environments-dev-staging-production/poster.jpg",
+      "transcript": "media/36-environments-dev-staging-production/transcript.md",
       "prompts": [
         "What is in dev and not live?",
         "Preview promoting everything from dev to prod.",
         "Roll back the scoring model to the previous version."
-      ]
+      ],
+      "slug": "environments-dev-staging-production",
+      "status": "published",
+      "bytes": 22678278,
+      "sha256": "09f28dec2444910aa7d7b7a82bbea482bb3cd0a1ddbddd90f475bc675ec4421a"
     },
     {
       "id": "c37",
@@ -681,16 +733,20 @@
       "part": 5,
       "title": "Tutorial: going live",
       "outcome": "Your first real send, safely.",
-      "durationSeconds": 420,
+      "durationSeconds": 280,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/37-tutorial-going-live.mp4",
+      "vtt": "media/37-tutorial-going-live/captions.vtt",
+      "poster": "media/37-tutorial-going-live/poster.jpg",
+      "transcript": "media/37-tutorial-going-live/transcript.md",
       "prompts": [
         "Walk me through leaving Dry Mode for the email lane, one step at a time."
-      ]
+      ],
+      "slug": "tutorial-going-live",
+      "status": "published",
+      "bytes": 23821415,
+      "sha256": "0b0ed4a53f74d8ccc798a399b50086114e3681908ac398f6aa7f496bcab6abcf"
     },
     {
       "id": "c38",
@@ -715,16 +771,20 @@
       "part": 5,
       "title": "Tutorial: your first month",
       "outcome": "From first send to a system that learns.",
-      "durationSeconds": 360,
+      "durationSeconds": 270,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/39-tutorial-your-first-month.mp4",
+      "vtt": "media/39-tutorial-your-first-month/captions.vtt",
+      "poster": "media/39-tutorial-your-first-month/poster.jpg",
+      "transcript": "media/39-tutorial-your-first-month/transcript.md",
       "prompts": [
         "Review last week's results and suggest two definition changes."
-      ]
+      ],
+      "slug": "tutorial-your-first-month",
+      "status": "published",
+      "bytes": 22416382,
+      "sha256": "4ac2a94d0c1e5a5e18ad474ce6affabbca6e6634104dfbb52c917e8a6b7ebf1e"
     },
     {
       "id": "c40",
@@ -783,16 +843,20 @@
       "part": 6,
       "title": "Tutorial: when something looks wrong",
       "outcome": "Find the cause in minutes, and know when to ask for help.",
-      "durationSeconds": 300,
+      "durationSeconds": 261,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/43-tutorial-when-something-looks-wrong.mp4",
+      "vtt": "media/43-tutorial-when-something-looks-wrong/captions.vtt",
+      "poster": "media/43-tutorial-when-something-looks-wrong/poster.jpg",
+      "transcript": "media/43-tutorial-when-something-looks-wrong/transcript.md",
       "prompts": [
         "Run gtm doctor and tell me what to fix first."
-      ]
+      ],
+      "slug": "tutorial-when-something-looks-wrong",
+      "status": "published",
+      "bytes": 21448151,
+      "sha256": "d72b005061f172032b7562d659b86e62ef4f1e60a2274a41b40288ac2409e0f1"
     }
   ]
 }

@@ -1,0 +1,338 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.833
+Every gap now has a price and a date.
+
+00:00:02.833 --> 00:00:07.600
+Now the market talks, and you hear it
+first. Signals turns funding rounds,
+
+00:00:07.600 --> 00:00:11.867
+hiring pushes and buying behaviour
+into scored, evidenced events,
+
+00:00:11.867 --> 00:00:14.833
+and only verified ones reach your sellers.
+
+00:00:14.867 --> 00:00:18.533
+By the end you'll read the
+feed, clear the review queue,
+
+00:00:18.533 --> 00:00:21.733
+and set the gate that decides what counts.
+
+00:00:21.733 --> 00:00:25.767
+A signal is a dated event about an
+account or a person, with a class,
+
+00:00:25.767 --> 00:00:27.700
+a weight and evidence.
+
+00:00:27.733 --> 00:00:32.167
+Mia's rep sees a funding alert and
+calls the account that morning.
+
+00:00:32.167 --> 00:00:34.867
+The alert was about a
+company with a similar name.
+
+00:00:34.867 --> 00:00:40.600
+A feed nobody verified teaches reps
+to ignore the feed. A gate fixes that.
+
+00:00:40.667 --> 00:00:42.267
+First, where signals come from.
+
+00:00:42.267 --> 00:00:46.333
+Your own systems: website tracking,
+forms, CRM lifecycle changes,
+
+00:00:46.333 --> 00:00:48.500
+mailbox replies, bookings
+and product events.
+
+00:00:48.500 --> 00:00:51.667
+Server side ones are
+verified automatically.
+
+00:00:51.667 --> 00:00:54.700
+Then the outside world: looot
+web research for funding,
+
+00:00:54.700 --> 00:00:57.167
+hiring and expansion,
+plus intent topic surge.
+
+00:00:57.167 --> 00:01:00.000
+Market events have no live provider yet.
+
+00:01:00.033 --> 00:01:01.633
+Second, how a signal is weighed.
+
+00:01:01.633 --> 00:01:04.833
+Each has a class: buying,
+growth, risk or other.
+
+00:01:04.833 --> 00:01:07.900
+Its weight comes from the
+signals model, fades with age,
+
+00:01:07.900 --> 00:01:10.300
+and is scaled by its verification status,
+
+00:01:10.300 --> 00:01:12.700
+so a disputed signal counts for less.
+
+00:01:12.700 --> 00:01:15.500
+A kind the model doesn't
+list gets a default weight.
+
+00:01:15.500 --> 00:01:18.233
+The total is held between
+a floor and a ceiling,
+
+00:01:18.233 --> 00:01:19.800
+so no single burst takes over.
+
+00:01:19.833 --> 00:01:23.433
+Now read the feed. In the
+console: CRM, Signals, Feed.
+
+00:01:23.433 --> 00:01:26.733
+Open a signal for its evidence sheet:
+the source link, the matched text,
+
+00:01:26.733 --> 00:01:28.767
+the confidence and the provider.
+
+00:01:28.767 --> 00:01:32.133
+Company and contact pages show only
+what a seller is allowed to see.
+
+00:01:32.133 --> 00:01:35.400
+Or ask your agent: "Surge
+report for this week".
+
+00:01:35.467 --> 00:01:38.033
+Third, the gate, the
+setting that matters most.
+
+00:01:38.033 --> 00:01:40.767
+Off: every signal counts
+except retracted ones.
+
+00:01:40.767 --> 00:01:44.133
+Seller surfaces: unverified
+signals still count toward scores,
+
+00:01:44.133 --> 00:01:47.833
+but never reach a seller. Strict:
+only verified signals count,
+
+00:01:47.833 --> 00:01:50.833
+and third party signals
+wait in the Review queue.
+
+00:01:50.833 --> 00:01:53.567
+Existing organizations start
+Off. New ones start Strict.
+
+00:01:53.567 --> 00:01:55.900
+You set the mode on the Signals page.
+
+00:01:55.967 --> 00:01:59.300
+In Strict mode the Review
+queue is your morning chore.
+
+00:01:59.300 --> 00:02:02.233
+In the console: CRM,
+Signals, Review queue.
+
+00:02:02.233 --> 00:02:06.833
+Open a signal, read the evidence, then
+verify it, dispute it or retract it.
+
+00:02:06.833 --> 00:02:08.267
+Each decision rescores the account,
+
+00:02:08.267 --> 00:02:12.600
+and any reaction held back is
+released once. Or ask your agent:
+
+00:02:12.600 --> 00:02:16.200
+"List signals awaiting review
+and verify the funding ones".
+
+00:02:16.233 --> 00:02:19.567
+The scan runs daily over your
+target accounts through looot,
+
+00:02:19.567 --> 00:02:20.733
+inside a small spend cap per run.
+
+00:02:20.733 --> 00:02:24.433
+In the console: CRM, Signals
+shows the status of the last run,
+
+00:02:24.433 --> 00:02:26.067
+and an owner can run it now.
+
+00:02:26.067 --> 00:02:29.567
+Or ask your agent: "Run the signal
+scan now and tell me how it went".
+
+00:02:29.567 --> 00:02:32.433
+If looot isn't connected,
+the scan says so and skips.
+
+00:02:32.433 --> 00:02:34.133
+In Dry Mode nothing is queued,
+
+00:02:34.133 --> 00:02:37.567
+and you can switch the scan off
+under Settings, Feature flags.
+
+00:02:37.633 --> 00:02:38.833
+Here's where people slip.
+
+00:02:38.833 --> 00:02:40.833
+Web search results in the scan aren't
+
+00:02:40.833 --> 00:02:43.300
+yet checked as being
+about the right account.
+
+00:02:43.300 --> 00:02:46.833
+A page can mention a company with a
+similar name. Two things protect you.
+
+00:02:46.833 --> 00:02:49.933
+Set up a news binding, so
+results come from a news source.
+
+00:02:49.933 --> 00:02:51.633
+And keep the gate on Strict,
+
+00:02:51.633 --> 00:02:54.933
+so a person confirms third
+party signals before they count.
+
+00:02:54.967 --> 00:02:58.400
+To customize, change the signals
+key of the scoring model: weights,
+
+00:02:58.400 --> 00:03:01.367
+half life, classes and auto verify rules.
+
+00:03:01.367 --> 00:03:04.033
+It goes through a change set,
+and a different person signs.
+
+00:03:04.033 --> 00:03:08.100
+Advanced move: write auto verify
+rules by kind, provider or party tier,
+
+00:03:08.100 --> 00:03:10.133
+so first party signals
+never wait in the queue.
+
+00:03:10.133 --> 00:03:11.467
+And when one signal is wrong,
+
+00:03:11.467 --> 00:03:14.767
+ask your agent to retract
+it and explain what changes.
+
+00:03:14.800 --> 00:03:16.233
+It improves from your decisions.
+
+00:03:16.233 --> 00:03:21.267
+Every verify, dispute and retract is
+feedback: the account rescores at once.
+
+00:03:21.267 --> 00:03:24.500
+Once you trust a source, an auto
+verify rule means less queue work.
+
+00:03:24.500 --> 00:03:28.867
+Score's Learning measures lift per
+criterion, including your signal rules,
+
+00:03:28.867 --> 00:03:31.667
+and proposes weights a person approves.
+
+00:03:31.667 --> 00:03:35.200
+On the dashboard, watch hot and
+warm accounts, the surge report,
+
+00:03:35.200 --> 00:03:36.600
+and signals awaiting review.
+
+00:03:36.667 --> 00:03:39.133
+Signals feed Score directly. Funding,
+
+00:03:39.133 --> 00:03:42.433
+hiring and intent signal
+plays enrol one person
+
+00:03:42.433 --> 00:03:45.833
+per signal into an approved
+sequence in Outreach,
+
+00:03:45.833 --> 00:03:47.400
+inside a daily cap.
+
+00:03:47.400 --> 00:03:51.633
+And Routing reacts to a new signal,
+so the right owner hears first.
+
+00:03:51.700 --> 00:03:55.200
+Know the boundary: a live
+provider for market events,
+
+00:03:55.200 --> 00:03:58.633
+and the account check
+on web search results.
+
+00:03:58.633 --> 00:04:03.100
+Until then, the gate and the
+review queue are your protection.
+
+00:04:03.133 --> 00:04:07.333
+Say it out loud: a Strict gate
+means a queue that buries my team.
+
+00:04:07.333 --> 00:04:10.800
+Your own systems' server side
+signals are verified automatically,
+
+00:04:10.800 --> 00:04:14.100
+and auto verify rules clear
+the sources you trust.
+
+00:04:14.100 --> 00:04:18.000
+What waits is third party. That's
+the part that needs a human eye.
+
+00:04:18.033 --> 00:04:22.267
+Boiled down: Signals come from
+your systems and the outside world,
+
+00:04:22.267 --> 00:04:27.733
+each weighed by class, age and verification. The gate decides what counts.
+
+00:04:27.733 --> 00:04:30.700
+Hear everything. Count
+only what's verified.
+
+00:04:30.767 --> 00:04:34.433
+You hear the market first, and
+only verified signals count.
+
+00:04:34.433 --> 00:04:39.467
+Clear the Review queue under
+CRM, Signals. Next up: Routing,
+
+00:04:39.467 --> 00:04:43.100
+which puts every qualified account
+in front of the right owner.

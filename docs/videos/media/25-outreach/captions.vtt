@@ -1,0 +1,381 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.500
+Every lead now has one owner,
+with the reason on record.
+
+00:00:03.500 --> 00:00:07.833
+Now that owner writes. Outreach
+drafts from your proof and your voice,
+
+00:00:07.833 --> 00:00:10.200
+and sends only through guarded lanes.
+
+00:00:10.200 --> 00:00:12.933
+Nothing leaves without
+a second pair of eyes.
+
+00:00:13.000 --> 00:00:17.833
+In this clip you'll build a draft,
+read the gates, and approve a send.
+
+00:00:17.833 --> 00:00:21.767
+One rule runs through all of it.
+A send is an external effect,
+
+00:00:21.767 --> 00:00:25.967
+so it is always a proposal that
+a different human approves.
+
+00:00:26.000 --> 00:00:28.033
+Mia's team can write one good email.
+
+00:00:28.033 --> 00:00:31.967
+The hard part is every email
+after that, each one true,
+
+00:00:31.967 --> 00:00:37.033
+each in the brand voice, and none to
+someone who unsubscribed last week.
+
+00:00:37.100 --> 00:00:39.267
+First, a draft is grounded, not guessed.
+
+00:00:39.267 --> 00:00:43.000
+Outreach reads your brand voice, the
+proof library for claims you can back,
+
+00:00:43.000 --> 00:00:47.467
+and customer phrases a person approved.
+Personalization has three tiers.
+
+00:00:47.467 --> 00:00:50.367
+A one to one draft uses research,
+proof and what has worked.
+
+00:00:50.367 --> 00:00:53.233
+A one to few draft uses a segment angle.
+
+00:00:53.233 --> 00:00:55.100
+One to many is a template
+with no model call.
+
+00:00:55.133 --> 00:00:59.900
+The claims gate checks every factual
+claim against active proof, twice:
+
+00:00:59.900 --> 00:01:02.567
+when the send is proposed,
+and again when it's sent.
+
+00:01:02.567 --> 00:01:06.067
+A claim with no proof, or
+expired proof, blocks the send.
+
+00:01:06.067 --> 00:01:10.400
+In the console: Approvals, open an
+approval, and read the Claims panel.
+
+00:01:10.467 --> 00:01:13.267
+Second, lanes. A lane is
+where sending happens.
+
+00:01:13.267 --> 00:01:16.300
+It sets the channel, the
+sending domain, a daily cap,
+
+00:01:16.300 --> 00:01:19.767
+and a touch window so nobody
+is contacted twice in a row.
+
+00:01:19.767 --> 00:01:23.867
+Bounce and complaint thresholds
+pause it. No active lane, no send.
+
+00:01:23.867 --> 00:01:27.400
+In the console: Engines, Outreach,
+lanes and guardrail usage.
+
+00:01:27.433 --> 00:01:31.400
+More gates run when a send is proposed
+and again when it's sent: Dry Mode,
+
+00:01:31.400 --> 00:01:35.700
+the engine's own mode, brand safety,
+suppression, consent, reply stop,
+
+00:01:35.700 --> 00:01:38.300
+quiet hours and guardrail
+caps. Then the net new rule.
+
+00:01:38.300 --> 00:01:41.700
+The first message to someone never
+contacted always needs a human,
+
+00:01:41.700 --> 00:01:43.300
+however much else is automated.
+
+00:01:43.300 --> 00:01:46.867
+If a send is held, ask your
+agent: "Why was this send held? "
+
+00:01:46.900 --> 00:01:49.233
+Here's a send end to end. Ask your agent:
+
+00:01:49.233 --> 00:01:53.300
+"Draft a one to one first touch to
+Priya Nair at Northwind and propose it".
+
+00:01:53.300 --> 00:01:56.267
+It drafts, grounds it,
+proposes the send, and stops.
+
+00:01:56.267 --> 00:01:58.933
+In the console, Sophia opens the approval,
+
+00:01:58.933 --> 00:02:02.900
+reads the frozen message and the
+claims panel, and approves or rejects.
+
+00:02:02.900 --> 00:02:06.767
+The proposer, and the human the
+agent acts for, can never approve.
+
+00:02:06.833 --> 00:02:09.467
+One habit worth copying:
+send nothing at first.
+
+00:02:09.467 --> 00:02:11.967
+In Dry Mode every send
+becomes a logged draft,
+
+00:02:11.967 --> 00:02:14.167
+and each engine has its
+own Dry or Live switch,
+
+00:02:14.167 --> 00:02:16.200
+with the stricter one applying.
+
+00:02:16.200 --> 00:02:20.300
+New organizations start in Dry,
+so read drafts, tune the voice,
+
+00:02:20.300 --> 00:02:22.600
+and send to an internal address first.
+
+00:02:22.600 --> 00:02:24.833
+Going live has its own
+clip, Tutorial: going live.
+
+00:02:24.867 --> 00:02:27.867
+Third, sequences turn
+one message into a plan.
+
+00:02:27.867 --> 00:02:30.800
+In the console: CRM,
+Sequences, open one, Steps.
+
+00:02:30.800 --> 00:02:34.200
+You'll see ordered steps, waits
+in the recipient's time zone,
+
+00:02:34.200 --> 00:02:35.200
+and weighted variants.
+
+00:02:35.200 --> 00:02:38.600
+Variants go to the same person
+the same way every time.
+
+00:02:38.600 --> 00:02:41.567
+Edits mid flight never
+send a message twice.
+
+00:02:41.600 --> 00:02:46.533
+A sequence ends for a person when
+they reply, unsubscribe, bounce,
+
+00:02:46.533 --> 00:02:50.533
+complain or are removed. A booked
+meeting ends it by default.
+
+00:02:50.533 --> 00:02:55.433
+Or ask your agent: "Create a four
+step funding sequence on my lane".
+
+00:02:55.500 --> 00:02:59.667
+Signal plays connect the last
+clips to this one. A funding,
+
+00:02:59.667 --> 00:03:04.600
+hiring or intent signal enrols one
+person into an approved sequence,
+
+00:03:04.600 --> 00:03:06.467
+inside the daily cap.
+
+00:03:06.467 --> 00:03:10.800
+It skips customers, partners
+and anyone who replied recently.
+
+00:03:10.833 --> 00:03:14.800
+Replies come back labelled: interested,
+not now, objection, referral,
+
+00:03:14.800 --> 00:03:17.867
+wrong person, unsubscribe,
+out of office and bounce.
+
+00:03:17.867 --> 00:03:21.167
+In the console: CRM,
+Conversations. Effects run once.
+
+00:03:21.167 --> 00:03:24.467
+An unsubscribe withdraws
+consent, the record from Consent,
+
+00:03:24.467 --> 00:03:25.833
+suppression and privacy.
+
+00:03:25.833 --> 00:03:29.533
+A bounce suppresses, and not now
+creates a task for thirty days later.
+
+00:03:29.533 --> 00:03:33.767
+Or ask your agent: "What replies
+came in and what do they want? "
+
+00:03:33.833 --> 00:03:36.167
+Meetings sit in the same engine.
+
+00:03:36.167 --> 00:03:39.400
+Booking and cancelling are
+approval gated, like a send.
+
+00:03:39.400 --> 00:03:43.433
+Ask your agent: "Propose booking a
+meeting with Priya Nair next Tuesday".
+
+00:03:43.433 --> 00:03:45.967
+A booked meeting ends the sequence.
+
+00:03:46.033 --> 00:03:48.600
+Sequences can carry LinkedIn steps.
+
+00:03:48.600 --> 00:03:50.867
+They need a connected seat and haven't
+
+00:03:50.867 --> 00:03:53.367
+been verified against a real account yet,
+
+00:03:53.367 --> 00:03:57.067
+so treat them as optional and test first.
+
+00:03:57.100 --> 00:04:01.433
+The dashboard shows replies by
+channel, bounces, meetings booked,
+
+00:04:01.433 --> 00:04:03.333
+sends this week and contactability.
+
+00:04:03.333 --> 00:04:08.667
+What's working names winners only
+once a group has thirty or more sends.
+
+00:04:08.667 --> 00:04:10.800
+In the console: Engines, Outreach, KPIs.
+
+00:04:10.800 --> 00:04:14.467
+Or ask your agent: "What is
+working in our outreach? "
+
+00:04:14.533 --> 00:04:17.133
+What worked feeds the
+next one to one draft,
+
+00:04:17.133 --> 00:04:20.667
+and negative replies
+lower the account's Score.
+
+00:04:20.667 --> 00:04:24.100
+Voice, proof, lanes, sequences and
+reply labels are all definitions.
+
+00:04:24.100 --> 00:04:28.933
+Edit any of them through a ChangeSet,
+and a different person signs it.
+
+00:04:28.967 --> 00:04:32.633
+Outreach reads Score to
+decide who's worth a message.
+
+00:04:32.633 --> 00:04:37.800
+It reads Research for one to one
+briefs, the proof library for claims,
+
+00:04:37.800 --> 00:04:40.600
+and Routing for who owns the reply.
+
+00:04:40.667 --> 00:04:42.133
+Be clear about the limit.
+
+00:04:42.133 --> 00:04:45.800
+The AI steps don't read wider
+company context, only brand voice,
+
+00:04:45.800 --> 00:04:48.867
+proof and customer phrases,
+so keep your proof current.
+
+00:04:48.867 --> 00:04:53.033
+And some sender paths still wait
+for tests against real accounts,
+
+00:04:53.033 --> 00:04:55.000
+so send to an internal address first.
+
+00:04:55.033 --> 00:04:58.167
+The pushback: a person approving
+every send won't scale.
+
+00:04:58.167 --> 00:05:00.700
+Approvers only see drafts
+that already passed the gates,
+
+00:05:00.700 --> 00:05:03.700
+with the claims verdicts
+beside the message.
+
+00:05:03.700 --> 00:05:07.400
+The approval is bound to the exact
+payload, so what they read is what goes.
+
+00:05:07.400 --> 00:05:10.167
+And the lane's daily
+cap bounds the volume.
+
+00:05:10.233 --> 00:05:14.500
+The short version: Drafts are
+grounded in your voice and proof,
+
+00:05:14.500 --> 00:05:18.900
+lanes and gates shape every send,
+and a second person approves it.
+
+00:05:18.900 --> 00:05:22.867
+Nothing goes out ungrounded,
+and nothing goes out unapproved.
+
+00:05:22.900 --> 00:05:26.333
+Every draft is grounded,
+every send is approved,
+
+00:05:26.333 --> 00:05:30.967
+and every reply teaches the system.
+Read one lane's guardrails today.
+
+00:05:30.967 --> 00:05:32.533
+Next, SEO and GEO,
+
+00:05:32.533 --> 00:05:37.000
+where the same discipline decides
+what goes live on your site.

@@ -1,0 +1,385 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.700
+You've set who you may contact, and
+only a person can grant consent.
+
+00:00:03.700 --> 00:00:07.467
+Now you decide who comes first. Score
+ranks every account on fit and intent,
+
+00:00:07.467 --> 00:00:09.667
+and shows the evidence
+behind each verdict.
+
+00:00:09.667 --> 00:00:11.767
+You know who to call before they call.
+
+00:00:11.833 --> 00:00:14.800
+In this clip you'll read a verdict,
+change the model behind it,
+
+00:00:14.800 --> 00:00:17.033
+and watch it learn from outcomes.
+
+00:00:17.033 --> 00:00:20.200
+Score is an engine: logic that
+runs on your signed definitions,
+
+00:00:20.200 --> 00:00:21.633
+never on hidden rules.
+
+00:00:21.667 --> 00:00:23.500
+Mia's team has more accounts than hours.
+
+00:00:23.500 --> 00:00:26.433
+Without Score, the list
+is whoever shouted last,
+
+00:00:26.433 --> 00:00:28.900
+and last quarter's funding
+round still looks like news.
+
+00:00:28.900 --> 00:00:31.367
+Score fixes that with
+reasons you can read.
+
+00:00:31.433 --> 00:00:32.633
+First, the composite.
+
+00:00:32.633 --> 00:00:35.833
+Fit is how closely a company
+matches your ideal customer profile.
+
+00:00:35.833 --> 00:00:39.000
+Intent is what it did lately:
+a funding round, a hiring push,
+
+00:00:39.000 --> 00:00:39.900
+a pricing page visit.
+
+00:00:39.900 --> 00:00:43.467
+Score weighs both into one composite
+and maps it to Hot, Warm or Cold.
+
+00:00:43.467 --> 00:00:46.533
+Every weight and threshold
+lives in a signed definition,
+
+00:00:46.533 --> 00:00:48.367
+so you can read the rule behind a rank.
+
+00:00:48.433 --> 00:00:51.367
+Second, intent fades, so
+old news stops counting.
+
+00:00:51.367 --> 00:00:53.867
+Every signal loses weight on
+a half life set by its family.
+
+00:00:53.867 --> 00:00:55.833
+By default web intent fades in about two
+
+00:00:55.833 --> 00:00:57.767
+weeks and a funding round in about six.
+
+00:00:57.767 --> 00:01:02.067
+Signals seen first hand count more. A
+retracted signal counts for nothing,
+
+00:01:02.067 --> 00:01:04.233
+and in Strict mode so
+does an unverified one.
+
+00:01:04.300 --> 00:01:06.767
+Third, the brakes. A hard
+disqualifier caps a score,
+
+00:01:06.767 --> 00:01:10.233
+such as a former customer or a
+competitor on your suppression list.
+
+00:01:10.233 --> 00:01:13.467
+The lowest cap wins, and a cap
+of zero zeroes the account.
+
+00:01:13.467 --> 00:01:17.133
+Negatives lower intent: an unsubscribe,
+an objection, a hard bounce.
+
+00:01:17.133 --> 00:01:18.500
+Missing data is never punished.
+
+00:01:18.500 --> 00:01:21.933
+An unknown field is left out of
+the score, not counted as zero.
+
+00:01:21.967 --> 00:01:23.733
+Fourth, the committee and the clock.
+
+00:01:23.733 --> 00:01:27.467
+Coverage counts how many roles on
+the largest open deal you've engaged,
+
+00:01:27.467 --> 00:01:31.133
+and flags a missing champion. That's
+why buying roles mattered last clip.
+
+00:01:31.133 --> 00:01:33.700
+And a band decays when
+nobody touches the account.
+
+00:01:33.700 --> 00:01:36.033
+By default Hot slides to
+Warm after three days,
+
+00:01:36.033 --> 00:01:37.900
+and Warm to Cold after fourteen.
+
+00:01:37.933 --> 00:01:41.367
+Now read a verdict. In the console:
+CRM, Hot list, click an account.
+
+00:01:41.367 --> 00:01:44.233
+The why drawer lists what lifted
+it and what pulled it down.
+
+00:01:44.233 --> 00:01:47.933
+It shows the caps, the negatives,
+how far each signal has decayed,
+
+00:01:47.933 --> 00:01:49.333
+and who on the committee is covered.
+
+00:01:49.333 --> 00:01:52.733
+Or ask your agent: "Show the hot
+list and why number one is hot".
+
+00:01:52.800 --> 00:01:55.333
+To score on demand, open Engines, Score.
+
+00:01:55.333 --> 00:01:59.167
+You'll see Accounts to score,
+Qualifications, Rescan, KPIs and Learning,
+
+00:01:59.167 --> 00:02:03.000
+and a Lead queue ranked by band,
+segment and committee coverage.
+
+00:02:03.000 --> 00:02:06.667
+Or ask your agent: "Score Northwind
+Logistics and explain it".
+
+00:02:06.700 --> 00:02:07.867
+Now change the model.
+
+00:02:07.867 --> 00:02:10.367
+One definition kind, the
+scoring model, with three keys:
+
+00:02:10.367 --> 00:02:13.500
+default for qualification,
+ICP fit for firmographic fit,
+
+00:02:13.500 --> 00:02:14.833
+and signals for signal strength.
+
+00:02:14.833 --> 00:02:17.800
+Mia says what good looks like,
+Orbit drafts it, Sophia signs it.
+
+00:02:17.800 --> 00:02:19.067
+Your definitions, signed once.
+
+00:02:19.067 --> 00:02:22.900
+In the console, review the plan on the
+Environments page. Or ask your agent:
+
+00:02:22.900 --> 00:02:26.200
+"Propose raising the weight of
+funding signals in our scoring model".
+
+00:02:26.233 --> 00:02:27.933
+Power habit: preview before you commit.
+
+00:02:27.933 --> 00:02:30.967
+A new signed version rescans
+the whole organization.
+
+00:02:30.967 --> 00:02:33.400
+The rescan preview scores
+accounts and rolls every one back,
+
+00:02:33.400 --> 00:02:35.600
+so nothing is written
+and nothing is queued.
+
+00:02:35.600 --> 00:02:38.867
+It shows who moves into or out
+of qualified, the band changes,
+
+00:02:38.867 --> 00:02:41.967
+and which handoffs would fire. Ask
+your agent: "Preview the rescore".
+
+00:02:41.967 --> 00:02:44.400
+Run it before a model change
+and before an upgrade.
+
+00:02:44.433 --> 00:02:46.833
+Score also learns, with
+a person in the loop.
+
+00:02:46.833 --> 00:02:48.633
+Weekly, Learning measures
+lift per criterion:
+
+00:02:48.633 --> 00:02:51.767
+how much more often accounts
+with it replied, booked or won.
+
+00:02:51.767 --> 00:02:53.633
+It needs verdicts at least thirty
+
+00:02:53.633 --> 00:02:56.100
+days old and ninety
+five percent confidence.
+
+00:02:56.100 --> 00:02:59.767
+A weight moves at most thirty percent
+a run, and disqualifiers never change.
+
+00:02:59.767 --> 00:03:02.700
+The result is a proposed version
+that a different person approves.
+
+00:03:02.700 --> 00:03:04.900
+In the console: Engines, Score, Learning.
+
+00:03:04.900 --> 00:03:07.867
+Or ask your agent: "Propose a
+scoring update from outcomes".
+
+00:03:07.933 --> 00:03:09.000
+Reps teach it too.
+
+00:03:09.000 --> 00:03:12.567
+In the Lead queue, use Flag this
+score when a verdict looks wrong.
+
+00:03:12.567 --> 00:03:15.467
+Rep flags are learning inputs,
+and agent flags are not.
+
+00:03:15.467 --> 00:03:18.500
+Shadow accuracy keeps Score
+honest. In Settings, Safety,
+
+00:03:18.500 --> 00:03:20.133
+the CRM write back card compares past
+
+00:03:20.133 --> 00:03:22.233
+qualified verdicts with
+the deals that followed.
+
+00:03:22.233 --> 00:03:24.900
+It says so when the sample is too small.
+
+00:03:24.933 --> 00:03:27.433
+The dashboard shows accounts
+scored, the tier mix,
+
+00:03:27.433 --> 00:03:29.867
+how often reps accept Score's next move,
+
+00:03:29.867 --> 00:03:31.433
+and the lift from qualified to deal.
+
+00:03:31.433 --> 00:03:35.033
+Rising acceptance with steady lift
+means the model fits your market.
+
+00:03:35.033 --> 00:03:37.000
+When lift fades, open Learning.
+
+00:03:37.000 --> 00:03:39.367
+Or ask: "How is scoring
+performing this month? "
+
+00:03:39.433 --> 00:03:42.433
+Score doesn't work alone. Signals
+and enriched fields feed it,
+
+00:03:42.433 --> 00:03:44.700
+and replies and bounces
+count as negatives.
+
+00:03:44.700 --> 00:03:48.533
+A qualified account hands off to Routing
+for an owner, to Outreach to enrol,
+
+00:03:48.533 --> 00:03:48.967
+and to plays.
+
+00:03:48.967 --> 00:03:52.433
+With a CRM of record, scores can
+be written back as a proposal.
+
+00:03:52.500 --> 00:03:54.900
+The honest edge. Learning needs history,
+
+00:03:54.900 --> 00:03:58.367
+and with too little it says
+insufficient data instead of guessing.
+
+00:03:58.367 --> 00:03:59.467
+Agent flags don't teach it.
+
+00:03:59.467 --> 00:04:01.367
+Account based marketing and the wider
+
+00:04:01.367 --> 00:04:03.700
+sales intelligence engines
+are on the roadmap,
+
+00:04:03.700 --> 00:04:04.833
+not in the product.
+
+00:04:04.867 --> 00:04:08.233
+The worry: a model that learns
+will drift somewhere I can't see.
+
+00:04:08.233 --> 00:04:09.500
+It can't change by itself.
+
+00:04:09.500 --> 00:04:12.833
+A weight cap and a confidence bar
+sit between the data and the model.
+
+00:04:12.833 --> 00:04:16.000
+Every change arrives as a proposal
+that a different person approves.
+
+00:04:16.067 --> 00:04:18.467
+Run it back: Fit and
+intent make the composite,
+
+00:04:18.467 --> 00:04:21.767
+caps and decay keep it honest,
+and outcomes tune the weights.
+
+00:04:21.767 --> 00:04:25.233
+Every verdict shows its reasons,
+and only a person changes the model.
+
+00:04:25.267 --> 00:04:28.167
+You can now rank accounts, read
+the reason for every verdict,
+
+00:04:28.167 --> 00:04:31.733
+and let outcomes tune the model. Open
+the Hot list and click number one.
+
+00:04:31.733 --> 00:04:34.600
+Coming next: Enrichment, which
+fills the gaps in your data.

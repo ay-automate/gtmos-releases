@@ -1,0 +1,238 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.533
+A play runs only after you've simulated
+it and a person has signed it.
+
+00:00:04.533 --> 00:00:07.400
+Now the whole picture:
+a buying signal arrives,
+
+00:00:07.400 --> 00:00:11.133
+and a prospect gets the right
+message from the right person,
+
+00:00:11.133 --> 00:00:12.800
+with every step approved.
+
+00:00:12.833 --> 00:00:19.933
+Over the next few minutes you'll
+hold the whole loop in your head.
+
+00:00:20.000 --> 00:00:22.533
+Most teams run these as separate tools.
+
+00:00:22.533 --> 00:00:24.967
+Mia's best account replies on Tuesday.
+
+00:00:24.967 --> 00:00:29.167
+The reply sits in the sequencer,
+the score never hears about it,
+
+00:00:29.167 --> 00:00:32.467
+and Leo exports a
+spreadsheet to find out why.
+
+00:00:32.500 --> 00:00:37.033
+Every engine works on the same records,
+reads the same signed definitions,
+
+00:00:37.033 --> 00:00:40.333
+and passes work through
+the same approvals.
+
+00:00:40.333 --> 00:00:45.267
+That's what makes this a loop, not
+a pile of tools joined by exports.
+
+00:00:45.333 --> 00:00:49.833
+First, a signal: a funding
+round, a hire, a visit, a reply.
+
+00:00:49.833 --> 00:00:53.400
+The signals engine keeps the evidence
+and checks it before it counts.
+
+00:00:53.400 --> 00:00:54.567
+In Strict mode,
+
+00:00:54.567 --> 00:00:58.767
+an unverified signal never scores
+and never reaches a seller.
+
+00:00:58.833 --> 00:00:59.900
+Second, score.
+
+00:00:59.900 --> 00:01:02.767
+The engine weighs the signal against fit
+
+00:01:02.767 --> 00:01:05.667
+and returns a verdict with its evidence.
+
+00:01:05.667 --> 00:01:09.567
+Your definition of a good
+account does its work here.
+
+00:01:09.633 --> 00:01:17.067
+Enrichment fills only the gaps that
+matter, inside the limits you set.
+
+00:01:17.100 --> 00:01:23.067
+Routing picks the owner from territories
+and capacity, and records why.
+
+00:01:23.067 --> 00:01:27.567
+Research adds a brief, so
+that person starts informed.
+
+00:01:27.600 --> 00:01:31.167
+Third, draft. Outreach writes
+from your proof and your voice,
+
+00:01:31.167 --> 00:01:34.733
+and every factual claim is checked
+against evidence you approved.
+
+00:01:34.733 --> 00:01:37.267
+The check runs twice: when
+the message is proposed,
+
+00:01:37.267 --> 00:01:41.900
+and again when it's sent. A stale
+claim can't slip out between the two.
+
+00:01:41.967 --> 00:01:47.267
+Then the work stops at a gate. A
+person who isn't the proposer approves,
+
+00:01:47.267 --> 00:01:49.833
+and the agent that prepared it can't.
+
+00:01:49.833 --> 00:01:53.500
+With Dry Mode on, the
+message stays a draft.
+
+00:01:53.533 --> 00:01:57.800
+Once approved, it goes out inside
+your guardrails: daily caps,
+
+00:01:57.800 --> 00:02:01.933
+send windows in the recipient's
+timezone, and the channels you allow.
+
+00:02:01.933 --> 00:02:06.133
+One message goes out, and it
+makes sense for that prospect.
+
+00:02:06.200 --> 00:02:11.600
+The prospect replies. The reply is
+labeled, and its effects run once.
+
+00:02:11.600 --> 00:02:16.200
+An unsubscribe is respected,
+a referral opens a task,
+
+00:02:16.200 --> 00:02:18.433
+and a not now comes back later.
+
+00:02:18.500 --> 00:02:21.233
+Last, the outcome. A
+meeting booked, a deal won,
+
+00:02:21.233 --> 00:02:24.267
+or a wrong person reply
+returns to the score engine.
+
+00:02:24.267 --> 00:02:27.433
+It compares what it
+predicted with what happened,
+
+00:02:27.433 --> 00:02:30.933
+so you tune your definition
+from evidence, not guesses.
+
+00:02:30.933 --> 00:02:32.100
+Pro move: before you trust an engine,
+
+00:02:32.100 --> 00:02:34.933
+ask your agent for its shadow accuracy.
+
+00:02:34.967 --> 00:02:39.200
+Plays are the glue. A play
+connects these steps on a trigger,
+
+00:02:39.200 --> 00:02:41.733
+with the same guardrails and approvals,
+
+00:02:41.733 --> 00:02:44.900
+so the loop runs without hand wiring.
+
+00:02:44.933 --> 00:02:49.233
+Every step leaves a record you can
+open: why an account scored as it did,
+
+00:02:49.233 --> 00:02:53.267
+why it went to that owner, who
+approved the send, and what came back.
+
+00:02:53.267 --> 00:02:54.500
+In the console, open any of them.
+
+00:02:54.500 --> 00:02:57.967
+Or ask your agent: "Walk me through
+what happened to this account,
+
+00:02:57.967 --> 00:03:00.333
+from the first signal to the last reply".
+
+00:03:00.367 --> 00:03:01.767
+Someone on your team will say:
+
+00:03:01.767 --> 00:03:04.367
+a loop that learns sounds
+like a loop that drifts.
+
+00:03:04.367 --> 00:03:06.533
+It can't rewrite your rules.
+
+00:03:06.533 --> 00:03:10.467
+The score engine shows the gap
+between prediction and result,
+
+00:03:10.467 --> 00:03:12.633
+and a person edits and
+signs the definition.
+
+00:03:12.633 --> 00:03:14.367
+Nothing changes until someone signs.
+
+00:03:14.433 --> 00:03:17.600
+Be honest about the edges:
+account based programs,
+
+00:03:17.600 --> 00:03:20.700
+lifecycle and reporting
+engines aren't built yet.
+
+00:03:20.700 --> 00:03:26.033
+This loop is what works today, and
+those can join the same line later.
+
+00:03:26.100 --> 00:03:30.267
+Say it back: One set of
+records and signed definitions.
+
+00:03:30.267 --> 00:03:34.933
+A gate before anything leaves.
+Outcomes that return to the score.
+
+00:03:34.967 --> 00:03:38.667
+You can now read any account's
+story from start to finish.
+
+00:03:38.667 --> 00:03:43.500
+Ask your agent for one today. Next
+up, Approvals and the human queue,
+
+00:03:43.500 --> 00:03:46.567
+exactly what the person at the gate sees.

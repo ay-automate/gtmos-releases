@@ -1,0 +1,345 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.800
+Your numbers now reconcile
+to one revenue truth.
+
+00:00:02.800 --> 00:00:04.600
+Now do the same for your words.
+
+00:00:04.600 --> 00:00:08.100
+A message that promises a result
+nobody can prove is a liability.
+
+00:00:08.100 --> 00:00:11.267
+Here, every claim is checked
+against proof you approved.
+
+00:00:11.333 --> 00:00:14.700
+In this clip you'll set your voice
+and the claims you never make.
+
+00:00:14.700 --> 00:00:18.167
+You'll build a proof library, choose
+what happens to an unbacked claim,
+
+00:00:18.167 --> 00:00:20.167
+and mine your customers' own words.
+
+00:00:20.200 --> 00:00:20.933
+Without a gate,
+
+00:00:20.933 --> 00:00:24.433
+Orbit drafts a first touch that says
+Northwind doubled their pipeline.
+
+00:00:24.433 --> 00:00:27.467
+Nobody approved that number, and
+Northwind never agreed to be named.
+
+00:00:27.467 --> 00:00:31.233
+Say only what you can prove, checked
+when proposed and again when sent.
+
+00:00:31.300 --> 00:00:34.267
+First, voice. In the console:
+Settings, Brand and compliance.
+
+00:00:34.267 --> 00:00:36.133
+Name the voice and give it tone words.
+
+00:00:36.133 --> 00:00:39.067
+List forbidden claims, the
+promises your brand never makes,
+
+00:00:39.067 --> 00:00:41.267
+each with a reason that
+shows on a blocked draft.
+
+00:00:41.267 --> 00:00:43.000
+Add words to avoid and
+a few voice samples.
+
+00:00:43.000 --> 00:00:45.933
+Drafts imitate their
+style and never copy them.
+
+00:00:45.933 --> 00:00:47.733
+When you save, the rules are signed,
+
+00:00:47.733 --> 00:00:50.833
+and you can paste any draft into
+the checker to see its violations.
+
+00:00:50.867 --> 00:00:53.733
+Second, the proof library. In the
+console: Settings, Proof library.
+
+00:00:53.733 --> 00:00:56.767
+It holds what you can back
+up: case studies, metrics,
+
+00:00:56.767 --> 00:00:59.267
+testimonials and logos. Upload
+a file or paste the text.
+
+00:00:59.267 --> 00:01:00.600
+Your model proposes the claims,
+
+00:01:00.600 --> 00:01:02.833
+and each one must quote
+the source word for word,
+
+00:01:02.833 --> 00:01:05.900
+with its numbers inside
+the quote, or it's dropped.
+
+00:01:05.900 --> 00:01:08.000
+You review the claims
+before anyone approves.
+
+00:01:08.067 --> 00:01:11.200
+Set a permission on each source:
+public, anonymized or internal only.
+
+00:01:11.200 --> 00:01:14.233
+A customer whose proof isn't
+public can never be named,
+
+00:01:14.233 --> 00:01:17.267
+whatever the draft says. Set an
+expiry date, then propose activation,
+
+00:01:17.267 --> 00:01:18.867
+and a different person approves.
+
+00:01:18.867 --> 00:01:22.367
+Only active proof backs a claim:
+approved by a second person, not expired,
+
+00:01:22.367 --> 00:01:23.700
+and not internal only.
+
+00:01:23.733 --> 00:01:25.533
+Operator tip: make expiry a habit.
+
+00:01:25.533 --> 00:01:29.200
+Each source shows its state:
+active, waiting for a second person,
+
+00:01:29.200 --> 00:01:29.867
+or expired.
+
+00:01:29.867 --> 00:01:34.033
+At a glance you see what backs your
+copy right now, and what to renew first.
+
+00:01:34.067 --> 00:01:36.400
+Third, the gate, the part
+that makes this safe.
+
+00:01:36.400 --> 00:01:39.733
+Every factual claim in outbound content
+is checked against active proof:
+
+00:01:39.733 --> 00:01:42.433
+a statistic, a result, a
+named customer or an outcome.
+
+00:01:42.433 --> 00:01:44.633
+It's checked twice, when
+the message is proposed,
+
+00:01:44.633 --> 00:01:48.033
+and again right before it's sent,
+under the policy in force then.
+
+00:01:48.033 --> 00:01:51.067
+The gate covers outreach messages and
+sequence steps, SEO page publishes,
+
+00:01:51.067 --> 00:01:53.433
+and meeting invites
+and cancellation notes.
+
+00:01:53.433 --> 00:01:56.133
+If proof is archived or expires
+between approval and send,
+
+00:01:56.133 --> 00:01:58.433
+the send fails rather
+than going out unbacked.
+
+00:01:58.500 --> 00:02:00.233
+Each claim gets one of three verdicts.
+
+00:02:00.233 --> 00:02:03.633
+Backed by proof, with its source
+shown to the approver. Close to proof,
+
+00:02:03.633 --> 00:02:05.600
+meaning the numbers and direction match an
+
+00:02:05.600 --> 00:02:07.800
+approved claim and enough
+of the wording does.
+
+00:02:07.800 --> 00:02:10.267
+And No proof. Gotcha: close
+never counts as backed.
+
+00:02:10.267 --> 00:02:13.400
+You set the close match threshold
+in the claims check settings.
+
+00:02:13.433 --> 00:02:15.367
+Then choose what happens
+to an unbacked claim.
+
+00:02:15.367 --> 00:02:18.867
+In the console: Settings, Proof library,
+Claims check. Block is the default:
+
+00:02:18.867 --> 00:02:21.700
+the proposal stops until the copy
+is fixed or the proof is added.
+
+00:02:21.700 --> 00:02:23.800
+Route to the approver lets it through,
+
+00:02:23.800 --> 00:02:25.467
+but the approver must acknowledge each
+
+00:02:25.467 --> 00:02:27.400
+claim in the Claims
+panel before approving.
+
+00:02:27.400 --> 00:02:29.733
+The proposer, or an agent,
+can't acknowledge for them.
+
+00:02:29.733 --> 00:02:31.467
+Setting this policy is human only.
+
+00:02:31.533 --> 00:02:32.567
+Or ask your agent:
+
+00:02:32.567 --> 00:02:35.800
+"Add this case study to the proof
+library and propose it for activation".
+
+00:02:35.800 --> 00:02:37.067
+It returns an approval number,
+
+00:02:37.067 --> 00:02:39.500
+and if you ask it to draft
+and propose a message,
+
+00:02:39.500 --> 00:02:40.800
+it reports the claims verdicts.
+
+00:02:40.800 --> 00:02:44.533
+It can't approve an activation, set
+the claims policy, or approve a phrase.
+
+00:02:44.600 --> 00:02:45.967
+Fourth, customer language.
+
+00:02:45.967 --> 00:02:48.967
+In the console: Settings, Proof
+library, Customer language,
+
+00:02:48.967 --> 00:02:49.400
+then Find phrases.
+
+00:02:49.400 --> 00:02:53.433
+It reads your call transcripts,
+classified replies and won deal notes,
+
+00:02:53.433 --> 00:02:56.033
+skips private calls, and lists
+the words customers used.
+
+00:02:56.033 --> 00:02:59.400
+Each phrase shows its source, and a
+person approves or rejects every one.
+
+00:02:59.400 --> 00:03:02.133
+Approved phrases ground drafts
+in how your customers talk,
+
+00:03:02.133 --> 00:03:04.867
+and rejected ones are never
+used. Or ask your agent:
+
+00:03:04.867 --> 00:03:08.567
+"Find customer phrases from our
+recent calls and replies for review".
+
+00:03:08.600 --> 00:03:09.600
+One honest limit.
+
+00:03:09.600 --> 00:03:13.467
+Drafts today use your brand voice,
+your proof and your customers' phrases,
+
+00:03:13.467 --> 00:03:15.567
+but not yet a full company
+context definition.
+
+00:03:15.567 --> 00:03:18.700
+For anything beyond those three,
+a person reviews the draft.
+
+00:03:18.767 --> 00:03:21.967
+Here's the doubt: a gate that
+blocks claims will stall outreach.
+
+00:03:21.967 --> 00:03:24.200
+It stops only factual
+claims with no proof,
+
+00:03:24.200 --> 00:03:25.667
+and you choose what happens next.
+
+00:03:25.667 --> 00:03:28.400
+Add the proof once, and
+every later draft can use it.
+
+00:03:28.400 --> 00:03:31.400
+Or route to the approver, who
+acknowledges each claim by name.
+
+00:03:31.400 --> 00:03:33.867
+Either way, nothing
+unbacked goes out silently.
+
+00:03:33.900 --> 00:03:36.433
+Quick pass: Set your voice
+and forbidden claims.
+
+00:03:36.433 --> 00:03:39.000
+Build proof with a
+permission and an expiry.
+
+00:03:39.000 --> 00:03:41.067
+Let the gate check every claim, twice.
+
+00:03:41.067 --> 00:03:45.000
+Say only what you can prove, checked
+when proposed and again when sent.
+
+00:03:45.067 --> 00:03:48.133
+Your voice, your proof,
+and a gate that reads both,
+
+00:03:48.133 --> 00:03:49.833
+with a person on every exception.
+
+00:03:49.833 --> 00:03:52.400
+Add one real case study
+to the library today.
+
+00:03:52.400 --> 00:03:55.300
+The next clip is consent,
+suppression and privacy.

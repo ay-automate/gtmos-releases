@@ -1,0 +1,317 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.833
+A rule needs two names
+before an engine reads it.
+
+00:00:02.833 --> 00:00:06.267
+Now write the rule that matters
+most, your idea of a good fit.
+
+00:00:06.267 --> 00:00:09.700
+Today it lives in someone's head,
+so every tool scores it differently.
+
+00:00:09.733 --> 00:00:13.400
+By the end you'll have a scoring model
+you can read, test on a real account,
+
+00:00:13.400 --> 00:00:14.733
+and improve with outcomes.
+
+00:00:14.800 --> 00:00:16.833
+Mia calls Example Logistics a perfect fit.
+
+00:00:16.833 --> 00:00:19.900
+The CRM says tier C, the
+sequencer says priority,
+
+00:00:19.900 --> 00:00:21.567
+and neither explains itself.
+
+00:00:21.567 --> 00:00:24.833
+Define fit once, test it on a
+real account, read the reasons,
+
+00:00:24.833 --> 00:00:26.333
+and let outcomes improve it.
+
+00:00:26.400 --> 00:00:27.867
+Step one, who you sell to.
+
+00:00:27.867 --> 00:00:30.733
+A segment is a slice of the market
+you work, by industry, size or region.
+
+00:00:30.733 --> 00:00:34.100
+A persona is a role you sell
+to, with the titles that count.
+
+00:00:34.100 --> 00:00:36.500
+Both are definitions, so both
+are signed and versioned.
+
+00:00:36.500 --> 00:00:39.500
+In the console: Setup, Your
+definitions, the Pilot scope card.
+
+00:00:39.500 --> 00:00:43.067
+Personas arrive with your blueprint,
+and change through a ChangeSet.
+
+00:00:43.133 --> 00:00:45.567
+Step two, the weights sheet,
+the heart of the model.
+
+00:00:45.567 --> 00:00:48.967
+Each criterion, like industry or
+company size, carries a weight,
+
+00:00:48.967 --> 00:00:50.533
+and together they make a fit score.
+
+00:00:50.533 --> 00:00:52.733
+Tiers turn scores into Hot, Warm and Cold.
+
+00:00:52.733 --> 00:00:55.433
+Thresholds decide what counts
+as qualified or needs review.
+
+00:00:55.433 --> 00:00:59.300
+In the console: Setup, Your definitions,
+the ICP and weights sheet card.
+
+00:00:59.300 --> 00:01:02.567
+It shows a drafted sheet with the
+evidence behind each suggestion.
+
+00:01:02.567 --> 00:01:04.300
+Edit it, skip it, or approve it.
+
+00:01:04.333 --> 00:01:06.500
+One habit worth copying: start small.
+
+00:01:06.500 --> 00:01:10.233
+A few criteria you can defend to a
+sales lead beat a long list you can't.
+
+00:01:10.233 --> 00:01:13.267
+Add one when the Learning
+section shows evidence for it.
+
+00:01:13.300 --> 00:01:14.533
+Fit is only half.
+
+00:01:14.533 --> 00:01:17.300
+Intent comes from signals, and a
+signal loses weight as it ages.
+
+00:01:17.300 --> 00:01:20.567
+A funding round fades slowly,
+and a page visit fades fast.
+
+00:01:20.567 --> 00:01:24.400
+Hard disqualifiers, like a competitor
+or a current customer, cap the score.
+
+00:01:24.400 --> 00:01:28.233
+Negative behavior, like an unsubscribe
+or a hard bounce, pulls it down.
+
+00:01:28.233 --> 00:01:31.633
+That logic is built in, and you
+tune the weights and thresholds.
+
+00:01:31.700 --> 00:01:34.467
+Step three, the buying committee.
+Deals are bought by groups,
+
+00:01:34.467 --> 00:01:36.867
+so the committee model
+says which roles you need,
+
+00:01:36.867 --> 00:01:38.400
+and the score reads that coverage.
+
+00:01:38.400 --> 00:01:41.533
+If the champion or the economic buyer
+is missing, the verdict says so.
+
+00:01:41.533 --> 00:01:43.433
+Unknown coverage never counts as zero.
+
+00:01:43.433 --> 00:01:46.500
+Customer types say how an enterprise
+account differs from a self serve one,
+
+00:01:46.500 --> 00:01:47.433
+each with its own journey.
+
+00:01:47.433 --> 00:01:50.000
+Buying roles live in Settings,
+Brand and compliance.
+
+00:01:50.000 --> 00:01:52.000
+And customer types are a card in setup.
+
+00:01:52.033 --> 00:01:54.667
+Step four, draft it from your
+best customers. Ask your agent:
+
+00:01:54.667 --> 00:01:58.233
+"Draft an ICP scoring model from
+our best customers and propose it".
+
+00:01:58.233 --> 00:02:01.900
+It proposes weights with the evidence
+for each and files a ChangeSet.
+
+00:02:01.900 --> 00:02:04.067
+A different person
+approves, and someone signs.
+
+00:02:04.067 --> 00:02:07.033
+Until then, engines keep using
+the signed model, or the default.
+
+00:02:07.100 --> 00:02:10.967
+Step five, test it on a real account.
+In the console: Engines, Score.
+
+00:02:10.967 --> 00:02:11.800
+Pick a company and qualify it.
+
+00:02:11.800 --> 00:02:15.733
+The verdict shows which fit criteria
+matched and which signals counted,
+
+00:02:15.733 --> 00:02:16.667
+with how far each has decayed.
+
+00:02:16.667 --> 00:02:20.200
+It also shows any cap or negative
+that applied, and committee coverage.
+
+00:02:20.200 --> 00:02:22.667
+The Hot list shows the same
+reasoning in a why drawer.
+
+00:02:22.667 --> 00:02:26.100
+If a score looks wrong, flag it. A
+rep flag becomes a learning input.
+
+00:02:26.167 --> 00:02:28.267
+Or ask your agent: "Preview the rescore,
+
+00:02:28.267 --> 00:02:30.400
+then score account Example
+Logistics and explain it.
+
+00:02:30.400 --> 00:02:32.467
+Tell me which environment you read".
+
+00:02:32.467 --> 00:02:35.167
+The preview shows how tiers
+would move, and changes nothing.
+
+00:02:35.167 --> 00:02:37.533
+Watch for this: an
+unsigned draft is ignored,
+
+00:02:37.533 --> 00:02:39.467
+so test in dev once it's signed there.
+
+00:02:39.500 --> 00:02:43.333
+One note on Dry Mode. Scoring sends
+nothing, so it runs in any mode.
+
+00:02:43.333 --> 00:02:46.300
+What Dry Mode holds is what leaves
+the building: a CRM write back,
+
+00:02:46.300 --> 00:02:48.767
+a routing notification
+or an outreach message
+
+00:02:48.767 --> 00:02:51.100
+stays a draft until that engine goes live.
+
+00:02:51.100 --> 00:02:53.333
+And scores are only as good
+as the data under them.
+
+00:02:53.333 --> 00:02:57.100
+On sample data you get sample scores,
+and gtm doctor tells you what's live.
+
+00:02:57.133 --> 00:03:01.167
+Step six, let outcomes improve it. In
+the console: Engines, Score, Learning.
+
+00:03:01.167 --> 00:03:04.667
+Each week the engine measures which
+criteria predicted replies, meetings,
+
+00:03:04.667 --> 00:03:06.900
+opportunities and wins, and
+proposes a new model version.
+
+00:03:06.900 --> 00:03:11.300
+Weights move only a limited step per
+run, and only on strong evidence.
+
+00:03:11.300 --> 00:03:14.500
+By default it only reports. A person
+other than the proposer approves,
+
+00:03:14.500 --> 00:03:16.467
+and then the organization is rescored.
+
+00:03:16.467 --> 00:03:19.067
+A new organization shows
+insufficient data at first.
+
+00:03:19.067 --> 00:03:22.100
+Or ask your agent: "Propose a
+scoring update from outcomes".
+
+00:03:22.167 --> 00:03:23.033
+The skeptic's line:
+
+00:03:23.033 --> 00:03:26.533
+a model that rewrites itself will
+drift where I can't see. It can't.
+
+00:03:26.533 --> 00:03:28.567
+Learning proposes, and a person approves.
+
+00:03:28.567 --> 00:03:30.267
+Weights move a limited step per run.
+
+00:03:30.267 --> 00:03:34.000
+The old version stays in history,
+and a rollback is one proposal away.
+
+00:03:34.033 --> 00:03:37.533
+In one pass: Define who you sell
+to and the weights that decide fit.
+
+00:03:37.533 --> 00:03:40.533
+Add the committee. Test on a real
+account, and read the reasons.
+
+00:03:40.533 --> 00:03:42.967
+Then let outcomes
+propose the next version.
+
+00:03:43.000 --> 00:03:45.900
+You now have a fit model you
+can read, test and improve,
+
+00:03:45.900 --> 00:03:49.500
+with two people on every change.
+Test it on one real account today.
+
+00:03:49.500 --> 00:03:52.567
+After this comes journeys,
+pipelines and revenue truth.

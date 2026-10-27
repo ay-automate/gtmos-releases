@@ -1,0 +1,342 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.933
+An upgrade only adds, and a
+failure swaps images back.
+
+00:00:02.933 --> 00:00:06.500
+Now the day something looks
+wrong and you don't know why.
+
+00:00:06.500 --> 00:00:09.433
+You can find out in minutes,
+with the cheapest check first.
+
+00:00:09.467 --> 00:00:11.600
+By the end you'll know
+the order to check in,
+
+00:00:11.600 --> 00:00:15.467
+the one command that starts it, and
+when a restore is the last resort.
+
+00:00:15.533 --> 00:00:18.433
+Sophia's queue is empty and
+Leo's sends stay drafts.
+
+00:00:18.433 --> 00:00:20.067
+He spends the afternoon in logs.
+
+00:00:20.067 --> 00:00:22.800
+The cause was one switch he
+could have read in ten seconds.
+
+00:00:22.800 --> 00:00:24.500
+Order saves the afternoon.
+
+00:00:24.533 --> 00:00:27.300
+Step one, the doctor. Run gtm doctor.
+
+00:00:27.300 --> 00:00:32.167
+It prints one line per model provider,
+backend, connector and sender: live,
+
+00:00:32.167 --> 00:00:34.900
+unverified, failed,
+fixture or not configured.
+
+00:00:34.900 --> 00:00:38.367
+Every line that isn't live
+comes with its exact fix.
+
+00:00:38.367 --> 00:00:42.300
+In the console: Integrations,
+Connections, Required connections.
+
+00:00:42.300 --> 00:00:46.733
+Or ask your agent: "Run gtm doctor
+and tell me what is not live".
+
+00:00:46.733 --> 00:00:47.933
+Pro move: add strict,
+
+00:00:47.933 --> 00:00:51.767
+and it exits with one when
+anything you need isn't live,
+
+00:00:51.767 --> 00:00:53.333
+so scripts can gate on it.
+
+00:00:53.400 --> 00:00:56.567
+Read the lines in order. Failed
+means that source is down.
+
+00:00:56.567 --> 00:00:59.167
+Fixture means a built in
+sample is standing in,
+
+00:00:59.167 --> 00:01:02.467
+and fixture data never
+counts toward your first win.
+
+00:01:02.467 --> 00:01:04.400
+Unverified means configured
+but not yet proven.
+
+00:01:04.400 --> 00:01:07.767
+And if sends stay drafts and
+no approval ever appears,
+
+00:01:07.767 --> 00:01:09.467
+check Dry Mode before anything else.
+
+00:01:09.467 --> 00:01:12.533
+Ask your agent: "Why are
+my sends staying drafts".
+
+00:01:12.600 --> 00:01:14.100
+Step two, the Harness section.
+
+00:01:14.100 --> 00:01:17.833
+When gtm init runs, it stamps
+three things into a file in your .
+
+00:01:17.833 --> 00:01:21.967
+claude folder: the CLI version, the
+skills release and the operation list.
+
+00:01:21.967 --> 00:01:24.500
+The doctor compares them
+with what's running now.
+
+00:01:24.500 --> 00:01:27.767
+If they differ, it warns that
+skills and reference are stale.
+
+00:01:27.767 --> 00:01:29.633
+The fix is gtm init with refresh.
+
+00:01:29.633 --> 00:01:33.767
+New skills come in and your edits are
+kept. Restart Claude Code afterwards.
+
+00:01:33.767 --> 00:01:37.033
+A project folder set up before
+this check reports as unstamped,
+
+00:01:37.033 --> 00:01:38.633
+which is informational only.
+
+00:01:38.700 --> 00:01:39.967
+Step three, monitors.
+
+00:01:39.967 --> 00:01:42.867
+They run in the background
+on data quality, bounce rate,
+
+00:01:42.867 --> 00:01:46.867
+complaint rate and content freshness.
+In the console: Operate, Monitors.
+
+00:01:46.867 --> 00:01:50.800
+Or ask your agent: "Which monitors
+are failing, and is any lane paused".
+
+00:01:50.800 --> 00:01:53.167
+A monitor can pause a lane after a spike.
+
+00:01:53.167 --> 00:01:56.900
+An approved action on a paused lane
+won't run until a person resumes it.
+
+00:01:56.900 --> 00:01:59.933
+That's the point: investigate
+first, then resume.
+
+00:01:59.967 --> 00:02:01.633
+Step four, follow the run.
+
+00:02:01.633 --> 00:02:05.500
+When an action didn't do what
+you expected, open Operate, Runs.
+
+00:02:05.500 --> 00:02:07.800
+Every flow run keeps a
+step by step journal.
+
+00:02:07.800 --> 00:02:10.900
+On the command line, gtm
+logs lists recent runs,
+
+00:02:10.900 --> 00:02:13.033
+and gtm trace with a
+run ID shows the steps.
+
+00:02:13.033 --> 00:02:16.000
+Errors carry a code, a
+message and a remediation,
+
+00:02:16.000 --> 00:02:19.567
+and the remediation usually names
+the exact fix. Read it first.
+
+00:02:19.567 --> 00:02:23.633
+The cost ledger links each
+spend line back to the same run.
+
+00:02:23.700 --> 00:02:26.967
+Step five, who did what. In the
+console: Settings, Audit log.
+
+00:02:26.967 --> 00:02:31.267
+Every operation, by a person or an
+agent, sits in a hash chained log,
+
+00:02:31.267 --> 00:02:33.033
+each entry tied to the one before.
+
+00:02:33.033 --> 00:02:36.767
+For one approval, its timeline shows
+the frozen payload, who proposed,
+
+00:02:36.767 --> 00:02:39.200
+which agent was involved, and who decided.
+
+00:02:39.267 --> 00:02:43.367
+If the agent says unauthorized, or
+every call is refused, check the key.
+
+00:02:43.367 --> 00:02:46.133
+Agent keys expire, after
+ninety days by default,
+
+00:02:46.133 --> 00:02:48.100
+and exchanged tokens last minutes.
+
+00:02:48.100 --> 00:02:51.100
+A refusal on every call can
+also mean the agent was killed,
+
+00:02:51.100 --> 00:02:53.600
+or the key belongs to
+another organization.
+
+00:02:53.600 --> 00:02:57.300
+A person issues a new key or
+revives the agent, under Settings.
+
+00:02:57.300 --> 00:02:58.067
+One more case.
+
+00:02:58.067 --> 00:03:02.067
+An auth expired error is a connection's
+sign in, such as Google or Slack,
+
+00:03:02.067 --> 00:03:05.300
+not your agent key. Reconnect
+it on the Connections page.
+
+00:03:05.367 --> 00:03:07.633
+Restoring from a backup
+is the last resort,
+
+00:03:07.633 --> 00:03:10.400
+for damage that something
+other than an upgrade caused.
+
+00:03:10.400 --> 00:03:13.400
+As the upgrade clip said, never
+restore over the live database.
+
+00:03:13.400 --> 00:03:17.133
+Rename it first, restore into a
+new one, and keep your master key,
+
+00:03:17.133 --> 00:03:20.767
+because backups don't contain it.
+A failed upgrade needs no restore.
+
+00:03:20.767 --> 00:03:22.700
+It already swapped the images back.
+
+00:03:22.733 --> 00:03:23.467
+Getting help.
+
+00:03:23.467 --> 00:03:27.633
+The troubleshooting guide is already
+in your project folder, under docs,
+
+00:03:27.633 --> 00:03:28.500
+gtmos, guides.
+
+00:03:28.500 --> 00:03:31.267
+It's written from the code, and
+your agent can read it with you.
+
+00:03:31.267 --> 00:03:35.567
+When you ask your team or us for help,
+send four things: the doctor output,
+
+00:03:35.567 --> 00:03:38.967
+the run I D, the approval number,
+and the version from gtm version.
+
+00:03:38.967 --> 00:03:40.000
+Never paste a key.
+
+00:03:40.033 --> 00:03:41.733
+You may be thinking: when it breaks,
+
+00:03:41.733 --> 00:03:44.333
+I'll be digging through logs
+at midnight. Mostly you won't.
+
+00:03:44.333 --> 00:03:45.967
+The doctor points at the line.
+
+00:03:45.967 --> 00:03:48.100
+Every error carries a
+remediation that names the fix.
+
+00:03:48.100 --> 00:03:50.767
+You only go deeper when the
+cheaper check tells you to.
+
+00:03:50.833 --> 00:03:55.533
+To recap: the order is the doctor, the
+readiness lines, Dry Mode, monitors,
+
+00:03:55.533 --> 00:03:57.333
+runs, then the audit log.
+
+00:03:57.333 --> 00:04:00.800
+Cheapest check first, and each one
+tells you whether to go deeper.
+
+00:04:00.867 --> 00:04:01.867
+That ends the series.
+
+00:04:01.867 --> 00:04:04.933
+You started with an empty folder
+and agents that move fast.
+
+00:04:04.933 --> 00:04:08.900
+You finish with definitions your people
+signed, engines that run on them,
+
+00:04:08.900 --> 00:04:09.600
+and a record of every step.
+
+00:04:09.600 --> 00:04:14.333
+The series followed the order you'd
+build in: plan, build, operate,
+
+00:04:14.333 --> 00:04:16.967
+automate, optimize, scale. An
+agent asks. A person decides.
+
+00:04:16.967 --> 00:04:18.900
+Return to the clip your path needs,
+
+00:04:18.900 --> 00:04:20.800
+and keep the troubleshooting guide close.

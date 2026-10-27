@@ -1,0 +1,401 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.167
+A brief now stays current, and a
+fact is only as strong as its source.
+
+00:00:04.167 --> 00:00:07.100
+Now the same standard for automation.
+
+00:00:07.100 --> 00:00:11.100
+See what a follow-up would have
+done last month, with zero writes,
+
+00:00:11.100 --> 00:00:12.400
+and only then switch it on.
+
+00:00:12.467 --> 00:00:16.600
+By the end you'll simulate a
+play and read what it earned.
+
+00:00:16.600 --> 00:00:18.867
+You'll pick the next one from the catalog,
+
+00:00:18.867 --> 00:00:22.100
+and ask Studio for a
+new one in a sentence.
+
+00:00:22.133 --> 00:00:25.367
+Leo switches on a follow up automation.
+
+00:00:25.367 --> 00:00:31.000
+A big import lands, and by morning
+every contact has a task and a draft.
+
+00:00:31.000 --> 00:00:34.733
+In most tools, the first
+rehearsal is production.
+
+00:00:34.800 --> 00:00:38.700
+A play is a declarative automation:
+a trigger, a filter, and steps.
+
+00:00:38.700 --> 00:00:41.667
+Each step is an operation,
+one of the typed,
+
+00:00:41.667 --> 00:00:44.767
+authorized actions your
+console and agent already use.
+
+00:00:44.767 --> 00:00:46.700
+That's the core guarantee:
+
+00:00:46.700 --> 00:00:49.467
+a play can never do what a
+person in that role couldn't,
+
+00:00:49.467 --> 00:00:52.367
+and your guardrails apply to every step.
+
+00:00:52.433 --> 00:00:55.667
+A trigger is an event, a
+schedule, or a segment.
+
+00:00:55.667 --> 00:01:00.333
+Open a play in Engines, Plays to
+see its trigger, filter and steps.
+
+00:01:00.333 --> 00:01:05.000
+Schedule plays fan out over an audience,
+like every deal stuck in a stage.
+
+00:01:05.000 --> 00:01:09.400
+Twenty five run at once by
+default, one per member per spell.
+
+00:01:09.433 --> 00:01:12.433
+Here's the rule that protects your data.
+
+00:01:12.433 --> 00:01:15.033
+Event plays never fire on bulk writes.
+
+00:01:15.033 --> 00:01:19.700
+An import or a sync can't set off
+a flood of follow ups at once.
+
+00:01:19.767 --> 00:01:23.167
+Step one: simulate first, so you
+see the effect before it exists.
+
+00:01:23.167 --> 00:01:25.800
+It replays the last thirty
+days of trigger history.
+
+00:01:25.800 --> 00:01:29.367
+You see the matches, what the filter
+removed, the actions it would take,
+
+00:01:29.367 --> 00:01:32.933
+what the gates and compliance
+rules would block, and the cost.
+
+00:01:32.933 --> 00:01:37.367
+It writes nothing. In the console:
+Engines, Plays, choose the play, Dry run.
+
+00:01:37.367 --> 00:01:39.900
+In the terminal: gtm play
+simulate, with the play key.
+
+00:01:39.900 --> 00:01:42.967
+Or ask your agent: "Simulate
+speed to lead over thirty days".
+
+00:01:42.967 --> 00:01:46.300
+Power habit: simulate before
+and after you edit the filter,
+
+00:01:46.300 --> 00:01:47.567
+and compare the two.
+
+00:01:47.633 --> 00:01:51.000
+Step two: promote it, so a
+person owns the decision.
+
+00:01:51.000 --> 00:01:53.800
+A second person signs the
+play like any definition,
+
+00:01:53.800 --> 00:01:58.933
+and promotion turns it on and says so.
+Steps that send are still proposals,
+
+00:01:58.933 --> 00:02:00.733
+so a different person approves each send.
+
+00:02:00.733 --> 00:02:05.400
+An operation can also tell a play
+to stop, with the reason recorded.
+
+00:02:05.433 --> 00:02:08.733
+Step three: read the results, so
+you judge a play by what it earned.
+
+00:02:08.733 --> 00:02:12.967
+In the console: Engines, Plays, Results,
+over seven, thirty or ninety days.
+
+00:02:12.967 --> 00:02:13.900
+Or ask your agent:
+
+00:02:13.900 --> 00:02:16.800
+"What did the renewal runway
+play produce over ninety days".
+
+00:02:16.800 --> 00:02:20.333
+You'll see runs, outcomes, credited
+revenue, spend, a funnel by step,
+
+00:02:20.333 --> 00:02:21.567
+and why runs were skipped.
+
+00:02:21.567 --> 00:02:25.667
+The honesty rule: a rate built on
+fewer than five cases shows no number,
+
+00:02:25.667 --> 00:02:28.200
+and says why, instead of
+a flattering percentage.
+
+00:02:28.200 --> 00:02:29.567
+Fixture runs are never counted.
+
+00:02:29.600 --> 00:02:35.767
+Every approval, ledger row and spend
+carries its play, run and step.
+
+00:02:35.767 --> 00:02:41.100
+So you can trace money to the
+exact step in Operate, Runs.
+
+00:02:41.167 --> 00:02:42.800
+Gotcha on spend:
+
+00:02:42.800 --> 00:02:46.000
+a per run budget only bites once a
+
+00:02:46.000 --> 00:02:50.167
+play scope cost budget
+exists in the ledger,
+
+00:02:50.167 --> 00:02:51.800
+so set that first.
+
+00:02:51.867 --> 00:02:54.033
+Step four: choose what to build next.
+
+00:02:54.033 --> 00:02:55.700
+The catalog scores every blueprint play,
+
+00:02:55.700 --> 00:02:58.633
+configured play and open
+request on impact and ease,
+
+00:02:58.633 --> 00:03:02.267
+and explains each score factor by
+factor. Impact weighs reach and fit.
+
+00:03:02.267 --> 00:03:04.867
+Ease weighs whether your data
+and connections are ready.
+
+00:03:04.867 --> 00:03:07.933
+In the console: Studio, plays
+catalog, and open a row.
+
+00:03:07.933 --> 00:03:11.567
+Or ask your agent: "Which plays
+should we turn on first, and why".
+
+00:03:11.567 --> 00:03:13.433
+Owners and admins can tune the weights.
+
+00:03:13.467 --> 00:03:15.133
+Blueprints ship ready plays.
+
+00:03:15.133 --> 00:03:19.167
+Speed to lead routes a form without
+taking the account from its owner,
+
+00:03:19.167 --> 00:03:20.500
+and skips customers.
+
+00:03:20.500 --> 00:03:23.767
+It creates a fifteen minute first
+touch task and drafts a proposed send.
+
+00:03:23.767 --> 00:03:25.733
+Meeting prep builds a brief and a task.
+
+00:03:25.733 --> 00:03:27.900
+The stage stuck nudge fires when an open
+
+00:03:27.900 --> 00:03:30.067
+deal has sat twenty one days or more.
+
+00:03:30.133 --> 00:03:35.033
+Renewal runway creates tasks
+ninety, sixty and thirty days out,
+
+00:03:35.033 --> 00:03:36.700
+and drafts a check in at thirty.
+
+00:03:36.700 --> 00:03:41.267
+Champion change creates a
+task to find the new champion.
+
+00:03:41.333 --> 00:03:45.033
+A typical week: apply a blueprint,
+and its plays arrive in dev.
+
+00:03:45.033 --> 00:03:46.367
+Simulate the ones you want.
+
+00:03:46.367 --> 00:03:50.333
+Promote the ones that hold up,
+with a second person signing.
+
+00:03:50.333 --> 00:03:51.533
+Read the results on Friday.
+
+00:03:51.533 --> 00:03:55.800
+Mia owns the choices, Leo the wiring,
+and Orbit the repetitive part,
+
+00:03:55.800 --> 00:03:57.000
+under your rules.
+
+00:03:57.067 --> 00:04:01.267
+What if the play you want isn't
+in the catalog? That's Studio.
+
+00:04:01.267 --> 00:04:06.767
+You describe a play or an app in
+one sentence, and GTM OS drafts it,
+
+00:04:06.767 --> 00:04:07.500
+behind approval.
+
+00:04:07.533 --> 00:04:10.200
+In the console: Studio,
+and type the sentence.
+
+00:04:10.200 --> 00:04:14.033
+Or ask your agent in the same
+words: "Ask Studio for a play:
+
+00:04:14.033 --> 00:04:16.833
+when a deal sits three weeks in one stage,
+
+00:04:16.833 --> 00:04:19.833
+nudge the owner and draft
+a note to the buyer".
+
+00:04:19.833 --> 00:04:22.533
+Studio starts from the
+closest catalog play.
+
+00:04:22.567 --> 00:04:26.333
+It resolves references against
+your definitions and connections,
+
+00:04:26.333 --> 00:04:28.133
+and lists the data needed, the approvers,
+
+00:04:28.133 --> 00:04:30.400
+a size estimate and its trust mode.
+
+00:04:30.400 --> 00:04:33.233
+Anything it can't know
+becomes a numbered ask.
+
+00:04:33.233 --> 00:04:36.033
+With no model route for
+extraction, the draft says so,
+
+00:04:36.033 --> 00:04:38.333
+instead of pretending it was refined.
+
+00:04:38.400 --> 00:04:42.100
+Answer the asks, then submit. In the
+console: Studio, Submit for approval.
+
+00:04:42.100 --> 00:04:46.067
+Or ask your agent: "Submit the
+stage nudge request for approval".
+
+00:04:46.067 --> 00:04:48.833
+A different person approves,
+and the play lands in dev.
+
+00:04:48.833 --> 00:04:51.233
+Reaching production still
+takes signing and promotion,
+
+00:04:51.233 --> 00:04:54.900
+and shipping a play never
+turns an engine live.
+
+00:04:54.900 --> 00:04:57.900
+A rejected or expired approval
+returns as changes requested.
+
+00:04:57.933 --> 00:05:02.633
+Here's the doubt: an automation
+touching my CRM while I'm asleep?
+
+00:05:02.633 --> 00:05:06.167
+Every step is an operation,
+so a role's limits apply.
+
+00:05:06.167 --> 00:05:08.467
+Event plays ignore bulk writes.
+
+00:05:08.467 --> 00:05:12.767
+Sends stay proposals that a
+different person approves.
+
+00:05:12.800 --> 00:05:18.133
+Two honest limits. Holdouts, which would
+keep a control group out of a play,
+
+00:05:18.133 --> 00:05:22.767
+aren't shipped yet. Neither are play
+libraries for account based programs,
+
+00:05:22.767 --> 00:05:25.100
+lifecycle and routing service levels.
+
+00:05:25.167 --> 00:05:30.100
+Quick pass: Simulate first, a person
+signs, and the results decide.
+
+00:05:30.100 --> 00:05:33.333
+The catalog tells you what to build next,
+
+00:05:33.333 --> 00:05:36.600
+and Studio turns a
+sentence into a request.
+
+00:05:36.633 --> 00:05:40.133
+So you can test a play
+before it touches anyone,
+
+00:05:40.133 --> 00:05:44.967
+then ask for the next one in a
+sentence. Run one simulation today.
+
+00:05:44.967 --> 00:05:49.900
+Up next, how the engines work together:
+one loop, from signal to outcome.

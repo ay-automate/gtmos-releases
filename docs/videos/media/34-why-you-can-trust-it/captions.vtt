@@ -1,0 +1,233 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.800
+You've set how fast you go live,
+with every limit enforced for you.
+
+00:00:03.800 --> 00:00:05.500
+Now the proof that those limits hold.
+
+00:00:05.500 --> 00:00:08.400
+Built so you can verify it
+instead of taking it on faith.
+
+00:00:08.400 --> 00:00:10.933
+By the end you'll know
+what keeps your data yours,
+
+00:00:10.933 --> 00:00:14.567
+what proves the record wasn't rewritten,
+and what no agent can do alone.
+
+00:00:14.600 --> 00:00:18.033
+Leo is about to connect the CRM, a
+mailbox and an agent to one system.
+
+00:00:18.033 --> 00:00:21.833
+The question is what stops it
+going wrong, and how he'd know.
+
+00:00:21.900 --> 00:00:25.567
+First, separation. Every organization's
+rows sit behind row-level security,
+
+00:00:25.567 --> 00:00:26.467
+enforced by the database itself.
+
+00:00:26.467 --> 00:00:28.800
+The application connects
+with a database role
+
+00:00:28.800 --> 00:00:30.867
+that isn't allowed to bypass that fence.
+
+00:00:30.867 --> 00:00:31.900
+So a bug in a screen,
+
+00:00:31.900 --> 00:00:35.233
+a query or an agent prompt can't
+reach another organization's rows,
+
+00:00:35.233 --> 00:00:37.900
+because the database never returns
+them. Your data stays yours.
+
+00:00:37.900 --> 00:00:39.833
+Private and team only
+records are enforced as well,
+
+00:00:39.833 --> 00:00:41.100
+rather than hidden on screen.
+
+00:00:41.167 --> 00:00:42.533
+Second, a record you can check.
+
+00:00:42.533 --> 00:00:45.867
+Every operation, by a person or
+an agent, goes into the audit log.
+
+00:00:45.867 --> 00:00:48.200
+Each entry is chained to the
+one before it with a hash.
+
+00:00:48.200 --> 00:00:51.267
+Change an old entry, or remove one,
+and everything after it stops matching.
+
+00:00:51.267 --> 00:00:53.733
+So a reviewer can trust the
+history without taking our word.
+
+00:00:53.733 --> 00:00:56.800
+Approvals carry the same trail: who
+proposed, which agent was involved,
+
+00:00:56.800 --> 00:00:58.367
+who approved, and what was frozen.
+
+00:00:58.400 --> 00:00:59.267
+Third, secrets.
+
+00:00:59.267 --> 00:01:02.733
+Stored credentials are encrypted under
+a master key that lives with you,
+
+00:01:02.733 --> 00:01:06.333
+not in the database and not in a backup.
+Connection credentials are sealed.
+
+00:01:06.333 --> 00:01:08.733
+An agent key is shown
+once, expires on its own,
+
+00:01:08.733 --> 00:01:10.200
+and can never create other keys.
+
+00:01:10.200 --> 00:01:13.600
+Your project folder holds no key
+at all, only a reference to one.
+
+00:01:13.667 --> 00:01:16.933
+Fourth, the actions reserved for
+people, and no setting changes that:
+
+00:01:16.933 --> 00:01:19.333
+approving, signing a definition,
+executing an approved action,
+
+00:01:19.333 --> 00:01:21.700
+switching Dry Mode, creating
+keys and assigning roles.
+
+00:01:21.700 --> 00:01:25.333
+An agent that tries is refused,
+and the refusal is useful.
+
+00:01:25.333 --> 00:01:26.700
+It stops and names the
+screen and the button.
+
+00:01:26.700 --> 00:01:29.533
+Even for people, the proposer
+can't approve their own work,
+
+00:01:29.533 --> 00:01:31.633
+and neither can the
+person an agent acts for.
+
+00:01:31.667 --> 00:01:32.933
+Last, extensions.
+
+00:01:32.933 --> 00:01:35.033
+A package is signed, by us or by
+a publisher you chose to trust.
+
+00:01:35.033 --> 00:01:38.833
+It declares what it may write, and
+what it reaches out to is checked.
+
+00:01:38.833 --> 00:01:42.233
+Installing or enabling one is itself
+a proposal that a person approves,
+
+00:01:42.233 --> 00:01:43.633
+so nothing arrives on faith.
+
+00:01:43.700 --> 00:01:46.267
+Say it out loud: that's a
+vendor grading its own homework.
+
+00:01:46.267 --> 00:01:48.767
+So don't take our word. A
+reviewer can check the chain.
+
+00:01:48.767 --> 00:01:50.100
+The master key stays with you.
+
+00:01:50.100 --> 00:01:53.033
+And the database holds the fence
+even when a screen has a bug.
+
+00:01:53.067 --> 00:01:53.833
+Here's how to check.
+
+00:01:53.833 --> 00:01:57.233
+In the console: Approvals, then an
+approval's timeline, and Settings,
+
+00:01:57.233 --> 00:01:58.400
+Audit log for the full chain.
+
+00:01:58.400 --> 00:02:00.567
+Or ask your agent: "Who
+approved the last send,
+
+00:02:00.567 --> 00:02:01.533
+and what exactly did they approve".
+
+00:02:01.533 --> 00:02:04.467
+Ask it to approve, and it stops
+and sends you to the right screen.
+
+00:02:04.467 --> 00:02:05.667
+One habit worth copying:
+
+00:02:05.667 --> 00:02:07.167
+pick one approval a month and compare
+
+00:02:07.167 --> 00:02:09.200
+its frozen payload with
+what actually went out.
+
+00:02:09.267 --> 00:02:10.733
+None of this replaces your judgment.
+
+00:02:10.733 --> 00:02:13.633
+Keep your master key somewhere safe,
+review who holds approval rights,
+
+00:02:13.633 --> 00:02:15.500
+and use Dry Mode while
+you learn the system.
+
+00:02:15.533 --> 00:02:19.400
+Boiled down: a fence the database
+enforces, a log that shows tampering,
+
+00:02:19.400 --> 00:02:21.267
+and actions only people take.
+
+00:02:21.300 --> 00:02:24.333
+So you can hand an agent real
+access and still prove what it did.
+
+00:02:24.333 --> 00:02:26.433
+Open the audit log and
+read one entry today.
+
+00:02:26.433 --> 00:02:29.767
+The next clip is Dashboards, your
+daily rhythm and what it costs:
+
+00:02:29.767 --> 00:02:31.833
+how you run all of this in minutes a day.

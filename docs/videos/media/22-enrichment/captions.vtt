@@ -1,0 +1,326 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.933
+Last clip Score showed the
+reasons for every verdict.
+
+00:00:02.933 --> 00:00:05.533
+A reason needs data,
+and your data has holes.
+
+00:00:05.533 --> 00:00:08.800
+Enrichment fills the missing
+emails, phones and firmographics,
+
+00:00:08.800 --> 00:00:11.700
+buys each answer once, and
+stops at the cap you set.
+
+00:00:11.767 --> 00:00:15.967
+By the end you'll quote a run, set a
+cap, and read coverage for every field.
+
+00:00:15.967 --> 00:00:18.600
+Enrichment is the engine
+that fills empty fields
+
+00:00:18.600 --> 00:00:21.667
+on companies and contacts
+with provider verified values,
+
+00:00:21.667 --> 00:00:22.700
+and keeps them fresh.
+
+00:00:22.733 --> 00:00:26.133
+Leo pulls the hot accounts and
+finds half the phone numbers blank.
+
+00:00:26.133 --> 00:00:29.067
+Buying them by hand means paying
+twice for the same answer,
+
+00:00:29.067 --> 00:00:30.567
+and no value carries a date.
+
+00:00:30.567 --> 00:00:33.933
+Enrichment prices the job
+first, and dates every answer.
+
+00:00:33.967 --> 00:00:35.267
+First, the waterfall.
+
+00:00:35.267 --> 00:00:38.900
+For each empty field, Enrichment asks
+the first provider in your binding.
+
+00:00:38.900 --> 00:00:42.267
+If that one has nothing, it asks the
+next, and it stops at the first answer.
+
+00:00:42.267 --> 00:00:45.300
+Providers are reached through
+looot with your organization's key,
+
+00:00:45.300 --> 00:00:46.900
+so connecting looot once is enough.
+
+00:00:46.900 --> 00:00:50.800
+An answer is bought once and cached,
+so the same question never costs twice.
+
+00:00:50.867 --> 00:00:52.667
+Second, it fills empty fields only.
+
+00:00:52.667 --> 00:00:55.667
+A lookup never overwrites a
+value already on the record.
+
+00:00:55.667 --> 00:00:57.533
+When a newer enriched value differs,
+
+00:00:57.533 --> 00:01:00.467
+the company or contact page
+shows Newer enriched values,
+
+00:01:00.467 --> 00:01:01.567
+with Propose update.
+
+00:01:01.567 --> 00:01:04.800
+The approval shows the old and
+new value, provenance, confidence,
+
+00:01:04.800 --> 00:01:08.467
+the reason, and an undo. A value a
+person typed needs an explicit confirm,
+
+00:01:08.467 --> 00:01:10.533
+and only a person can approve it.
+
+00:01:10.600 --> 00:01:11.700
+Third, freshness.
+
+00:01:11.700 --> 00:01:15.500
+Every value is stamped with when it
+was verified, how long it stays fresh,
+
+00:01:15.500 --> 00:01:16.667
+its confidence and its provider.
+
+00:01:16.667 --> 00:01:19.267
+By default an email stays
+fresh about three months,
+
+00:01:19.267 --> 00:01:21.233
+and a phone and firmographics about six.
+
+00:01:21.233 --> 00:01:24.533
+Override any window in the
+enrichment policy definition.
+
+00:01:24.533 --> 00:01:26.267
+A refresh re-checks only stale values
+
+00:01:26.267 --> 00:01:28.100
+that Enrichment wrote and nobody edited.
+
+00:01:28.100 --> 00:01:30.600
+If a provider has nothing,
+the old value stays,
+
+00:01:30.600 --> 00:01:32.033
+and it tries again a week later.
+
+00:01:32.100 --> 00:01:35.367
+Providers fail. On an outage,
+a timeout or a server error,
+
+00:01:35.367 --> 00:01:37.900
+the lookup falls through to the
+next provider in the binding.
+
+00:01:37.900 --> 00:01:40.167
+Every attempt is recorded.
+Here's the honest part.
+
+00:01:40.167 --> 00:01:44.000
+A fallback after a timeout can mean two
+providers were asked for one lookup.
+
+00:01:44.000 --> 00:01:46.833
+The attempt log shows it,
+so a fallback is never free.
+
+00:01:46.867 --> 00:01:48.100
+Money has three guards.
+
+00:01:48.100 --> 00:01:50.333
+Every run is quoted first,
+an estimate with no spend.
+
+00:01:50.333 --> 00:01:52.833
+Each binding carries a
+price ceiling per lookup.
+
+00:01:52.833 --> 00:01:54.867
+And the owner or an
+admin sets a monthly cap.
+
+00:01:54.867 --> 00:01:57.467
+When money is limited, the best
+accounts are enriched first,
+
+00:01:57.467 --> 00:01:59.133
+and cached answers still run free.
+
+00:01:59.133 --> 00:02:02.333
+In the console: Engines, Enrichment,
+where you change the cap.
+
+00:02:02.333 --> 00:02:05.533
+Or ask your agent: "How much of the
+monthly enrichment cap is left? "
+
+00:02:05.600 --> 00:02:06.167
+Now run it.
+
+00:02:06.167 --> 00:02:08.900
+In the console: Engines, Enrichment
+shows the mode, the fill rate,
+
+00:02:08.900 --> 00:02:12.733
+spend this month, your bindings, the
+freshness windows and the run history.
+
+00:02:12.733 --> 00:02:15.800
+Or ask your agent: "Quote filling
+missing emails for the hot list".
+
+00:02:15.800 --> 00:02:17.467
+You'll see an estimate and no spend.
+
+00:02:17.500 --> 00:02:20.633
+Pro move: quote first, then run
+with the quote as your ceiling.
+
+00:02:20.633 --> 00:02:22.967
+Ask your agent: "Run
+enrichment for the hot list,
+
+00:02:22.967 --> 00:02:25.367
+but stay under the estimate".
+Or let a play do it.
+
+00:02:25.367 --> 00:02:27.367
+The weekly account
+enrichment play is capped,
+
+00:02:27.367 --> 00:02:30.667
+and the enrich on create play
+refuses to run without a monthly cap.
+
+00:02:30.667 --> 00:02:33.967
+In Dry Mode, a run returns the
+estimate and attempts no lookup.
+
+00:02:34.033 --> 00:02:36.333
+The dashboard answers one
+question: how complete are we?
+
+00:02:36.333 --> 00:02:39.367
+You see the fill rate, the spend,
+and coverage for each field,
+
+00:02:39.367 --> 00:02:42.433
+with how many values are fresh
+and how many have gone stale.
+
+00:02:42.433 --> 00:02:44.600
+Or ask your agent: "What
+is our enrichment coverage,
+
+00:02:44.600 --> 00:02:46.033
+and which values are stale? "
+
+00:02:46.067 --> 00:02:47.500
+It improves without guessing.
+
+00:02:47.500 --> 00:02:50.467
+Freshness windows and confidence
+decide what gets bought again,
+
+00:02:50.467 --> 00:02:53.267
+so spend goes to values going
+stale and fields still empty.
+
+00:02:53.267 --> 00:02:55.733
+You set the provider order in the binding,
+
+00:02:55.733 --> 00:02:57.233
+and the attempt log shows who answered.
+
+00:02:57.233 --> 00:02:59.433
+Change either in the
+console, or ask your agent,
+
+00:02:59.433 --> 00:03:00.900
+and a different person signs.
+
+00:03:00.933 --> 00:03:03.533
+Enrichment feeds the rest.
+Fit fields sharpen Score.
+
+00:03:03.533 --> 00:03:06.433
+Backfilled domains help
+Merges spot duplicates.
+
+00:03:06.433 --> 00:03:08.400
+Routing reads country and size,
+
+00:03:08.400 --> 00:03:10.900
+and Outreach personalizes
+with what's now known.
+
+00:03:10.967 --> 00:03:13.967
+Not built yet: the title,
+seniority and job change steps.
+
+00:03:13.967 --> 00:03:16.667
+They're planned, and nothing
+you've seen here depends on them.
+
+00:03:16.700 --> 00:03:19.933
+You may be thinking: an engine with
+a budget will quietly spend it.
+
+00:03:19.933 --> 00:03:23.467
+It can't. Every run is quoted first,
+each lookup has a price ceiling,
+
+00:03:23.467 --> 00:03:25.100
+and the monthly cap stops the rest.
+
+00:03:25.100 --> 00:03:27.167
+In Dry Mode, nothing is looked up at all.
+
+00:03:27.233 --> 00:03:30.367
+To recap: The waterfall
+stops at the first answer,
+
+00:03:30.367 --> 00:03:32.767
+and a person approves
+every change to a value.
+
+00:03:32.767 --> 00:03:35.433
+Quote first, buy once, date every value.
+
+00:03:35.467 --> 00:03:38.867
+Every gap is now filled at a price
+you set, with a date on every value.
+
+00:03:38.867 --> 00:03:42.933
+Quote one run from Engines, Enrichment.
+Up next, Signals and intent,
+
+00:03:42.933 --> 00:03:45.567
+where the market starts
+talking about your accounts.

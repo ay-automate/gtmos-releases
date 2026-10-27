@@ -1,0 +1,377 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.100
+Your mornings are short, and
+your ledger explains every line.
+
+00:00:03.100 --> 00:00:05.833
+Now the road a change takes
+before it reaches that morning.
+
+00:00:05.833 --> 00:00:08.367
+Change anything safely, then
+promote it with confidence.
+
+00:00:08.367 --> 00:00:11.333
+By the end you'll know where a
+change lands, what's real there,
+
+00:00:11.333 --> 00:00:13.400
+and how it reaches
+production with one approval.
+
+00:00:13.433 --> 00:00:16.033
+Leo edits the scoring model
+in the last week of a quarter.
+
+00:00:16.033 --> 00:00:19.067
+By the next pipeline review, the
+Hot list has reshuffled under Mia.
+
+00:00:19.067 --> 00:00:22.367
+Nobody read the new ranking first.
+Here, that change waits in dev.
+
+00:00:22.433 --> 00:00:24.600
+Every organization has three environments.
+
+00:00:24.600 --> 00:00:27.667
+Dev is where every change lands
+first: blueprints you apply,
+
+00:00:27.667 --> 00:00:30.667
+definitions you edit, and the
+plays and apps Studio ships.
+
+00:00:30.667 --> 00:00:32.033
+Staging is where you rehearse.
+
+00:00:32.033 --> 00:00:35.900
+Prod is what your organization actually
+runs: the runtime, scheduled plays,
+
+00:00:35.900 --> 00:00:38.667
+bindings and the research
+agent all read prod.
+
+00:00:38.733 --> 00:00:40.833
+Now the rule behind most surprises.
+
+00:00:40.833 --> 00:00:42.533
+An engine uses the signed version of a
+
+00:00:42.533 --> 00:00:44.600
+definition in the
+environment the call runs in,
+
+00:00:44.600 --> 00:00:46.133
+and otherwise its built in default.
+
+00:00:46.133 --> 00:00:48.600
+A draft, or one that's
+only proposed, is ignored.
+
+00:00:48.600 --> 00:00:52.500
+So when a change seems to do nothing,
+it usually lives in dev, is unsigned,
+
+00:00:52.500 --> 00:00:54.000
+or the call ran somewhere else.
+
+00:00:54.033 --> 00:00:57.033
+The switcher in the header shows which
+environment your console is reading.
+
+00:00:57.033 --> 00:01:00.267
+The gotcha is that a change set runs
+in the environment it was proposed for,
+
+00:01:00.267 --> 00:01:01.433
+whatever environment you're viewing.
+
+00:01:01.433 --> 00:01:04.400
+Approving a dev change while you
+look at prod doesn't push it to prod.
+
+00:01:04.400 --> 00:01:05.133
+Or ask your agent:
+
+00:01:05.133 --> 00:01:07.667
+"List the environments and tell
+me which one you are reading".
+
+00:01:07.700 --> 00:01:10.933
+Now what's real in each. Config
+changes apply in their own environment,
+
+00:01:10.933 --> 00:01:13.533
+so a definition you apply
+to dev is live in dev.
+
+00:01:13.533 --> 00:01:14.933
+Customer facing effects differ.
+
+00:01:14.933 --> 00:01:18.867
+In dev and staging, a send, a CRM
+write or a publish is recorded,
+
+00:01:18.867 --> 00:01:21.533
+not performed. The approval
+reads not applied, dev.
+
+00:01:21.533 --> 00:01:23.000
+And only prod fires for real.
+
+00:01:23.067 --> 00:01:26.433
+Step one, apply to dev, so every
+change starts where it can't hurt.
+
+00:01:26.433 --> 00:01:29.567
+In the console: Environments,
+or a blueprint's Apply button.
+
+00:01:29.567 --> 00:01:33.200
+On the command line, gtm plan previews,
+and gtm apply with env dev applies.
+
+00:01:33.200 --> 00:01:33.833
+Or ask your agent:
+
+00:01:33.833 --> 00:01:36.533
+"Apply the outbound blueprint
+to dev and show me the plan".
+
+00:01:36.533 --> 00:01:40.233
+It becomes a change set, and a different
+person approves it in Approvals.
+
+00:01:40.233 --> 00:01:44.000
+You can't apply a definition straight
+to prod, because the system refuses.
+
+00:01:44.067 --> 00:01:45.233
+Step two, validate in dev.
+
+00:01:45.233 --> 00:01:48.333
+Run the engine, then read what
+it did in the actions ledger,
+
+00:01:48.333 --> 00:01:51.300
+and because effects are recorded,
+not sent, you can run it freely.
+
+00:01:51.300 --> 00:01:53.233
+Mia checks the ranking
+against her sense of fit.
+
+00:01:53.233 --> 00:01:56.367
+In the console: switch to dev in
+the header, then Engines, Score.
+
+00:01:56.367 --> 00:01:59.333
+Or ask your agent to score an
+account in dev and explain it.
+
+00:01:59.367 --> 00:02:02.700
+Step three, sign, because engines
+read only signed definitions.
+
+00:02:02.700 --> 00:02:04.167
+Your definitions, signed once.
+
+00:02:04.167 --> 00:02:07.167
+Propose the definitions for signing,
+and a person who isn't the proposer,
+
+00:02:07.167 --> 00:02:10.067
+or the human behind a
+proposing agent, signs them.
+
+00:02:10.067 --> 00:02:12.833
+In the console: Environments, Go
+live, Review and sign all proposed.
+
+00:02:12.833 --> 00:02:13.633
+On the command line,
+
+00:02:13.633 --> 00:02:16.400
+gtm definition sign all with env
+dev signs everything in one go.
+
+00:02:16.400 --> 00:02:20.367
+Or ask your agent: "Which definitions
+are waiting for a signature".
+
+00:02:20.400 --> 00:02:23.833
+Step four, promote. The Environments
+page shows drift as a banner,
+
+00:02:23.833 --> 00:02:26.400
+naming the definitions that
+are in dev and not live.
+
+00:02:26.400 --> 00:02:28.900
+Open Go live for the plan
+diff and an impact preview,
+
+00:02:28.900 --> 00:02:30.400
+then choose Promote dev to prod.
+
+00:02:30.400 --> 00:02:33.767
+It's one approval, and the change walks
+hop by hop, dev to staging to prod,
+
+00:02:33.767 --> 00:02:36.267
+re-checking each item on the way.
+
+00:02:36.267 --> 00:02:39.033
+Anything that changed after
+approval is skipped, not guessed.
+
+00:02:39.033 --> 00:02:41.667
+On the command line, gtm
+promote all dev prod does it.
+
+00:02:41.667 --> 00:02:44.933
+Or ask your agent: "Preview promoting
+everything from dev to prod".
+
+00:02:44.933 --> 00:02:48.133
+Operator tip: add preview first,
+every time, to see the plan.
+
+00:02:48.167 --> 00:02:49.900
+Read the plan before you approve it.
+
+00:02:49.900 --> 00:02:52.367
+Each resource lists its
+version and a top level diff.
+
+00:02:52.367 --> 00:02:54.733
+Some are skipped, each with its reason:
+
+00:02:54.733 --> 00:02:57.533
+an unsigned definition bound
+for prod, a deprecated version,
+
+00:02:57.533 --> 00:03:00.500
+a per environment package default,
+or something already live.
+
+00:03:00.567 --> 00:03:02.800
+Step five, roll back when
+a change disappoints.
+
+00:03:02.800 --> 00:03:05.467
+It's a proposal like any other,
+a different person approves,
+
+00:03:05.467 --> 00:03:07.033
+and only that definition changes.
+
+00:03:07.033 --> 00:03:10.267
+In the console: Environments, pick
+the definition and an earlier version.
+
+00:03:10.267 --> 00:03:12.167
+On the command line, gtm
+rollback takes the kind,
+
+00:03:12.167 --> 00:03:14.533
+the key and the version to return to.
+
+00:03:14.533 --> 00:03:17.433
+Or ask your agent: "Roll back the
+scoring model to the previous version".
+
+00:03:17.467 --> 00:03:20.900
+To catch drift before it bites,
+gtm check compares environments,
+
+00:03:20.900 --> 00:03:24.333
+in a script or in CI. The Environments
+banner shows the same thing.
+
+00:03:24.333 --> 00:03:27.133
+Or ask your agent: "What
+is in dev and not live".
+
+00:03:27.167 --> 00:03:30.033
+Need another environment? Create a
+named one, for a client rehearsal,
+
+00:03:30.033 --> 00:03:33.500
+as a proposal that needs an approval.
+Studio ships into dev by default.
+
+00:03:33.567 --> 00:03:34.667
+Three messages you'll meet.
+
+00:03:34.667 --> 00:03:37.300
+When it says the source version
+is draft, sign it first.
+
+00:03:37.300 --> 00:03:40.133
+When it says you proposed this
+version, a different person signs.
+
+00:03:40.133 --> 00:03:44.033
+And an illegal promotion from prod to
+dev means promotion only moves upward.
+
+00:03:44.067 --> 00:03:45.500
+A typical week. On Monday,
+
+00:03:45.500 --> 00:03:47.300
+Leo changes the scoring model in dev and
+
+00:03:47.300 --> 00:03:49.167
+rehearses it in staging with Dry Mode on,
+
+00:03:49.167 --> 00:03:50.600
+while Sophia reads the drafts.
+
+00:03:50.600 --> 00:03:53.367
+On Tuesday the definitions are
+signed, one approval promotes them,
+
+00:03:53.367 --> 00:03:56.533
+and Mia checks the Hot list. Nothing
+touched production until Tuesday.
+
+00:03:56.600 --> 00:03:59.467
+The pushback: three environments
+is process for its own sake.
+
+00:03:59.467 --> 00:04:01.900
+The system enforces it, so
+nobody has to remember it.
+
+00:04:01.900 --> 00:04:04.867
+You can't apply straight to prod.
+You can't sign your own proposal.
+
+00:04:04.867 --> 00:04:06.567
+And promotion only moves upward.
+
+00:04:06.600 --> 00:04:09.367
+The short version: Change in
+dev, a different person signs,
+
+00:04:09.367 --> 00:04:12.433
+and one approval promotes it. Roll
+back one definition when you need to.
+
+00:04:12.500 --> 00:04:14.767
+So you change anything
+without touching production,
+
+00:04:14.767 --> 00:04:17.600
+and you can say exactly when it went live.
+
+00:04:17.600 --> 00:04:19.600
+Run gtm check today and see what's in dev.
+
+00:04:19.600 --> 00:04:22.833
+After this comes Tutorial: going
+live, your first real send, safely.
