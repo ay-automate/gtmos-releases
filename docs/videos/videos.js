@@ -283,7 +283,7 @@
     root.appendChild(pager);
 
     function fill() {
-      if (c.transcript && !/.md$/i.test(c.transcript)) {
+      if (c.transcript && !/\.md$/i.test(c.transcript)) {
         fetch(c.transcript).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
           trBody.appendChild(el("pre", { text: t }));
         }, vttFallback);
