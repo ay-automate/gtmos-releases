@@ -94,7 +94,7 @@ function blocks(lines) {
   return html.join("\n");
 }
 
-const md = readFileSync(src, "utf8").replace(/\r/g, "");
+const md = readFileSync(src, "utf8").replace(/\r/g, "").replace(/<!-- release-status:start -->[\s\S]*?<!-- release-status:end -->\n*/g, "");
 const lines = md.split("\n");
 const h1 = (lines.find((l) => l.startsWith("# ")) || `# GTM OS ${version}`).slice(2);
 const body = blocks(lines.filter((l, idx) => !(idx === lines.indexOf("# " + h1))));
@@ -110,6 +110,8 @@ const page = `<!doctype html>
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
+<script src="assets/release-status.js"></script>
+<script src="assets/release-banner.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>

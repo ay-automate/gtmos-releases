@@ -43,3 +43,9 @@ notes and this site say 0.2.5. Fix SELF-HOST.md.
 - The player sets no `crossorigin` attribute (release hosts send no CORS headers) and shows a message when
   the file is not reachable. Previous/next from a published clip skip coming-soon clips.
 - Landing and series pages read the published count from `videos.json`. They say these are first cuts.
+
+## Rollout banner
+`docs/assets/release-status.js` holds the one setting (`published: false`). While false, every page shows a
+dismissible "0.2.5 is rolling out" banner (`release-banner.js`) and the landing page adds "Release 0.2.5
+(rolling out)" lines; README.md and releases/0.2.5.md carry the same sentence between release-status markers.
+When 0.2.5 is on npm and the registry, run `node tools/set-release-published.mjs`, then commit and push.

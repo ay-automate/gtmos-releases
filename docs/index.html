@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="assets/fonts.css">
 <link rel="stylesheet" href="assets/site.css">
 <script src="assets/site.js"></script>
+<script src="assets/release-status.js"></script>
+<script src="assets/release-banner.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -88,6 +90,7 @@
           <pre class="codebox"><span class="p">$ </span>npm i -g @gtmos/cli
 <span class="p">$ </span>mkdir my-gtm &amp;&amp; cd my-gtm
 <span class="p">$ </span>gtm init<button class="copy" type="button" data-copy="npm i -g @gtmos/cli&#10;mkdir my-gtm &amp;&amp; cd my-gtm&#10;gtm init" aria-label="Copy install commands">Copy</button></pre>
+          <p class="hint" data-rollout hidden><b>Release 0.2.5 (rolling out).</b> Until it is published, this installs the previous release.</p>
           <p class="hint">Open Claude Code in that folder and run <code>/setup-gtmos</code>. Claude asks only for what a person has to provide.</p>
         </div>
         <div class="card">
@@ -95,6 +98,7 @@
           <pre class="codebox"><span class="p">$ </span>npm i -g @gtmos/cli@latest
 <span class="p">$ </span>gtm upgrade --check
 <span class="p">$ </span>gtm upgrade --channel stable --yes<button class="copy" type="button" data-copy="npm i -g @gtmos/cli@latest&#10;gtm upgrade --check&#10;gtm upgrade --channel stable --yes" aria-label="Copy upgrade commands">Copy</button></pre>
+          <p class="hint" data-rollout hidden><b>Release 0.2.5 (rolling out).</b> Until it is published, this upgrades to the previous release.</p>
           <p class="hint">Upgrade the CLI first. Upgrades snapshot your data first, and <code>--dry-run</code> rehearses one. A pinned install only moves when you choose <code>--channel</code> or <code>--to</code>.</p>
         </div>
       </div>
@@ -108,6 +112,7 @@
         <div>
           <p class="step-label">Release</p>
           <p class="big-ver">GTM OS 0.2.5</p>
+          <p class="step-label" data-rollout hidden style="margin:8px 0 0">Release 0.2.5 (rolling out)</p>
           <p style="color:var(--muted);margin-top:10px">Engines that learn from outcomes, claims checked against your proof, a guided setup wizard, and a server that is closed to the network by default.</p>
           <ul>
             <li>Setup wizard, first-win checklist and opt-in nudges</li>
