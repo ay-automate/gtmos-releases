@@ -1,0 +1,47 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-10-27T18:55:13.798Z",
+  "expiresAt": "2027-01-25T18:55:13.798Z",
+  "channels": {
+    "beta": "0.2.5",
+    "stable": "0.2.5"
+  },
+  "releases": [
+    {
+      "version": "0.2.5",
+      "date": "2026-10-27T18:55:13.798Z",
+      "channel": "stable",
+      "security": false,
+      "summary": "GTM OS 0.2.5 adds a guided setup wizard, proof-checked outbound claims and learning from outcomes, and self-hosted ports now bind to 127.0.0.1 by default, so anyone reaching a server by IP address or hostname needs a reverse proxy or GTMOS_BIND_ADDRESS=0.0.0.0.",
+      "notesUrl": "https://ay-automate.github.io/gtmos-releases/release-0.2.5.html",
+      "minCliVersion": "0.2.5",
+      "minFromVersion": "0.2.2",
+      "requiredStops": [],
+      "additiveOnly": true,
+      "images": {
+        "api": "sha256:ad64db2f104aab26841dc2afd9e4cd7d97246907adc2410ca3dc34397d3fece4",
+        "console": "sha256:88e2fb54d2a64dddb1c86490bebcb4ad272db11e2a2c694b28b5ac48c4b490df",
+        "mcp": "sha256:13f651b60e2d8f77a41bf16b56361526ed1150308c02005eaf6a7f690520bce4",
+        "worker": "sha256:af7434c5048843146121f31a181248fdffae3fc6c12e2586a5f33c636532861d"
+      }
+    },
+    {
+      "version": "0.2.2",
+      "date": "2026-10-12T12:49:52.000Z",
+      "channel": "stable",
+      "security": false,
+      "summary": "GTM OS 0.2.2 (previous public release).",
+      "notesUrl": "https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.2",
+      "minCliVersion": "0.2.4",
+      "minFromVersion": "0.2.0",
+      "requiredStops": [],
+      "additiveOnly": true,
+      "images": {
+        "api": "sha256:1cc6f3a659a34ec2429f8ec4e8e9c4211fe19aa4bffe7ec73eb76fee2384771a",
+        "console": "sha256:4ec140d723887873fa9a9705135a24bbbbb2326af09e347302777d2236ba5af8",
+        "mcp": "sha256:a04741a3f663e29942f995b765bf7ee22b3632b9fc58846f54c05a678b223ceb",
+        "worker": "sha256:4d8ab08f0c4618b360b275c89e915d8e9fa775c3eb4308a123055b9533579d8e"
+      }
+    }
+  ]
+}
