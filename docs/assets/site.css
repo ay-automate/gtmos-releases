@@ -152,11 +152,18 @@ section.block{padding:64px 0}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .start{background:#2b1b14}}
 .start h2{font-size:1.6rem}
 .start>p{color:var(--muted);margin:8px 0 18px}
-.path{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;list-style:none;margin:0;padding:0;counter-reset:s}
-.path li{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-s);padding:14px}
-.path .n{font:700 1.6rem/1 var(--sans);color:var(--link)}
-.path b{display:block;font-weight:600;font-size:.95rem;line-height:1.25;margin-top:8px}
-.path span{font:500 .75rem var(--mono);color:var(--faint)}
+.path{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;list-style:none;margin:0;padding:0;counter-reset:s}
+.path li{border-radius:var(--radius-s);overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.path .pcard{position:relative;display:block;color:inherit;text-decoration:none;background:var(--card)}
+.path .pic{position:relative;display:block;aspect-ratio:16/9;background:var(--stage);overflow:hidden}
+.path .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.path a.pcard:hover .bg,.path a.pcard:focus-visible .bg{transform:scale(1.04)}
+.path .shade{position:absolute;inset:0;background:linear-gradient(180deg,transparent 70%,rgba(0,0,0,.35) 100%)}
+.path .n{display:inline-grid;place-items:center;flex:none;min-width:28px;height:28px;padding:0 8px;border-radius:999px;background:var(--ember);color:var(--on-ember);font:700 .9rem/1 var(--sans)}
+.path .txt{display:flex;align-items:center;gap:10px;padding:12px 14px}
+.path .txt b{display:block;font-weight:650;font-size:.98rem;line-height:1.25;margin:0;color:var(--ink,inherit)}
+.path .txt .m{display:block;margin-top:3px;font:500 .75rem var(--mono);color:var(--faint)}
+.path li.soon .pcard{filter:saturate(.6)}
 .filters{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding:22px 0 4px}
 .fgroup{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .fgroup .lab{font:500 .75rem var(--mono);color:var(--faint);text-transform:uppercase;letter-spacing:.06em;margin-right:4px}
@@ -252,7 +259,7 @@ section.block{padding:64px 0}
   .g4,.g3,.g2,.clips,.pager{grid-template-columns:1fr}
   .ladder{grid-template-columns:repeat(2,1fr)}
   .ladder-nav .ladder{grid-template-columns:repeat(3,1fr)}
-  .path{grid-template-columns:repeat(2,1fr)}
+  .path{grid-template-columns:1fr}
   .site-nav{margin-left:0;width:100%;order:3}
   .theme-btn{margin-left:auto}
   .site-header .wrap{gap:8px}

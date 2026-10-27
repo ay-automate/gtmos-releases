@@ -95,8 +95,20 @@
       var c = clips.filter(function (x) { return x.number === n; })[0];
       if (!c) return;
       mins += Math.round(c.durationSeconds / 60);
-      var title = ready(c) ? el("a", { href: watchHref(c), text: c.title }) : document.createTextNode(c.title);
-      path.appendChild(el("li", null, [el("span", { "class": "n", text: String(n) }), el("b", null, [title]), el("span", { text: dur(c.durationSeconds) + (ready(c) ? "" : ", coming soon") })]));
+      var ok = ready(c);
+      var meta = dur(c.durationSeconds) + (ok ? "" : ", coming soon");
+      var inner = [
+        el("span", { "class": "pic" }, [
+          c.poster ? el("img", { "class": "bg", src: c.poster, alt: "", loading: "lazy" }) : null,
+          el("span", { "class": "shade", "aria-hidden": "true" })
+        ].filter(Boolean)),
+        el("span", { "class": "txt" }, [
+          el("span", { "class": "n", text: String(n) }),
+          el("span", null, [el("b", { text: c.title }), el("span", { "class": "m", text: meta })])
+        ])
+      ];
+      var card = ok ? el("a", { "class": "pcard", href: watchHref(c), "aria-label": n + ". " + c.title + ", " + meta }, inner) : el("div", { "class": "pcard" }, inner);
+      path.appendChild(el("li", { "class": ok ? "ready" : "soon" }, [card]));
     });
     document.getElementById("start-min").textContent = String(mins);
     document.getElementById("start").hidden = false;
