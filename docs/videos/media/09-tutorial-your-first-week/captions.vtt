@@ -1,0 +1,375 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.433
+The agents run inside
+limits they can't raise,
+
+00:00:03.433 --> 00:00:05.933
+so this week you put them to work.
+
+00:00:05.933 --> 00:00:09.000
+A first real result
+takes days, not quarters,
+
+00:00:09.000 --> 00:00:12.267
+and nothing on the
+scoreboard is ticked by hand.
+
+00:00:12.333 --> 00:00:18.767
+By the end you'll know the eight
+milestones, one checkpoint for each day,
+
+00:00:18.767 --> 00:00:21.667
+and exactly how to earn each one.
+
+00:00:21.700 --> 00:00:24.300
+Teams drift through setup for a quarter
+
+00:00:24.300 --> 00:00:26.867
+without knowing how far along they are.
+
+00:00:26.867 --> 00:00:31.667
+Mia thinks she's nearly done, and
+the scoreboard says three of eight.
+
+00:00:31.700 --> 00:00:36.400
+So the week has one rule: one checkpoint
+a day, scored from real facts,
+
+00:00:36.400 --> 00:00:39.800
+never ticked by hand. The
+scoreboard is the first win card,
+
+00:00:39.800 --> 00:00:44.333
+on your organization home and on the
+Setup page. It has eight milestones,
+
+00:00:44.333 --> 00:00:48.867
+and each is computed from real facts
+every time you look, as done, pending,
+
+00:00:48.867 --> 00:00:50.300
+or could not read.
+
+00:00:50.333 --> 00:00:53.867
+Unknown always shows its reason
+and never counts as done,
+
+00:00:53.867 --> 00:00:57.100
+while pending ones carry
+the exact next step.
+
+00:00:57.100 --> 00:00:59.067
+Ask your agent: "What is
+my next first win step".
+
+00:00:59.067 --> 00:01:02.000
+It's a read, so any agent
+with read access can answer.
+
+00:01:02.000 --> 00:01:06.067
+Pro move: ask it every morning,
+and it becomes your standup.
+
+00:01:06.133 --> 00:01:07.667
+Day one holds two milestones.
+
+00:01:07.667 --> 00:01:11.800
+First, your instance is ready, which
+means every required item is live,
+
+00:01:11.800 --> 00:01:14.900
+and a model key and an email
+sender are the usual ones.
+
+00:01:14.900 --> 00:01:17.667
+In the console: Setup, then
+finish the required items.
+
+00:01:17.667 --> 00:01:21.800
+Or ask your agent: "What is missing
+before my instance is ready,
+
+00:01:21.800 --> 00:01:23.367
+and how much of my source is covered".
+
+00:01:23.400 --> 00:01:26.900
+Second, connect your first real
+data source, usually your CRM,
+
+00:01:26.900 --> 00:01:28.900
+the way Connections and
+integrations showed.
+
+00:01:28.900 --> 00:01:33.100
+A model key or a sender key doesn't
+count, and sample data never does.
+
+00:01:33.100 --> 00:01:36.800
+Then check coverage in the console,
+under Connections, then Data health.
+
+00:01:36.800 --> 00:01:40.533
+You see how much of each object GTM
+OS holds, and where the gaps are.
+
+00:01:40.533 --> 00:01:42.433
+Until a real source is syncing,
+
+00:01:42.433 --> 00:01:45.233
+the rest of the week has
+nothing to work from.
+
+00:01:45.300 --> 00:01:47.733
+Day two, milestone three:
+your first sync finished.
+
+00:01:47.733 --> 00:01:51.033
+In the console: Connections,
+then Sync now on your CRM,
+
+00:01:51.033 --> 00:01:52.167
+and wait for it to complete.
+
+00:01:52.167 --> 00:01:55.100
+Or ask your agent: "Sync
+HubSpot and show completeness".
+
+00:01:55.100 --> 00:01:57.567
+When the records arrive and the gaps show,
+
+00:01:57.567 --> 00:02:00.000
+the numbers start to mean something.
+
+00:02:00.000 --> 00:02:03.767
+If the sync fails, the Connections row
+shows the reason from the last check,
+
+00:02:03.767 --> 00:02:06.000
+so you fix the cause instead of guessing.
+
+00:02:06.000 --> 00:02:08.533
+Leo owns this day, because
+it's mostly keys and access.
+
+00:02:08.567 --> 00:02:11.900
+Day three, milestone four: a
+person signs your first definition.
+
+00:02:11.900 --> 00:02:14.600
+In the console: Setup,
+then Your definitions.
+
+00:02:14.600 --> 00:02:17.300
+Review the drafted cards,
+each with its evidence.
+
+00:02:17.300 --> 00:02:19.633
+Edit what's wrong, then propose.
+
+00:02:19.633 --> 00:02:22.033
+A different person signs,
+and if an agent drafted it,
+
+00:02:22.033 --> 00:02:26.200
+the person behind that agent's key
+can't be the signer. Or ask your agent:
+
+00:02:26.200 --> 00:02:29.433
+"Which definitions are drafted
+and waiting for a signature".
+
+00:02:29.500 --> 00:02:31.300
+Here's what the two people did.
+
+00:02:31.300 --> 00:02:36.133
+Mia reviewed the cards, fixed a
+wrong segment, and proposed them.
+
+00:02:36.133 --> 00:02:39.700
+Orbit helped with the drafts,
+but proposing isn't signing,
+
+00:02:39.700 --> 00:02:43.933
+so Sophia read the evidence and
+signed. The record shows both.
+
+00:02:43.967 --> 00:02:47.033
+Day four, milestone five:
+your first Dry Mode draft.
+
+00:02:47.033 --> 00:02:50.167
+In the console: Settings,
+then Safety, with Dry Mode on,
+
+00:02:50.167 --> 00:02:51.600
+then run one engine once.
+
+00:02:51.600 --> 00:02:55.067
+It drafts what it would
+have done and sends nothing.
+
+00:02:55.067 --> 00:02:59.467
+Or ask your agent: "Run scoring once
+under Dry Mode and show me the draft".
+
+00:02:59.467 --> 00:03:02.500
+Now you can judge the logic
+before anything leaves.
+
+00:03:02.567 --> 00:03:05.300
+Day five, milestone six: your
+accounts have fit scores.
+
+00:03:05.300 --> 00:03:08.833
+This needs the ICP and scoring
+definitions you signed on day three.
+
+00:03:08.833 --> 00:03:10.267
+In the console: Engines, Score,
+
+00:03:10.267 --> 00:03:13.933
+then score your accounts and read
+the evidence behind each verdict.
+
+00:03:13.933 --> 00:03:17.267
+Or ask your agent: "Score my
+accounts and explain the top three".
+
+00:03:17.267 --> 00:03:21.367
+If the ranking looks wrong, tune the
+scoring model instead of trusting it.
+
+00:03:21.367 --> 00:03:23.700
+The change goes through the
+same propose and sign steps.
+
+00:03:23.733 --> 00:03:27.433
+Day six, milestone seven: a second
+person approves a proposed action.
+
+00:03:27.433 --> 00:03:31.500
+In the console: Approvals, as the
+approver, and decide the first proposal.
+
+00:03:31.500 --> 00:03:36.033
+The proposer can't approve it, and
+neither can the human an agent acts for.
+
+00:03:36.033 --> 00:03:38.633
+Or ask your agent: "What
+is waiting for approval".
+
+00:03:38.633 --> 00:03:41.533
+It reports the approval
+number and stops there.
+
+00:03:41.567 --> 00:03:44.167
+Day seven, milestone eight:
+your first live message.
+
+00:03:44.167 --> 00:03:47.300
+When the Dry Mode drafts look right,
+open Safety and check the engines card,
+
+00:03:47.300 --> 00:03:49.600
+so every other engine is set to Dry.
+
+00:03:49.600 --> 00:03:52.600
+Turn the organization switch
+off, set only Outreach to Live,
+
+00:03:52.600 --> 00:03:53.867
+and approve the first send.
+
+00:03:53.867 --> 00:03:56.733
+A first message to someone nobody has
+written to always waits for a person,
+
+00:03:56.733 --> 00:03:58.700
+whatever the autonomy setting.
+
+00:03:58.700 --> 00:04:00.700
+One habit worth copying:
+run the go live check first.
+
+00:04:00.700 --> 00:04:03.600
+Ask your agent: "Run the go
+live check", which is read only.
+
+00:04:03.600 --> 00:04:06.900
+Going live properly has its
+own clip: Tutorial, going live.
+
+00:04:06.933 --> 00:04:09.533
+If a week is tight, nothing breaks,
+
+00:04:09.533 --> 00:04:14.900
+because the checklist keeps
+the order and not a deadline.
+
+00:04:14.900 --> 00:04:17.200
+Two weeks is a normal pace.
+
+00:04:17.267 --> 00:04:19.833
+Last, reminders. While
+setup is unfinished,
+
+00:04:19.833 --> 00:04:22.833
+owners and admins see a reminder
+about the next step in the app.
+
+00:04:22.833 --> 00:04:26.433
+Email is opt in: it's off until you
+turn it on, comes at most once a week,
+
+00:04:26.433 --> 00:04:28.633
+and stops when setup is complete.
+
+00:04:28.633 --> 00:04:32.233
+Every mail says why you got it
+and has a one click unsubscribe.
+
+00:04:32.233 --> 00:04:35.000
+In the console: Notifications,
+Setup reminders by email.
+
+00:04:35.000 --> 00:04:37.433
+Or ask your agent: "Turn on
+setup reminder emails for me".
+
+00:04:37.433 --> 00:04:40.333
+It refuses, because that's
+a human only setting.
+
+00:04:40.367 --> 00:04:45.533
+Someone on your team will say: a week
+is too fast for a real go to market.
+
+00:04:45.533 --> 00:04:47.600
+It's the first message,
+not the whole motion.
+
+00:04:47.600 --> 00:04:51.000
+Day seven is one engine
+live and one approved send,
+
+00:04:51.000 --> 00:04:54.433
+with caps on and everything
+else still in Dry Mode.
+
+00:04:54.500 --> 00:04:58.500
+Say it back: Eight milestones,
+one checkpoint a day,
+
+00:04:58.500 --> 00:05:04.433
+each scored from real facts. The last
+one is a message a person approved.
+
+00:05:04.467 --> 00:05:09.500
+You now have a week you can run, and
+a scoreboard that can't be faked.
+
+00:05:09.500 --> 00:05:14.433
+Up next, bring your data in,
+your whole book in one afternoon.

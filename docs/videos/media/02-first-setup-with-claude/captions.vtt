@@ -1,0 +1,312 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.133
+Last clip ended on an empty folder
+and one rule: agents move fast,
+
+00:00:04.133 --> 00:00:08.133
+your rules decide how far. From here
+to a working GTM project takes minutes.
+
+00:00:08.133 --> 00:00:09.900
+Claude does most of the typing.
+
+00:00:09.933 --> 00:00:12.200
+In this clip you'll have
+the command line tool,
+
+00:00:12.200 --> 00:00:16.267
+a project folder Claude understands,
+and a check that shows what is live.
+
+00:00:16.300 --> 00:00:19.867
+Do it by hand and Leo pastes an
+agent key into a config file,
+
+00:00:19.867 --> 00:00:23.100
+then commits it. Done properly,
+the key never touches a file,
+
+00:00:23.100 --> 00:00:25.133
+and Orbit starts with the whole playbook.
+
+00:00:25.167 --> 00:00:26.300
+First, the checklist.
+
+00:00:26.300 --> 00:00:30.500
+Docker running, Node twenty two or
+newer, four gigabytes of free memory,
+
+00:00:30.500 --> 00:00:34.733
+ten of disk. Claude Code is recommended,
+because it runs the setup with you.
+
+00:00:34.733 --> 00:00:36.400
+And a second person as approver,
+
+00:00:36.400 --> 00:00:39.800
+because GTM OS won't let you
+approve your own proposals.
+
+00:00:39.867 --> 00:00:42.400
+Two paths from here: connect
+to an existing instance,
+
+00:00:42.400 --> 00:00:45.433
+or run your own on this laptop,
+in Docker. You'll see both.
+
+00:00:45.467 --> 00:00:48.100
+Step one, a single global npm install.
+
+00:00:48.100 --> 00:00:50.867
+A project install, or
+npx, isn't supported.
+
+00:00:50.900 --> 00:00:55.200
+Check it with gtm version. Then
+make a folder, and run gtm init.
+
+00:00:55.233 --> 00:00:58.200
+Step two, the init works
+offline, from an empty folder,
+
+00:00:58.200 --> 00:01:01.267
+and hands Claude your playbook
+before Claude touches anything.
+
+00:01:01.333 --> 00:01:05.333
+Here's what lands. Instructions
+in CLAUDE. md for Claude, AGENTS.
+
+00:01:05.333 --> 00:01:09.600
+md for Codex. A . mcp. json
+pointing at the MCP server. A .
+
+00:01:09.600 --> 00:01:12.600
+claude folder with
+subagents, slash commands,
+
+00:01:12.600 --> 00:01:17.000
+settings and a session start hook.
+Skills for every agent. And docs.
+
+00:01:17.067 --> 00:01:21.967
+One detail matters: the agent key is
+never written to a file, and the . mcp.
+
+00:01:21.967 --> 00:01:25.567
+json holds only a reference
+to an environment variable.
+
+00:01:25.600 --> 00:01:27.500
+Now the part the team calls Hermes:
+
+00:01:27.500 --> 00:01:31.233
+the setup agents and skills that
+gtm init places in your repository.
+
+00:01:31.233 --> 00:01:34.367
+A full set of skills, from
+onboarding to one per engine,
+
+00:01:34.367 --> 00:01:36.733
+plus role subagents
+like the gtm-architect.
+
+00:01:36.733 --> 00:01:40.967
+They land in three places, so Claude,
+Codex and other agents all find them.
+
+00:01:40.967 --> 00:01:44.167
+Checksum verified, with a
+bundled copy for offline use.
+
+00:01:44.200 --> 00:01:47.667
+Operator tip: run gtm init with
+refresh when new skills ship.
+
+00:01:47.667 --> 00:01:52.333
+Your edits stay, and gtm doctor warns
+you when your skills have gone stale.
+
+00:01:52.400 --> 00:01:53.267
+Now the gotcha.
+
+00:01:53.267 --> 00:01:56.933
+Open Claude Code in this folder, and
+restart it if it was already open.
+
+00:01:56.933 --> 00:02:00.900
+It reads skills only at startup,
+so an old session sees nothing new.
+
+00:02:00.967 --> 00:02:03.667
+Step three: /setup-gtmos.
+Claude runs a runbook.
+
+00:02:03.667 --> 00:02:08.700
+It checks Docker, Node, disk and memory,
+and looks for a running instance.
+
+00:02:08.700 --> 00:02:11.967
+Then it asks one grouped
+question: organization, owner,
+
+00:02:11.967 --> 00:02:16.467
+a different approver, version, ports,
+keys. In the console: nothing yet.
+
+00:02:16.467 --> 00:02:20.000
+Or ask your agent: "Set
+up GTM OS for my company".
+
+00:02:20.033 --> 00:02:23.400
+Then the work starts: the stack
+installs in an instance folder,
+
+00:02:23.400 --> 00:02:26.967
+and your organization is created
+with a separate approver.
+
+00:02:26.967 --> 00:02:29.667
+Claude mints an agent key
+and connects this folder.
+
+00:02:29.667 --> 00:02:32.633
+It stops only for what a person
+must do, like signing in,
+
+00:02:32.633 --> 00:02:35.167
+pasting a key or adding DNS records.
+
+00:02:35.167 --> 00:02:38.233
+Then /build-gtm-system hands
+over to the gtm-architect.
+
+00:02:38.300 --> 00:02:39.133
+Prefer to type it?
+
+00:02:39.133 --> 00:02:43.800
+One command does the same: gtm setup,
+a folder, your organization name,
+
+00:02:43.800 --> 00:02:45.033
+owner email and approver email.
+
+00:02:45.033 --> 00:02:48.733
+Run it twice and the second
+run does only what's missing.
+
+00:02:48.800 --> 00:02:52.200
+Owner and approver passwords,
+plus the master key, land in the .
+
+00:02:52.200 --> 00:02:54.767
+env in the instance
+folder. Keep it private.
+
+00:02:54.800 --> 00:02:58.700
+That was the Docker path. To connect
+to an existing instance instead,
+
+00:02:58.700 --> 00:03:02.767
+skip the install and pass its
+address and an agent key to gtm init.
+
+00:03:02.833 --> 00:03:07.833
+Self hosted, the console, API
+and MCP bind to 127. 0. 0. 1.
+
+00:03:07.833 --> 00:03:10.967
+By default, only this
+machine reaches them.
+
+00:03:10.967 --> 00:03:15.733
+To expose them, set GTMOS_BIND_ADDRESS,
+or use a reverse proxy.
+
+00:03:15.733 --> 00:03:19.500
+Both gtm up and gtm
+upgrade warn you first.
+
+00:03:19.533 --> 00:03:21.367
+Last step. Run gtm doctor.
+
+00:03:21.367 --> 00:03:25.567
+One line per model provider,
+backend, connector and sender,
+
+00:03:25.567 --> 00:03:29.800
+each reading live, unverified,
+failed, fixture or not configured,
+
+00:03:29.800 --> 00:03:31.100
+with its exact fix.
+
+00:03:31.133 --> 00:03:34.433
+A fixture is a sample response
+standing in for a real service,
+
+00:03:34.433 --> 00:03:36.300
+and it never counts toward your first win.
+
+00:03:36.300 --> 00:03:39.400
+Wire gtm doctor with
+strict into your scripts,
+
+00:03:39.400 --> 00:03:42.333
+and it exits with one when
+anything needed isn't live.
+
+00:03:42.333 --> 00:03:44.933
+Expect the model key
+to be missing for now.
+
+00:03:44.933 --> 00:03:47.533
+In the console: Integrations, Connections.
+
+00:03:47.533 --> 00:03:50.733
+Or ask your agent: "Run gtm doctor
+and tell me what is not live".
+
+00:03:50.767 --> 00:03:53.900
+Say it out loud: an agent
+installing software with my keys?
+
+00:03:53.900 --> 00:03:58.133
+It can't approve its own work, because
+the approver is a different identity.
+
+00:03:58.133 --> 00:04:00.033
+Nor does it write the key to a file.
+
+00:04:00.033 --> 00:04:03.633
+And it stops for every human
+step, with every port kept local.
+
+00:04:03.700 --> 00:04:08.833
+Boiled down: Install globally,
+run gtm init, restart Claude,
+
+00:04:08.833 --> 00:04:12.567
+run /setup-gtmos. Then gtm doctor.
+
+00:04:12.600 --> 00:04:15.367
+You have a working project,
+an agent with the playbook,
+
+00:04:15.367 --> 00:04:17.700
+and a check you can trust.
+Keep that doctor output.
+
+00:04:17.700 --> 00:04:20.633
+After this comes your first
+organization and your agent.
+
+00:04:20.633 --> 00:04:22.300
+You clear the missing model key,
+
+00:04:22.300 --> 00:04:24.533
+and the agent gets an
+organization of its own.

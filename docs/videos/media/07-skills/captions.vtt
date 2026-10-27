@@ -1,0 +1,289 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:05.500
+Last clip you connected your tools.
+Now your agent learns to use them,
+
+00:00:05.500 --> 00:00:09.333
+because it can know GTM OS
+before you type a single prompt.
+
+00:00:09.333 --> 00:00:12.033
+That's what skills are for.
+
+00:00:12.100 --> 00:00:17.967
+By the end you'll know the four groups
+of skills and how an agent picks one.
+
+00:00:17.967 --> 00:00:21.467
+You'll also keep them
+fresh and add your own.
+
+00:00:21.500 --> 00:00:26.467
+Without skills, Mia explains the
+scoring model to Orbit every morning,
+
+00:00:26.467 --> 00:00:29.933
+and Orbit guesses how HubSpot
+behaves inside GTM OS.
+
+00:00:29.933 --> 00:00:33.900
+With them, Orbit starts
+the day already knowing.
+
+00:00:33.967 --> 00:00:36.633
+A skill is a packaged instruction set
+
+00:00:36.633 --> 00:00:40.033
+an agent loads when
+your request matches it.
+
+00:00:40.033 --> 00:00:44.700
+When you ran gtm init, it placed
+them in your project: in .
+
+00:00:44.700 --> 00:00:48.933
+claude/skills for Claude Code,
+and in . codex/skills and .
+
+00:00:48.933 --> 00:00:50.833
+agents/skills for Codex.
+
+00:00:50.867 --> 00:00:55.233
+They come from a published
+skills release, checked by hash,
+
+00:00:55.233 --> 00:00:58.000
+with an offline copy bundled in the CLI.
+
+00:00:58.000 --> 00:01:03.533
+So init works without a network, and
+it never trusts a file it can't verify.
+
+00:01:03.567 --> 00:01:06.667
+First, the groups. There's a
+large set, so think in four.
+
+00:01:06.667 --> 00:01:10.933
+Setup and onboarding: the skills behind
+/setup-gtmos and the setup wizard.
+
+00:01:10.933 --> 00:01:15.767
+Per engine: scoring and lead work,
+signals, outreach, research, SEO and GEO,
+
+00:01:15.767 --> 00:01:16.633
+ads and content.
+
+00:01:16.633 --> 00:01:21.067
+Tool skills: HubSpot, Salesforce,
+Composio, Search Console, GA4, Gmail,
+
+00:01:21.067 --> 00:01:25.067
+Slack and more. Each tells the agent
+how that tool behaves inside GTM OS.
+
+00:01:25.067 --> 00:01:29.067
+And looot skills, for enrichment,
+verification and search data.
+
+00:01:29.133 --> 00:01:32.433
+One more sits across all
+four: the engine catalog,
+
+00:01:32.433 --> 00:01:36.200
+which explains every engine's
+purpose, connections and settings.
+
+00:01:36.200 --> 00:01:38.400
+Beside the skills sit role subagents,
+
+00:01:38.400 --> 00:01:41.600
+like the revenue operations
+analyst and the deal reviewer,
+
+00:01:41.600 --> 00:01:43.300
+that you call by name.
+
+00:01:43.333 --> 00:01:47.633
+Second, how an agent picks one. Each
+skill carries a short description.
+
+00:01:47.633 --> 00:01:49.167
+The agent reads only those,
+
+00:01:49.167 --> 00:01:52.633
+and loads the full instructions
+when your request matches.
+
+00:01:52.633 --> 00:01:55.300
+Ask your agent: "Score my
+accounts against our ICP",
+
+00:01:55.300 --> 00:01:58.167
+and it loads the scoring skill first.
+
+00:01:58.233 --> 00:02:01.467
+Ask for first lines, and it
+loads the first lines skill,
+
+00:02:01.467 --> 00:02:05.200
+which writes one cited fact
+per lead, or says no fact.
+
+00:02:05.200 --> 00:02:07.733
+You never name the skill. A
+skill teaches the agent how.
+
+00:02:07.733 --> 00:02:10.267
+Its key still decides what it may do,
+
+00:02:10.267 --> 00:02:14.200
+so instructions can update freely
+while permissions don't move.
+
+00:02:14.267 --> 00:02:18.033
+Third, the slash commands:
+shortcuts to the big jobs,
+
+00:02:18.033 --> 00:02:20.900
+typed in Claude Code
+in the project folder.
+
+00:02:20.900 --> 00:02:24.200
+/setup-gtmos installs
+and connects from zero.
+
+00:02:24.200 --> 00:02:27.533
+/build-gtm-system builds
+your system end to end.
+
+00:02:27.533 --> 00:02:30.633
+The rest cover the daily
+work: /create-play,
+
+00:02:30.633 --> 00:02:33.067
+/wire-connector and /describe-ops.
+
+00:02:33.100 --> 00:02:35.967
+The one to remember is /go-live-check,
+
+00:02:35.967 --> 00:02:39.467
+a read only go or no go
+before you leave Dry Mode.
+
+00:02:39.467 --> 00:02:41.767
+Ask your agent: "/go-live-check".
+
+00:02:41.767 --> 00:02:45.633
+It answers with a verdict,
+and lists what's left.
+
+00:02:45.700 --> 00:02:49.633
+Fourth, keep them fresh. Skills change
+as GTM OS does. In the terminal:
+
+00:02:49.633 --> 00:02:52.000
+gtm init with the refresh flag takes new
+
+00:02:52.000 --> 00:02:54.900
+skills and updates the
+ones you haven't touched.
+
+00:02:54.900 --> 00:02:58.000
+It keeps the ones you edited,
+plus any files of your own.
+
+00:02:58.000 --> 00:03:02.233
+Then restart Claude Code, because
+it reads skills only at startup.
+
+00:03:02.267 --> 00:03:04.633
+How do you know when you
+need it? Run gtm doctor.
+
+00:03:04.633 --> 00:03:07.533
+Its Harness section
+compares the version stamps
+
+00:03:07.533 --> 00:03:09.633
+from your last init with your CLI,
+
+00:03:09.633 --> 00:03:12.033
+the skills release and the live server.
+
+00:03:12.033 --> 00:03:15.767
+If they differ, it warns that skills
+are stale and tells you to refresh.
+
+00:03:15.767 --> 00:03:18.733
+Or ask your agent: "Are
+my skills up to date".
+
+00:03:18.767 --> 00:03:22.000
+Fifth, add your own. Make a
+folder under . claude/skills.
+
+00:03:22.000 --> 00:03:26.033
+Add a skill file with a name, a
+description and your instructions.
+
+00:03:26.033 --> 00:03:28.900
+Copy it to the Codex folders
+if your team uses Codex.
+
+00:03:28.900 --> 00:03:30.967
+Refresh never touches your own files.
+
+00:03:30.967 --> 00:03:34.700
+Or ask your agent: "Write me a skill
+for how we qualify inbound leads,
+
+00:03:34.700 --> 00:03:36.900
+and save it in the project".
+
+00:03:36.967 --> 00:03:41.033
+Pro move: a shipped skill you
+edit is kept exactly as it is,
+
+00:03:41.033 --> 00:03:42.767
+so it stops receiving updates.
+
+00:03:42.767 --> 00:03:47.833
+To keep both, copy it under a new
+name, and the original keeps updating.
+
+00:03:47.900 --> 00:03:52.300
+Fair concern: instructions from
+a release, running in my agent?
+
+00:03:52.300 --> 00:03:55.933
+Each skill is checksum verified
+plain text you can read,
+
+00:03:55.933 --> 00:03:57.933
+and a skill only instructs.
+
+00:03:57.933 --> 00:04:02.500
+What your agent may actually
+do is still decided by its key.
+
+00:04:02.533 --> 00:04:06.133
+Replay: Four groups,
+picked by description.
+
+00:04:06.133 --> 00:04:11.733
+Refresh when doctor says stale,
+and add your own beside them.
+
+00:04:11.800 --> 00:04:16.033
+Your agent now knows the product,
+the engines and your tools,
+
+00:04:16.033 --> 00:04:18.833
+and you can teach it
+your own way of working.
+
+00:04:18.833 --> 00:04:23.733
+Up next, predefined agents, a team
+that works inside the rules you set.

@@ -68,6 +68,7 @@
 
     var total = clips.reduce(function (a, c) { return a + c.durationSeconds; }, 0);
     var nReady = clips.filter(ready).length;
+    var ac = document.getElementById("avail-count"); if (ac && nReady) ac.textContent = nReady + " of " + clips.length + " clips are";
     var stats = document.getElementById("stats");
     [clips.length + " clips", "about " + (Math.round(total / 360) / 10) + " hours", nReady + " published, " + (clips.length - nReady) + " coming soon"].forEach(function (t) {
       stats.appendChild(el("span", { "class": "pill", text: t }));
@@ -274,7 +275,11 @@
     side.appendChild(tr);
 
     var grid = el("div", { "class": "watch" }, [left, side]);
-    var prev = data.clips[idx - 1], next = data.clips[idx + 1];
+    var prev, next;
+    if (ready(c)) { /* from a published clip, step to the neighbouring published clips only */
+      for (var a = idx - 1; a >= 0 && !prev; a--) if (ready(data.clips[a])) prev = data.clips[a];
+      for (var b = idx + 1; b < data.clips.length && !next; b++) if (ready(data.clips[b])) next = data.clips[b];
+    } else { prev = data.clips[idx - 1]; next = data.clips[idx + 1]; }
     var pager = el("nav", { "class": "pager", "aria-label": "Previous and next clip" }, [
       prev ? el("a", { href: watchHref(prev) }, [el("small", { text: "Previous, clip " + prev.number }), document.createTextNode(prev.title)]) : el("a", { href: "index.html" }, [el("small", { text: "Start" }), document.createTextNode("All clips")]),
       next ? el("a", { href: watchHref(next) }, [el("small", { text: "Next, clip " + next.number }), document.createTextNode(next.title)]) : el("a", { href: "index.html" }, [el("small", { text: "End" }), document.createTextNode("All clips")])

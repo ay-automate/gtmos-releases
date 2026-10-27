@@ -74,17 +74,21 @@
       "part": 1,
       "title": "First setup with Claude",
       "outcome": "From an empty folder to a working GTM project in minutes.",
-      "durationSeconds": 300,
+      "durationSeconds": 265,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/02-first-setup-with-claude.mp4",
+      "vtt": "media/02-first-setup-with-claude/captions.vtt",
+      "poster": "media/02-first-setup-with-claude/poster.jpg",
+      "transcript": "media/02-first-setup-with-claude/transcript.md",
       "prompts": [
         "Set up GTM OS for my company.",
         "Run gtm doctor and explain every line of the result."
-      ]
+      ],
+      "slug": "first-setup-with-claude",
+      "status": "published",
+      "bytes": 21029132,
+      "sha256": "5441a0c60e8f9d4f0826394047796c7fd97808105e2b65f57026d96d2bbe35aa"
     },
     {
       "id": "c03",
@@ -92,17 +96,21 @@
       "part": 1,
       "title": "Your first organization and your agent",
       "outcome": "Your agent gets a private workspace and starts working.",
-      "durationSeconds": 300,
+      "durationSeconds": 271,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/03-first-organization-and-agent.mp4",
+      "vtt": "media/03-first-organization-and-agent/captions.vtt",
+      "poster": "media/03-first-organization-and-agent/poster.jpg",
+      "transcript": "media/03-first-organization-and-agent/transcript.md",
       "prompts": [
         "Start the GTM OS setup for my organization.",
         "Initialise the onboarding agents."
-      ]
+      ],
+      "slug": "first-organization-and-agent",
+      "status": "published",
+      "bytes": 23275282,
+      "sha256": "bd6d12b1d36ab2257bdf6d40ebf021002c8fe840463d2c992bfcca35efa67a38"
     },
     {
       "id": "c04",
@@ -110,16 +118,20 @@
       "part": 1,
       "title": "The onboarding steps",
       "outcome": "Answer a few questions and the system configures itself.",
-      "durationSeconds": 360,
+      "durationSeconds": 290,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/04-the-onboarding-steps.mp4",
+      "vtt": "media/04-the-onboarding-steps/captions.vtt",
+      "poster": "media/04-the-onboarding-steps/poster.jpg",
+      "transcript": "media/04-the-onboarding-steps/transcript.md",
       "prompts": [
         "Set up GTM OS for my company and walk me through each onboarding step."
-      ]
+      ],
+      "slug": "the-onboarding-steps",
+      "status": "published",
+      "bytes": 23218148,
+      "sha256": "17d1272fd1c2d766a7b60d878639ea43c7e42f8fb776d76e1ef6ef8244a1d7bd"
     },
     {
       "id": "c05",
@@ -127,16 +139,20 @@
       "part": 1,
       "title": "Blueprints and motions",
       "outcome": "Pick a motion, get a working system.",
-      "durationSeconds": 300,
+      "durationSeconds": 255,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/05-blueprints-and-motions.mp4",
+      "vtt": "media/05-blueprints-and-motions/captions.vtt",
+      "poster": "media/05-blueprints-and-motions/poster.jpg",
+      "transcript": "media/05-blueprints-and-motions/transcript.md",
       "prompts": [
         "Which blueprint fits us, and what does it need before I apply it?"
-      ]
+      ],
+      "slug": "blueprints-and-motions",
+      "status": "published",
+      "bytes": 21270206,
+      "sha256": "731578ef98b198dc22d2962aebfdb87096b0d4568779e1e3e853941117eb1c10"
     },
     {
       "id": "c06",
@@ -144,16 +160,20 @@
       "part": 1,
       "title": "Connections and integrations",
       "outcome": "Plug in what you already use and keep what you own.",
-      "durationSeconds": 360,
+      "durationSeconds": 260,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/06-connections-and-integrations.mp4",
+      "vtt": "media/06-connections-and-integrations/captions.vtt",
+      "poster": "media/06-connections-and-integrations/poster.jpg",
+      "transcript": "media/06-connections-and-integrations/transcript.md",
       "prompts": [
         "What connections do I need, and which ones are missing?"
-      ]
+      ],
+      "slug": "connections-and-integrations",
+      "status": "published",
+      "bytes": 23149625,
+      "sha256": "b47fe07ca784640d405ddbefb974f250601bdd1168da987caf17eee0b575bce9"
     },
     {
       "id": "c07",
@@ -161,16 +181,20 @@
       "part": 1,
       "title": "Skills",
       "outcome": "Agents that already know GTM OS.",
-      "durationSeconds": 240,
+      "durationSeconds": 264,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/07-skills.mp4",
+      "vtt": "media/07-skills/captions.vtt",
+      "poster": "media/07-skills/poster.jpg",
+      "transcript": "media/07-skills/transcript.md",
       "prompts": [
         "List the skills installed in this project and tell me which one to use for scoring."
-      ]
+      ],
+      "slug": "skills",
+      "status": "published",
+      "bytes": 20265884,
+      "sha256": "d7bb47f67e8c5ff9062f5925268fb36c64be830177dd9b7c58fa270338e3eb30"
     },
     {
       "id": "c08",
@@ -178,16 +202,20 @@
       "part": 1,
       "title": "Predefined agents",
       "outcome": "A team that works while you sleep, inside rules you set.",
-      "durationSeconds": 300,
+      "durationSeconds": 313,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/08-predefined-agents.mp4",
+      "vtt": "media/08-predefined-agents/captions.vtt",
+      "poster": "media/08-predefined-agents/poster.jpg",
+      "transcript": "media/08-predefined-agents/transcript.md",
       "prompts": [
         "Show my agents and what triggers each one."
-      ]
+      ],
+      "slug": "predefined-agents",
+      "status": "published",
+      "bytes": 25819154,
+      "sha256": "57911331a674ce85d0f3b70c8396b2218de8a70791caa5ab9a6479a332d1ba33"
     },
     {
       "id": "c09",
@@ -195,16 +223,20 @@
       "part": 1,
       "title": "Tutorial: your first week",
       "outcome": "A first real result in days, not quarters.",
-      "durationSeconds": 360,
+      "durationSeconds": 315,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/09-tutorial-your-first-week.mp4",
+      "vtt": "media/09-tutorial-your-first-week/captions.vtt",
+      "poster": "media/09-tutorial-your-first-week/poster.jpg",
+      "transcript": "media/09-tutorial-your-first-week/transcript.md",
       "prompts": [
         "Where am I on the first-win checklist, and what is the next step?"
-      ]
+      ],
+      "slug": "tutorial-your-first-week",
+      "status": "published",
+      "bytes": 26756099,
+      "sha256": "67a9b62e7d5e30cb79cb422cb9aa54cc5a0f46cf1d013d2c44138c5358b69c02"
     },
     {
       "id": "c10",
@@ -212,16 +244,20 @@
       "part": 2,
       "title": "Bring your data in",
       "outcome": "Your whole book in one afternoon.",
-      "durationSeconds": 360,
+      "durationSeconds": 331,
       "type": "Tutorial",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/10-bring-your-data-in.mp4",
+      "vtt": "media/10-bring-your-data-in/captions.vtt",
+      "poster": "media/10-bring-your-data-in/poster.jpg",
+      "transcript": "media/10-bring-your-data-in/transcript.md",
       "prompts": [
         "Import this CSV and show me which companies did not match."
-      ]
+      ],
+      "slug": "bring-your-data-in",
+      "status": "published",
+      "bytes": 25673636,
+      "sha256": "196a239fa7fbae439319f9343608d39e42c7661016015cc9eed9d8184eb62d3d"
     },
     {
       "id": "c11",
@@ -297,16 +333,20 @@
       "part": 3,
       "title": "Definitions as code and environments",
       "outcome": "Say it once; every engine obeys.",
-      "durationSeconds": 360,
+      "durationSeconds": 262,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/16-definitions-as-code.mp4",
+      "vtt": "media/16-definitions-as-code/captions.vtt",
+      "poster": "media/16-definitions-as-code/poster.jpg",
+      "transcript": "media/16-definitions-as-code/transcript.md",
       "prompts": [
         "What is in dev and not live?"
-      ]
+      ],
+      "slug": "definitions-as-code",
+      "status": "published",
+      "bytes": 20844322,
+      "sha256": "38af9d724dc0b3f3dac93fd421a6d9a63298125ebef3ad323415dddba45ce3f2"
     },
     {
       "id": "c17",

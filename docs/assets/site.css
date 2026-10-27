@@ -280,3 +280,5 @@ section.block{padding:64px 0}
 .prose :not(pre)>code{background:var(--off);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.88em;overflow-wrap:anywhere}
 .prose .codebox{margin:12px 0 16px}
 .prose strong{font-weight:600}
+
+.note-first{margin-top:12px;font-size:1rem;color:var(--ink)!important;max-width:44em}

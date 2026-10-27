@@ -1,0 +1,376 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.533
+The first week's scoreboard asked
+for a real data source on day one.
+
+00:00:04.533 --> 00:00:09.700
+If your book lives in a spreadsheet,
+this is how it gets in: companies,
+
+00:00:09.700 --> 00:00:13.033
+contacts and deals, linked to
+each other, in one afternoon.
+
+00:00:13.100 --> 00:00:15.767
+You'll import a CSV with a company column
+
+00:00:15.767 --> 00:00:19.233
+and read the match report
+before anything is written.
+
+00:00:19.233 --> 00:00:22.767
+Then you'll shape the
+organization with custom objects,
+
+00:00:22.767 --> 00:00:24.700
+fields and pipelines.
+
+00:00:24.733 --> 00:00:27.867
+Leo imports a contact file the usual way.
+
+00:00:27.867 --> 00:00:32.767
+A typo in one column creates a
+duplicate account, then another,
+
+00:00:32.767 --> 00:00:36.567
+and by month end the
+duplicates have no author.
+
+00:00:36.633 --> 00:00:40.167
+Three rules prevent that.
+Preview writes nothing.
+
+00:00:40.167 --> 00:00:42.933
+Matching never creates a company.
+
+00:00:42.933 --> 00:00:47.600
+And importing again updates what
+exists, instead of duplicating it.
+
+00:00:47.633 --> 00:00:51.833
+Step one, prepare the file. One
+header row, one record per line.
+
+00:00:51.833 --> 00:00:54.400
+If you have the company
+website, include it,
+
+00:00:54.400 --> 00:00:56.467
+because websites are matched first.
+
+00:00:56.467 --> 00:01:00.067
+Keep a copy of the original,
+so you can always start again.
+
+00:01:00.133 --> 00:01:03.833
+Step two, choose and map. In
+the console: CRM, then Import.
+
+00:01:03.833 --> 00:01:07.167
+There are four steps: choose,
+map, preview and commit.
+
+00:01:07.167 --> 00:01:10.567
+Choose what you're importing,
+companies, contacts or deals,
+
+00:01:10.567 --> 00:01:14.900
+then add the file. Committing is
+for owners and admins by default.
+
+00:01:14.900 --> 00:01:17.967
+An owner can let members
+commit in the CRM settings.
+
+00:01:18.033 --> 00:01:19.067
+Map your columns.
+
+00:01:19.067 --> 00:01:23.200
+Each column goes to a field, to a
+custom field you made, or is left out.
+
+00:01:23.200 --> 00:01:26.200
+For contacts and deals,
+map one column to Company.
+
+00:01:26.200 --> 00:01:29.533
+GTM OS links each row to an
+existing company, by website first,
+
+00:01:29.533 --> 00:01:32.400
+then by exact name. It never
+creates a company for you,
+
+00:01:32.400 --> 00:01:35.700
+so a typo can't spawn a duplicate account.
+
+00:01:35.733 --> 00:01:40.600
+A yes or no column accepts yes or
+no, true or false, or one or zero.
+
+00:01:40.600 --> 00:01:42.800
+A number column takes plain numbers.
+
+00:01:42.800 --> 00:01:46.467
+Rows are matched on a key, such
+as the domain for companies.
+
+00:01:46.467 --> 00:01:50.200
+So importing the file
+again updates what exists.
+
+00:01:50.267 --> 00:01:53.100
+Step three, preview, where
+nothing is written yet.
+
+00:01:53.100 --> 00:01:56.567
+Every row is classified as create,
+update, duplicate or warning.
+
+00:01:56.567 --> 00:01:59.600
+The company card shows three
+counts: rows that matched,
+
+00:01:59.600 --> 00:02:03.667
+rows that were ambiguous because
+more than one company fits,
+
+00:02:03.667 --> 00:02:05.367
+and rows that found no company at all.
+
+00:02:05.433 --> 00:02:08.500
+The problem rows are listed
+with their file line,
+
+00:02:08.500 --> 00:02:11.067
+and those rows import
+without a company link.
+
+00:02:11.067 --> 00:02:13.367
+Long lists are shortened,
+but the counts are exact.
+
+00:02:13.367 --> 00:02:17.733
+Fix the file and preview again. Operator
+tip: preview a ten row slice first.
+
+00:02:17.733 --> 00:02:20.633
+It costs nothing, because
+preview writes nothing.
+
+00:02:20.667 --> 00:02:23.200
+Step four, commit. Rows go in batches.
+
+00:02:23.200 --> 00:02:26.133
+A file with a company column
+goes in batches of two hundred,
+
+00:02:26.133 --> 00:02:29.100
+and the page shows which batch it's on.
+
+00:02:29.100 --> 00:02:31.967
+A large file takes a few
+minutes, so keep the page open.
+
+00:02:31.967 --> 00:02:35.533
+If one batch fails, the batches
+already written stay written,
+
+00:02:35.533 --> 00:02:38.300
+and the result shows the
+real outcome for each row.
+
+00:02:38.333 --> 00:02:42.333
+The result also counts how many
+company links were made, already there,
+
+00:02:42.333 --> 00:02:44.533
+or failed. And an import starts nothing.
+
+00:02:44.533 --> 00:02:48.200
+Event plays and agent triggers
+skip bulk writes by default,
+
+00:02:48.200 --> 00:02:51.500
+so a big file won't fire a
+first touch for every row.
+
+00:02:51.567 --> 00:02:56.700
+An import writes only to your own
+organization and sends nothing outside it.
+
+00:02:56.700 --> 00:02:58.433
+If something lands wrong,
+
+00:02:58.433 --> 00:03:02.067
+archive the record from its
+page and restore it later.
+
+00:03:02.067 --> 00:03:04.733
+Purging for good needs an approval.
+
+00:03:04.767 --> 00:03:06.967
+Or ask your agent: "Import contacts.
+
+00:03:06.967 --> 00:03:10.600
+csv into Contacts, link each contact
+to its company, preview first,
+
+00:03:10.600 --> 00:03:13.500
+and show me which
+companies did not match".
+
+00:03:13.500 --> 00:03:16.233
+It previews, shows the match counts,
+
+00:03:16.233 --> 00:03:18.067
+and lists the companies that didn't match.
+
+00:03:18.067 --> 00:03:21.333
+You decide what to fix, and
+it commits when you say so.
+
+00:03:21.367 --> 00:03:25.867
+Step five, shape it to your business.
+In the console: CRM, then Model.
+
+00:03:25.867 --> 00:03:29.267
+Define a custom object, for example
+a Partner, with its fields: text,
+
+00:03:29.267 --> 00:03:32.733
+a number, a list of allowed values,
+or a reference to another object.
+
+00:03:32.733 --> 00:03:36.867
+Validate it, then publish. Publishing
+is proposed as a ChangeSet.
+
+00:03:36.867 --> 00:03:38.967
+Another owner or admin approves it,
+
+00:03:38.967 --> 00:03:41.367
+so a change to your model is never silent.
+
+00:03:41.433 --> 00:03:44.833
+For extra fields on companies,
+contacts and deals: Settings,
+
+00:03:44.833 --> 00:03:46.333
+then Custom fields.
+
+00:03:46.333 --> 00:03:49.933
+Pick the object, name the field,
+choose a type, and set its options:
+
+00:03:49.933 --> 00:03:53.300
+required, show on record,
+allow the agent to fill.
+
+00:03:53.300 --> 00:03:57.267
+Fields can be archived and restored,
+so a wrong turn is reversible.
+
+00:03:57.333 --> 00:04:00.300
+One honest note. Show in tables
+and Allow filtering are saved,
+
+00:04:00.300 --> 00:04:04.133
+but the Companies and Contacts
+lists don't use them yet.
+
+00:04:04.133 --> 00:04:06.200
+Those columns and filters
+arrive in a later release.
+
+00:04:06.200 --> 00:04:10.067
+Today the field already works in
+records list filters and for your agent.
+
+00:04:10.067 --> 00:04:13.067
+You can ask for every company
+where it equals a value.
+
+00:04:13.133 --> 00:04:16.533
+Step six, pipelines. In the
+console: Settings, then Pipelines.
+
+00:04:16.533 --> 00:04:19.567
+Create a deal pipeline
+and name its stages.
+
+00:04:19.567 --> 00:04:21.967
+Give each stage a category,
+open, won or lost,
+
+00:04:21.967 --> 00:04:24.800
+and a default win
+probability. Drag to reorder.
+
+00:04:24.800 --> 00:04:27.367
+The page refuses what would strand deals,
+
+00:04:27.367 --> 00:04:30.267
+such as archiving a stage
+that still holds open deals.
+
+00:04:30.267 --> 00:04:33.600
+Archived stages and
+pipelines can be restored.
+
+00:04:33.633 --> 00:04:35.167
+Everything here has an agent path.
+
+00:04:35.167 --> 00:04:39.500
+Ask your agent: "Add a Partner object
+with the fields tier and region".
+
+00:04:39.500 --> 00:04:42.600
+It proposes the change and
+returns an approval number,
+
+00:04:42.600 --> 00:04:45.267
+and you or a teammate
+approve it in Approvals.
+
+00:04:45.267 --> 00:04:49.367
+Then ask: "Create a deal pipeline called
+Partnerships with the stages Intro,
+
+00:04:49.367 --> 00:04:51.433
+Active and Signed". It creates them.
+
+00:04:51.500 --> 00:04:55.233
+The worry: one bad file could
+wreck my CRM. It can't do much.
+
+00:04:55.233 --> 00:04:59.033
+Preview writes nothing, and
+matching never creates a company.
+
+00:04:59.033 --> 00:05:01.400
+A failed batch doesn't undo the rest,
+
+00:05:01.400 --> 00:05:06.067
+and anything that lands wrong is archived
+and restored from its record page.
+
+00:05:06.100 --> 00:05:11.500
+Run it back: Prepare, map, preview,
+commit. Then model your business.
+
+00:05:11.500 --> 00:05:15.167
+Preview writes nothing, matching
+never creates a company,
+
+00:05:15.167 --> 00:05:18.167
+and re-importing never duplicates.
+
+00:05:18.200 --> 00:05:24.233
+Your records are in, linked to their
+companies and shaped to your business.
+
+00:05:24.233 --> 00:05:30.067
+Next: your CRM, kept in sync, so the
+tool you already use stays the record.

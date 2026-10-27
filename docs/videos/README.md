@@ -61,3 +61,28 @@ The no-JS fallback on the series page is a static list of titles; it needs a han
 - Do not rename an asset after upload without re-running the sync: the name in `videos.json` must equal the asset name.
 
 Encode example: `ffmpeg -i in.mov -c:v libx264 -crf 24 -preset slow -vf scale=1920:-2 -c:a aac -b:a 96k -movflags +faststart 01-what-is-gtm-os.mp4`.
+
+## Current state of the clips
+
+First cuts, hosted as assets of the `videos-v1` release (total 236.4 MB). Clips 01 to 10 and 16 are available; the other 30 entries in `videos.json` stay coming soon until they are recorded. More clips and refreshed visuals are coming.
+
+| Clip | Title | Duration | Size | Release asset |
+|---|---|---|---|---|
+| 01 | What is GTM OS | 2:43 | 15.8 MB | `01-what-is-gtmos.mp4` |
+| 02 | First setup with Claude | 4:25 | 20.1 MB | `02-first-setup-with-claude.mp4` |
+| 03 | Your first organization and your agent | 4:31 | 22.2 MB | `03-first-organization-and-agent.mp4` |
+| 04 | The onboarding steps | 4:50 | 22.1 MB | `04-the-onboarding-steps.mp4` |
+| 05 | Blueprints and motions | 4:15 | 20.3 MB | `05-blueprints-and-motions.mp4` |
+| 06 | Connections and integrations | 4:19 | 22.1 MB | `06-connections-and-integrations.mp4` |
+| 07 | Skills | 4:24 | 19.3 MB | `07-skills.mp4` |
+| 08 | Predefined agents | 5:12 | 24.6 MB | `08-predefined-agents.mp4` |
+| 09 | Tutorial: your first week | 5:15 | 25.5 MB | `09-tutorial-your-first-week.mp4` |
+| 10 | Bring your data in | 5:30 | 24.5 MB | `10-bring-your-data-in.mp4` |
+| 16 | Definitions as code and environments | 4:21 | 19.9 MB | `16-definitions-as-code.mp4` |
+
+## Add the next clips
+
+1. The video engineer writes the finished files and an updated `clips.json` to `../gtmos-explainer/out/final/`.
+2. Run `node tools/sync-videos.mjs` and `node tools/sync-videos.mjs --check --src ../gtmos-explainer/out/final`.
+3. Run the printed `gh release upload videos-v1 ... --clobber` command to add the new MP4 files to the existing release (the release is already created, so skip the `gh release create` line).
+4. Commit `docs/videos/` and push. From a published clip, the previous and next links step to the neighbouring published clips only.

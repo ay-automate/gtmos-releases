@@ -132,7 +132,7 @@
     <div class="wrap">
       <div class="block-h">
         <h2 id="vid-h">Learn it in six parts</h2>
-        <p>A video series that follows the real order of building a GTM system. Each clip shows the console and the exact prompt to ask your agent. Clips are published as they are recorded.</p>
+        <p>A video series that follows the real order of building a GTM system. Each clip shows the console and the exact prompt to ask your agent. The series is being published in parts: <span id="avail-count">clips are added as they are ready</span>. These are first cuts, and more clips and refreshed visuals are coming.</p>
       </div>
       <ol class="ladder" aria-label="The levels ladder">
         <li><a style="--i:0" href="videos/index.html#part-1"><span class="pt">Part 1</span><span class="lv">Plan</span><span class="tt">Understand and get running</span></a></li>
@@ -169,5 +169,11 @@
     </ul>
   </div>
 </footer>
+<script>
+fetch("videos/videos.json").then(function(r){return r.json()}).then(function(d){
+  var n=d.clips.filter(function(c){return c.mp4&&c.status!=="coming-soon"}).length, t=d.clips.length;
+  var e=document.getElementById("avail-count"); if(e&&n) e.textContent=n+" of "+t+" clips are available now";
+}).catch(function(){});
+</script>
 </body>
 </html>

@@ -1,0 +1,311 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.767
+Last clip, every answer had a source.
+
+00:00:02.767 --> 00:00:06.167
+This clip, every rule behind
+the engines gets a signature.
+
+00:00:06.167 --> 00:00:07.867
+A rule that changes who you contact
+
+00:00:07.867 --> 00:00:09.967
+should never rest on
+one person's judgment.
+
+00:00:09.967 --> 00:00:14.300
+Here it can't. By the end you'll take
+a definition from draft to signed,
+
+00:00:14.300 --> 00:00:16.033
+with two people on the record.
+
+00:00:16.100 --> 00:00:19.700
+Leo tightens a suppression rule
+in the rush before quarter end.
+
+00:00:19.700 --> 00:00:24.033
+By the forecast call, Mia's best
+accounts are quietly excluded,
+
+00:00:24.033 --> 00:00:25.933
+and nobody can say who changed it or when.
+
+00:00:25.933 --> 00:00:28.967
+Nothing reaches an engine
+until two different
+
+00:00:28.967 --> 00:00:31.333
+people have put their name to it.
+
+00:00:31.400 --> 00:00:32.600
+First, what a definition is.
+
+00:00:32.600 --> 00:00:37.167
+It's a piece of your go to market
+written down so the system can read it:
+
+00:00:37.167 --> 00:00:39.900
+who you target, how you score,
+what your brand may say,
+
+00:00:39.900 --> 00:00:43.500
+who is never contacted. Definitions
+as code means three things.
+
+00:00:43.500 --> 00:00:46.533
+They're scoped to your
+organization, versioned, and signed.
+
+00:00:46.533 --> 00:00:49.200
+Engines read them at run time, and
+only the signed version counts.
+
+00:00:49.200 --> 00:00:53.767
+An unsigned draft is ignored, and
+the engine falls back to its default.
+
+00:00:53.800 --> 00:00:57.167
+The kinds, in plain terms. Segments
+and personas say who you sell to.
+
+00:00:57.167 --> 00:01:01.800
+Scoring models and the buying
+committee model say who fits.
+
+00:01:01.800 --> 00:01:05.333
+Brand voice, suppression rules and a
+compliance policy say what you may say,
+
+00:01:05.333 --> 00:01:08.867
+and to whom. Lanes, sequences
+and plays say how outreach runs.
+
+00:01:08.867 --> 00:01:12.333
+Journeys, stage maps and money
+say what your numbers mean.
+
+00:01:12.333 --> 00:01:14.267
+The generated reference in your docs
+
+00:01:14.267 --> 00:01:16.600
+folder lists every kind with its fields.
+
+00:01:16.667 --> 00:01:18.500
+Second, the draft, in a ChangeSet:
+
+00:01:18.500 --> 00:01:21.400
+a bundle of proposed changes
+reviewed as one unit.
+
+00:01:21.400 --> 00:01:25.533
+In the console, edit a definition
+on its settings page, like Journeys,
+
+00:01:25.533 --> 00:01:28.533
+Money or Proof library,
+or in Environments.
+
+00:01:28.533 --> 00:01:30.100
+From the command line, write the files,
+
+00:01:30.100 --> 00:01:34.200
+then run gtm plan to preview the
+difference against what's live.
+
+00:01:34.200 --> 00:01:35.133
+Plan writes nothing.
+
+00:01:35.167 --> 00:01:36.000
+Third, approval.
+
+00:01:36.000 --> 00:01:39.733
+Run gtm apply with the environment
+dev, and it proposes the ChangeSet.
+
+00:01:39.733 --> 00:01:40.733
+Nothing changes yet.
+
+00:01:40.733 --> 00:01:44.467
+A person who isn't the proposer
+opens the approval card in Approvals.
+
+00:01:44.467 --> 00:01:47.433
+The impact preview says what
+would change and for whom.
+
+00:01:47.433 --> 00:01:51.333
+Then they approve or reject. The agent
+that drafted it can never approve it,
+
+00:01:51.333 --> 00:01:53.833
+and neither can the person
+that agent works for.
+
+00:01:53.900 --> 00:01:57.567
+Fourth, the signature. An approved
+ChangeSet puts the definition in dev,
+
+00:01:57.567 --> 00:02:00.767
+but engines still don't trust
+it. Propose it for signing,
+
+00:02:00.767 --> 00:02:03.933
+in Environments or with gtm
+definition propose for signing.
+
+00:02:03.933 --> 00:02:04.800
+Then a person signs.
+
+00:02:04.800 --> 00:02:08.600
+The signer can't be the proposer, nor
+the person behind a proposing agent.
+
+00:02:08.600 --> 00:02:11.767
+Pro move: gtm definition sign
+all, with the environment dev,
+
+00:02:11.767 --> 00:02:15.200
+signs everything proposed at
+once. Signing is human only.
+
+00:02:15.233 --> 00:02:16.933
+Here's the same flow with a team.
+
+00:02:16.933 --> 00:02:21.167
+Leo drafts the stricter rule and
+runs plan. Orbit computes the impact.
+
+00:02:21.167 --> 00:02:26.133
+Sophia reads the card, sees the accounts
+it would suppress, and approves.
+
+00:02:26.133 --> 00:02:30.133
+Leo proposes it for signing, and Mia
+signs, because she didn't propose it.
+
+00:02:30.133 --> 00:02:31.867
+No one person does every step.
+
+00:02:31.933 --> 00:02:36.100
+Why two people? A rule that changes
+who you contact is a business decision.
+
+00:02:36.100 --> 00:02:40.367
+Every change is a new version, so
+you can see what changed, when,
+
+00:02:40.367 --> 00:02:43.067
+and who signed it. Every step
+is on the audit log. To go back,
+
+00:02:43.067 --> 00:02:46.700
+gtm rollback proposes returning a
+definition to an earlier version.
+
+00:02:46.700 --> 00:02:49.033
+That proposal needs a second person too.
+
+00:02:49.067 --> 00:02:53.333
+Or ask your agent: "Draft a stricter
+suppression rule for competitors,
+
+00:02:53.333 --> 00:02:56.533
+validate it, show the impact
+preview and propose it.
+
+00:02:56.533 --> 00:03:00.767
+Do not approve or sign anything".
+It reports the approval and stops,
+
+00:03:00.767 --> 00:03:03.767
+because approving and
+signing aren't its to do.
+
+00:03:03.833 --> 00:03:06.367
+Fifth, two checks keep it honest.
+
+00:03:06.367 --> 00:03:10.333
+Environments shows a banner when
+definitions sit in dev and aren't live.
+
+00:03:10.333 --> 00:03:15.200
+And gtm check compares environments
+and exits non zero on drift,
+
+00:03:15.200 --> 00:03:17.400
+so it works as a gate in C I.
+
+00:03:17.400 --> 00:03:20.500
+Or ask your agent: "What
+is in dev and not live".
+
+00:03:20.533 --> 00:03:21.700
+One boundary to know.
+
+00:03:21.700 --> 00:03:25.133
+Environments are named places:
+dev, staging and production.
+
+00:03:25.133 --> 00:03:28.667
+A change lands in the
+environment it was proposed for,
+
+00:03:28.667 --> 00:03:30.400
+not the one you're viewing.
+
+00:03:30.400 --> 00:03:34.233
+Real customer facing effects outside
+production are recorded, not sent.
+
+00:03:34.233 --> 00:03:38.200
+Promoting and rolling back is the
+clip called Environments: dev,
+
+00:03:38.200 --> 00:03:39.400
+staging and production.
+
+00:03:39.467 --> 00:03:43.400
+The objection: two people on every
+rule change will slow us down.
+
+00:03:43.400 --> 00:03:46.067
+It's two people per rule, not per message.
+
+00:03:46.067 --> 00:03:49.500
+A draft sits harmlessly in dev, because
+engines ignore it until it's signed.
+
+00:03:49.500 --> 00:03:51.567
+Sign all clears a batch in one command.
+
+00:03:51.567 --> 00:03:55.533
+Your definitions, signed once,
+and every engine follows them.
+
+00:03:55.600 --> 00:03:59.500
+Keep these: Draft and preview the
+impact. A different person approves.
+
+00:03:59.500 --> 00:04:01.567
+A person who didn't propose it signs.
+
+00:04:01.567 --> 00:04:04.533
+Nothing reaches an engine
+until two different
+
+00:04:04.533 --> 00:04:06.867
+people have put their name to it.
+
+00:04:06.900 --> 00:04:10.500
+You can now take any rule
+from idea to signed config,
+
+00:04:10.500 --> 00:04:16.033
+with every step on the record. Run gtm
+check on your own organization today.
+
+00:04:16.033 --> 00:04:20.833
+Next up: your ICP and scoring model,
+the first definition worth drafting.

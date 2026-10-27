@@ -35,3 +35,11 @@ public page against its source (`git diff fadf58b -- docs/user-guide.html`) and 
 ## Source discrepancy to resolve
 `docs/SELF-HOST.md` in the product repo labels the local-only ports change "0.2.6"; the 0.2.5 release
 notes and this site say 0.2.5. Fix SELF-HOST.md.
+
+## Video hosting (added with the first 11 clips)
+- MP4 files are assets of the release `videos-v1` (11 so far: clips 01 to 10 and 16). Captions, posters and
+  transcripts live in `docs/videos/media/<NN-slug>/`. `tools/sync-videos.mjs` does the copying and prints the
+  draft-release commands; `--check` verifies files and names. See `docs/videos/README.md`.
+- The player sets no `crossorigin` attribute (release hosts send no CORS headers) and shows a message when
+  the file is not reachable. Previous/next from a published clip skip coming-soon clips.
+- Landing and series pages read the published count from `videos.json`. They say these are first cuts.

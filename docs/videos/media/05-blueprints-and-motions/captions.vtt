@@ -1,0 +1,342 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.833
+Setup drafted everything
+from evidence last clip,
+
+00:00:02.833 --> 00:00:05.333
+and it suggested a blueprint for you.
+
+00:00:05.333 --> 00:00:09.067
+Pick a motion now, and a working system
+is drafted in one change: personas,
+
+00:00:09.067 --> 00:00:11.067
+scoring, suppression, lanes and plays.
+
+00:00:11.100 --> 00:00:14.400
+Over the next few minutes you'll
+know what a blueprint installs,
+
+00:00:14.400 --> 00:00:18.033
+how to preview and apply one, and
+what stands between approved and live.
+
+00:00:18.100 --> 00:00:20.067
+Leo wires outbound one setting at a time.
+
+00:00:20.067 --> 00:00:24.267
+Weeks later the scoring, the suppression
+list and the sequences disagree,
+
+00:00:24.267 --> 00:00:26.000
+and the change history is a guess.
+
+00:00:26.033 --> 00:00:27.867
+A motion is the way you go to market.
+
+00:00:27.867 --> 00:00:29.800
+A blueprint is a shipped template that
+
+00:00:29.800 --> 00:00:31.767
+seeds a whole motion in one ChangeSet,
+
+00:00:31.767 --> 00:00:33.567
+a bundle of changes reviewed together.
+
+00:00:33.567 --> 00:00:36.767
+Blueprints are general templates,
+never forked per customer.
+
+00:00:36.767 --> 00:00:39.667
+Hold on to this: a blueprint is
+a whole motion in one change,
+
+00:00:39.667 --> 00:00:41.233
+and approved is not live.
+
+00:00:41.267 --> 00:00:43.167
+First, browse. In the console: Blueprints.
+
+00:00:43.167 --> 00:00:47.333
+The gallery has industry packages and
+starter blueprints, a motion filter,
+
+00:00:47.333 --> 00:00:51.100
+and search. Signed and verified badges
+tell you where each one comes from.
+
+00:00:51.100 --> 00:00:53.200
+Or ask your agent: "List the blueprints".
+
+00:00:53.233 --> 00:00:57.900
+The motions include: full go to market,
+outbound, SEO, sales led B2B SaaS,
+
+00:00:57.900 --> 00:00:58.367
+product-led.
+
+00:00:58.367 --> 00:01:02.933
+Then developer tools, direct to consumer,
+agency services and marketplaces.
+
+00:01:03.000 --> 00:01:06.500
+If you're not sure which fits, setup
+ranks blueprints from your motions,
+
+00:01:06.500 --> 00:01:10.267
+ARR band and team size. It shows every
+fact it used and every fact against.
+
+00:01:10.267 --> 00:01:13.800
+Or ask your agent: "Which blueprint
+fits us and what does it need".
+
+00:01:13.800 --> 00:01:16.167
+It answers with fit,
+requirements and gaps.
+
+00:01:16.200 --> 00:01:20.500
+Second, read before you apply. Open
+any blueprint and click View and apply.
+
+00:01:20.500 --> 00:01:24.933
+What it sets up lists everything it
+will draft: personas, segments, scoring,
+
+00:01:24.933 --> 00:01:28.533
+suppression rules, bindings, lanes,
+plays, metrics and sequences.
+
+00:01:28.600 --> 00:01:31.500
+Engines it drives names
+the engines behind it.
+
+00:01:31.500 --> 00:01:34.667
+What you need connected marks
+each connection Required, Ready,
+
+00:01:34.667 --> 00:01:38.467
+Optional or Missing. Those requirements
+flow into your readiness check,
+
+00:01:38.467 --> 00:01:40.667
+so gtm doctor tells you the same thing.
+
+00:01:40.733 --> 00:01:43.500
+Full go to market requires
+a model, an email sender,
+
+00:01:43.500 --> 00:01:46.433
+looot and Search Console,
+while outbound needs a model,
+
+00:01:46.433 --> 00:01:48.067
+an email sender and looot.
+
+00:01:48.100 --> 00:01:50.067
+Search blueprints need Search Console.
+
+00:01:50.067 --> 00:01:51.900
+Without it the search plays are held back,
+
+00:01:51.900 --> 00:01:53.900
+and you apply again once it's connected.
+
+00:01:53.967 --> 00:01:56.933
+Third, plan, then apply. Pro
+move: run the plan first.
+
+00:01:56.933 --> 00:01:59.633
+In the terminal: gtm plan with
+the from flag and a blueprint.
+
+00:01:59.633 --> 00:02:03.067
+Or ask your agent: "Preview what the
+outbound blueprint would change".
+
+00:02:03.067 --> 00:02:06.833
+You and your approver read the same
+list before anything is proposed.
+
+00:02:06.833 --> 00:02:09.233
+If a requirement is missing, fix it first.
+
+00:02:09.300 --> 00:02:12.600
+Now apply. In the console:
+Blueprints, then Apply this blueprint.
+
+00:02:12.600 --> 00:02:16.200
+Choose an environment. It defaults to
+dev, the lowest one below production,
+
+00:02:16.200 --> 00:02:18.533
+because production
+refuses direct publishes.
+
+00:02:18.533 --> 00:02:21.300
+Outreach blueprints ask for
+your sender's postal address.
+
+00:02:21.300 --> 00:02:24.000
+Click Apply, or run gtm
+apply with environment dev.
+
+00:02:24.033 --> 00:02:25.500
+Applying validates the blueprint,
+
+00:02:25.500 --> 00:02:28.267
+drafts one change for everything
+it sets up, and proposes it.
+
+00:02:28.267 --> 00:02:30.733
+Or ask your agent: "Apply the
+outbound blueprint to dev".
+
+00:02:30.733 --> 00:02:33.133
+You get an approval number,
+and the agent stops,
+
+00:02:33.133 --> 00:02:34.500
+because an agent never approves.
+
+00:02:34.500 --> 00:02:37.733
+Apply again while that proposal waits,
+and you get the same proposal back,
+
+00:02:37.733 --> 00:02:38.633
+not a duplicate.
+
+00:02:38.667 --> 00:02:40.633
+Fourth, approve, sign, promote.
+
+00:02:40.633 --> 00:02:43.233
+Sophia opens the approval card:
+the frozen payload as a diff,
+
+00:02:43.233 --> 00:02:45.700
+the impact preview, and who proposed it.
+
+00:02:45.700 --> 00:02:47.467
+She can't approve her own proposals,
+
+00:02:47.467 --> 00:02:49.433
+and neither can the
+person an agent acts for.
+
+00:02:49.433 --> 00:02:51.967
+When she approves, the
+change executes in dev.
+
+00:02:52.033 --> 00:02:55.400
+Watch this one. Approved is not
+live. The definitions land in dev,
+
+00:02:55.400 --> 00:02:59.067
+then someone other than the proposer
+signs them, and then you promote.
+
+00:02:59.067 --> 00:03:02.267
+Environments have their own clip:
+dev, staging and production.
+
+00:03:02.333 --> 00:03:05.233
+Once signed and promoted,
+engines read the signed version,
+
+00:03:05.233 --> 00:03:06.833
+and until then they use their defaults.
+
+00:03:06.833 --> 00:03:10.567
+Any external effect still needs a
+person's approval, and respects Dry Mode.
+
+00:03:10.600 --> 00:03:11.633
+Fifth, customize.
+
+00:03:11.633 --> 00:03:14.933
+Values your organization owns come
+from your approved setup cards.
+
+00:03:14.933 --> 00:03:17.100
+ICP weights, stages, customer types,
+
+00:03:17.100 --> 00:03:20.433
+suppression lists and the daily cap
+are adapted to what you approved,
+
+00:03:20.433 --> 00:03:22.100
+not left as template defaults.
+
+00:03:22.167 --> 00:03:25.233
+In the console: use the
+Settings pages such as Journeys,
+
+00:03:25.233 --> 00:03:27.900
+Money and the Proof library,
+and the Environments page,
+
+00:03:27.900 --> 00:03:30.333
+where each change stays
+a draft until signed.
+
+00:03:30.367 --> 00:03:31.333
+Or ask your agent:
+
+00:03:31.333 --> 00:03:33.000
+"Adapt the outbound blueprint to our
+
+00:03:33.000 --> 00:03:34.867
+enterprise segment and show me the plan".
+
+00:03:34.867 --> 00:03:37.867
+Claude drafts the change, you see
+the diff and the impact preview,
+
+00:03:37.867 --> 00:03:39.433
+and a different person approves.
+
+00:03:39.467 --> 00:03:43.100
+In the terminal: gtm plan, gtm
+apply with environment dev,
+
+00:03:43.100 --> 00:03:46.800
+and gtm blueprint upgrade,
+which pulls upstream updates.
+
+00:03:46.867 --> 00:03:49.800
+The objection: someone else's
+template running my go to market?
+
+00:03:49.800 --> 00:03:50.833
+Not until you say so.
+
+00:03:50.833 --> 00:03:54.000
+It lands as drafts in dev,
+adapted to your approved values,
+
+00:03:54.000 --> 00:03:57.033
+and engines ignore drafts. They
+read only the signed version.
+
+00:03:57.067 --> 00:04:00.933
+Keep these: Browse, read what it
+installs and needs, plan then apply,
+
+00:04:00.933 --> 00:04:02.833
+then approve, sign and promote.
+
+00:04:02.833 --> 00:04:07.233
+A blueprint is a whole motion in one
+change, and approved is not live.
+
+00:04:07.300 --> 00:04:10.300
+You picked a motion, and now you
+have a reviewed, proposed system.
+
+00:04:10.300 --> 00:04:12.367
+Next is connections and integrations,
+
+00:04:12.367 --> 00:04:14.667
+where you plug in everything
+the blueprint requires.

@@ -1,0 +1,396 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.067
+Your agent has an organization of its
+own and a key that can never approve.
+
+00:00:04.067 --> 00:00:04.967
+It's ready to start the setup.
+
+00:00:04.967 --> 00:00:07.833
+Answer a few questions, and
+the system configures itself,
+
+00:00:07.833 --> 00:00:10.167
+with every suggestion
+citing where it came from.
+
+00:00:10.233 --> 00:00:13.933
+By the end you'll know what six
+screens save, what each answer changes,
+
+00:00:13.933 --> 00:00:16.000
+and which steps only a person can take.
+
+00:00:16.067 --> 00:00:19.033
+Most setup wizards collect
+everything, then guess the rest.
+
+00:00:19.033 --> 00:00:21.133
+Mia gets a scoring model
+that looks confident,
+
+00:00:21.133 --> 00:00:23.100
+and its numbers have no source to check.
+
+00:00:23.133 --> 00:00:24.467
+Setup works the other way.
+
+00:00:24.467 --> 00:00:27.567
+No evidence, no value: it
+drafts from your own data,
+
+00:00:27.567 --> 00:00:31.267
+and a person signs what goes live.
+Three rules hold on every screen.
+
+00:00:31.267 --> 00:00:32.400
+No invented values.
+
+00:00:32.400 --> 00:00:35.467
+Anything unknown stays empty
+and becomes a numbered open ask.
+
+00:00:35.467 --> 00:00:37.533
+And the proposer never approves.
+
+00:00:37.600 --> 00:00:41.833
+In the console: Setup. Or ask your
+agent: "Set up GTM OS for my company".
+
+00:00:41.833 --> 00:00:44.533
+Both drive the same operations,
+so you can take turns.
+
+00:00:44.533 --> 00:00:46.367
+What one saves, the other sees.
+
+00:00:46.433 --> 00:00:49.367
+Take an example. Setup suggests
+a weight for company size.
+
+00:00:49.367 --> 00:00:51.533
+Beside it you see the closed
+won deals it rests on,
+
+00:00:51.533 --> 00:00:53.167
+and a line from your pricing document.
+
+00:00:53.167 --> 00:00:56.333
+If a model drafted a value and cited
+nothing, that value is dropped.
+
+00:00:56.333 --> 00:00:57.533
+With no model configured,
+
+00:00:57.533 --> 00:01:00.033
+a deterministic drafter fills
+only what your data supports,
+
+00:01:00.033 --> 00:01:01.200
+and the card says so.
+
+00:01:01.233 --> 00:01:04.400
+Screen one is where you describe
+your company: team size, markets,
+
+00:01:04.400 --> 00:01:07.633
+current stack, up to three pains,
+the hours a week you can spend,
+
+00:01:07.633 --> 00:01:10.300
+and your motions. The ARR
+band is optional and private.
+
+00:01:10.300 --> 00:01:13.300
+Only an owner or admin can read
+it, and agents never see it.
+
+00:01:13.367 --> 00:01:14.533
+From your pains and motions,
+
+00:01:14.533 --> 00:01:17.567
+setup ranks the engines with
+reasons and suggests blueprints.
+
+00:01:17.567 --> 00:01:19.000
+Pick yours, then click Select.
+
+00:01:19.000 --> 00:01:22.033
+Or ask your agent: "Which engines
+and blueprint fit us, and why".
+
+00:01:22.033 --> 00:01:24.700
+Each line lists the facts
+for and the facts against.
+
+00:01:24.767 --> 00:01:28.467
+Screen two, Connect your data, shows
+real coverage: connected sources,
+
+00:01:28.467 --> 00:01:32.067
+records, last sync. Sources overlap,
+so counts are never added up.
+
+00:01:32.067 --> 00:01:33.033
+Each source has Pull now,
+
+00:01:33.033 --> 00:01:37.133
+and every missing grant becomes a
+numbered ask that names who grants it.
+
+00:01:37.167 --> 00:01:38.433
+Connecting is a human click,
+
+00:01:38.433 --> 00:01:41.800
+because OAuth consent and secret
+entry stay in the console.
+
+00:01:41.800 --> 00:01:44.267
+Ask your agent: "What data
+do we still need to connect".
+
+00:01:44.267 --> 00:01:47.467
+It names the gap and sends you to
+Integrations, then Connections.
+
+00:01:47.500 --> 00:01:51.733
+Screen three, Your definitions, starts
+with your documents: PDFs with text,
+
+00:01:51.733 --> 00:01:53.367
+Word, Excel, CSV and more.
+
+00:01:53.367 --> 00:01:55.533
+Suppression lists and your data processing
+
+00:01:55.533 --> 00:01:57.933
+agreement are restricted
+to owners and admins,
+
+00:01:57.933 --> 00:01:59.167
+and never go to a model.
+
+00:01:59.200 --> 00:02:02.567
+Setup then drafts a card for
+each of these: lifecycle stages,
+
+00:02:02.567 --> 00:02:05.200
+the ICP and its weights,
+pilot scope, customer types.
+
+00:02:05.200 --> 00:02:09.333
+Then who the engines never contact,
+your CRM stage values, revenue truth,
+
+00:02:09.333 --> 00:02:12.100
+your words for deals, who
+owns what, and brand voice.
+
+00:02:12.100 --> 00:02:13.367
+Each card shows its evidence.
+
+00:02:13.367 --> 00:02:16.633
+Edit, skip, or approve, and
+your edits survive a redraft.
+
+00:02:16.633 --> 00:02:19.767
+Or ask your agent: "Show me the
+drafted cards and their evidence".
+
+00:02:19.833 --> 00:02:23.500
+Approving publishes through the
+operation that owns that definition.
+
+00:02:23.500 --> 00:02:24.067
+The ICP,
+
+00:02:24.067 --> 00:02:27.433
+scope and customer types become
+proposals a different person approves.
+
+00:02:27.433 --> 00:02:31.900
+Revenue truth, deal words, territories
+and brand need a signed in human,
+
+00:02:31.900 --> 00:02:33.633
+because agent keys are refused.
+
+00:02:33.667 --> 00:02:38.000
+Screen four, Rules and who approves
+what, holds buying roles, consent,
+
+00:02:38.000 --> 00:02:41.533
+and trust settings such as Dry
+Mode, caps and quiet hours.
+
+00:02:41.533 --> 00:02:45.567
+Then autonomy per engine: dry or
+live, and suggest, approve each,
+
+00:02:45.567 --> 00:02:48.833
+or act within caps. Last
+come seats and role profiles.
+
+00:02:48.833 --> 00:02:51.833
+The product refuses to
+remove the last steward.
+
+00:02:51.900 --> 00:02:53.167
+Role profiles, the ARR band,
+
+00:02:53.167 --> 00:02:56.400
+and approving cards that
+target a human are human only.
+
+00:02:56.400 --> 00:02:58.500
+Ask your agent: "Set our role profiles".
+
+00:02:58.500 --> 00:03:02.367
+It stops and says: do this in the
+console, then names the screen and button.
+
+00:03:02.400 --> 00:03:04.367
+Each answer changes real behavior.
+
+00:03:04.367 --> 00:03:07.033
+The ICP card becomes the scoring
+model that ranks accounts.
+
+00:03:07.033 --> 00:03:09.267
+The suppression card is
+checked on every send.
+
+00:03:09.267 --> 00:03:11.433
+Consent decides which
+channels reach a person,
+
+00:03:11.433 --> 00:03:13.900
+autonomy decides which
+engines act without asking,
+
+00:03:13.900 --> 00:03:16.000
+and territories decide who owns a lead.
+
+00:03:16.067 --> 00:03:17.367
+Screen five, The build.
+
+00:03:17.367 --> 00:03:20.700
+First, engine readiness: each
+requirement is met, missing or unknown.
+
+00:03:20.700 --> 00:03:23.033
+Then Run build, and a worker
+job settles your cards,
+
+00:03:23.033 --> 00:03:27.167
+adapts and proposes your blueprint,
+and asks about unmapped stage values.
+
+00:03:27.167 --> 00:03:29.333
+It also checks CRM completeness,
+runs a dry rescore,
+
+00:03:29.333 --> 00:03:31.533
+and takes a readiness snapshot.
+
+00:03:31.533 --> 00:03:34.567
+Or ask your agent: "Start the
+build and tell me what it needs".
+
+00:03:34.600 --> 00:03:38.633
+Follow the live log, retry or cancel,
+and read the Needs a human list.
+
+00:03:38.700 --> 00:03:41.800
+If someone changes the session
+while you work, you see a conflict.
+
+00:03:41.800 --> 00:03:45.233
+Re-read, then redo. Every write
+names the version it was based on,
+
+00:03:45.233 --> 00:03:47.267
+so nobody overwrites anyone silently.
+
+00:03:47.333 --> 00:03:49.900
+Screen six, First motion and ninety days,
+
+00:03:49.900 --> 00:03:52.100
+gives you a plan sized
+to your weekly hours.
+
+00:03:52.100 --> 00:03:55.733
+Add, remove, defer or reorder plays,
+or request a new one from Studio.
+
+00:03:55.733 --> 00:03:57.967
+The brief cites a brief
+line for every sentence.
+
+00:03:57.967 --> 00:04:01.667
+Or ask your agent: "Show me the
+ninety day plan and the brief".
+
+00:04:01.700 --> 00:04:03.767
+Then Launch, which is human only.
+
+00:04:03.767 --> 00:04:05.767
+It signs and promotes
+the setup definitions,
+
+00:04:05.767 --> 00:04:08.700
+and turns engines live only
+where your autonomy card says so.
+
+00:04:08.700 --> 00:04:11.700
+The rest stay in Dry Mode, and a
+different person approves in Approvals.
+
+00:04:11.700 --> 00:04:15.067
+Ask your agent: "What does Launch
+need", and it reads the preview.
+
+00:04:15.100 --> 00:04:18.133
+At the end, the first win
+card shows eight milestones,
+
+00:04:18.133 --> 00:04:20.467
+computed from real facts and never stored.
+
+00:04:20.500 --> 00:04:24.667
+The pushback: a model drafting my
+rules, then Launch switching engines on?
+
+00:04:24.667 --> 00:04:28.367
+Uncited values never survive, each
+card waits on the right person,
+
+00:04:28.367 --> 00:04:30.800
+and engines go live
+only where you chose it.
+
+00:04:30.800 --> 00:04:32.767
+Everything else stays in Dry Mode.
+
+00:04:32.800 --> 00:04:35.600
+The short version: Six
+screens, every draft cited,
+
+00:04:35.600 --> 00:04:39.267
+every live change signed by a
+person. No evidence, no value.
+
+00:04:39.333 --> 00:04:40.800
+You answered a few questions,
+
+00:04:40.800 --> 00:04:44.900
+and the system now holds evidenced
+definitions, waiting on the right people.
+
+00:04:44.900 --> 00:04:47.200
+The next clip is blueprints and motions,
+
+00:04:47.200 --> 00:04:49.767
+templates that seed a
+whole system in one change.
