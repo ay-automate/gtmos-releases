@@ -15,7 +15,7 @@
   }
   function pad(n) { return n < 10 ? "0" + n : String(n); }
   function dur(s) { var m = Math.round(s / 60); return m + " min"; }
-  function ready(c) { return !!c.mp4; }
+  function ready(c) { return !!c.mp4 && c.status !== "coming-soon"; }
   function watchHref(c) { return "watch.html?clip=" + pad(c.number); }
 
   function load() {
@@ -200,8 +200,23 @@
     var left = el("div");
     var video = null;
     if (ready(c)) {
-      video = el("video", { controls: true, preload: "metadata", playsinline: true, poster: c.poster || false, "aria-label": c.title, crossorigin: "anonymous" });
-      video.appendChild(el("source", { src: c.mp4, type: "video/mp4" }));
+      /* The MP4 may be an absolute release-asset URL on another origin. No crossorigin attribute is set on
+         purpose: the video plays without CORS, and the captions (c.vtt) are same-origin files in the repo. */
+      video = el("video", { controls: true, preload: "metadata", playsinline: true, poster: c.poster || false, "aria-label": c.title });
+      var src = el("source", { src: c.mp4, type: "video/mp4" });
+      video.appendChild(src);
+      var failed = false;
+      function showMissing() {
+        if (failed) return; failed = true;
+        var note = el("div", { "class": "panel", role: "alert", style: "margin-top:12px" }, [
+          el("h2", { text: "The video file is not available yet" }),
+          el("p", null, ["The player could not load this clip. It is hosted as a release file and may not be published yet. The transcript and the prompts on this page work now."]),
+          el("p", null, [el("a", { href: c.mp4, text: "Open the video file directly" })])
+        ]);
+        left.insertBefore(note, left.firstChild.nextSibling);
+      }
+      src.addEventListener("error", showMissing);
+      video.addEventListener("error", showMissing);
       if (c.vtt) video.appendChild(el("track", { kind: "captions", srclang: "en", label: "English", src: c.vtt, "default": true }));
       var tools = el("div", { "class": "player-tools" }, [el("span", { text: "Speed" })]);
       [0.75, 1, 1.25, 1.5, 2].forEach(function (s) {
@@ -268,7 +283,7 @@
     root.appendChild(pager);
 
     function fill() {
-      if (c.transcript) {
+      if (c.transcript && !/.md$/i.test(c.transcript)) {
         fetch(c.transcript).then(function (r) { if (!r.ok) throw 0; return r.text(); }).then(function (t) {
           trBody.appendChild(el("pre", { text: t }));
         }, vttFallback);

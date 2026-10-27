@@ -1,5 +1,5 @@
 {
-  "_howto": "Add a clip: copy its files to docs/videos/media/ and fill mp4, vtt, poster and transcript for its entry below. Paths are relative to docs/videos/. See README.md.",
+  "_howto": "Do not edit clip media by hand: run node tools/sync-videos.mjs from the repository root. MP4 files are release assets (tag videos-v1); captions, posters and transcripts live in docs/videos/media/. See README.md.",
   "parts": [
     {
       "part": 1,
@@ -53,16 +53,20 @@
       "part": 1,
       "title": "What is GTM OS",
       "outcome": "Your go-to-market, run by agents you can trust.",
-      "durationSeconds": 180,
+      "durationSeconds": 163,
       "type": "Concept",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/01-what-is-gtmos.mp4",
+      "vtt": "media/01-what-is-gtmos/captions.vtt",
+      "poster": "media/01-what-is-gtmos/poster.jpg",
+      "transcript": "media/01-what-is-gtmos/transcript.md",
       "prompts": [
         "Explain GTM OS to my team in five sentences and tell me which of our current tools it would replace."
-      ]
+      ],
+      "slug": "what-is-gtmos",
+      "status": "published",
+      "bytes": 16590500,
+      "sha256": "1d8a33c1dffc64eb74928e6b56ba13b5bdd40521985be5b34ed62c37b1ee3e0a"
     },
     {
       "id": "c02",
