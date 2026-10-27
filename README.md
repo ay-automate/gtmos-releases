@@ -1,9 +1,5 @@
 # GTM OS releases
 
-<!-- release-status:start -->
-> **GTM OS 0.2.5 is rolling out.** Until the 0.2.5 CLI and images appear on npm and the registry, the commands on this page install the previous release.
-<!-- release-status:end -->
-
 Public releases of **GTM OS**, the self-hosted operating system for go-to-market: one typed model of your accounts, contacts, deals and signals; engines that find, enrich, score, route and reach accounts; and an agent-first interface (Claude Code, Codex or any MCP agent) where every customer-facing action waits for a second person to approve it.
 
 This repository holds **releases and documentation only**. The source code is not published here.
