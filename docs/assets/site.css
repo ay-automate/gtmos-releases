@@ -1,7 +1,7 @@
 /* GTM OS releases site design system. Tokens mirror the product theme (theme.module.css). */
 :root{
   --ink:#17181b;--paper:#f5f2ec;--card:#ffffff;--off:#efede7;
-  --muted:#575961;--faint:#6d6f77;--line:rgba(23,24,27,.14);
+  --muted:#575961;--faint:#626470;--line:rgba(23,24,27,.14);
   --ember:#f26a43;--ember-d:#c9451f;--ember-soft:#fbdcd1;
   --on-ember:#17181b;
   --ok:#1f7a4f;--gate:#9a520f;
@@ -10,7 +10,7 @@
   --shadow:0 14px 40px rgba(23,24,27,.10);
   --sans:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
   --mono:"DM Mono","SFMono-Regular",Menlo,Consolas,monospace;
-  --link:var(--ember-d);--focus:#c9451f;
+  --link:#b03816;--focus:#b03816;
   --max:1120px;
   color-scheme:light;
 }
@@ -267,3 +267,16 @@ section.block{padding:64px 0}
 [hidden]{display:none!important}
 .hero-grid>*,.release>*,.grid>*,.watch>*,.clips>*{min-width:0}
 @media (max-width:620px){.codebox{padding:14px 16px 52px}.copy{top:auto;bottom:10px}.watch h1{margin-top:22px}}
+
+/* long-form pages (release notes) */
+.prose{max-width:46em;padding-bottom:64px}
+.prose h2{margin:44px 0 14px;font-size:clamp(1.5rem,3vw,2rem)}
+.prose h3{margin:30px 0 10px}
+.prose p{margin:0 0 14px}
+.prose ul,.prose ol{margin:0 0 16px;padding-left:1.3em}
+.prose li{margin:7px 0}
+.prose li>p:first-child{margin-top:8px}
+.prose li>pre,.prose li>p{margin-top:10px}
+.prose :not(pre)>code{background:var(--off);border:1px solid var(--line);border-radius:6px;padding:1px 6px;font-size:.88em;overflow-wrap:anywhere}
+.prose .codebox{margin:12px 0 16px}
+.prose strong{font-weight:600}

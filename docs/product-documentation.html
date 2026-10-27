@@ -46,7 +46,7 @@
     --line:#352e25;
     --line-strong:#4a4135;
     --ember:#f47b56;
-    --ember-ink:#f89b7c;
+    --ember-ink:#fba98c;
     --ember-tint:#3a2219;
     --gate:#ec9350;
     --gate-ink:#f2b07a;
@@ -54,7 +54,7 @@
     --tech-tint:#221e19;
     --code-bg:#221d17;
     --code-fg:#e9d9c4;
-    --ok:#7cc293;
+    --ok:#92d3a8;
     --ok-tint:#1d2c21;
     --warn:#e9b06a;
     --warn-tint:#33281a;
@@ -71,7 +71,7 @@
   --line:#352e25;
   --line-strong:#4a4135;
   --ember:#f47b56;
-  --ember-ink:#f89b7c;
+  --ember-ink:#fba98c;
   --ember-tint:#3a2219;
   --gate:#ec9350;
   --gate-ink:#f2b07a;
@@ -79,7 +79,7 @@
   --tech-tint:#221e19;
   --code-bg:#221d17;
   --code-fg:#e9d9c4;
-  --ok:#7cc293;
+  --ok:#92d3a8;
   --ok-tint:#1d2c21;
   --warn:#e9b06a;
   --warn-tint:#33281a;
@@ -108,7 +108,7 @@ strong{font-weight:600}
 .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.2) blur(10px);-webkit-backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
 .topbar-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 24px;min-height:var(--header-h)}
 .brand{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:700;font-size:1.05rem;color:var(--fg);text-decoration:none;white-space:nowrap}
-.brand-mark{width:26px;height:26px;border-radius:7px;background:var(--ember);display:grid;place-items:center;color:#fff;font-family:var(--font-mono);font-size:12px;font-weight:500}
+.brand-mark{width:26px;height:26px;border-radius:7px;background:var(--ember);display:grid;place-items:center;color:#17181b;font-family:var(--font-mono);font-size:12px;font-weight:500}
 .brand small{font-family:var(--font-mono);font-weight:400;font-size:.72rem;color:var(--muted);margin-left:2px}
 .spacer{flex:1}
 .seg{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;padding:2px;background:var(--surface)}
@@ -139,7 +139,7 @@ section.doc:first-of-type{border-top:0;margin-top:0;padding-top:12px}
 /* hero */
 .hero{padding:30px 0 8px}
 .hero h1{font-size:clamp(2.1rem,1.4rem + 3.4vw,3.6rem);font-weight:800;letter-spacing:-.025em;margin:0 0 14px;max-width:18ch}
-.hero h1 em{font-style:normal;color:var(--ember)}
+.hero h1 em{font-style:normal;color:var(--ember-ink)}
 .hero .lede{font-size:1.15rem}
 .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px}
 .pill{font-family:var(--font-mono);font-size:.76rem;border:1px solid var(--line-strong);background:var(--surface);border-radius:999px;padding:4px 10px;color:var(--muted)}
@@ -240,7 +240,7 @@ td.wrap code{white-space:normal}
 <div id="app" data-aud="both">
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="#what"><span class="brand-mark">os</span>GTM OS <small>product documentation · v0.2.2</small></a>
+    <a class="brand" href="#what"><span class="brand-mark">os</span>GTM OS <small>product documentation · v0.2.5</small></a>
     <div class="spacer"></div>
     <div class="seg" role="group" aria-label="Audience">
       <button type="button" data-aud="both" aria-pressed="true">Both views</button>
@@ -267,7 +267,7 @@ td.wrap code{white-space:normal}
     <li><a href="#glossary">Glossary</a></li>
     <li><a href="#not-built">What is not built yet</a></li>
   </ol>
-  <div class="toc-meta">Written against the code at gtmos <code>main</code> commit <code>e29e84f9</code> (release 0.2.2). When this page and a live instance disagree, the live registry (<code>gtm_describe</code>) wins.</div>
+  <div class="toc-meta">Written for GTM OS release 0.2.5 (CLI 0.2.5). When this page and a live instance disagree, the live registry (<code>gtm_describe</code>) wins.</div>
 </nav>
 
 <main>
@@ -279,11 +279,11 @@ td.wrap code{white-space:normal}
     <h1>An operating system for <em>go-to-market</em> that you host and agents run.</h1>
     <p class="lede">GTM OS is an open-source, self-hosted platform that holds your go-to-market data in one typed model, runs the GTM work through engines, and lets humans and AI agents operate all of it through one governed interface where every customer-facing action waits for a second person to approve it.</p>
     <div class="pillrow">
-      <span class="pill"><b>7</b> engines</span>
-      <span class="pill"><b>401</b> operations</span>
+      <span class="pill"><b>8</b> engines in the console</span>
+      <span class="pill"><b>670+</b> operations</span>
       <span class="pill"><b>35</b> canon object types</span>
-      <span class="pill"><b>23</b> definition kinds</span>
-      <span class="pill"><b>36</b> first-party packages</span>
+      <span class="pill"><b>31</b> definition kinds</span>
+      <span class="pill"><b>41</b> first-party packages</span>
       <span class="pill"><b>10</b> blueprints</span>
     </div>
   </div>
@@ -291,7 +291,7 @@ td.wrap code{white-space:normal}
   <div class="dual">
     <div class="gtm">
       <h4>For GTM teams</h4>
-      <p>Most GTM teams run on a stack of tools that each hold a slice of the customer and none of which agree. GTM OS replaces that with one system: your accounts, contacts, deals, signals and activity live in one place, and the work on top of them (finding intent, enriching records, scoring accounts, routing, sequencing, SEO, paid ads) runs as engines you configure.</p>
+      <p>Most GTM teams run on a stack of tools that each hold a slice of the customer and none of which agree. GTM OS replaces that with one system: your accounts, contacts, deals, signals and activity live in one place, and the work on top of them (finding intent, enriching records, scoring accounts, routing, sequencing, merging duplicates, running plays, SEO, paid ads) runs as engines you configure.</p>
       <p>You describe your motion once (who your ICP is, which signals matter, how many emails a mailbox may send, who must never be contacted) and the engines follow it. Nothing reaches a customer, a CRM or an ad account until a person on your team approves it.</p>
     </div>
     <div class="tech">
@@ -324,24 +324,40 @@ td.wrap code{white-space:normal}
         <li>the API keys you choose to add (an AI model, looot for data, an email sender), which you paste in the console;</li>
         <li>the DNS records for your sending domain, if you will send email.</li>
       </ul>
-      <p><strong>From setup to working system.</strong> Then <code>/build-gtm-system</code>: the agent interviews you about your ICP, offer, markets, channels and goals, proposes the engine settings, and builds them. You review and approve. When you are happy, one card in <strong>Environments &gt; Go live</strong> signs everything and promotes it to production with a single approval. Expect roughly an hour for a first setup, most of it answering questions and approving.</p>
-      <p><strong>Safe by default.</strong> A new install runs in <strong>live mode</strong>: anything not connected says so plainly and names the missing key, instead of showing invented numbers. Nothing is sent, merged or published without a person approving it, and the person who proposed a change (or whose agent did) can never approve it. A separate demo mode with sample data exists only for walkthroughs; never use it with real prospects.</p>
+      <p><strong>From setup to working system.</strong> Then the <strong>setup wizard</strong> in the console (Setup: nine steps on six screens) or <code>/build-gtm-system</code> with your agent: either one interviews you about your ICP, offer, markets, channels and goals, drafts each definition with the evidence behind it, and builds the engines. You review and approve. When you are happy, one card in <strong>Environments &gt; Go live</strong> signs everything and promotes it to production with a single approval. Expect roughly an hour for a first setup, most of it answering questions and approving. A <strong>first-win checklist</strong> on Home shows eight milestones computed from what really happened in your workspace, and opt-in operator nudges tell owners and admins when something needs them.</p>
+      <p><strong>Safe by default.</strong> A new install runs in <strong>live mode</strong>: anything not connected says so plainly and names the missing key, instead of showing invented numbers. Nothing is sent, merged or published without a person approving it, and the person who proposed a change (or whose agent did) can never approve it. Dry Mode, for the whole organization and for each engine, shows what would have happened first, and the claims gate checks every factual claim in outbound content against proof you approved. A separate demo mode with sample data exists only for walkthroughs; never use it with real prospects.</p>
       <p><strong>Who does what.</strong> A GTM lead owns the decisions and approvals; the agent (or a GTM engineer) does the building; an IT person is only needed if you host it on company servers. Day to day, the team works in the console: the Hot list, company pages, outreach approvals and the engine dashboards.</p>
       <p><strong>What it costs to run.</strong> The software itself has no license fee. You pay only for what you connect: the AI model you choose, looot data credits for enrichment and signals (with per-run spend caps), your Composio plan, and the machine it runs on.</p>
-      <p><strong>Staying current.</strong> New versions arrive as an upgrade command that snapshots your data first and rolls back automatically if anything fails. Your configuration, data and approvals history carry over.</p>
+      <p><strong>Staying current.</strong> New versions arrive as an upgrade command. Upgrade the CLI first, then the instance: it takes a verified backup, rehearses the migration on a copy, and rolls back by swapping the images if anything fails. An upgrade never touches, removes or loses your data: every release only adds. Your configuration, data and approvals history carry over.</p>
     </div>
     <div class="tech">
       <h4>Under the hood</h4>
-      <p>Four images, <code>gtmos-api</code>, <code>gtmos-console</code>, <code>gtmos-worker</code> and <code>gtmos-mcp</code> (0.2.2), plus <code>pgvector/pgvector:pg16</code>, wired by a generated <code>docker-compose.yml</code>. Default ports: console 3000, API 3001, MCP 3004. The <code>gtm</code> CLI installs from npm (<code>@gtmos/cli</code>, 0.2.4 or later); the images are public on GHCR (<code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}</code>, tags <code>0.2.2</code> and <code>stable</code>, linked to <a href="https://github.com/ay-automate/gtmos-releases">github.com/ay-automate/gtmos-releases</a>), so <code>gtm setup</code> pulls them. Locally built images can still be used with <code>--version &lt;tag&gt; --no-pull</code>.</p>
+      <p>Four images, <code>gtmos-api</code>, <code>gtmos-console</code>, <code>gtmos-worker</code> and <code>gtmos-mcp</code> (0.2.5), plus <code>pgvector/pgvector:pg16</code>, wired by a generated <code>docker-compose.yml</code>. Default ports: console 3000, API 3001, MCP 3004, all bound to <code>127.0.0.1</code> (see below). The <code>gtm</code> CLI installs from npm (<code>@gtmos/cli</code>, 0.2.5); the images are public on GHCR (<code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}</code>, tags <code>0.2.5</code> and <code>stable</code>, linked to <a href="https://github.com/ay-automate/gtmos-releases">github.com/ay-automate/gtmos-releases</a>), so <code>gtm setup</code> pulls them. Locally built images can still be used with <code>--version &lt;tag&gt; --no-pull</code>.</p>
 <pre>npm i -g @gtmos/cli
 mkdir my-gtm &amp;&amp; cd my-gtm &amp;&amp; claude
 ! gtm init                      # agent workspace + docs, even with no instance yet
 /setup-gtmos                    # Claude runs gtm setup, the agent key, connections
 
 # by hand instead:
-gtm setup ./instance --org Acme --email you@x.com --approver-email ops@x.com --version 0.2.2
+gtm setup ./instance --org Acme --email you@x.com --approver-email ops@x.com --version 0.2.5
 gtm doctor --strict             # what is live, unverified, missing</pre>
-      <p><code>gtm init</code> writes <code>CLAUDE.md</code> at the project root, <code>AGENTS.md</code>, <code>.mcp.json</code> (the key is read from <code>GTMOS_AGENT_TOKEN</code>, never written to a file), the skills and commands, and <code>docs/gtmos/</code> (reference generated from the live registry, plus the guides). <code>GTMOS_LIVE=true</code> is written into a new <code>.env</code>; <code>--demo</code> writes the keyless demo floor. Upgrades: <code>gtm upgrade --check</code>, then <code>gtm upgrade --to &lt;version&gt; --dry-run</code> and <code>--yes</code> (pin current images, pull, guard destructive migrations, snapshot, migrate inside the new image, health check, automatic rollback).</p>
+      <p><code>gtm init</code> writes <code>CLAUDE.md</code> at the project root, <code>AGENTS.md</code>, <code>.mcp.json</code> (the key is read from <code>GTMOS_AGENT_TOKEN</code>, never written to a file), the skills and commands, and <code>docs/gtmos/</code> (reference generated from the live registry, plus the guides). <code>GTMOS_LIVE=true</code> is written into a new <code>.env</code>; <code>--demo</code> writes the keyless demo floor. Upgrades: <code>gtm upgrade --check</code>, then <code>gtm upgrade --channel stable --dry-run</code> and <code>--yes</code> (see below).</p>
+    </div>
+  </div>
+
+  <h3>Self-hosting and upgrading</h3>
+  <div class="dual stacked">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p><strong>Closed by default.</strong> From 0.2.5 a self-hosted instance accepts connections from its own machine only. To let your team in from the network you put a reverse proxy with HTTPS in front (the safe choice, and a short job for whoever hosts the server), or you open the ports on purpose. If people used to reach an existing instance by its IP address, that stops until you pick one of the two. If you only use GTM OS on one machine, nothing changes.</p>
+      <p><strong>Upgrades.</strong> Ask for the CLI update first, then check what is available, rehearse, and upgrade. Your data is backed up and verified before anything changes, and an upgrade only adds to your data. If a step fails, GTM OS puts the previous version back; your data is never restored over the live database.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p><strong>Bind address.</strong> <code>gtm up</code> publishes the console, API and MCP ports on <code>127.0.0.1</code>, like Postgres. The address is one <code>.env</code> variable, <code>GTMOS_BIND_ADDRESS</code> (<code>127.0.0.1</code> by default; <code>0.0.0.0</code> for every interface, only behind a firewall; a private IP for a proxy on another host). Change it by editing <code>.env</code> and running <code>gtm up</code> again, or create the instance with <code>gtm up --bind 0.0.0.0</code>. <code>gtm up</code> rewrites <code>docker-compose.yml</code> on every run, so never edit the compose file to open ports; a <code>--bind</code> flag passed to an existing instance is ignored and reported because the existing <code>.env</code> wins. On an older instance, the first <code>gtm up</code> or <code>gtm upgrade</code> warns and backfills <code>GTMOS_BIND_ADDRESS=127.0.0.1</code>.</p>
+      <p><strong>Reverse proxy.</strong> Point <code>app.</code>, <code>api.</code> and optionally <code>mcp.</code> hosts at the server (one parent domain, so the session cookie is shared), open only 80 and 443, set <code>PUBLIC_API_URL</code>, <code>PUBLIC_CONSOLE_URL</code> and <code>PUBLIC_MCP_URL</code> in <code>.env</code> to the https origins, and proxy each host to <code>127.0.0.1:3001</code>, <code>:3000</code> and <code>:3004</code>. Caddy gets the certificates for you. Verify with <code>curl https://api.acme.com/health</code> and <code>ss -tlnp | grep -E ':(3000|3001|3004|5432)\b'</code>: every line must show <code>127.0.0.1</code>. A mismatch between the public URLs and the browser origin shows up as login loops or unstored cookies.</p>
+      <p><strong>Upgrade path.</strong> <code>npm i -g @gtmos/cli@latest</code> first, because the CLI renders the compose file. Then <code>gtm upgrade --check</code> (read-only), <code>gtm upgrade --channel stable --dry-run</code> and <code>gtm upgrade --channel stable --yes</code>. A plain <code>gtm upgrade</code> never moves a pinned install; use <code>--channel</code> or <code>--to &lt;version&gt;</code>. Steps: fetch and verify the signed release list (no downgrade, no skipped required stop, additive-only, minimum CLI), preflight (one update at a time, free disk of twice the database plus 2 GB), pull and check image digests, refuse any non-additive migration (no override), stop the services, take and verify a backup, rehearse the migration on a restored copy and compare tables, columns, row counts and checksums, migrate inside the new image, start, verify, keep the newest five backups. Rollback is an image swap only. Restoring a backup is a manual last resort into a renamed database. Keep <code>GTMOS_MASTER_KEY</code> apart from backups: they do not contain it.</p>
+      <p><strong>Operator settings.</strong> <code>GTMOS_LIVE</code> must be <code>true</code> or <code>false</code> in production or the api, worker and mcp images refuse to start (an upgrade writes <code>false</code> into an older <code>.env</code>). <code>GTMOS_PLATFORM_CREDENTIAL_PROVIDERS</code> lists the providers whose instance keys organizations may fall back to; setting it replaces the default list. After the CLI upgrade, <code>gtm init --refresh</code> takes the new skills and subagents.</p>
     </div>
   </div>
 </section>
@@ -375,7 +391,7 @@ flowchart TB
     CFG["Config store, environments"]
   end
   subgraph Stdlib["stdlib packages"]
-    ENG["7 engines"]
+    ENG["Engines"]
     ONT["Ontology modules"]
     CNX["Connectors"]
     SCR["Screens and packs"]
@@ -423,7 +439,7 @@ flowchart TB
 
   <h3>stdlib, apps and the SDK</h3>
   <div class="grid2">
-    <div class="tile"><h5>stdlib</h5><p>First-party packages: the 7 engines (<code>stdlib/qualification</code>, <code>outreach</code>, <code>performance-ads</code>, <code>search</code>, <code>identity-dq</code>, <code>enrichment</code>, <code>signals</code>), ontology modules (<code>gtm-base</code>, <code>gtm-pipeline</code>, <code>gtm-motion</code>, <code>gtm-intelligence</code> always on; <code>gtm-company</code>, <code>gtm-partner</code>, <code>gtm-ads</code>, <code>gtm-b2c</code>, <code>gtm-search</code> optional), <code>gtm-routing</code>, <code>gtm-plays</code>, <code>gtm-compliance</code>, connectors, packs and the stdlib apps (Mission Control, Focus Queue, Account Workspace).</p></div>
+    <div class="tile"><h5>stdlib</h5><p>First-party packages: the engines (<code>stdlib/qualification</code>, <code>outreach</code>, <code>performance-ads</code>, <code>search</code>, <code>identity-dq</code>, <code>enrichment</code>, <code>signals</code>), ontology modules (<code>gtm-base</code>, <code>gtm-pipeline</code>, <code>gtm-motion</code>, <code>gtm-intelligence</code> always on; <code>gtm-company</code>, <code>gtm-partner</code>, <code>gtm-ads</code>, <code>gtm-b2c</code>, <code>gtm-search</code> optional), <code>gtm-routing</code>, <code>gtm-plays</code>, <code>gtm-compliance</code>, connectors, packs and the stdlib apps (Mission Control, Focus Queue, Account Workspace).</p></div>
     <div class="tile"><h5>apps</h5><p><strong>api</strong>: NestJS, tRPC, OpenAPI; the only database writer besides the worker. <strong>worker</strong>: multi-org durable jobs, plays, agent loops, outbox relay. <strong>mcp</strong>: MCP server on the official SDK with the same authorization path as the API. <strong>console</strong>: the Next.js operator UI and CRM. <strong>cli</strong>: install, org lifecycle, plan and apply, packages, harness.</p></div>
     <div class="tile"><h5>sdk</h5><p><code>@gtmos/sdk</code> is the typed client generated from the operation registry plus the <code>define*</code> kit (for example <code>defineEngine</code>, <code>definePlay</code>). Stdlib and third-party packages import only the SDK, never kernel internals.</p></div>
     <div class="tile"><h5>Packages</h5><p>Everything installable is a package with a manifest (<code>gtmos.package.yaml</code>), declared permissions and one of three execution tiers. Install, enable, upgrade and rollback are proposals a second human approves. Details below.</p></div>
@@ -569,7 +585,20 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   </div>
 
   <h3>Dry Mode</h3>
-  <p class="prose">An org-wide safety switch (Settings &gt; Safety, <code>policy.set_dry_mode</code>, human only). While it is on, every E-class operation becomes a draft: logged, never executed, no approval created. D, T and M operations still run. Every console page shows a banner. Read it with <code>policy.get_dry_mode</code>.</p>
+  <p class="prose">Two layers of safety switch, both human only to change. The <strong>organization-wide</strong> switch (Settings &gt; Safety, <code>policy.set_dry_mode</code>): while it is on, every E-class operation becomes a draft, logged, never executed, no approval created. D, T and M operations still run. Every console page shows a banner. Read it with <code>policy.get_dry_mode</code>. Each <strong>engine</strong> also has its own Dry or Live mode (<code>policy.engine_modes.get</code> and <code>policy.engine_modes.set</code>; Settings &gt; Safety and the header of each engine page), covering outreach and sequences, meeting booking, performance ads, SEO &amp; GEO publishing, lifecycle plays, routing notifications, CRM write-back, enrichment spend and merges. The effective mode is the <strong>stricter</strong> of the two. Going live is an owner or admin action, confirmed and audited, and <code>policy.shadow_report</code> shows each engine's accuracy from its dry runs.</p>
+  <p class="prose"><strong>Guardrails</strong> are enforced by the kernel for every engine and agent: emails a day, new accounts contacted a week, ad spend a day (above it a person approves), a send window in the recipient's timezone with quiet hours, and allowed channels (<code>policy.guardrails.set</code>). A hit holds the action instead of dropping it, raises an alert and runs it later. One rule has no setting: the first message to someone nobody has written to is never sent automatically.</p>
+
+  <h3>Proof library and the claims gate</h3>
+  <div class="dual">
+    <div class="gtm">
+      <h4>For GTM teams</h4>
+      <p>Settings &gt; Proof library holds your case studies, metrics, testimonials and logos, each with a permission (public, anonymized or internal only) and an optional expiry. Claims are taken from documents you upload and kept only when the quote is verbatim in the source. A second person activates each proof. Before anything goes out, every factual claim in it (a statistic, a result, a named customer, an outcome with no number) is checked against active proof. A claim with no proof blocks the action, or goes to an approver who must acknowledge it, depending on the policy you choose. A customer whose proof is not public can never be named.</p>
+    </div>
+    <div class="tech">
+      <h4>Under the hood</h4>
+      <p>The gate runs when an action is proposed and again right before it runs, so proof archived or expired in between fails the run. It covers outreach on every channel, sequence steps and batches, SEO publishes and undo, and meeting invites and cancellations. Verdicts: Backed, Close (at least half the wording matches, never treated as backed) and No proof. Modes: block (default, <code>POLICY_DENIED</code> <code>blocked_unbacked_claim</code>) or route to the approver, who acknowledges each claim in the claims panel (the proposer and the agent cannot). Ops: <code>proof.create</code>, <code>proof.extract_from_document</code>, <code>proof.propose_activation</code>, <code>proof.list</code>, <code>proof.archive</code>, <code>policy.claims.*</code>, <code>voice.customer_language.*</code>. Customer language mined from calls, replies and won deals is approved phrase by phrase.</p>
+    </div>
+  </div>
 
   <h3>Budgets and spend caps</h3>
   <div class="tbl"><table>
@@ -639,7 +668,7 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   <p class="prose">Two layers keep one record per real company and person.</p>
   <ol class="prose">
     <li><strong>Observation to entity</strong> (data plane). An account matches on <code>domain</code> (authoritative) and <code>name</code> (corroborating); a contact on <code>primaryEmail</code> and <code>displayName</code>. Matching runs deterministic, then blocking, then probabilistic; unsafe matches go to a human review (<code>resolve.review.decide</code>). A signed <code>definition.identity_rule</code> overrides the keys and survivorship (<code>most_recent</code>, <code>highest_confidence</code>, <code>first_write_wins</code>, <code>longest_non_empty</code>, <code>source_priority</code>).</li>
-    <li><strong>Record dedupe</strong> (Identity &amp; DQ engine). <code>identity_dq.scan_duplicates</code>, then <code>identity_dq.merge_records</code> as an approval, reversible with <code>identity_dq.unmerge_records</code>.</li>
+    <li><strong>Record dedupe</strong> (the Merges engine). <code>identity_dq.scan_duplicates</code> follows the signed <code>definition.identity_rule</code>, then <code>identity_dq.merge_records</code> as an approval that lists each field conflict and the strategy that decides it, reversible with <code>identity_dq.unmerge_records</code>. A merge keeps survivor columns a person set by hand.</li>
   </ol>
   <p class="prose">Automated writes onto an existing record must resolve to that record by domain, email or source id. A write that cannot resolve never creates a duplicate; source mappings report it as <code>unresolved</code>.</p>
 
@@ -667,7 +696,7 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
     </div>
     <div class="tech">
       <h4>Under the hood</h4>
-      <p>CRM screens live in <code>apps/console</code> under <code>/org/&lt;orgId&gt;/</code>. Writes: <code>canon.edit</code> / <code>canon.edit_many</code> for canon objects (an agent's call becomes a proposal), <code>records.create</code> for custom objects, <code>canon.import</code> (max 1000 rows per call), <code>deal.move_stage</code>, <code>deal.close</code>, <code>pipeline.create</code>, <code>view.create</code>, <code>task.create</code>. Reporting currency and FX conversion for deals shipped in 0.2.1.</p>
+      <p>CRM screens live in <code>apps/console</code> under <code>/org/&lt;orgId&gt;/</code>. Writes: <code>canon.edit</code> / <code>canon.edit_many</code> for canon objects (an agent's call becomes a proposal), <code>records.create</code> for custom objects, <code>canon.import</code> (max 1000 rows per call; it manages its own transactions, so a large import is not cut off by the 30 second operation limit; a contact file with a <code>company</code> column links each contact by website, then name, and lists rows with no or several matches without creating accounts; members cannot commit it unless an owner allows it), <code>deal.move_stage</code>, <code>deal.close</code>, <code>pipeline.create</code>, <code>view.create</code>, <code>task.create</code>. Reporting currency and FX conversion for deals shipped in 0.2.1.</p>
     </div>
   </div>
 </section>
@@ -676,7 +705,7 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
 <section class="doc" id="engines">
   <p class="kicker">05 · The engines</p>
   <h2>What does the work</h2>
-  <p class="lede">Seven engine packages ship and are installed for every org. Around them sit routing, plays, the research agent, CRM sync, source mappings, the search index and agent chat. Every engine runs on your <strong>signed</strong> definitions in the call's environment and falls back to a stdlib default. Build in this order: data first, then scoring, then routing and plays, then the outbound channels.</p>
+  <p class="lede">The console lists eight engines: Score, Outreach, Performance Ads, SEO &amp; GEO, Enrichment, Merges, Plays and Routing. Every engine page opens on an overview with its mode (Dry or Live), KPIs, what it needs, approvals waiting, recent actions with undo, the definitions it uses and its plays. Around them sit signals, the research agent, CRM sync, source mappings, the search index and agent chat. Every engine runs on your <strong>signed</strong> definitions in the call's environment and falls back to a stdlib default. Build in this order: data first, then scoring, then routing and plays, then the outbound channels.</p>
 
   <!-- Signals -->
   <div class="engine" id="eng-signals">
@@ -699,15 +728,16 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   <div class="engine" id="eng-enrichment">
     <div class="engine-head"><h3>Enrichment</h3><span class="pkg">stdlib/engine.enrichment 1.0.0</span></div>
     <div class="dual">
-      <div class="gtm"><h4>For GTM teams</h4><p>Fills in what is missing on companies and contacts: emails, phones, headcount, technographics. It only fills <strong>empty</strong> fields and never overwrites what your team typed. It always prices a batch first, so you see the cost before you spend.</p></div>
+      <div class="gtm"><h4>For GTM teams</h4><p>Fills in what is missing on companies and contacts: emails, phones, headcount, technographics. It fills <strong>empty</strong> fields and never overwrites what your team typed. Every value it writes carries when it was verified, how long it stays fresh and how confident it is, and stale ones are re-checked. A newer value replaces an existing one only through an approval, with undo. It always prices a batch first, and a monthly cap spends on your best accounts first.</p></div>
       <div class="tech"><h4>Under the hood</h4><p>A provider waterfall over <code>capability.acquire</code>: per-field try order, first satisfactory result stops the chain. Capabilities <code>enrich.company</code>, <code>enrich.find_email</code>, <code>enrich.verify_email</code>, <code>enrich.find_phone</code>, <code>enrich.technographics</code>, <code>enrich.headcount</code>, resolved by <code>definition.binding</code> with a price cap.</p></div>
     </div>
     <dl class="facts">
       <dt>Key ops</dt><dd><code>enrichment.enrich_accounts</code>, <code>enrichment.enrich_contacts</code> (default 25, max 500; <code>estimate: true</code> prices without running), <code>enrichment.coverage_report</code></dd>
       <dt>Definitions</dt><dd><code>definition.binding</code> per capability (blueprints seed <code>enrich.find_email</code> on looot, max $0.05 per call)</dd>
-      <dt>Jobs</dt><dd>On demand; research-agent re-checks</dd>
+      <dt>Freshness</dt><dd>Each written value stamps <code>verifiedAt</code>, a freshness window and a confidence. <code>enrichment.refresh_stale</code> re-checks stale values the engine owns. A newer value replaces a record's value only through an approved proposal with undo. A monthly spend cap applies, with best accounts first. If a provider is down (unavailable, a timeout or a server error) the next provider in the binding runs. looot lookups use the workspace key, with the instance key only as a fallback.</dd>
+      <dt>Jobs</dt><dd>On demand; stale-value refresh; research-agent re-checks</dd>
       <dt>Connections</dt><dd>looot (required)</dd>
-      <dt>Console</dt><dd>CRM &gt; Companies and Contacts (enriched fields)</dd>
+      <dt>Console</dt><dd>Engines &gt; Enrichment (mode, fill rate, spend, bindings, freshness windows, newer values, runs); CRM &gt; Companies and Contacts (enriched fields)</dd>
       <dt>KPIs</dt><dd>Field coverage</dd>
     </dl>
   </div>
@@ -716,15 +746,16 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   <div class="engine" id="eng-score">
     <div class="engine-head"><h3>Scoring and qualification (Hot list)</h3><span class="pkg">stdlib/engine.score 0.1.0 · stdlib/qualification</span></div>
     <div class="dual">
-      <div class="gtm"><h4>For GTM teams</h4><p>Decides which accounts deserve attention now. It combines two views: <strong>fit</strong> (does this company match your ICP by region, size, industry) and <strong>intent</strong> (are they showing buying signals). Each verdict comes with the evidence behind it, and qualified accounts appear on the Hot list.</p></div>
+      <div class="gtm"><h4>For GTM teams</h4><p>Decides which accounts deserve attention now. It combines two views: <strong>fit</strong> (does this company match your ICP by region, size, industry) and <strong>intent</strong> (are they showing buying signals). Each verdict comes with the evidence behind it, and qualified accounts appear on the Hot list. Signals fade by family, intent is weighted by who it comes from, hard disqualifiers and negative reply or bounce behavior count, and committee coverage is visible. The engine <strong>learns from outcomes</strong>: it measures what happened after each verdict and proposes a better model for a second person to approve.</p></div>
       <div class="tech"><h4>Under the hood</h4><p>Rule-based scoring of <code>gtm.signal</code> against a versioned policy, producing <code>gtm.qualification</code>. Key <code>default</code> scores intent (default <code>score.default.v1</code>: qualified ≥ 60, review ≥ 30); key <code>icp_fit</code> matches the synthetic <code>firmographic</code> kind with CEL conditions over account fields. The stdlib <code>icp_fit</code> fallback is a pilot hypothesis: always sign your own.</p></div>
     </div>
     <dl class="facts">
       <dt>Key ops</dt><dd><code>score.score_account</code>, <code>score.explain_qualification</code>, <code>score.rescan_organization</code>, <code>score.ingest_market_signals</code>, <code>query.list_qualifications</code></dd>
       <dt>Definitions</dt><dd><code>definition.scoring_model</code> (<code>default</code>, <code>icp_fit</code>), <code>definition.committee_model</code> (ABM), <code>definition.segment</code>, <code>definition.persona</code></dd>
+      <dt>Learning</dt><dd>Scoring records an immutable snapshot of each verdict. <code>score.learn</code> measures outcomes (a confirmed positive reply, a meeting, an opportunity, a won deal), computes lift per criterion and proposes a new signed <code>definition.scoring_model</code> version. Reps flag a score with <code>score.feedback</code>. <code>score.rescan_preview</code> shows what a rescan would change before it runs: the fallback models changed in 0.2.5, so the first rescan re-scores accounts once, and it never hands off, routes or enrols anyone.</dd>
       <dt>Jobs</dt><dd>Scheduled <code>score.rescan_organization</code>; hooks for signal scans and the qualified handoff</dd>
       <dt>Connections</dt><dd>A model provider for explanations</dd>
-      <dt>Console</dt><dd>Engines &gt; Score (<code>/a/score</code>), CRM &gt; Hot list</dd>
+      <dt>Console</dt><dd>Engines &gt; Score (<code>/a/score</code>) with a Learning section, CRM &gt; Hot list</dd>
       <dt>KPIs</dt><dd>Qualified coverage (Mission Control), hot-list size</dd>
     </dl>
     <p class="aud-note">Verify: <code>score.score_account</code> on a real account must report <code>definition.scoring_model:default:vN</code> (your model), not <code>score.default.v1</code>.</p>
@@ -734,14 +765,14 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   <div class="engine" id="eng-plays">
     <div class="engine-head"><h3>Routing, plays and workflow automation</h3><span class="pkg">kernel/flow-play · stdlib/gtm-routing · stdlib/gtm-plays</span></div>
     <div class="dual">
-      <div class="gtm"><h4>For GTM teams</h4><p>When an account qualifies, someone has to own it and something has to happen. Out of the box, a qualified account gets an owner (round-robin over members, or a list you set), a follow-up task due in two days, and its contact enrolled in the right sequence. Customers, partners and former customers are skipped, and an open deal blocks enrolment. Plays let you add your own automations: daily re-scores, speed-to-lead on a form fill, reactivation of dormant accounts.</p></div>
-      <div class="tech"><h4>Under the hood</h4><p><code>routing.assign</code> sets the owner and records an auditable decision (no routing definition kind). Workflow flags <code>qualification.handoff</code> and <code>signals.reaction</code> are toggled with <code>flags.set</code>. <code>definition.play</code> compiles to a versioned flow: triggers <code>manual</code>, <code>event</code>, <code>schedule</code>, <code>metric</code>, <code>webhook</code>, <code>segment</code>, <code>mission_step</code>; steps <code>action</code>, <code>wait</code>, <code>branch</code>; guardrails cap actions and budget per run.</p></div>
+      <div class="gtm"><h4>For GTM teams</h4><p>When an account qualifies, someone has to own it and something has to happen. Out of the box, a qualified account gets an owner (round-robin over members, or a list you set), a follow-up task due in two days, and its contact enrolled in the right sequence. Customers, partners and former customers are skipped, and an open deal blocks enrolment. Routing has its own page with territories, <strong>team capacity</strong> (caps per type, weights, out-of-office, stickiness) and lead-to-account matching, where only an exact domain match attaches on its own. Plays let you add your own automations, and Engines &gt; Plays &gt; Results shows runs, outcomes, credited revenue and spend per play. Nine ship in the blueprints: speed to lead, meeting prep, meeting follow-up, stage-stuck nudge, closed-lost win-back, renewal runway, champion change, content refresh and enrich on create.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p><code>routing.assign</code> sets the owner and records an auditable decision with its reason (no routing definition kind; capacity and weights are per-member settings, a queued cool-off is evaluated in SQL, and a full owner's records spread over the eligible pool). Workflow flags <code>qualification.handoff</code> and <code>signals.reaction</code> are toggled with <code>flags.set</code>. <code>definition.play</code> compiles to a versioned flow: triggers <code>manual</code>, <code>event</code>, <code>schedule</code>, <code>metric</code>, <code>webhook</code>, <code>segment</code>, <code>mission_step</code>; steps <code>action</code>, <code>wait</code>, <code>branch</code>; guardrails cap actions and budget per run.</p></div>
     </div>
     <dl class="facts">
       <dt>Key ops</dt><dd><code>play.simulate</code> (zero writes, always first), <code>play.trigger</code>, <code>runs.list</code>, <code>runs.get</code>, <code>flow.cancel</code>, <code>routing.assign</code>, <code>flags.set</code></dd>
       <dt>Definitions</dt><dd><code>definition.play</code>, <code>definition.segment</code></dd>
-      <dt>Shipped plays</dt><dd><code>signal_based_outbound</code>, <code>inbound_speed_to_lead</code>, <code>dormant_account_reactivation</code> in <code>stdlib/gtm-plays</code>; blueprints add first-touch-outreach, daily-rescore, daily-seo-audit and more</dd>
-      <dt>Console</dt><dd>Settings &gt; Workflow automation (<code>/workflow</code>); Operate &gt; Runs</dd>
+      <dt>Shipped plays</dt><dd><code>signal_based_outbound</code>, <code>inbound_speed_to_lead</code>, <code>dormant_account_reactivation</code> in <code>stdlib/gtm-plays</code>; blueprints add first-touch-outreach, daily-rescore, daily-seo-audit, the nine plays above and more. Results per play: <code>plays.kpis</code></dd>
+      <dt>Console</dt><dd>Engines &gt; Routing, Engines &gt; Plays (with Results), Settings &gt; Workflow automation (<code>/workflow</code>); Operate &gt; Runs</dd>
     </dl>
   </div>
 
@@ -749,12 +780,15 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   <div class="engine" id="eng-outreach">
     <div class="engine-head"><h3>Outreach</h3><span class="pkg">stdlib/engine.outreach 0.1.0</span></div>
     <div class="dual">
-      <div class="gtm"><h4>For GTM teams</h4><p>Drafts, personalizes, sequences and sends email (and LinkedIn steps through Unipile). Every send is a proposal a teammate approves. Sends go out through a <strong>lane</strong>: a channel with a daily cap, a minimum gap between touches, a monthly budget, automatic pause on high bounce or complaint rates, and a checked sending domain. Your brand voice shapes the copy.</p></div>
-      <div class="tech"><h4>Under the hood</h4><p><code>outreach.send_message</code> is E-class and needs an active lane and a bound mailbox, otherwise <code>lane_required</code> or <code>mailbox_required</code>. Pre-send checks: <code>suppression</code>, <code>consent</code>, <code>mailbox_health</code>, <code>daily_cap</code>, <code>template_integrity</code>, <code>declared_params</code>, <code>recent_touch</code>, <code>open_deal</code>, <code>reply_stop</code>. New mailboxes warm up from 20 per day, +20 per day, to 200.</p></div>
+      <div class="gtm"><h4>For GTM teams</h4><p>Drafts, personalizes, sequences and sends email (and LinkedIn steps through Unipile). Every send is a proposal a teammate approves, and its factual claims are checked against your proof. Sends go out through a <strong>lane</strong>: a channel with a daily cap, a minimum gap between touches, a monthly budget, automatic pause on high bounce or complaint rates, and a checked sending domain. Your brand voice shapes the copy.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p><code>outreach.send_message</code> is E-class and needs an active lane and a bound mailbox, otherwise <code>lane_required</code> or <code>mailbox_required</code>. Pre-send checks: <code>suppression</code>, <code>consent</code>, <code>mailbox_health</code>, <code>daily_cap</code>, <code>template_integrity</code>, <code>declared_params</code>, <code>recent_touch</code>, <code>open_deal</code>, <code>reply_stop</code>, plus Dry Mode, the engine mode, the claims gate, brand safety, quiet hours and the net-new rule, at propose time and again at execution. New mailboxes warm up from 20 per day, +20 per day, to 200.</p></div>
     </div>
     <dl class="facts">
       <dt>Key ops</dt><dd><code>outreach.draft_message</code>, <code>outreach.draft_personalized_message</code>, <code>outreach.send_message</code>, <code>sequence.create</code>, <code>sequence.enroll</code> (max 500), <code>sequence.update</code>, <code>lane.activate</code>, <code>outreach.sending_mailboxes</code></dd>
       <dt>Definitions</dt><dd><code>definition.lane</code>, <code>definition.brand_voice</code> (<code>default</code>), <code>definition.suppression_rule</code>, <code>definition.compliance_policy</code> (seed with <code>compliance.seed_policies</code>)</dd>
+      <dt>Sequences</dt><dd><code>definition.sequence</code>: ordered steps, waits in days or business days counted in the recipient's timezone, send windows, templates or briefs, weighted A/B variants, and exits on reply, unsubscribe, bounce, an optional meeting and a stage change. Three signal plays (funding, hiring, intent) enrol one person per signal into an approved sequence, with a daily cap. Personalization is tiered (1:1, 1:few, 1:many) and grounded in the proof library. Reply next actions are proposals, never automatic.</dd>
+      <dt>LinkedIn</dt><dd>Steps send through Unipile on the same approval path as email, with seat caps and an accept-wait step. High-risk use needs explicit acceptance, and live use needs a real Unipile account (not yet verified live in this release).</dd>
+      <dt>Deliverability</dt><dd>Gmail and Outlook delivery reports are applied as hard or soft bounces and never ingested as replies. <code>outreach.bounce_undo</code> is human only. <code>outreach.learning_report</code> powers "What's working" (a group needs at least 30 sends before its rates show).</dd>
       <dt>Jobs</dt><dd><code>outreach.rescan_cadences</code>, <code>outreach.advance_cadence</code>, Gmail and LinkedIn reply ingestion, mail and calendar auto-logging</dd>
       <dt>Sending domain</dt><dd><code>lane.activate</code> checks SPF, DKIM and DMARC for the lane's <code>sendingDomain</code>; prod refuses activation unless all three pass</dd>
       <dt>Connections</dt><dd>Gmail or Microsoft 365 connected mailbox (preferred) or Resend; Unipile for LinkedIn; a model provider</dd>
@@ -766,16 +800,16 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
 
   <!-- Identity DQ -->
   <div class="engine" id="eng-dq">
-    <div class="engine-head"><h3>Identity and data quality</h3><span class="pkg">stdlib/engine.identity-dq 1.0.0</span></div>
+    <div class="engine-head"><h3>Merges, identity and data quality</h3><span class="pkg">stdlib/engine.identity-dq 1.0.0</span></div>
     <div class="dual">
-      <div class="gtm"><h4>For GTM teams</h4><p>Keeps the database clean: finds duplicate companies and contacts, normalizes formats, flags invalid records, fills missing company domains from work emails at no cost, and scores overall data quality. Merges are proposals and can be undone.</p></div>
+      <div class="gtm"><h4>For GTM teams</h4><p>Keeps the database clean: finds duplicate companies and contacts, normalizes formats, flags invalid records, fills missing company domains from work emails at no cost, and scores overall data quality. The duplicate scan follows your signed identity rule. Merges are proposals that list each field conflict and how it is decided, and they can be undone.</p></div>
       <div class="tech"><h4>Under the hood</h4><p>Deterministic, reversible normalization; zero-spend domain backfill; looot-backed firmographic enrichment through the broker. Thresholds live in the flag <code>identity_dq.thresholds</code> (defaults <code>maxDupRate 0.05</code>, <code>minMeanQuality 0.5</code>, <code>maxStaleRate 0.8</code>; daily scan).</p></div>
     </div>
     <dl class="facts">
       <dt>Key ops</dt><dd><code>identity_dq.quality_report</code>, <code>identity_dq.scan_duplicates</code>, <code>identity_dq.normalize_records</code>, <code>identity_dq.backfill_domains</code>, <code>identity_dq.merge_records</code> (E), <code>identity_dq.unmerge_records</code></dd>
       <dt>Definitions</dt><dd><code>definition.identity_rule</code>, <code>definition.data_monitor</code></dd>
       <dt>Jobs</dt><dd><code>identity_dq.scan</code> data monitors on the claim-due loop</dd>
-      <dt>Console</dt><dd>CRM &gt; Data quality; Operate &gt; Monitors</dd>
+      <dt>Console</dt><dd>Engines &gt; Merges (merges waiting for approval, recent merges with undo, identity rules, merge rules); CRM &gt; Data quality; Operate &gt; Monitors</dd>
       <dt>KPIs</dt><dd>Fill rate, duplicate rate, staleness, mean quality score</dd>
     </dl>
   </div>
@@ -784,11 +818,12 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   <div class="engine" id="eng-seo">
     <div class="engine-head"><h3>SEO and GEO</h3><span class="pkg">stdlib/engine.search 0.1.0</span></div>
     <div class="dual">
-      <div class="gtm"><h4>For GTM teams</h4><p>Tracks your important pages, audits technical SEO and readiness for AI search engines (GEO), recommends fixes, and records whole-site visibility from Search Console (and Ahrefs if you have it). A content change to your site is a proposal a teammate approves.</p></div>
+      <div class="gtm"><h4>For GTM teams</h4><p>Tracks your important pages, audits technical SEO and readiness for AI search engines (GEO), recommends fixes, and records whole-site visibility from Search Console (and Ahrefs if you have it). It also groups demand into topic clusters and runs a content factory (briefs, drafts, a quality gate, lifecycle states) and publishes an approved draft to your CMS. A content change to your site is a proposal a teammate approves, and its claims are checked against your proof.</p></div>
       <div class="tech"><h4>Under the hood</h4><p>Audits <code>gtm.content_asset</code> pages and proposes content, meta and schema publishes. <strong>Google Search Console is required</strong> for orgs that use this engine, through a Google connected account or the Composio <code>google_search_console</code> toolkit, plus the property <code>gsc/site_url</code>. Without it, <code>gtm doctor</code> reports an error and blueprint SEO plays are held back.</p></div>
     </div>
     <dl class="facts">
       <dt>Key ops</dt><dd><code>seo_geo.create_tracked_page</code>, <code>seo_geo.audit_page</code>, <code>seo_geo.scan_all_pages</code>, <code>seo_geo.run_visibility</code>, <code>seo_geo.get_visibility</code>, <code>seo_geo.get_recommendation</code>, <code>seo_geo.gsc_properties</code>, <code>seo_geo.publish_content_change</code> (E)</dd>
+      <dt>Publishing</dt><dd>Webflow through Composio, WordPress.com as drafts only, or a signed webhook (also the route for self-hosted WordPress). The body published is read from the approved draft and bound to its hash. Refresh candidates and publishing KPIs are on the page. Publishing needs a live check with a real CMS account.</dd>
       <dt>Definitions</dt><dd><code>definition.play</code> (daily <code>seo_geo.scan_all_pages</code>), <code>definition.metric</code> (search KPIs)</dd>
       <dt>Connections</dt><dd>Search Console (required), Ahrefs optional (Composio), GA4 optional, looot for keyword data</dd>
       <dt>Console</dt><dd>Engines &gt; SEO &amp; GEO (<code>/a/seo-geo</code>) and the page workbench</dd>
@@ -800,8 +835,8 @@ env.promote dev -> prod       -> ONE approval            (gtm promote --all dev 
   <div class="engine" id="eng-ads">
     <div class="engine-head"><h3>Performance Ads</h3><span class="pkg">stdlib/engine.performance-ads 0.1.0</span></div>
     <div class="dual">
-      <div class="gtm"><h4>For GTM teams</h4><p>Pulls spend and conversions from Google Ads and Meta Ads, compares them with the economics you set (margin, CAC target, order value), and recommends pacing. Any budget or status change is real money, so it is a proposal.</p></div>
-      <div class="tech"><h4>Under the hood</h4><p>Reads performance into <code>gtm.outcome</code>, proposes changes on <code>gtm.campaign</code> through the gate. The economics gate reads <code>definition.unit_economics</code> key <code>default</code>; the first-order-profit gate is wired and live-verified in 0.2.1.</p></div>
+      <div class="gtm"><h4>For GTM teams</h4><p>Pulls spend and conversions from Google Ads and Meta Ads, compares them with the economics you set (margin, CAC target, order value), and recommends pacing. A nightly allocator proposes budget moves toward your target and never executes them. Any budget or status change is real money, so it is a proposal.</p></div>
+      <div class="tech"><h4>Under the hood</h4><p>Reads performance into <code>gtm.outcome</code>, proposes changes on <code>gtm.campaign</code> through the gate. The economics gate reads <code>definition.unit_economics</code> key <code>default</code> (<code>targetCac</code> or <code>targetRoas</code> or <code>maxPaybackMonths</code>, with <code>grossMargin</code>); with no target set, behavior is as before. The allocator runs nightly at 02:00 UTC and only proposes, each move needs a different approver, and a budget increase is capped at 2x. The page shows MER, aMER, ACoS and CAC payback tiles and a table of platform numbers against real ones; real CAC and ROAS come from paid visits credited by <code>utm_campaign</code> and read as a dash with the reason when campaigns are untagged.</p></div>
     </div>
     <dl class="facts">
       <dt>Key ops</dt><dd><code>perf_ads.sync_performance</code>, <code>perf_ads.scan_all_campaigns</code>, <code>perf_ads.get_pacing_recommendation</code>, <code>perf_ads.update_campaign</code> (E), <code>perf_ads.undo_campaign_change</code></dd>
@@ -888,8 +923,8 @@ flowchart TD
   HO --> E["Contact enrolled in the lane-bound sequence"]
   E --> D["Message drafted in your brand voice"]
   D --> P["outreach.send_message proposed"]
-  P --> C{"Pre-send checks pass?"}
-  C -- "no" --> X["Blocked: suppression, cap, open deal"]
+  P --> C{"Pre-send checks pass, claims backed by proof?"}
+  C -- "no" --> X["Blocked: suppression, cap, open deal, unbacked claim"]
   C -- "yes" --> A["Second human approves and executes"]
   A --> M["Sent from the lane mailbox, logged"]
   </pre>
@@ -960,7 +995,7 @@ flowchart LR
       <tr><td>Microsoft account (OAuth)</td><td>Mail, send, calendar</td><td>Settings &gt; Connected accounts</td></tr>
       <tr><td>Slack (OAuth)</td><td>Alerts, channels, member matching; agents can post</td><td>Settings &gt; Slack</td></tr>
       <tr><td>Resend</td><td>Email sending when no mailbox is connected</td><td><code>resend</code> Connection or <code>RESEND_API_KEY</code></td></tr>
-      <tr><td>Unipile</td><td>LinkedIn reads and (high-risk, off by default) sends</td><td>Unipile card: API key + DSN</td></tr>
+      <tr><td>Unipile</td><td>LinkedIn reads and sends (high risk, needs your explicit acceptance, same approval path as email)</td><td>Unipile card: API key + DSN</td></tr>
       <tr><td>Webform, Cal.com</td><td>Inbound forms and bookings as signals</td><td>HMAC-verified webhooks</td></tr>
       <tr><td>Website tracking</td><td>Page views, sources, first and last touch</td><td><code>tracking.site.create</code> snippet, <code>tracking.verify</code></td></tr>
       <tr><td>Meta Ads</td><td>Ad performance and changes</td><td><code>meta_ads</code> Connection</td></tr>
@@ -968,8 +1003,11 @@ flowchart LR
   </table></div>
   <p class="prose">Mail and calendar sync every 10 minutes and auto-log activities with known contacts.</p>
 
+  <h3>The Connections page</h3>
+  <p class="prose">Integrations &gt; Connections is a searchable grid of brand-logo tiles in 11 categories. Each tile shows whether it connects Native or Via Composio, with a choice where both exist, and a <strong>Needed</strong> strip lists what your chosen blueprint and engines still need. Press <code>/</code> to jump to the search box. Sort by relevance to your setup (the default), A to Z or connected first. Statuses are honest (live, stored but not verified, failed, not connected), and in demo mode a tile says it uses built-in sample responses, not your data. Instance keys are shared with an organization only for the providers in <code>GTMOS_PLATFORM_CREDENTIAL_PROVIDERS</code>. No native card exists yet for Instantly, lemlist, Smartlead, Gong, Mixpanel or Amplitude: use Composio.</p>
+
   <h3>Model providers</h3>
-  <p class="prose">At least one of Anthropic, OpenAI or Gemini must be live, as an org Connection or an instance key. Default models: <code>claude-sonnet-5-5</code>, <code>gpt-4o</code>, <code>gemini-3.8-flash</code>, overridable per provider with <code>GTMOS_DEFAULT_MODEL_&lt;PROVIDER&gt;</code>. Pin routes per task class (<code>reasoning</code>, <code>drafting</code>, <code>classification</code>, <code>extraction</code>, <code>embedding</code>) with <code>definition.model_policy</code>. Region-specific routing fails closed without a configured regional endpoint.</p>
+  <p class="prose">At least one of Anthropic, OpenAI, Gemini or OpenRouter (one key for many vendors, generate-only) must be live, as an org Connection or an instance key. Default models: <code>claude-sonnet-5-5</code>, <code>gpt-4o</code>, <code>gemini-3.8-flash</code>, overridable per provider with <code>GTMOS_DEFAULT_MODEL_&lt;PROVIDER&gt;</code>. Pin routes per task class (<code>reasoning</code>, <code>drafting</code>, <code>classification</code>, <code>extraction</code>, <code>embedding</code>) with <code>definition.model_policy</code>. Region-specific routing fails closed without a configured regional endpoint.</p>
 </section>
 
 <!-- 8 -->
@@ -998,7 +1036,7 @@ flowchart LR
     <div class="tile"><h5>Blueprints</h5><p>Start from the closest general blueprint (<code>blueprint.apply</code>), then change only what your motion needs. Blueprints are general templates: no customer-specific blueprint ships, and you should not create one.</p></div>
     <div class="tile"><h5>Packages</h5><p>Ship your standard setup as a declarative package of definitions and parameters (<code>gtm pkg scaffold --tier declarative</code>). Code goes in a signed trusted or sandboxed package. Example: <code>examples/acme-cyber-outbound/</code>.</p></div>
     <div class="tile"><h5>Apps and screens</h5><p>Declarative screens with <code>definition.app</code> (routes, audiences, pages composed from view types over operations), served at <code>/org/&lt;org&gt;/a/&lt;key&gt;</code>. Sandboxed code apps for custom UI. Console theme tokens via <code>definition.brand_kit</code>. Saved views and nav settings per org.</p></div>
-    <div class="tile"><h5>Agents and automations</h5><p>Register agents with a signed <code>definition.agent</code> (scopes, skills, step, cost and deadline bounds), and fire them manually, on a schedule or on CRM events (<code>agent.trigger.create</code>). Long jobs run as missions with one human approval moment.</p></div>
+    <div class="tile"><h5>Agents and automations</h5><p>Register agents with a signed <code>definition.agent</code> (scopes, skills, step, cost and deadline bounds), and fire them manually, on a schedule or on CRM events (<code>agent.trigger.create</code>). 16 organization agents in 6 packs (CRM, revenue, data, growth, ops, core) install when you enable a pack, with the same governance, and packs and blueprints can ship triggers. Operations that spend inside themselves are never granted to an agent skill. Long jobs run as missions with one human approval moment.</p></div>
   </div>
 
   <h3>Agent parity</h3>
@@ -1017,7 +1055,7 @@ flowchart LR
   <h3>The harness: <code>gtm init</code></h3>
   <div class="dual">
     <div class="gtm"><h4>For GTM teams</h4><p>Open an empty folder in Claude Code, run <code>gtm init</code>, then type <code>/setup-gtmos</code>. Claude installs or connects GTM OS, sets up the agent key, connections and second approver with you, then runs <code>/build-gtm-system</code>: an interview about your business, a blueprint recommendation, and an engine-by-engine build. It stops wherever a human must act. <code>/go-live-check</code> tells you GO or NO-GO.</p></div>
-    <div class="tech"><h4>Under the hood</h4><p><code>gtm init</code> (alias of <code>gtm harness</code>) scaffolds: <code>CLAUDE.md</code> and <code>AGENTS.md</code>; 11 subagents (lead <code>gtm-architect</code>); 13 slash commands; 21 skills, including <code>gtmos-setup</code>, <code>gtmos-engine-catalog</code>, <code>gtmos-source-mapping</code>, <code>gtmos-looot</code> and <code>composio</code>; <code>.mcp.json</code>; a session-start hook; <code>.claude/gtm-context.md</code> generated from the live registry; memory seeds; and <code>docs/gtmos/</code> with the 10 guides and generated reference. Idempotent; never overwrites edits without <code>--force</code>.</p></div>
+    <div class="tech"><h4>Under the hood</h4><p><code>gtm init</code> (alias of <code>gtm harness</code>) scaffolds: <code>CLAUDE.md</code> and <code>AGENTS.md</code>; 11 builder subagents (lead <code>gtm-architect</code>) and 11 role subagents (gtm-operator, revops-analyst, deal-reviewer, sales-researcher, content-strategist, seo-refresher, customer-success-manager, competitive-analyst, ads-analyst, data-steward, eval-reviewer) written to <code>.claude/agents</code>, <code>.agents/agents</code> and <code>.codex/agents</code>; 13 slash commands; 107 skills from <code>ay-automate/gtmos-skills</code> (pinned to a release, checked against a sha-256 manifest, with a bundled offline copy); <code>.mcp.json</code>; a session-start hook; <code>.claude/gtm-context.md</code> generated from the live registry; memory seeds; and <code>docs/gtmos/</code> with the 11 guides (including the setup wizard) and generated reference. Idempotent; <code>gtm init --refresh</code> takes new skills, subagents and docs and keeps your edits. It stamps the CLI version, skills release and operation list it generated from into <code>.claude/gtmos-instance.json</code>, and <code>gtm doctor</code> reports a stale harness with the fix.</p></div>
   </div>
   <p class="prose">The agent's tools over MCP: <code>gtm_describe</code> (always first), <code>gtm_query</code>, <code>gtm_get</code>, <code>gtm_search</code>, <code>gtm_act</code>, <code>gtm_approvals</code>, <code>gtm_lineage</code>, <code>gtm_lineage_trace</code>, <code>search_records</code>.</p>
 
@@ -1069,6 +1107,10 @@ flowchart LR
     <div class="tile"><h5>Signing</h5><p>Definitions are signed by a human other than the proposer. Packages are Ed25519-signed. Container images are cosign-signed.</p></div>
     <div class="tile"><h5>Sandboxing</h5><p>Sandboxed code apps run in an opaque-origin iframe with a strict CSP, deny-by-default egress, and a bridge that only runs operations listed in the manifest.</p></div>
     <div class="tile"><h5>Privacy</h5><p><code>privacy.erase</code> (right to erasure with a re-ingest guard), <code>retention.set_policy</code> per class, governed <code>org.offboard</code>.</p></div>
+    <div class="tile"><h5>Network exposure</h5><p>The console, API and MCP ports bind to <code>127.0.0.1</code> by default (<code>GTMOS_BIND_ADDRESS</code>), so a reverse proxy with HTTPS is the only thing exposed. <code>GTMOS_LIVE</code> must be set explicitly in production.</p></div>
+    <div class="tile"><h5>Instance keys</h5><p>An organization falls back to an instance key only for providers listed in <code>GTMOS_PLATFORM_CREDENTIAL_PROVIDERS</code>. CRM, ads-account, LinkedIn and Search Console credentials are not shared by default.</p></div>
+    <div class="tile"><h5>Claims and proof</h5><p>Every factual claim in outbound content is checked against active, permissioned proof at propose time and again at execution. A customer is never named without public proof.</p></div>
+    <div class="tile"><h5>Record privacy</h5><p>Records set to private or team are visible only to their owner, creator and the organization's owners and admins, across lists, search, counts and the dashboard. Members cannot commit CSV imports or bulk edits unless an owner allows it. Tasks are editable only by their creator, assignee or an owner or admin. Agent keys follow the person's current role.</p></div>
     <div class="tile"><h5>Audit and lineage</h5><p><code>audit.list</code> (Settings &gt; Audit log), <code>runtime.get_approval</code> with full attribution, <code>lineage.trace</code> per value. OpenTelemetry tracing across the pipeline.</p></div>
   </div>
 </section>
@@ -1102,9 +1144,12 @@ flowchart LR
       <dt>CEL, Cedar <span>tech</span></dt><dd>Common Expression Language for criteria; Cedar for authorization policy.</dd>
       <dt>ChangeSet <span>tech</span></dt><dd>A batch of config or ontology changes validated and applied together.</dd>
       <dt>Definition <span>tech</span></dt><dd>A signed, versioned piece of config an engine reads at run time.</dd>
-      <dt>Dry Mode <span>tech</span></dt><dd>Org-wide switch that turns every customer-facing effect into a draft.</dd>
+      <dt>Dry Mode <span>tech</span></dt><dd>A switch, for the organization and for each engine, that turns customer-facing effects into drafts. The stricter one applies.</dd>
       <dt>Envelope <span>tech</span></dt><dd>A scoped, time-bound pre-approval with a budget (for example a lane's send budget).</dd>
       <dt>Fixture <span>tech</span></dt><dd>Deterministic fake data served only in demo mode.</dd>
+      <dt>Claims gate <span>tech</span></dt><dd>The check that each factual claim in outbound content is backed by active proof, at propose time and again before it runs.</dd>
+      <dt>First win <span>tech</span></dt><dd>One of eight milestones computed from real events (<code>onboarding.first_win</code>), never from clicks.</dd>
+      <dt>Harness <span>tech</span></dt><dd>The files <code>gtm init</code> writes in a project (skills, subagents, commands, MCP config, docs) so an agent can run GTM OS.</dd>
       <dt>Four-eyes <span>tech</span></dt><dd>The proposer, and the human an agent acts for, can never approve, sign or execute.</dd>
       <dt>Ledger <span>tech</span></dt><dd>Double-entry record of every quoted, held and settled cost.</dd>
       <dt>MCP <span>tech</span></dt><dd>Model Context Protocol: how Claude Code, Codex and other agents call GTM OS.</dd>
@@ -1120,30 +1165,43 @@ flowchart LR
 <!-- 11 -->
 <section class="doc" id="not-built">
   <p class="kicker">11 · What is not built yet</p>
-  <h2>Honest limits in 0.2.2</h2>
-  <p class="prose">These come from the shipped guides, the changelog and the code. Plan around them rather than discovering them during a pilot.</p>
+  <h2>Honest limits in 0.2.5</h2>
+  <p class="prose">These come from the release notes and the shipped guides. Plan around them rather than discovering them during a pilot.</p>
   <div class="tbl"><table>
     <thead><tr><th>Area</th><th>Status</th></tr></thead>
     <tbody>
+      <tr><td>Create in CRM</td><td>There is no gated "create a record in the CRM" action. CRM writes stay update-only, and high-risk Composio writes need per-record approval.</td></tr>
+      <tr><td>Custom field display and filters</td><td>"Show in tables" and "Allow filtering" are stored, but the Companies list has no such columns or filters yet. <code>records.list</code> filters do work.</td></tr>
+      <tr><td>Company context for AI steps</td><td>Only brand voice, proof and customer phrases reach drafts. The rest of the company context does not yet.</td></tr>
+      <tr><td>Connectors without a native card</td><td>Instantly, lemlist, Smartlead, Gong, Mixpanel and Amplitude. Use Composio.</td></tr>
+      <tr><td>More engines</td><td>Eight appear in the console. New engines (ABM, sales intelligence, lifecycle, reporting) are deferred, as are the ads creative loop, audience sync and offline conversions, routing SLAs and escalation, merge batches and learning from rulings, an enrichment catalog with job-change triggers, play holdouts and a larger play library, GEO gap fixes and a link graph, more vendor skill packs, engine-dependent agents and per-agent evaluation sets.</td></tr>
+      <tr><td>Signal scan quality</td><td>Web search results are not yet checked as being about the account. Set up a news binding for better results, or switch the scan off with <code>signals.scan</code> set to <code>enabled: false</code>.</td></tr>
       <tr><td>White-label for agencies</td><td>Custom branding or domain per client is not available. Delegations, <code>agency.overview</code> and agency-private packages exist; <code>definition.brand_kit</code> re-themes one app only.</td></tr>
-      <tr><td>Expansion and reorder motion</td><td>Not shipped. Defaults exclude customers. You can compose a customer segment plus a custom play, recorded as custom.</td></tr>
-      <tr><td>More engines</td><td>Seven ship. GTM rules that need new engines remain deferred; the ads spend-ceiling rule still needs an aMER curve.</td></tr>
+      <tr><td>Expansion and reorder motion</td><td>Not a shipped motion. You can compose a customer segment plus a custom play; renewal runway ships as a play.</td></tr>
       <tr><td>Lineage</td><td>Derived and metric lineage are stubbed (empty). Value lineage works.</td></tr>
       <tr><td>Relationships</td><td>Custom relationship cardinality is recorded, not enforced.</td></tr>
-      <tr><td>Org-wide spend budget</td><td>No public operation sets one. Use per-call caps, lane envelopes, play guardrails and model policy limits.</td></tr>
       <tr><td>Gate policies</td><td>One org-wide gate policy per org; per-operation-family policies are supported in storage, not routed yet.</td></tr>
-      <tr><td>Routing</td><td>No routing definition kind; routing runs through <code>routing.assign</code> and the handoff flag.</td></tr>
-      <tr><td>Console gaps</td><td>No dedicated Signals page; no button to activate a lane (use <code>gtm lane activate</code>).</td></tr>
-      <tr><td>Salesforce native adapter</td><td>Fixture-first and unverified; connect Salesforce through Composio instead.</td></tr>
-      <tr><td>LinkedIn sends</td><td>High-risk, off by default, human-send only.</td></tr>
+      <tr><td>Console rough edges</td><td>The Records and Model pages still list ontology keys and type names. A few small icon buttons are under 28 px at phone width.</td></tr>
       <tr><td>Roles</td><td>No viewer role.</td></tr>
       <tr><td>Ontology version</td><td>Canon ontology is 0.1.0-draft.</td></tr>
-      <tr><td>Open project decisions</td><td>Final licensing (AGPL counsel review) and the product name are still open in the architecture notes.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Needs a live check with real accounts</h3>
+  <p class="prose">The code is tested against contracts and a live database, but these need a real account. Treat them as unverified until you have checked them.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Integration</th><th>What to check</th></tr></thead>
+    <tbody>
+      <tr><td>Unipile</td><td>A LinkedIn message, a connection request and the accept wait.</td></tr>
+      <tr><td>Webflow and WordPress.com</td><td>CMS publishing through Composio, and self-hosted WordPress through the signed webhook.</td></tr>
+      <tr><td>Gmail</td><td>A real bounce report arriving in a connected mailbox.</td></tr>
+      <tr><td>Resend</td><td>Send, bounce and complaint events.</td></tr>
+      <tr><td>Salesforce</td><td>The native adapter is not verified against a real organization. Connect Salesforce through Composio.</td></tr>
     </tbody>
   </table></div>
 
   <div class="foot">
-    <p>Source of truth: gtmos <code>origin/main</code> at <code>e29e84f9</code>. Primary sources: <code>apps/cli/src/harness/docs/guides/*</code>, the generated reference in <code>apps/cli/src/harness/docs/reference/*</code>, <code>ARCHITECTURE.md</code>, <code>README.md</code>, <code>CHANGELOG.md</code>, <code>docs/HARNESS.md</code>, <code>docs/SANDBOXED-CODE-APPS.md</code> and the kernel and stdlib packages. Counts come from the registry at that commit; your instance may differ.</p>
+    <p>This page describes GTM OS release 0.2.5. Counts come from the generated reference shipped with the CLI (operations, definition kinds, canon object types, packages, blueprints); your instance may differ, and its live registry (<code>gtm_describe</code>) wins.</p>
   </div>
 </section>
 
@@ -1202,7 +1260,7 @@ flowchart LR
 })();
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+<script src="assets/vendor/mermaid.min.js"></script>
 <script>(function(){var d=document.documentElement.getAttribute("data-theme")==="dark"||(!document.documentElement.getAttribute("data-theme")&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches);mermaid.initialize({startOnLoad:true,securityLevel:"strict",theme:d?"dark":"neutral"});})();</script>
 
 </body>

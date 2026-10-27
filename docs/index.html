@@ -94,8 +94,8 @@
           <p class="step-label">Upgrade</p>
           <pre class="codebox"><span class="p">$ </span>npm i -g @gtmos/cli@latest
 <span class="p">$ </span>gtm upgrade --check
-<span class="p">$ </span>gtm upgrade --to &lt;version&gt; --yes<button class="copy" type="button" data-copy="npm i -g @gtmos/cli@latest&#10;gtm upgrade --check&#10;gtm upgrade --to &lt;version&gt; --yes" aria-label="Copy upgrade commands">Copy</button></pre>
-          <p class="hint">Upgrades snapshot your data first. Use <code>--dry-run</code> to rehearse.</p>
+<span class="p">$ </span>gtm upgrade --channel stable --yes<button class="copy" type="button" data-copy="npm i -g @gtmos/cli@latest&#10;gtm upgrade --check&#10;gtm upgrade --channel stable --yes" aria-label="Copy upgrade commands">Copy</button></pre>
+          <p class="hint">Upgrade the CLI first. Upgrades snapshot your data first, and <code>--dry-run</code> rehearses one. A pinned install only moves when you choose <code>--channel</code> or <code>--to</code>.</p>
         </div>
       </div>
     </div>
@@ -107,19 +107,21 @@
       <div class="card release">
         <div>
           <p class="step-label">Release</p>
-          <p class="big-ver">GTM OS 0.2.2</p>
-          <p style="color:var(--muted);margin-top:10px">The stabilization release. Everything that exists works in live mode, end to end, driven by Claude Code or any MCP agent.</p>
+          <p class="big-ver">GTM OS 0.2.5</p>
+          <p style="color:var(--muted);margin-top:10px">Engines that learn from outcomes, claims checked against your proof, a guided setup wizard, and a server that is closed to the network by default.</p>
           <ul>
-            <li>Claude-driven setup from an empty folder</li>
-            <li>An agent key can do every setup operation, scoped and audited</li>
-            <li>Go live from one card: review, sign and promote together</li>
-            <li>Four-eyes on everything that leaves the building</li>
+            <li>Setup wizard, first-win checklist and opt-in nudges</li>
+            <li>Claims gate and proof library for everything you send</li>
+            <li>Eight engines with Dry Mode per engine</li>
+            <li>Self-host ports bind to 127.0.0.1: read the upgrade note</li>
           </ul>
-          <p style="margin-top:20px"><a class="btn btn-ghost btn-sm" href="https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.2">Release notes</a></p>
+          <p style="margin-top:20px"><a class="btn btn-ghost btn-sm" href="release-0.2.5.html">Release notes</a></p>
         </div>
         <dl>
-          <dt>CLI</dt><dd><a href="https://www.npmjs.com/package/@gtmos/cli"><code>@gtmos/cli</code></a> 0.2.4</dd>
-          <dt>Images</dt><dd><code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.2</code></dd>
+          <dt>CLI</dt><dd><a href="https://www.npmjs.com/package/@gtmos/cli"><code>@gtmos/cli</code></a> 0.2.5</dd>
+          <dt>Images</dt><dd><code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.5</code></dd>
+          <dt>Install</dt><dd><code>npm i -g @gtmos/cli</code>, then <code>gtm init</code></dd>
+          <dt>Upgrade</dt><dd><code>gtm upgrade --check</code>, then <code>gtm upgrade --channel stable --yes</code></dd>
           <dt>Docs</dt><dd><a href="user-guide.html">User guide</a>, <a href="product-documentation.html">Product documentation</a></dd>
         </dl>
       </div>
