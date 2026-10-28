@@ -1,0 +1,327 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.067
+Last clip you proved the mirror was
+complete. Now open any account in it.
+
+00:00:04.067 --> 00:00:07.067
+Most C R Ms show you a value
+and ask you to trust it.
+
+00:00:07.067 --> 00:00:10.700
+Here you see what you know, why
+you know it, and what happens next.
+
+00:00:10.733 --> 00:00:13.567
+In this clip you'll save a view
+and read a company's timeline.
+
+00:00:13.567 --> 00:00:17.200
+You'll also trace a value to its source
+and check the consent on a person.
+
+00:00:17.267 --> 00:00:19.767
+Sophia opens an account
+before a renewal call,
+
+00:00:19.767 --> 00:00:21.467
+and the employee count looks wrong.
+
+00:00:21.467 --> 00:00:25.367
+In most tools she can't tell if it
+came from a form, an import or a guess.
+
+00:00:25.367 --> 00:00:26.433
+Orbit can't either.
+
+00:00:26.433 --> 00:00:29.700
+So she checks by hand, and
+she stops trusting the screen.
+
+00:00:29.700 --> 00:00:32.233
+Every value here can tell
+you where it came from.
+
+00:00:32.267 --> 00:00:33.333
+First, the lists.
+
+00:00:33.333 --> 00:00:37.300
+In the console: CRM, then Companies,
+Contacts, Deals and Tasks.
+
+00:00:37.300 --> 00:00:42.000
+Companies and Contacts are tables
+you can search, sort and filter.
+
+00:00:42.000 --> 00:00:45.033
+Deals are a pipeline board
+and a table, by stage.
+
+00:00:45.033 --> 00:00:48.833
+Marking a deal lost asks for a loss
+reason. It's never missing later.
+
+00:00:48.833 --> 00:00:51.900
+Tasks shows what is due, overdue and done.
+
+00:00:51.933 --> 00:00:54.433
+A saved view remembers a
+list's filter and sort,
+
+00:00:54.433 --> 00:00:56.900
+so your team opens the
+same slice the same way.
+
+00:00:56.900 --> 00:01:00.367
+Build one from any list, say every
+tier A company with no owner.
+
+00:01:00.367 --> 00:01:04.267
+If an agent changes a saved view,
+the change goes through approval.
+
+00:01:04.333 --> 00:01:05.500
+Or ask your agent:
+
+00:01:05.500 --> 00:01:09.233
+"Create a task for Mia to call the
+champion at Northwind by Friday".
+
+00:01:09.233 --> 00:01:12.833
+It exists at once, because it only
+touches your own organization.
+
+00:01:12.833 --> 00:01:16.167
+Then ask: "Save a view of every
+tier A company with no owner".
+
+00:01:16.167 --> 00:01:19.600
+That comes back as a proposal,
+and a teammate approves it.
+
+00:01:19.633 --> 00:01:24.000
+Second, the company page, where
+the story lives. Open any company.
+
+00:01:24.000 --> 00:01:27.633
+The overview comes first, then
+tabs for contacts, deals, tasks,
+
+00:01:27.633 --> 00:01:30.500
+the Activity timeline,
+Actions, Research and Evidence.
+
+00:01:30.500 --> 00:01:34.667
+The timeline puts every email, call,
+meeting, signal and change in order,
+
+00:01:34.667 --> 00:01:36.867
+so you read the account's
+story from top to bottom.
+
+00:01:36.867 --> 00:01:39.733
+Page and agent read the same operations,
+
+00:01:39.733 --> 00:01:43.800
+so the console and the agent
+can't disagree about an account.
+
+00:01:43.800 --> 00:01:47.167
+A relationship line says whether
+your team already knows them.
+
+00:01:47.233 --> 00:01:50.567
+The Actions tab shows what the engines
+drafted or did on this account:
+
+00:01:50.567 --> 00:01:54.100
+the draft, the gate it passed,
+who approved it, the outcome,
+
+00:01:54.100 --> 00:01:57.000
+and an Undo where one exists.
+Research holds sourced briefs.
+
+00:01:57.000 --> 00:02:00.000
+Evidence collects each fact
+with where it came from.
+
+00:02:00.000 --> 00:02:03.233
+A note or a call you log from
+the page joins the timeline.
+
+00:02:03.267 --> 00:02:05.367
+Third, the part that sets this apart.
+
+00:02:05.367 --> 00:02:07.833
+Next to any field, open Why this value.
+
+00:02:07.833 --> 00:02:09.733
+It shows which source wrote the value,
+
+00:02:09.733 --> 00:02:12.767
+which rule chose it when
+sources disagreed, and when.
+
+00:02:12.767 --> 00:02:15.700
+A lineage trace goes down
+to the contributing records.
+
+00:02:15.700 --> 00:02:18.300
+A value a person set is marked as theirs,
+
+00:02:18.300 --> 00:02:19.933
+and it beats every automatic source.
+
+00:02:19.933 --> 00:02:22.833
+Power habit: open Why this
+value before you edit.
+
+00:02:22.833 --> 00:02:27.467
+If a source got it wrong, fix the
+source. If you set it by hand, it stays.
+
+00:02:27.533 --> 00:02:31.600
+Fourth, records beyond the big
+three. In the console: CRM, Records.
+
+00:02:31.600 --> 00:02:32.433
+Browse every object type,
+
+00:02:32.433 --> 00:02:36.633
+including custom ones like a
+Partner you defined in Model.
+
+00:02:36.633 --> 00:02:39.767
+Open a record to see its fields,
+its provenance and its links.
+
+00:02:39.767 --> 00:02:42.100
+Contacts link to companies
+through employment,
+
+00:02:42.100 --> 00:02:44.800
+and deals link to contacts
+with a buying role.
+
+00:02:44.833 --> 00:02:48.567
+On a contact, the Consent
+tab lists email, phone, SMS,
+
+00:02:48.567 --> 00:02:52.233
+WhatsApp and LinkedIn. Each shows
+status, legal basis, source and expiry,
+
+00:02:52.233 --> 00:02:54.333
+with the history of every change.
+
+00:02:54.333 --> 00:02:58.133
+It's the record you'd hand over
+in a data protection request.
+
+00:02:58.133 --> 00:03:01.000
+The rules behind it come
+in the clip called Consent,
+
+00:03:01.000 --> 00:03:02.700
+suppression and privacy.
+
+00:03:02.733 --> 00:03:04.300
+Last, deals in your words.
+
+00:03:04.300 --> 00:03:08.033
+In the console: Settings,
+Money, Your words for deals.
+
+00:03:08.033 --> 00:03:08.867
+Types like new business,
+
+00:03:08.867 --> 00:03:12.867
+expansion or renewal use your
+labels in every filter and grouping,
+
+00:03:12.867 --> 00:03:13.733
+never ours.
+
+00:03:13.733 --> 00:03:17.433
+A deal's page also shows its buying
+committee: who plays which role,
+
+00:03:17.433 --> 00:03:18.900
+and whose is still missing.
+
+00:03:18.967 --> 00:03:20.167
+Or ask your agent:
+
+00:03:20.167 --> 00:03:23.733
+"Show the Northwind company page and
+explain why it is on the hot list".
+
+00:03:23.733 --> 00:03:26.767
+It answers from the same
+records, with your permissions.
+
+00:03:26.767 --> 00:03:28.367
+Each reason points at its evidence.
+
+00:03:28.367 --> 00:03:30.833
+Open the company and
+check the claim yourself.
+
+00:03:30.867 --> 00:03:34.400
+One more entry in the same rail:
+AI chat. Ask about a record,
+
+00:03:34.400 --> 00:03:38.200
+and anything it proposes to change
+waits for a teammate's approval.
+
+00:03:38.233 --> 00:03:42.233
+Say it out loud: a tidy record page
+is not the same as trust. Fair.
+
+00:03:42.233 --> 00:03:43.367
+So here's what backs it.
+
+00:03:43.367 --> 00:03:46.767
+The agent reads with your permissions,
+and can't see what you can't.
+
+00:03:46.767 --> 00:03:48.933
+Every reason points at
+evidence you can open.
+
+00:03:48.933 --> 00:03:51.767
+A saved view change is
+a proposal, not an edit.
+
+00:03:51.767 --> 00:03:54.733
+And a sync can't overwrite
+a value a person set.
+
+00:03:54.800 --> 00:03:57.433
+Boiled down: Work from
+lists and saved views.
+
+00:03:57.433 --> 00:04:00.933
+Read the company page top to
+bottom. Ask why for any value.
+
+00:04:00.933 --> 00:04:03.233
+Every value can tell
+you where it came from.
+
+00:04:03.267 --> 00:04:05.500
+You can open any account
+and trust what you read,
+
+00:04:05.500 --> 00:04:07.000
+because it shows its sources.
+
+00:04:07.000 --> 00:04:10.400
+Pick one company and open Why
+this value on three fields.
+
+00:04:10.400 --> 00:04:14.633
+Next is identity and data quality,
+where one customer becomes one record.

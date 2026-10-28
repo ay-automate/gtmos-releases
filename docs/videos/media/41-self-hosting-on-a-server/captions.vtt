@@ -1,0 +1,307 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.600
+You extended GTM OS by
+definition, never by fork.
+
+00:00:03.600 --> 00:00:07.100
+Now put it on a server your team
+can reach and nobody else can.
+
+00:00:07.100 --> 00:00:10.933
+One command brings it up, and a
+reverse proxy is the only door.
+
+00:00:11.000 --> 00:00:14.667
+By the end you'll have your instance
+on your own domain over HTTPS,
+
+00:00:14.667 --> 00:00:16.833
+with every application port closed.
+
+00:00:16.900 --> 00:00:20.267
+Leo opens the console and API
+ports so the team can get in.
+
+00:00:20.267 --> 00:00:22.233
+That is how self hosted tools
+end up on a scanner's list.
+
+00:00:22.233 --> 00:00:26.567
+Reachable by the team is a different
+goal from reachable by everyone.
+
+00:00:26.600 --> 00:00:28.900
+Step one, keep the ports local.
+
+00:00:28.900 --> 00:00:34.067
+On a server, gtm up keeps the ports on
+the local machine, like the database.
+
+00:00:34.067 --> 00:00:38.633
+Local means 127.0.0.1. That covers
+the console, the API and MCP.
+
+00:00:38.633 --> 00:00:43.033
+Nothing on the network reaches them
+directly, and that's deliberate.
+
+00:00:43.033 --> 00:00:46.600
+The address is one setting:
+GTMOS_BIND_ADDRESS.
+
+00:00:46.667 --> 00:00:50.400
+To change it on purpose, set it
+in .env and run gtm up again.
+
+00:00:50.400 --> 00:00:53.933
+Or pass the bind flag when
+you create the instance.
+
+00:00:53.933 --> 00:00:57.033
+A private address serves
+a proxy on another host.
+
+00:00:57.033 --> 00:01:01.233
+And 0.0.0.0 opens every interface,
+so keep that behind a firewall.
+
+00:01:01.233 --> 00:01:02.767
+The .env value is kept.
+
+00:01:02.767 --> 00:01:06.433
+A flag on an existing instance
+is reported and ignored.
+
+00:01:06.467 --> 00:01:07.833
+On an older instance,
+
+00:01:07.833 --> 00:01:12.533
+the first gtm up or gtm upgrade
+warns you before it changes anything:
+
+00:01:12.533 --> 00:01:16.533
+these ports become local only.
+It adds the setting to your .env.
+
+00:01:16.533 --> 00:01:21.033
+If people reach it by address
+and port, put a proxy in front.
+
+00:01:21.033 --> 00:01:22.633
+Or set 0.0.0.0 on purpose.
+
+00:01:22.700 --> 00:01:26.600
+Step two, the domain. Point one
+parent domain at the server.
+
+00:01:26.600 --> 00:01:29.800
+Give it one host name for the
+console and one for the API.
+
+00:01:29.800 --> 00:01:32.500
+Add one for MCP if outside agents need it.
+
+00:01:32.500 --> 00:01:35.033
+Open only ports 80 and
+443 in the firewall.
+
+00:01:35.100 --> 00:01:38.033
+Step three, tell GTM OS where it lives.
+
+00:01:38.033 --> 00:01:42.367
+In .env, set the three public
+addresses: PUBLIC_API_URL,
+
+00:01:42.367 --> 00:01:48.233
+PUBLIC_CONSOLE_URL and PUBLIC_MCP_URL.
+Use https, with no trailing slash.
+
+00:01:48.233 --> 00:01:52.633
+For subdomains of one parent,
+also set GTMOS_COOKIE_DOMAIN,
+
+00:01:52.633 --> 00:01:57.800
+or the CRM screens fail to load. Then
+run gtm up. No rebuild is needed.
+
+00:01:57.867 --> 00:02:01.367
+Step four, the proxy. Caddy is
+the shortest route to HTTPS.
+
+00:02:01.367 --> 00:02:04.933
+Write one block per host name
+that forwards to the local port.
+
+00:02:04.933 --> 00:02:09.000
+Caddy gets and renews the certificates
+for you. Then run caddy reload.
+
+00:02:09.000 --> 00:02:11.900
+The ports in the file are
+the host ports from .env,
+
+00:02:11.900 --> 00:02:13.867
+so use yours if you changed them.
+
+00:02:13.900 --> 00:02:17.867
+nginx works too. Get certificates
+first, for example with certbot.
+
+00:02:17.867 --> 00:02:21.867
+Then add a server block per host that
+forwards to the same local ports.
+
+00:02:21.867 --> 00:02:26.100
+Pass the host and forwarded protocol
+headers, allow upgrades on the console,
+
+00:02:26.100 --> 00:02:28.300
+and redirect port 80 to HTTPS.
+
+00:02:28.367 --> 00:02:31.500
+Step five, check from
+outside and from inside.
+
+00:02:31.500 --> 00:02:34.000
+The API health address should answer ok.
+
+00:02:34.000 --> 00:02:37.433
+The console should return a
+page or a redirect to login.
+
+00:02:37.433 --> 00:02:40.200
+A socket listing should
+show only 127.0.0.1
+
+00:02:40.200 --> 00:02:42.933
+for the application
+ports and the database.
+
+00:02:42.933 --> 00:02:45.800
+Seeing 0.0.0.0 means a port is exposed.
+
+00:02:45.800 --> 00:02:48.700
+Fix the bind address and run gtm up again.
+
+00:02:48.700 --> 00:02:52.900
+Or ask your agent: "Is this instance
+ready, and what is missing".
+
+00:02:52.900 --> 00:02:56.700
+Pro move: put that socket
+listing in your deploy checklist.
+
+00:02:56.733 --> 00:02:58.200
+Last, keep it safe.
+
+00:02:58.200 --> 00:03:01.233
+gtm up generates the secrets
+for you: the database password,
+
+00:03:01.233 --> 00:03:05.267
+the auth secret, the master
+key and the audit signing key,
+
+00:03:05.267 --> 00:03:08.767
+all written into .env. Keep that
+file out of version control,
+
+00:03:08.767 --> 00:03:10.800
+and readable only by the service account.
+
+00:03:10.800 --> 00:03:13.233
+The master key seals
+every stored credential.
+
+00:03:13.233 --> 00:03:15.500
+And GTMOS_LIVE must be true or false,
+
+00:03:15.500 --> 00:03:18.467
+because production images
+refuse to start without it.
+
+00:03:18.500 --> 00:03:19.633
+Back up on a schedule.
+
+00:03:19.633 --> 00:03:22.800
+The script dumps every organization,
+but not the master key.
+
+00:03:22.800 --> 00:03:27.000
+Without it, every stored connection
+and token is lost on restore.
+
+00:03:27.000 --> 00:03:27.900
+So escrow the key separately.
+
+00:03:27.900 --> 00:03:31.100
+The dump isn't encrypted,
+so restrict the folder.
+
+00:03:31.167 --> 00:03:32.433
+The updater is optional.
+
+00:03:32.433 --> 00:03:35.367
+gtm upgrade does the whole
+job from the command line.
+
+00:03:35.367 --> 00:03:37.767
+Install the updater
+with gtm updater install
+
+00:03:37.767 --> 00:03:40.033
+only if you want the Update now button.
+
+00:03:40.100 --> 00:03:43.667
+Someone on your team will say: a
+proxy is one more thing to run.
+
+00:03:43.667 --> 00:03:47.967
+It is, and it's the only thing
+facing the internet. It ends HTTPS.
+
+00:03:47.967 --> 00:03:50.200
+Everything behind it sits on local ports.
+
+00:03:50.200 --> 00:03:53.333
+So a firewall mistake doesn't
+expose the application.
+
+00:03:53.400 --> 00:03:56.400
+One boundary. This clip covers
+one server, with Docker.
+
+00:03:56.400 --> 00:04:00.667
+A client's own cloud isn't covered,
+because the live apply isn't verified.
+
+00:04:00.667 --> 00:04:03.233
+Google Cloud and Azure
+aren't supported yet.
+
+00:04:03.267 --> 00:04:07.133
+Say it back: Keep the ports local,
+point a domain at one proxy,
+
+00:04:07.133 --> 00:04:10.033
+set the public addresses,
+and check from both sides.
+
+00:04:10.033 --> 00:04:11.800
+Then escrow the master key.
+
+00:04:11.833 --> 00:04:14.600
+Your instance now sits on
+your own domain over HTTPS.
+
+00:04:14.600 --> 00:04:19.067
+It's closed to everything but the
+proxy, with secrets and backups handled.
+
+00:04:19.067 --> 00:04:20.133
+The next clip is Upgrading:
+
+00:04:20.133 --> 00:04:23.333
+moving to a new release
+without touching your data.

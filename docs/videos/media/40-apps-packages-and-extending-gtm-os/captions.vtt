@@ -1,0 +1,311 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:04.967
+Month one was a loop: read, change
+one definition, sign, read again.
+
+00:00:04.967 --> 00:00:07.400
+Now change what GTM OS itself looks like.
+
+00:00:07.400 --> 00:00:10.867
+Generate a screen from your data,
+package your method for clients,
+
+00:00:10.867 --> 00:00:14.333
+and take updates that never
+overwrite what your team changed.
+
+00:00:14.367 --> 00:00:17.633
+In this clip you'll generate a screen
+and know the three kinds of package.
+
+00:00:17.633 --> 00:00:20.400
+You'll also take an update
+through a three way merge.
+
+00:00:20.467 --> 00:00:23.533
+Leo's agency builds the same
+dashboards for every client.
+
+00:00:23.533 --> 00:00:27.600
+Then a release lands, and the
+copy one client edited breaks.
+
+00:00:27.600 --> 00:00:31.233
+Fork, and you fall behind. Overwrite,
+and you lose their changes.
+
+00:00:31.233 --> 00:00:32.933
+GTM OS does neither.
+
+00:00:33.000 --> 00:00:35.033
+First, every screen in the console,
+
+00:00:35.033 --> 00:00:38.500
+from Mission Control to the
+engine pages, is an app.
+
+00:00:38.500 --> 00:00:40.400
+It's a definition, with no custom code.
+
+00:00:40.400 --> 00:00:45.433
+The framework has view types: record
+page, queue, table, dashboard, form,
+
+00:00:45.433 --> 00:00:47.867
+wizard, approval card, list and spotlight.
+
+00:00:47.867 --> 00:00:51.933
+Every button is an operation from
+the same registry your agent uses,
+
+00:00:51.933 --> 00:00:54.200
+so a screen can never do
+what an agent couldn't.
+
+00:00:54.200 --> 00:00:59.333
+And brand tokens restyle all of it at
+once. In the console: Apps, All apps.
+
+00:00:59.367 --> 00:01:01.133
+Second, generate one.
+
+00:01:01.133 --> 00:01:03.333
+gtm app generate scaffolds a screen from
+
+00:01:03.333 --> 00:01:05.900
+an object type and the
+live operation registry.
+
+00:01:05.900 --> 00:01:08.533
+Pass a kind: record page,
+queue, table or dashboard.
+
+00:01:08.533 --> 00:01:11.767
+You get an app definition
+to review and edit.
+
+00:01:11.767 --> 00:01:15.900
+It goes in as a ChangeSet like any
+other, so a different person approves it.
+
+00:01:15.900 --> 00:01:20.133
+Or ask your agent: "Create a queue
+screen for accounts that need review".
+
+00:01:20.200 --> 00:01:21.433
+Third, packages.
+
+00:01:21.433 --> 00:01:25.467
+Everything installable is a package:
+engines, screens, connectors,
+
+00:01:25.467 --> 00:01:28.467
+modules and blueprints.
+There are three tiers.
+
+00:01:28.467 --> 00:01:30.867
+Declarative packages carry
+definitions and no code,
+
+00:01:30.867 --> 00:01:35.033
+and they're the default choice.
+Trusted packages run code in process,
+
+00:01:35.033 --> 00:01:38.700
+and sandboxed packages run it in
+isolation. Both must be signed.
+
+00:01:38.700 --> 00:01:42.333
+An unsigned trusted or sandboxed
+package is refused at install.
+
+00:01:42.333 --> 00:01:45.300
+In the console: Settings, Packages.
+
+00:01:45.300 --> 00:01:47.967
+Or ask your agent: "What
+packages are installed".
+
+00:01:48.000 --> 00:01:49.067
+Now the trust check.
+
+00:01:49.067 --> 00:01:51.300
+A package is signed by the first party key
+
+00:01:51.300 --> 00:01:53.800
+or by a publisher key
+you've listed as trusted.
+
+00:01:53.800 --> 00:01:56.900
+It declares a permission envelope,
+the operations it may call,
+
+00:01:56.900 --> 00:01:58.567
+and its writes stay inside it.
+
+00:01:58.567 --> 00:02:01.933
+An egress guard controls what
+it can reach outside GTM OS.
+
+00:02:01.967 --> 00:02:04.433
+Fourth, agencies package their method.
+
+00:02:04.433 --> 00:02:08.233
+A declarative package of definitions,
+with parameters per client,
+
+00:02:08.233 --> 00:02:10.133
+installs with one
+proposal and one approval.
+
+00:02:10.133 --> 00:02:12.533
+And gtm pkg provenance shows which agency
+
+00:02:12.533 --> 00:02:15.300
+package and which version
+an organization runs.
+
+00:02:15.300 --> 00:02:16.867
+Because it's only definitions,
+
+00:02:16.867 --> 00:02:19.200
+the client can read all
+of it before approving.
+
+00:02:19.200 --> 00:02:23.067
+Or ask your agent: "Which agency
+package and version do we run".
+
+00:02:23.133 --> 00:02:25.667
+Last, updates arrive without taking over.
+
+00:02:25.667 --> 00:02:28.167
+In the console: Settings, Packages.
+
+00:02:28.167 --> 00:02:31.433
+A card says engine apps have
+updates and shows what each adds,
+
+00:02:31.433 --> 00:02:32.567
+changes or removes per environment.
+
+00:02:32.567 --> 00:02:35.700
+Only an owner or admin
+can propose the update,
+
+00:02:35.700 --> 00:02:37.333
+and a second person approves it.
+
+00:02:37.333 --> 00:02:41.633
+It's a three way merge: the version
+you started from, the new one,
+
+00:02:41.633 --> 00:02:42.367
+and your edited copy.
+
+00:02:42.367 --> 00:02:45.133
+Where they overlap you see
+both, and you choose Keep mine.
+
+00:02:45.133 --> 00:02:47.800
+Edited copies are never overwritten,
+
+00:02:47.800 --> 00:02:50.700
+and every update is a new config
+version you can roll back.
+
+00:02:50.700 --> 00:02:54.200
+Or ask your agent: "Do any of
+our engine apps have updates".
+
+00:02:54.233 --> 00:02:58.200
+Here's the doubt: someone else's code
+in my stack? Mostly it isn't code.
+
+00:02:58.200 --> 00:03:01.200
+A declarative package is only
+definitions you can read.
+
+00:03:01.200 --> 00:03:03.500
+Trusted and sandboxed code must be signed,
+
+00:03:03.500 --> 00:03:05.833
+can call only the
+operations in its envelope,
+
+00:03:05.833 --> 00:03:07.700
+and sits behind an egress guard.
+
+00:03:07.700 --> 00:03:10.533
+And an update to an installed
+app stays a human decision,
+
+00:03:10.533 --> 00:03:12.767
+because agent keys are refused for it.
+
+00:03:12.833 --> 00:03:14.800
+Shipped apps get better with each release,
+
+00:03:14.800 --> 00:03:16.900
+and you take them on your schedule.
+
+00:03:16.900 --> 00:03:20.533
+Edit an app in the console or by
+ChangeSet. Restyle it with brand tokens,
+
+00:03:20.533 --> 00:03:23.933
+or package your changes so another
+organization can install them.
+
+00:03:23.933 --> 00:03:25.733
+Studio can also draft an app from a
+
+00:03:25.733 --> 00:03:28.233
+sentence and ship it
+into dev behind approval.
+
+00:03:28.267 --> 00:03:30.933
+Advanced move: prefer a
+declarative package over code.
+
+00:03:30.933 --> 00:03:34.633
+It's the easiest for a client to
+review and the hardest to get wrong.
+
+00:03:34.633 --> 00:03:38.467
+Reach for trusted or sandboxed code
+only when definitions can't do the job.
+
+00:03:38.500 --> 00:03:40.233
+Approvals gate every change here.
+
+00:03:40.233 --> 00:03:42.667
+Environments move apps
+from dev to production.
+
+00:03:42.667 --> 00:03:45.100
+And Upgrading is where
+new defaults arrive.
+
+00:03:45.167 --> 00:03:49.333
+Quick pass: Screens are definitions,
+packages are signed and reviewable,
+
+00:03:49.333 --> 00:03:53.933
+and updates merge instead of overwriting.
+Add by definition, never by fork.
+
+00:03:53.967 --> 00:03:57.767
+Now you can extend GTM OS with
+screens and packages that are signed,
+
+00:03:57.767 --> 00:03:59.800
+readable and safe to update.
+
+00:03:59.800 --> 00:04:04.200
+Next: Self hosting on a server, your
+own instance, on your own domain,
+
+00:04:04.200 --> 00:04:06.367
+closed to everything except a proxy.

@@ -1,0 +1,312 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.300
+Last clip a publish was bound
+to the exact payload you read.
+
+00:00:03.300 --> 00:00:05.100
+Now money gets the same treatment.
+
+00:00:05.100 --> 00:00:08.633
+Your ad budget is steered by what a
+customer really costs and returns,
+
+00:00:08.633 --> 00:00:11.433
+and no money moves until a
+different person says yes.
+
+00:00:11.500 --> 00:00:15.233
+In this clip you'll sync spend,
+set a target, read pacing,
+
+00:00:15.233 --> 00:00:18.400
+and approve a budget move.
+Performance ads proposes.
+
+00:00:18.400 --> 00:00:20.333
+It never moves money on its own.
+
+00:00:20.367 --> 00:00:22.800
+Leo's ad platforms optimize
+for their own results.
+
+00:00:22.800 --> 00:00:25.333
+Finance asks what a customer really cost,
+
+00:00:25.333 --> 00:00:27.300
+and the answer takes a
+spreadsheet and a week.
+
+00:00:27.300 --> 00:00:31.033
+Meanwhile a budget keeps running on
+a campaign that stopped paying back.
+
+00:00:31.067 --> 00:00:34.000
+First, spend. It syncs
+from Google and Meta,
+
+00:00:34.000 --> 00:00:37.233
+and arrives read only from other
+platforms through Composio.
+
+00:00:37.233 --> 00:00:40.400
+In the console: Engines,
+Performance ads, Platforms.
+
+00:00:40.400 --> 00:00:43.467
+Re-syncing the same window
+updates the rows already there,
+
+00:00:43.467 --> 00:00:46.200
+so spend and conversions
+never count twice.
+
+00:00:46.267 --> 00:00:50.400
+Second, what good looks like. You write
+it in a unit economics definition:
+
+00:00:50.400 --> 00:00:53.567
+a target cost to acquire a
+customer, or a target return,
+
+00:00:53.567 --> 00:00:56.967
+or a maximum payback in months, with
+gross margin and revenue per customer.
+
+00:00:56.967 --> 00:01:00.900
+From those it sets a spend ceiling
+and a first order profit gate.
+
+00:01:00.900 --> 00:01:04.500
+It's a definition like any other,
+so a different person signs it.
+
+00:01:04.533 --> 00:01:05.733
+Now read a campaign.
+
+00:01:05.733 --> 00:01:09.667
+In the console: Engines, Performance
+ads, Campaigns, then open one.
+
+00:01:09.667 --> 00:01:14.367
+You'll see spend, conversions, pacing
+and any open moves in one place.
+
+00:01:14.367 --> 00:01:17.967
+The figures are the synced ones,
+so when a number looks wrong,
+
+00:01:17.967 --> 00:01:20.367
+check the sync before
+you blame the campaign.
+
+00:01:20.433 --> 00:01:24.133
+Pacing compares what you spend
+with what your CAC target allows.
+
+00:01:24.133 --> 00:01:28.033
+In the console: the Pacing tab,
+with MER and CAC payback tiles.
+
+00:01:28.033 --> 00:01:32.000
+Real CAC and return come from paid
+visits credited by campaign tag.
+
+00:01:32.000 --> 00:01:35.833
+Or ask your agent: "Where
+should budget go this week? "
+
+00:01:35.867 --> 00:01:39.967
+Now the gotcha. A paid visit is credited
+to a campaign by its campaign tag,
+
+00:01:39.967 --> 00:01:41.633
+so put one on every ad link.
+
+00:01:41.633 --> 00:01:44.900
+Without it, GTM OS can't tie
+the visit to the campaign.
+
+00:01:44.900 --> 00:01:47.900
+The tile shows a dash with
+the reason, never a guess.
+
+00:01:47.900 --> 00:01:51.233
+Ask your agent: "Which campaigns
+are missing a campaign tag?
+
+00:01:51.233 --> 00:01:53.200
+" Then fix the links at the source.
+
+00:01:53.267 --> 00:01:57.567
+Third, the allocator. Each night it
+reads pacing and proposes budget moves.
+
+00:01:57.567 --> 00:02:00.533
+It only proposes. Every move
+needs a different approver,
+
+00:02:00.533 --> 00:02:02.667
+and one move can at most double a budget.
+
+00:02:02.667 --> 00:02:06.467
+In Dry Mode the plan is a
+draft nobody can execute.
+
+00:02:06.467 --> 00:02:09.867
+In the console: Engines,
+Performance ads, Open moves.
+
+00:02:09.867 --> 00:02:12.600
+Or ask your agent: "Show
+the last allocator run".
+
+00:02:12.633 --> 00:02:14.533
+Real money sits behind an approval.
+
+00:02:14.533 --> 00:02:17.300
+Changing a budget or pausing
+a campaign is a proposal.
+
+00:02:17.300 --> 00:02:20.933
+Sophia opens the approval, reads
+the frozen change and its impact,
+
+00:02:20.933 --> 00:02:22.300
+and approves or rejects.
+
+00:02:22.300 --> 00:02:25.733
+Neither the proposer nor the human
+the agent acts for can approve.
+
+00:02:25.733 --> 00:02:28.767
+An approved change can be undone,
+through an approval as well.
+
+00:02:28.767 --> 00:02:32.433
+Ask your agent: "Propose pausing
+the Brand Search campaign".
+
+00:02:32.500 --> 00:02:36.233
+Caps stand around all of it. In
+the console: Settings, Safety.
+
+00:02:36.233 --> 00:02:40.200
+A guardrail limits ad spend per day,
+and above it a person has to approve.
+
+00:02:40.200 --> 00:02:42.700
+Cost budgets in the ledger turn a breach
+
+00:02:42.700 --> 00:02:45.500
+into an approval instead
+of a silent overrun.
+
+00:02:45.500 --> 00:02:48.833
+Operator tip: stay in Dry for a
+few weeks, read each night's plan,
+
+00:02:48.833 --> 00:02:50.667
+and move nothing until you trust it.
+
+00:02:50.667 --> 00:02:55.100
+Or ask your agent: "How much did we
+spend yesterday against the cap? "
+
+00:02:55.167 --> 00:02:56.833
+It improves with cleaner inputs.
+
+00:02:56.833 --> 00:03:00.000
+Each night's plan reads fresher
+spend and better attribution,
+
+00:03:00.000 --> 00:03:02.267
+so tag your campaigns and
+keep the sync running.
+
+00:03:02.267 --> 00:03:06.167
+To customize, set your targets and
+margin, the campaigns in scope,
+
+00:03:06.167 --> 00:03:07.100
+and the spend cap.
+
+00:03:07.100 --> 00:03:10.767
+Each is a definition, so a
+different person signs every change.
+
+00:03:10.800 --> 00:03:14.033
+Performance ads reads revenue
+truth and attribution from Money.
+
+00:03:14.033 --> 00:03:16.600
+It answers to the ad
+spend guardrail in Safety,
+
+00:03:16.600 --> 00:03:19.033
+and it feeds the spend
+tile on Mission Control.
+
+00:03:19.100 --> 00:03:21.600
+Not in the product yet:
+the ads creative loop,
+
+00:03:21.600 --> 00:03:24.233
+so this engine doesn't
+generate or rank ad creative.
+
+00:03:24.233 --> 00:03:27.167
+Audience sync and offline conversion
+upload aren't built either.
+
+00:03:27.167 --> 00:03:29.767
+Spend from LinkedIn and
+TikTok is read only.
+
+00:03:29.833 --> 00:03:30.833
+The skeptic's line:
+
+00:03:30.833 --> 00:03:33.433
+an allocator that reads
+my numbers every night
+
+00:03:33.433 --> 00:03:35.500
+will drain a budget before I wake up.
+
+00:03:35.500 --> 00:03:38.467
+It can't. It only proposes, one
+move can at most double a budget,
+
+00:03:38.467 --> 00:03:40.667
+and every move waits for
+a different approver.
+
+00:03:40.667 --> 00:03:43.067
+In Dry Mode it can't even be executed.
+
+00:03:43.100 --> 00:03:46.000
+In one pass: Spend syncs
+without double counting,
+
+00:03:46.000 --> 00:03:49.567
+pacing compares it with your
+target, and the allocator proposes.
+
+00:03:49.567 --> 00:03:52.733
+The engine proposes the move.
+A person moves the money.
+
+00:03:52.800 --> 00:03:55.933
+Spend follows the payback,
+every move waits for a person,
+
+00:03:55.933 --> 00:03:58.133
+and a re-sync never inflates your numbers.
+
+00:03:58.133 --> 00:04:00.800
+Tag one campaign today and
+watch its tile fill in.
+
+00:04:00.800 --> 00:04:04.333
+Next is Research agent, a
+researcher on every account.

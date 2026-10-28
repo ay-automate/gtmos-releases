@@ -1,0 +1,354 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.100
+Every email is grounded and
+approved by a second person.
+
+00:00:03.100 --> 00:00:05.033
+Now the same rules govern your website.
+
+00:00:05.033 --> 00:00:09.067
+One engine audits your pages, watches
+what AI answers say about you,
+
+00:00:09.067 --> 00:00:12.867
+and ships the fixes. A person
+approves every change to your site.
+
+00:00:12.900 --> 00:00:15.667
+By the end you'll read the
+audits and the visibility views,
+
+00:00:15.667 --> 00:00:19.000
+turn keywords into briefs, and
+queue a publish you can undo.
+
+00:00:19.000 --> 00:00:22.833
+Search Console is required for this
+engine, and for this engine only.
+
+00:00:22.867 --> 00:00:26.200
+Mia's team publishes, then
+guesses. Which pages slipped,
+
+00:00:26.200 --> 00:00:29.833
+which questions the answer engines
+now answer without citing you,
+
+00:00:29.833 --> 00:00:32.100
+which two posts compete for one query.
+
+00:00:32.100 --> 00:00:36.233
+Search and AI answers are two surfaces.
+Nobody has time to watch both.
+
+00:00:36.267 --> 00:00:37.367
+First, the audit.
+
+00:00:37.367 --> 00:00:41.967
+Tracked pages are audited daily:
+crawl, on page checks, schema,
+
+00:00:41.967 --> 00:00:46.200
+GEO readiness, and the indexed
+verdict from Google's URL inspection.
+
+00:00:46.200 --> 00:00:49.000
+Findings land in the Fix queue, ranked.
+
+00:00:49.000 --> 00:00:53.000
+In the console: Engines, SEO
+and GEO, Pages and Fix queue.
+
+00:00:53.000 --> 00:00:56.567
+Or ask your agent: "What
+is in the fix queue? "
+
+00:00:56.633 --> 00:00:58.300
+Second, visibility.
+
+00:00:58.300 --> 00:01:01.967
+GEO tracks the prompts you care
+about across the main answer engines.
+
+00:01:01.967 --> 00:01:05.067
+It records who gets cited,
+your domain or a competitor.
+
+00:01:05.067 --> 00:01:06.933
+Alerts fire when that changes.
+
+00:01:06.933 --> 00:01:10.500
+GEO readiness scores whether
+a page is built to be quoted.
+
+00:01:10.500 --> 00:01:14.833
+Where data is missing, the tile
+says why instead of showing a zero.
+
+00:01:14.833 --> 00:01:17.967
+In the console: the
+Visibility and GEO tabs.
+
+00:01:17.967 --> 00:01:20.967
+Or ask your agent: "How
+visible are we in AI answers? "
+
+00:01:21.000 --> 00:01:22.267
+Third, keywords.
+
+00:01:22.267 --> 00:01:24.367
+They come from Search
+Console queries where
+
+00:01:24.367 --> 00:01:26.067
+you already rank just below the top,
+
+00:01:26.067 --> 00:01:28.067
+plus looot and Ahrefs
+when you connect them.
+
+00:01:28.067 --> 00:01:31.767
+Search Console is the one connection
+this engine can't run without.
+
+00:01:31.767 --> 00:01:35.167
+Connect it once under
+Settings, Connected accounts,
+
+00:01:35.167 --> 00:01:37.667
+and gtm doctor flags it if it's missing.
+
+00:01:37.667 --> 00:01:40.567
+Or ask your agent: "Which
+keywords are close to page one? "
+
+00:01:40.633 --> 00:01:43.400
+Clusters group keywords by
+the search results they share.
+
+00:01:43.400 --> 00:01:46.567
+Two queries that return the
+same pages belong to one topic.
+
+00:01:46.567 --> 00:01:50.200
+Each cluster gets an intent, a
+funnel stage and a pillar candidate,
+
+00:01:50.200 --> 00:01:53.733
+and shows coverage as
+covered, weak or a gap.
+
+00:01:53.733 --> 00:01:57.100
+It also flags cannibalization: two of
+your pages competing for one topic.
+
+00:01:57.100 --> 00:01:59.800
+Ask your agent: "Build topic clusters".
+
+00:01:59.833 --> 00:02:01.333
+Fourth, the content factory.
+
+00:02:01.333 --> 00:02:05.167
+An idea becomes a brief, a draft,
+a quality check and an approval.
+
+00:02:05.167 --> 00:02:07.967
+Pro move: brief per
+cluster, not per keyword,
+
+00:02:07.967 --> 00:02:12.533
+so your own posts never compete.
+The claims gate runs on the draft.
+
+00:02:12.533 --> 00:02:15.700
+Every statistic, result or named
+customer must match active proof,
+
+00:02:15.700 --> 00:02:18.933
+and a customer whose proof
+isn't public is never named.
+
+00:02:18.933 --> 00:02:22.400
+Ask your agent: "Draft the
+brief for the pricing cluster".
+
+00:02:22.467 --> 00:02:24.700
+Now the publish, which is a proposal.
+
+00:02:24.700 --> 00:02:28.267
+In the console: Engines, SEO and
+GEO, Publish queue, then Approvals.
+
+00:02:28.267 --> 00:02:32.267
+The change you approve is bound to the
+exact payload, the body of the draft,
+
+00:02:32.267 --> 00:02:33.833
+so what goes live is what you read.
+
+00:02:33.833 --> 00:02:37.567
+The claims gate and brand safety
+run again when it's published.
+
+00:02:37.567 --> 00:02:40.600
+A publish can be undone, and
+the undo is a proposal too.
+
+00:02:40.600 --> 00:02:44.967
+It reaches your site through a signed
+webhook or a connected content system.
+
+00:02:44.967 --> 00:02:47.667
+In Dry Mode it stays a logged
+draft. Or ask your agent:
+
+00:02:47.667 --> 00:02:51.433
+"Propose publishing the approved
+draft for the pricing cluster".
+
+00:02:51.467 --> 00:02:55.367
+Content doesn't stay good. In the
+console: the Refresh calendar.
+
+00:02:55.367 --> 00:02:59.967
+A page is refresh due when clicks fall,
+rank drops, an AI citation is lost,
+
+00:02:59.967 --> 00:03:02.467
+or the page ages. You set the thresholds.
+
+00:03:02.467 --> 00:03:04.867
+A daily watch agent reads the results
+
+00:03:04.867 --> 00:03:07.533
+each morning and tells you what changed.
+
+00:03:07.533 --> 00:03:10.133
+Or ask your agent: "Which
+pages need a refresh? "
+
+00:03:10.167 --> 00:03:11.300
+Now the dashboard.
+
+00:03:11.300 --> 00:03:15.600
+The overview shows organic clicks,
+average position, GEO readiness,
+
+00:03:15.600 --> 00:03:18.767
+tracked pages, AI share of
+voice and citation rate.
+
+00:03:18.767 --> 00:03:22.067
+It also credits visits from
+AI assistants to this engine.
+
+00:03:22.067 --> 00:03:24.867
+A tile with no data gives the reason.
+
+00:03:24.867 --> 00:03:28.000
+Or ask: "How is SEO and
+GEO doing this month? "
+
+00:03:28.067 --> 00:03:29.433
+It improves from results.
+
+00:03:29.433 --> 00:03:32.833
+A page that loses clicks or a
+citation becomes refresh due.
+
+00:03:32.833 --> 00:03:35.900
+The content refresh play turns
+it into a brief and a task.
+
+00:03:35.900 --> 00:03:38.700
+To customize, set your
+tracked pages and prompts,
+
+00:03:38.700 --> 00:03:42.800
+the Search Console property, the
+content target, refresh thresholds,
+
+00:03:42.800 --> 00:03:43.400
+voice and proof.
+
+00:03:43.400 --> 00:03:47.767
+Edits to any of these go through a
+ChangeSet that a different person signs.
+
+00:03:47.800 --> 00:03:50.900
+SEO and GEO leans on the proof
+library and the claims gate.
+
+00:03:50.900 --> 00:03:53.700
+It hands briefs to Studio
+and the content refresh play,
+
+00:03:53.700 --> 00:03:57.633
+and it credits visits from AI answers
+to this engine in attribution.
+
+00:03:57.700 --> 00:04:01.700
+The honest edge, built or not. Publishing
+straight to Webflow or WordPress.
+
+00:04:01.700 --> 00:04:04.000
+com hasn't been tested
+against real accounts.
+
+00:04:04.000 --> 00:04:06.633
+Treat it as optional and
+try a staging site first.
+
+00:04:06.633 --> 00:04:10.833
+Automatic fixes for gaps in AI answers,
+and a link graph, aren't built yet.
+
+00:04:10.867 --> 00:04:14.533
+The objection: an agent that can
+publish to my site is a liability.
+
+00:04:14.533 --> 00:04:15.767
+It can't publish alone.
+
+00:04:15.767 --> 00:04:18.433
+A publish is a proposal that
+a different person approves.
+
+00:04:18.433 --> 00:04:20.567
+The approval is bound
+to the exact payload,
+
+00:04:20.567 --> 00:04:23.100
+and the claims gate runs
+again when it's published.
+
+00:04:23.100 --> 00:04:25.933
+If the proof expires in
+between, the publish fails.
+
+00:04:26.000 --> 00:04:29.200
+Keep these: Audit daily,
+track what AI answers cite,
+
+00:04:29.200 --> 00:04:30.667
+and draft behind a claims gate.
+
+00:04:30.667 --> 00:04:34.367
+What goes live is what you
+approved, and you can take it back.
+
+00:04:34.433 --> 00:04:37.700
+Your pages are audited daily,
+your AI visibility is tracked,
+
+00:04:37.700 --> 00:04:40.833
+and every publish is checked,
+approved and undoable.
+
+00:04:40.833 --> 00:04:43.033
+Read the top three items in the Fix queue.
+
+00:04:43.033 --> 00:04:46.933
+The next clip is Performance ads,
+where the same rule guards your budget.

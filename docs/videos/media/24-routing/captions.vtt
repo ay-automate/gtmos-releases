@@ -1,0 +1,332 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.567
+A verified signal now
+reaches your sellers,
+
+00:00:02.567 --> 00:00:04.333
+and it needs an owner in seconds.
+
+00:00:04.333 --> 00:00:08.400
+Every new lead lands with a human who
+owns it, chosen by rules you wrote,
+
+00:00:08.400 --> 00:00:10.433
+and every choice comes with its reason.
+
+00:00:10.467 --> 00:00:13.900
+Over the next few minutes you'll
+write a territory, set capacity,
+
+00:00:13.900 --> 00:00:16.000
+and read the decision
+behind any assignment.
+
+00:00:16.000 --> 00:00:18.100
+Assigning an owner is an internal write.
+
+00:00:18.100 --> 00:00:21.467
+The only thing Routing sends out
+is a notification to the owner.
+
+00:00:21.533 --> 00:00:25.233
+Mia's demo request lands in a shared
+queue. Two reps reply, or nobody does,
+
+00:00:25.233 --> 00:00:28.867
+and the account's owner in
+the CRM never hears about it.
+
+00:00:28.867 --> 00:00:32.900
+Speed to lead is lost to a question
+that needed a rule, not a meeting.
+
+00:00:32.933 --> 00:00:34.400
+First, territories.
+
+00:00:34.400 --> 00:00:37.867
+A territory is a set of criteria
+with an owner or a rotation.
+
+00:00:37.867 --> 00:00:40.333
+In the console: Engines, Routing,
+
+00:00:40.333 --> 00:00:42.800
+and the territory editor
+under When routing runs.
+
+00:00:42.800 --> 00:00:46.067
+Criteria are structured,
+like country or company size.
+
+00:00:46.067 --> 00:00:48.500
+They match first, before any rotation.
+
+00:00:48.500 --> 00:00:50.900
+Each territory has a
+priority and an on switch.
+
+00:00:50.900 --> 00:00:53.000
+Only a person edits territories.
+
+00:00:53.000 --> 00:00:55.267
+Your agent can read them
+and never change them.
+
+00:00:55.267 --> 00:00:59.567
+Or ask your agent: "Which territory
+would this lead fall into? "
+
+00:00:59.600 --> 00:01:03.033
+Second, strategy. Routing assigns by
+round robin, territory or named owner.
+
+00:01:03.033 --> 00:01:07.133
+Stickiness keeps a record
+with the owner of its account,
+
+00:01:07.133 --> 00:01:09.967
+so a new contact never splits
+an account between two reps.
+
+00:01:09.967 --> 00:01:12.367
+When nobody in the
+territory can take the lead,
+
+00:01:12.367 --> 00:01:15.300
+overflow sends it to a fallback
+owner or a named queue.
+
+00:01:15.300 --> 00:01:18.733
+It tries again after a day, or
+the moment you change a setting.
+
+00:01:18.800 --> 00:01:21.267
+Third, capacity, which keeps it fair.
+
+00:01:21.267 --> 00:01:23.767
+In the console: Engines,
+Routing, Team capacity.
+
+00:01:23.767 --> 00:01:26.033
+Each person has caps on open
+leads and leads per week,
+
+00:01:26.033 --> 00:01:28.200
+and a weight from one to a hundred.
+
+00:01:28.200 --> 00:01:31.833
+The person with the lightest
+load for their weight is next.
+
+00:01:31.833 --> 00:01:34.333
+People can be paused or
+marked out of office.
+
+00:01:34.333 --> 00:01:36.100
+Dates follow their own time zone.
+
+00:01:36.100 --> 00:01:40.300
+An owner can lock capacity for the
+whole team. Availability is human only.
+
+00:01:40.300 --> 00:01:42.033
+An agent can't change it.
+
+00:01:42.100 --> 00:01:44.333
+Fourth, matching a lead to an account.
+
+00:01:44.333 --> 00:01:47.333
+In the console: Engines,
+Routing, match preview.
+
+00:01:47.333 --> 00:01:50.967
+A lead on the exact company
+domain attaches automatically.
+
+00:01:50.967 --> 00:01:53.933
+A subdomain or a sibling
+domain is only a suggestion,
+
+00:01:53.933 --> 00:01:57.533
+unless the territory allows it, and
+free mail addresses never match.
+
+00:01:57.533 --> 00:02:00.133
+The preview shows the result
+before anything is assigned.
+
+00:02:00.133 --> 00:02:05.167
+Or ask your agent: "Which account does
+this lead match, and who owns it? "
+
+00:02:05.200 --> 00:02:06.333
+Now the part that earns trust.
+
+00:02:06.333 --> 00:02:10.500
+Every assignment writes a decision
+record: assigned, kept or queued,
+
+00:02:10.500 --> 00:02:15.400
+the territory and rule that fired,
+the reason, and who or what did it.
+
+00:02:15.400 --> 00:02:18.200
+In the console: Engines,
+Routing, Assignment history,
+
+00:02:18.200 --> 00:02:19.433
+and its Decision column.
+
+00:02:19.433 --> 00:02:23.000
+So when someone asks why a lead
+went to Leo, you read the answer.
+
+00:02:23.000 --> 00:02:26.633
+Or ask your agent: "Who
+owns this lead and why? "
+
+00:02:26.700 --> 00:02:30.733
+Owners hear about it by Slack or email.
+A notification leaves the building,
+
+00:02:30.733 --> 00:02:33.167
+so it follows Routing's
+own Dry or Live switch.
+
+00:02:33.167 --> 00:02:37.067
+In Dry Mode you can watch who would
+have been told, without telling anyone.
+
+00:02:37.067 --> 00:02:37.800
+Pro move:
+
+00:02:37.800 --> 00:02:39.300
+stay in Dry for a week and read
+
+00:02:39.300 --> 00:02:41.700
+the Decision column before
+the first real ping.
+
+00:02:41.733 --> 00:02:44.667
+Speed to lead puts it
+together. When a form comes in,
+
+00:02:44.667 --> 00:02:48.933
+the play routes the lead without
+taking it from an existing owner.
+
+00:02:48.933 --> 00:02:52.900
+It skips customers, creates a first
+touch task due in fifteen minutes,
+
+00:02:52.900 --> 00:02:55.500
+and drafts a reply with the
+send proposed for approval.
+
+00:02:55.500 --> 00:02:58.933
+In the console: Engines,
+Plays, speed to lead, Simulate.
+
+00:02:58.933 --> 00:03:02.967
+Or ask your agent: "Simulate speed
+to lead over the last thirty days".
+
+00:03:02.967 --> 00:03:06.133
+You'll see who it would have
+assigned, with zero writes.
+
+00:03:06.200 --> 00:03:08.633
+Routing doesn't tune itself, so you do.
+
+00:03:08.633 --> 00:03:11.967
+Read the Decision column, find
+where leads queue or overflow,
+
+00:03:11.967 --> 00:03:13.400
+then adjust territories and caps.
+
+00:03:13.400 --> 00:03:17.100
+Or ask your agent: "Find unowned
+leads and preview owners".
+
+00:03:17.100 --> 00:03:19.233
+A scheduled reconcile play and the routing
+
+00:03:19.233 --> 00:03:21.833
+steward agent check hourly
+for leads nobody owns.
+
+00:03:21.900 --> 00:03:23.200
+Routing is the receiver.
+
+00:03:23.200 --> 00:03:25.533
+The qualified handoff
+from Score and the signal
+
+00:03:25.533 --> 00:03:27.867
+reaction from Signals
+both ask it for an owner.
+
+00:03:27.867 --> 00:03:30.833
+Outreach then uses that owner
+when a reply comes back.
+
+00:03:30.867 --> 00:03:31.867
+What's still missing:
+
+00:03:31.867 --> 00:03:35.200
+response time targets with
+escalation when an owner doesn't act,
+
+00:03:35.200 --> 00:03:37.167
+and a scorecard for Routing of its own.
+
+00:03:37.167 --> 00:03:40.600
+Today speed to lead is the first
+touch task and the play results,
+
+00:03:40.600 --> 00:03:42.667
+not a clock that Routing enforces.
+
+00:03:42.733 --> 00:03:46.600
+A careful engineer will say: an agent
+will reshuffle my accounts overnight.
+
+00:03:46.600 --> 00:03:50.467
+It can't edit territories or availability,
+because those are human only.
+
+00:03:50.467 --> 00:03:53.033
+Stickiness keeps a record
+with its account's owner.
+
+00:03:53.033 --> 00:03:55.900
+And every move it does make
+writes a decision you can read.
+
+00:03:55.933 --> 00:04:00.067
+Checkpoint: Territories match
+first, capacity keeps the load fair,
+
+00:04:00.067 --> 00:04:01.867
+and stickiness keeps accounts whole.
+
+00:04:01.867 --> 00:04:04.667
+One owner per lead, and
+the reason is written down.
+
+00:04:04.733 --> 00:04:08.533
+Every lead reaches the right owner in
+seconds, and the reason is on record.
+
+00:04:08.533 --> 00:04:11.600
+Read yesterday's decisions
+under Engines, Routing.
+
+00:04:11.600 --> 00:04:12.867
+After this comes Outreach,
+
+00:04:12.867 --> 00:04:16.100
+where that owner sends nothing
+until a second person approves.

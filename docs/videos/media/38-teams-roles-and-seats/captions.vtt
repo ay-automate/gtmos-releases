@@ -1,0 +1,292 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.467
+Your first real send went out
+because a second person approved it.
+
+00:00:03.467 --> 00:00:06.767
+Now decide who that person is,
+and what everyone else can touch.
+
+00:00:06.767 --> 00:00:10.067
+Get it right once, and nobody
+can widen their own reach.
+
+00:00:10.100 --> 00:00:13.067
+In this clip you'll know
+how members, role profiles,
+
+00:00:13.067 --> 00:00:15.300
+delegations and agent keys fit together,
+
+00:00:15.300 --> 00:00:17.700
+and what stops anyone
+from locking you out.
+
+00:00:17.733 --> 00:00:21.400
+Leo hands Orbit a full access key in
+March and never looks at it again.
+
+00:00:21.400 --> 00:00:25.200
+By June an agency still has access,
+three people share one login,
+
+00:00:25.200 --> 00:00:27.033
+and the access list has no owner.
+
+00:00:27.033 --> 00:00:29.733
+Reach should be given
+on purpose, and checked.
+
+00:00:29.800 --> 00:00:33.267
+First, members, because every
+other control hangs off a role.
+
+00:00:33.267 --> 00:00:36.700
+Invite people by email and give
+each one owner, admin or member.
+
+00:00:36.700 --> 00:00:39.133
+In the console: Settings, Members.
+
+00:00:39.133 --> 00:00:42.533
+Or ask your agent: "Who is on the
+team and what can each role do".
+
+00:00:42.533 --> 00:00:46.033
+Only owners and admins approve,
+and nobody approves their own work.
+
+00:00:46.033 --> 00:00:48.667
+A builder role exists
+for delegated agencies,
+
+00:00:48.667 --> 00:00:50.900
+and a service role for system accounts.
+
+00:00:50.933 --> 00:00:54.333
+Second, role profiles, which
+turn a role into a seat.
+
+00:00:54.333 --> 00:00:57.533
+The built in ones are Operator,
+Ops lead, Exec and Engineer,
+
+00:00:57.533 --> 00:01:01.867
+and Exec is an admin without configuration, journey and send operations.
+
+00:01:01.867 --> 00:01:06.033
+Add your own with a base role,
+the operations it can never use,
+
+00:01:06.033 --> 00:01:08.533
+and the tiles and actions it sees first.
+
+00:01:08.533 --> 00:01:11.033
+A profile can only narrow
+a role, never widen it.
+
+00:01:11.067 --> 00:01:13.100
+Each profile has a seat dashboard,
+
+00:01:13.100 --> 00:01:15.967
+so people open GTM OS on
+the work that's theirs.
+
+00:01:15.967 --> 00:01:18.933
+Ask your agent: "What does
+my seat dashboard show".
+
+00:01:18.933 --> 00:01:20.867
+A member's agents inherit the seat.
+
+00:01:20.867 --> 00:01:24.733
+So an agent working for an Exec
+can't send what the Exec can't send.
+
+00:01:24.800 --> 00:01:29.333
+Assigning a seat is human only. Ask
+your agent: "Make Priya an Ops lead",
+
+00:01:29.333 --> 00:01:33.833
+and it names the screen and the button
+instead: Settings, Members, Profile.
+
+00:01:33.833 --> 00:01:36.300
+Power habit: put executives
+on the Exec profile,
+
+00:01:36.300 --> 00:01:40.167
+so they see the numbers and can't
+change configuration or send.
+
+00:01:40.200 --> 00:01:43.300
+Third, agencies, which
+work through delegations.
+
+00:01:43.300 --> 00:01:46.633
+Your owner or admin grants an
+agency organization access,
+
+00:01:46.633 --> 00:01:49.733
+and the grant stays pending until
+an owner or admin approves it.
+
+00:01:49.733 --> 00:01:52.700
+The agency acts as a
+builder, never an owner,
+
+00:01:52.700 --> 00:01:55.200
+so it can build but can't
+approve its own work.
+
+00:01:55.200 --> 00:01:58.133
+In the console: Settings, Delegations.
+
+00:01:58.133 --> 00:02:01.500
+Or ask your agent: "Which agencies
+have access to our organization".
+
+00:02:01.500 --> 00:02:06.067
+Revoking takes two clicks, and the
+agency loses access on its next request.
+
+00:02:06.100 --> 00:02:08.533
+Fourth, sign in and keys.
+Signup can be closed.
+
+00:02:08.533 --> 00:02:13.233
+Invitations bring people in, and
+an allow list limits who can join.
+
+00:02:13.233 --> 00:02:16.567
+Google, Microsoft or your
+own SSO can handle the login.
+
+00:02:16.567 --> 00:02:18.533
+Setting up SSO is human only,
+
+00:02:18.533 --> 00:02:21.200
+so an agent can't point
+your login at a provider.
+
+00:02:21.267 --> 00:02:23.767
+Agent keys connect Claude Code or Codex.
+
+00:02:23.767 --> 00:02:25.967
+In the console: Settings, Developer.
+
+00:02:25.967 --> 00:02:31.033
+Pick a preset, full GTM engineer, read
+write or read only, and an expiry,
+
+00:02:31.033 --> 00:02:33.133
+ninety days by default.
+The key is shown once.
+
+00:02:33.133 --> 00:02:36.167
+Or ask your agent: "Create
+an agent key for Sam",
+
+00:02:36.167 --> 00:02:38.300
+and it points you to that screen.
+
+00:02:38.300 --> 00:02:43.033
+Operator tip: give an agent the read
+only preset until a job needs more.
+
+00:02:43.067 --> 00:02:44.767
+Last, the guard under all of it.
+
+00:02:44.767 --> 00:02:48.000
+An organization must always
+keep someone who can repair it.
+
+00:02:48.000 --> 00:02:51.867
+Removing the last owner, or narrowing
+a role so nobody can finish setup,
+
+00:02:51.867 --> 00:02:56.000
+is refused. And a profile can never
+deny the role operations themselves,
+
+00:02:56.000 --> 00:02:58.733
+so you can always fix a
+profile that went too far.
+
+00:02:58.800 --> 00:03:02.033
+The skeptic's line: an agent
+key is a back door. It isn't.
+
+00:03:02.033 --> 00:03:05.733
+A key's reach is the overlap of
+its own scopes, the agent's scopes,
+
+00:03:05.733 --> 00:03:08.267
+and the current role of
+the person who made it.
+
+00:03:08.267 --> 00:03:10.433
+Demote that person, and
+their keys shrink too.
+
+00:03:10.433 --> 00:03:14.467
+A key never gets the approve permission,
+and it can't create another key.
+
+00:03:14.467 --> 00:03:18.633
+The person who created it can't approve
+what it proposes. And it expires.
+
+00:03:18.667 --> 00:03:22.033
+Every role change, delegation
+and key lands in the audit log,
+
+00:03:22.033 --> 00:03:25.367
+under Settings, Audit log.
+A review reads from fact.
+
+00:03:25.367 --> 00:03:28.867
+Approvals, Safety and your
+dashboards all follow the seat.
+
+00:03:28.900 --> 00:03:30.200
+One limit to plan for.
+
+00:03:30.200 --> 00:03:33.800
+A key never approves, and neither
+does the person behind it.
+
+00:03:33.800 --> 00:03:37.733
+So a team of one still needs a
+second person, or a second identity,
+
+00:03:37.733 --> 00:03:38.400
+as approver.
+
+00:03:38.467 --> 00:03:42.433
+In one pass: Members get roles,
+profiles narrow roles into seats,
+
+00:03:42.433 --> 00:03:44.967
+agencies come in by
+delegation, and keys expire.
+
+00:03:44.967 --> 00:03:49.333
+Everyone gets the reach they were
+given, and nobody can widen their own.
+
+00:03:49.367 --> 00:03:53.167
+Your team has the reach it needs
+and no more, your agents inherit it,
+
+00:03:53.167 --> 00:03:55.500
+and the organization
+can always be repaired.
+
+00:03:55.500 --> 00:03:58.067
+Next up, Tutorial: your first month,
+
+00:03:58.067 --> 00:04:00.433
+where you read the results
+and tune from them.

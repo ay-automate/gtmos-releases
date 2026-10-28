@@ -72,7 +72,7 @@ A plain `gtm upgrade` never moves an install that is pinned to a version: choose
 
 ## Video series
 
-A six-part series from install to a system you trust, published in parts: https://ay-automate.github.io/gtmos-releases/videos/index.html. Clips 01 to 10, 16, 17, 19, 21 to 23, 25, 29, 31 to 37, 39 and 43 are available now; the rest are coming soon. The MP4 files are assets of the `videos-v1` release; captions, transcripts and posters are in this repository. How clips are published: [docs/videos/README.md](docs/videos/README.md).
+A six-part series from install to a system you trust, published in parts: https://ay-automate.github.io/gtmos-releases/videos/index.html. Every clip except 18 (Journeys) and 28 (Research agent) is available now; those two are coming soon. The MP4 files are assets of the `videos-v1` release; captions, transcripts and posters are in this repository. How clips are published: [docs/videos/README.md](docs/videos/README.md).
 
 ## Support
 

@@ -1,0 +1,343 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.200
+Your book came in safely,
+with nothing duplicated.
+
+00:00:03.200 --> 00:00:07.233
+By Monday that file is stale. Keep
+the CRM as the record instead.
+
+00:00:07.233 --> 00:00:09.967
+GTM OS follows it, writes
+back only with approval,
+
+00:00:09.967 --> 00:00:12.267
+and can prove nothing went missing.
+
+00:00:12.300 --> 00:00:14.100
+Over the next few minutes you'll have
+
+00:00:14.100 --> 00:00:16.067
+a CRM syncing and a write back approved,
+
+00:00:16.067 --> 00:00:20.133
+then undone. You'll also build an
+adapter for a source that isn't a CRM,
+
+00:00:20.133 --> 00:00:21.433
+and check the numbers.
+
+00:00:21.500 --> 00:00:25.167
+Here's the failure. Leo's mirror
+silently drops a slice of the deals,
+
+00:00:25.167 --> 00:00:27.333
+and Mia forecasts from what's left.
+
+00:00:27.333 --> 00:00:30.967
+Then Orbit writes a score into the
+wrong field, and nothing can undo it.
+
+00:00:30.967 --> 00:00:35.567
+Both are preventable. Read freely,
+write by approval, and prove the count.
+
+00:00:35.633 --> 00:00:40.300
+First, choose the record, because
+everything downstream trusts one CRM.
+
+00:00:40.300 --> 00:00:43.867
+In the console: Integrations,
+Connections, the Composio card.
+
+00:00:43.867 --> 00:00:48.433
+Connect Composio once, then connect
+your CRM until it shows active.
+
+00:00:48.433 --> 00:00:53.600
+HubSpot, Salesforce, Pipedrive, Attio
+and Zoho all work through Composio.
+
+00:00:53.600 --> 00:00:57.067
+Mark the one your team treats
+as truth as the CRM of record.
+
+00:00:57.100 --> 00:00:59.733
+From then on, GTM OS
+mirrors your accounts,
+
+00:00:59.733 --> 00:01:01.800
+contacts and deals every six hours.
+
+00:01:01.800 --> 00:01:05.567
+Sync now runs it on demand,
+one at a time per organization.
+
+00:01:05.567 --> 00:01:08.467
+Each record remembers which
+CRM record it came from.
+
+00:01:08.467 --> 00:01:11.567
+Mind this: a very large
+object can hit a per run cap.
+
+00:01:11.567 --> 00:01:14.433
+The sync status says so
+instead of hiding it.
+
+00:01:14.500 --> 00:01:18.633
+Or ask your agent: "Set HubSpot
+as our CRM of record, sync it,
+
+00:01:18.633 --> 00:01:20.000
+and tell me what came in".
+
+00:01:20.000 --> 00:01:23.400
+Sign in stays a human click,
+so it hands you the link.
+
+00:01:23.433 --> 00:01:25.667
+Second, write back, the gated direction.
+
+00:01:25.667 --> 00:01:29.800
+Your CRM is the record, so nothing
+touches it without a person.
+
+00:01:29.800 --> 00:01:32.700
+Someone, or an agent, proposes
+an update to one record.
+
+00:01:32.700 --> 00:01:36.700
+That becomes an approval, and
+a different person approves it.
+
+00:01:36.700 --> 00:01:40.733
+The approval is bound to the exact
+payload, so what's approved is what runs.
+
+00:01:40.733 --> 00:01:43.133
+In the console: Operate, Actions.
+
+00:01:43.133 --> 00:01:46.933
+Every write back lands there with an
+Undo that restores the earlier values.
+
+00:01:47.000 --> 00:01:50.633
+Two honest limits. Write back
+updates records that already exist,
+
+00:01:50.633 --> 00:01:52.733
+and it can't create one in your CRM.
+
+00:01:52.733 --> 00:01:56.467
+And a high risk write through Composio
+needs one approval per record,
+
+00:01:56.467 --> 00:01:59.933
+not per batch. Pro move: write back
+only the few fields that matter,
+
+00:01:59.933 --> 00:02:01.600
+like scores and outcomes.
+
+00:02:01.633 --> 00:02:04.833
+Or ask your agent: "Update
+the Northwind deal in HubSpot:
+
+00:02:04.833 --> 00:02:08.633
+set the next step to send the renewal
+quote". It proposes and waits.
+
+00:02:08.633 --> 00:02:11.033
+If the value was wrong, ask for the undo.
+
+00:02:11.033 --> 00:02:14.400
+The ledger shows who approved,
+and the values before and after.
+
+00:02:14.467 --> 00:02:17.833
+Third, sources that aren't
+a CRM, like a warehouse,
+
+00:02:17.833 --> 00:02:19.600
+a billing tool or a niche system.
+
+00:02:19.600 --> 00:02:22.100
+The adapter builder
+maps any list into your
+
+00:02:22.100 --> 00:02:25.033
+organization and writes
+nothing back to the source.
+
+00:02:25.033 --> 00:02:26.600
+In the console: CRM, Adapters.
+
+00:02:26.600 --> 00:02:30.167
+Choose the app or MCP server,
+the tool that lists records,
+
+00:02:30.167 --> 00:02:31.600
+and the object they fill.
+
+00:02:31.633 --> 00:02:35.533
+It starts read only: introspect
+pulls one page and lists every field.
+
+00:02:35.533 --> 00:02:37.333
+Then comes the step most tools skip.
+
+00:02:37.333 --> 00:02:40.533
+Run audit counts the records the
+source holds against what you mirror,
+
+00:02:40.533 --> 00:02:41.867
+before anything is mapped.
+
+00:02:41.867 --> 00:02:45.700
+You see the size of the job, and
+any gap, while it's cheap to fix.
+
+00:02:45.767 --> 00:02:48.800
+Propose mapping drafts every
+target field with a confidence bar,
+
+00:02:48.800 --> 00:02:52.667
+and shows who decided each line:
+a rule, the model, or a person.
+
+00:02:52.667 --> 00:02:54.533
+Anything under sixty percent is flagged.
+
+00:02:54.533 --> 00:02:57.000
+Anything ambiguous becomes
+a numbered question,
+
+00:02:57.000 --> 00:02:59.733
+which is also an open ask
+a teammate can answer.
+
+00:02:59.800 --> 00:03:03.667
+Publish proposes a mapping version,
+and a person signs it before it runs.
+
+00:03:03.667 --> 00:03:05.633
+The sync reads only that signed mapping.
+
+00:03:05.633 --> 00:03:09.800
+Activate then schedules full reads,
+anywhere from every six hours to weekly.
+
+00:03:09.800 --> 00:03:12.833
+Incremental reads can run as
+often as every fifteen minutes,
+
+00:03:12.833 --> 00:03:15.200
+if the source can filter by last changed.
+
+00:03:15.233 --> 00:03:16.433
+Or ask your agent:
+
+00:03:16.433 --> 00:03:19.300
+"Build an adapter for the
+invoices list in our billing tool.
+
+00:03:19.300 --> 00:03:22.300
+Audit completeness first and
+ask me about anything unclear".
+
+00:03:22.300 --> 00:03:24.833
+It stops exactly where
+a person has to sign.
+
+00:03:24.867 --> 00:03:29.233
+Last move, the proof. Data health asks
+one question: is everything there?
+
+00:03:29.233 --> 00:03:31.633
+In the console: CRM, Data health.
+
+00:03:31.633 --> 00:03:34.933
+Each object shows source rows,
+GTM OS rows, rows held back,
+
+00:03:34.933 --> 00:03:37.833
+and completeness against your threshold.
+
+00:03:37.833 --> 00:03:41.167
+Below it, the object is flagged
+and the owner gets a decision.
+
+00:03:41.167 --> 00:03:43.533
+Agents caveat their answers about it.
+
+00:03:43.567 --> 00:03:46.833
+Counts can match while values
+drift, so check parity.
+
+00:03:46.833 --> 00:03:50.700
+It reads a live sample from the
+source and compares it with GTM OS,
+
+00:03:50.700 --> 00:03:54.500
+field by field: identical,
+different, or missing.
+
+00:03:54.500 --> 00:03:57.933
+Operator tip: in Audit settings,
+switch on the automatic full sync,
+
+00:03:57.933 --> 00:04:00.233
+so a falling object repairs itself.
+
+00:04:00.300 --> 00:04:03.367
+Or ask your agent: "How
+complete is our HubSpot mirror,
+
+00:04:03.367 --> 00:04:07.333
+and does a live sample match". Owners
+and admins can read the parity detail,
+
+00:04:07.333 --> 00:04:11.100
+because it carries record values.
+Everyone else sees counts only.
+
+00:04:11.167 --> 00:04:15.133
+You may be thinking: two copies of my
+deals means two versions of the truth.
+
+00:04:15.133 --> 00:04:19.133
+It doesn't. The CRM stays the record,
+and the mirror is measured against it.
+
+00:04:19.133 --> 00:04:23.267
+Completeness runs against your threshold,
+and parity compares live values.
+
+00:04:23.267 --> 00:04:24.867
+Nothing drifts quietly.
+
+00:04:24.933 --> 00:04:29.033
+To recap: Pick the record and let
+it sync, then gate every write back.
+
+00:04:29.033 --> 00:04:31.200
+Audit before you map,
+and check parity after.
+
+00:04:31.200 --> 00:04:34.500
+Read freely, write by
+approval, prove the count.
+
+00:04:34.567 --> 00:04:38.500
+Your CRM stays the record, and you
+can prove the mirror is complete.
+
+00:04:38.500 --> 00:04:41.933
+Open CRM, then Data health,
+and run an audit today.
+
+00:04:41.933 --> 00:04:46.333
+The next clip is the CRM workspace,
+where every account explains itself.

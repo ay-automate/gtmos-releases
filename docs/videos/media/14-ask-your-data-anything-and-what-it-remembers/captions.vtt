@@ -1,0 +1,370 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:03.767
+Each customer is now one record,
+merged by rules you signed.
+
+00:00:03.767 --> 00:00:05.633
+Ask that clean data a question.
+
+00:00:05.633 --> 00:00:08.600
+What takes a spreadsheet and a
+week should take one sentence,
+
+00:00:08.600 --> 00:00:10.600
+and the answer should name its sources.
+
+00:00:10.633 --> 00:00:13.300
+In this clip you'll ask in
+plain words and share a chat.
+
+00:00:13.300 --> 00:00:15.933
+You'll check what search
+can find, trace a value,
+
+00:00:15.933 --> 00:00:18.200
+and read the memory of
+every reply and call.
+
+00:00:18.233 --> 00:00:21.033
+Mia asks what was agreed
+on the Northwind renewal.
+
+00:00:21.033 --> 00:00:24.100
+The answer sits in a March call
+and a reply buried in a thread.
+
+00:00:24.100 --> 00:00:26.667
+Nobody finds both, and
+the quote goes out wrong.
+
+00:00:26.667 --> 00:00:28.300
+Every answer needs a source,
+
+00:00:28.300 --> 00:00:31.100
+and every reply and call
+needs to be remembered once.
+
+00:00:31.167 --> 00:00:33.967
+First, ask. In the console: CRM, AI chat.
+
+00:00:33.967 --> 00:00:37.900
+Ask about your whole organization,
+or one company, contact or deal.
+
+00:00:37.900 --> 00:00:39.367
+It reads with your permissions,
+
+00:00:39.367 --> 00:00:42.067
+so it never shows what you
+couldn't open yourself.
+
+00:00:42.067 --> 00:00:43.800
+Your chats are private to you.
+
+00:00:43.800 --> 00:00:46.033
+Anything it proposes to change becomes
+
+00:00:46.033 --> 00:00:48.667
+an approval request that
+a teammate approves,
+
+00:00:48.667 --> 00:00:50.733
+never you and never the assistant.
+
+00:00:50.800 --> 00:00:52.533
+Or ask your own agent over MCP:
+
+00:00:52.533 --> 00:00:55.167
+"What did we agree about
+the Northwind renewal,
+
+00:00:55.167 --> 00:00:57.000
+and which records is that based on".
+
+00:00:57.000 --> 00:00:59.700
+It reads freely and names
+where each answer came from.
+
+00:00:59.700 --> 00:01:02.300
+Advanced move: always
+add that last clause,
+
+00:01:02.300 --> 00:01:04.367
+so you can open the sources and check.
+
+00:01:04.400 --> 00:01:07.367
+Share creates a read only
+link to one conversation,
+
+00:01:07.367 --> 00:01:09.767
+handy for showing a colleague
+how you got an answer.
+
+00:01:09.767 --> 00:01:13.367
+Anyone with the link can read it,
+so treat it like a shared document.
+
+00:01:13.367 --> 00:01:15.200
+Revoke ends every link for that chat.
+
+00:01:15.200 --> 00:01:19.333
+Or ask your agent: "Share my Northwind
+chat read only and give me the link".
+
+00:01:19.400 --> 00:01:22.500
+Second, search. In the console:
+Settings, Search index.
+
+00:01:22.500 --> 00:01:25.633
+Records are indexed as they
+change and swept daily.
+
+00:01:25.633 --> 00:01:30.267
+Each object type shows how many records
+are indexed, how many have vectors,
+
+00:01:30.267 --> 00:01:33.533
+and the embedding model in
+use. Reindex now rebuilds it.
+
+00:01:33.533 --> 00:01:37.067
+Without an embedding provider,
+search still works as plain text,
+
+00:01:37.067 --> 00:01:38.733
+but no vectors are stored.
+
+00:01:38.800 --> 00:01:42.833
+Or ask your agent: "How much of our
+organization can be searched by meaning?
+
+00:01:42.833 --> 00:01:44.867
+If vectors are missing, reindex".
+
+00:01:44.867 --> 00:01:48.133
+It reads the coverage, queues the
+reindex and gives you the job.
+
+00:01:48.133 --> 00:01:51.500
+A reindex rebuilds the index
+and changes no records.
+
+00:01:51.533 --> 00:01:53.800
+Third, lineage, with its honest limit.
+
+00:01:53.800 --> 00:01:56.067
+On a company, contact or
+deal, open Why this value.
+
+00:01:56.067 --> 00:02:00.067
+It shows the source, the rule that
+picked it when sources disagreed,
+
+00:02:00.067 --> 00:02:01.800
+and the observations behind it.
+
+00:02:01.800 --> 00:02:05.000
+For derived values like
+a score, and for metrics,
+
+00:02:05.000 --> 00:02:05.933
+the trace is partial today.
+
+00:02:05.933 --> 00:02:10.200
+It says the value is derived instead
+of pretending to a full chain.
+
+00:02:10.233 --> 00:02:14.100
+Or ask your agent: "Where did the
+employee count on Northwind come from".
+
+00:02:14.100 --> 00:02:16.300
+It names the rule and the observations.
+
+00:02:16.300 --> 00:02:18.667
+For a derived value it
+says what it can show,
+
+00:02:18.667 --> 00:02:21.133
+so you never mistake a
+summary for a full chain.
+
+00:02:21.167 --> 00:02:24.900
+Now the memory. In the
+console: CRM, Conversations.
+
+00:02:24.900 --> 00:02:28.100
+Every inbound reply is stored
+once, whatever the channel.
+
+00:02:28.100 --> 00:02:31.267
+It's linked to the person,
+company and deal, and labeled.
+
+00:02:31.267 --> 00:02:36.000
+The defaults are interested, not now,
+objection, referral, wrong person,
+
+00:02:36.000 --> 00:02:39.767
+unsubscribe, out of office and
+bounce. You can define your own.
+
+00:02:39.767 --> 00:02:43.700
+Rules read the reply first, and
+a person's label always wins.
+
+00:02:43.767 --> 00:02:46.200
+Each label has effects, applied once.
+
+00:02:46.200 --> 00:02:48.033
+Every reply stops that
+contact's sequences.
+
+00:02:48.033 --> 00:02:52.233
+Unsubscribe records the opt out,
+and bounce suppresses the address.
+
+00:02:52.233 --> 00:02:54.167
+Not now creates a follow
+up task in thirty days.
+
+00:02:54.167 --> 00:02:57.633
+Objection and referral open
+a question for the owner.
+
+00:02:57.633 --> 00:03:00.333
+If a model or an agent chose
+a label that suppresses,
+
+00:03:00.333 --> 00:03:02.100
+the effect waits for a person.
+
+00:03:02.133 --> 00:03:06.300
+Or ask your agent: "Show this week's
+replies labeled objection or referral,
+
+00:03:06.300 --> 00:03:09.767
+and what happened after each". It
+reads the labels and the effect log.
+
+00:03:09.767 --> 00:03:12.533
+Any next action it proposes
+waits for a person.
+
+00:03:12.600 --> 00:03:16.933
+Fifth, calls. Transcripts arrive from
+a recorder connected through Composio,
+
+00:03:16.933 --> 00:03:20.800
+pulled every six hours, or from
+a paste, an upload or an agent.
+
+00:03:20.800 --> 00:03:24.900
+Each becomes one record on the
+timeline, linked to the person, company,
+
+00:03:24.900 --> 00:03:27.900
+deal and meeting. It's split
+at speaker turns and indexed,
+
+00:03:27.900 --> 00:03:30.867
+so search and your agent
+can recall what was said.
+
+00:03:30.900 --> 00:03:34.233
+Transcripts follow visibility:
+organization, team or private.
+
+00:03:34.233 --> 00:03:38.300
+A hidden linked record hides them
+too. When a person is erased,
+
+00:03:38.300 --> 00:03:39.733
+their name is replaced and their
+
+00:03:39.733 --> 00:03:41.833
+speaker lines and email
+addresses are redacted.
+
+00:03:41.833 --> 00:03:45.733
+Lines with no speaker label can't
+be attributed, so they stay.
+
+00:03:45.800 --> 00:03:49.033
+Or ask your agent: "Add this
+call transcript to Northwind,
+
+00:03:49.033 --> 00:03:51.233
+then tell me what the
+buyer said about price".
+
+00:03:51.233 --> 00:03:53.500
+The answer points at
+the place in the call.
+
+00:03:53.533 --> 00:03:57.767
+Last, coverage. In the console:
+CRM, Conversations, Coverage.
+
+00:03:57.767 --> 00:04:00.767
+Each source shows whether it's
+connected, its records synced,
+
+00:04:00.767 --> 00:04:05.267
+and when it last synced. It also shows
+the share of your accounts it covers,
+
+00:04:05.267 --> 00:04:07.367
+over ninety days by default.
+
+00:04:07.367 --> 00:04:11.400
+Or ask your agent: "Which of our
+sources cover the fewest accounts".
+
+00:04:11.433 --> 00:04:15.100
+The pushback: an assistant that reads
+everything will leak, or invent.
+
+00:04:15.100 --> 00:04:18.500
+It reads with your permissions, so
+it can't show what you can't open.
+
+00:04:18.500 --> 00:04:22.200
+Each answer names the records behind
+it. The assistant can't write,
+
+00:04:22.200 --> 00:04:24.733
+because anything it proposes
+waits for a teammate.
+
+00:04:24.733 --> 00:04:27.433
+And where it can't trace
+a value, it says so.
+
+00:04:27.500 --> 00:04:31.233
+The short version: Ask in plain
+words, and ask for the sources.
+
+00:04:31.233 --> 00:04:34.100
+Search by meaning, and trace a
+value as far as the trace goes.
+
+00:04:34.100 --> 00:04:38.567
+Replies and calls are stored once and
+remembered. Every answer has a source.
+
+00:04:38.633 --> 00:04:41.133
+You can ask in plain words, trace a value,
+
+00:04:41.133 --> 00:04:43.233
+and trust what your
+organization remembers.
+
+00:04:43.233 --> 00:04:46.967
+Open AI chat and ask your first
+question, with its sources.
+
+00:04:46.967 --> 00:04:51.133
+Up next, definitions as code, where
+your rules become signed config.

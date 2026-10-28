@@ -265,16 +265,20 @@
       "part": 2,
       "title": "Your CRM, kept in sync",
       "outcome": "Your CRM stays the record; GTM OS stays in step.",
-      "durationSeconds": 360,
+      "durationSeconds": 287,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/11-your-crm-kept-in-sync.mp4",
+      "vtt": "media/11-your-crm-kept-in-sync/captions.vtt",
+      "poster": "media/11-your-crm-kept-in-sync/poster.jpg",
+      "transcript": "media/11-your-crm-kept-in-sync/transcript.md",
       "prompts": [
         "How complete is the Salesforce mirror, and which fields are missing?"
-      ]
+      ],
+      "slug": "your-crm-kept-in-sync",
+      "status": "published",
+      "bytes": 22867299,
+      "sha256": "daac1f8526f1faa9f7542a77f92470dc63dc88d3898a4c3804e41452374d9984"
     },
     {
       "id": "c12",
@@ -282,16 +286,20 @@
       "part": 2,
       "title": "The CRM workspace",
       "outcome": "A CRM that explains itself.",
-      "durationSeconds": 300,
+      "durationSeconds": 255,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/12-the-crm-workspace.mp4",
+      "vtt": "media/12-the-crm-workspace/captions.vtt",
+      "poster": "media/12-the-crm-workspace/poster.jpg",
+      "transcript": "media/12-the-crm-workspace/transcript.md",
       "prompts": [
         "Show the company page for Acme and explain why it is hot."
-      ]
+      ],
+      "slug": "the-crm-workspace",
+      "status": "published",
+      "bytes": 19826847,
+      "sha256": "e59a09de3aeae114f4bde8c416fc419f1e7748683798b471dec22ddca21cb400"
     },
     {
       "id": "c13",
@@ -299,16 +307,20 @@
       "part": 2,
       "title": "Identity and data quality",
       "outcome": "One customer, one record.",
-      "durationSeconds": 300,
+      "durationSeconds": 246,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/13-identity-and-data-quality.mp4",
+      "vtt": "media/13-identity-and-data-quality/captions.vtt",
+      "poster": "media/13-identity-and-data-quality/poster.jpg",
+      "transcript": "media/13-identity-and-data-quality/transcript.md",
       "prompts": [
         "Find duplicate accounts and propose merges."
-      ]
+      ],
+      "slug": "identity-and-data-quality",
+      "status": "published",
+      "bytes": 19158819,
+      "sha256": "c6845f1e3eb0d511fc432ebbe4b3a33aedc9651a656eb68e5d2df5c5fe1069a2"
     },
     {
       "id": "c14",
@@ -316,16 +328,20 @@
       "part": 2,
       "title": "Ask your data anything, and what it remembers",
       "outcome": "Questions in plain words, answers with sources.",
-      "durationSeconds": 360,
+      "durationSeconds": 292,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/14-ask-your-data-anything-and-what-it-remembers.mp4",
+      "vtt": "media/14-ask-your-data-anything-and-what-it-remembers/captions.vtt",
+      "poster": "media/14-ask-your-data-anything-and-what-it-remembers/poster.jpg",
+      "transcript": "media/14-ask-your-data-anything-and-what-it-remembers/transcript.md",
       "prompts": [
         "Which accounts replied this month, and where did each reply label come from?"
-      ]
+      ],
+      "slug": "ask-your-data-anything-and-what-it-remembers",
+      "status": "published",
+      "bytes": 24687797,
+      "sha256": "c1490069f7d3031d437770482d464a9750c1f4bae566e363de0d5f91c5c1a9c0"
     },
     {
       "id": "c16",
@@ -413,16 +429,20 @@
       "part": 3,
       "title": "Consent, suppression and privacy",
       "outcome": "Compliance that runs by itself.",
-      "durationSeconds": 240,
+      "durationSeconds": 280,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/20-consent-suppression-and-privacy.mp4",
+      "vtt": "media/20-consent-suppression-and-privacy/captions.vtt",
+      "poster": "media/20-consent-suppression-and-privacy/poster.jpg",
+      "transcript": "media/20-consent-suppression-and-privacy/transcript.md",
       "prompts": [
         "Show the consent basis and suppression rules for email."
-      ]
+      ],
+      "slug": "consent-suppression-and-privacy",
+      "status": "published",
+      "bytes": 21531830,
+      "sha256": "f151fc23fdf61d582b6c159232e9b793ad2e0049b977715079633013536e84c3"
     },
     {
       "id": "c21",
@@ -493,16 +513,20 @@
       "part": 4,
       "title": "Routing",
       "outcome": "The right owner in seconds.",
-      "durationSeconds": 300,
+      "durationSeconds": 257,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/24-routing.mp4",
+      "vtt": "media/24-routing/captions.vtt",
+      "poster": "media/24-routing/poster.jpg",
+      "transcript": "media/24-routing/transcript.md",
       "prompts": [
         "Who owns Acme, and why was it routed that way?"
-      ]
+      ],
+      "slug": "routing",
+      "status": "published",
+      "bytes": 20289752,
+      "sha256": "0eb81cf5b41d3b075dd2f5ce75d9a6f2d3340c7cd18c98f6a5aeabae729eee2b"
     },
     {
       "id": "c25",
@@ -532,16 +556,20 @@
       "part": 4,
       "title": "SEO and GEO",
       "outcome": "Be found by search and by AI answers.",
-      "durationSeconds": 360,
+      "durationSeconds": 288,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/26-seo-and-geo.mp4",
+      "vtt": "media/26-seo-and-geo/captions.vtt",
+      "poster": "media/26-seo-and-geo/poster.jpg",
+      "transcript": "media/26-seo-and-geo/transcript.md",
       "prompts": [
         "Audit our site for GEO readiness and propose three content clusters."
-      ]
+      ],
+      "slug": "seo-and-geo",
+      "status": "published",
+      "bytes": 22953816,
+      "sha256": "fb0e2a95d352ea29d55ca2d40d8a0494cd1d880fc15ada7afe3edd5fd8fc9be9"
     },
     {
       "id": "c27",
@@ -549,16 +577,20 @@
       "part": 4,
       "title": "Performance ads",
       "outcome": "Spend follows the payback.",
-      "durationSeconds": 300,
+      "durationSeconds": 245,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/27-performance-ads.mp4",
+      "vtt": "media/27-performance-ads/captions.vtt",
+      "poster": "media/27-performance-ads/poster.jpg",
+      "transcript": "media/27-performance-ads/transcript.md",
       "prompts": [
         "Show CAC payback by channel and propose budget moves for approval."
-      ]
+      ],
+      "slug": "performance-ads",
+      "status": "published",
+      "bytes": 19861452,
+      "sha256": "a40bcfcccd1062f0820a4eb0ae2749f398b8527a62a12460f2f9ada81fc24efa"
     },
     {
       "id": "c28",
@@ -754,16 +786,20 @@
       "part": 5,
       "title": "Teams, roles and seats",
       "outcome": "Everyone sees what they need.",
-      "durationSeconds": 300,
+      "durationSeconds": 241,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/38-teams-roles-and-seats.mp4",
+      "vtt": "media/38-teams-roles-and-seats/captions.vtt",
+      "poster": "media/38-teams-roles-and-seats/poster.jpg",
+      "transcript": "media/38-teams-roles-and-seats/transcript.md",
       "prompts": [
         "Who can approve what in this organization, and which agent keys expire soon?"
-      ]
+      ],
+      "slug": "teams-roles-and-seats",
+      "status": "published",
+      "bytes": 19677694,
+      "sha256": "0923bd660c9299cfd956106edbd4d033c193d46ddc6cac3ae273278b49c1720f"
     },
     {
       "id": "c39",
@@ -792,16 +828,20 @@
       "part": 6,
       "title": "Apps, packages and extending GTM OS",
       "outcome": "Add your own views and automations without forking anything.",
-      "durationSeconds": 300,
+      "durationSeconds": 247,
       "type": "Mixed",
       "tier": "Reference",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/40-apps-packages-and-extending-gtm-os.mp4",
+      "vtt": "media/40-apps-packages-and-extending-gtm-os/captions.vtt",
+      "poster": "media/40-apps-packages-and-extending-gtm-os/poster.jpg",
+      "transcript": "media/40-apps-packages-and-extending-gtm-os/transcript.md",
       "prompts": [
         "Generate an app that shows open deals by stage."
-      ]
+      ],
+      "slug": "apps-packages-and-extending-gtm-os",
+      "status": "published",
+      "bytes": 19741095,
+      "sha256": "9893bed6dcb69243d08ca498e515cdf441ed2065da8b5a848b147a78da2e0c1e"
     },
     {
       "id": "c41",
@@ -809,16 +849,20 @@
       "part": 6,
       "title": "Self-hosting on a server",
       "outcome": "Run GTM OS on your own server, with a domain and HTTPS.",
-      "durationSeconds": 300,
+      "durationSeconds": 264,
       "type": "Tutorial",
       "tier": "Reference",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/41-self-hosting-on-a-server.mp4",
+      "vtt": "media/41-self-hosting-on-a-server/captions.vtt",
+      "poster": "media/41-self-hosting-on-a-server/poster.jpg",
+      "transcript": "media/41-self-hosting-on-a-server/transcript.md",
       "prompts": [
         "Check that my server install is local-only behind the reverse proxy."
-      ]
+      ],
+      "slug": "self-hosting-on-a-server",
+      "status": "published",
+      "bytes": 20748966,
+      "sha256": "d223acd971be6ce520aa118dc5cddb8ce4385c2015bd62bb40dac08386581ddc"
     },
     {
       "id": "c42",
@@ -826,16 +870,20 @@
       "part": 6,
       "title": "Upgrading",
       "outcome": "Upgrade with a backup behind you and your data untouched.",
-      "durationSeconds": 360,
+      "durationSeconds": 292,
       "type": "Mixed",
       "tier": "Core",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/42-upgrading.mp4",
+      "vtt": "media/42-upgrading/captions.vtt",
+      "poster": "media/42-upgrading/poster.jpg",
+      "transcript": "media/42-upgrading/transcript.md",
       "prompts": [
         "Check which version I run and what the next upgrade would change."
-      ]
+      ],
+      "slug": "upgrading",
+      "status": "published",
+      "bytes": 24995071,
+      "sha256": "5f0d44e6d56b74640d09bda37317d6dc1ee78fcf78d655721dda8b723c91b15f"
     },
     {
       "id": "c43",
