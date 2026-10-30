@@ -1601,7 +1601,7 @@ spec:
     <p class="goal"><b>Goal:</b> know exactly which engines exist in release 0.2.5, so you never promise a client something that is only on the roadmap.</p>
     <div class="tbl"><table>
       <tr><th>Engine</th><th>Package (Settings &gt; Packages)</th><th>Console</th><th>Mode key</th><th>Job in one line</th></tr>
-      <tr><td><a href="#ch09-score">Score</a></td><td><code>stdlib/engine.score</code></td><td>Engines &gt; Score, CRM &gt; Hot list, CRM &gt; Lead queue</td><td><code>crm_writeback</code></td><td>Turns signals and firmographics into a verdict, a tier and the reasons.</td></tr>
+      <tr><td><a href="#ch09-score">Score</a></td><td><code>stdlib/engine.score</code></td><td>Engines &gt; Score (its Lead queue page), CRM &gt; Hot list</td><td><code>crm_writeback</code></td><td>Turns signals and firmographics into a verdict, a tier and the reasons.</td></tr>
       <tr><td><a href="#ch09-outreach">Outreach</a></td><td><code>stdlib/engine.outreach</code></td><td>Engines &gt; Outreach, CRM &gt; Sequences, CRM &gt; Conversations</td><td><code>outreach</code> (and <code>meetings</code>)</td><td>Drafts, sequences and sends email and LinkedIn steps through approved lanes.</td></tr>
       <tr><td><a href="#ch09-ads">Performance Ads</a></td><td><code>stdlib/engine.performance-ads</code></td><td>Engines &gt; Performance Ads</td><td><code>perf_ads</code></td><td>Paces spend and moves budget toward your CAC or ROAS target.</td></tr>
       <tr><td><a href="#ch09-seo-geo">SEO &amp; GEO</a></td><td><code>stdlib/engine.search</code></td><td>Engines &gt; SEO &amp; GEO</td><td><code>seo_geo</code></td><td>Audits pages, tracks AI answers, plans and publishes content.</td></tr>
@@ -1771,7 +1771,7 @@ spec:
       <tr><th>Screen</th><th>Use it for</th></tr>
       <tr><td>Engines &gt; Score</td><td>Tabs <b>KPIs</b>, <b>To score</b>, <b>Accounts</b>, <b>Rescan</b>; the mode (Dry or Live) in the header; the <b>Learning</b> section with the last run, proposals, lift per criterion, calibration and rep disagreement.</td></tr>
       <tr><td>CRM &gt; Hot list</td><td>Accounts ranked by score. <b>Why this score</b> opens a drawer with the reasons and the sections "Caps and negatives", "Intent decay" and "Buying committee".</td></tr>
-      <tr><td>CRM &gt; Lead queue</td><td>Rows show "capped", "negative reply / bounce" and band decay. <b>Flag this score</b> records a rep's disagreement.</td></tr>
+      <tr><td>Lead queue (link in the Engines &gt; Score header)</td><td>Rows show "capped", "negative reply / bounce" and band decay. <b>Flag this score</b> records a rep's disagreement.</td></tr>
       <tr><td>Settings &gt; Workflow automation</td><td>Switch the qualified-account handoff on or off.</td></tr>
       <tr><td>Settings &gt; Safety</td><td>Dry or live for the <code>crm_writeback</code> engine (score write-back to your CRM).</td></tr>
     </table></div>
@@ -3143,7 +3143,7 @@ key: acme-pipeline-reader
 spec:
   skillSpecVersion: 1
   packageRef: acme/sales-pack
-  operations: [records.search, records.get, deal.list, task.create]
+  operations: [records.search, records.get, task.create]
   unmaskPaths: []
   costCeilingUsd: 0.1
   systemPrompt: Read deals, never write them. Create one task per stalled deal.</code></pre></div>
