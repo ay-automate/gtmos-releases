@@ -40,14 +40,14 @@ your request matches it.
 
 00:00:40.033 --> 00:00:44.700
 When you ran gtm init, it placed
-them in your project: in .
+them in your project: in
 
 00:00:44.700 --> 00:00:48.933
-claude/skills for Claude Code,
-and in . codex/skills and .
+.claude/skills for Claude Code,
+and in .codex/skills and
 
 00:00:48.933 --> 00:00:50.833
-agents/skills for Codex.
+.agents/skills for Codex.
 
 00:00:50.867 --> 00:00:55.233
 They come from a published
@@ -222,7 +222,7 @@ my skills up to date".
 
 00:03:18.767 --> 00:03:22.000
 Fifth, add your own. Make a
-folder under . claude/skills.
+folder under .claude/skills.
 
 00:03:22.000 --> 00:03:26.033
 Add a skill file with a name, a

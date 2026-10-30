@@ -81,15 +81,3 @@ The agent proposes and reports an approval id. A different owner or admin approv
 - Settings > Agents: 30 day activity per agent; Operate > Runs for the step by step trace
 
 Next clip: Tutorial: your first week.
-
-## To verify before recording
-
-- Packs: core, CRM, data, growth, ops, revenue (core-agents, crm-agents, data-agents, growth-agents, ops-agents, revenue-agents). One trigger each: sdr-agent (verified funding, hiring or intent surge signal), meeting-prep-agent (meeting booked), enrichment-agent (Monday 06:00 cron), seo-geo-watch-agent (daily 06:00 cron, publish through the claims gate), ops-copilot (manual), reply-triage-agent (reply received).
-- Event triggers skip events from bulk writers (imports, CRM sync, projector, enrichment) unless includeBulkSources is set; fires are capped per hour and an over cap fire is recorded as skipped (kernel/agent-runtime agent-trigger-operations, origin/main).
-- Human only: approve, reject, execute, sign, key creation, Dry Mode switch; agents cannot widen their own scopes or mint keys; operations that spend inline (`spendsInline`) are never granted to an agent skill.
-- Attribution: the creator of an agent key cannot approve, reject or execute that agent's proposals; authority is the narrowest of key scopes, agent scopes and the creator's current role.
-- Enabling a pack is a `packages.enable` proposal (build access proposes, a different owner or admin approves); on approval it registers the agents, publishes their skills and provisions their triggers in the default environment.
-- Settings > Agents: pack card states, triggers running or paused, limits on steps, cost and deadline, edit scopes, Stop, Revive; 30 day activity (runs, approved against proposed, cost); Operate > Runs.
-- The net-new rule: the first message to someone nobody has written to is never auto-sent.
-- Agents that depend on unbuilt engines (engine-dependent agents) are not shown.
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

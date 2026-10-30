@@ -75,15 +75,3 @@ The agent reads, drafts and proposes. What it may actually do is decided by its 
 - Create a folder under .claude/skills with a skill file; copy it to .codex/skills or .agents/skills for Codex
 
 Next clip: Predefined agents.
-
-## To verify before recording
-
-- `gtm init` writes skills to .claude/skills, .codex/skills and .agents/skills; they come from the published skills release (sha-256 checked) with a bundled offline copy in the CLI (apps/cli/src/harness/skills).
-- Four groups: setup and onboarding, per engine, tool skills, looot skills; the engine catalog skill; role subagents from the release (for example revops-analyst and deal-reviewer). Counts are not stated on camera (over a hundred skills elsewhere in the series).
-- A description-first loading rule is Claude Code behaviour (skills are loaded on a matching request); confirm the wording when recording.
-- Skill names such as gtmos-score-icp and gtmos-outreach-first-lines are examples and can change between releases; first lines writes one cited fact per lead or NO_FACT.
-- Slash commands: /setup-gtmos, /build-gtm-system, /go-live-check (read only GO or NO-GO), /create-play, /wire-connector, /describe-ops.
-- `gtm init --refresh`: takes new skills, updates untouched ones, keeps edited ones and your own files; restart Claude Code afterwards.
-- `gtm doctor` Harness section compares version stamps (last init, CLI, skills release, live server) and says "run gtm init --refresh" when stale (0.2.6 on main; confirm on the published build).
-- Own skill: folder under .claude/skills with a skill file; copy to the Codex folders; an edited shipped skill is kept and stops updating; copy under a new name to keep both.
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

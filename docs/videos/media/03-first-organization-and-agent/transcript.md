@@ -86,16 +86,3 @@ Your agent now has a private organization and its first tasks. Next: the onboard
 The agent proposes and reports an approval id. A different person approves in the console.
 
 Next clip: The onboarding steps.
-
-## To verify before recording
-
-- Console path: open localhost port 3000, sign in as owner (password in the instance .env), land on Your organizations (/dashboard) with the Create organization card; "anyone signed in can create one" holds with closed signup on.
-- Row-level security: every tenant table is forced (FORCE ROW LEVEL SECURITY) and the application role gtmos_app is NOBYPASSRLS (kernel/db migrations, verified on origin/main).
-- Connections > Models > Anthropic: sealed under the master key, live without a restart, Test button, "configured but unverified" wording; an org connection wins over the instance key; `gtm doctor` then shows the model provider line as live (confirm on the published build).
-- Settings > Developer is titled Connect Claude Code or Codex; presets, 90 day default expiry, key shown once; `action.approve` can never be granted; effective authority is the narrowest of key scopes, agent scopes and the creator's current role.
-- Agent mints the key in one call with the owner session (gtmos-setup skill: the session token and password never appear in the transcript). Changed from the earlier script, which said "the token never appears in the chat".
-- GTMOS_AGENT_TOKEN is read when Claude Code starts, so restart from the same terminal; `gtm token revoke` for a key that landed in a file (gtmos-setup skill).
-- `gtm init --url --key`, `/mcp` shows gtmos connected; six of the eight MCP meta-tools named (describe, query, get, search, act, approvals).
-- Audit log under Settings > Audit log; `audit.list`.
-- Enabling the ops-agents pack is a `packages.enable` proposal (build access proposes, a different owner or admin approves). The agent is named onboarding-agent in the pack; the earlier script said "setup guide agent" (confirm the display name).
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

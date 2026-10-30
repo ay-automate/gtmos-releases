@@ -80,15 +80,3 @@ You have a working project, an agent with the playbook, and a check you can trus
 The agent proposes and reports an approval id where an action needs one. A different person approves in the console.
 
 Next clip: Your first organization and your agent.
-
-## To verify before recording
-
-- Prerequisites on the checklist (Docker, Node 22 or newer, about 4 GB free memory, 10 GB free disk) against docs/SELF-HOST.md.
-- `gtm init` offline behaviour with no instance reachable, and the files it writes (CLAUDE.md, AGENTS.md, .mcp.json, .claude, .codex/skills, .agents/skills, docs/gtmos).
-- The skills release: over a hundred skills plus role subagents, checksum verified, bundled copy for offline use (apps/cli/src/harness/skills/release).
-- `gtm init --refresh` keeps your edits; `gtm doctor` Harness section reports a stale harness with the hint "run gtm init --refresh" (0.2.6 on main; confirm on the published build before recording).
-- /setup-gtmos runbook: the checks, the one grouped question, the stops for human steps, then /build-gtm-system and the gtm-architect.
-- `gtm setup` is idempotent and starts the worker; passwords and master key are written to instance/.env.
-- Self-host ports bind to 127.0.0.1 by default; `gtm up` and `gtm upgrade` print the local-only warning; GTMOS_BIND_ADDRESS in .env or a reverse proxy exposes them (docs/SELF-HOST.md).
-- `gtm doctor` statuses (live, unverified, failed, fixture, not configured), `--strict` exit code one, console path Integrations > Connections.
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

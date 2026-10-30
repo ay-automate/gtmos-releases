@@ -81,16 +81,3 @@ You picked a motion, and now you have a reviewed, proposed system. Next is conne
 The agent proposes and reports an approval id. A different person approves in the console.
 
 Next clip: Connections and integrations.
-
-## To verify before recording
-
-- Blueprints gallery (/org/<orgId>/blueprints): industry packages and starter blueprints, motion filter, search, Signed and Verified badges (confirm labels on the published build).
-- The motions named (full GTM, outbound, SEO, sales-led B2B SaaS, product-led, developer tools, direct to consumer, agency services, marketplace) match the gallery. The gallery also holds an enterprise ABM blueprint; the ABM engine is not shipped, so it is not named here.
-- View and apply sections: What it sets up, Engines it drives, What you need connected (Required, Ready, Optional, Missing); a blueprint's connections become Required in `instance.readiness` and in `gtm doctor`.
-- Full GTM requires model, email sender, looot and Search Console; outbound requires model, email sender and looot; search plays are held back until Search Console is live, then apply again (`--gsc-property`).
-- `gtm plan --from <blueprint>` previews; `gtm apply --from <blueprint> --env dev` proposes; `gtm blueprint upgrade` pulls upstream updates.
-- Environment defaults to dev because production refuses direct publishes; outreach blueprints ask for the sender postal address.
-- Applying again while the proposal is pending returns the same proposal; a pending proposal whose base moved is not reused (kernel/config blueprint-apply tests).
-- Approval card: frozen payload diff, impact preview, proposer; the proposer and the human behind an agent cannot approve; approved executes in dev; sign then promote.
-- Values come from approved setup cards (ICP weights, stages, customer types, suppression lists, daily cap) via blueprint adapt.
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

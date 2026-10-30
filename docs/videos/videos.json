@@ -65,8 +65,8 @@
       ],
       "slug": "what-is-gtmos",
       "status": "published",
-      "bytes": 16926574,
-      "sha256": "deab7c01c675c9df34f5346d1d948262e21011654f72317b20d25482a334dc51"
+      "bytes": 16935802,
+      "sha256": "0d25ec861c6400285b6601eb7e468982717f8467953fe0701c96af84a59bcfa8"
     },
     {
       "id": "c02",
@@ -87,8 +87,8 @@
       ],
       "slug": "first-setup-with-claude",
       "status": "published",
-      "bytes": 22010339,
-      "sha256": "9198b6202dfc834a63e0d3a6fa00c9d541e3fe6e0f4bcef6c8572c1fa50ed1b9"
+      "bytes": 22032887,
+      "sha256": "783d734744b1f07dd69a9825053be3f45ea8ed56ca7be762525cd664cbcc7eb4"
     },
     {
       "id": "c03",
@@ -109,8 +109,8 @@
       ],
       "slug": "first-organization-and-agent",
       "status": "published",
-      "bytes": 23275282,
-      "sha256": "bd6d12b1d36ab2257bdf6d40ebf021002c8fe840463d2c992bfcca35efa67a38"
+      "bytes": 23298058,
+      "sha256": "166a60fd7a062191b2f5e59fbaae1830cf7320eaf8ce014933e11b637d236ee4"
     },
     {
       "id": "c04",
@@ -130,8 +130,8 @@
       ],
       "slug": "the-onboarding-steps",
       "status": "published",
-      "bytes": 24816694,
-      "sha256": "9af1d7ee09aec06bdb4ca50faa78c10899c88b26d7bc9a69970938fcfc40e5f4"
+      "bytes": 24817094,
+      "sha256": "4a6e1732fee6e2c892a282b0d2b7be8062a6113da555e24d9fa53ec5e98af4e1"
     },
     {
       "id": "c05",
@@ -151,8 +151,8 @@
       ],
       "slug": "blueprints-and-motions",
       "status": "published",
-      "bytes": 21270206,
-      "sha256": "731578ef98b198dc22d2962aebfdb87096b0d4568779e1e3e853941117eb1c10"
+      "bytes": 21368014,
+      "sha256": "f78ebf21056ff26f703df2bdc5714149dc27f658dedc35b640073bea803fca3b"
     },
     {
       "id": "c06",
@@ -172,8 +172,8 @@
       ],
       "slug": "connections-and-integrations",
       "status": "published",
-      "bytes": 23149625,
-      "sha256": "b47fe07ca784640d405ddbefb974f250601bdd1168da987caf17eee0b575bce9"
+      "bytes": 23477547,
+      "sha256": "0350100e46798aa589d67f414af373f6ceb738b7a461efb2f3493cbdfe19da45"
     },
     {
       "id": "c07",
@@ -193,8 +193,8 @@
       ],
       "slug": "skills",
       "status": "published",
-      "bytes": 21840925,
-      "sha256": "53a7265ac09b22d2b205d23abc9e2b88b15dccf5d88b8eb33ee8b33ce7f1897c"
+      "bytes": 21108706,
+      "sha256": "1ca4576c04c4403fe0411f525fa05f232f5b665f3631a467e499de3dfe46fb3c"
     },
     {
       "id": "c08",
@@ -214,8 +214,8 @@
       ],
       "slug": "predefined-agents",
       "status": "published",
-      "bytes": 25819154,
-      "sha256": "57911331a674ce85d0f3b70c8396b2218de8a70791caa5ab9a6479a332d1ba33"
+      "bytes": 26685639,
+      "sha256": "bfce2c5b09ef749472e27d375bebb7bb2d3e497eeaea303d3c9bceb273d7cd82"
     },
     {
       "id": "c09",
@@ -235,8 +235,8 @@
       ],
       "slug": "tutorial-your-first-week",
       "status": "published",
-      "bytes": 26756099,
-      "sha256": "67a9b62e7d5e30cb79cb422cb9aa54cc5a0f46cf1d013d2c44138c5358b69c02"
+      "bytes": 27016167,
+      "sha256": "ba77439248f42ded6291cf23df5599796290f5f230eb4487c59d6a415d53e51f"
     },
     {
       "id": "c10",
@@ -256,8 +256,8 @@
       ],
       "slug": "bring-your-data-in",
       "status": "published",
-      "bytes": 25673636,
-      "sha256": "196a239fa7fbae439319f9343608d39e42c7661016015cc9eed9d8184eb62d3d"
+      "bytes": 25552813,
+      "sha256": "31b2b3ad1df2d2ece3e1f44453760854560d8f0ae8df4380198586133e65f84a"
     },
     {
       "id": "c11",
@@ -277,8 +277,8 @@
       ],
       "slug": "your-crm-kept-in-sync",
       "status": "published",
-      "bytes": 22867299,
-      "sha256": "daac1f8526f1faa9f7542a77f92470dc63dc88d3898a4c3804e41452374d9984"
+      "bytes": 22911865,
+      "sha256": "543d28d4498d91b92f00da23bcf89d4ea991c38da9ced4c98fc84ff6c23ee145"
     },
     {
       "id": "c12",
@@ -298,8 +298,8 @@
       ],
       "slug": "the-crm-workspace",
       "status": "published",
-      "bytes": 19826847,
-      "sha256": "e59a09de3aeae114f4bde8c416fc419f1e7748683798b471dec22ddca21cb400"
+      "bytes": 19927697,
+      "sha256": "8fadb456b38f98710990412eba6d6627636528f1ca45305f4389b04c16b47819"
     },
     {
       "id": "c13",
@@ -319,8 +319,8 @@
       ],
       "slug": "identity-and-data-quality",
       "status": "published",
-      "bytes": 19158819,
-      "sha256": "c6845f1e3eb0d511fc432ebbe4b3a33aedc9651a656eb68e5d2df5c5fe1069a2"
+      "bytes": 19281506,
+      "sha256": "acba6fb17cc3086055cfaea58c4f75d325c27ebbe385769ad4fc5191243e64e1"
     },
     {
       "id": "c14",
@@ -504,8 +504,8 @@
       ],
       "slug": "signals-and-intent",
       "status": "published",
-      "bytes": 23332487,
-      "sha256": "c7db544f8d9f625d25fef4e08334683ade183d873411a740100e905f3556356f"
+      "bytes": 23379783,
+      "sha256": "4008e849f4de840b78450f77bd1799fc50494a8d875787df1038ee503f28f17b"
     },
     {
       "id": "c24",
@@ -547,8 +547,8 @@
       ],
       "slug": "outreach",
       "status": "published",
-      "bytes": 27518243,
-      "sha256": "317277e20c8d3b50cec653f56f96d880ce1954d6457e767e8b63e55ac7942dc4"
+      "bytes": 27516443,
+      "sha256": "a9945f97e0ae365ec01621fa558a356ece9169a19e3979eeec47649e6d880ec6"
     },
     {
       "id": "c26",
@@ -568,8 +568,8 @@
       ],
       "slug": "seo-and-geo",
       "status": "published",
-      "bytes": 22953816,
-      "sha256": "fb0e2a95d352ea29d55ca2d40d8a0494cd1d880fc15ada7afe3edd5fd8fc9be9"
+      "bytes": 22896775,
+      "sha256": "900b36e14a285fee625beb5128df5bac2e1476e43e0061ba906d90063a87e449"
     },
     {
       "id": "c27",
@@ -589,8 +589,8 @@
       ],
       "slug": "performance-ads",
       "status": "published",
-      "bytes": 19861452,
-      "sha256": "a40bcfcccd1062f0820a4eb0ae2749f398b8527a62a12460f2f9ada81fc24efa"
+      "bytes": 19809439,
+      "sha256": "9b3d7cd189da2639a7e6e3dcda612edb5b4317d24d1d54a80371b8d90d064e57"
     },
     {
       "id": "c28",
@@ -691,8 +691,8 @@
       ],
       "slug": "dry-mode-and-guardrails",
       "status": "published",
-      "bytes": 21553778,
-      "sha256": "99a051054a057602c9726f773c4886da10f0c75075d5e77a99c4ff9929ffc241"
+      "bytes": 21575583,
+      "sha256": "3796b778cb20f636d56e9921947bdc0b9c0b0062fc3891a7cf0fb8f358c5420b"
     },
     {
       "id": "c34",

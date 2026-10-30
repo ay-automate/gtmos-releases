@@ -56,14 +56,3 @@ So you can hand an agent real access and still prove what it did. Open the audit
 The agent reads the approval trail and reports the approval id. Approving is human only: the agent stops and names the screen and the button, and a different person approves in the console.
 
 Next clip: Dashboards, your daily rhythm and what it costs.
-
-## To verify before recording
-
-- Concept clip: confirm the verify mockup still matches the Approvals timeline and Settings, Audit log wording at release.
-- Private and team record enforcement is described as enforced, not as row-level security; confirm that wording is acceptable.
-- Row-level security: the app connects as a role that cannot bypass it (gtmos_app); the narration says database role and never names the role.
-- Audit log is hash chained org wide with a checkpoint signing key (inventory section 13); the narration says a reviewer can trust the history, it does not claim an external verification tool.
-- Secrets: envelope encryption under the master key held by the operator, sealed connection credentials, agent keys shown once, expiring on their own and unable to mint keys; folders hold a reference, never a key. No expiry figure is quoted in this concept clip.
-- Human only operations as named: approving, signing a definition, executing an approved action, switching Dry Mode, creating keys, assigning roles; an agent that tries is refused and told the screen and button.
-- Package trust: signed by the first party key or a trusted publisher key, declared permissions, outbound calls checked, installing or enabling is a proposal a person approves.
-- Pro move (compare one approval's frozen payload with what went out, monthly) is a practice, not a product feature.

@@ -60,10 +60,10 @@ localhost, port three thousand,
 
 00:00:44.233 --> 00:00:46.300
 and sign in as the owner.
-The password is in the .
+The password is in the
 
 00:00:46.300 --> 00:00:49.900
-env file in your instance folder.
+.env file in your instance folder.
 You land on Your organizations.
 
 00:00:49.933 --> 00:00:53.000
@@ -239,7 +239,7 @@ Put the key in an environment
 variable named GTMOS_AGENT_TOKEN,
 
 00:02:49.533 --> 00:02:53.800
-never in a file. The . mcp. json holds
+never in a file. The .mcp.json holds
 only a reference to that variable.
 
 00:02:53.867 --> 00:02:57.267

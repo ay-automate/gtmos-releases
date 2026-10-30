@@ -85,18 +85,3 @@ So you can test a play before it touches anyone, then ask for the next one in a 
 Simulating a play writes nothing. Studio proposes the new play and reports an approval id; a different person approves it in the console, and it ships into dev only. The agent never approves its own request.
 
 Next clip: How the engines work together.
-
-## To verify before recording
-
-- Console path Engines > Plays (open a play, Dry run; Results with 7, 30 or 90 days) and Studio (plays catalog, requests); `gtm play simulate <play key>` flag spelling. The inventory names the paths; confirm exact control labels at capture.
-- Simulation replays the last thirty days of trigger history and reports triggers matched, filtered out, projected actions, blocked by gates, projected cost, with zero writes (inventory 12.11); confirm the 30 day window and the cost line in the build.
-- Schedule play fan out: audiences (deal.stage_stuck, deal.closed_lost, subscription.renewal_due, contact.champion_moved, meeting.ended, content.refresh_due), default twenty five per firing, one run per member per spell: confirm the default at capture.
-- Event plays never fire on bulk writes (imports, syncs, projector); an operation can answer stopPlay with a recorded reason.
-- Promotion turns a play on and says so; steps that send are still proposals approved by a different person.
-- plays.kpis: rates with a denominator under five are null with a reason; fixture runs never counted; every approval, ledger row and spend stamped with play, run and step; open the run in Operate > Runs.
-- Per run maxBudgetUsd is enforced only once a play scope cost budget exists in the ledger; maxActionsPerRun.
-- Catalog scoring: impact (reach, trigger signal, fit with lanes, segments, personas, scoring, run history) and ease (data ready, connections, operations available, simplicity), explained factor by factor, weights tunable by owners and admins in the Scoring tab.
-- Blueprint plays and their exact facts (speed to lead fifteen minute task, stage stuck twenty one days and past one and a half times the stage median, renewal runway ninety, sixty, thirty with a check in at thirty, champion change).
-- Studio: spec from the closest catalog play, numbered asks, extraction model route label, Submit for approval proposes studio.ship, lands in the studio environment (dev by default), never turns an engine live, rejected or expired returns as Changes requested.
-- Not shipped, said honestly: holdouts and audience preview, play libraries for ABM, lifecycle, routing service levels and data quality.
-- All numbers in the mockups (212 matched, 40 filtered and so on) are visibly fake examples.

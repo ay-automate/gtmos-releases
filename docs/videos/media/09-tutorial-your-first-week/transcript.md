@@ -95,14 +95,3 @@ The agent proposes and reports an approval id. A different person approves in th
 - Notifications: Setup reminders by email switch; owners and admins see the in-app reminder first
 
 Next clip: Bring your data in.
-
-## To verify before recording
-
-- First win card on the organization home and the Setup page; eight milestones computed from real facts by `onboarding.first_win` (outbox events, executed operations, readiness, coverage, approvals); nothing stored; unknown shows its reason and never counts as done (0.2.6 on main; confirm on the published build, plan 12b).
-- Milestone names in order: instance ready; first real data source connected; first sync finished; first definition signed by a person; first Dry Mode draft produced; accounts have fit scores; a second person approved a proposed action; first live message went out.
-- A model key or a sender key does not count toward the data source milestone; sample data never does.
-- The person behind an agent's key cannot sign what that agent drafted.
-- Net-new rule: the first message to someone nobody has written to is never auto-sent, whatever the autonomy setting.
-- Setup reminders: opt in, off by default, at most one a week, in-app first for owners and admins, email only if opted in, unsubscribe in every mail, stops when setup completes; the setting is honest when the instance has no email configured; the agent cannot turn it on (plan 12b).
-- /go-live-check is read only.
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

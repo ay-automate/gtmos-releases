@@ -74,7 +74,7 @@ Your records are in, linked to their companies and shaped to your business. Next
 - CRM > Model: define a custom object, validate, publish
 - Settings > Custom fields: fields on companies, contacts and deals
 - Settings > Pipelines: deal pipelines and stages
-- CRM > Approvals: approve a published model change (a different owner or admin)
+- Approvals: approve a published model change (a different owner or admin)
 
 ## Ask your agent
 
@@ -107,16 +107,3 @@ What you should see, in shape:
 Example responses are simplified and use fake data. An import writes to your own organization and sends nothing outside it.
 
 Next clip: Your CRM, kept in sync.
-
-## To verify before recording
-
-- CRM > Import: four steps Choose, Map, Preview, Commit; commit is owner or admin by default, an owner can allow members in the CRM settings (`crm.settings`, memberBulkWrites).
-- Company column: matches accounts by website, then exact name; never creates accounts; lists ambiguous and unmatched rows with the file line; those rows import without a company link; long lists are shortened but counts are exact.
-- Cells: yes or no, true or false, 1 or 0 in a yes or no column; numbers in number columns; match key per object (domain for companies) so a re-import updates.
-- Commit: company-linked files go in chunks of 200 rows with a progress message ("Working on batch 3 of 9"); a large file takes a few minutes; a failed batch leaves earlier batches written; the result shows per row outcomes and company links made, already there, failed (apps/console/app/lib/gtm/import.ts COMPANY_CHUNK_SIZE = 200).
-- Imports start nothing: event plays and agent event triggers skip events from bulk writers (imports, CRM sync, projector, enrichment) unless includeBulkSources is set (kernel/agent-runtime, kernel/config play definition, origin/main).
-- Import writes only to your own organization; archive and restore from the record page; purge is a proposal.
-- CRM > Model: custom object, validate, publish as a ChangeSet another owner or admin approves; Settings > Custom fields options (required, show on record, allow agent fill); archive and restore.
-- Show in tables and Allow filtering are saved but the Companies and Contacts lists do not use them yet (later release); records.list filters and the agent do (plan 12b).
-- Settings > Pipelines: stage categories open, won, lost; default win probability; drag to reorder; refuses archiving a stage that holds open deals; restore works.
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

@@ -75,13 +75,3 @@ You can now read any account's story from start to finish. Ask your agent for on
 Your agent reads the same shared records and history every engine uses, so it can narrate the loop for any account. It reads and reports; approving anything stays with a person.
 
 Next clip: Approvals and the human queue.
-
-## To verify before recording
-
-- Concept clip: no version numbers, counts or exact UI claims. The record scene only says every step leaves a record you can open; confirm at capture which pages show score evidence, routing reason, approval trail and outcome.
-- Signal verification gate: unverified third party signals never score or reach sellers in Strict mode (inventory section 13); the narration says strict mode.
-- Claims gate runs when proposed and again when executed (inventory, claims gate); the narration says twice.
-- Reply handling wording (labelled, effects run once, unsubscribe respected, referral opens a task, not now returns later): carried over from the earlier verified script; confirm against the reply label rules before recording.
-- Shadow accuracy compares predictions with later deal outcomes per engine (policy.shadow_report); the pro move names the agent prompt used in the Dry Mode and guardrails clip.
-- Research briefs reach the owner through the research and meeting prep paths; routing records the reason on the decision column.
-- Not built yet, said honestly: account based programs, lifecycle and reporting engines.

@@ -64,11 +64,3 @@ You hear the market first, and only verified signals count. Clear the Review que
 The agent proposes and reports an approval id. A different person approves in the console.
 
 Next clip: Routing.
-
-## To verify before recording
-
-- Signals model editing (scoring model, key signals): no console editor page was found; the clip says changes go through a change set, with the plan on Environments. Confirm the real console path.
-- Signals scan switch in Settings > Feature flags (flag key signals.scan): confirm the switch exists and is editable there.
-- Scan status and Run now: confirm where they appear on CRM > Signals.
-- The narration paraphrases the retract prompt (it does not say a signal id aloud, per the lexicon rule that ids appear only on screen); the on-screen prompt keeps the example id.
-- Vocabulary: gate modes are described for an organization (existing organizations start Off, new ones Strict); confirm the Seller surfaces label in the live console.

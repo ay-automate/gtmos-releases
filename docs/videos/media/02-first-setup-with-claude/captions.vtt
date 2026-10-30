@@ -77,15 +77,15 @@ before Claude touches anything.
 
 00:01:01.333 --> 00:01:05.333
 Here's what lands. Instructions
-in CLAUDE. md for Claude, AGENTS.
+in CLAUDE.md for Claude, AGENTS.md
 
 00:01:05.333 --> 00:01:09.600
-md for Codex. A . mcp. json
-pointing at the MCP server. A .
+for Codex. A .mcp.json pointing
+at the MCP server.
 
 00:01:09.600 --> 00:01:12.600
-claude folder with
-subagents, slash commands,
+A .claude folder with subagents,
+slash commands,
 
 00:01:12.600 --> 00:01:17.000
 settings and a session start hook.
@@ -93,10 +93,10 @@ Skills for every agent. And docs.
 
 00:01:17.067 --> 00:01:21.967
 One detail matters: the agent key is
-never written to a file, and the . mcp.
+never written to a file, and the
 
 00:01:21.967 --> 00:01:25.567
-json holds only a reference
+.mcp.json holds only a reference
 to an environment variable.
 
 00:01:25.600 --> 00:01:27.500
@@ -200,10 +200,10 @@ run does only what's missing.
 
 00:02:48.800 --> 00:02:52.200
 Owner and approver passwords,
-plus the master key, land in the .
+plus the master key, land in the
 
 00:02:52.200 --> 00:02:54.767
-env in the instance
+.env in the instance
 folder. Keep it private.
 
 00:02:54.800 --> 00:02:58.700
@@ -216,7 +216,7 @@ address and an agent key to gtm init.
 
 00:03:02.833 --> 00:03:07.833
 Self hosted, the console, API
-and MCP bind to 127. 0. 0. 1.
+and MCP bind to 127.0.0.1.
 
 00:03:07.833 --> 00:03:10.967
 By default, only this

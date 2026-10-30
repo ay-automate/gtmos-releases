@@ -67,17 +67,3 @@ This opens a series that follows the order you'd build in: plan, build, operate,
 ## Next
 
 So you can hand your go to market to agents without handing over control. Open an empty folder. Next, first setup with Claude.
-
-## To verify before recording
-
-- Dry Mode is org-wide and human-only to flip (`policy.set_dry_mode`); external-effect operations return drafts while it is on. Source: FEATURE-INVENTORY safety section.
-- The approval is bound to a frozen payload (approval timeline shows the frozen-payload diff); the proposer and the human behind a proposing agent can never approve or sign.
-- Pre-approval envelopes are scoped, budgeted, time-bound, human-granted and revocable (`envelope.grant`, `envelope.revoke`). Say "envelope" only if the console wording still matches.
-- Engines read only the signed version in the call's environment, else their default.
-- Row-level security on every organization table, app role that cannot bypass it; the audit log is hash-chained.
-- A failed upgrade rolls back by image swap only and the database is never restored over; additive-only migrations and a verified backup first.
-- The level names in the series line match the levels ladder prop (plan, build, operate, automate, optimize, scale).
-- Concept clip: no counts, no version numbers, no exact UI claims. Nothing here promises an unshipped feature.
-
----
-Ask your agent (example prompt shown in the clip): "Define our ideal customer from our best accounts and propose it."

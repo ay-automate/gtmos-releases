@@ -63,18 +63,3 @@ Every lead reaches the right owner in seconds, and the reason is on record. Read
 Assigning an owner is an internal write, so it needs no approval. Territories and availability are edited by a person in the console; the agent reads them and explains the decisions.
 
 Next clip: Outreach.
-
-## To verify before recording
-
-- Territory editor wording: confirm the section is called "When routing runs" and which criteria fields the editor offers (the operation validates country codes and employee range; the clip says "country or company size").
-- Territory priority and the active switch exist in the operation; confirm they are visible in the editor and that overlapping territories resolve by priority.
-- Team capacity page: confirm the page label, the per-type open and weekly caps, the weight field, pause and out of office dates, and who can set the org-wide capacity lock.
-- Match preview and Assignment history with the Decision column: confirm labels and that the outcomes read assigned, kept and queued.
-- Owner notifications: confirm where they are configured on the Routing page and that they follow the Routing notifications engine mode in Settings > Safety.
-- Agent op for "Who owns this lead and why" (history read): not confirmed in the operation reference; the storyboard lists routing.match_account and territory.match only.
-- "Find unowned leads and preview owners": routing.reconcile is a data write; confirm it has a preview mode before showing this prompt, otherwise change the prompt to a read.
-- Speed to lead play key and CLI line (gtm play simulate speed-to-lead --env dev --since 30d): confirm the play key and flags against the build.
-- Console route /org/<orgId>/routing exists on main; the engine page tab names are from the inventory, not a live capture.
-- Routing SLA, escalation and Routing KPIs are not shipped: the clip says so and shows no routing KPI tile.
-- The load rule is stated plainly as "the person with the lightest load for their weight is next" (FEATURE-INVENTORY 12.7: lowest (assignments + 1) divided by weight wins). Confirm against the capacity code before quoting a formula on screen.
-- The notifications scene suggests staying in Dry for a week and reading the Decision column first; this follows from owner notifications obeying the Routing engine Dry or Live switch. Confirm the Dry behaviour shows who would have been told.

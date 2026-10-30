@@ -78,12 +78,3 @@ Every draft is grounded, every send is approved, and every reply teaches the sys
 The agent proposes and reports an approval id. A different person approves in the console.
 
 Next clip: SEO and GEO.
-
-## To verify before recording
-
-- Definition editing for lanes, sequences, reply labels and voice: no console editor page was found; the clip says changes go through a change set, with the plan on Environments. Confirm the real console path.
-- Pending sends: the inventory label was not found in the console code; the clip says approvals waiting on the engine Overview. Confirm.
-- Shadow accuracy under Settings > Safety: confirm the page and wording.
-- Depth claims used: claims gate at propose and again at execute; net new rule (first message to a never-contacted person always needs a human); the approval is bound to the frozen message; effects of reply labels run once; sequence edits mid flight never send twice; variants are deterministic per person (FEATURE-INVENTORY 12.4).
-- The replies scene links an unsubscribe back to the consent record by the previous clip's title, Consent, suppression and privacy. Confirm the unsubscribe effect (withdraws consent) in the live console.
-- The objection answer says approvers see only drafts that already passed the gates. Confirm that held sends do not reach the approval queue (the gates run at propose).

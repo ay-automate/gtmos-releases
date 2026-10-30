@@ -84,17 +84,3 @@ The agent reads and prepares. Entering a key and clicking an OAuth consent stay 
 - Connections: Test now or Test again (owner or admin). Terminal: gtm doctor, gtm doctor --strict
 
 Next clip: Skills.
-
-## To verify before recording
-
-- Connections page: logo grid, `/` search, three sorts, Needed strip with "Needed by <engine>" reasons (release facts, plan section 12b).
-- An org connection beats the instance credential; secrets sealed under the master key, shown once, never through a prompt.
-- looot lookups price and run with the workspace key (server key only as fallback); on an outage, timeout or 5xx the next provider in the binding is tried and each attempt is recorded; a timeout fallback is not free and the attempt log shows two providers (plan 12b). Show the attempts recorded.
-- Per call cap set by the admin; above it needs an approval (`LOOOT_MAX_COST_USD`, default 0.05 per call, not stated on camera).
-- Composio sign in then each app until ACTIVE; CRM of record HubSpot, Pipedrive, Zoho, Attio, Salesforce via Composio (the native Salesforce adapter is unverified and never shown). Write backs are update only; high risk Composio writes need one approval per record.
-- Search Console required for SEO and GEO only; GA4 and Search Console under Settings > Connected accounts or via Composio. Ahrefs via Composio.
-- Sender routes: Gmail or Microsoft mailbox preferred; Resend; Smartlead, Instantly, lemlist via Composio, not native catalog cards yet (known limitation). Do not demonstrate Resend events or Gmail bounce reports live.
-- Statuses live, unverified, failed, fixture, not configured; owner or admin (or an agent acting for one) can test; `gtm doctor --strict` exits one.
-- Fixture and sample data never count toward first win; neither does a model or sender key.
-- "A thousand more" apps through Composio (inventory says 1,500 plus toolkits; the skill says 1,000 plus; the narration says a thousand more).
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.

@@ -75,15 +75,3 @@ You always know what you're approving, and why nobody approves their own work. R
 The agent proposes and reports the approval id. It never approves, rejects or executes, and it never retries a proposal. A different person approves in the console.
 
 Next clip: Dry Mode and guardrails.
-
-## To verify before recording
-
-- Console paths: Approvals (timeline, payload diff, impact preview, Claims panel, result receipt), Mission Control (Today's one move), Operate > Needs a human, Operate > Open asks, the Waiting on you badge in the header. Confirm exact labels at capture.
-- States: proposed, approved, executing, executed; also rejected, withdrawn, revoked, expired after seven days (DEFAULT_PROPOSAL_TTL_MS in kernel/runtime/src/actions/approval.ts), failed.
-- Payload frozen at proposal with a diff against what is there now; impact preview for config changes (inventory section 13).
-- Claims gate: verdicts Backed, Close (about fifty percent wording match, never treated as backed) and No proof; default mode blocks an unbacked claim, the other mode routes to the approver who acknowledges each claim; checked at propose and again at execute; archived or expired proof between approval and run fails the run. The narration does not quote the fifty percent figure.
-- Receipt wording Not applied (dev) and the run-it-in-production hint; config changes apply in the environment they were proposed for (plan 12b).
-- Who can approve: owner or admin hold action.approve; not the proposer; not the human an agent acts for; the person who created an agent key cannot approve, reject or execute that agent's proposals; executing is human only and four eyes. Agent response shapes in the mockups are invented.
-- Envelope sentence in the objection (a narrow scope, a budget, an expiry, granted by a person) matches the Dry Mode and guardrails clip.
-- Open asks: numbered, owner and due date, chased daily by one batched reminder per person; agents open asks and they are deduplicated.
-- Single approver org policy exists but its details are unverified; the narration only says a one person team names a second identity as approver.

@@ -72,15 +72,3 @@ You set how fast GTM OS goes live, and every limit is enforced for you. Check yo
 Agents can read these settings and report them. Changing Dry Mode is human only, so the agent tells you to do it in Settings, Safety.
 
 Next clip: Why you can trust it.
-
-## To verify before recording
-
-- Console paths: Settings > Safety (Dry Mode, Engines, Guardrails, Usage, held actions), the mode in an engine page header, Operate > Actions filtered by engine, Setup > Rules card for autonomy and envelopes. Confirm exact labels at capture.
-- Dry Mode: org wide, human only to change (policy.set_dry_mode); agents can read it (policy.get_dry_mode); banner on every page; E class operations return drafts and do not create approvals.
-- Per engine Dry or Live: effective mode is the stricter of the two; going live is owner or admin, confirmed, audited (policy.engine_modes).
-- Guardrails: emails per day, new accounts contacted per week, ad spend per day (above it a person approves), send window in the recipient's timezone with quiet hours correct across daylight saving, allowed channels, custom caps; a hit holds the action, raises an alert and runs later by itself; held actions can be cancelled (policy.trust_holds).
-- Autonomy scopes (organization, campaign, play, lane, engine) and pre approval envelopes (scope, budget, expiry, human granted, revocable) are human only to set.
-- Net-new rule: a first message or meeting invite to someone nobody ever wrote to is never auto sent, regardless of autonomy, envelope or policy.
-- Shadow accuracy per engine (policy.shadow_report) compares predictions with later outcomes; engines without enough history say so. Which engines report it today is not confirmed; do not name any beyond Score.
-- Pro move (tight caps for a week, then read the held list) is a practice, not a product feature: say so if asked.
-- Mockup numbers (fifty emails a day, one hundred accounts a week, two hundred dollars of ad spend) are visibly fake examples.

@@ -90,17 +90,3 @@ You answered a few questions, and the system now holds evidenced definitions, wa
 The agent proposes and reports an approval id. A different person approves in the console.
 
 Next clip: Blueprints and motions.
-
-## To verify before recording
-
-- Setup page (/org/<orgId>/onboarding): six screens Welcome, Connect your data, Your definitions, Rules and who approves what, The build, First motion and 90 days, then Launch (inventory section 7; confirm names on the published build).
-- No invented values: uncited model-drafted values are dropped; with no model, the deterministic drafter says so on the card.
-- ARR band is owner or admin only, never indexed, never given to agents.
-- Documents: PDF with text, docx, xlsx, csv, tsv, json, md, txt; suppression lists and the data processing agreement are restricted and never sent to a model.
-- Human-only steps: role profiles, the ARR band, approving cards that target a human, Launch. Cards that refuse agent keys: revenue truth, deal words, territories, brand. Cards that become proposals: ICP, scope, customer types.
-- The product refuses to remove or narrow the last setup steward (LAST_OWNER_NARROWING).
-- The build steps list (settle cards, adapt and propose blueprint, stage value asks, CRM completeness, plays rescore, dry rescore, readiness snapshot); live log, retry, cancel, Needs a human list.
-- Writes carry expectedVersion; a CONFLICT means re-read, then redo.
-- Launch signs and promotes the setup definitions and turns engines live only where the autonomy card says so; a different person approves.
-- First win card: eight milestones computed from real facts (0.2.6 on main; confirm on the published build).
-- Every screen stays a marked mockup ("example, simplified") until the capture script exists.
