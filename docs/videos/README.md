@@ -64,7 +64,7 @@ Encode example: `ffmpeg -i in.mov -c:v libx264 -crf 24 -preset slow -vf scale=19
 
 ## Current state of the clips
 
-Hosted as assets of the `videos-v1` release. Every clip except 18 and 28 is available; the other entries in `videos.json` stay coming soon until they are recorded.
+Hosted as assets of the `videos-v1` release. All 41 clips are available.
 
 | Clip | Title | Duration | Size | Release asset |
 |---|---|---|---|---|

@@ -391,16 +391,20 @@
       "part": 3,
       "title": "Journeys, pipelines and revenue truth",
       "outcome": "Numbers finance would sign.",
-      "durationSeconds": 300,
+      "durationSeconds": 274,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/18-journeys-pipelines-and-revenue-truth.mp4",
+      "vtt": "media/18-journeys-pipelines-and-revenue-truth/captions.vtt",
+      "poster": "media/18-journeys-pipelines-and-revenue-truth/poster.jpg",
+      "transcript": "media/18-journeys-pipelines-and-revenue-truth/transcript.md",
       "prompts": [
         "Which pipeline stages are unmapped, and what happens to those deals today?"
-      ]
+      ],
+      "slug": "journeys-pipelines-and-revenue-truth",
+      "status": "published",
+      "bytes": 21081678,
+      "sha256": "f536a00fe417d0fe9da32f266c75ba0fa125bdd102bfe61a2c09950c9a6beabd"
     },
     {
       "id": "c19",
@@ -598,16 +602,20 @@
       "part": 4,
       "title": "Research agent",
       "outcome": "A researcher on every account.",
-      "durationSeconds": 240,
+      "durationSeconds": 285,
       "type": "Mixed",
       "tier": "Depth",
-      "mp4": "",
-      "vtt": "",
-      "poster": "",
-      "transcript": "",
+      "mp4": "https://github.com/ay-automate/gtmos-releases/releases/download/videos-v1/28-research-agent.mp4",
+      "vtt": "media/28-research-agent/captions.vtt",
+      "poster": "media/28-research-agent/poster.jpg",
+      "transcript": "media/28-research-agent/transcript.md",
       "prompts": [
         "Brief me on Acme before tomorrow's meeting."
-      ]
+      ],
+      "slug": "research-agent",
+      "status": "published",
+      "bytes": 22448184,
+      "sha256": "056a278c68635bd6b5f674556b97aa9d4a80f3b5e9226b14f6cc5041a72001ce"
     },
     {
       "id": "c29",

@@ -1,0 +1,349 @@
+WEBVTT
+
+00:00:00.267 --> 00:00:02.633
+Fit is defined, tested and signed.
+
+00:00:02.633 --> 00:00:05.067
+Now define a won deal
+and a quarter's revenue.
+
+00:00:05.067 --> 00:00:07.733
+When two screens show two
+numbers for one quarter,
+
+00:00:07.733 --> 00:00:12.100
+trust in the dashboard dies. Here,
+finance and RevOps read one number.
+
+00:00:12.167 --> 00:00:15.600
+Over the next few minutes you'll
+map your CRM's stages onto journeys,
+
+00:00:15.600 --> 00:00:19.000
+point revenue at one source,
+and choose how credit is shared.
+
+00:00:19.000 --> 00:00:22.167
+You'll also set currency
+rules and your own deal words.
+
+00:00:22.200 --> 00:00:24.967
+Leo's CRM has a stage
+called Closed Renewed.
+
+00:00:24.967 --> 00:00:26.700
+A tool that guesses files it as open,
+
+00:00:26.700 --> 00:00:31.133
+and Mia's pipeline swells with deals
+already won. Orbit counts them again.
+
+00:00:31.133 --> 00:00:34.733
+One revenue truth, your words
+for stages, and nothing guessed.
+
+00:00:34.767 --> 00:00:37.767
+First, journeys. In the
+console: Settings, Journeys.
+
+00:00:37.767 --> 00:00:42.367
+Define the lifecycles your companies,
+people and deals follow: main,
+
+00:00:42.367 --> 00:00:44.300
+renewal, self serve, partner.
+
+00:00:44.300 --> 00:00:46.733
+Each journey has stages
+marked open, won or lost,
+
+00:00:46.733 --> 00:00:50.633
+and can link to the stages of a deal
+pipeline from Settings, Pipelines.
+
+00:00:50.633 --> 00:00:54.767
+Saving proposes a new version in dev
+for a different person to approve.
+
+00:00:54.767 --> 00:00:58.033
+It goes live once signed
+and promoted to production.
+
+00:00:58.100 --> 00:01:02.467
+Your CRM has its own stage values. A
+stage map says what each one means.
+
+00:01:02.467 --> 00:01:05.600
+Map it to a journey stage,
+ignore it, or press Guess for me.
+
+00:01:05.600 --> 00:01:09.900
+That suggests from names,
+synonyms and won or lost wording,
+
+00:01:09.900 --> 00:01:11.800
+ranked by your model if you have one.
+
+00:01:11.800 --> 00:01:14.933
+Values nobody has decided
+are held, never defaulted.
+
+00:01:14.933 --> 00:01:16.667
+Those records stay where they are,
+
+00:01:16.667 --> 00:01:19.233
+and each value raises a
+decision for a person.
+
+00:01:19.300 --> 00:01:23.033
+Or ask your agent: "Which CRM
+stage values have no meaning yet,
+
+00:01:23.033 --> 00:01:24.300
+and where would you put each".
+
+00:01:24.300 --> 00:01:26.967
+It lists them with record
+counts and a suggestion.
+
+00:01:26.967 --> 00:01:29.900
+What a value means is your
+call, not the agent's,
+
+00:01:29.900 --> 00:01:32.533
+and records follow only
+after the map is applied.
+
+00:01:32.600 --> 00:01:34.133
+Second, revenue truth.
+
+00:01:34.133 --> 00:01:38.067
+In the console: Settings, Money,
+Where does revenue truth live.
+
+00:01:38.067 --> 00:01:42.067
+Pick one source: CRM deal amounts,
+warehouse orders or billing records.
+
+00:01:42.067 --> 00:01:44.000
+The revenue K P I, the dashboard,
+
+00:01:44.000 --> 00:01:47.367
+attribution and your agents
+all read revenue from it.
+
+00:01:47.367 --> 00:01:50.800
+So two screens can't quietly
+disagree about one quarter.
+
+00:01:50.867 --> 00:01:53.167
+Reconciliation then
+compares that truth with
+
+00:01:53.167 --> 00:01:54.900
+the won deal amounts in your CRM,
+
+00:01:54.900 --> 00:01:57.567
+by month and by account. It lists
+the accounts that drift most.
+
+00:01:57.567 --> 00:01:59.867
+Drift isn't hidden or averaged away.
+
+00:01:59.867 --> 00:02:02.800
+It's a list for finance and
+RevOps to work through together.
+
+00:02:02.833 --> 00:02:06.533
+Third, attribution. In the console:
+Settings, Money, Attribution.
+
+00:02:06.533 --> 00:02:10.133
+The window is how far back a
+touch can claim credit: seven,
+
+00:02:10.133 --> 00:02:12.167
+thirty or ninety days, or your own number.
+
+00:02:12.167 --> 00:02:15.200
+The model is how credit
+splits across touches.
+
+00:02:15.200 --> 00:02:19.200
+Equal split is the default until
+you choose, with position based,
+
+00:02:19.200 --> 00:02:22.167
+first touch, last touch
+and time decay beside it.
+
+00:02:22.167 --> 00:02:24.533
+Compare models shows the
+same revenue under each.
+
+00:02:24.533 --> 00:02:28.167
+Changing either recomputes reports
+and rewrites nothing stored.
+
+00:02:28.200 --> 00:02:29.867
+Two details matter for trust.
+
+00:02:29.867 --> 00:02:32.333
+Visits from AI assistants
+are classified as
+
+00:02:32.333 --> 00:02:34.567
+AI answers and credited to SEO and GEO.
+
+00:02:34.567 --> 00:02:37.800
+Ad click ids are opt in,
+expire after ninety days,
+
+00:02:37.800 --> 00:02:40.467
+and are blocked when Global
+Privacy Control is on.
+
+00:02:40.467 --> 00:02:42.267
+They're never shown to agents.
+
+00:02:42.333 --> 00:02:43.533
+Or ask your agent:
+
+00:02:43.533 --> 00:02:45.567
+"Credit last quarter's revenue to channels
+
+00:02:45.567 --> 00:02:47.433
+under equal split and under last touch,
+
+00:02:47.433 --> 00:02:48.733
+and tell me what changes".
+
+00:02:48.733 --> 00:02:51.467
+It shows which channels move
+and which window it used.
+
+00:02:51.467 --> 00:02:54.933
+Pro move: run that comparison
+before you change the default model.
+
+00:02:54.933 --> 00:02:57.000
+Switching it is a person's decision.
+
+00:02:57.033 --> 00:03:00.767
+Fourth, currency. In the console:
+Settings, Money, Currency and FX rates.
+
+00:03:00.767 --> 00:03:04.000
+Pick the reporting currency
+and the convention:
+
+00:03:04.000 --> 00:03:06.833
+your finance team's dated
+rates, or daily market rates.
+
+00:03:06.833 --> 00:03:09.667
+Add the finance rate sheet month by month,
+
+00:03:09.667 --> 00:03:12.667
+and the page shows revenue at
+both, with the drift between them.
+
+00:03:12.667 --> 00:03:15.400
+Stored deal values are never rewritten.
+
+00:03:15.400 --> 00:03:17.900
+The convention applies
+when a report is read.
+
+00:03:17.967 --> 00:03:19.767
+Last, your words for deals.
+
+00:03:19.767 --> 00:03:23.267
+In the console: Settings,
+Money, Your words for deals.
+
+00:03:23.267 --> 00:03:25.767
+The OS adopts your words,
+and you never adopt ours.
+
+00:03:25.767 --> 00:03:29.033
+Name your deal types, say new
+business, expansion and renewal,
+
+00:03:29.033 --> 00:03:34.467
+and list the CRM values for each.
+Synced deals are typed automatically,
+
+00:03:34.467 --> 00:03:37.600
+and every dashboard filter
+and grouping uses your labels.
+
+00:03:37.667 --> 00:03:41.500
+Or ask your agent: "What was revenue
+last quarter at finance rates,
+
+00:03:41.500 --> 00:03:43.833
+and how far is it from
+the CRM's won deals".
+
+00:03:43.833 --> 00:03:46.933
+It reads in your reporting
+currency, shows the drift,
+
+00:03:46.933 --> 00:03:48.767
+and reconciles against the CRM.
+
+00:03:48.767 --> 00:03:51.433
+Changing these settings
+is for owners and admins.
+
+00:03:51.433 --> 00:03:54.200
+The agent reads, explains and proposes.
+
+00:03:54.233 --> 00:03:58.133
+Fair concern: another settings page
+won't end the argument with finance.
+
+00:03:58.133 --> 00:03:59.633
+It makes the argument small.
+
+00:03:59.633 --> 00:04:03.033
+Reconciliation names the accounts
+that drift, month by month.
+
+00:04:03.033 --> 00:04:06.667
+Nothing stored is rewritten, so you
+can change a convention and compare.
+
+00:04:06.667 --> 00:04:10.600
+And a value nobody has defined is
+held for a decision, never guessed.
+
+00:04:10.667 --> 00:04:13.800
+Replay: Map stages, and
+hold what's undecided.
+
+00:04:13.800 --> 00:04:15.900
+Pick one revenue source and reconcile it.
+
+00:04:15.900 --> 00:04:18.233
+Compare attribution
+models before you switch.
+
+00:04:18.233 --> 00:04:22.033
+One revenue truth, your words
+for stages, and nothing guessed.
+
+00:04:22.100 --> 00:04:25.633
+You now have stages that mean what
+you say, revenue that reconciles,
+
+00:04:25.633 --> 00:04:28.433
+and attribution you can inspect.
+
+00:04:28.433 --> 00:04:31.600
+Open Settings, then Money, and
+pick your revenue source today.
+
+00:04:31.600 --> 00:04:33.500
+Next: voice, proof and claims.
