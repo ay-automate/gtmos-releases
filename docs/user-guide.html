@@ -241,6 +241,7 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 0;border-top:1px solid v
   <h1>Run your go-to-market on GTM OS</h1>
   <p class="lede">GTM OS is a governed system for your revenue team: a CRM, eight engines in the console (Score, Outreach, Performance Ads, SEO &amp; GEO, Enrichment, Merges, Plays and Routing), signals and a research agent. Your coding agent builds and runs it. A person approves anything that touches a customer or goes live, and every factual claim in what you send is checked against proof you approved.</p>
   <p class="meta">Written for GTM OS release <b>0.2.5</b> (CLI 0.2.5). Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
+  <p class="meta">Building or customizing GTM OS by prompting Claude? The <a href="gtm-engineer-guide.html">engineer guide</a> goes deeper, with copy-paste recipes for every engine and a troubleshooting table.</p>
   <div class="tiles">
     <a class="tile" href="#quickstart"><b>Quickstart</b><span>Empty folder to a live system in 10 steps, with Claude Code doing the work and a setup wizard in the console.</span></a>
     <a class="tile em" href="#flexibility"><b>Customize anything</b><span>Ask your agent to change engines, the data model, data, integrations and screens.</span></a>
@@ -805,6 +806,7 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
 
   <div class="card" id="customize">
     <h3>Customize engines</h3>
+    <p class="meta">For engine-by-engine knobs, prompts and checks, see <a href="gtm-engineer-guide.html#ch09">Engine by engine</a> in the engineer guide.</p>
     <p class="goal"><b>Goal:</b> the engines follow your rules, not the defaults. Ask your agent in plain words; it edits the definition in <code>dev</code>, and you sign and promote it.</p>
     <div class="tbl"><table>
       <tr><th>What</th><th>What changes</th><th>Where you check it</th></tr>
