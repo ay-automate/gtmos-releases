@@ -197,26 +197,26 @@ p.meta{font:13px var(--sans);color:var(--muted)}
   <a href="#intro" data-k="how to read guide conventions prompts untested needs a human">How to use this guide</a>
   <a href="#ch01" data-k="mental model operations classes q d t e m engines approval safety loop">1. Mental model</a>
   <a href="#ch02" data-k="install connect claude code desktop init setup-gtmos mcp json agent key token gtmos_agent_token">2. Install and connect Claude</a>
-  <a href="#ch03" data-k="mcp tools gtm_describe gtm_query gtm_act gtm_get gtm_search gtm_approvals lineage errors rate limit">3. The MCP toolbox</a>
-  <a href="#ch04" data-k="identity scopes keys presets effective authority human only approvals kill autonomy four-eyes">4. Identity, scopes, keys</a>
+  <a href="#ch03" data-k="mcp tools gtm_describe gtm_query gtm_act gtm_get gtm_search gtm_approvals lineage errors rate limit justification lineage metric funnel">3. The MCP toolbox</a>
+  <a href="#ch04" data-k="identity scopes keys presets effective authority human only approvals kill autonomy four-eyes justification risk tier t3 t4 recommendation accept dismiss human only">4. Identity, scopes, keys</a>
   <div class="grp">Build</div>
-  <a href="#ch05" data-k="definitions kinds changeset sign propose promote rollback history cli plan apply">5. Definitions as code</a>
+  <a href="#ch05" data-k="definitions kinds changeset sign propose promote rollback history cli plan apply funnel data quality policy kinds">5. Definitions as code</a>
   <a href="#ch06" data-k="setup wizard build gtm system blueprints discovery interview">6. Build a system by prompting</a>
-  <a href="#ch07" data-k="icp scoring qualification committee routing territories plays sequences lanes suppression compliance claims voice proof identity metrics money stages">7. Customize business logic</a>
+  <a href="#ch07" data-k="icp scoring qualification committee routing territories plays sequences lanes suppression compliance claims voice proof identity metrics money stages funnel cohort board kpi win rate deal source data quality policy play library sla response time routing kpis time axis asof window">7. Customize business logic</a>
   <div class="grp">Engines</div>
   <a href="#ch08" data-k="engines chain triggers events guardrails dry live knobs">8. How the engines work together</a>
-  <a href="#ch09" data-k="score outreach performance ads seo geo data quality enrichment signals decay half life cadence unit economics">9. Engine by engine</a>
+  <a href="#ch09" data-k="score outreach performance ads seo geo data quality enrichment signals decay half life cadence unit economics enrichment steps triggers job change seniority title catalog">9. Engine by engine</a>
   <div class="grp">Data, agents, extend</div>
-  <a href="#ch10" data-k="data import csv connectors composio looot mcp server crm sync write-back webhooks enrichment adapter source mapping">10. Data in and out</a>
-  <a href="#ch11" data-k="agents skills workflows missions bounds maxsteps cost deadline scopes triggers runs evals kill">11. Agents, skills, missions</a>
+  <a href="#ch10" data-k="data import csv connectors composio looot mcp server crm sync write-back webhooks enrichment adapter source mapping import gate review queue held blocked compliance override stage date batch">10. Data in and out</a>
+  <a href="#ch11" data-k="agents skills workflows missions bounds maxsteps cost deadline scopes triggers runs evals kill recommendations recommendation mission start_mission measure">11. Agents, skills, missions</a>
   <a href="#ch13" data-k="extend apps packages adapter connector builder studio mission control tiles sandbox publish sign">13. Extend: apps and packages</a>
   <div class="grp">Govern and operate</div>
-  <a href="#ch12" data-k="governance autonomy ladder envelopes four-eyes environments dev staging prod dry mode budgets audit gate policy">12. Governance and safety</a>
-  <a href="#ch14" data-k="operate self host backup update upgrade rollback byoc updater health ports reverse proxy master key">14. Operate the instance</a>
+  <a href="#ch12" data-k="governance autonomy ladder envelopes four-eyes environments dev staging prod dry mode budgets audit gate policy risk tier t0 t4 justification grace mode reconcile unknown outcome agent authority needs reconciling envelope">12. Governance and safety</a>
+  <a href="#ch14" data-k="operate self host backup update upgrade rollback byoc updater health ports reverse proxy master key harness status byoc gcp azure">14. Operate the instance</a>
   <div class="grp">Support</div>
-  <a href="#ch15" class="hot" data-k="recipes prompts cookbook copy paste jobs blueprint icp scoring routing sequence suppression csv crm connector envelope promote upgrade rollback">15. Prompt recipes</a>
-  <a href="#ch16" class="hot" data-k="troubleshooting errors symptom cause fix mcp auth scopes approvals dry mode scores imports sync doctor upgrade">16. Troubleshooting</a>
-  <a href="#ch17" data-k="reference mcp tools operations classes kinds engine keys mode events cli env config glossary human only">17. Reference</a>
+  <a href="#ch15" class="hot" data-k="recipes prompts cookbook copy paste jobs blueprint icp scoring routing sequence suppression csv crm connector envelope promote upgrade rollback funnel gate recommendation reconcile authority board">15. Prompt recipes</a>
+  <a href="#ch16" class="hot" data-k="troubleshooting errors symptom cause fix mcp auth scopes approvals dry mode scores imports sync doctor upgrade funnel blank rate no tracked date import blocked justification reconcile">16. Troubleshooting</a>
+  <a href="#ch17" data-k="reference mcp tools operations classes kinds engine keys mode events cli env config glossary human only 0.2.6 new operations flags GTMOS_JUSTIFICATION_ENFORCE GTMOS_RISK_TIER_TIGHTEN funnel board">17. Reference</a>
   <p class="none" id="navNone">No chapter matches.</p>
 </nav>
 
@@ -226,12 +226,13 @@ p.meta{font:13px var(--sans);color:var(--muted)}
   <div class="eyebrow">GTM OS engineer guide</div>
   <h1>Build and customize GTM OS by talking to Claude</h1>
   <p class="lede">This guide is for the person who sets up GTM OS for a company and keeps tuning it. You work with Claude Code or Claude Desktop, the <code>gtm</code> command line and the console. You change engines and business logic by writing prompts. Two people approve what goes live.</p>
-  <p class="meta">Written for GTM OS release <b>0.2.5</b> (CLI 0.2.5). Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
+  <p class="meta">Written for GTM OS release <b>0.2.5</b> (CLI 0.2.5). Sections marked <span class="chip claude">New in 0.2.6</span> describe 0.2.6, which is merged but not released yet. Use them once your instance runs 0.2.6. Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
   <div class="tiles">
     <a class="tile" href="#ch02"><b>Connect Claude</b><span>Install an instance, make an agent key, check that all nine MCP tools work.</span></a>
     <a class="tile em" href="#ch15"><b>Prompt recipes</b><span>More than 20 copy-paste prompts for real jobs, each with the chapter that explains it.</span></a>
     <a class="tile" href="#ch16"><b>Something broke?</b><span>Find the message Claude or the console showed. Get the cause and the fix.</span></a>
   </div>
+  <div class="note" id="intro-026"><b>What 0.2.6 adds.</b> The new sections are inside the chapters they belong to. <a href="#ch07-funnel">Funnels</a>, <a href="#ch07-board">Board KPIs</a>, <a href="#ch07-deal-source">Deal source</a> and <a href="#ch07-dq-policy">Data quality policy</a> and <a href="#ch07-play-library">the play library</a> are in chapter 7. <a href="#ch09-enrichment-catalog">Enrichment steps and triggers</a> are in chapter 9. <a href="#ch10-import-gate">The import gate</a> is in chapter 10. <a href="#ch11-recommendations">Recommendations and bounded missions</a> are in chapter 11. <a href="#ch12-tiers">Risk tiers</a>, <a href="#ch12-justification">approvals with justification</a>, <a href="#ch12-reconcile">unknown outcomes</a> and <a href="#ch12-authority">agent authority</a> are in chapter 12. <a href="#ch14-harness-status">Harness status</a> and BYOC on GCP and Azure are in chapter 14. <a href="#ch17-026">The 0.2.6 reference</a> lists every new name.</div>
   <h4>How each chapter works</h4>
   <ul>
     <li><b>Goal</b> says what you will be able to do.</li>
@@ -304,7 +305,7 @@ p.meta{font:13px var(--sans);color:var(--muted)}
       <tr><td><b>E</b></td><td>Customer-facing effect</td><td>Becomes a proposal. Nothing is sent or written outside until a different person approves and executes it.</td></tr>
       <tr><td><b>M</b></td><td>Meta: configuration, ontology, platform</td><td>Depends on the operation. Publishing config, promoting to <code>prod</code> and installing packages go through the same approval gate.</td></tr>
     </table></div>
-    <p>The 0.2.5 catalog has 671 operations: 294 Q, 255 D, 5 T, 30 E and 87 M. You do not memorize them. Claude lists them with <code>gtm_describe</code>, and your project holds the full generated list at <code>docs/gtmos/reference/operations.md</code> after <code>gtm init</code>.</p>
+    <p>The 0.2.5 catalog has 671 operations: 294 Q, 255 D, 5 T, 30 E and 87 M. The 0.2.6 catalog has 695: 308 Q, 265 D, 5 T, 30 E and 87 M. You do not memorize them. Claude lists them with <code>gtm_describe</code>, and your project holds the full generated list at <code>docs/gtmos/reference/operations.md</code> after <code>gtm init</code>.</p>
   </div>
 
   <div class="card" id="ch01-engines">
@@ -321,7 +322,7 @@ p.meta{font:13px var(--sans);color:var(--muted)}
       <tr><td><b>Performance Ads</b></td><td>Syncs spend, paces against your CAC target, proposes budget and status changes. This is real money.</td><td>Engines &gt; Performance Ads</td></tr>
       <tr><td><b>Identity &amp; data quality</b></td><td>Finds duplicates, validates and normalizes, and runs gated, reversible merges.</td><td>Engines &gt; Merges (Data quality tab); Operate &gt; Monitors</td></tr>
     </table></div>
-    <p>Around the engines sit things that are not packaged engines but have their own pages and operations: plays (Engines &gt; Plays), routing (Engines &gt; Routing), the research agent (CRM &gt; Research), CRM sync, source mappings, the adapter builder (CRM &gt; Adapters) and AI chat.</p>
+    <p>In 0.2.6 the funnel, the board, recommendations and the import gate join them. They are not new engines: they read and gate what the engines and the CRM hold (see <a href="#ch07-funnel">Funnels</a>, <a href="#ch11-recommendations">Recommendations</a> and <a href="#ch10-import-gate">the import gate</a>). Around the engines sit things that are not packaged engines but have their own pages and operations: plays (Engines &gt; Plays), routing (Engines &gt; Routing), the research agent (CRM &gt; Research), CRM sync, source mappings, the adapter builder (CRM &gt; Adapters) and AI chat.</p>
     <div class="callout"><div><b>Only these seven are shipped.</b> You may see a longer engine list in vision or roadmap documents. Treat any engine outside the table above as planned, not available.</div></div>
   </div>
 
@@ -624,6 +625,7 @@ search_records { "query": "fintech accounts that hired a head of sales", "object
     <p><code>score.score_account</code> is a D operation. It runs now and writes a new qualification with its reasons.</p>
     <div class="code"><pre><code>gtm_act { "name": "outreach.send_message", "input": { "messageId": "&lt;message id&gt;" } }</code></pre></div>
     <p><code>outreach.send_message</code> is an E operation. This call <b>proposes</b> the send. Nothing is sent. The result carries the approval, and a different person must approve and execute it. A send that has no lane fails with <code>lane_required</code>. While Dry Mode is on, E operations return drafts and create no approval at all.</p>
+    <p><span class="chip claude">New in 0.2.6</span> <code>gtm_act</code> also takes <code>justification</code>: one or two plain sentences on why. It is optional in 0.2.6 and required for a proposal at T2 or above in 0.2.7. See <a href="#ch12-justification">justification</a>.</p>
     <div class="see">For an E operation Claude reports "proposed", an approval id and who can approve. If Claude says "sent", that is wrong: ask it to read the approval back with <code>gtm_approvals</code>.</div>
   </div>
 
@@ -643,7 +645,8 @@ search_records { "query": "fintech accounts that hired a head of sales", "object
   <div class="card" id="ch03-trace">
     <h3><code>gtm_lineage_trace</code>: where did this value come from</h3>
     <div class="code"><pre><code>gtm_lineage_trace { "recordId": "&lt;account id&gt;", "objectType": "gtm.account", "property": "employee_count" }</code></pre></div>
-    <p>For each property you get the winning value, the rule that chose it, a confidence, and the observations that fed it with their sources. A record with no provenance is labeled <code>unverified</code>, never invented. In 0.2.5, lineage for derived values and metrics is not filled in yet and comes back empty.</p>
+    <p>For each property you get the winning value, the rule that chose it, a confidence, and the observations that fed it with their sources. A record with no provenance is labeled <code>unverified</code>, never invented. Since 0.2.6, lineage also covers derived values, metric values and funnel stages. Give exactly one of <code>recordId</code>, <code>metric</code> or <code>funnel</code>. A record trace has a <code>derived</code> block: the inputs, the rule or model version and the time behind a computed value, for qualification score and verdict and for a deal's cycle days and weighted amount. A metric trace gives the exact row count the value was computed over and a sample of record ids you may see. Where lineage cannot be derived (a derived value on another object type, or the accounts behind a funnel stage), the answer says <code>unverified</code> and why. On an older instance it still comes back empty.</p>
+    <div class="code"><pre><code>gtm_lineage_trace { "metric": { "key": "win_rate", "env": "prod" } }</code></pre></div>
   </div>
 
   <div class="card" id="ch03-env">
@@ -779,6 +782,7 @@ gtm token revoke &lt;key-id&gt;</code></pre></div></li>
       <tr><td>Browser consent</td><td>OAuth sign-ins (Composio, Google, Microsoft, Slack). Claude gives you the link.</td></tr>
       <tr><td>Safety switch</td><td>Turn Dry Mode on or off. Claude can read it.</td></tr>
       <tr><td>Irreversible</td><td>Offboard an organization. Launch the setup build.</td></tr>
+      <tr><td>Four-eyes, new in 0.2.6</td><td>Accept, dismiss or start a mission from a recommendation. Settle an action whose outcome is unknown.</td></tr>
     </table></div>
     <p>Claude also cannot switch on research auto-apply, because that removes the human review of research suggestions.</p>
     <p>What Claude <b>can</b> do with the Full GTM engineer preset, acting for an owner or admin: records, custom fields, pipelines, definitions (as proposals), research profile and settings, CRM settings, workflow flags, connections and keys you give it, MCP servers, syncs, scans, blueprints and proposals. High-impact changes come back as proposals.</p>
@@ -793,6 +797,7 @@ gtm token revoke &lt;key-id&gt;</code></pre></div></li>
       <li>The proposer cannot approve. For an agent's proposal, <b>the person the agent acts for cannot approve either</b>. A second owner or admin must.</li>
       <li>Executing is human-only and four-eyes too: not the proposer, and not the person whose agent proposed it. The approver, or another member, can execute.</li>
       <li>A proposal expires after 7 days. Propose again if it does.</li>
+      <li><span class="chip claude">New in 0.2.6</span> A T3 or T4 approval can only be cleared by a named person who is not the proposer. No envelope or gate policy can approve it. An agent's proposal at T2 or above should carry a <code>justification</code> (optional now, required in 0.2.7). See <a href="#ch12-tiers">risk tiers</a>.</li>
       <li>The console hides <span class="ui">Approve</span> only from the person who proposed. On an agent's proposal the creating person still sees the button, and the server refuses it with "An action proposed by your own agent must be approved by a different person". That is expected.</li>
     </ul>
     <h4>Approve something Claude proposed</h4>
@@ -872,13 +877,13 @@ gtm token revoke &lt;key-id&gt;</code></pre></div></li>
 
   <div class="card" id="ch05-kinds">
     <h3>Every definition kind</h3>
-    <p class="goal"><b>Goal:</b> find the kind that holds the logic you want to change. 0.2.5 has 31 definition kinds, plus four other config kinds (<code>ontology.field</code>, <code>ontology.object</code>, <code>ontology.relationship</code> and <code>package.manifest</code>). Claude reads the exact field list from the bundled <code>definition-kinds</code> reference in your project, so you never need to memorize it.</p>
+    <p class="goal"><b>Goal:</b> find the kind that holds the logic you want to change. 0.2.5 had 31 definition kinds and 0.2.6 has 33 (it adds <code>definition.funnel</code> and <code>definition.data_quality_policy</code>), plus four other config kinds (<code>ontology.field</code>, <code>ontology.object</code>, <code>ontology.relationship</code> and <code>package.manifest</code>). Claude reads the exact field list from the bundled <code>definition-kinds</code> reference in your project, so you never need to memorize it.</p>
     <div class="tbl"><table>
       <tr><th>Area</th><th>Kinds</th><th>What they decide</th></tr>
       <tr><td>Who to target and how they score</td><td><code>definition.scoring_model</code>, <code>definition.segment</code>, <code>definition.persona</code>, <code>definition.predicate</code>, <code>definition.committee_model</code>, <code>definition.customer_type</code></td><td>Fit and intent scores, which accounts a motion works, who the buyer is, the buying committee, your own customer types.</td></tr>
       <tr><td>Lifecycle and stages</td><td><code>definition.journey</code>, <code>definition.stage_machine</code>, <code>definition.stage_map</code>, <code>definition.deal_taxonomy</code></td><td>The stages a company, person or deal moves through, the legal moves between states, what each CRM stage value means, your words for deal types.</td></tr>
       <tr><td>Outreach rules</td><td><code>definition.lane</code>, <code>definition.sequence</code>, <code>definition.reply_labels</code>, <code>definition.brand_voice</code>, <code>definition.suppression_rule</code>, <code>definition.compliance_policy</code></td><td>Sending channels and caps, the steps of a cadence, how replies are labeled, tone and forbidden claims, who is never contacted, regulatory rules.</td></tr>
-      <tr><td>Plays, KPIs, money</td><td><code>definition.play</code>, <code>definition.data_monitor</code>, <code>definition.metric</code>, <code>definition.money</code>, <code>definition.unit_economics</code></td><td>Automations, data-quality checks, derived KPIs, where revenue truth lives, the economics ads pace against.</td></tr>
+      <tr><td>Plays, KPIs, money</td><td><code>definition.play</code>, <code>definition.data_monitor</code>, <code>definition.data_quality_policy</code>, <code>definition.metric</code>, <code>definition.funnel</code>, <code>definition.money</code>, <code>definition.unit_economics</code></td><td>Automations, data-quality checks, derived KPIs, where revenue truth lives, the economics ads pace against.</td></tr>
       <tr><td>Data in</td><td><code>definition.identity_rule</code>, <code>definition.source_mapping</code>, <code>definition.binding</code>, <code>definition.enrichment_policy</code></td><td>How records match and merge, how an app's list maps into the ontology, how a capability is acquired and priced, how long enriched values stay fresh.</td></tr>
       <tr><td>Platform</td><td><code>definition.agent</code>, <code>definition.skill</code>, <code>definition.app</code>, <code>definition.model_policy</code>, <code>definition.model_pin</code>, <code>definition.brand_kit</code></td><td>Agent authority and run bounds, skills, console screens, which model serves which task, theming.</td></tr>
     </table></div>
@@ -1229,6 +1234,8 @@ spec:
       <tr><td>What may we say, and in what voice?</td><td><code>definition.brand_voice</code>, the proof library, the claims policy</td><td><a href="#ch07-claims">Claims, voice, proof</a></td></tr>
       <tr><td>When are two records the same, and who wins?</td><td><code>definition.identity_rule</code></td><td><a href="#ch07-identity">Identity and merge rules</a></td></tr>
       <tr><td>How do we measure it?</td><td><code>definition.metric</code>, <code>definition.money</code>, <code>definition.data_monitor</code></td><td><a href="#ch07-metrics">Metrics and money</a></td></tr>
+      <tr><td>How do companies convert, and which numbers go on the board?</td><td><code>definition.funnel</code>, <code>definition.metric</code></td><td><a href="#ch07-funnel">Funnels</a>, <a href="#ch07-board">Board KPIs</a></td></tr>
+      <tr><td>What counts as valid data?</td><td><code>definition.data_quality_policy</code></td><td><a href="#ch07-dq-policy">Data quality policy</a></td></tr>
       <tr><td>What stages does a record move through?</td><td><code>definition.journey</code>, <code>definition.stage_machine</code>, <code>definition.stage_map</code></td><td><a href="#ch07-stages">Stage machines and journeys</a></td></tr>
     </table></div>
     <div class="callout"><div><b>Every prompt here stops at proposals.</b> None of them sends mail, spends money or promotes to production. Where an operation could, the prompt says to stop first. A human approval always sits between a proposal and a real effect.</div></div>
@@ -1419,6 +1426,39 @@ spec:
     </ul></div></details>
   </div>
 
+  <div class="card" id="ch07-play-library">
+    <h3>The play library and response time <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> start from five ready-made plays, and measure how fast routed leads get a first touch.</p>
+    <p>Five plays ship inside blueprints as <code>definition.play</code> documents. They show up in <code>plays.catalog</code> and in Studio like any other play, and <code>plays.kpis</code> measures them. Applying a blueprint starts nothing. A person signs and promotes each play, and an owner or admin can pause it. None of them sends anything to a customer.</p>
+    <div class="tbl"><table>
+      <tr><th>Play</th><th>Starts on</th><th>Does</th><th>Blueprints</th></tr>
+      <tr><td><code>routing-sla-escalation</code></td><td>Every 15 minutes, audience <code>lead.sla_breach</code> (60 minutes, last 7 days, 25 per firing)</td><td>One urgent task for the owner, once per assignment. The record stays with the owner</td><td>sales-led, enterprise-abm, full-gtm, agency-services</td></tr>
+      <tr><td><code>dq-nightly-normalize</code></td><td>Daily at 02:30 UTC</td><td><code>identity_dq.normalize_records</code> for contacts then companies, only records created or changed in the last 36 hours</td><td>same four</td></tr>
+      <tr><td><code>dq-weekly-flag</code></td><td>Weekly</td><td><code>identity_dq.flag_invalid_records</code>, only records created or changed in the last 10 days. It marks and changes nothing else</td><td>same four</td></tr>
+      <tr><td><code>abm-account-signal-alert</code></td><td>A <code>gtm.signal.observed</code> event of kind <code>intent_surge</code>, <code>website_visit_pricing</code> or <code>high_intent_visit</code> on a company</td><td>Keeps or gives an owner (customers skipped), a task due in 4 hours, one open task per company</td><td>enterprise-abm, full-gtm</td></tr>
+      <tr><td><code>churn-risk-save</code></td><td>A <code>churn_risk</code> signal on a company</td><td>Keeps or gives an owner (customers included), a task due in 4 hours, one open task per company</td><td>sales-led, full-gtm, plg, agency-services</td></tr>
+    </table></div>
+    <h4>Response time (SLA)</h4>
+    <ul>
+      <li>The clock starts at a routing decision whose outcome is <code>assigned</code>. A record is touched when any logged activity, email or meeting comes after the assignment. The read keeps the latest touch, so it says touched or not. It never claims a response time.</li>
+      <li>The audience <code>lead.sla_breach</code> fans a schedule play out over routed records that nobody touched within <code>slaMinutes</code> (1 to 10080). You change the response time by editing the play.</li>
+      <li><code>routing.kpis</code> returns routed, touched, late and still-waiting counts, per owner, and the 20 oldest late records. The touch rate is blank under 5 records, with the reason. It counts only records the caller may see. In the console it is the <b>Response time</b> section of <b>Operate &gt; Routing</b>.</li>
+      <li><code>identity_dq.normalize_records</code> and <code>identity_dq.flag_invalid_records</code> take an optional <code>changedWithinHours</code>. <code>task.create</code> takes an optional <code>externalId</code>: while a task with that key is open, no second one is made.</li>
+    </ul>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Start from a library play</h4>
+        <div class="code"><pre><code>List the plays in the catalog that came from my blueprint. Take routing-sla-escalation, propose it in dev with a 30 minute response time, and tell me what it will do when a lead waits too long. Then read routing.kpis for the last 14 days.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Calls <code>plays.catalog</code>, proposes the play by change set with <code>slaMinutes: 30</code>, then <code>routing.kpis</code> with <code>windowDays: 14</code>.</dd>
+        <dt>You do</dt><dd>Approve, sign, promote. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
+    <details class="err"><summary>Not included</summary><div><ul>
+      <li>A stored per-territory response time, an escalation chain (manager notice, reassignment), and a first-touch duration. The play creates one task. Reassigning is the org's decision.</li>
+      <li>Play holdouts and audience preview, and ABM list-state or health-policy plays.</li>
+    </ul></div></details>
+  </div>
+
   <div class="card" id="ch07-suppression">
     <h3>Suppression and compliance</h3>
     <p class="goal"><b>Goal:</b> the system never contacts who it must not, and follows the rules of each region.</p>
@@ -1529,6 +1569,7 @@ spec:
     <div class="tbl"><table>
       <tr><th>What you can change</th><th>Where</th></tr>
       <tr><td>A derived KPI over any object</td><td><code>definition.metric</code>: <code>objectType</code>, <code>aggregation</code> (<code>count</code>, <code>sum</code>, <code>avg</code>, <code>min</code>, <code>max</code>, <code>ratio</code>), <code>field</code>, a CEL <code>filter</code>, and for a ratio a <code>numerator</code></td></tr>
+      <tr><td>A KPI for a time window, an as-of date, a cohort or a segment <span class="chip claude">0.2.6</span></td><td><code>metric.evaluate</code> takes <code>asOf</code>, <code>window {from, to}</code>, <code>cohort {from, to, field}</code> and <code>segment</code> (one equality per field). A definition may name its date field with <code>timeField</code> (default <code>created_at</code>). Dates are ISO-8601, and a date alone means midnight UTC. The result describes itself: the definition key and version, <code>asOf</code>, the window and the coverage</td></tr>
       <tr><td>A KPI that is a slice of another (variants must never sum to more than the whole)</td><td><code>parentKey</code>. Check with <code>metric.verify_rollup</code>.</td></tr>
       <tr><td>A data-quality check with a threshold and schedule</td><td><code>definition.data_monitor</code> (active when published; no signature needed)</td></tr>
       <tr><td>Where revenue truth lives (CRM deal amounts, or a warehouse or billing object you have mapped in)</td><td><code>definition.money</code> <code>revenueTruth</code></td></tr>
@@ -1557,6 +1598,131 @@ spec:
       <li>Changing revenue truth rewrites no stored rows. Every report applies the new setting on its next read, so the numbers change at once, after signing.</li>
       <li>A records-based revenue truth must name an existing custom object and its fields.</li>
     </ul></div></details>
+  </div>
+
+  <div class="card" id="ch07-funnel">
+    <h3>Funnels: cohort conversion you can trust <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> your funnel is written in your own stages, and every rate says how many companies are behind it and how many entries have no tracked date.</p>
+    <p>Before 0.2.6 the product could say how many deals sit at or beyond a stage now (<code>journey.funnel</code>). It could not say "of the companies that arrived in March, how many reached a meeting". The cohort funnel can. The company is the spine. A person's entry counts toward their employer. A deal's entry counts toward its company.</p>
+    <div class="tbl"><table>
+      <tr><th>What you can change</th><th>Where</th></tr>
+      <tr><td>The stages, in order (2 to 10)</td><td><code>definition.funnel</code> (key <code>default</code>): <code>stages[]</code>, each one a source of "this company reached this point"</td></tr>
+      <tr><td>What counts as a stage</td><td>One of: <code>journey_stage</code> (a <code>journey</code> and a <code>stage</code>), <code>account_created</code>, <code>qualification_verdict</code> (default verdict <code>qualified</code>), <code>meeting_held</code>, <code>deal_created</code>, <code>deal_won</code></td></tr>
+      <tr><td>How long a cohort must age before it gets a rate</td><td><code>maturityDays</code> (default 90)</td></tr>
+      <tr><td>The smallest sample a rate may show</td><td><code>sampleFloor</code> (default 5)</td></tr>
+      <tr><td>The ways you can cut it</td><td><code>segments</code>: owner, pipeline, country, <code>deal_source</code> (all four by default)</td></tr>
+    </table></div>
+    <p>Every workspace gets a five-stage funnel the first time the API starts: account created, qualified, meeting held, deal created, deal won. Each of the ten blueprints ships its own, tuned from 30 days (DTC) up to 180 days (enterprise ABM). A funnel you already edited under the key <code>default</code> is never overwritten. A funnel is a definition, so a change to prod goes through change set, sign and promote. An unsigned funnel still evaluates and says "Draft definition: not reviewed".</p>
+    <h4>What the numbers mean</h4>
+    <ul>
+      <li>Companies are grouped by the month they first entered stage 1. Only a trustworthy date counts: tracked by GTM OS, or reported by the source.</li>
+      <li>A company whose first date is not trustworthy goes to the <b>Undated</b> cohort. It shows counts and never a rate. Without a date nobody can tell a lost company from one still in flight.</li>
+      <li>A cohort that is too young shows counts and no rate, and says when it matures. A rate over fewer companies than the sample floor is blank, with the reason.</li>
+      <li>Reaching a later stage counts as reaching every earlier one. A deal won with no recorded meeting still counts at the meeting stage.</li>
+      <li>The coverage block always says how many entries have no tracked date, for example "7 of 65 entries have no tracked date".</li>
+      <li><b>Import-shaped dates.</b> If you import old companies, their created date is the import date. When most companies were created on one day, the page shows "Most dates may be import dates". Start the funnel at a journey stage if you need dates you can trust, and map a stage date when you import deals (see <a href="#ch10-import-gate">the import gate</a>).</li>
+    </ul>
+    <p>Where you see it: <b>CRM &gt; Funnel</b>, and a Funnel tile on Mission Control. <code>funnel.evaluate</code> takes <code>key</code>, <code>env</code>, <code>asOf</code>, <code>window</code>, <code>cohort</code> and <code>segment</code>. <code>funnel.list</code> lists the funnels. <code>funnel.accounts</code> lists the companies behind one cell (a stage, cohorts, and <code>which</code>: entered, converted, in flight or undated). Its total always equals the number the funnel shows the same person, and companies they may not see are never listed. The funnel only reads. It writes nothing.</p>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Read the funnel honestly</h4>
+        <div class="code"><pre><code>Evaluate the default funnel for the last 6 months of cohorts. Tell me the weakest mature stage with its sample, which cohorts are too young for a rate, and how many entries have no tracked date. Do not guess a rate that the funnel left blank.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Calls <code>funnel.evaluate</code> and reads <code>cohorts</code>, <code>totals</code> and <code>coverage</code>. For a stage it can list the companies with <code>funnel.accounts</code>.</dd>
+        <dt>You should see</dt><dd>Rates written with their sample ("60% of 10"), blank rates with a reason, and the coverage sentence.</dd></dl>
+      </div>
+      <div class="prompt">
+        <h4>Change the funnel to match your motion</h4>
+        <div class="code"><pre><code>Propose a funnel in dev with four stages: account created, qualified, meeting held, deal won. Use a maturity of 120 days and keep the sample floor at 5. Do not change the default funnel's key. Then evaluate it and tell me whether it is a draft.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Proposes a <code>definition.funnel</code> by change set, then reads it back with <code>funnel.evaluate</code>.</dd>
+        <dt>You do</dt><dd>Approve, sign and promote. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
+    <div class="see">The Funnel page shows the coverage block first, then the all-cohort table, then the month cohorts. A rate never appears without its sample.</div>
+    <details class="err"><summary>Watch out for</summary><div><ul>
+      <li>Stage history is real from 0.2.6. Companies created natively, and syncs from Zoho, Attio or a mapped source, still have no stage date and stay "imported or first seen at sync, true date unknown". That is stated, not hidden.</li>
+      <li>The seeded funnels do not start at a journey stage, because journey keys come from each org's pipeline names. If you want dated stages, edit the funnel to start at one of your journeys.</li>
+      <li>The "deal won" stage uses the deal's close date. A won deal with no close date counts as undated.</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="ch07-board">
+    <h3>Board KPIs: one number, one source <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> know where every board number comes from, and which ones are shown as unavailable on purpose.</p>
+    <p><code>board.evaluate</code> returns the board tiles. Each tile is <code>available</code> with a value and its lineage, or <code>unavailable</code> with what it needs. A tile never shows an estimate.</p>
+    <div class="tbl"><table>
+      <tr><th>Tile</th><th>Source</th><th>Unavailable when</th></tr>
+      <tr><td>Weighted pipeline</td><td>Open deals: value times the win probability of the stage (the <code>weighted_pipeline</code> metric)</td><td>No stage has a win probability, or no open deal has a converted value</td></tr>
+      <tr><td>Stage-to-stage conversion</td><td>The default funnel</td><td>No funnel is published</td></tr>
+      <tr><td>Win rate, by deal source, owner and pipeline</td><td>The <code>win_rate</code> metric</td><td>No deal has been won or lost</td></tr>
+      <tr><td>CAC and CAC payback</td><td>Performance Ads: ad spend divided by new customers credited to ads. Payback also needs your signed unit economics</td><td>No synced ad spend, or no new customer credited to ads</td></tr>
+      <tr><td>Pipeline coverage vs target</td><td>None yet</td><td>Always. It needs a pipeline target</td></tr>
+      <tr><td>Slip rate</td><td>None yet</td><td>Always. It needs close-date change history</td></tr>
+      <tr><td>Forecast accuracy</td><td>None yet</td><td>Always. It needs forecast snapshots</td></tr>
+    </table></div>
+    <ul>
+      <li>Four metrics are seeded in every workspace: <code>win_rate</code>, <code>avg_deal_size</code>, <code>avg_cycle_days</code> and <code>weighted_pipeline</code>. The Sales dashboard reads the same definitions, so <code>metric.evaluate</code>, the dashboard and the board agree. Edit a definition and every screen follows. If you already own a metric under one of these keys, the board uses it only when it has the shape the board needs (a ratio, two averages and a sum over deals). Otherwise that figure says so.</li>
+      <li>A win rate always shows how many deals are behind it. A deal source of "Not recorded" holds deals with no source and deals marked <code>unknown</code>.</li>
+      <li>CAC counts paid acquisition only. Other sales and marketing cost is not in GTM OS.</li>
+      <li>A member who is not an owner or admin gets deal metrics without the deals they may not see.</li>
+      <li><code>board.evaluate</code> takes <code>window</code>, <code>env</code> and <code>include</code> (<code>tiles</code> to pick tiles, <code>segments: false</code> to skip the heaviest part). Where you see it: the Board panel on Mission Control.</li>
+    </ul>
+    <p><b>Every number has lineage.</b> <code>gtm_lineage_trace</code> now explains a metric value (the exact row count it was computed over and a sample of record ids you may see) and a funnel stage. The console shows it as "Why this number". Where lineage cannot be derived, the answer says <code>unverified</code> and why.</p>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Check the board and where each number comes from</h4>
+        <div class="code"><pre><code>Evaluate the board for last quarter. For each tile tell me if it is available, its value and sample, and what it needs if it is not. Then trace the win rate and tell me how many deals it was computed over.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Calls <code>board.evaluate</code>, then <code>gtm_lineage_trace</code> with a <code>metric</code> subject.</dd>
+        <dt>You should see</dt><dd>Four to five available tiles and three that say what they need. No made-up forecast.</dd></dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="ch07-deal-source">
+    <h3>Deal source and first touch <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> every deal says where it came from, so funnels and the board can be cut by source.</p>
+    <p>A deal now has <code>sourceKind</code> (a short snake_case word) and <code>firstTouchSignalId</code> (the signal that first touched it). GTM OS offers these words: <code>unknown</code>, <code>inbound</code>, <code>outbound</code>, <code>referral</code>, <code>partner</code>, <code>event</code>, <code>paid</code>, <code>organic</code>, <code>signal</code>, <code>play</code>, <code>agent</code>. Any other word of the same shape is accepted, so a CRM's own value fits (<code>ORGANIC_SEARCH</code> becomes <code>organic_search</code>). It is never mapped onto a different channel.</p>
+    <div class="tbl"><table>
+      <tr><th>Path</th><th>What is written</th></tr>
+      <tr><td>Console New deal</td><td>The Source you choose, default Unknown</td></tr>
+      <tr><td><code>canon.edit</code> create, from the console, MCP or API</td><td>The <code>sourceKind</code> you give, else <code>unknown</code></td></tr>
+      <tr><td>CSV import</td><td>Map a column to <code>sourceKind</code>. A blank cell gives <code>unknown</code></td></tr>
+      <tr><td>CRM sync: HubSpot, Salesforce, Zoho</td><td>The CRM's own lead source. Attio gives <code>unknown</code>. Pipedrive is not mapped yet</td></tr>
+      <tr><td>Source mapping</td><td><code>gtm.deal</code> has a "Lead source" target</td></tr>
+    </table></div>
+    <ul>
+      <li>A later sync fills a source only when it is empty or <code>unknown</code>. It never replaces one that is recorded.</li>
+      <li>Deals from before 0.2.6 have no source stored. They read as Unknown and nothing is backfilled.</li>
+      <li>Change a source with <code>canon.edit</code>. An agent's edit becomes a proposal. Read and filter it with <code>records.list</code> and <code>records.aggregate</code> on <code>gtm.deal</code>. The funnel and board segment is <code>deal_source</code>.</li>
+      <li>No play or signal path creates a deal yet.</li>
+    </ul>
+  </div>
+
+  <div class="card" id="ch07-dq-policy">
+    <h3>Your data quality policy <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> the checks that decide whether a company or contact record is valid are your rules, signed, instead of fixed constants.</p>
+    <div class="tbl"><table>
+      <tr><th>What you can change</th><th>Where</th></tr>
+      <tr><td>The rules for companies and contacts</td><td><code>definition.data_quality_policy</code> (key <code>default</code>): <code>rules[]</code></td></tr>
+      <tr><td>One rule</td><td><code>id</code>, <code>appliesTo</code> (<code>gtm.account</code> or <code>gtm.contact</code>), a <code>predicate</code>, <code>severity</code> (<code>block</code> or <code>warn</code>), <code>rationale</code>, <code>owner</code></td></tr>
+      <tr><td>The four predicates</td><td><code>required_field</code>; <code>valid_format</code> (email, domain, phone, url, country_code, non_negative_integer); <code>staleness</code> (<code>maxAgeDays</code>, 1 to 3650); <code>match_key</code> (<code>ignore</code> a duplicate key, or <code>block</code> on a key the identity rules left unused)</td></tr>
+      <tr><td>The quality score's denominator</td><td><code>scoredFields</code>, per object (edit through <code>identity_dq.dq_policy.propose</code>)</td></tr>
+      <tr><td>Compliance rules the import gate should apply</td><td><code>complianceRuleRefs</code>: a <code>definition.compliance_policy</code> key and optionally a rule id</td></tr>
+    </table></div>
+    <p>Read the effective policy with <code>identity_dq.dq_policy.get</code>. It returns what applies now, the signed and dev versions, and a draft an editor starts from. <code>identity_dq.dq_policy.propose</code> takes the whole policy and writes a change set in dev. Nothing is live. A different person submits it, signs it and promotes it, as with every definition. The console page is <b>Settings &gt; Data quality policy</b>.</p>
+    <ul>
+      <li>With no signed policy the built-in checks apply, and every report says "built-in rules". Only the signed version in prod is read. A draft changes nothing.</li>
+      <li>A signed rule on a field replaces the built-in check for that field and check. A policy never drops a built-in check by leaving it out. To relax a check, sign a rule for the same field with severity <code>warn</code>. Relaxing the identifying field (<code>name</code> for companies, <code>displayName</code> for contacts) is allowed and comes with a warning.</li>
+      <li>The same policy feeds the Data Quality engine and the <a href="#ch10-import-gate">import gate</a>.</li>
+      <li>Limit: signed <code>match_key</code> choices apply to the duplicate scan and merge proposals. The import gate's duplicate check does not read them yet.</li>
+    </ul>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Make a check advisory</h4>
+        <div class="code"><pre><code>Show me the effective data quality policy for contacts. Then propose a policy in dev that turns the phone format check into a warning (not a block), with the reason "phone is optional in our CRM" and me as owner. Do not sign or promote anything.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Reads <code>identity_dq.dq_policy.get</code>, then calls <code>identity_dq.dq_policy.propose</code> with a <code>valid_format</code> rule for the phone field and severity <code>warn</code>.</dd>
+        <dt>You do</dt><dd>A different person approves and signs it, then promotes it. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
   </div>
 
   <div class="card" id="ch07-stages">
@@ -2539,6 +2705,46 @@ spec:
   </div>
 
   <!-- ===================================================== SIGNALS ===================================================== -->
+  <div class="card" id="ch09-enrichment-catalog">
+    <h3>Enrichment steps and triggers <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> know which steps the enrichment engine runs besides the waterfall, which triggers start them, and how to switch each one off.</p>
+    <p>Three steps ship as versioned data. All follow one rule: <b>unknown stays unknown</b>. A step writes a value only when its rules, or the provider, say so outright.</p>
+    <div class="tbl"><table>
+      <tr><th>Step</th><th>Cost</th><th>Does</th><th>When it cannot tell</th></tr>
+      <tr><td><code>title_normalize</code></td><td>Free</td><td>Writes <code>custom.titleNormalized</code></td><td>A blank title writes nothing</td></tr>
+      <tr><td><code>seniority_classify</code></td><td>Free</td><td>Writes <code>custom.seniority</code> by named rules (founder, c_level, vp, head, director, manager, lead, senior, entry, intern)</td><td>A title no rule knows gets no band. "Product Owner" is not a founder. "Assistant to the CEO" is not c-level</td></tr>
+      <tr><td><code>job_change_detect</code></td><td>Metered</td><td>Asks a person provider where the contact works now and compares</td><td>A profile that cannot be compared stays unknown</td></tr>
+    </table></div>
+    <ul>
+      <li>Free steps run with <code>enrichment.run_steps</code>: no provider call and no spend. They fill empty fields and never replace a value a person set.</li>
+      <li>The job check runs with <code>enrichment.enrich_contacts { steps: ["job_change_detect"] }</code>. A proven move of employer, or of title at the same employer, becomes one unverified <code>job_change</code> signal with its evidence. The contact record is never rewritten. The paid-once cache, the run cap and the monthly cap all apply.</li>
+      <li><code>enrichment.catalog.get</code> returns the steps, the triggers with their status, the policy and the coverage.</li>
+    </ul>
+    <h4>Triggers are play templates</h4>
+    <div class="tbl"><table>
+      <tr><th>Trigger</th><th>Fires on</th><th>Runs</th></tr>
+      <tr><td><code>enrich-on-signal</code></td><td>A lead signal (<code>form_submitted</code>, <code>product_signup</code>, <code>discovery_call_booked</code>)</td><td><code>run_steps</code>, then the waterfall. Metered</td></tr>
+      <tr><td><code>job-change-watch</code></td><td>Daily</td><td><code>enrich_contacts</code> with <code>job_change_detect</code>, 25 contacts, 1 USD. Metered</td></tr>
+      <tr><td><code>refresh-stale-weekly</code></td><td>Weekly</td><td><code>refresh_stale</code> for contacts and accounts, 50 each, 2 USD each. Metered</td></tr>
+      <tr><td><code>title-seniority-sweep</code></td><td>Daily</td><td><code>run_steps</code>, 100 contacts. Free</td></tr>
+    </table></div>
+    <p>Each template comes with its YAML. Adopt one with <code>gtm apply</code>. Every metered template needs a monthly cap on the organization: with no cap the run does nothing and spends nothing. A trigger that is switched off does the same.</p>
+    <h4>Switches</h4>
+    <p><code>enrichment.policy.set</code> (owner or admin, signed, agents cannot call it) takes <code>disabledSteps</code>, <code>disabledTriggers</code> and <code>lessConfidentOverwrite</code> (<code>allow</code> by default, or <code>human_only</code>). With <code>human_only</code>, replacing an enriched value with a less confident one needs a person's approval, even for a proposal made earlier. The Enrichment page shows steps, triggers, status, coverage and the switches.</p>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Add a job-change watch safely</h4>
+        <div class="code"><pre><code>Show me the enrichment catalog and which triggers are running. Quote what job-change-watch would cost per run, tell me whether a monthly cap is set, and propose the trigger in dev. Do not spend anything.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Reads <code>enrichment.catalog.get</code> and the cap, quotes with <code>capability.quote</code>, and proposes the play YAML.</dd>
+        <dt>You do</dt><dd>Set the monthly cap if it is missing, then approve, sign and promote. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
+    <details class="err"><summary>Watch out for</summary><div><ul>
+      <li>A move from A to B and back to A gives no second signal for the return to A.</li>
+      <li>The job check uses whatever person capability is bound (<code>enrich.person</code>). Nothing is written back to a CRM.</li>
+    </ul></div></details>
+  </div>
+
   <div class="card" id="ch09-signals">
     <h3>Signals</h3>
     <p class="goal"><b>Goal:</b> the right signals count, from the right sources, with the right weight, and a person has verified the ones that need it.</p>
@@ -2824,7 +3030,7 @@ spec:
       <li><b>CRM &gt; Import</b>. <b>What are you importing?</b> Companies, contacts or deals.</li>
       <li>Choose the file or paste CSV. The first row is read as headers. Comma, semicolon and tab all work.</li>
       <li><b>Map your columns</b>. Each CSV column goes to a field, to <b>Do not import</b>, or to a new custom field. Map at least one column to continue.</li>
-      <li><span class="ui">Preview</span>. Every row reads Create, Update, Held for review, or an error. Nothing is written.</li>
+      <li><span class="ui">Preview</span>. Every row reads Create, Update, Held for review, Blocked, or an error. Nothing is written. Since 0.2.6 this step is a review queue with a summary sentence (see <a href="#ch10-import-gate">the import gate</a>).</li>
       <li><span class="ui">Commit</span>. Owner or admin by default.</li>
     </ol>
     <h4>The rules that decide what happens</h4>
@@ -2856,6 +3062,60 @@ spec:
       <li>Rows stay unlinked: the company column does not match any account by website or name. Import or create the companies first.</li>
       <li>More than 1,000 rows: split the file or let the console chunk it.</li>
     </ul></div></details>
+  </div>
+
+  <div class="card" id="ch10-import-gate">
+    <h3>The import gate and the review queue <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> nothing bad reaches your CRM. Every imported row passes three checks first. A row that fails is held back with a plain reason, and a person decides what happens to it.</p>
+    <p>This changes the wizard in <a href="#ch10-import">the CSV import card</a>. The Preview step is now a review queue.</p>
+    <div class="tbl"><table>
+      <tr><th>Stage</th><th>What runs</th></tr>
+      <tr><td>1 Validate</td><td>Emails are saved in lower case and country codes in upper case. Then each row is checked against your effective <a href="#ch07-dq-policy">data quality policy</a></td></tr>
+      <tr><td>2 Dedupe</td><td>The exact match key, a duplicate of an earlier row in the file, and the identity resolver's near-duplicate hold (with score and reason)</td></tr>
+      <tr><td>3 Compliance (contacts)</td><td>The same rules as the send gate: the do-not-contact flag, suppression rows and rules, consent per channel, and the compliance rules your data quality policy references</td></tr>
+    </table></div>
+    <h4>What you see</h4>
+    <ul>
+      <li>One summary sentence, for example: "3,880 clean, 240 normalized, 61 held for a decision, 22 blocked (19 on the do-not-contact list, 3 invalid domain), 7 overridden".</li>
+      <li>The held rows grouped by reason: compliance blocks first, then other blocks, then near-duplicates. Fix a row in place, skip it, or let it in with a reason. Each group can be skipped or let in as a whole.</li>
+      <li>Import stays off until every held row has a decision. "Commit clean rows only" imports the rows that pass and leaves the rest saved. A file of any size is one import with one summary.</li>
+      <li>The staged rows list is at <code>/org/&lt;orgId&gt;/import/review</code>, and a batches index lists your imports.</li>
+    </ul>
+    <h4>What each decision may do</h4>
+    <div class="tbl"><table>
+      <tr><th>Row</th><th>Fix</th><th>Skip</th><th>Import anyway</th></tr>
+      <tr><td><b>Compliance block</b>: do-not-contact, suppression, consent denied or withdrawn, a referenced compliance rule</td><td>No</td><td>Yes</td><td><b>Never.</b> No role and no reason can override it</td></tr>
+      <tr><td>Data quality block</td><td>Yes</td><td>Yes</td><td>Owner or admin only, naming the rules they saw, with a reason of 10 or more characters. It is attributed to the person</td></tr>
+      <tr><td>Duplicate in the file, hidden match</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+      <tr><td>Held near-duplicate</td><td>No</td><td>No</td><td>No. Decide it under <b>Operate &gt; Needs a human</b> (New record or Same record) <span class="chip human">Needs a human</span></td></tr>
+    </table></div>
+    <p>Behind the screen are two operations. <code>import.review.list</code> returns the batches, or one batch with its counts, <code>blockedByRule</code> and rows. <code>import.review.decide</code> takes <code>fix</code> (corrected values, and the whole gate runs again), <code>skip</code> or <code>override</code>. A member can fix and skip only when <code>memberBulkWrites</code> is on, and can never override. An agent's decision becomes an approval a person approves, and an agent's <code>canon.import</code> commit proposal carries a preview of what the gate would do.</p>
+    <h4>Rules to remember</h4>
+    <ul>
+      <li><b>Behaviour change with no signed policy.</b> The built-in checks now block a filled-in but badly formed email, domain, phone, URL or country code. An empty optional cell never blocks. To loosen a check, sign a policy with that rule set to <code>warn</code>.</li>
+      <li>A suppressed or withdrawn person is not updated by an import either. Merging only the non-contact fields of such a person is not built. Edit the existing record directly.</li>
+      <li>Held rows are personal data. Only the person who imported the file, and owners and admins, see them. A row nobody decides loses its values after 30 days. A decided row keeps no values. Erasing a person also removes them from held rows.</li>
+      <li>Large files go in chunks of 1,000 rows (200 with a company column) under one <code>batchId</code>. A repeat of a record from an earlier chunk shows as new in the preview and is merged into the first record at commit, never a second record.</li>
+      <li>The compliance stage covers <code>canon.import</code> only. Contacts created by CRM sync, direct edits or signals are not gated.</li>
+    </ul>
+    <h4>Dates for the funnel</h4>
+    <p>For a deal import, map a column to <b>Stage entered (date)</b> (<code>stageEnteredAt</code>). The funnel then counts those deals as dated. The wizard suggests it for headers such as "Stage entered" or "Last stage change date". Write <code>YYYY-MM-DD</code>: an ambiguous date such as 03/04/2024 is refused, and so are two-digit years, plain numbers, dates before 1990 and future dates. Only deals take a stage date, and only a new deal. An import never moves an existing deal. Without a date column the deals count as having no tracked date.</p>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Import a messy CSV through the gate</h4>
+        <div class="code"><pre><code>I will paste a CSV of 4,000 contacts. Map the columns, link contacts to companies by website, and run a preview. Tell me the gate summary: how many are clean, normalized, held and blocked, and the blocked count by rule. List the compliance blocks separately. Do not commit.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>canon.import</code> with <code>mode: "preview"</code> and a mapping, then reads <code>gate</code> in the result.</dd>
+        <dt>You should see</dt><dd>The counts above and the blocked rows by rule. Compliance blocks cannot be overridden.</dd>
+        <dt>You do</dt><dd>Review in the console queue. An owner or admin lets in anything that should come in. Claude's commit is a proposal a different person approves.</dd></dl>
+      </div>
+      <div class="prompt">
+        <h4>Review what the gate held back</h4>
+        <div class="code"><pre><code>List the import batches that still have rows waiting for a decision. For the newest one, show the counts and the blocked rows by rule. Do not decide anything.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Calls <code>import.review.list</code> with no <code>batchId</code>, then with the batch id.</dd>
+        <dt>You do</dt><dd>Decide in <b>CRM &gt; Import</b> review. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
+    <div class="see">Nothing a gate blocked is in your CRM. A blocked row is in the staged rows list with its reasons. After a commit, <code>import.review.list</code> shows the same counts the preview did.</div>
   </div>
 
   <!-- MAPPING -->
@@ -3287,6 +3547,62 @@ spec:
   </div>
 
   <!-- EVALS -->
+  <div class="card" id="ch11-recommendations">
+    <h3>Recommendations and bounded missions <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> turn a funnel finding into one owned, tiered action, and check later whether it moved the number.</p>
+    <p>A small set of rules reads <code>funnel.evaluate</code> and produces a <b>recommendation</b>: a finding with its evidence, one proposed action, the risk tier of that action, a named owner and a state. The loop is: generate, accept, act through an approval, measure about 30 days later.</p>
+    <div class="tbl"><table>
+      <tr><th>Operation</th><th>Who</th><th>Does</th></tr>
+      <tr><td><code>recommendation.generate</code></td><td>Owner, admin</td><td>Runs the rules over a funnel (<code>funnelKey</code>). Returns what it created, what already existed, and notes</td></tr>
+      <tr><td><code>recommendation.list</code>, <code>recommendation.get</code></td><td>Any member</td><td>Read</td></tr>
+      <tr><td><code>recommendation.accept</code></td><td>Its owner, owner, admin. <b>Not an agent</b></td><td>proposed to accepted</td></tr>
+      <tr><td><code>recommendation.dismiss</code></td><td>Its owner, owner, admin. <b>Not an agent</b></td><td>Needs a reason of at least 3 characters</td></tr>
+      <tr><td><code>recommendation.act</code></td><td>Its owner, owner, admin, an agent</td><td>accepted to acted, through an approval a different person approves</td></tr>
+      <tr><td><code>recommendation.start_mission</code></td><td>Its owner, owner, admin. <b>Not an agent</b></td><td>Hands the finding to one agent as a bounded mission</td></tr>
+      <tr><td><code>recommendation.measure</code></td><td>Owner, admin</td><td>acted to measured, when due. A daily job also does this</td></tr>
+    </table></div>
+    <h4>What it says, and what it refuses to say</h4>
+    <ul>
+      <li>Two seed rules ship: <code>funnel.stalled-stage</code> and <code>funnel.weakest-mature-stage</code>. A stage converting at 80 percent or more is never flagged. Both propose one internal task for the owner (<code>task.create</code>, tier T1).</li>
+      <li>Rules are data. Every number in a sentence comes from the funnel result. A sentence makes no promise about what an action will achieve.</li>
+      <li>Too few companies behind a rate: "insufficient sample", and nothing is created. No cohort matured yet: the note says when. No organization owner: "Needs an owner".</li>
+      <li>A funnel that looks import-shaped, or whose definition is a draft, still produces a recommendation, with that caveat on the card.</li>
+      <li>One recommendation per finding. A proposed one expires after 45 days, an accepted one nobody acted on after 30.</li>
+    </ul>
+    <h4>Act, and measure</h4>
+    <ul>
+      <li>Acting creates an approval stamped with the tier of the proposed operation. The proposer cannot approve it. With Dry Mode on, an outward operation is held as a draft and nothing is recorded as acted.</li>
+      <li>Measuring reads the same funnel again over the same cohorts and writes the before and after next to the finding. It says that a change is not proof that the action caused it. If the funnel definition changed in between, the outcome is "inconclusive" with no delta.</li>
+    </ul>
+    <h4>Start a bounded mission instead</h4>
+    <p>Some findings are better studied than acted on blind. <code>recommendation.start_mission { id, agentPrincipalId }</code> hands an accepted T0 or T1 recommendation to one agent. The agent studies the finding and proposes. It changes nothing itself.</p>
+    <ul>
+      <li>The agent must be active and have a published definition with a real budget. The mission inherits the agent's step cap, cost ceiling and deadline and cannot raise them.</li>
+      <li>Starting runs nothing and spends nothing. The mission begins in <code>intake</code>. A person approves its plan, and the person who started it cannot. Everything it proposes goes through the normal gate as an approval or a draft.</li>
+      <li>T2 and above are refused here. Use <code>recommendation.act</code>, which goes through an approval at its own tier.</li>
+    </ul>
+    <p>Where you see it: <b>Recommendations</b> in the CRM menu, a card on Mission Control, and a page per recommendation, with "Start a bounded mission" next to Act and Dismiss.</p>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Find the weakest step and decide what to do</h4>
+        <div class="code"><pre><code>Check the default funnel and generate recommendations. Show me each one: the finding with its sample, the proposed action and its tier, the owner, and any caveat. Do not accept or act on anything.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Calls <code>recommendation.generate</code> with <code>funnelKey: "default"</code>, then <code>recommendation.list</code>. It cannot accept or dismiss.</dd>
+        <dt>You do</dt><dd>The owner accepts or dismisses (with a reason). <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+      <div class="prompt">
+        <h4>Hand an accepted finding to an agent</h4>
+        <div class="code"><pre><code>List my active agents and their bounds. For the accepted recommendation &lt;id&gt;, tell me which agent has a published definition with a budget, and what steps, cost and deadline it would be held to. Do not start the mission.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Reads <code>agent.list</code>, the agent definitions and <code>recommendation.get</code>. Starting is a human call.</dd>
+        <dt>You do</dt><dd>Click <b>Start a bounded mission</b>. A different person approves the plan. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
+    <details class="err"><summary>Limits</summary><div><ul>
+      <li>The rules ship with the product. You cannot edit them per organization yet, and only funnel findings produce recommendations.</li>
+      <li>No estimated impact, cost or numeric confidence is shown, because nothing backs them.</li>
+      <li>The recommendation page shows aggregate counts and cohort months. Use <code>funnel.accounts</code> to list the companies behind a finding.</li>
+    </ul></div></details>
+  </div>
+
   <div class="card" id="ch11-evals">
     <h3>Evals: prove an agent behaves before you widen it</h3>
     <p class="goal"><b>Goal:</b> a run that breaks a safety rule is marked failed, not completed.</p>
@@ -3381,6 +3697,7 @@ spec:
       <tr><td>Safety switches and policies</td><td><code>policy.set_dry_mode</code>, <code>policy.engine_modes.set</code>, <code>policy.guardrails.set</code>, <code>policy.claims.set</code>, <code>privacy.settings.set</code>, <code>score.learning_settings.set</code></td></tr>
       <tr><td>Business settings a person owns</td><td><code>brand.set</code>, <code>money.settings.set</code>, <code>deal_type.set</code>, <code>reply_labels.set</code>, <code>buying_roles.set</code>, <code>territory.upsert</code>, <code>routing.member_settings.set</code></td></tr>
       <tr><td>Go live</td><td><code>onboarding.launch</code></td></tr>
+      <tr><td>Recommendations and unknown outcomes (0.2.6)</td><td><code>recommendation.accept</code>, <code>recommendation.dismiss</code>, <code>recommendation.start_mission</code>, <code>effect.reconcile</code></td></tr>
       <tr><td>Browser consent</td><td><code>composio.oauth_start</code>, <code>composio.connect</code>, <code>connected_account.disconnect</code>, and the Google, Microsoft and Slack sign-ins. Claude gives you the link.</td></tr>
       <tr><td>Irreversible</td><td><code>org.offboard</code></td></tr>
     </table></div>
@@ -3414,6 +3731,109 @@ spec:
       <li>Read the result later with <code>gtm_approvals</code> or <code>runtime.get_approval</code>, and the trail with <code>gtm_lineage</code>.</li>
     </ol>
     <div class="see"><code>runtime.get_approval</code> returns one approval with its audit events and attribution: the proposer, the agent, the human it acted for, the approver.</div>
+  </div>
+
+  <div class="card" id="ch12-tiers">
+    <h3>Risk tiers T0 to T4 <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> know how heavy the control is on any operation, and why.</p>
+    <p>Every operation has a risk tier. It is worked out from facts the operation already declares: its class (Q, D, T, E, M), its effect class, and when known how many records the call touches and which transport it uses. The tier adds a third axis next to the autonomy ladder and the gate policy. It can only add controls. It never grants anything.</p>
+    <div class="tbl"><table>
+      <tr><th>Tier</th><th>Meaning</th><th>Control</th></tr>
+      <tr><td>T0</td><td>Reversible, internal, no outside party</td><td>Runs and is audited. Rolled back on failure</td></tr>
+      <tr><td>T1</td><td>Reversible: an external read or an internal write</td><td>Runs, audited and notified</td></tr>
+      <tr><td>T2</td><td>Outward-facing or hard to undo, one record</td><td>Approve before. Time-boxed. Justification and preview</td></tr>
+      <tr><td>T3</td><td>Bulk, config or ontology, destructive, or unknown</td><td>Approve before, by a named person who is not the proposer. No envelope or policy can approve it</td></tr>
+      <tr><td>T4</td><td>Never for agents</td><td>No agent path, even with approval</td></tr>
+    </table></div>
+    <ul>
+      <li>The base tier follows the effect: pure computation T0, external read T1, internal write T1, external write T2, destructive T3. Class E is never below T2. Class M is never below T3.</li>
+      <li>A write that touches 50 or more records goes up one tier, never past T3. An unknown count adds nothing. A malformed count on a write fails closed to T3.</li>
+      <li>T4 is the set of operations an agent is already refused today: keys, roles, gate and autonomy policy, envelopes, delegations, SSO, the org master key, org offboarding. See <a href="#ch12-human-only">the human-only list</a>. Purge and pipeline admin are T3, not T4.</li>
+      <li>A destructive operation through a non-native transport adds one tier, capped at T3. Today it changes nothing, because a destructive operation is already T3, and no operation declares its transport yet.</li>
+      <li>Every approval is stamped with its tier. The tier is also on the <a href="#ch12-authority">agent authority page</a>.</li>
+    </ul>
+    <p><b>The flag.</b> <code>GTMOS_RISK_TIER_TIGHTEN</code> is off by default. With it on, an operation at T2 or above that would run on its own is held as an approval instead. It only turns an auto <code>allow</code> into <code>require_approval</code>. It never touches <code>deny</code>, <code>draft</code> or an approval that is already required. Leave it off unless you have decided to use it.</p>
+    <details class="err"><summary>What is not built</summary><div><ul>
+      <li>The budget and blast-radius check at T3 is not built. The approver sees the count and the spend and decides. Nothing blocks on a limit.</li>
+      <li>Bulk size is declared for <code>canon.edit_many</code>, <code>canon.import</code> (commit) and <code>canon.purge</code>. Bulk outreach sends and other bulk paths do not declare a size yet.</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="ch12-justification">
+    <h3>What an approver sees, and justification <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> approve from one screen, and make agents say why.</p>
+    <p>Every new approval is stamped when it is proposed: <code>risk_tier</code>, <code>effect_class</code>, how many records (<code>affected_count</code> and a short summary), the transport, the spend, the proposer's <code>justification</code>, and a plain preview of the payload (the recipient and content for a send). A value the operation does not declare is left empty and shown as "Not recorded". The stamp cannot be changed after it is written. Approvals made before 0.2.6 look as before.</p>
+    <p>The approval page has a "Before you decide" card with the expiry first. The list shows a line like <code>Tier 2 · 1 record · Expires in 6 days</code>. <code>runtime.get_approval</code> and <code>gtm_approvals</code> return the same fields.</p>
+    <div class="callout"><div><b>Justification is optional in 0.2.6 and required in 0.2.7.</b> An agent that proposes something at T2 or above should say why. In 0.2.6 this runs in grace mode: <code>GTMOS_JUSTIFICATION_ENFORCE</code> is off, the proposal is recorded, and the screens say "No reason given by the agent". Set the flag to <code>1</code> or <code>true</code> to require it now. A proposal without a reason of at least 10 non-space characters is then refused (<code>VALIDATION_FAILED</code>) and nothing is written. In 0.2.7 the default turns on. Write your prompts and agent skills to include a reason now.</div></div>
+    <ul>
+      <li>Over MCP pass <code>justification</code> to <code>gtm_act</code>. Over REST send the <code>x-gtmos-justification</code> header. In the agent runtime the decision's rationale is used. A human may always leave it out.</li>
+      <li>It is an attestation, not a check. Nothing verifies the words are true.</li>
+      <li>These rules are always on, flag or no flag: an agent's T4 proposal is refused; a T3 or T4 approval is never cleared by a gate policy or an envelope; <code>envelope.grant</code> refuses an operations list that covers a T3 or higher operation.</li>
+      <li>A proposal made outside an operation (a job or a script) is not stamped.</li>
+    </ul>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Make Claude give a reason</h4>
+        <div class="code"><pre><code>From now on, when you propose any change that sends something, spends money or edits many records, pass a justification to gtm_act in one or two plain sentences: what you are doing and why. Then propose the change.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Adds <code>justification</code> to each <code>gtm_act</code> call. The approver reads it on the approval page.</dd>
+        <dt>You should see</dt><dd>The reason in the "Before you decide" card, not "No reason given by the agent".</dd></dl>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="ch12-reconcile">
+    <h3>When an outcome is unknown <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> an approved write that timed out is never run a second time without a person checking whether it landed.</p>
+    <p>An approved outside write can time out or come back uncertain. The approval stays in <code>executing</code> and its outcome is marked <b>unknown</b>. It is visible, counted, and it blocks a retry. An effect that started and never reported back counts as unknown after 5 minutes.</p>
+    <ul>
+      <li>Three layers refuse the retry: the approval cannot run again, a new proposal with the same action and payload is refused, and the trust gate denies the runtime carrier operations (<code>effect_outcome_unknown</code>). A different payload is a different action. Once settled, the same action may be proposed again.</li>
+      <li><code>effect.unknown_outcomes</code> lists the unknown set. <code>effect.reconcile_check</code> asks the provider whether the write landed. It is a read and changes nothing. Both are open to agents.</li>
+      <li><code>effect.reconcile</code> settles the approval to executed or failed, once. <span class="chip human">Needs a human</span> Owner or admin only, never an agent. Use <code>provider</code> mode to take the provider's definite answer, or <code>human</code> mode with an outcome (<code>landed</code> or <code>did_not_land</code>) and a reason of at least 10 characters. A human answer that contradicts a definite provider answer is refused. A settled approval is final.</li>
+      <li>Google Ads and Meta ads changes can be checked: the lookup reads the campaign back and compares its budget and status. A failed lookup is <code>unknown</code>, never a verdict. No CRM connector can look up a write yet, so an uncertain CRM write-back is settled by a person.</li>
+      <li>Resolving an uncertain outreach message settles the approval behind it, but only when an owner or admin does it with a reason. A member resolves the message, and the approval stays unknown until an owner or admin settles it.</li>
+    </ul>
+    <p>Where you see it: a <b>Needs reconciling</b> bucket on <b>Approvals</b> (shown only while something is unsettled), a card on the approval page with "Ask the provider", "It landed" and "It did not land", and a count on Mission Control.</p>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Find and check unknown outcomes</h4>
+        <div class="code"><pre><code>List every approval whose outcome is unknown. For each, ask the provider whether it landed if that is possible, and tell me what it said in plain words. Do not settle anything and do not propose the action again.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Calls <code>effect.unknown_outcomes</code>, then <code>effect.reconcile_check</code> for each. It cannot settle.</dd>
+        <dt>You do</dt><dd>An owner or admin settles each one in <b>Approvals &gt; Needs reconciling</b>. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
+    <details class="err"><summary>Watch out for</summary><div><ul>
+      <li>The retry block is per action type and payload. A different payload, or a different action type that does the same write, is not caught.</li>
+      <li>A provider answer of <code>landed</code> settles the approval but does not replay the local bookkeeping. The next performance sync reads the platform.</li>
+    </ul></div></details>
+  </div>
+
+  <div class="card" id="ch12-authority">
+    <h3>What can this agent do without a person? <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> see, for each agent, what it can do alone today, and be sure the answer matches what the runtime really does.</p>
+    <p><code>governance.agent_authority</code> is a read. For each agent it returns the operations it can reach, the tier of each, and the outcome the pipeline would apply today. Pass <code>agentPrincipalId</code> for one agent. Owners and admins only.</p>
+    <div class="tbl"><table>
+      <tr><th>Outcome</th><th>Meaning</th></tr>
+      <tr><td><code>alone</code></td><td>The disposition is allow. It runs now</td></tr>
+      <tr><td><code>alone_via_envelope</code>, <code>alone_via_policy</code></td><td>Proposed, then approved by an active envelope or a standing gate policy rule</td></tr>
+      <tr><td><code>person</code></td><td>Proposed. A named person must approve</td></tr>
+      <tr><td><code>draft</code></td><td>Only a draft is made (Dry Mode, a draft rule)</td></tr>
+      <tr><td><code>never</code></td><td>Human only, tier T4, a missing scope, a deny rule, or the agent is switched off</td></tr>
+    </table></div>
+    <ul>
+      <li>Where the answer depends on the call itself (a first message to a contact never reached before, a gate rule that matches call details, an envelope budget), it says so in plain words. It never guesses.</li>
+      <li>It also lists the envelopes granted to the agent with what each covers, its budget and spend, and the engines the agent reaches with their dry or live mode and autonomy level. A second section lists agents reached through an API key.</li>
+      <li>The page uses the pipeline's own policy functions in the pipeline's order. A live test calls every reachable operation as the agent and checks the page was right.</li>
+      <li><code>envelope.grant</code> refuses a grantee of kind <code>agent</code>. The approval step looks envelopes up by user, so such an envelope would approve nothing.</li>
+    </ul>
+    <p>Where you see it: <b>Settings &gt; Safety &gt; Agent authority</b>. Each agent gets one sentence ("can act on its own for: ...; needs a person for: ...; never: ..."), operations grouped by tier, and its envelopes with a Revoke button (<code>envelope.revoke</code>).</p>
+    <div class="prompts">
+      <div class="prompt">
+        <h4>Audit what an agent can do alone</h4>
+        <div class="code"><pre><code>For the agent &lt;name&gt;, read its authority. Tell me every operation it can run on its own, grouped by tier, which envelopes it holds and what is left in each, and anything it can reach at T3 that I should look at.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Calls <code>governance.agent_authority</code> with the agent's principal id (from <code>agent.list</code>).</dd>
+        <dt>You should see</dt><dd>A list that matches Settings &gt; Safety &gt; Agent authority. If a surprise shows up, revoke the envelope or change the gate policy yourself. <span class="chip human">Needs a human</span></dd></dl>
+      </div>
+    </div>
   </div>
 
   <div class="card" id="ch12-ladder">
@@ -4031,9 +4451,34 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
     </ul>
   </div>
 
+  <div class="card" id="ch14-harness-status">
+    <h3>Is your harness out of date? <span class="chip claude">New in 0.2.6</span></h3>
+    <p class="goal"><b>Goal:</b> find out when an update changed the operations after <code>gtm init</code> wrote your project files, before a skill calls something that is gone.</p>
+    <p><code>harness.status</code> is a read with no input. It returns <code>operationsHash</code> (the same value <code>gtm init</code> stamps and <code>gtm doctor</code> recomputes), <code>operationCount</code>, <code>instanceVersion</code>, <code>expectedSkillsTag</code> (the gtmos-skills release the operation list is documented by), <code>firstWinOperation</code> and the first-win <code>milestones</code>. It holds no secret and no organization data. Any signed-in person or agent key can read it.</p>
+    <ul>
+      <li>Compare <code>operationsHash</code> with the stamp in <code>.claude/gtmos-instance.json</code>. If they differ, run <code>gtm init --refresh</code>. Use <code>gtm_describe</code> to confirm an operation exists before you rely on it.</li>
+      <li>After a successful command inside a <code>gtm init</code> workspace, the CLI prints one line when it pins a newer gtmos-skills release than the workspace was stamped with: <code>Run: gtm init --refresh</code>. It makes no network call. It stays quiet in CI, with <code>--json</code>, and with <code>GTMOS_NO_UPDATE_NOTIFIER</code>.</li>
+    </ul>
+    <div class="note"><b>Skills catch up later.</b> The vendored skills (gtmos-skills v0.3.0) do not yet mention <code>justification</code>, and a contract test found about 50 names in them that are not operations of this product. A gtmos-skills release will fix both. Until then, trust <code>gtm_describe</code> over a skill's operation name.</div>
+  </div>
+
   <div class="card" id="ch14-byoc">
     <h3>Your own cloud (BYOC)</h3>
-    <p><code>gtm byoc plan|apply|destroy --cloud aws --region &lt;region&gt;</code> provisions one GTM OS instance in your own AWS account with Terraform (or OpenTofu 1.6 or later): managed Postgres, the four services, an object bucket, Secrets Manager and a load balancer. <b>Honest scope:</b> AWS is the only cloud. <code>plan</code> works offline without cloud credentials and shows what it would create. <code>apply</code> and <code>destroy</code> refuse to run without <code>--yes</code>, real credentials and Terraform. The installer and its dry run are built and tested. A live deployment into a real AWS account has not been done yet.</p>
+    <p><code>gtm byoc plan|apply|destroy --cloud aws|gcp|azure</code> provisions one GTM OS instance in your own cloud account with Terraform (or OpenTofu 1.6 or later). <code>--cloud</code> defaults to <code>aws</code>. <code>plan</code> works offline without cloud credentials and shows what it would create. <code>apply</code> and <code>destroy</code> refuse to run without <code>--yes</code>, real credentials and Terraform.</p>
+    <div class="tbl"><table>
+      <tr><th>Cloud</th><th>What it builds</th><th>Status</th></tr>
+      <tr><td>AWS</td><td>Managed Postgres, the four services, an object bucket, Secrets Manager and a load balancer</td><td>Installer and dry run built and tested. A live deployment into a real account has not been done yet</td></tr>
+      <tr><td>GCP <span class="chip claude">0.2.6</span></td><td>Cloud SQL Postgres 16 with pgvector, Cloud Run for api, console and mcp, a worker pool, a migrate job, an external load balancer, Cloud Storage, Secret Manager</td><td><b>Not live-verified.</b> Operator certification is pending</td></tr>
+      <tr><td>Azure <span class="chip claude">0.2.6</span></td><td>PostgreSQL Flexible Server 16, Container Apps, a migrate job, Front Door, Blob Storage, Key Vault</td><td><b>Not live-verified.</b> Operator certification is pending</td></tr>
+    </table></div>
+    <ul>
+      <li>Neither new cloud has been planned or applied against a real account. Treat both as preview. Run <code>terraform validate</code> and <code>terraform test</code> in the cloud's folder before you trust it.</li>
+      <li><code>gtmos_live</code> is passed to the services and sets <code>GTMOS_LIVE</code>. The default is <code>false</code>. <code>--live</code> sets it to true. A later apply without the flag keeps the earlier value.</li>
+      <li>Remote state is opt-in with <code>--remote-state</code> and the <code>--state-*</code> flags. No credentials are written to disk.</li>
+      <li>HTTPS: GCP takes a <code>domain</code> and AWS takes a <code>certificate_arn</code>. Without one the plan prints a DEMO ONLY warning.</li>
+      <li>The migrate step is printed, not run. Run it right after <code>apply</code>. On managed Postgres the migrations create roles that some services refuse for a non-superuser admin, so check the migrate log on the first deploy.</li>
+      <li>Pin a version or an image digest. The <code>stable</code> tag moves.</li>
+    </ul>
   </div>
 
   <div class="card" id="ch14-prompts">
@@ -4086,6 +4531,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><td>Business logic</td><td><a href="#ch15-r04">Define the ICP and the scoring model</a>, <a href="#ch15-r05">Tune how fast intent fades</a>, <a href="#ch15-r06">Set routing and territories</a>, <a href="#ch15-r07">Build a sequence with exit rules</a>, <a href="#ch15-r08">Add suppression and consent rules</a>, <a href="#ch15-r09">Set claims, voice and proof</a>, <a href="#ch15-r10">Define a KPI and check the money</a></td></tr>
       <tr><td>Data and connectors</td><td><a href="#ch15-r11">Import and gate a messy CSV</a>, <a href="#ch15-r12">Connect a CRM and mirror it</a>, <a href="#ch15-r13">Add a connector through Composio</a>, <a href="#ch15-r14">Add a connector through your own MCP server</a>, <a href="#ch15-r15">Price enrichment before you spend</a>, <a href="#ch15-r16">Send events out to your own endpoint</a></td></tr>
       <tr><td>Go live and govern</td><td><a href="#ch15-r17">Take one engine from dry to live</a>, <a href="#ch15-r18">Create an agent with bounds</a>, <a href="#ch15-r19">Prepare an envelope</a>, <a href="#ch15-r20">Promote dev to staging to prod</a>, <a href="#ch15-r21">Review an approval</a></td></tr>
+      <tr><td>Revenue intelligence (0.2.6)</td><td><a href="#ch15-r28">Read the funnel and name the weakest step</a>, <a href="#ch15-r29">Import through the gate</a>, <a href="#ch15-r30">Turn a check into a warning</a>, <a href="#ch15-r31">Generate recommendations</a>, <a href="#ch15-r32">Audit what an agent can do alone</a>, <a href="#ch15-r33">Settle an unknown outcome</a>, <a href="#ch15-r34">Read the board and trace a number</a></td></tr>
       <tr><td>Build, operate and upgrade</td><td><a href="#ch15-r22">Build a Mission Control tile</a>, <a href="#ch15-r23">Add a screen</a>, <a href="#ch15-r24">Upgrade safely</a>, <a href="#ch15-r25">Roll back a definition, or the whole release</a>, <a href="#ch15-r26">Find out why nothing is being sent</a>, <a href="#ch15-r27">Trace one account end to end</a></td></tr>
     </table></div>
   </div>
@@ -4303,6 +4749,58 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       </div>
     </div>
   </div>
+  <div class="card" id="ch15-rev">
+    <h3>Revenue intelligence (0.2.6)</h3>
+    <p class="goal"><b>Goal:</b> read the funnel, gate what comes in, act on a finding, and keep control of what an agent may do. These recipes need an instance on 0.2.6.</p>
+    <div class="prompts">
+      <div class="prompt" id="ch15-r28">
+        <h4>Read the funnel and name the weakest step</h4>
+        <div class="code"><pre><code>Evaluate the default funnel. Tell me the weakest mature stage with its window and sample, which cohorts are too young for a rate, and how many entries have no tracked date. If a rate is blank, say why. Change nothing.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>funnel.evaluate</code>, and <code>funnel.accounts</code> to list the companies behind a cell.</dd>
+        <dt>Read more</dt><dd><a href="#ch07-funnel">Funnels</a></dd></dl>
+      </div>
+      <div class="prompt" id="ch15-r29">
+        <h4>Import through the gate and review what it held</h4>
+        <div class="code"><pre><code>I will paste a CSV of contacts. Map the columns, run a preview, and give me the gate summary and the blocked rows by rule. Do not commit. After I commit it myself, list the batch's rows that still wait for a decision.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>canon.import</code> in preview mode, then <code>import.review.list</code>.</dd>
+        <dt>You do</dt><dd>Decide held rows in the console. Compliance blocks can only be skipped. <span class="chip human">Needs a human</span></dd>
+        <dt>Read more</dt><dd><a href="#ch10-import-gate">The import gate</a></dd></dl>
+      </div>
+      <div class="prompt" id="ch15-r30">
+        <h4>Turn a check into a warning</h4>
+        <div class="code"><pre><code>Show me the effective data quality policy for companies. Propose a policy in dev that makes the domain format check a warning, with a reason and me as owner. Do not sign or promote it.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>identity_dq.dq_policy.get</code>, then <code>identity_dq.dq_policy.propose</code>.</dd>
+        <dt>Read more</dt><dd><a href="#ch07-dq-policy">Data quality policy</a></dd></dl>
+      </div>
+      <div class="prompt" id="ch15-r31">
+        <h4>Generate recommendations and review them</h4>
+        <div class="code"><pre><code>Check the default funnel and generate recommendations. For each, show the finding with its sample, the proposed action and tier, the owner and any caveat. Do not accept, dismiss or act.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>recommendation.generate</code>, <code>recommendation.list</code>.</dd>
+        <dt>You do</dt><dd>The owner accepts, dismisses or acts. <span class="chip human">Needs a human</span></dd>
+        <dt>Read more</dt><dd><a href="#ch11-recommendations">Recommendations</a></dd></dl>
+      </div>
+      <div class="prompt" id="ch15-r32">
+        <h4>Audit what an agent can do alone</h4>
+        <div class="code"><pre><code>Read the authority of the agent &lt;name&gt;. List what it can run on its own by tier, its envelopes and their remaining budget, and anything at T3 it can reach.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>governance.agent_authority</code>.</dd>
+        <dt>Read more</dt><dd><a href="#ch12-authority">Agent authority</a>, <a href="#ch12-tiers">Risk tiers</a></dd></dl>
+      </div>
+      <div class="prompt" id="ch15-r33">
+        <h4>Settle an action that may not have landed</h4>
+        <div class="code"><pre><code>List approvals whose outcome is unknown. For each, ask the provider whether it landed and explain the answer. Do not settle it and do not propose it again.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>effect.unknown_outcomes</code>, <code>effect.reconcile_check</code>.</dd>
+        <dt>You do</dt><dd>An owner or admin settles in <b>Approvals &gt; Needs reconciling</b>. <span class="chip human">Needs a human</span></dd>
+        <dt>Read more</dt><dd><a href="#ch12-reconcile">Unknown outcomes</a></dd></dl>
+      </div>
+      <div class="prompt" id="ch15-r34">
+        <h4>Read the board and trace a number</h4>
+        <div class="code"><pre><code>Evaluate the board for last quarter. For each tile say if it is available, with its value and sample, or what it needs. Trace the win rate and tell me how many deals it was computed over.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>board.evaluate</code>, then <code>gtm_lineage_trace</code> with a metric.</dd>
+        <dt>Read more</dt><dd><a href="#ch07-board">Board KPIs</a></dd></dl>
+      </div>
+    </div>
+  </div>
+
   <div class="card" id="ch15-habits">
     <h3>Habits that make every recipe safer</h3>
     <ul>
@@ -4454,6 +4952,31 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
     </table></div>
     <p><a href="#ch10-import">CSV import and its rules</a> lists every rule in one table.</p>
   </div>
+  <div class="card" id="ch16-rev">
+    <h3>Funnel, gate, recommendations and reconcile (0.2.6)</h3>
+    <p class="goal"><b>Goal:</b> find the cause of what the new 0.2.6 screens and operations show you.</p>
+    <div class="tbl"><table>
+      <tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr>
+      <tr><td>A rate is blank on the Funnel page, with a reason</td><td>The cohort is too young, or fewer companies are behind it than the sample floor. That is on purpose</td><td>Wait until the cohort matures, or lower <code>sampleFloor</code> in the funnel definition if you accept a thinner sample. <a href="#ch07-funnel">Funnels</a></td></tr>
+      <tr><td>"N of M entries have no tracked date"</td><td>Those entries were imported or first seen at a sync, and the true date is unknown</td><td>Map a stage date on deal imports, or start the funnel at a journey stage. <a href="#ch10-import-gate">Import gate</a></td></tr>
+      <tr><td>"Most dates may be import dates"</td><td>Most companies were created on one day, so their created date is the import date</td><td>Start the funnel at a journey stage</td></tr>
+      <tr><td>"Draft definition: not reviewed"</td><td>The funnel is not signed</td><td>Sign and promote it. A different person signs</td></tr>
+      <tr><td>A board tile says "unavailable"</td><td>It needs a source that does not exist yet (target, close-date history, forecast snapshots), or the metric it reads is missing or has the wrong shape</td><td>Read the tile's "needs" line. Do not estimate it. <a href="#ch07-board">Board KPIs</a></td></tr>
+      <tr><td>Rows are blocked on a clean-looking import</td><td>Since 0.2.6 the built-in checks block a badly formed email, domain, phone, URL or country code</td><td>Fix the row, or sign a data quality policy with that check set to <code>warn</code></td></tr>
+      <tr><td>A blocked row has no "Import anyway"</td><td>It is a compliance block (do-not-contact, suppression, consent, a referenced compliance rule), or you are not an owner or admin</td><td>Compliance blocks can only be skipped. For a data quality block, ask an owner or admin</td></tr>
+      <tr><td>Import is disabled</td><td>Held rows still have no decision</td><td>Decide each one, or choose "Commit clean rows only"</td></tr>
+      <tr><td>A date column makes rows fail</td><td>The date is ambiguous (03/04/2024), has a two-digit year, a plain number, is before 1990, or is in the future</td><td>Write <code>YYYY-MM-DD</code></td></tr>
+      <tr><td>"No reason given by the agent" on an approval</td><td>The agent did not pass a justification. Allowed in 0.2.6</td><td>Ask Claude to pass <code>justification</code>. It becomes required in 0.2.7. <a href="#ch12-justification">Justification</a></td></tr>
+      <tr><td><code>VALIDATION_FAILED</code> on a proposal at T2 or above</td><td><code>GTMOS_JUSTIFICATION_ENFORCE</code> is on and the reason is missing or under 10 characters</td><td>Pass a real reason</td></tr>
+      <tr><td><code>envelope.grant</code> refused</td><td>The operations list covers a T3 or higher operation, or the grantee kind is <code>agent</code></td><td>Narrow the list. T3 and above always need a person</td></tr>
+      <tr><td>An approval sits in "Needs reconciling"</td><td>An approved write timed out or never reported back, so its outcome is unknown</td><td>An owner or admin settles it. <a href="#ch12-reconcile">Unknown outcomes</a></td></tr>
+      <tr><td>A proposal is refused and names an earlier approval</td><td>The same action and payload has an unsettled unknown outcome</td><td>Settle the earlier one first. A different payload is allowed</td></tr>
+      <tr><td><code>recommendation.start_mission</code> refused</td><td>The recommendation is T2 or above, the agent has no published definition or budget, or it is not accepted</td><td>Use <code>recommendation.act</code> for T2 and above. Publish the agent definition with bounds</td></tr>
+      <tr><td>"Needs an owner" when generating recommendations</td><td>The organization has no owner</td><td>Give the organization an owner</td></tr>
+      <tr><td>Recommendation outcome is "inconclusive"</td><td>The sample was too thin, or the funnel definition changed between the finding and the measurement</td><td>Generate a new recommendation under the current definition</td></tr>
+    </table></div>
+  </div>
+
   <div class="card" id="ch16-sync">
     <h3>Sync drift and connector problems</h3>
     <p class="goal"><b>Goal:</b> know whether the mirror is complete, and fix a broken connection.</p>
@@ -4556,12 +5079,12 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
     <p class="goal"><b>Goal:</b> know what a class letter means and how many operations there are.</p>
     <div class="tbl"><table>
       <tr><th>Class</th><th>Meaning</th><th>Count</th><th>Tool</th><th>Approval</th></tr>
-      <tr><td>Q</td><td>Query, a read</td><td>294</td><td><code>gtm_query</code></td><td>None</td></tr>
-      <tr><td>D</td><td>Data write</td><td>255</td><td><code>gtm_act</code></td><td>Runs at once. 12 of them propose instead.</td></tr>
+      <tr><td>Q</td><td>Query, a read</td><td>294 (308 in 0.2.6)</td><td><code>gtm_query</code></td><td>None</td></tr>
+      <tr><td>D</td><td>Data write</td><td>255 (265 in 0.2.6)</td><td><code>gtm_act</code></td><td>Runs at once. 12 of them propose instead.</td></tr>
       <tr><td>T</td><td>Stage transition</td><td>5</td><td><code>gtm_act</code></td><td>Runs at once (see list below). 1 proposes.</td></tr>
       <tr><td>E</td><td>Customer-facing effect</td><td>30</td><td><code>gtm_act</code></td><td>Proposed. A different person approves and executes.</td></tr>
       <tr><td>M</td><td>Meta: config, ontology, platform</td><td>87</td><td><code>gtm_act</code></td><td>21 of them propose.</td></tr>
-      <tr><td><b>Total</b></td><td></td><td><b>671</b></td><td></td><td>66 propose for approval, 6 are gated (discovery only), 85 refuse agent keys.</td></tr>
+      <tr><td><b>Total</b></td><td></td><td><b>671</b> (695 in 0.2.6)</td><td></td><td>0.2.5: 66 propose for approval, 6 are gated (discovery only), 85 refuse agent keys. The 0.2.6 reference lists 89 that refuse agent keys. The other two figures were not recounted for 0.2.6.</td></tr>
     </table></div>
     <p>Required scope tier shown in the generated reference: <code>operate</code> for 593 operations (record.read for reads, record.write for writes), <code>build</code> for 57 (engine.configure, and an owner, admin or builder behind the key), <code>admin</code> for 15 (agents never hold it), and 4 <code>package.publish</code> and 2 <code>package.entitle</code> operations for the platform plane.</p>
     <p><b>T operations:</b> <code>consent.withdraw</code>, <code>deal.advance_stage</code>, <code>flow.cancel</code>, <code>lane.activate</code>, <code>play.trigger</code>.</p>
@@ -4573,13 +5096,46 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
   </div>
   <div class="card" id="ch17-human-only">
     <h3>Operations that refuse an agent key</h3>
-    <p class="goal"><b>Goal:</b> know in advance which requests Claude must hand to a person. These 85 operations list "agent keys refused" in the 0.2.5 reference.</p>
+    <p class="goal"><b>Goal:</b> know in advance which requests Claude must hand to a person. These 85 operations list "agent keys refused" in the 0.2.5 reference. 0.2.6 adds four: <code>effect.reconcile</code>, <code>recommendation.accept</code>, <code>recommendation.dismiss</code> and <code>recommendation.start_mission</code>.</p>
     <p><code>actions.backfill</code>, <code>adapter.activate</code>, <code>adapter.resolve</code>, <code>adapter.update</code>, <code>agent.bump_version</code>, <code>agent.create_key</code>, <code>agent.kill</code>, <code>agent.list_keys</code>, <code>agent.register</code>, <code>agent.revive</code>, <code>apikey.create</code>, <code>apikey.list</code>, <code>apikey.revoke</code>, <code>apps.update</code>, <code>auth.allowlist.get</code>, <code>auth.allowlist.set</code>, <code>brand.set</code>, <code>broker.accept_high_risk</code>, <code>buying_roles.set</code>, <code>composio.connect</code>, <code>composio.disconnect</code>, <code>composio.oauth_callback</code>, <code>composio.oauth_disconnect</code>, <code>composio.oauth_start</code>, <code>connected_account.delete_synced_data</code>, <code>connected_account.disconnect</code>, <code>deal_type.set</code>, <code>definition.sign</code>, <code>definition.sign_many</code>, <code>delegation.approve</code>, <code>delegation.grant</code>, <code>enrichment.policy.set</code>, <code>envelope.grant</code>, <code>envelope.revoke</code>, <code>identity_dq.revise_merge</code>, <code>instance.update.cancel</code>, <code>instance.update.check</code>, <code>instance.update.request</code>, <code>instance.update.settings</code>, <code>instance.update.status</code>, <code>mcp_servers.set_tool_effects</code>, <code>mission.approve</code>, <code>money.rate_sheet.clear</code>, <code>money.rate_sheet.set</code>, <code>money.settings.set</code>, <code>notification.preferences.revoke_links</code>, <code>notification.preferences.set</code>, <code>onboarding.launch</code>, <code>ontology.publish_changeset</code>, <code>org.offboard</code>, <code>outreach.bounce_undo</code>, <code>outreach.linkedin_webhook_secret</code>, <code>play.binding.set_status</code>, <code>plays.settings.set</code>, <code>policy.claims.set</code>, <code>policy.engine_modes.set</code>, <code>policy.guardrails.set</code>, <code>policy.set_autonomy_scope</code>, <code>policy.set_dry_mode</code>, <code>policy.set_gate_policy</code>, <code>privacy.settings.set</code>, <code>proof.propose_activation</code>, <code>reply_labels.set</code>, <code>research.fact.decide</code>, <code>roles.assign</code>, <code>roles.upsert</code>, <code>routing.member_settings.set</code>, <code>runtime.acknowledge_claim</code>, <code>runtime.approve_action</code>, <code>runtime.execute_action</code>, <code>runtime.execute_approval</code>, <code>runtime.reject_action</code>, <code>score.learning_settings.set</code>, <code>secret.migrate_scheme</code>, <code>secret.rotate_org_key</code>, <code>seo_geo.approve_draft</code>, <code>sequence.message.resolve_uncertain</code>, <code>signals.settings.set</code>, <code>signals.verify</code>, <code>sso.create</code>, <code>sso.delete</code>, <code>sso.list</code>, <code>sync.completeness.settings.set</code>, <code>territory.upsert</code>, <code>voice.customer_language.approve</code>.</p>
     <p>Other operations are not refused to a key but still end in a proposal that a different person approves. <a href="#ch04-human-only">Chapter 4</a> explains why.</p>
   </div>
+  <div class="card" id="ch17-026">
+    <h3>New in 0.2.6: operations, kinds and flags</h3>
+    <p class="goal"><b>Goal:</b> find the names the new sections use, with their class and who can call them.</p>
+    <div class="tbl"><table>
+      <tr><th>Operation</th><th>Class</th><th>Who</th><th>Chapter</th></tr>
+      <tr><td><code>funnel.evaluate</code>, <code>funnel.list</code>, <code>funnel.accounts</code></td><td>Q</td><td>Any member (only records they may see)</td><td><a href="#ch07-funnel">7</a></td></tr>
+      <tr><td><code>board.evaluate</code></td><td>Q</td><td>Any member (deal metrics exclude deals they may not see)</td><td><a href="#ch07-board">7</a></td></tr>
+      <tr><td><code>identity_dq.dq_policy.get</code></td><td>Q</td><td>Any member</td><td><a href="#ch07-dq-policy">7</a></td></tr>
+      <tr><td><code>identity_dq.dq_policy.propose</code></td><td>D</td><td>Writes a draft in dev. A different person signs</td><td><a href="#ch07-dq-policy">7</a></td></tr>
+      <tr><td><code>import.review.list</code>, <code>import.review.decide</code></td><td>Q, D</td><td>Owner and admin see all batches. Others see their own. Override: owner or admin only. An agent's decision becomes an approval</td><td><a href="#ch10-import-gate">10</a></td></tr>
+      <tr><td><code>enrichment.catalog.get</code>, <code>enrichment.run_steps</code></td><td>Q, D</td><td>Any operator</td><td><a href="#ch09-enrichment-catalog">9</a></td></tr>
+      <tr><td><code>routing.kpis</code></td><td>Q</td><td>Any member (only records they may see)</td><td><a href="#ch07-play-library">7</a></td></tr>
+      <tr><td><code>recommendation.generate</code>, <code>.measure</code></td><td>D</td><td>Owner, admin</td><td><a href="#ch11-recommendations">11</a></td></tr>
+      <tr><td><code>recommendation.list</code>, <code>.get</code></td><td>Q</td><td>Any member</td><td><a href="#ch11-recommendations">11</a></td></tr>
+      <tr><td><code>recommendation.accept</code>, <code>.dismiss</code>, <code>.start_mission</code></td><td>D</td><td>Its owner, owner, admin. <b>Refuse an agent key</b></td><td><a href="#ch11-recommendations">11</a></td></tr>
+      <tr><td><code>recommendation.act</code></td><td>D</td><td>Its owner, owner, admin, an agent. It creates an approval</td><td><a href="#ch11-recommendations">11</a></td></tr>
+      <tr><td><code>governance.agent_authority</code></td><td>Q</td><td>Owner, admin</td><td><a href="#ch12-authority">12</a></td></tr>
+      <tr><td><code>effect.unknown_outcomes</code>, <code>effect.reconcile_check</code></td><td>Q</td><td>Anyone who can read records, agents included</td><td><a href="#ch12-reconcile">12</a></td></tr>
+      <tr><td><code>effect.reconcile</code></td><td>D</td><td>Owner or admin. <b>Refuses an agent key</b></td><td><a href="#ch12-reconcile">12</a></td></tr>
+      <tr><td><code>harness.status</code></td><td>Q</td><td>Anyone signed in</td><td><a href="#ch14-harness-status">14</a></td></tr>
+    </table></div>
+    <p>Changed operations: <code>metric.evaluate</code> takes <code>asOf</code>, <code>window</code>, <code>cohort</code> and <code>segment</code>. <code>gtm_lineage_trace</code> takes exactly one of <code>recordId</code>, <code>metric</code> or <code>funnel</code>. <code>canon.import</code> takes <code>batchId</code> and <code>rowOffset</code> and a <code>stageEnteredAt</code> mapping target for deals. <code>gtm_act</code> takes <code>justification</code>. <code>enrichment.enrich_contacts</code> takes <code>steps</code>. <code>enrichment.policy.set</code> takes <code>disabledSteps</code>, <code>disabledTriggers</code> and <code>lessConfidentOverwrite</code>. <code>task.create</code> takes <code>externalId</code>.</p>
+    <p>New definition kinds: <code>definition.funnel</code> and <code>definition.data_quality_policy</code>.</p>
+    <h4>Flags</h4>
+    <div class="tbl"><table>
+      <tr><th>Key</th><th>Default</th><th>What it does</th></tr>
+      <tr><td><code>GTMOS_JUSTIFICATION_ENFORCE</code></td><td>Off in 0.2.6. On in 0.2.7</td><td>When on, an agent proposal at T2 or above without a reason of 10 or more non-space characters is refused</td></tr>
+      <tr><td><code>GTMOS_RISK_TIER_TIGHTEN</code></td><td>Off</td><td>When on, an operation at T2 or above that would run on its own is held for approval</td></tr>
+    </table></div>
+    <p class="meta">Set them in the instance <code>.env</code> and run <code>gtm up</code>, like the other keys in this chapter.</p>
+    <div class="note"><b>Not in 0.2.6.</b> GTM motion selection (<code>motion.assess</code>) is built but not shipped, so this guide does not describe it. Pipeline coverage vs target, slip rate and forecast accuracy show as unavailable. Recommendation rules cannot be edited per organization yet.</div>
+  </div>
+
   <div class="card" id="ch17-kinds">
     <h3>Definition kinds</h3>
-    <p class="goal"><b>Goal:</b> pick the right kind when you ask Claude to change business logic. 31 definition kinds and 4 other config kinds ship in 0.2.5.</p>
+    <p class="goal"><b>Goal:</b> pick the right kind when you ask Claude to change business logic. 31 definition kinds and 4 other config kinds shipped in 0.2.5. 0.2.6 has 33: it adds the two rows marked 0.2.6.</p>
     <div class="tbl"><table>
       <tr><th>Kind</th><th>What it holds</th><th>Chapter</th></tr>
       <tr><td><code>definition.agent</code></td><td>An agent version's authority scopes, activatable skills and hard run bounds (steps, cost, deadline)</td><td><a href="#ch11-bounds">Chapter 11</a></td></tr>
@@ -4591,8 +5147,10 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><td><code>definition.compliance_policy</code></td><td>Regulatory / policy rules a message or action must satisfy (consent, regions, claims)</td><td><a href="#ch07-suppression">Chapter 7</a></td></tr>
       <tr><td><code>definition.customer_type</code></td><td>One kind of customer in the org's own words (agency, reseller, mid-market SaaS...): a CEL criteria over the company, a priority (a company is the firs</td><td><a href="#ch07-qualification">Chapter 7</a></td></tr>
       <tr><td><code>definition.data_monitor</code></td><td>A data-quality monitor: what to check, threshold, schedule</td><td><a href="#ch09-dq">Chapter 9</a></td></tr>
+      <tr><td><code>definition.data_quality_policy</code> <span class="chip claude">0.2.6</span></td><td>Your data quality rules for companies and contacts: required fields, formats, a staleness window, match keys, each with a severity and an owner</td><td><a href="#ch07-dq-policy">Chapter 7</a></td></tr>
       <tr><td><code>definition.deal_taxonomy</code></td><td>The deal types in the org's own words (pilot, demo, expansion...) and the raw CRM values that mean each one</td><td><a href="#ch07-stages">Chapter 7</a></td></tr>
       <tr><td><code>definition.enrichment_policy</code></td><td>How long an enriched value stays fresh, per field, in days (ttlDays: { primaryEmail: 90, phone: 180, ... }; defaultTtlDays for fields nothing else nam</td><td><a href="#ch09-enrichment">Chapter 9</a></td></tr>
+      <tr><td><code>definition.funnel</code> <span class="chip claude">0.2.6</span></td><td>Your cohort funnel: 2 to 10 stages, each a source of "a company reached this", the maturity window and the sample floor</td><td><a href="#ch07-funnel">Chapter 7</a></td></tr>
       <tr><td><code>definition.identity_rule</code></td><td>How records of a type are matched / deduplicated and which source wins (survivorship)</td><td><a href="#ch07-identity">Chapter 7</a></td></tr>
       <tr><td><code>definition.journey</code></td><td>A lifecycle a company, person or deal follows: ordered stages (open / won / lost), optional pipeline-stage and stage-machine links, the segments route</td><td><a href="#ch07-stages">Chapter 7</a></td></tr>
       <tr><td><code>definition.lane</code></td><td>An outbound channel lane: channel, daily cap, touch window, deliverability guardrails, envelope budget, sending domain; a LinkedIn lane also its seat </td><td><a href="#ch07-plays">Chapter 7</a></td></tr>
@@ -4709,6 +5267,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><th>Group</th><th>Keys</th></tr>
       <tr><td>Release</td><td><code>GTMOS_REGISTRY</code>, <code>GTMOS_VERSION</code> (a channel such as <code>stable</code>, or a pinned version)</td></tr>
       <tr><td>Addresses</td><td><code>PUBLIC_API_URL</code>, <code>PUBLIC_CONSOLE_URL</code>, <code>PUBLIC_MCP_URL</code>, <code>GTMOS_BIND_ADDRESS</code> (default <code>127.0.0.1</code>), <code>TRUST_PROXY</code></td></tr>
+      <tr><td>Governance (0.2.6)</td><td><code>GTMOS_JUSTIFICATION_ENFORCE</code> (off in 0.2.6, on in 0.2.7), <code>GTMOS_RISK_TIER_TIGHTEN</code> (off). See <a href="#ch17-026">the 0.2.6 reference</a></td></tr>
       <tr><td>Mode</td><td><code>GTMOS_LIVE</code> (<code>true</code> or <code>false</code>, required)</td></tr>
       <tr><td>Secrets</td><td><code>BETTER_AUTH_SECRET</code>, <code>GTMOS_MASTER_KEY</code>, <code>CREDENTIAL_ENCRYPTION_KEY</code>, <code>AUDIT_CHECKPOINT_SIGNING_KEY</code>, <code>GTMOS_OAUTH_REGISTRATION_TOKEN</code></td></tr>
       <tr><td>Database</td><td><code>POSTGRES_PASSWORD</code>, <code>DATABASE_URL</code>, <code>AUTH_DATABASE_URL</code></td></tr>
@@ -4764,7 +5323,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <dt>Trust key</dt><dd>The name of an engine in the approval and mode system, for example <code>outreach</code> or <code>crm_writeback</code>.</dd>
     </dl>
   </div>
-  <footer>Written for GTM OS release 0.2.5. When this guide and your live instance disagree, the instance wins. Refresh your project's bundled reference with <code>gtm init --refresh</code>.</footer>
+  <footer>Written for GTM OS release 0.2.5, with sections for 0.2.6 (merged, not yet released). When this guide and your live instance disagree, the instance wins. Refresh your project's bundled reference with <code>gtm init --refresh</code>.</footer>
 </section>
 
 </main>
