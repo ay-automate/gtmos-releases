@@ -4,18 +4,18 @@ Public releases of **GTM OS**, the self-hosted operating system for go-to-market
 
 This repository holds **releases and documentation only**. The source code is not published here.
 
-## Latest: GTM OS 0.2.5 (CLI 0.2.5)
+## Latest: GTM OS 0.2.6 (CLI 0.2.6), 2026-11-01
 
 | What | Where |
 |---|---|
-| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) (0.2.5) |
-| Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.5` (also `stable`), listed under this repo's Packages |
-| Release notes | [releases/0.2.5.md](releases/0.2.5.md) and the [GitHub release v0.2.5](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.5) |
+| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) (0.2.6) |
+| Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.6` (also `stable`), listed under this repo's Packages |
+| Release notes | [releases/0.2.6.md](releases/0.2.6.md) and the [GitHub release v0.2.6](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.6) |
 | Video series | https://ay-automate.github.io/gtmos-releases/videos/index.html |
 | User guide | https://ay-automate.github.io/gtmos-releases/user-guide.html |
 | Product documentation | https://ay-automate.github.io/gtmos-releases/product-documentation.html |
 
-Earlier releases are kept for history: [0.2.2](releases/0.2.2.md).
+Earlier releases are kept for history: [0.2.5](releases/0.2.5.md), [0.2.2](releases/0.2.2.md).
 
 **Self-hosters, read this before you upgrade.** From 0.2.5 the console, API and MCP ports bind to `127.0.0.1` only. If people or systems reach your server by IP address or hostname, put a reverse proxy with HTTPS in front, or set `GTMOS_BIND_ADDRESS=0.0.0.0` on purpose. Details are in the [release notes](releases/0.2.5.md#breaking-change-for-self-hosters-ports-are-local-only-by-default).
 
@@ -44,7 +44,7 @@ Claude installs GTM OS, creates your organization with an owner and a second app
 Manual setup, without Claude:
 
 ```bash
-gtm setup ./instance --org "Acme" --email you@acme.com --approver-email ops@acme.com --version 0.2.5
+gtm setup ./instance --org "Acme" --email you@acme.com --approver-email ops@acme.com --version 0.2.6
 ```
 
 The owner and approver passwords are saved in `./instance/.env`. Sign in to the console (http://localhost:3000), create an agent key in **Settings > Developer**, then connect the CLI and check the install:
