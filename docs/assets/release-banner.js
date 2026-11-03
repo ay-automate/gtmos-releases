@@ -24,7 +24,7 @@
     var p = document.createElement("p");
     var s = document.createElement("b"); s.textContent = "GTM OS " + r.version + " is rolling out. ";
     p.appendChild(s);
-    p.appendChild(document.createTextNode("Until the " + r.version + " CLI and images appear on npm and the registry, the commands on this page install the previous release."));
+    p.appendChild(document.createTextNode("Until the stable channel points at " + r.version + ", a plain install or upgrade gives you the previous release. Pin " + r.version + " with --version or --to."));
     var x = document.createElement("button"); x.type = "button"; x.textContent = "Dismiss"; x.setAttribute("aria-label", "Dismiss the rollout notice");
     x.addEventListener("click", function () { remember(); b.parentNode && b.parentNode.removeChild(b); });
     b.appendChild(p); b.appendChild(x);

@@ -242,7 +242,7 @@ td.wrap code{white-space:normal}
 <div id="app" data-aud="both">
 <header class="topbar">
   <div class="topbar-inner">
-    <a class="brand" href="#what"><span class="brand-mark">os</span>GTM OS <small>product documentation · v0.2.5</small></a>
+    <a class="brand" href="#what"><span class="brand-mark">os</span>GTM OS <small>product documentation · v0.2.6</small></a>
     <div class="spacer"></div>
     <div class="seg" role="group" aria-label="Audience">
       <button type="button" data-aud="both" aria-pressed="true">Both views</button>
@@ -269,7 +269,7 @@ td.wrap code{white-space:normal}
     <li><a href="#glossary">Glossary</a></li>
     <li><a href="#not-built">What is not built yet</a></li>
   </ol>
-  <div class="toc-meta">Written for GTM OS release 0.2.5 (CLI 0.2.5). When this page and a live instance disagree, the live registry (<code>gtm_describe</code>) wins.</div>
+  <div class="toc-meta">Written for GTM OS release 0.2.6 (CLI 0.2.6). When this page and a live instance disagree, the live registry (<code>gtm_describe</code>) wins.</div>
 </nav>
 
 <main>
@@ -282,9 +282,9 @@ td.wrap code{white-space:normal}
     <p class="lede">GTM OS is an open-source, self-hosted platform that holds your go-to-market data in one typed model, runs the GTM work through engines, and lets humans and AI agents operate all of it through one governed interface where every customer-facing action waits for a second person to approve it.</p>
     <div class="pillrow">
       <span class="pill"><b>8</b> engines in the console</span>
-      <span class="pill"><b>670+</b> operations</span>
+      <span class="pill"><b>710+</b> operations</span>
       <span class="pill"><b>35</b> canon object types</span>
-      <span class="pill"><b>31</b> definition kinds</span>
+      <span class="pill"><b>35</b> definition kinds</span>
       <span class="pill"><b>41</b> first-party packages</span>
       <span class="pill"><b>10</b> blueprints</span>
     </div>
@@ -326,7 +326,7 @@ td.wrap code{white-space:normal}
         <li>the API keys you choose to add (an AI model, looot for data, an email sender), which you paste in the console;</li>
         <li>the DNS records for your sending domain, if you will send email.</li>
       </ul>
-      <p><strong>From setup to working system.</strong> Then the <strong>setup wizard</strong> in the console (Setup: nine steps on six screens) or <code>/build-gtm-system</code> with your agent: either one interviews you about your ICP, offer, markets, channels and goals, drafts each definition with the evidence behind it, and builds the engines. You review and approve. When you are happy, one card in <strong>Environments &gt; Go live</strong> signs everything and promotes it to production with a single approval. Expect roughly an hour for a first setup, most of it answering questions and approving. A <strong>first-win checklist</strong> on Home shows eight milestones computed from what really happened in your workspace, and opt-in operator nudges tell owners and admins when something needs them.</p>
+      <p><strong>From setup to working system.</strong> Then the <strong>setup wizard</strong> in the console (Setup: ten steps on seven screens, the first is the AI model) or <code>/build-gtm-system</code> with your agent: either one interviews you about your ICP, offer, markets, channels and goals, drafts each definition with the evidence behind it, and builds the engines. You review and approve. When you are happy, one card in <strong>Environments &gt; Go live</strong> signs everything and promotes it to production with a single approval. Expect roughly an hour for a first setup, most of it answering questions and approving. A <strong>first-win checklist</strong> on Home shows eight milestones computed from what really happened in your workspace, and opt-in operator nudges tell owners and admins when something needs them.</p>
       <p><strong>Safe by default.</strong> A new install runs in <strong>live mode</strong>: anything not connected says so plainly and names the missing key, instead of showing invented numbers. Nothing is sent, merged or published without a person approving it, and the person who proposed a change (or whose agent did) can never approve it. Dry Mode, for the whole organization and for each engine, shows what would have happened first, and the claims gate checks every factual claim in outbound content against proof you approved. A separate demo mode with sample data exists only for walkthroughs; never use it with real prospects.</p>
       <p><strong>Who does what.</strong> A GTM lead owns the decisions and approvals; the agent (or a GTM engineer) does the building; an IT person is only needed if you host it on company servers. Day to day, the team works in the console: the Hot list, company pages, outreach approvals and the engine dashboards.</p>
       <p><strong>What it costs to run.</strong> The software itself has no license fee. You pay only for what you connect: the AI model you choose, looot data credits for enrichment and signals (with per-run spend caps), your Composio plan, and the machine it runs on.</p>
@@ -334,14 +334,14 @@ td.wrap code{white-space:normal}
     </div>
     <div class="tech">
       <h4>Under the hood</h4>
-      <p>Four images, <code>gtmos-api</code>, <code>gtmos-console</code>, <code>gtmos-worker</code> and <code>gtmos-mcp</code> (0.2.5), plus <code>pgvector/pgvector:pg16</code>, wired by a generated <code>docker-compose.yml</code>. Default ports: console 3000, API 3001, MCP 3004, all bound to <code>127.0.0.1</code> (see below). The <code>gtm</code> CLI installs from npm (<code>@gtmos/cli</code>, 0.2.5); the images are public on GHCR (<code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}</code>, tags <code>0.2.5</code> and <code>stable</code>, linked to <a href="https://github.com/ay-automate/gtmos-releases">github.com/ay-automate/gtmos-releases</a>), so <code>gtm setup</code> pulls them. Locally built images can still be used with <code>--version &lt;tag&gt; --no-pull</code>.</p>
+      <p>Four images, <code>gtmos-api</code>, <code>gtmos-console</code>, <code>gtmos-worker</code> and <code>gtmos-mcp</code> (0.2.6, from <code>ghcr.io/ay-automate</code>), plus <code>pgvector/pgvector:pg16</code>, wired by a generated <code>docker-compose.yml</code>. Default ports: console 3000, API 3001, MCP 3004, all bound to <code>127.0.0.1</code> (see below). The <code>gtm</code> CLI installs from npm (<code>@gtmos/cli</code>, 0.2.5); the images are public on GHCR (<code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}</code>, tags <code>0.2.5</code> and <code>stable</code>, linked to <a href="https://github.com/ay-automate/gtmos-releases">github.com/ay-automate/gtmos-releases</a>), so <code>gtm setup</code> pulls them. Locally built images can still be used with <code>--version &lt;tag&gt; --no-pull</code>.</p>
 <pre>npm i -g @gtmos/cli
 mkdir my-gtm &amp;&amp; cd my-gtm &amp;&amp; claude
 ! gtm init                      # agent workspace + docs, even with no instance yet
 /setup-gtmos                    # Claude runs gtm setup, the agent key, connections
 
 # by hand instead:
-gtm setup ./instance --org Acme --email you@x.com --approver-email ops@x.com --version 0.2.5
+gtm setup ./instance --org Acme --email you@x.com --approver-email ops@x.com --version 0.2.6
 gtm doctor --strict             # what is live, unverified, missing</pre>
       <p><code>gtm init</code> writes <code>CLAUDE.md</code> at the project root, <code>AGENTS.md</code>, <code>.mcp.json</code> (the key is read from <code>GTMOS_AGENT_TOKEN</code>, never written to a file), the skills and commands, and <code>docs/gtmos/</code> (reference generated from the live registry, plus the guides). <code>GTMOS_LIVE=true</code> is written into a new <code>.env</code>; <code>--demo</code> writes the keyless demo floor. Upgrades: <code>gtm upgrade --check</code>, then <code>gtm upgrade --channel stable --dry-run</code> and <code>--yes</code> (see below).</p>
     </div>
@@ -504,7 +504,7 @@ sequenceDiagram
     </div>
     <div class="tech">
       <h4>Under the hood</h4>
-      <p>671 operations: 294 Q, 255 D, 5 T, 30 E, 87 M. Q runs as <code>GET /v1/operations/&lt;name&gt;?input=&lt;json&gt;</code>; the rest as <code>POST /v1/operations/&lt;name&gt;</code>. Each descriptor declares its class, input and output schema, required scopes and whether it needs approval.</p>
+      <p>717 operations: 318 Q, 276 D, 5 T, 31 E, 87 M. Q runs as <code>GET /v1/operations/&lt;name&gt;?input=&lt;json&gt;</code>; the rest as <code>POST /v1/operations/&lt;name&gt;</code>. Each descriptor declares its class, input and output schema, required scopes and whether it needs approval.</p>
     </div>
   </div>
   <div class="tbl"><table>
@@ -526,7 +526,7 @@ sequenceDiagram
     </div>
     <div class="tech">
       <h4>Under the hood</h4>
-      <p>31 definition kinds plus 4 other config kinds (<code>ontology.object</code>, <code>ontology.field</code>, <code>ontology.relationship</code>, <code>package.manifest</code>). Each is a resource envelope (<code>apiVersion</code>, <code>kind</code>, <code>metadata.key</code>, <code>spec</code>) validated by a strict per-kind JSON Schema; unknown keys are rejected.</p>
+      <p>35 definition kinds plus 4 other config kinds (<code>ontology.object</code>, <code>ontology.field</code>, <code>ontology.relationship</code>, <code>package.manifest</code>). Each is a resource envelope (<code>apiVersion</code>, <code>kind</code>, <code>metadata.key</code>, <code>spec</code>) validated by a strict per-kind JSON Schema; unknown keys are rejected.</p>
     </div>
   </div>
   <div class="tbl"><table>
@@ -1253,7 +1253,7 @@ flowchart LR
   </table></div>
 
   <div class="foot">
-    <p>This page describes GTM OS release 0.2.5. Counts come from the generated reference shipped with the CLI (operations, definition kinds, canon object types, packages, blueprints); your instance may differ, and its live registry (<code>gtm_describe</code>) wins.</p>
+    <p>This page describes GTM OS release 0.2.6. Counts come from the generated reference shipped with the CLI (operations, definition kinds, canon object types, packages, blueprints); your instance may differ, and its live registry (<code>gtm_describe</code>) wins.</p>
   </div>
 </section>
 

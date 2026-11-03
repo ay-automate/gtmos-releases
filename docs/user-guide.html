@@ -207,6 +207,7 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 0;border-top:1px solid v
   <a href="#required" data-k="required connections readiness doctor">Required connections</a>
   <a href="#agent" data-k="agent key claude code codex developer preset env var mcp gtmos_agent_token">Connect Claude Code / Codex</a>
   <a href="#skills-agents" data-k="skills subagents agents packs triggers init refresh harness mcp">Skills, subagents and agents</a>
+  <a href="#ai-model" data-k="ai model key recommendations classification monthly cap insight agents not connected openrouter anthropic">AI model</a>
   <a href="#wizard" data-k="setup wizard onboarding welcome connect definitions rules build launch plan brief seats">Setup wizard</a>
   <a href="#build" data-k="build gtm system discovery interview blueprint">Build your GTM system</a>
   <a href="#blueprints" data-k="blueprints catalog b2b saas plg devtools agency marketplace dtc enterprise abm outbound seo full gtm required connections upstream upgrade">Blueprints</a>
@@ -240,7 +241,7 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 0;border-top:1px solid v
   <div class="eyebrow">GTM OS user guide</div>
   <h1>Run your go-to-market on GTM OS</h1>
   <p class="lede">GTM OS is a governed system for your revenue team: a CRM, eight engines in the console (Score, Outreach, Performance Ads, SEO &amp; GEO, Enrichment, Merges, Plays and Routing), signals and a research agent. Your coding agent builds and runs it. A person approves anything that touches a customer or goes live, and every factual claim in what you send is checked against proof you approved.</p>
-  <p class="meta">Written for GTM OS release <b>0.2.5</b> (CLI 0.2.5). Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
+  <p class="meta">Written for GTM OS release <b>0.2.6</b> (CLI 0.2.6). Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
   <p class="meta">Building or customizing GTM OS by prompting Claude? The <a href="gtm-engineer-guide.html">engineer guide</a> goes deeper, with copy-paste recipes for every engine and a troubleshooting table.</p>
   <div class="tiles">
     <a class="tile" href="#quickstart"><b>Quickstart</b><span>Empty folder to a live system in 10 steps, with Claude Code doing the work and a setup wizard in the console.</span></a>
@@ -704,18 +705,37 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
     <p>Your agent reaches GTM OS over MCP with eight meta-tools: <code>gtm_describe</code> (always first, it lists every operation), <code>gtm_query</code>, <code>gtm_get</code>, <code>gtm_search</code>, <code>gtm_act</code>, <code>gtm_approvals</code>, <code>gtm_lineage</code> (the audit trail behind one approved or executed action: who proposed it, who approved it, what ran) and <code>gtm_lineage_trace</code> (the receipts behind a record's values: the surviving value, the rule that chose it, the sources). Everything the console does is an operation, so console and MCP stay in step. The agent proposes. A person approves.</p>
   </div>
 
+  <!-- AI MODEL (0.2.6) -->
+  <div class="card" id="ai-model">
+    <h3>AI model and recommendations <span class="chip human">Needs a human</span></h3>
+    <p class="goal"><b>Goal:</b> connect a model so GTM OS can write recommendations from your numbers and label titles, industries, signals and replies. In 0.2.6 this is the first setup step.</p>
+    <ol class="steps">
+      <li>Open <b>Setup &gt; AI model</b> (an owner or admin). Paste a model key: Anthropic or OpenRouter first, OpenAI and Gemini also work. A person types the key, never an agent. GTM OS seals it, tests it, and publishes a default model policy when none exists: a medium-tier model for reasoning and drafting, a small one for classification and extraction. A teammate may need to approve that policy.</li>
+      <li>Set a monthly cap (<code>model.budget.set</code>, owner or admin, a person). A call that would pass the cap is held for a budget approval. With no cap, spend is bounded only by the per-call limits.</li>
+      <li>Turn on the <b>Insight agents</b> pack in <b>Settings &gt; Agents</b> (or accept the Setup step that proposes it). A second person approves it in Approvals.</li>
+    </ol>
+    <ul>
+      <li><b>No model, no recommendation.</b> The console shows an <b>AI not connected</b> warning wherever recommendations are expected. Open it for the two ways in: a model key, or your own agent over MCP (<code>recommendation.context</code> and <code>recommendation.submit</code>). There is no rule-based fallback.</li>
+      <li><b>Code decides what is kept.</b> Each recommendation must cite numbers present in your data, use an allowed action and pass your tiers and caps. The agent never accepts, dismisses, acts or approves. A person accepts, and approvals work as before.</li>
+      <li><b>Labels.</b> <b>Settings &gt; Classification</b> (owner or admin) shows how much is labeled and takes corrections. A person's correction wins. Imports never wait for the model.</li>
+      <li><b>Limits.</b> Members below owner or admin are limited to <code>GTMOS_MODEL_CALLS_PER_MINUTE</code> model calls per minute (default 60). Output tokens are capped per task class.</li>
+    </ul>
+    <div class="see"><code>model.status</code> shows your key as connected and your spend against the cap, and the warning is gone.</div>
+  </div>
+
   <!-- WIZARD -->
   <div class="card" id="wizard">
     <h3>Setup wizard <span class="chip human">Needs a human</span></h3>
-    <p class="goal"><b>Goal:</b> turn what your company already knows (answers, website, connected data, documents) into the definitions your engines run on. Nine steps on six screens. Open <b>Setup</b> in the console. Your agent can run the same steps over MCP (say "set up GTM OS for my company") and you can take turns: what one saves, the other sees.</p>
+    <p class="goal"><b>Goal:</b> turn what your company already knows (answers, website, connected data, documents) into the definitions your engines run on. Ten steps on seven screens. Open <b>Setup</b> in the console. Your agent can run the same steps over MCP (say "set up GTM OS for my company") and you can take turns: what one saves, the other sees.</p>
     <div class="tbl"><table>
       <tr><th>Screen</th><th>Steps</th><th>You do</th></tr>
-      <tr><td>1. Welcome</td><td>Company, Motion</td><td>Company profile, team size, an optional private ARR band, markets, motions, your stack, up to three pains and a few free answers, hours a week. Pick the engines and a blueprint (the suggestions show the facts they rest on).</td></tr>
-      <tr><td>2. Connect your data</td><td>Connections</td><td>See real coverage per source, connect sources, <b>Pull now</b>, and send access requests to the people who hold the keys. Each missing grant becomes a numbered open ask.</td></tr>
-      <tr><td>3. Your definitions</td><td>Definitions</td><td>Upload setup documents (ICP notes, stage definitions, pricing, brand voice, suppression lists, a DPA). Review each drafted card with its evidence: edit, skip or approve.</td></tr>
-      <tr><td>4. Rules and who approves what</td><td>Rules, Team</td><td>Buying roles, consent per channel, trust rules (Dry Mode, caps, quiet hours), autonomy per engine, seats and role profiles.</td></tr>
-      <tr><td>5. The build</td><td>Build</td><td>Check engine readiness, run the build, follow its live log, clear what waits for a human.</td></tr>
-      <tr><td>6. First motion and 90 days</td><td>Plan, Launch</td><td>Shape the 90-day plan, refresh the operating-system brief, preview and run <b>Launch</b>.</td></tr>
+      <tr><td>1. AI model</td><td>Model</td><td>Paste a model key and set a monthly cap (see <a href="#ai-model">AI model and recommendations</a>).</td></tr>
+      <tr><td>2. Welcome</td><td>Company, Motion</td><td>Company profile, team size, an optional private ARR band, markets, motions, your stack, up to three pains and a few free answers, hours a week. Pick the engines and a blueprint (the suggestions show the facts they rest on).</td></tr>
+      <tr><td>3. Connect your data</td><td>Connections</td><td>See real coverage per source, connect sources, <b>Pull now</b>, and send access requests to the people who hold the keys. Each missing grant becomes a numbered open ask.</td></tr>
+      <tr><td>4. Your definitions</td><td>Definitions</td><td>Upload setup documents (ICP notes, stage definitions, pricing, brand voice, suppression lists, a DPA). Review each drafted card with its evidence: edit, skip or approve.</td></tr>
+      <tr><td>5. Rules and who approves what</td><td>Rules, Team</td><td>Buying roles, consent per channel, trust rules (Dry Mode, caps, quiet hours), autonomy per engine, seats and role profiles.</td></tr>
+      <tr><td>6. The build</td><td>Build</td><td>Check engine readiness, run the build, follow its live log, clear what waits for a human.</td></tr>
+      <tr><td>7. First motion and 90 days</td><td>Plan, Launch</td><td>Shape the 90-day plan, refresh the operating-system brief, preview and run <b>Launch</b>.</td></tr>
     </table></div>
     <h4>Rules that hold on every screen</h4>
     <ul>
@@ -1262,6 +1282,10 @@ ss -tlnp | grep -E ':(3000|3001|3004|5432)\b'</code></pre></div></li>
       <tr><td><code>EMAIL_TRANSPORT</code>, <code>SMTP_*</code>, <code>EMAIL_FROM</code></td><td>How the instance sends invitations, password reset, verification and setup reminder mail. Unset means no system mail is sent, and a mail you expect never arrives. The link in a reset or verification mail is a secret and is not written to the logs of the release images. See <a href="#email-transport">Email for invitations, password reset and nudges</a>.</td></tr>
       <tr><td>Private and team records</td><td>A record set to private or team is visible only to its owner, its creator and the organization's owners and admins, in lists, search, counts, timelines and the dashboard. Opening it by id reads "not found". An agent sees what the person it acts for sees.</td></tr>
       <tr><td>Agent keys</td><td>Follow the person's current role: demote or remove the person and their agents narrow or stop at once. Keys expire (90 days by default) and are shown once.</td></tr>
+      <tr><td><code>GTMOS_MCP_ALLOWED_PRIVATE_HOSTS</code></td><td>Org MCP servers are checked against an egress policy. A human owner or admin may add an internal server, an agent may add public ones only, and loopback, cloud metadata and GTM OS's own services are blocked for everyone. List exact hostnames here to let agents reach specific internal hosts, then restart the api, worker and mcp services.</td></tr>
+      <tr><td><code>GTMOS_MODEL_CALLS_PER_MINUTE</code></td><td>Model calls per minute for each member below owner or admin (default 60). Owners, admins, service principals and system actors are not limited. Set a monthly model cap under Setup &gt; AI model.</td></tr>
+      <tr><td>Approval payloads</td><td>Owners, admins and the proposer see an approval's full payload. Other members see a short summary of the plain fields that name the action.</td></tr>
+      <tr><td>Changing a definition</td><td>Proposing recommendation rules, revenue targets, the data quality policy or merge rules needs the build scope, and a different person approves.</td></tr>
       <tr><td>Your master key</td><td><code>GTMOS_MASTER_KEY</code> seals every stored credential. Backups do not contain it. Keep it somewhere safe, apart from the dump.</td></tr>
       <tr><td><code>org.offboard</code></td><td>Needs a real approval by a second owner or admin, then a run by someone other than the proposer.</td></tr>
     </table></div>
@@ -1306,6 +1330,17 @@ ss -tlnp | grep -E ':(3000|3001|3004|5432)\b'</code></pre></div></li>
     <h4>Rollback</h4>
     <p>A failed upgrade rolls back by <b>swapping the images back</b>: the previous compose and <code>.env</code> files and the previous images are restored and the services restart on them. <b>The database is never restored, dropped or recreated by an upgrade</b>, and the verified backup is kept. This works because every migration is additive, so the previous code runs on the migrated database.</p>
     <p>Restoring a backup is a <b>manual last resort</b>, for example if something other than the upgrade damaged your data. Never restore over the live database: rename it first, then restore into a new one. <code>gtm upgrade --help</code> prints the exact commands.</p>
+    <h4>Moving to 0.2.6 from 0.2.5</h4>
+    <ul>
+      <li><b>Upgrade the CLI first</b> (<code>npm i -g @gtmos/cli@latest</code> gives <code>@gtmos/cli</code> 0.2.6). 0.2.6 needs CLI 0.2.6 or newer and can be reached from 0.2.5 or newer. An instance on 0.2.2 goes to 0.2.5 first, and <code>gtm upgrade</code> plans that hop.</li>
+      <li>Pin it with <code>gtm upgrade --to 0.2.6 --yes</code>, or follow the stable channel once it points at 0.2.6. The images come from <code>ghcr.io/ay-automate</code>.</li>
+      <li>This release has 5 migrations and 8 new tables. Every migration only adds, the upgrade takes a verified backup, and a rollback swaps the images back.</li>
+      <li>Connect a model and set a monthly cap: <a href="#ai-model">AI model and recommendations</a>.</li>
+      <li>An org MCP server registered before 0.2.6 has no recorded principal and counts as agent-added. For an internal one, have an owner or admin remove and re-add it, or list its hostname in <code>GTMOS_MCP_ALLOWED_PRIVATE_HOSTS</code>.</li>
+      <li><code>webhooks.create</code> refuses a URL that carries credentials. Use the HMAC signing secret.</li>
+      <li>Run <code>gtm init --refresh</code> in each project folder for the new skills.</li>
+      <li>Full notes: <a href="release-0.2.6.html">GTM OS 0.2.6</a>.</li>
+    </ul>
     <h4>Moving to 0.2.5 from 0.2.2 (or CLI 0.2.3 or 0.2.4 on 0.2.2 images)</h4>
     <ul>
       <li><b>Upgrade the CLI first.</b> This is not optional.</li>
@@ -1655,7 +1690,7 @@ gtm upgrade --check</code></pre></div>
     <li>Resend: send, bounce and complaint events.</li>
     <li>Salesforce: the native adapter is not verified against a real organization. Use the Composio path.</li>
   </ul>
-  <footer>GTM OS user guide for release 0.2.5. Your project holds more detail in <code>docs/gtmos/</code> (refresh it with <code>gtm init --refresh</code>). When this page and your live instance disagree, the instance wins.</footer>
+  <footer>GTM OS user guide for release 0.2.6. Your project holds more detail in <code>docs/gtmos/</code> (refresh it with <code>gtm init --refresh</code>). When this page and your live instance disagree, the instance wins.</footer>
 </section>
 
 </main>

@@ -1,12 +1,30 @@
 {
   "schema": 1,
-  "generatedAt": "2026-10-27T18:55:13.798Z",
-  "expiresAt": "2027-01-25T18:55:13.798Z",
+  "generatedAt": "2026-11-03T00:21:57.353Z",
+  "expiresAt": "2027-02-01T00:21:57.353Z",
   "channels": {
-    "beta": "0.2.5",
+    "beta": "0.2.6",
     "stable": "0.2.5"
   },
   "releases": [
+    {
+      "version": "0.2.6",
+      "date": "2026-11-03T00:21:57.000Z",
+      "channel": "beta",
+      "security": false,
+      "summary": "GTM OS 0.2.6 adds AI-native recommendations and classification (connect a model key in setup), the insight-agents pack, revenue-intelligence engine additions, secret redaction in audit, approval and webhook records, an org MCP server policy, and approval payload redaction for non-approvers. Upgrade with gtm upgrade --to 0.2.6: migrations are additive and rollback is an image swap.",
+      "notesUrl": "https://ay-automate.github.io/gtmos-releases/release-0.2.6.html",
+      "minCliVersion": "0.2.6",
+      "minFromVersion": "0.2.5",
+      "requiredStops": [],
+      "additiveOnly": true,
+      "images": {
+        "api": "sha256:94437cccde1d2c00d906679bfcdb17f56b70ed9819a7b654bcda6883a7173656",
+        "console": "sha256:33b3540aae50f6d8dd0ed7815f5cc4a91796e89a31545520347fa6d7f189f8be",
+        "mcp": "sha256:91422cf90ecf7f0df240b931841c7edf71bfe8068a840935de0d12742eae8646",
+        "worker": "sha256:01043139c179eae3cd6a6970375a8c3554d3c5500a1d0509b61b7cc52313c7df"
+      }
+    },
     {
       "version": "0.2.5",
       "date": "2026-10-27T18:55:13.798Z",

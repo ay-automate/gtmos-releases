@@ -1,3 +1,3 @@
-/* The ONE release-status setting. Flip published to true when @gtmos/cli 0.2.5 is on npm and the
-   0.2.5 images are on the registry: node tools/set-release-published.mjs */
-window.GTMOS_RELEASE = { version: "0.2.5", published: true };
+/* The ONE release-status setting. Flip published to true when the stable channel points at 0.2.6
+   (signed release list and the stable image tags): node tools/set-release-published.mjs */
+window.GTMOS_RELEASE = { version: "0.2.6", published: false };

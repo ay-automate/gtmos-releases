@@ -1,14 +1,18 @@
 # GTM OS releases
 
+<!-- release-status:start -->
+> **GTM OS 0.2.6 is rolling out.** Until the `stable` channel points at 0.2.6, a plain install or `gtm upgrade --channel stable` gives you the previous release. To get 0.2.6 now, pin it: `gtm setup --version 0.2.6` or `gtm upgrade --to 0.2.6`.
+<!-- release-status:end -->
+
 Public releases of **GTM OS**, the self-hosted operating system for go-to-market: one typed model of your accounts, contacts, deals and signals; engines that find, enrich, score, route and reach accounts; and an agent-first interface (Claude Code, Codex or any MCP agent) where every customer-facing action waits for a second person to approve it.
 
 This repository holds **releases and documentation only**. The source code is not published here.
 
-## Latest: GTM OS 0.2.6 (CLI 0.2.6), 2026-11-01
+## Latest: GTM OS 0.2.6 (CLI 0.2.6), 2026-11-03
 
 | What | Where |
 |---|---|
-| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) (0.2.6) |
+| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) 0.2.6 (`npm i -g @gtmos/cli@0.2.6`) |
 | Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.6` (also `stable`), listed under this repo's Packages |
 | Release notes | [releases/0.2.6.md](releases/0.2.6.md) and the [GitHub release v0.2.6](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.6) |
 | Video series | https://ay-automate.github.io/gtmos-releases/videos/index.html |
