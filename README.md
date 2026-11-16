@@ -1,14 +1,12 @@
 # GTM OS releases
 
-<!-- release-status:start -->
-> **GTM OS 0.3.0 is rolling out.** Until the `stable` channel points at 0.3.0, a plain install or `gtm upgrade --channel stable` gives you the previous release. To get 0.3.0 now, pin it: `gtm setup --version 0.3.0`, or from 0.2.6 `gtm upgrade --to 0.3.0`.
-<!-- release-status:end -->
-
 Public releases of **GTM OS**, the self-hosted operating system for go-to-market: one typed model of your accounts, contacts, deals and signals; engines that find, enrich, score, route and reach accounts; and an agent-first interface (Claude Code, Codex or any MCP agent) where every customer-facing action waits for a second person to approve it.
 
 This repository holds **releases and documentation only**. The source code is not published here.
 
 ## Latest: GTM OS 0.3.0 (CLI 0.3.0), 2026-11-16
+
+0.3.0 is the stable release: a plain install and `gtm upgrade --channel stable` give you 0.3.0.
 
 | What | Where |
 |---|---|
