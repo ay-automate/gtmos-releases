@@ -1,21 +1,27 @@
 # GTM OS releases
 
+<!-- release-status:start -->
+> **GTM OS 0.3.0 is rolling out.** Until the `stable` channel points at 0.3.0, a plain install or `gtm upgrade --channel stable` gives you the previous release. To get 0.3.0 now, pin it: `gtm setup --version 0.3.0`, or from 0.2.6 `gtm upgrade --to 0.3.0`.
+<!-- release-status:end -->
+
 Public releases of **GTM OS**, the self-hosted operating system for go-to-market: one typed model of your accounts, contacts, deals and signals; engines that find, enrich, score, route and reach accounts; and an agent-first interface (Claude Code, Codex or any MCP agent) where every customer-facing action waits for a second person to approve it.
 
 This repository holds **releases and documentation only**. The source code is not published here.
 
-## Latest: GTM OS 0.2.6 (CLI 0.2.6), 2026-11-03
+## Latest: GTM OS 0.3.0 (CLI 0.3.0), 2026-11-16
 
 | What | Where |
 |---|---|
-| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) 0.2.6 (`npm i -g @gtmos/cli@0.2.6`) |
-| Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.2.6` (also `stable`), listed under this repo's Packages |
-| Release notes | [releases/0.2.6.md](releases/0.2.6.md) and the [GitHub release v0.2.6](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.2.6) |
+| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) 0.3.0 (`npm i -g @gtmos/cli@0.3.0`) |
+| Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.3.0` (also `stable`), listed under this repo's Packages |
+| Release notes | [releases/0.3.0.md](releases/0.3.0.md) and the [GitHub release v0.3.0](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.3.0) |
 | Video series | https://ay-automate.github.io/gtmos-releases/videos/index.html |
 | User guide | https://ay-automate.github.io/gtmos-releases/user-guide.html |
 | Product documentation | https://ay-automate.github.io/gtmos-releases/product-documentation.html |
 
-Earlier releases are kept for history: [0.2.5](releases/0.2.5.md), [0.2.2](releases/0.2.2.md).
+Earlier releases are kept for history: [0.2.6](releases/0.2.6.md), [0.2.5](releases/0.2.5.md), [0.2.2](releases/0.2.2.md).
+
+**Before you rely on 0.3.0.** Live checks against real app accounts were not run for this release, so the new mapping packs and recipe templates are beta. You link your integrations account with a project key (`ak_`) only; there is no sign-in. 0.3.0 is reached from 0.2.6 only, agent keys that used the old `composio.*` operations need a grant after the upgrade, and organizations on a dedicated database are not migrated by the upgrade. Read the [upgrade section](releases/0.3.0.md#upgrade) first.
 
 **Self-hosters, read this before you upgrade.** From 0.2.5 the console, API and MCP ports bind to `127.0.0.1` only. If people or systems reach your server by IP address or hostname, put a reverse proxy with HTTPS in front, or set `GTMOS_BIND_ADDRESS=0.0.0.0` on purpose. Details are in the [release notes](releases/0.2.5.md#breaking-change-for-self-hosters-ports-are-local-only-by-default).
 
@@ -44,7 +50,7 @@ Claude installs GTM OS, creates your organization with an owner and a second app
 Manual setup, without Claude:
 
 ```bash
-gtm setup ./instance --org "Acme" --email you@acme.com --approver-email ops@acme.com --version 0.2.6
+gtm setup ./instance --org "Acme" --email you@acme.com --approver-email ops@acme.com --version 0.3.0
 ```
 
 The owner and approver passwords are saved in `./instance/.env`. Sign in to the console (http://localhost:3000), create an agent key in **Settings > Developer**, then connect the CLI and check the install:
@@ -69,6 +75,17 @@ gtm init --refresh        # in each project folder
 ```
 
 A plain `gtm upgrade` never moves an install that is pinned to a version: choose the target on purpose with `--channel stable` or `--to <version>`. Upgrades only add to your data, take a verified backup first, and roll back by swapping the images if a step fails. Your data is never restored over your live database. See the [user guide](https://ay-automate.github.io/gtmos-releases/user-guide.html#upgrade).
+
+Moving to 0.3.0 (from 0.2.6 only):
+
+- Before you upgrade, find the agent keys that used `composio.*` or other operations that reach connected apps: from 0.3.0 they answer `FORBIDDEN` until a signed-in owner or admin grants them their apps with `agent.set_grants`.
+- Set `PUBLIC_CONSOLE_URL` on the api service. It is required for connecting apps.
+- Then the three operator steps: **link the key** (the project key `ak_` in Integrations > Apps), **paste the verifier address** from the Apps banner into your integrations project's callback verifier setting, and **connect old apps again** (the ones listed under `relinkNeeded`).
+- A connect that was half way through at the upgrade must be started again in Integrations > Apps.
+- An owner's own model endpoint on a private address is refused by default once the installation holds more than one organization (`GTMOS_CUSTOM_MODEL_PRIVATE`).
+- Going back: `gtm upgrade --rollback-check 0.2.6` (read-only) says whether you can, and `gtm upgrade --rollback 0.2.6 --yes` runs the check and swaps the images. Never swap by hand.
+
+Details: [releases/0.3.0.md](releases/0.3.0.md#upgrade).
 
 ## Video series
 

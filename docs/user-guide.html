@@ -190,14 +190,15 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 0;border-top:1px solid v
   <input class="search" id="navSearch" type="search" placeholder="Search sections" aria-label="Search sections">
   <div class="grp">Start</div>
   <a href="#intro" data-k="overview what is gtm os">What GTM OS is</a>
-  <a href="#quickstart" data-k="quickstart install setup docker claude init setup-gtmos console composio build go live">Quickstart (10 steps)</a>
+  <a href="#quickstart" data-k="quickstart install setup docker claude init setup-gtmos console build go live">Quickstart (10 steps)</a>
   <a href="#by-hand" data-k="manual by hand gtm setup login token init doctor">Prefer to do it by hand?</a>
+  <a href="#whats-new-030" data-k="what changed new 0.3.0 integrations apps accounts sync results limit agent grants">What changed in 0.3.0</a>
   <a href="#flexibility" class="hot" data-k="customize anything agent mcp prompts flexibility claude codex">Customize anything with your agent</a>
   <div class="grp">How-to</div>
   <a href="#team" data-k="accounts team owner approver members roles invite role profile seats">Accounts and team</a>
   <a href="#email-transport" data-k="email smtp transport invitations password reset verification nudge webhook email_transport smtp_host email_from">Email for invitations and reset</a>
-  <a href="#connect" data-k="connect tools composio api keys looot resend model">Connect your tools</a>
-  <a href="#composio" data-k="composio oauth connect key project key sync connected apps existing connection crm of record map to ontology">Composio and your apps</a>
+  <a href="#connect" data-k="connect tools integrations apps accounts api keys looot resend model">Connect your tools</a>
+  <a href="#integrations" data-k="integrations apps account project key verifier connect crm of record map to ontology">Connect your apps (integrations)</a>
   <a href="#api-keys" data-k="api keys anthropic gemini openai looot resend add a connection test">API keys</a>
   <a href="#google" data-k="google microsoft connected accounts search console gsc ga4 mail calendar">Google and Microsoft accounts</a>
   <a href="#slack" data-k="slack channels">Slack</a>
@@ -241,7 +242,7 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 0;border-top:1px solid v
   <div class="eyebrow">GTM OS user guide</div>
   <h1>Run your go-to-market on GTM OS</h1>
   <p class="lede">GTM OS is a governed system for your revenue team: a CRM, eight engines in the console (Score, Outreach, Performance Ads, SEO &amp; GEO, Enrichment, Merges, Plays and Routing), signals and a research agent. Your coding agent builds and runs it. A person approves anything that touches a customer or goes live, and every factual claim in what you send is checked against proof you approved.</p>
-  <p class="meta">Written for GTM OS release <b>0.2.6</b> (CLI 0.2.6). Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
+  <p class="meta">Written for GTM OS release <b>0.3.0</b> (CLI 0.3.0). Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
   <p class="meta">Building or customizing GTM OS by prompting Claude? The <a href="gtm-engineer-guide.html">engineer guide</a> goes deeper, with copy-paste recipes for every engine and a troubleshooting table.</p>
   <div class="tiles">
     <a class="tile" href="#quickstart"><b>Quickstart</b><span>Empty folder to a live system in 10 steps, with Claude Code doing the work and a setup wizard in the console.</span></a>
@@ -250,9 +251,9 @@ footer{color:var(--muted);font-size:13px;padding:30px 0 0;border-top:1px solid v
   </div>
   <h4>Rules that explain most of what you will see</h4>
   <ul>
-    <li><b>Four-eyes.</b> Whoever proposes a change can never approve it. You need a second person (the <em>approver</em>) from day one.</li>
+    <li><b>Four-eyes.</b> Whoever proposes a change can never approve it. You need a second person (the <em>approver</em>) from day one. From 0.3.0 an owner or admin may switch a workspace to "I can approve my own changes" (Settings &gt; Safety); agents, API keys and automations can still never approve their own work.</li>
     <li><b>Dev first, then prod.</b> Config your agent writes lands in <code>dev</code>. It goes live only after a person signs it and promotes it to <code>prod</code>.</li>
-    <li><b>looot for outside data, Composio for your own apps.</b> looot supplies enrichment, emails, lists and intent. Composio connects your CRM, Slack, Search Console and other apps.</li>
+    <li><b>looot for outside data, integrations for your own apps.</b> looot supplies enrichment, emails, lists and intent. Integrations connect your CRM, Slack, Search Console and about 1,700 other apps, with as many accounts as you need.</li>
     <li><b>Dry first, then live.</b> Start in Dry Mode (for the whole organization and for each engine) and see what would have happened before anything real goes out.</li>
   </ul>
 </section>
@@ -309,7 +310,7 @@ claude</code></pre></div>
         <tr><td>Install</td><td>Runs <code>gtm setup instance ... --no-harness</code> into <code>./instance</code> (a few minutes; safe to re-run).</td><td>Nothing.</td></tr>
         <tr><td>Passwords</td><td>Tells you they are in <code>instance/.env</code> as <code>GTMOS_OWNER_PASSWORD</code> and <code>GTMOS_APPROVER_PASSWORD</code>. Never prints them.</td><td>Give the approver password to the approver privately.</td></tr>
         <tr><td>Agent key</td><td>Mints its own agent key (preset Full GTM engineer), runs <code>gtm init --url ... --key ...</code> and <code>gtm doctor</code>.</td><td>Set <code>GTMOS_AGENT_TOKEN</code> in your environment and restart Claude (see <a href="#agent">Connect Claude Code</a>). Then run <code>/mcp</code>: <b>gtmos</b> shows connected.</td></tr>
-        <tr><td>Connections</td><td>Stores and checks keys, links your Composio apps, sets the CRM of record and the Search Console property.</td><td>Steps 5 and 6 below.</td></tr>
+        <tr><td>Connections</td><td>Stores and checks keys, links your integrations account, connects your apps, sets the CRM of record and the Search Console property.</td><td>Steps 5 and 6 below.</td></tr>
         <tr><td>Sending domain</td><td>Prints the SPF, DKIM and DMARC records and checks them with <code>nslookup</code>.</td><td>Add the records at your DNS host.</td></tr>
       </table></div>
     </li>
@@ -325,15 +326,15 @@ claude</code></pre></div>
     </li>
 
     <li id="qs-6">
-      <h3>Connect your tools in Integrations &gt; Connections <span class="chip human">Needs a human</span></h3>
+      <h3>Connect your tools in Integrations <span class="chip human">Needs a human</span></h3>
       <ol class="steps">
-        <li>Owner window: <b>Integrations &gt; Connections</b>.</li>
-        <li>On the <b>Composio</b> card click <span class="ui">Connect Composio</span>, sign in to Composio, accept. You come back to the console.</li>
-        <li>Claude then links your apps. To do it yourself click <span class="ui">Sync connected apps</span>: every app already connected in your Composio account appears under <b>Connected apps</b> as <code>ACTIVE</code>.</li>
-        <li>Under <b>Add a connection</b>, pick the provider, paste the key, add it: <code>anthropic</code> or <code>gemini</code> or <code>openai</code> (one required), <code>looot</code> (data), <code>resend</code> (email, if you do not send from Gmail or Microsoft 365). Then run <b>Test</b> on each.</li>
-        <li>Using SEO &amp; GEO? Make sure Search Console is connected (through Composio or <a href="#google">Settings &gt; Connected accounts</a>). It is required for that engine.</li>
+        <li>Owner window: <b>Integrations</b>, tab <b>Apps</b>.</li>
+        <li>If a banner asks you to link your integrations account (it is a Composio account), paste the project key (<code>ak_...</code>, from the project settings) and click <span class="ui">Test</span>. Then copy the verifier address shown in the banner and paste it once into the project's callback verifier setting. The banner keeps saying "Not verified": GTM OS cannot see that setting.</li>
+        <li>Click an app in the grid, then <span class="ui">Connect</span>, and finish the sign-in. GTM OS checks who the account is and reads one safe record before it says Connected.</li>
+        <li>Tab <b>Agents</b> or <b>Other</b>, or <b>Add a connection</b>: pick the provider, paste the key, add it: <code>anthropic</code> or <code>gemini</code> or <code>openai</code> (one required), <code>looot</code> (data), <code>resend</code> (email, if you do not send from Gmail or Microsoft 365). Then run <b>Test</b> on each.</li>
+        <li>Using SEO &amp; GEO? Make sure Search Console is connected (<a href="#google">Settings &gt; Connected accounts</a>, or as an app with its three signed recipes). It is required for that engine.</li>
       </ol>
-      <div class="see"><b>Required connections</b> at the top of the page: your model provider, looot and Composio read <b>Connected</b>. Anything left reads <b>Required: missing</b> with the fix.</div>
+      <div class="see"><b>Required connections</b> at the top of the page: your model provider and looot read <b>Connected</b>. The Apps tab banner is gone once the integrations account is linked.</div>
       <p class="note">You can paste a key to Claude instead and it stores it with <code>connections.create</code>. A key pasted in chat stays in the transcript, so the console is the private option.</p>
     </li>
 
@@ -404,6 +405,19 @@ gtm doctor</code></pre></div></li>
       <li>Start <code>claude</code> in the workspace and run <code>/mcp</code>.</li>
     </ol>
     <div class="see"><code>gtm doctor</code> prints one line per provider (LIVE, UNVERIF, FAILED, FIXTURE or MISSING) with the remediation for each.</div>
+  </div>
+
+  <!-- WHAT CHANGED IN 0.3.0 -->
+  <div class="card" id="whats-new-030">
+    <h3>What changed in 0.3.0</h3>
+    <ul>
+      <li><b>Apps connect inside GTM OS.</b> Link your integrations account once with a project key, then connect any of about 1,700 apps from <b>Integrations &gt; Apps</b>. See <a href="#integrations">Connect your own apps (integrations)</a>.</li>
+      <li><b>Many accounts per app.</b> Add as many accounts of one app as you need. Every row records the account it came from.</li>
+      <li><b>Honest sync results.</b> Every read says <b>data</b>, <b>empty</b>, <b>unrecognised</b> or <b>failed</b>. A sync is "Succeeded" only when rows came back.</li>
+      <li><b>Writes are proposals, with a monthly limit.</b> Writing into an app is a proposal a different person approves. App calls are metered and an owner or admin sets a monthly limit.</li>
+      <li><b>Outside agents get per-key access.</b> An agent key reaches only the apps and tools its grant allows. Existing keys that used the old <code>composio.*</code> operations need a grant: see <a href="#upgrade-030">Moving to 0.3.0</a>.</li>
+    </ul>
+    <p>The mapping packs and recipe templates are <b>beta</b>: they were not checked against live app accounts for this release. Full notes: <a href="release-0.3.0.html">GTM OS 0.3.0</a>.</p>
   </div>
 </section>
 
@@ -489,43 +503,44 @@ EMAIL_FROM=GTM OS &lt;no-reply@example.com&gt;</code></pre></div></li>
     <p class="goal"><b>Goal:</b> every engine you use has what it needs. Where things live:</p>
     <div class="tbl"><table>
       <tr><th>What</th><th>Where</th></tr>
-      <tr><td>Model keys, looot, Resend, HubSpot, Meta Ads, Cal.com, webform</td><td>Integrations &gt; Connections, <b>Add a connection</b></td></tr>
-      <tr><td>Your own apps (CRM, Slack, Typeform, Stripe, Ahrefs, Search Console...)</td><td>Integrations &gt; Connections, <b>Composio</b> card</td></tr>
-      <tr><td>Internal tools</td><td>Integrations &gt; Connections, <b>MCP servers</b> card</td></tr>
-      <tr><td>LinkedIn</td><td>Integrations &gt; Connections, <b>Unipile</b> card</td></tr>
+      <tr><td>Model keys, looot, Resend, HubSpot, Meta Ads, Cal.com, webform</td><td>Integrations, <b>Add a connection</b></td></tr>
+      <tr><td>Your own apps (CRM, Slack, Typeform, Stripe, Ahrefs, Search Console...)</td><td>Integrations &gt; Apps</td></tr>
+      <tr><td>Internal tools</td><td>Integrations, <b>MCP servers</b> card</td></tr>
+      <tr><td>LinkedIn</td><td>Integrations, <b>Unipile</b> card</td></tr>
       <tr><td>Google / Microsoft mail, calendar, Search Console, GA4, Google Ads</td><td>Settings &gt; Connected accounts</td></tr>
       <tr><td>Slack alerts and channels</td><td>Settings &gt; Slack</td></tr>
     </table></div>
     <p>Keys are sealed on save and never shown again. Connecting needs an owner or admin, or their agent (the Full GTM engineer key can store keys you give it). Sign-in buttons (OAuth) always need a person to click.</p>
-    <h4>The Connections page</h4>
+    <h4>The Integrations page</h4>
     <ul>
-      <li>A grid of logo tiles in 11 categories (CRM, email and outbound, ads, analytics, search and SEO, conversations and calls, enrichment and data, models, messaging, warehouse and billing, other and MCP). Each tile says whether it connects <b>Native</b> or <b>Via Composio</b> and lets you choose.</li>
+      <li>A grid of logo tiles in 11 categories (CRM, email and outbound, ads, analytics, search and SEO, conversations and calls, enrichment and data, models, messaging, warehouse and billing, other and MCP). Each tile says whether it connects natively or as a connected app, and lets you choose where both exist.</li>
       <li><b>Search</b> the grid (press <kbd>/</kbd> to jump to the search box) and sort by <b>relevance to your setup</b> (the default), <b>A to Z</b> or <b>connected first</b>.</li>
       <li>A <b>Needed</b> strip at the top lists what your chosen blueprint and the engines you picked still need. Statuses are honest: live, stored but not verified, failed, or not connected. In demo mode a tile says it uses built-in sample responses, not your data.</li>
-      <li>Connectors with no native card yet (Instantly, lemlist, Smartlead, Gong, Mixpanel, Amplitude) connect through Composio.</li>
+      <li>Connectors with no native card yet (Instantly, lemlist, Smartlead, Gong, Mixpanel, Amplitude) connect as apps in <b>Integrations &gt; Apps</b>.</li>
     </ul>
   </div>
 
-  <div class="card" id="composio">
-    <h3>Composio: connect your own apps <span class="chip human">Needs a human</span></h3>
-    <p class="goal"><b>Goal:</b> GTM OS can read and act in your CRM and other SaaS apps. Composio is never used to buy data.</p>
+  <div class="card" id="integrations">
+    <h3>Connect your own apps (integrations) <span class="chip human">Needs a human</span></h3>
+    <p class="goal"><b>Goal:</b> GTM OS can read and act in your CRM and other apps. Integrations are never used to buy data (that is looot).</p>
     <ol class="steps">
-      <li><b>Integrations &gt; Connections</b>, Composio card, click <span class="ui">Connect Composio</span> (recommended: OAuth sign-in, tokens refresh on their own).</li>
-      <li>Prefer a key? Click <b>Advanced</b>: paste a Connect key <code>ck_...</code> (connect.composio.dev) or a project key <code>ak_...</code> (platform.composio.dev, project, Settings, API Keys). The key is verified live before it is saved. One Composio credential per org; the last one saved wins.</li>
-      <li>Click <span class="ui">Sync connected apps</span>: apps already connected in your Composio account become <code>ACTIVE</code>; apps no longer connected become inactive.</li>
-      <li>A new app: search the <b>App catalog</b>, click <span class="ui">Connect</span>, finish the hosted sign-in (the link lasts about 10 minutes).</li>
-      <li>Several accounts for one app? Next to the app click <span class="ui">Use an existing connection</span>, then <b>Use this</b> on the right one.</li>
-      <li><b>CRM of record</b> section: pick HubSpot, Salesforce, Pipedrive, Attio or Zoho, then <span class="ui">Sync now</span>. It also syncs every 6 hours.</li>
-      <li>Any other app: on the connected app click <span class="ui">Map to ontology</span> (see <a href="#data-in">Bring data in</a>).</li>
+      <li><b>Integrations &gt; Apps.</b> Link your integrations account once (banner, see <a href="#qs-6">Quickstart step 6</a>). Use the project key that starts with <code>ak_</code>; a Connect key (<code>ck_</code>) is refused, and there is no sign-in to link the account.</li>
+      <li>Search the grid, click an app, click <span class="ui">Connect</span>. A sign-in opens (the link lasts about 10 minutes) or a form asks for a key. Add a second account of the same app the same way (a warning shows at 10).</li>
+      <li>A personal account is shared with the team only after you confirm the sharing sentence.</li>
+      <li><b>CRM of record:</b> open the connected CRM app, choose one account or merge all, choose where changes are written back, then <span class="ui">Sync now</span>. It also syncs every 6 hours.</li>
+      <li>Any other app: open it, <b>Data</b>, then map it to the ontology. A person can also generate a mapping from a real sample (<code>integrations.pack.generate</code>).</li>
+      <li>Writes into an app (create a note, update a record) are proposals: a different person approves. The app's <b>Access</b> tab shows this month's usage against the monthly limit. An owner or admin sets the limit (<code>integrations.usage.set_cap</code>).</li>
     </ol>
-    <div class="see">"Signed in to Composio", your apps listed as <code>ACTIVE</code>, and under CRM of record a <b>Last sync</b> with counts.</div>
+    <div class="see">The app with a Connected badge, "Connected as" the account's email, and under Data a result per object: <b>data</b>, <b>empty</b> or <b>unrecognised</b>, never a plain "Succeeded" with nothing read.</div>
+    <p class="note">The ready-made mapping packs and recipe templates are <b>beta</b> in 0.3.0. Their tool names and answer shapes come from the vendors' documentation and were not checked against live accounts. A wrong guess fails loudly (the install is refused, or the read is "unrecognised"); it never writes guessed data.</p>
     <details class="err"><summary>Common errors</summary><div><ul>
-      <li>"This is a Composio user API key (uak_...) ... Nothing was saved.": use <b>Connect Composio</b>, a <code>ck_</code> or an <code>ak_</code> key.</li>
-      <li><code>AUTH_EXPIRED</code> "Composio sign-in expired or was revoked": click <b>Reconnect Composio</b>.</li>
-      <li>"Composio: hubspot is not connected for this organization": connect it on the card, then check it reads ACTIVE.</li>
-      <li>App stuck <code>INITIATED</code> or <code>EXPIRED</code>: the sign-in link timed out; click <b>Reconnect</b>.</li>
-      <li>A project key (<code>ak_</code>) sees only its own developer project, not apps connected in Composio Connect.</li>
-      <li>Pipedrive, Meta Ads, LinkedIn Ads, Webflow and some others need your own auth app in Composio ("Needs your own auth app").</li>
+      <li>"The integrations key is not valid": paste a new project key.</li>
+      <li>"This is not the right kind of integrations key": use the project key, not a sign-in or Connect key.</li>
+      <li>"... is no longer connected. Reconnect it in Integrations.": open the app and connect again.</li>
+      <li>Pipedrive, Meta Ads, LinkedIn Ads, Webflow and some others need your own OAuth app: the connect sheet asks for that app's client details first.</li>
+      <li>"Succeeded, read nothing": the app answered with an empty list; check the account and workspace named in the warning.</li>
+      <li>Apps you connected under the old sign-in: connect them again (the Apps tab lists them).</li>
+      <li>A second sign-in cannot finish: set the verifier address in the project settings once.</li>
     </ul></div></details>
   </div>
 
@@ -533,7 +548,7 @@ EMAIL_FROM=GTM OS &lt;no-reply@example.com&gt;</code></pre></div></li>
     <h3>API keys: model, looot, email</h3>
     <p class="goal"><b>Goal:</b> a model provider and looot are live (and Resend if you send through it).</p>
     <ol class="steps">
-      <li><b>Integrations &gt; Connections</b>, <b>Add a connection</b>.</li>
+      <li><b>Integrations</b>, <b>Add a connection</b>.</li>
       <li>Provider: <code>anthropic</code>, <code>gemini</code>, <code>openai</code> or <code>openrouter</code> (at least one of these four), <code>looot</code>, <code>resend</code>. Give it a label, paste the key, add it.</li>
       <li>Run <b>Test</b> on the new connection. A stored but untested key reads "Stored, not verified".</li>
     </ol>
@@ -556,7 +571,7 @@ EMAIL_FROM=GTM OS &lt;no-reply@example.com&gt;</code></pre></div></li>
     </ol>
     <div class="see">The account marked <b>Connected</b> and <b>Org default</b>. Mail and calendar sync every 10 minutes and log activity with known contacts. <span class="ui">Sync now</span> forces a sync.</div>
     <details class="err"><summary>Common errors</summary><div><ul>
-      <li><code>NOT_CONFIGURED</code> "Google Search Console is required for SEO &amp; GEO": connect Search Console here (or through Composio) and set the property.</li>
+      <li><code>NOT_CONFIGURED</code> "Google Search Console is required for SEO &amp; GEO": connect Search Console here (or as an app, with its three signed recipes) and set the property.</li>
       <li>"Needs reconnect": click <b>Reconnect</b>.</li>
     </ul></div></details>
   </div>
@@ -570,8 +585,8 @@ EMAIL_FROM=GTM OS &lt;no-reply@example.com&gt;</code></pre></div></li>
       <li><b>People matching</b>: <span class="ui">Match by email</span> links members to Slack users; fix the rest with <b>Set match</b>.</li>
     </ol>
     <div class="see"><b>Connected workspace</b> with the bot user and granted scopes.</div>
-    <p>For alerts, the native Slack connection is preferred over Composio's Slack toolkit.</p>
-    <p><b>Microsoft Teams.</b> Teams appears in <b>Integrations &gt; Connections</b> as a chat tile for alerts and approvals, and it connects through Composio. It has no settings page of its own like <b>Settings &gt; Slack</b>, so there is no channel or member matching screen for it. <b>CRM &gt; Conversations</b> lists Teams as one of the reply channels.</p>
+    <p>For alerts, the native Slack connection is preferred over a connected Slack app.</p>
+    <p><b>Microsoft Teams.</b> Teams appears in <b>Integrations</b> as a chat tile for alerts and approvals, and it connects as an app in <b>Integrations &gt; Apps</b>. It has no settings page of its own like <b>Settings &gt; Slack</b>, so there is no channel or member matching screen for it. <b>CRM &gt; Conversations</b> lists Teams as one of the reply channels.</p>
   </div>
 
   <div class="card" id="email">
@@ -602,7 +617,7 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
     <h3>LinkedIn through Unipile <span class="chip human">Needs a human</span></h3>
     <p class="goal"><b>Goal:</b> read LinkedIn profiles, inbox and connections, and send LinkedIn steps through the same approval path as email.</p>
     <ol class="steps">
-      <li><b>Integrations &gt; Connections</b>, <b>Unipile (LinkedIn sending)</b> card.</li>
+      <li><b>Integrations</b>, <b>Unipile (LinkedIn sending)</b> card.</li>
       <li>Fill <b>API key</b>, <b>DSN</b> (your account's API host, for example <code>api8.unipile.com:13814</code>) and optionally the LinkedIn account id.</li>
       <li>Click <span class="ui">Save and test</span>.</li>
       <li><span class="chip human">Needs a human</span> Accept the LinkedIn risk, once. LinkedIn may restrict or ban accounts that send automated messages, so LinkedIn sending is off until an owner or admin accepts that. Open <b>Outreach</b>, the <b>Sending lanes</b> panel, and click <span class="ui">Accept the LinkedIn risk</span>. It is recorded in the audit log, and there is one acceptance for connection requests and one for messages (the button accepts whichever is still missing). A person does it, never an agent. Until then every LinkedIn send is refused, and the panel says so.</li>
@@ -615,7 +630,7 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
     <h3>Add your own MCP server</h3>
     <p class="goal"><b>Goal:</b> an internal tool becomes a data source or capability for GTM OS (the opposite direction from your agent's MCP).</p>
     <ol class="steps">
-      <li><b>Integrations &gt; Connections</b>, <b>MCP servers</b> card, <b>Add an MCP server</b>: server name (lowercase), server URL (a streamable-HTTP endpoint, usually ending <code>/mcp</code>), optional auth header name and value. Credentials go in the header, never in the URL.</li>
+      <li><b>Integrations</b>, <b>MCP servers</b> card, <b>Add an MCP server</b>: server name (lowercase), server URL (a streamable-HTTP endpoint, usually ending <code>/mcp</code>), optional auth header name and value. Credentials go in the header, never in the URL.</li>
       <li>Test it: the tool catalog loads.</li>
       <li><span class="chip human">Needs a human</span> Mark each tool <b>Read</b> or <b>Write (approval)</b>. An unmarked tool cannot be used.</li>
       <li>Ask your agent to bind a capability to it, or map its records (see <a href="#flexibility">example prompt</a>).</li>
@@ -631,7 +646,7 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
     <h3>Required connections and readiness</h3>
     <p class="goal"><b>Goal:</b> know what is live and what is missing.</p>
     <ol class="steps">
-      <li>Top of <b>Integrations &gt; Connections</b>: <b>Required connections</b>. States: Connected, Stored not verified, Failed, Required: missing, Not connected, Not needed.</li>
+      <li>Top of <b>Integrations</b>: <b>Required connections</b>. States: Connected, Stored not verified, Failed, Required: missing, Not connected, Not needed.</li>
       <li>From a terminal:
         <div class="code"><pre><code>gtm doctor --strict</code></pre></div></li>
     </ol>
@@ -791,7 +806,7 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
       <tr><td><code>seo</code></td><td>A search and generative-engine starter: tracked pages, freshness monitoring, a daily audit play, AI-answer visibility (ChatGPT, Perplexity, Gemini, Copilot, Google AI Overview), and Google rank and keyword data. 15 resources.</td><td>CRM, search</td><td>Search Console, model provider, looot.</td></tr>
       <tr><td><code>full-gtm</code></td><td>Every built engine on one shared foundation (identity, pipeline, compliance, suppression): scoring, signals and research, enrichment, identity and data quality, outreach, CRM sync, SEO and GEO, and performance ads. 49 resources.</td><td>CRM, enrichment, outreach, performance ads, research, score, search, signals</td><td>Model provider, looot, email sender, CRM, ad platform, Search Console. Optional: LinkedIn seats, booking calendar.</td></tr>
     </table></div>
-    <p>In the table, "model provider" means Anthropic, OpenAI, Gemini or OpenRouter. "Email sender" means Gmail, Microsoft or Resend. "CRM" means HubSpot, Salesforce or Composio. Applying a blueprint makes its declared connections required in readiness, and optional ones are listed without being required. Browse and apply them in <b>CRM &gt; Blueprints</b>.</p>
+    <p>In the table, "model provider" means Anthropic, OpenAI, Gemini or OpenRouter. "Email sender" means Gmail, Microsoft or Resend. "CRM" means HubSpot, Salesforce or a CRM connected as an app. Applying a blueprint makes its declared connections required in readiness, and optional ones are listed without being required. Browse and apply them in <b>CRM &gt; Blueprints</b>.</p>
     <h4>Blueprints on the command line</h4>
     <div class="tbl"><table>
       <tr><th>Command</th><th>What it does</th></tr>
@@ -878,12 +893,12 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
     <p class="goal"><b>Goal:</b> your accounts, contacts and deals in GTM OS, clean and de-duplicated.</p>
     <h4>From your CRM</h4>
     <ol class="steps">
-      <li>Connect the CRM on the Composio card, pick it under <b>CRM of record</b>, click <span class="ui">Sync now</span>.</li>
+      <li>Connect the CRM on the Apps tab, open it, choose the account mode, click <span class="ui">Sync now</span>.</li>
     </ol>
     <div class="see"><b>Last sync</b> with counts. Records land as companies, contacts and deals. A run reads up to 10,000 records per object ("Truncated" if more).</div>
     <h4>From any other app</h4>
     <ol class="steps">
-      <li>On the connected app in the Composio card, click <span class="ui">Map to ontology</span>.</li>
+      <li>Open the connected app, tab <b>Data</b>, map it to the ontology.</li>
       <li>Pick a list tool, preview live sample data, map fields to a target (company, contact, deal, signal or a custom object).</li>
       <li>Propose it; a person signs it (and promotes it if prod should run it); then <span class="ui">Sync now</span>.</li>
     </ol>
@@ -972,16 +987,16 @@ nslookup -type=TXT _dmarc.acme.com</code></pre></div></li>
     <ol class="steps">
       <li><b>Engines &gt; SEO &amp; GEO</b>: readiness metrics and pages. Click the <b>Page workbench</b> link.</li>
       <li><b>Track a new page</b>, <span class="ui">Track page</span>, then <span class="ui">Audit page</span>, <span class="ui">Get recommendation</span>, <span class="ui">Propose change</span> (a person approves).</li>
-      <li><b>Site visibility</b>: <span class="ui">Run visibility</span> for Search Console totals, top queries and pages (and Ahrefs metrics when Ahrefs is connected through Composio).</li>
+      <li><b>Site visibility</b>: <span class="ui">Run visibility</span> for Search Console totals, top queries and pages (and top Ahrefs rows when Ahrefs is connected on your own account).</li>
       <li>Plan content with <b>topic clusters</b>, briefs and drafts. A draft passes a quality gate and moves through lifecycle states. Pages needing a refresh are listed with the reason.</li>
-      <li><span class="chip human">Needs a human</span> Publish an approved draft to your CMS: Webflow through Composio, WordPress.com as drafts only, or a signed webhook (also the route for self-hosted WordPress). The body published is the approved draft, bound to its hash.</li>
+      <li><span class="chip human">Needs a human</span> Publish an approved draft to your CMS: Webflow as a connected app, WordPress.com as drafts only, or a signed webhook (also the route for self-hosted WordPress). The body published is the approved draft, bound to its hash.</li>
     </ol>
     <div class="see">Audit findings, a recommendation, and visibility for your domain. Visits from AI assistants are credited to SEO &amp; GEO.</div>
 
     <h4 id="e-seo-publish">Set up SEO publishing</h4>
     <p>The SEO &amp; GEO engine page has tabs: <b>Overview</b>, <b>Visibility</b> (Search Console totals, top queries and pages), <b>GEO</b> (AI-answer visibility), <b>Keywords</b> (opportunities), <b>Clusters</b> (topic clusters), <b>Factory</b> (briefs and drafts), <b>Fix queue</b> (audit findings to fix), <b>Publish queue</b>, <b>Refresh calendar</b> (pages due a refresh), <b>Settings</b> (the tracked-visibility schedule, alert thresholds and the spend cap per run; turning it on needs a live Search Console) and <b>Pages</b>.</p>
     <ol class="steps">
-      <li><span class="chip human">Needs a human</span> Connect where pages go. For Webflow or WordPress.com, connect it in <b>Integrations &gt; Connections &gt; Composio</b> with your own credentials. For your own site, including self-hosted WordPress, register a publish endpoint with a URL and a signing secret (<code>webhooks.create</code>) and put a small receiver on your site. Composio has no toolkit for self-hosted WordPress.</li>
+      <li><span class="chip human">Needs a human</span> Connect where pages go. For Webflow or WordPress.com, connect it as an app in <b>Integrations &gt; Apps</b> with your own credentials. For your own site, including self-hosted WordPress, register a publish endpoint with a URL and a signing secret (<code>webhooks.create</code>) and put a small receiver on your site. Composio has no toolkit for self-hosted WordPress.</li>
       <li>Open an approved item in <b>Factory</b>, then its <b>Publish</b> tab, then <b>CMS targets &gt; Settings</b>. Set the <b>default target</b> and the <b>Site URL</b> (without it a new page's live address is unknown). For Webflow add the <b>collection id</b> the pages live in. For WordPress.com add the <b>site id</b>. For the webhook add the <b>endpoint id</b>.</li>
       <li>Webflow reads three fields from each draft: title into <code>name</code>, address into <code>slug</code> and body into <code>post-body</code>. If your collection uses other field names, set the field map (<code>webflow_field_map</code> under the <code>cms</code> provider settings, with keys <code>title</code>, <code>slug</code> and <code>body</code>; your agent can set it, there is no form field for it).</li>
       <li>Choose the <b>CMS target</b> (each shows Ready, Needs setup or Not connected), check the preview of exactly what will be sent, and click <span class="ui">Propose publish</span>. A different person approves it in Approvals. The page then moves from Approved to Published once the CMS confirms.</li>
@@ -1277,7 +1292,7 @@ ss -tlnp | grep -E ':(3000|3001|3004|5432)\b'</code></pre></div></li>
       <tr><th>Setting</th><th>What it does</th></tr>
       <tr><td><code>GTMOS_BIND_ADDRESS</code></td><td>Which network address the console, API and MCP ports bind to. Default <code>127.0.0.1</code>. See <a href="#selfhost">Self-host on a server</a>.</td></tr>
       <tr><td><code>GTMOS_LIVE</code></td><td>Must be <code>true</code> or <code>false</code> in production. The API, worker and MCP images refuse to start without it. <code>true</code> means an unconfigured model, connector or sender fails with <code>NOT_CONFIGURED</code>. <code>false</code> serves visibly fixture demo data. New installs write <code>true</code>. An upgrade writes <code>false</code> into an older <code>.env</code>, which is how it already behaved. Set <code>true</code> and restart the API and worker to go live.</td></tr>
-      <tr><td><code>GTMOS_PLATFORM_CREDENTIAL_PROVIDERS</code></td><td>Which instance-level keys in <code>.env</code> an organization may fall back to when it has no connection of its own. Setting it <b>replaces</b> the default list, it does not add to it. The default shares the model keys, Resend, looot, Composio and the Google Ads developer token, and does not share CRM, ads-account, LinkedIn or Search Console credentials. The upgrade keeps the providers you already use. <code>gtm doctor</code> names the variable when a key is outside the list.</td></tr>
+      <tr><td><code>GTMOS_PLATFORM_CREDENTIAL_PROVIDERS</code></td><td>Which instance-level keys in <code>.env</code> an organization may fall back to when it has no connection of its own. Setting it <b>replaces</b> the default list, it does not add to it. The default shares the model keys, Resend, looot, the integrations key and the Google Ads developer token, and does not share CRM, ads-account, LinkedIn or Search Console credentials. The upgrade keeps the providers you already use. <code>gtm doctor</code> names the variable when a key is outside the list.</td></tr>
       <tr><td><b>CRM settings &gt; Members can import CSVs and bulk-edit</b></td><td>Off by default: members can preview a file but not commit an import or a bulk edit. An owner or admin can turn it on.</td></tr>
       <tr><td><code>EMAIL_TRANSPORT</code>, <code>SMTP_*</code>, <code>EMAIL_FROM</code></td><td>How the instance sends invitations, password reset, verification and setup reminder mail. Unset means no system mail is sent, and a mail you expect never arrives. The link in a reset or verification mail is a secret and is not written to the logs of the release images. See <a href="#email-transport">Email for invitations, password reset and nudges</a>.</td></tr>
       <tr><td>Private and team records</td><td>A record set to private or team is visible only to its owner, its creator and the organization's owners and admins, in lists, search, counts, timelines and the dashboard. Opening it by id reads "not found". An agent sees what the person it acts for sees.</td></tr>
@@ -1286,6 +1301,10 @@ ss -tlnp | grep -E ':(3000|3001|3004|5432)\b'</code></pre></div></li>
       <tr><td><code>GTMOS_MODEL_CALLS_PER_MINUTE</code></td><td>Model calls per minute for each member below owner or admin (default 60). Owners, admins, service principals and system actors are not limited. Set a monthly model cap under Setup &gt; AI model.</td></tr>
       <tr><td>Approval payloads</td><td>Owners, admins and the proposer see an approval's full payload. Other members see a short summary of the plain fields that name the action.</td></tr>
       <tr><td>Changing a definition</td><td>Proposing recommendation rules, revenue targets, the data quality policy or merge rules needs the build scope, and a different person approves.</td></tr>
+      <tr><td><code>PUBLIC_CONSOLE_URL</code></td><td>The console address the api uses for the page a connect returns to, and for the verifier address in the Apps banner. Required for connecting apps.</td></tr>
+      <tr><td><code>GTMOS_CUSTOM_MODEL_PRIVATE</code></td><td>Whether an owner's own model endpoint may sit on a private address. Default: allowed on a single-organization installation, refused once it holds more than one. <code>on</code> allows, <code>off</code> refuses. Set it on the api and worker services.</td></tr>
+      <tr><td>App call limits</td><td>A monthly limit an owner or admin sets in <b>Integrations &gt; Apps</b> or with <code>integrations.usage.set_cap</code>. An agent key calling apps has a default limit of $1.50 per rolling 24 hours (<code>GTMOS_INTEGRATIONS_AGENT_DAILY_CAP_USD</code>; 0 blocks those calls). Background runs share an hourly budget of 3000 calls per organization and 1500 per app (<code>GTMOS_INTEGRATIONS_JOB_CALLS_PER_HOUR</code>, <code>GTMOS_INTEGRATIONS_JOB_CALLS_PER_APP_PER_HOUR</code>). A run that meets it stops, keeps what it read, and continues on its next scheduled run.</td></tr>
+      <tr><td>Who can approve</td><td>One setting per workspace in <b>Settings &gt; Safety</b>: "A second person must approve" (the default, kept for existing workspaces) or "I can approve my own changes" for an owner or admin signed in as themselves. Agents, API keys and automations can never approve their own work.</td></tr>
       <tr><td>Your master key</td><td><code>GTMOS_MASTER_KEY</code> seals every stored credential. Backups do not contain it. Keep it somewhere safe, apart from the dump.</td></tr>
       <tr><td><code>org.offboard</code></td><td>Needs a real approval by a second owner or admin, then a run by someone other than the proposer.</td></tr>
     </table></div>
@@ -1330,6 +1349,23 @@ ss -tlnp | grep -E ':(3000|3001|3004|5432)\b'</code></pre></div></li>
     <h4>Rollback</h4>
     <p>A failed upgrade rolls back by <b>swapping the images back</b>: the previous compose and <code>.env</code> files and the previous images are restored and the services restart on them. <b>The database is never restored, dropped or recreated by an upgrade</b>, and the verified backup is kept. This works because every migration is additive, so the previous code runs on the migrated database.</p>
     <p>Restoring a backup is a <b>manual last resort</b>, for example if something other than the upgrade damaged your data. Never restore over the live database: rename it first, then restore into a new one. <code>gtm upgrade --help</code> prints the exact commands.</p>
+    <h4 id="upgrade-030">Moving to 0.3.0 from 0.2.6</h4>
+    <ul>
+      <li><b>From 0.2.6 only.</b> An instance on 0.2.5 goes to 0.2.6 first, then to 0.3.0; <code>gtm upgrade</code> plans that hop.</li>
+      <li><b>Upgrade the CLI first</b> (<code>npm i -g @gtmos/cli@latest</code> gives <code>@gtmos/cli</code> 0.3.0). 0.3.0 needs CLI 0.3.0 or newer: the 0.3.0 compose file and the rollback check come with it. Then <code>gtm upgrade --check</code>.</li>
+      <li>Pin it with <code>gtm upgrade --to 0.3.0 --yes</code>, or follow the stable channel once it points at 0.3.0. The images come from <code>ghcr.io/ay-automate</code>. Install and upgrade go through the <code>gtm</code> CLI and these published images only.</li>
+      <li>This release has 27 new migrations since 0.2.6, and every one only adds. One of them refreshes the installed copies of five first-party engine manifests in place. After the migrations, <code>gtm upgrade</code> brings every organization schema to the same shape as the shared tables, keeping every value. An organization marked as schema tier whose data is still in the shared tables blocks the update; the updater names it and prints the fix.</li>
+      <li><b>Before you upgrade, find the agent-key automations that will stop.</b> From 0.3.0 an outside agent key can no longer run the old <code>composio.*</code> operations, or the operations that reach connected apps outside <code>integrations.*</code> (for example <code>source.*</code>, <code>adapter.*</code>, <code>crm.sync</code>, <code>transcripts.sync</code>, <code>mcp_servers.*</code>, <code>connections.test</code>). They answer <code>FORBIDDEN</code>. Nothing is granted automatically. Read the operation log for the last weeks (<code>audit.list</code> as an owner or admin) to find the keys, then after the upgrade grant each one the apps and tools it needs with <code>agent.set_grants</code> in a signed-in session (the key id is in <code>agent.list_keys</code>). An MCP or OAuth agent token with no key gets no connected apps: create an agent key in <b>Integrations &gt; Agents</b> instead. People and the built-in agents are not affected.</li>
+      <li><b>A connect that was half way through at the upgrade must be started again.</b> Its return page fails once. Start it again in <b>Integrations &gt; Apps</b>.</li>
+      <li><b>Private model endpoints are refused by default on a shared installation.</b> Once the installation holds more than one organization, an owner's own OpenAI-compatible model endpoint on a private or internal address is refused. A single-organization installation keeps allowing it. <code>GTMOS_CUSTOM_MODEL_PRIVATE</code> on the api and worker services overrides the default (<code>on</code> allows, <code>off</code> refuses).</li>
+      <li>Set <code>PUBLIC_CONSOLE_URL</code> on the api service: without it a connect has no page to come back to. Then the three operator steps: <b>link the key</b> (project key <code>ak_</code> in <b>Integrations &gt; Apps</b>), <b>paste the verifier address</b> from the banner into the project's callback verifier setting, and <b>connect old apps again</b> (the apps listed under <code>relinkNeeded</code>, made under the old sign-in). Existing connections are otherwise adopted automatically.</li>
+      <li>In production, an <code>UNSUBSCRIBE_TOKEN_SECRET</code> left at the public default value is now refused for contact unsubscribe links too. Set a real secret before you upgrade.</li>
+      <li>Organizations on a dedicated database (the database or instance tier) are <b>not migrated by any upgrade path</b>: <code>gtm upgrade</code> migrates the instance database only.</li>
+      <li>First runs after the upgrade: existing organizations get a DRAFT motion proposed from their recorded blueprint choice, which changes nothing until a person approves it. Signals now age from when the event happened, so some account scores go down at the next rescore.</li>
+      <li><b>Going back to 0.2.6 is an image swap with a check first.</b> <code>gtm upgrade --rollback-check 0.2.6</code> is read-only and says whether you can go back. <code>gtm upgrade --rollback 0.2.6 --yes</code> runs the check, stops the services, runs it again and only then swaps the images. Never swap by hand. The check refuses while a connection type 0.2.6 does not know is stored (<code>log_drain</code>, <code>perplexity</code>, <code>openai_compatible</code>, <code>profound</code>, <code>otterly</code>, <code>scrunch</code>; it prints the command that removes them), while an organization is on the schema tier, or while an app's records could be overwritten with another account's records. An app whose records were synced through two accounts on 0.3.0 cannot be synced safely by 0.2.6.</li>
+      <li>Run <code>gtm init --refresh</code> in each project folder for the new skills.</li>
+      <li>Full notes: <a href="release-0.3.0.html">GTM OS 0.3.0</a>.</li>
+    </ul>
     <h4>Moving to 0.2.6 from 0.2.5</h4>
     <ul>
       <li><b>Upgrade the CLI first</b> (<code>npm i -g @gtmos/cli@latest</code> gives <code>@gtmos/cli</code> 0.2.6). 0.2.6 needs CLI 0.2.6 or newer and can be reached from 0.2.5 or newer. An instance on 0.2.2 goes to 0.2.5 first, and <code>gtm upgrade</code> plans that hop.</li>
@@ -1443,12 +1479,17 @@ gtm upgrade --check</code></pre></div>
       <tr><td>"An action cannot be executed by the identity that proposed it"</td><td>The approver or another member executes.</td></tr>
       <tr><td>Banner "N definitions are in dev, not live"</td><td>CRM &gt; Environments &gt; Go live: sign all, promote, approve.</td></tr>
       <tr><td>Score shows <code>score.default.v1</code></td><td>Sign and promote your <code>definition.scoring_model</code> <code>default</code>.</td></tr>
-      <tr><td>"This is a Composio user API key (uak_...)"</td><td>Use <b>Connect Composio</b>.</td></tr>
-      <tr><td><code>AUTH_EXPIRED</code> Composio sign-in expired</td><td>Click <b>Reconnect Composio</b>.</td></tr>
+      <tr><td>"The integrations key is not valid"</td><td>Paste a new project key in <b>Integrations &gt; Apps</b>.</td></tr>
+      <tr><td>"This is not the right kind of integrations key"</td><td>Use the project key (<code>ak_</code>), not a sign-in or Connect key.</td></tr>
+      <tr><td>"... is no longer connected. Reconnect it in Integrations."</td><td>Open the app and connect again.</td></tr>
+      <tr><td>The connect sheet asks for client details (Pipedrive, Meta Ads, LinkedIn Ads, Webflow and some others)</td><td>That app needs your own OAuth app: enter its client details first.</td></tr>
+      <tr><td>"Succeeded, read nothing"</td><td>The app answered with an empty list. Check the account and workspace named in the warning.</td></tr>
+      <tr><td>Apps connected under the old sign-in do not run</td><td>Connect them again (the Apps tab lists them).</td></tr>
+      <tr><td>A second sign-in cannot finish</td><td>Set the verifier address in the project settings once.</td></tr>
       <tr><td><code>lane_required</code></td><td>Pick a sending lane; activate it first.</td></tr>
       <tr><td><code>mailbox_required</code></td><td>Connect Gmail or Microsoft 365 with Send mail; pick the mailbox.</td></tr>
       <tr><td>Sends stay drafts, no approval appears</td><td>Dry Mode is on: Settings &gt; Safety.</td></tr>
-      <tr><td><code>NOT_CONFIGURED</code> "Google Search Console is required for SEO &amp; GEO"; <code>gtm doctor</code> ERROR <code>connector.gsc</code></td><td>Connect Search Console (Connected accounts, Use for org, or Composio) and set the property.</td></tr>
+      <tr><td><code>NOT_CONFIGURED</code> "Google Search Console is required for SEO &amp; GEO"; <code>gtm doctor</code> ERROR <code>connector.gsc</code></td><td>Connect Search Console (Connected accounts, Use for org, or as an app) and set the property.</td></tr>
       <tr><td>"The GSC property must be a Search Console property"</td><td>Use <code>sc-domain:acme.com</code> or <code>https://www.acme.com/</code>.</td></tr>
       <tr><td>"... does not hold the "engine.configure" scope" / "connection.manage"</td><td>New agent key with the Full GTM engineer preset.</td></tr>
       <tr><td><code>APPROVAL_REQUIRED</code> on enrichment or data</td><td>Spend is above the per-call cap; approve it, or price smaller batches.</td></tr>
@@ -1485,7 +1526,7 @@ gtm upgrade --check</code></pre></div>
     <tr><td>Engines</td><td>Scoring models and thresholds, ICP fit, signal weights, plays and triggers, lanes, sequences, brand voice, workflow flags, research settings, model routing</td></tr>
     <tr><td>Data model</td><td>Custom fields, custom objects and relationships, identity rules</td></tr>
     <tr><td>Data</td><td>Imports, CRM sync, any-app source mappings, enrichment runs, de-duplication, record fixes (as proposals)</td></tr>
-    <tr><td>Integrations</td><td>Connections and keys you give it, Composio apps already authorized, MCP servers, capability bindings</td></tr>
+    <tr><td>Integrations</td><td>Connections and keys you give it, connected apps and their accounts, MCP servers, capability bindings</td></tr>
     <tr><td>Blueprints and packages</td><td>Apply the closest blueprint, customize it, propose package installs and upgrades</td></tr>
     <tr><td>Screens</td><td>Declarative apps (record page, queue, table, dashboard) under <b>Apps</b></td></tr>
   </table></div>
@@ -1504,12 +1545,12 @@ gtm upgrade --check</code></pre></div>
       <h4>Map an app to signals</h4>
       <div class="code"><pre><code>Map our Typeform demo-request responses to signals, every hour, matched to contacts by email.</code></pre></div>
       <dl><dt>Claude does</dt><dd>Previews the Typeform list tool live, writes a source mapping (append mode, hourly), proposes it, syncs once signed.</dd>
-      <dt>You do</dt><dd>Connect Typeform on the Composio card; sign the mapping.</dd></dl>
+      <dt>You do</dt><dd>Connect Typeform on the Apps tab; sign the mapping.</dd></dl>
     </div>
     <div class="prompt">
       <h4>Post qualified accounts to Slack</h4>
-      <div class="code"><pre><code>Create a Slack bot that posts every newly qualified account to #sales with its top reasons, and wire it in. Use Composio if that is simpler.</code></pre></div>
-      <dl><dt>Claude does</dt><dd>Recommends the native Slack connection for alerts (or Composio's Slack toolkit), creates or joins the channel, writes a play that reacts to qualification and posts, and simulates it.</dd>
+      <div class="code"><pre><code>Create a Slack bot that posts every newly qualified account to #sales with its top reasons, and wire it in.</code></pre></div>
+      <dl><dt>Claude does</dt><dd>Recommends the native Slack connection for alerts, creates or joins the channel, writes a play that reacts to qualification and posts, and simulates it.</dd>
       <dt>You do</dt><dd>Click the Slack consent; sign and promote the play; approve posts that go out through the gate.</dd></dl>
     </div>
     <div class="prompt">
@@ -1535,7 +1576,7 @@ gtm upgrade --check</code></pre></div>
   <h3>What always needs a person</h3>
   <ul>
     <li><b>Approve, reject, execute</b> any proposal, <b>sign</b> definitions and <b>publish</b> ontology changes (four-eyes).</li>
-    <li><b>OAuth consent clicks</b>: Composio sign-in and app connects, Google, Microsoft, Slack. Your agent gives you the link.</li>
+    <li><b>OAuth consent clicks</b>: linking the integrations account and every app sign-in, Google, Microsoft, Slack. Your agent gives you the link.</li>
     <li><b>Dry Mode</b> on or off (Settings &gt; Safety).</li>
     <li>Agent keys, agents, roles, members, gate policies, and MCP tool effects (no agent can widen its own authority).</li>
     <li><b>Keys you choose to keep private</b>: paste them in the console instead of the chat.</li>
@@ -1631,7 +1672,7 @@ gtm upgrade --check</code></pre></div>
     <dt>First win</dt><dd>One of eight milestones, computed from real events, that shows how far your workspace has come.</dd>
     <dt>Harness</dt><dd>The files <code>gtm init</code> writes in your project (skills, subagents, commands, MCP config, docs) so your agent can run GTM OS.</dd>
     <dt>looot</dt><dd>The third-party data provider: enrichment, emails, phones, lists, intent, SEO keyword data.</dd>
-    <dt>Composio</dt><dd>The bridge to your own apps: CRM, Slack, Typeform, Search Console, Ahrefs and more.</dd>
+    <dt>Integrations</dt><dd>The bridge to your own apps: CRM, Slack, Typeform, Search Console, Ahrefs and about 1,700 more, with any number of accounts per app.</dd>
     <dt>Source mapping</dt><dd>A signed rule that maps any app's records into GTM OS objects.</dd>
     <dt>Readiness</dt><dd>The live status of every connection: live, stored not verified, failed, fixture, not configured.</dd>
     <dt>Demo vs live mode</dt><dd>Demo serves fake fixture data where a key is missing. Live fails with <code>NOT_CONFIGURED</code> instead. Real go-live needs live mode.</dd>
@@ -1643,10 +1684,10 @@ gtm upgrade --check</code></pre></div>
   <p>Plan around these before you promise them to your team.</p>
   <h4>Not built yet</h4>
   <ul>
-    <li><b>Create in CRM.</b> There is no gated "create a record in the CRM" action. CRM writes stay update-only, and high-risk Composio writes need per-record approval.</li>
+    <li><b>Create in CRM.</b> There is no gated "create a record in the CRM" action. CRM writes stay update-only, and high-risk writes into connected apps need per-record approval.</li>
     <li><b>Custom field display and filters.</b> "Show in tables" and "Allow filtering" on a custom field are stored, but the Companies list has no such columns or filters yet. Record filters over the API and MCP do work.</li>
     <li><b>Company context for AI steps.</b> Only brand voice, proof and customer phrases reach drafts. The rest of your company context does not yet.</li>
-    <li><b>Connectors without a native card:</b> Instantly, lemlist, Smartlead, Gong, Mixpanel and Amplitude. Use Composio.</li>
+    <li><b>Connectors without a native card:</b> Instantly, lemlist, Smartlead, Gong, Mixpanel and Amplitude. Connect them as apps.</li>
     <li><b>Deferred engines and features:</b> new engines (ABM, sales intelligence, lifecycle, reporting); the ads creative loop, audience sync and offline conversions; routing SLAs and escalation; merge batches and learning from rulings; an enrichment catalog with triggers for job changes; play holdouts and a larger play library; GEO gap fixes and a link graph; more vendor skill packs; engine-dependent agents and per-agent evaluation sets.</li>
     <li><b>White-label</b> (custom branding or domain per client) is not available. Agencies use delegations.</li>
     <li><b>Expansion and reorder</b> for existing customers is not a shipped motion. Your agent can compose a custom segment and play, and renewal runway ships as a play.</li>
@@ -1671,26 +1712,26 @@ gtm upgrade --check</code></pre></div>
   <h4>Integration maturity</h4>
   <div class="tbl"><table>
     <tr><th>Integration</th><th>Where it stands in 0.2.5</th></tr>
-    <tr><td>HubSpot, Google Ads, Meta Ads, Google Search Console, GA4, Resend, looot</td><td>Native connectors with a live path (needs your credential) and a fixture path. Google Ads and Meta Ads can also be read through Composio, which is read-only.</td></tr>
-    <tr><td>Salesforce</td><td>The native adapter is fixture-first: it is tested against recorded Salesforce responses, not against a real organization. Use the Composio path.</td></tr>
-    <tr><td>LinkedIn Ads, TikTok Ads</td><td>Read-only through Composio (campaign performance reads). No changes are made from GTM OS.</td></tr>
-    <tr><td>Webflow</td><td>Publishing through Composio, tested with simulated Composio responses and not against a real site.</td></tr>
+    <tr><td>HubSpot, Google Ads, Meta Ads, Google Search Console, GA4, Resend, looot</td><td>Native connectors with a live path (needs your credential) and a fixture path. Google Ads and Meta Ads can also be read through a connected app, which is read-only.</td></tr>
+    <tr><td>Salesforce</td><td>The native adapter is fixture-first: it is tested against recorded Salesforce responses, not against a real organization. Connect Salesforce as an app instead.</td></tr>
+    <tr><td>LinkedIn Ads, TikTok Ads</td><td>Read-only through a connected app (campaign performance reads). No changes are made from GTM OS.</td></tr>
+    <tr><td>Webflow</td><td>Publishing through a connected app, tested with simulated responses and not against a real site.</td></tr>
     <tr><td>WordPress.com</td><td>Drafts only. It never publishes.</td></tr>
     <tr><td>Self-hosted WordPress</td><td>Only through the signed webhook and a receiver you run.</td></tr>
     <tr><td>LinkedIn through Unipile</td><td>High risk, off until an owner or admin accepts it, tested against recorded Unipile responses and not yet verified live.</td></tr>
     <tr><td>Gmail and Google Calendar</td><td>Polled. The wire formats are not yet verified against a live account.</td></tr>
-    <tr><td>Microsoft Teams</td><td>A chat tile through Composio for alerts and approvals, with no settings page of its own.</td></tr>
+    <tr><td>Microsoft Teams</td><td>A connected app for alerts and approvals, with no settings page of its own.</td></tr>
   </table></div>
   <h4>Needs a live check with real accounts</h4>
   <p>The code is tested against contracts and a live database, but treat these as unverified until you have checked them with a real account:</p>
   <ul>
     <li>Unipile: a LinkedIn message, a connection request and the accept wait.</li>
-    <li>Webflow and WordPress.com publishing through Composio, and self-hosted WordPress through the signed webhook.</li>
+    <li>Webflow and WordPress.com publishing through connected apps, and self-hosted WordPress through the signed webhook.</li>
     <li>Gmail: a real bounce report arriving in a connected mailbox.</li>
     <li>Resend: send, bounce and complaint events.</li>
-    <li>Salesforce: the native adapter is not verified against a real organization. Use the Composio path.</li>
+    <li>Salesforce: the native adapter is not verified against a real organization. Connect Salesforce as an app instead.</li>
   </ul>
-  <footer>GTM OS user guide for release 0.2.6. Your project holds more detail in <code>docs/gtmos/</code> (refresh it with <code>gtm init --refresh</code>). When this page and your live instance disagree, the instance wins.</footer>
+  <footer>GTM OS user guide for release 0.3.0. Your project holds more detail in <code>docs/gtmos/</code> (refresh it with <code>gtm init --refresh</code>). When this page and your live instance disagree, the instance wins.</footer>
 </section>
 
 </main>

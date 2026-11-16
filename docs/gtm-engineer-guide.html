@@ -207,7 +207,7 @@ p.meta{font:13px var(--sans);color:var(--muted)}
   <a href="#ch08" data-k="engines chain triggers events guardrails dry live knobs">8. How the engines work together</a>
   <a href="#ch09" data-k="score outreach performance ads seo geo data quality enrichment signals decay half life cadence unit economics enrichment steps triggers job change seniority title catalog data steward bundle merge clean-up evidence">9. Engine by engine</a>
   <div class="grp">Data, agents, extend</div>
-  <a href="#ch10" data-k="data import csv connectors composio looot mcp server crm sync write-back webhooks enrichment adapter source mapping import gate review queue held blocked compliance override stage date batch compliance at rest held contacts match keys mailbox form">10. Data in and out</a>
+  <a href="#ch10" data-k="data import csv connectors integrations apps accounts grants composio looot mcp server crm sync write-back webhooks enrichment adapter source mapping import gate review queue held blocked compliance override stage date batch compliance at rest held contacts match keys mailbox form">10. Data in and out</a>
   <a href="#ch11" data-k="agents skills workflows missions bounds maxsteps cost deadline scopes triggers runs evals kill recommendations recommendation mission start_mission measure recommendation rules kpi allowlist signed rules">11. Agents, skills, missions</a>
   <a href="#ch13" data-k="extend apps packages adapter connector builder studio mission control tiles sandbox publish sign">13. Extend: apps and packages</a>
   <div class="grp">Govern and operate</div>
@@ -226,12 +226,13 @@ p.meta{font:13px var(--sans);color:var(--muted)}
   <div class="eyebrow">GTM OS engineer guide</div>
   <h1>Build and customize GTM OS by talking to Claude</h1>
   <p class="lede">This guide is for the person who sets up GTM OS for a company and keeps tuning it. You work with Claude Code or Claude Desktop, the <code>gtm</code> command line and the console. You change engines and business logic by writing prompts. Two people approve what goes live.</p>
-  <p class="meta">Written for GTM OS release <b>0.2.6</b> (CLI 0.2.6). Sections marked <span class="chip claude">New in 0.2.6</span> describe 0.2.6. Use them once your instance runs 0.2.6. Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
+  <p class="meta">Updated for GTM OS release <b>0.3.0</b> (CLI 0.3.0). Most chapters were written for 0.2.6 and still hold; sections marked <span class="chip claude">New in 0.3.0</span> describe 0.3.0, and those marked <span class="chip claude">New in 0.2.6</span> describe 0.2.6. Console paths are written as <b>Group &gt; Page</b>; every page lives under <code>/org/&lt;orgId&gt;/</code>.</p>
   <div class="tiles">
     <a class="tile" href="#ch02"><b>Connect Claude</b><span>Install an instance, make an agent key, check that all nine MCP tools work.</span></a>
     <a class="tile em" href="#ch15"><b>Prompt recipes</b><span>More than 20 copy-paste prompts for real jobs, each with the chapter that explains it.</span></a>
     <a class="tile" href="#ch16"><b>Something broke?</b><span>Find the message Claude or the console showed. Get the cause and the fix.</span></a>
   </div>
+  <div class="note" id="intro-030"><b>What 0.3.0 changes here.</b> Apps now connect inside GTM OS: see <a href="#ch10-integrations">Integrations in 0.3.0</a> (chapter 10). Outside agent keys can no longer run the <code>composio.*</code> aliases or the older operations that reach connected apps (<code>source.*</code>, <code>adapter.*</code>, <code>crm.sync</code> and others); they reach apps through <code>integrations.read</code> and <code>integrations.act</code> with a per-key grant. Upgrade steps: <a href="#ch14-update-030">Moving to 0.3.0 from 0.2.6</a>. The mapping packs and recipe templates are beta: live checks against real app accounts were not run for this release. Full notes: <a href="release-0.3.0.html">GTM OS 0.3.0</a>.</div>
   <div class="note" id="intro-026"><b>What 0.2.6 adds.</b> The new sections are inside the chapters they belong to. <a href="#ch07-funnel">Funnels</a>, <a href="#ch07-board">Board KPIs</a>, <a href="#ch07-deal-source">Deal source</a> and <a href="#ch07-dq-policy">Data quality policy</a> and <a href="#ch07-play-library">the play library</a> are in chapter 7. <a href="#ch09-enrichment-catalog">Enrichment steps and triggers</a> are in chapter 9. <a href="#ch10-import-gate">The import gate</a> is in chapter 10. <a href="#ch11-recommendations">Recommendations and bounded missions</a> are in chapter 11. <a href="#ch12-tiers">Risk tiers</a>, <a href="#ch12-justification">approvals with justification</a>, <a href="#ch12-reconcile">unknown outcomes</a> and <a href="#ch12-authority">agent authority</a> are in chapter 12. <a href="#ch14-harness-status">Harness status</a> and BYOC on GCP and Azure are in chapter 14. Also new: <a href="#ch06-motion">choosing a motion with a recorded reason</a> (chapter 6), <a href="#ch07-board-targets">board targets, slip rate and forecast accuracy</a> (chapter 7), <a href="#ch09-steward">the Data steward</a> (chapter 9), <a href="#ch10-compliance-rest">compliance at rest</a> (chapter 10), <a href="#ch11-rules">your own recommendation rules</a> (chapter 11) and <a href="#ch12-risk-limits">risk limits and the readiness report</a> (chapter 12). <a href="#ch17-026">The 0.2.6 reference</a> lists every new name.</div>
   <h4>How each chapter works</h4>
   <ul>
@@ -305,7 +306,7 @@ p.meta{font:13px var(--sans);color:var(--muted)}
       <tr><td><b>E</b></td><td>Customer-facing effect</td><td>Becomes a proposal. Nothing is sent or written outside until a different person approves and executes it.</td></tr>
       <tr><td><b>M</b></td><td>Meta: configuration, ontology, platform</td><td>Depends on the operation. Publishing config, promoting to <code>prod</code> and installing packages go through the same approval gate.</td></tr>
     </table></div>
-    <p>The 0.2.5 catalog has 671 operations: 294 Q, 255 D, 5 T, 30 E and 87 M. The 0.2.6 catalog has 717: 318 Q, 276 D, 5 T, 31 E and 87 M. You do not memorize them. Claude lists them with <code>gtm_describe</code>, and your project holds the full generated list at <code>docs/gtmos/reference/operations.md</code> after <code>gtm init</code>.</p>
+    <p>The 0.2.5 catalog has 671 operations: 294 Q, 255 D, 5 T, 30 E and 87 M. The 0.2.6 catalog has 717: 318 Q, 276 D, 5 T, 31 E and 87 M. The 0.3.0 catalog has 900: 406 Q, 334 D, 5 T, 33 E and 122 M, with 47 definition kinds. You do not memorize them. Claude lists them with <code>gtm_describe</code>, and your project holds the full generated list at <code>docs/gtmos/reference/operations.md</code> after <code>gtm init</code>.</p>
   </div>
 
   <div class="card" id="ch01-engines">
@@ -362,7 +363,7 @@ p.meta{font:13px var(--sans);color:var(--muted)}
       <tr><td>Dry Mode</td><td><b>Settings &gt; Safety</b></td></tr>
       <tr><td>Your agent keys and the connect snippets</td><td><b>Settings &gt; Developer</b></td></tr>
       <tr><td>Stop an agent, or bring it back</td><td><b>Settings &gt; Agents</b></td></tr>
-      <tr><td>Provider keys and connected apps</td><td><b>Integrations &gt; Connections</b></td></tr>
+      <tr><td>Provider keys and connected apps</td><td><b>Integrations</b></td></tr>
       <tr><td>Runs and their step-by-step traces</td><td><b>Operate &gt; Runs</b></td></tr>
     </table></div>
   </div>
@@ -374,7 +375,7 @@ p.meta{font:13px var(--sans);color:var(--muted)}
         <h4>Explain what you can and cannot do on this instance</h4>
         <div class="code"><pre><code>Call agent.whoami, policy.get_dry_mode and instance.readiness. Then tell me in plain words: who you are acting as, which scopes your key has, whether Dry Mode is on, which providers are live, and what you cannot do without a person.</code></pre></div>
         <dl><dt>Claude does</dt><dd>Runs three read operations through <code>gtm_query</code>. None of them changes anything.</dd>
-        <dt>You do</dt><dd>Nothing. Read the answer. If a provider you need is not live, fix it in <b>Integrations &gt; Connections</b>.</dd></dl>
+        <dt>You do</dt><dd>Nothing. Read the answer. If a provider you need is not live, fix it in <b>Integrations</b>.</dd></dl>
       </div>
     </div>
     <div class="see">An answer that names your agent, the scopes (at least <code>record.read</code>), "cannot approve", the Dry Mode state and one line per provider. A read-only key is not allowed to read everything (for example <code>env.list</code> needs <code>engine.configure</code>), and Claude should say so rather than guess.</div>
@@ -431,7 +432,7 @@ claude</code></pre></div></li>
       <tr><td>Install</td><td>Runs <code>gtm setup ... --no-harness</code> into <code>./instance</code>. A few minutes. Safe to re-run.</td><td>Nothing.</td></tr>
       <tr><td>Passwords</td><td>Tells you the owner and approver passwords are in <code>instance/.env</code> as <code>GTMOS_OWNER_PASSWORD</code> and <code>GTMOS_APPROVER_PASSWORD</code>. It never prints them.</td><td>Give the approver password to the approver privately.</td></tr>
       <tr><td>Agent key</td><td>Signs in as the owner, creates an agent key, runs <code>gtm init --url ... --key ...</code> and <code>gtm doctor</code>.</td><td>Set <code>GTMOS_AGENT_TOKEN</code> and restart Claude (see <a href="#ch02-key-env">Put the key in your environment</a>).</td></tr>
-      <tr><td>Connections</td><td>Stores and tests the provider keys you give it and links your apps.</td><td>Paste keys in <b>Integrations &gt; Connections</b>, and click any OAuth consent. <span class="chip human">Needs a human</span></td></tr>
+      <tr><td>Connections</td><td>Stores and tests the provider keys you give it and links your apps.</td><td>Paste keys in <b>Integrations</b>, and click any OAuth consent. <span class="chip human">Needs a human</span></td></tr>
     </table></div>
     <div class="see">After the restart, <code>/mcp</code> lists <b>gtmos</b> as connected. Claude then hands off to <code>/build-gtm-system</code> (see the build chapters).</div>
     <p class="note">Prefer to see every step yourself? The next section does the same by hand.</p>
@@ -553,7 +554,7 @@ gtm doctor</code></pre></div></li>
         <h4>Check my connection and my key's scopes</h4>
         <div class="code"><pre><code>Check that the gtmos MCP connection works. Call agent.whoami and show me my agent name, my scopes and whether I can approve. Then run gtm doctor and summarize anything that is not LIVE. Do not change anything.</code></pre></div>
         <dl><dt>Claude does</dt><dd>Reads <code>agent.whoami</code> through <code>gtm_query</code>, runs <code>gtm doctor</code> in the shell.</dd>
-        <dt>You do</dt><dd>Fix what is not live, in <b>Integrations &gt; Connections</b>.</dd></dl>
+        <dt>You do</dt><dd>Fix what is not live, in <b>Integrations</b>.</dd></dl>
       </div>
     </div>
     <p class="meta"><b>Untested.</b> This prompt was not run against a live instance. Operation names were checked against the 0.2.5 catalog.</p>
@@ -779,7 +780,7 @@ gtm token revoke &lt;key-id&gt;</code></pre></div></li>
       <tr><th>Why</th><th>What</th></tr>
       <tr><td>Four-eyes</td><td>Approve, reject or execute an approval; sign a definition; publish an ontology change; approve a delegation or a mission; decide a research fact.</td></tr>
       <tr><td>No self-escalation</td><td>Create or list keys, register, revive or kill agents, set gate policy or autonomy scope, grant envelopes, mark MCP tool effects, SSO and sign-in allowlist settings.</td></tr>
-      <tr><td>Browser consent</td><td>OAuth sign-ins (Composio, Google, Microsoft, Slack). Claude gives you the link.</td></tr>
+      <tr><td>Browser consent</td><td>App sign-ins in Integrations, and the Google, Microsoft and Slack sign-ins. Claude gives you the link.</td></tr>
       <tr><td>Safety switch</td><td>Turn Dry Mode on or off. Claude can read it.</td></tr>
       <tr><td>Irreversible</td><td>Offboard an organization. Launch the setup build.</td></tr>
       <tr><td>Four-eyes, new in 0.2.6</td><td>Accept, dismiss or start a mission from a recommendation. Settle an action whose outcome is unknown.</td></tr>
@@ -1055,7 +1056,7 @@ spec:
       <li>Claude runs each step itself and stops only where a person must act. It does not invent commands.</li>
       <li>It installs the instance into <code>./instance</code>, writes the owner and approver passwords into <code>instance/.env</code>, and never prints them.</li>
       <li>It mints its own agent key (preset Full GTM engineer), runs <code>gtm init</code> and <code>gtm doctor</code>, and tells you to set <code>GTMOS_AGENT_TOKEN</code> and restart.</li>
-      <li>It stores and tests connection keys you give it, links your Composio apps, and prints the SPF, DKIM and DMARC records for your sending domain.</li>
+      <li>It stores and tests connection keys you give it, links your connected apps, and prints the SPF, DKIM and DMARC records for your sending domain.</li>
     </ul>
     <p><span class="chip human">Needs a human</span> You sign in as owner and, in a second browser profile, as the approver. You click every OAuth consent. You add the DNS records.</p>
     <div class="see">After a restart, <code>/mcp</code> shows <b>gtmos</b> as connected, and <code>gtm doctor</code> ends with a readiness summary.</div>
@@ -1112,7 +1113,7 @@ spec:
       <li><code>FORBIDDEN ... can only be performed by a human</code>: expected. Claude prepares the draft and tells you which screen and button to use. Do not look for a workaround.</li>
       <li><code>CONFLICT</code> with <code>LAST_OWNER_NARROWING</code>: the change would leave nobody able to run the build, approve cards or launch. Make another member an un-narrowed owner or admin first. Never seat the only owner as Operator or Exec.</li>
       <li>"Card is not valid yet": a required value is empty. Edit the card with your own value, or skip it.</li>
-      <li>A draft says no model is configured: add a model connection in Integrations &gt; Connections, then redraft.</li>
+      <li>A draft says no model is configured: add a model connection in Integrations, then redraft.</li>
       <li>On an instance older than 0.2.5, these operations do not exist. Update the instance, then run <code>gtm init --refresh</code> in each workspace.</li>
     </ul></div></details>
   </div>
@@ -2272,7 +2273,7 @@ spec:
       <li><b>A new cadence per motion.</b> One signed <code>definition.sequence</code> per motion, one sequence per lane.</li>
       <li><b>Signal plays.</b> The outbound, full-gtm, sales-led and enterprise-abm blueprints ship three plays on <code>gtm.signal.observed</code> (funding, hiring, intent). Copy one with <code>/create-play</code> for a new signal kind.</li>
       <li><b>New reply behavior.</b> Add a label with its <code>effects</code> in <code>definition.reply_labels</code>.</li>
-      <li><b>Other rails.</b> <code>outreach.sending_mailboxes</code> lists connected Google and Microsoft mailboxes, Gmail and Outlook through Composio, and outbound rails. Bind a sequence to the lane and mailbox you want.</li>
+      <li><b>Other rails.</b> <code>outreach.sending_mailboxes</code> lists connected Google and Microsoft mailboxes, Gmail and Outlook as connected apps, and outbound rails. Bind a sequence to the lane and mailbox you want.</li>
     </ul>
 
     <h4>Prompts to give Claude</h4>
@@ -2340,7 +2341,7 @@ spec:
       <tr><td>Engines &gt; Performance Ads</td><td>Tabs <b>Pacing</b>, <b>Campaigns</b>, <b>Scan</b>, <b>Update</b>, <b>Undo</b>. Tiles for spend, conversions, real ROAS, real CAC, MER, aMER, ACoS and CAC payback. A <b>Platform vs real</b> table. An <b>Allocator</b> section with the last run, every move with its evidence and approval link, campaigns left alone and why, <b>Preview</b> and <b>Run now</b>. A <b>Settings</b> section with your targets.</td></tr>
       <tr><td>Settings &gt; Money</td><td>Revenue truth and the attribution window and model.</td></tr>
       <tr><td>Settings &gt; Safety</td><td>Dry or live for <code>perf_ads</code>, and the daily ad spend guardrail.</td></tr>
-      <tr><td>Integrations &gt; Connections</td><td>Google Ads and Meta Ads (native or through Composio).</td></tr>
+      <tr><td>Integrations</td><td>Google Ads and Meta Ads (native, or as connected apps with the ads recipes).</td></tr>
     </table></div>
 
 
@@ -2389,7 +2390,7 @@ spec:
     <h4>Dry Mode and guardrails</h4>
     <ul>
       <li>Engine key <code>perf_ads</code>. In Dry Mode the allocator drafts its plan and proposes nothing.</li>
-      <li>Allocator bounds: at most 20 percent per campaign per run, budget-neutral within one currency, never a paused campaign, a demo-data campaign, a campaign with a change already pending, or a campaign read only through Composio (no native write path; the recommendation is reported, not proposed).</li>
+      <li>Allocator bounds: at most 20 percent per campaign per run, budget-neutral within one currency, never a paused campaign, a demo-data campaign, a campaign with a change already pending, or a campaign read only through a connected app (no native write path; the recommendation is reported, not proposed).</li>
       <li>A campaign is not judged before it is as old as your attribution window, and never called worse on zero customers.</li>
       <li>After an executed change the campaign is left alone for 7 days.</li>
       <li>"Run now" works once per hour. A repeat returns the same run.</li>
@@ -2399,7 +2400,7 @@ spec:
 
     <h4>How to extend it</h4>
     <ul>
-      <li><b>Another platform.</b> The engine runs on Google Ads and Meta Ads. A platform your connectors reach only through Composio is read-only here.</li>
+      <li><b>Another platform.</b> The engine runs on Google Ads and Meta Ads. A platform your connectors reach only through a connected app is read-only here.</li>
       <li><b>Tag your ads.</b> A paid visit is credited to the campaign named in <code>utm_campaign</code>: the platform campaign id or the exact campaign name. Untagged traffic leaves real CAC empty, with the reason.</li>
       <li><b>A play on a schedule.</b> Run <code>perf_ads.scan_all_campaigns</code> from a play so campaigns are scanned and proposals appear without anyone clicking.</li>
       <li><b>Use <code>/tune-economics</code>.</b> The slash command walks through the economics with the client's numbers.</li>
@@ -2443,7 +2444,7 @@ spec:
       <li><b>Spend looks low after the upgrade.</b> Rows synced before 0.2.5 E3 had no live stamp. Re-run <code>perf_ads.sync_performance</code> over the dates you need. Nothing is deleted.</li>
       <li><b>The daily budget is above the guardrail.</b> The allocator moves nothing until it is below it, or the guardrail is in another currency.</li>
       <li><b>Setting more than one target.</b> Set one basis (CAC, ROAS or payback) so the verdict is unambiguous.</li>
-      <li><b>Expecting a Composio-only campaign to move.</b> It is read-only: the engine reports the budget it recommends but does not propose it.</li>
+      <li><b>Expecting a campaign read only through a connected app to move.</b> It is read-only: the engine reports the budget it recommends but does not propose it.</li>
     </ul></div></details>
   </div>
 
@@ -2460,7 +2461,7 @@ spec:
       <tr><th>Screen</th><th>Use it for</th></tr>
       <tr><td>Engines &gt; SEO &amp; GEO</td><td>Tabs <b>Overview</b>, <b>Visibility</b> (Search Console totals, top queries and pages), <b>GEO</b> (AI-answer visibility), <b>Keywords</b>, <b>Clusters</b>, <b>Factory</b>, <b>Fix queue</b>, <b>Publish queue</b>, <b>Refresh calendar</b>, <b>Settings</b>, <b>Pages</b> (the page workbench). The Factory item has a <b>Publish</b> tab.</td></tr>
       <tr><td>Settings &gt; Proof library</td><td>The proof the claims gate and the content briefs cite.</td></tr>
-      <tr><td>Integrations &gt; Connections, Settings &gt; Connected accounts</td><td>Google Search Console, GA4, Ahrefs (through Composio), your CMS.</td></tr>
+      <tr><td>Integrations, Settings &gt; Connected accounts</td><td>Google Search Console, GA4, Ahrefs (on your own account), your CMS.</td></tr>
     </table></div>
 
 
@@ -2737,7 +2738,7 @@ spec:
       <tr><th>Screen</th><th>Use it for</th></tr>
       <tr><td>Engines &gt; Enrichment</td><td>Mode, fill rate, spend, bindings, <b>Freshness windows</b>, <b>Monthly cap</b>, newer enriched values and runs.</td></tr>
       <tr><td>CRM &gt; Companies, Contacts</td><td>Select rows, choose <b>Enrich</b>, read the cost preview, confirm. A record's Enrichment panel lists <b>Newer enriched values</b> with <b>Propose update</b>.</td></tr>
-      <tr><td>Integrations &gt; Connections</td><td>The looot connection (an org key, or the instance key as a fallback).</td></tr>
+      <tr><td>Integrations</td><td>The looot connection (an org key, or the instance key as a fallback).</td></tr>
       <tr><td>Settings &gt; Safety</td><td>Dry or live for <code>enrichment</code> (Enrichment spend).</td></tr>
     </table></div>
 
@@ -2780,7 +2781,7 @@ spec:
 
     <h4>How to extend it</h4>
     <ul>
-      <li><b>Another provider.</b> Add a <code>fallbacks[]</code> entry to the capability's binding, or point the binding at an MCP server you registered. Composio is never used to buy data.</li>
+      <li><b>Another provider.</b> Add a <code>fallbacks[]</code> entry to the capability's binding, or point the binding at an MCP server you registered. Connected apps are never used to buy data.</li>
       <li><b>Refresh on a schedule.</b> A play that calls <code>enrichment.refresh_stale</code> with <code>maxUsd</code> and <code>requireMonthlyCap: true</code>.</li>
       <li><b>Enrich on create.</b> A play on <code>gtm.record.created</code> that calls <code>enrich_accounts</code> with <code>requireMonthlyCap: true</code>. Opt in to bulk sources only if you mean it.</li>
     </ul>
@@ -2829,7 +2830,7 @@ spec:
       <li><b>The run stopped early.</b> It reached <code>maxUsd</code> or the monthly cap. Cached answers still land. Other lookups wait for approval.</li>
       <li><b>"Unpriced lookup refused."</b> Under a cap, a lookup without a quoted price is refused. Quote it first with <code>capability.quote</code>.</li>
       <li><b>Dry engine, no data.</b> A dry engine returns estimates only. Switch it live in Settings &gt; Safety.</li>
-      <li><b>No looot key.</b> Add the looot connection in Integrations &gt; Connections. Lookups use your workspace key. The instance key is only a fallback.</li>
+      <li><b>No looot key.</b> Add the looot connection in Integrations. Lookups use your workspace key. The instance key is only a fallback.</li>
       <li><b>Refresh skipped a value.</b> A person, an import or a sync changed it. Protected values are listed in the estimate.</li>
     </ul></div></details>
   </div>
@@ -3017,14 +3018,15 @@ spec:
 
   <!-- MODEL -->
   <p class="note"><b>Untested prompts.</b> The prompts in this chapter were not run against a live instance. Operation names were checked against the 0.2.5 catalog. Run each once on a dev instance in Dry Mode before you rely on it.</p>
+  <p class="note"><b>Agent keys in 0.3.0.</b> From 0.3.0 an outside agent key can no longer run the operations that reach connected apps outside <code>integrations.*</code>: <code>source.*</code> (except <code>source.update_record</code>), <code>adapter.*</code>, <code>outbound_rails.*</code>, <code>product_analytics.*</code>, <code>transcripts.sync</code>, <code>autolog.*</code>, <code>perf_ads.sync_performance</code>, <code>mcp_servers.*</code>, <code>sync.completeness.run</code>, <code>sync.parity_check</code>, <code>crm.sync</code>, <code>connections.test</code>, <code>connections.preflight</code>, <code>connected_account.sync_now</code> and every <code>composio.*</code> alias. They answer <code>FORBIDDEN</code>. A prompt below that uses one of them works when a person runs that step (in the console or a signed-in session) or a built-in agent does. Claude through an agent key reads and proposes through <code>integrations.read</code> and <code>integrations.act</code> on the apps its grant allows. See <a href="#ch10-integrations">Integrations in 0.3.0</a>.</p>
   <div class="card" id="ch10-model">
     <h3>The picture in one minute</h3>
     <p class="goal"><b>Goal:</b> know which door a piece of data uses, and who is allowed to open it.</p>
     <div class="tbl"><table>
       <tr><th>Direction</th><th>Door</th><th>What it is</th></tr>
       <tr><td>In</td><td>CSV import</td><td><b>CRM &gt; Import</b>. Operation <code>canon.import</code>. Companies, contacts, deals.</td></tr>
-      <tr><td>In</td><td>CRM mirror</td><td>Your CRM of record, read through Composio into companies, contacts and deals. <code>crm.sync</code>.</td></tr>
-      <tr><td>In</td><td>Any other app</td><td>A signed <code>definition.source_mapping</code> over a list tool of a Composio app or of your own MCP server. <code>source.sync</code>. Built with the adapter builder (<b>CRM &gt; Adapters</b>).</td></tr>
+      <tr><td>In</td><td>CRM mirror</td><td>Your CRM of record, read through a connected app into companies, contacts and deals. <code>crm.sync</code>.</td></tr>
+      <tr><td>In</td><td>Any other app</td><td>A signed <code>definition.source_mapping</code> over a list tool of a connected app or of your own MCP server. <code>source.sync</code>. Built with the adapter builder (<b>CRM &gt; Adapters</b>).</td></tr>
       <tr><td>In</td><td>Inbound webhooks</td><td>Signed POSTs from forms, Cal.com, Resend and Unipile.</td></tr>
       <tr><td>In</td><td>Bought data</td><td>looot, only through capabilities and bindings (<code>capability.quote</code>, <code>capability.acquire</code>).</td></tr>
       <tr><td>Out</td><td>CRM write-back</td><td><code>crm.update_record</code> and <code>source.update_record</code>. Proposed, a different person approves.</td></tr>
@@ -3035,17 +3037,17 @@ spec:
 
   <!-- DECISION TABLE -->
   <div class="card" id="ch10-decide">
-    <h3>Native, Composio, looot or your own MCP server?</h3>
+    <h3>Native, integrations, looot or your own MCP server?</h3>
     <p class="goal"><b>Goal:</b> pick the right connection path before you build on it.</p>
     <div class="tbl"><table>
       <tr><th>Path</th><th>Use it for</th><th>Do not use it for</th><th>Where you set it up</th></tr>
-      <tr><td><b>Native</b></td><td>Model keys (Anthropic, OpenAI, Gemini, OpenRouter), Resend, Unipile (LinkedIn), Slack alerts, Google and Microsoft mail, calendar, Search Console, GA4, Google Ads, Meta Ads, webform and Cal.com inbound.</td><td>The CRM mirror (it runs through Composio). The native Salesforce adapter is flagged unverified in this release, so use Composio for Salesforce.</td><td><b>Integrations &gt; Connections</b> (<b>Add a connection</b>), <b>Settings &gt; Connected accounts</b>, <b>Settings &gt; Slack</b>.</td></tr>
-      <tr><td><b>Composio</b></td><td>Your own SaaS accounts: the CRM of record (HubSpot, Salesforce, Pipedrive, Attio, Zoho), any app through a source mapping, call recorders, product analytics, outbound tools (Smartlead, Instantly, lemlist), ads reads, CMS publish, Ahrefs.</td><td>Buying data. Composio is the action layer and is never used to buy data.</td><td><b>Integrations &gt; Connections</b>, <b>Composio</b> card.</td></tr>
+      <tr><td><b>Native</b></td><td>Model keys (Anthropic, OpenAI, Gemini, OpenRouter), Resend, Unipile (LinkedIn), Slack alerts, Google and Microsoft mail, calendar, Search Console, GA4, Google Ads, Meta Ads, webform and Cal.com inbound.</td><td>The CRM mirror (it runs through a connected app). The native Salesforce adapter is flagged unverified in this release, so connect Salesforce as an app.</td><td><b>Integrations</b> (<b>Add a connection</b>), <b>Settings &gt; Connected accounts</b>, <b>Settings &gt; Slack</b>.</td></tr>
+      <tr><td><b>Integrations (connected apps)</b></td><td>Your own SaaS accounts: the CRM of record (HubSpot, Salesforce, Pipedrive, Attio, Zoho), any app through a source mapping, call recorders, product analytics, outbound tools (Smartlead, Instantly, lemlist), ads reads, CMS publish, Ahrefs.</td><td>Buying data. Integrations are the action layer and are never used to buy data.</td><td><b>Integrations &gt; Apps</b>, after the integrations account is linked.</td></tr>
       <tr><td><b>looot</b></td><td>The only third-party data provider: enrichment, find and verify email and phone, company and people search, lookalikes, intent, news, jobs, web search, SEO keyword data.</td><td>Reading your own systems.</td><td>A <code>looot</code> connection, then a <code>definition.binding</code> with <code>backend: looot</code>.</td></tr>
-      <tr><td><b>Your own MCP server</b></td><td>An internal tool or API that has no native or Composio path: a company lookup, a data warehouse query, a private score.</td><td>Anything a Composio toolkit already covers well. Write tools carry extra approval cost.</td><td><b>Integrations &gt; Connections</b>, <b>MCP servers</b> card.</td></tr>
+      <tr><td><b>Your own MCP server</b></td><td>An internal tool or API that has no native or connected-app path: a company lookup, a data warehouse query, a private score.</td><td>Anything a connected app already covers well. Write tools carry extra approval cost.</td><td><b>Integrations</b>, <b>MCP servers</b> card.</td></tr>
     </table></div>
-    <p>Rule of thumb. Is it data you buy? looot. Is it your own SaaS account? Composio. Is it a Google, Microsoft, Slack, email or ads account that has a card? Native. Is it your own internal service? An MCP server. An org connection always beats the instance environment credential.</p>
-    <p>On the Connections page each tile says <b>Native</b> or <b>Via Composio</b>. Tools with no native card yet (Instantly, lemlist, Smartlead, Gong, Mixpanel, Amplitude) connect through Composio.</p>
+    <p>Rule of thumb. Is it data you buy? looot. Is it your own SaaS account? A connected app. Is it a Google, Microsoft, Slack, email or ads account that has a card? Native. Is it your own internal service? An MCP server. An org connection always beats the instance environment credential.</p>
+    <p>Tools with no native card yet (Instantly, lemlist, Smartlead, Gong, Mixpanel, Amplitude) connect as apps in <b>Integrations &gt; Apps</b>.</p>
   </div>
 
   <!-- CONNECT -->
@@ -3064,32 +3066,74 @@ spec:
     <p>A stored key that was never tested reads "stored, not verified". Click <b>Test</b> on it, or ask Claude to run <code>connections.test</code> (a probe of the provider, so it counts as an effect and is recorded).</p>
   </div>
 
-  <!-- COMPOSIO -->
-  <div class="card" id="ch10-composio">
-    <h3>Composio: connect your apps and pick the CRM of record <span class="chip human">Needs a human</span></h3>
-    <p class="goal"><b>Goal:</b> your apps show <code>ACTIVE</code> and one CRM is the CRM of record.</p>
+  <!-- INTEGRATIONS (0.3.0) -->
+  <div class="card" id="ch10-integrations">
+    <h3>Integrations in 0.3.0: connect your apps and pick the CRM of record <span class="chip human">Needs a human</span> <span class="chip claude">New in 0.3.0</span></h3>
+    <p class="goal"><b>Goal:</b> your integrations account is linked, your apps show Connected, and one CRM is the CRM of record. Connected apps are how GTM OS reaches your own SaaS accounts (CRM, Slack, Stripe, Ahrefs, Search Console and about 1,700 more). Never use them to buy data: that is looot.</p>
+    <p class="note"><b>Beta.</b> Live checks against real app accounts were not run for 0.3.0. The mapping packs and recipe templates ship as beta: their tool names (slugs), arguments and answer shapes come from the vendors' documentation and are not verified against the live services. A wrong guess fails loudly (the install is refused, or the read is "unrecognised"); it never writes guessed data.</p>
+
+    <h4>1. Link the integrations account (once, owner or admin)</h4>
+    <p>Console: <b>Integrations &gt; Apps</b>, the banner at the top (shown until it is linked; the service behind it is Composio).</p>
     <ol class="steps">
-      <li><span class="chip human">Needs a human</span> On <b>Integrations &gt; Connections</b>, <b>Composio</b> card, click <span class="ui">Connect Composio</span> and sign in. Or open <b>Advanced</b> and paste a Connect key <code>ck_...</code> or a project key <code>ak_...</code>. A <code>uak_</code> user key is refused.</li>
-      <li>Ask Claude to link your apps (prompt below). In Connect mode, apps you already connected in your Composio account become <code>ACTIVE</code> at once.</li>
-      <li><span class="chip human">Needs a human</span> A new app needs the hosted sign-in. Claude gives you the link. It lasts about 10 minutes.</li>
-      <li>Ask Claude to set the CRM of record.</li>
+      <li><span class="chip human">Needs a human</span> Paste the <b>project key</b> (<code>ak_...</code>). GTM OS tests it, stores it sealed and starts loading the app catalogue (first apps in seconds, the full list in minutes). A Connect key (<code>ck_...</code>) or a sign-in credential is refused. There is no sign-in to link the account in 0.3.0: the project key is the only way.
+        <p>To get the key: in the Composio dashboard select Platform, your project, Settings, the API Keys tab, then Create API Key with these permission areas: Toolkits (Read), Tools (Read), Tool execution (Read and write), Auth configs (Read and write), Connected accounts (Read and write), Triggers (Read and write), Webhooks (Read and write), Observability (Read).</p></li>
+      <li><span class="chip human">Needs a human</span> Copy the <b>verifier address</b> from the banner (<code>&lt;PUBLIC_CONSOLE_URL&gt;/integrations/callback</code>) and paste it once into the project's callback verifier setting. GTM OS cannot see that setting, so the banner says "Not verified". Without it a connect that needs a sign-in is refused.</li>
+      <li>Over the API: <code>integrations.setup.link_key</code>, then <code>integrations.setup.test</code> and <code>integrations.setup.status</code> (states <code>not_linked</code>, <code>linked</code>, <code>needs_project_key</code>, <code>key_invalid</code>, <code>key_missing_permissions</code>, <code>plan_limit</code>, <code>unreachable</code>, plus <code>relinkNeeded</code>). The key is linked in the console (<code>integrations.setup.link_key</code>), not with <code>gtm connect</code>.</li>
     </ol>
+    <p>Pasting the key is not the whole setup. Once, also: run the worker (it loads the app list); set the integrations engine live with <code>policy.engine_modes.set</code> for <code>integrations</code> before writes become real approvals (until then a proposal is "Drafted, nothing was done"); OAuth apps pass through a hosted link page and the app's own consent page, API-key apps stay inside GTM OS; accounts that use the managed sign-in need credits on your integrations plan; webhooks need a public https <code>GTMOS_PUBLIC_API_URL</code>. On an installation shared by several organizations the app list loads only through the installation key (<code>COMPOSIO_API_KEY</code> on the api and worker). Set <code>PUBLIC_CONSOLE_URL</code> on the api service or connects have no page to return to. Agent keys cannot link, test or unlink the key; replacing a working key needs a person in a browser session. Apps connected under the old sign-in are listed in <code>relinkNeeded</code>: connect each again and the old account is marked expired.</p>
+
+    <h4>2. Connect an app</h4>
+    <p>The <b>Apps</b> grid shows every category; search and filter by category or sign-in type. Click an app, then <span class="ui">Connect</span> (a person only: <code>integrations.connect</code>). You get a hosted sign-in (valid about 10 minutes), a form for an API key or token, or a request for your own OAuth app first (Pipedrive, Meta Ads, LinkedIn Ads and some others). Connecting checks the account is real: who it is, a warning when the same login is already connected, and one safe read (the probe). Find apps with <code>integrations.catalog</code>, tools with <code>integrations.search_tools</code> and <code>integrations.describe_tool</code>.</p>
+    <p><b>Your own OAuth app</b> (Google, Microsoft, HubSpot, Salesforce, Slack, LinkedIn, Meta): new connections then use your own consent screen. <code>integrations.oauth_app.requirements</code> gives the fields and steps; <code>integrations.oauth_app.set</code> and <code>remove</code> are for an owner or admin signed in as a person. The client secret is sealed and never shown again.</p>
+
+    <h4>3. CRM of record and sync</h4>
+    <p>Supported: <code>hubspot</code>, <code>salesforce</code>, <code>pipedrive</code>, <code>attio</code>, <code>zoho</code>. <code>crm.settings.set {crmOfRecord, mode, selectedAccountId, writeBack}</code> (owner or admin; needs an active account): <code>mode</code> is <code>one</code> or <code>merge</code>, <code>writeBack</code> is <code>none</code>, <code>primary</code> or <code>origin</code>. <code>crm.sync</code> runs the mirror (also every 6 hours), <code>crm.sync_status</code> shows the last runs per object. Console: open the CRM app in <b>Integrations &gt; Apps</b>. Any other app goes into the ontology through a signed <code>definition.source_mapping</code>; <code>integrations.pack.generate</code> (people only) builds one from a real sample.</p>
+
+    <h4>4. Many accounts per app</h4>
+    <p>Any number of accounts per app (a warning at 10, never a block). An owner or admin adds an org account; a member may add a personal account, shared in the org only after the owner confirms the sharing sentence. Every row keeps the account it came from. When accounts disagree, priority wins, then recency, and both values are kept. Manage with <code>integrations.accounts.list</code>, <code>.rename</code>, <code>.set_primary</code>, <code>.set_priority</code>, <code>.pause</code> and <code>.resume</code>. When several accounts could answer and nothing picks one, the call is refused and lists the choices: pass <code>accountKey</code> or a <code>purpose</code>. A member who leaves has their personal accounts paused.</p>
+
+    <h4>5. Reads and writes in connected apps</h4>
+    <ul>
+      <li><code>integrations.read</code> runs read tools. The result says <code>data</code>, <code>empty</code> or <code>unrecognised</code>.</li>
+      <li><code>integrations.act</code> proposes a write (tier T2); <code>integrations.act_destructive</code> proposes a delete or an unclassified tool (tier T3). A different person approves. A send to a person checks consent and sending limits.</li>
+      <li>Every call is metered (about $0.0003, <code>GTMOS_INTEGRATIONS_CALL_COST_USD</code>) on the cost ledger. A failed call is never retried automatically. Owners and admins set a tool's class, turn it off or limit its roles with <code>integrations.tool_policy.set</code>.</li>
+      <li>The lighter route and autonomy for a short list of reversible internal writes are <b>off</b> until an owner or admin signs an autonomy policy (<code>integrations.autonomy.set_policy</code>, a different person signs). T3 and T4 always need a named person.</li>
+    </ul>
+
+    <h4>6. Needs, recipes and provider policy</h4>
+    <p>A <b>need</b> is the data an engine wants, whatever app serves it (19 of them, for example <code>seo.search_analytics</code>, <code>geo.answers</code>, <code>crm.records</code>, <code>ads.performance</code>). A signed <code>definition.recipe</code> says which read tool of which app serves a need. A signed <code>definition.provider_policy</code> says how providers combine (<code>combine</code> by default). <code>integrations.recipes.templates</code> fills the shipped templates (beta); <code>integrations.needs.propose</code> saves a proposed version that counts only after a different person signs it. An agent may propose a provider policy, never a recipe. <code>integrations.read_need</code> reports a missing source as <code>not_connected</code> or <code>unavailable</code>, never a guess.</p>
+
+    <h4>7. Search Console, Ahrefs and history</h4>
+    <p>Search Console stays <b>required</b> for SEO and GEO. The engine reads it from a native Google token first, then from the three signed Search Console recipes on the org's own account. The recipes pin the property they were signed for: change the property and sign them again. Ahrefs runs on the org's own account (the operator switch <code>GTMOS_AHREFS_SHARED_ACCOUNT_GRACE=true</code> keeps the shared account for one release) and shows top rows, not account totals. Provider history is imported with <code>integrations.history_import.estimate</code>, then <code>.start</code> (people only; confirm the calls and cost).</p>
+
+    <h4>8. Usage limit</h4>
+    <p><code>integrations.usage</code> shows calls and spend this month per app and tool. An owner or admin sets a monthly limit in <b>Integrations &gt; Apps</b> or with <code>integrations.usage.set_cap</code> (people only). At 80% the owners are told. At the limit, non-essential calls fail with <code>BUDGET_EXCEEDED</code>; essential work (approved sends, a person's own setup steps and syncs, reading replies, bounces and stop requests) goes on up to 1.5 times the limit, never less than $1.00 a month. An agent key calling apps has a default limit of $1.50 per rolling 24 hours (<code>GTMOS_INTEGRATIONS_AGENT_DAILY_CAP_USD</code>). Background syncs and GEO recipe reads share an hourly call budget per organization (default 3000) and per app (default 1500); a run that meets it stops, keeps what it read, and continues on its next scheduled run.</p>
+
+    <h4>9. Truthful status</h4>
+    <p>A read is <code>data</code>, <code>empty</code>, <code>unrecognised</code> (nothing is used) or <code>failed</code>. A run is <code>succeeded</code> only when data came back; all empty is <code>succeeded_empty</code>, with a warning naming the account and workspace. Each read leaves a receipt, and a drop to zero rows or a changed answer shape alerts the owner.</p>
+
+    <h4>10. Agents and the MCP gateway</h4>
+    <p>An outside agent (Claude Code, Codex, any MCP client) uses an <b>agent key</b>. What the key may use is a <b>grant</b>: apps, tools, account pins, calls a minute (1 to 600, default 60) and an end date. A signed-in owner or admin sets it with <code>agent.create_key</code> or <code>agent.set_grants</code>. A key reaches <code>integrations.search_tools</code>, <code>describe_tool</code>, <code>read</code> and <code>act</code> only for granted apps, can read org-level views (<code>integrations.catalog</code>, <code>status</code>, <code>accounts.list</code>, <code>usage</code>, <code>setup.status</code>, <code>needs.list</code>, <code>needs.status</code>, <code>provider_policy.get</code>), and is refused everything else under <code>integrations.*</code>. The old <code>composio.*</code> aliases and the older operations that reach connected apps (<code>source.*</code> except <code>source.update_record</code>, <code>adapter.*</code>, <code>crm.sync</code>, <code>transcripts.sync</code>, <code>mcp_servers.*</code>, <code>connections.test</code> and others) are closed to agent keys: a person runs them, or a built-in agent. Perplexity and your own OpenAI-compatible endpoint are model connections on the Agents tab.</p>
+
     <div class="prompts">
       <div class="prompt">
-        <h4>Link my Composio apps and mirror my CRM</h4>
-        <div class="code"><pre><code>Check the Composio connection, link every app I already connected there, then set HubSpot as the CRM of record and run one sync. Report the counts and anything truncated.</code></pre></div>
-        <dl><dt>Claude does</dt><dd><code>composio.status</code>, <code>composio.sync_connections</code>, <code>crm.settings.set {crmOfRecord: "hubspot"}</code>, <code>crm.sync</code>, then <code>crm.sync_status</code>.</dd>
-        <dt>You do</dt><dd>Connect Composio and the CRM app if they are not <code>ACTIVE</code> yet. <code>crm.settings.set</code> needs an ACTIVE account for that CRM.</dd>
-        <dt>You should see</dt><dd>Under <b>CRM of record</b> a <b>Last sync</b> with counts. Records land as companies, contacts and deals. A run reads up to 10,000 records per object and says "truncated" if there are more. The mirror also runs every 6 hours.</dd></dl>
+        <h4>Check my connected apps and the CRM mirror</h4>
+        <div class="code"><pre><code>Check the integrations status and list the connected app accounts. Tell me which apps need to be connected again, and read the last CRM sync status per object. Do not change anything.</code></pre></div>
+        <dl><dt>Claude does</dt><dd><code>integrations.setup.status</code>, <code>integrations.accounts.list</code>, <code>crm.sync_status</code>.</dd>
+        <dt>You do</dt><dd><span class="chip human">Needs a human</span> Link the key, connect the apps and click <span class="ui">Sync now</span> on the CRM app. Agent keys cannot connect apps or run <code>crm.sync</code>.</dd>
+        <dt>You should see</dt><dd>Each object with a result (<code>data</code>, <code>empty</code> or <code>unrecognised</code>) and the account it came from.</dd></dl>
       </div>
     </div>
     <details class="err"><summary>If it fails</summary><div><ul>
-      <li><code>NOT_CONFIGURED</code> on <code>crm.settings.set</code> or <code>crm.sync</code>: no CRM of record, no Composio credential, or the CRM is not <code>ACTIVE</code>. The error names the next step.</li>
-      <li><code>AUTH_EXPIRED</code>: click <b>Reconnect Composio</b>.</li>
-      <li>An <code>ak_</code> project key sees only its own project, not apps connected in Composio Connect.</li>
-      <li>Pipedrive, Meta Ads, LinkedIn Ads and Webflow need your own auth app in Composio.</li>
-      <li>Only one Composio credential exists per org. The last one saved replaces the previous one. Precedence: sign-in, then <code>ck_</code>, then <code>ak_</code>, then the instance <code>COMPOSIO_API_KEY</code>.</li>
+      <li>"The integrations key is not valid": paste a new project key.</li>
+      <li>"This is not the right kind of integrations key": use the project key, not a sign-in or Connect key.</li>
+      <li>"... is no longer connected. Reconnect it in Integrations.": open the app and connect again.</li>
+      <li><code>FORBIDDEN</code> for an agent key on <code>composio.*</code>, <code>crm.sync</code> or another closed operation: run it as a person, or grant the key the app (<code>agent.set_grants</code>) and use <code>integrations.read</code> or <code>integrations.act</code>.</li>
+      <li>The app list stays empty: the worker is not running, or (on a shared installation) <code>COMPOSIO_API_KEY</code> is not set on the api and worker.</li>
+      <li>A second sign-in cannot finish: set the verifier address in the project settings once.</li>
     </ul></div></details>
+    <h4>Old names</h4>
+    <p>The <code>composio.*</code> operations answer as aliases for one release (agent keys are refused them): <code>composio.status</code> is <code>integrations.setup.status</code>, <code>composio.set_api_key</code> is <code>integrations.setup.link_key</code>, <code>composio.toolkits</code> is <code>integrations.catalog</code>, <code>composio.accounts_available</code> is <code>integrations.accounts.list</code>, and <code>composio.sync_connections</code> only reports. <code>composio.oauth_start</code>, <code>composio.oauth_callback</code>, <code>composio.oauth_disconnect</code> and <code>composio.adopt</code> are retired and answer <code>NOT_CONFIGURED</code>. Use the <code>integrations.*</code> names in new work.</p>
   </div>
 
   <!-- LOOOT -->
@@ -3105,7 +3149,7 @@ spec:
   opId: job:people.email.find
   maxUnitCostUsd: 0.05</code></pre></div>
     <ol class="steps">
-      <li><span class="chip human">Needs a human</span> Add the <code>looot</code> connection in <b>Integrations &gt; Connections</b> (<b>Add a connection</b>), then run <b>Test</b>.</li>
+      <li><span class="chip human">Needs a human</span> Add the <code>looot</code> connection in <b>Integrations</b> (<b>Add a connection</b>), then run <b>Test</b>.</li>
       <li>Ask Claude to find candidate provider endpoints and price them before it pins one.</li>
       <li>Claude proposes the binding. A person signs it and promotes it.</li>
     </ol>
@@ -3286,7 +3330,7 @@ spec:
   <!-- MAPPING -->
   <div class="card" id="ch10-mapping">
     <h3>Any other app: source mappings</h3>
-    <p class="goal"><b>Goal:</b> a list tool of any Composio app (or your MCP server) feeds an ontology object on a schedule.</p>
+    <p class="goal"><b>Goal:</b> a list tool of any connected app (or your MCP server) feeds an ontology object on a schedule.</p>
     <p>A source mapping is a <code>definition.source_mapping</code>. Only a <b>signed</b> version runs. These are the fields that matter:</p>
     <div class="tbl"><table>
       <tr><th>Field</th><th>What it sets</th></tr>
@@ -3303,7 +3347,7 @@ spec:
         <h4>Map an app to signals</h4>
         <div class="code"><pre><code>Map our Typeform demo-request responses to signals, every hour, matched to contacts by email. Preview the live data first and show me the proposed field mapping before you propose it.</code></pre></div>
         <dl><dt>Claude does</dt><dd><code>source.list_tools</code>, <code>source.preview</code> (one live read, no writes), <code>source.targets</code>, <code>source.suggest_mapping</code>. Then it proposes the definition through <code>config.propose_changeset</code>, <code>config.validate_changeset</code> and <code>config.apply</code>.</dd>
-        <dt>You do</dt><dd><span class="chip human">Needs a human</span> Connect Typeform on the Composio card. A different person signs the mapping (and promotes it if prod should run it). Then Claude runs <code>source.sync</code>.</dd>
+        <dt>You do</dt><dd><span class="chip human">Needs a human</span> Connect Typeform on the Apps tab. A different person signs the mapping (and promotes it if prod should run it). Then a person runs <code>source.sync</code> (closed to agent keys from 0.3.0).</dd>
         <dt>You should see</dt><dd><code>source.sync_status</code> counts: created, updated, unchanged, skipped, invalid, unresolved. "Unresolved" means the contact or company is not in GTM OS yet. Nothing is invented.</dd></dl>
       </div>
     </div>
@@ -3336,7 +3380,7 @@ spec:
     </div>
     <p>Incremental syncs: set the changed-since argument and the cursor field on the adapter, then publish a new version. Automatic incremental runs skip while the CRM write-back engine is in Dry Mode. <span class="ui">Sync now</span> always works. If you stop, <code>adapter.abandon</code> drops the session's open asks. A signed mapping keeps running until you deprecate it (<code>definition.deprecate</code>) or set it to manual. Mirrored rows stay.</p>
     <details class="err"><summary>If it fails</summary><div><ul>
-      <li><code>NOT_CONFIGURED</code> on <code>adapter.start</code>: the app has no <code>ACTIVE</code> Composio account, or the MCP server is not connected. The error gives the next step.</li>
+      <li><code>NOT_CONFIGURED</code> on <code>adapter.start</code>: the app has no active account, or the MCP server is not connected. The error gives the next step.</li>
       <li>The adapter refuses a write tool as the list tool. Pick a read tool.</li>
       <li><code>CONFLICT</code> on <code>adapter.update</code>: someone edited it first. Re-read with <code>adapter.get</code> and send the new <code>expectedVersion</code>.</li>
       <li>A key already used by another source is <code>CONFLICT</code>. Pick another key.</li>
@@ -3348,7 +3392,7 @@ spec:
     <h3>CRM mirror and sync health</h3>
     <p class="goal"><b>Goal:</b> know your mirror is complete and current, not just "synced".</p>
     <ul>
-      <li>Supported CRMs: <code>hubspot</code>, <code>salesforce</code>, <code>pipedrive</code>, <code>attio</code>, <code>zoho</code>, all through Composio. The setting is <code>crm.settings.set {crmOfRecord}</code>. There is no separate "of record" operation.</li>
+      <li>Supported CRMs: <code>hubspot</code>, <code>salesforce</code>, <code>pipedrive</code>, <code>attio</code>, <code>zoho</code>, all as connected apps. The setting is <code>crm.settings.set {crmOfRecord}</code>. There is no separate "of record" operation.</li>
       <li>Synced records are keyed on <code>custom.crm = {toolkit, object, recordId}</code>, so a re-sync updates, never duplicates. One sync runs per org at a time.</li>
       <li>Stage and lifecycle values are meaningful only through a <code>definition.stage_map</code> for that system. An unmapped value is held for review, never defaulted (see <a href="#ch05">Definitions as code</a>).</li>
       <li>Binding modes (<code>binding.set_mode</code>): <code>replicate</code>, <code>soft_merge</code>, <code>federate</code>, <code>in_zone</code>, <code>sheet</code>. The modes <code>in_zone</code>, <code>soft_merge</code> and <code>federate</code> never write back.</li>
@@ -3399,7 +3443,8 @@ spec:
       <tr><td>Cal.com</td><td><code>POST &lt;api&gt;/webhooks/cal-com/&lt;orgId&gt;</code></td><td><code>x-cal-signature-256</code>. Secret from the org's <code>cal_com</code> connection.</td><td><code>discovery_call_booked</code> signals.</td></tr>
       <tr><td>Resend delivery events</td><td><code>POST &lt;api&gt;/webhooks/resend/&lt;orgId&gt;</code></td><td>Svix headers. Secret is the instance <code>RESEND_WEBHOOK_SECRET</code>.</td><td>Delivery status for sent mail.</td></tr>
       <tr><td>Unipile (LinkedIn)</td><td><code>POST &lt;api&gt;/webhooks/unipile/&lt;orgId&gt;</code></td><td><code>x-gtmos-webhook-secret</code>, the org's own secret (owners see it in Outreach sending lanes).</td><td>Accepted connection requests and replies arrive at once.</td></tr>
-      <tr><td>Composio</td><td><code>POST &lt;api&gt;/webhooks/composio</code></td><td><code>webhook-signature</code>. Secret is the instance <code>COMPOSIO_WEBHOOK_SECRET</code>.</td><td>Verified Composio events.</td></tr>
+      <tr><td>Integrations (0.3.0)</td><td><code>POST &lt;api&gt;/webhooks/integrations</code></td><td>Signed. Set it with <code>integrations.webhook.subscribe</code> (needs a public https <code>GTMOS_PUBLIC_API_URL</code>); the instance secret stays in <code>COMPOSIO_WEBHOOK_SECRET</code>.</td><td>App events routed to the right organization. Polling every 6 hours stays as the fallback.</td></tr>
+      <tr><td>Composio (kept until 0.3.1)</td><td><code>POST &lt;api&gt;/webhooks/composio</code></td><td><code>webhook-signature</code>. Secret is the instance <code>COMPOSIO_WEBHOOK_SECRET</code>.</td><td>Verified events from the integrations service.</td></tr>
     </table></div>
     <h4>Outbound</h4>
     <ol class="steps">
@@ -3432,9 +3477,9 @@ spec:
     <div class="tbl"><table>
       <tr><th>Feed</th><th>Connect through</th><th>Operation that pulls it</th></tr>
       <tr><td>Firmographics, emails, phones</td><td>looot binding (or your own MCP server)</td><td><code>enrichment.enrich_accounts</code>, <code>enrichment.enrich_contacts</code>, <code>enrichment.refresh_stale</code></td></tr>
-      <tr><td>Call transcripts (Fireflies, Gong, Zoom, Fathom)</td><td>Composio</td><td><code>transcripts.sync</code>. Repeats every 6 hours. Synced transcripts are private by default.</td></tr>
-      <tr><td>Product events (PostHog, Mixpanel, Amplitude)</td><td>Composio</td><td><code>product_analytics.sync</code>. Repeats every 6 hours. PostHog and Mixpanel need a project id set with <code>connections.set_provider_setting</code> (<code>&lt;toolkit&gt;/project_id</code>).</td></tr>
-      <tr><td>Replies from Smartlead, Instantly, lemlist</td><td>Composio</td><td><code>outbound_rails.sync_replies</code>. Repeats hourly.</td></tr>
+      <tr><td>Call transcripts (Fireflies, Gong, Zoom, Fathom)</td><td>Connected app</td><td><code>transcripts.sync</code>. Repeats every 6 hours. Synced transcripts are private by default.</td></tr>
+      <tr><td>Product events (PostHog, Mixpanel, Amplitude)</td><td>Connected app</td><td><code>product_analytics.sync</code>. Repeats every 6 hours. PostHog and Mixpanel need a project id set with <code>connections.set_provider_setting</code> (<code>&lt;toolkit&gt;/project_id</code>).</td></tr>
+      <tr><td>Replies from Smartlead, Instantly, lemlist</td><td>Connected app</td><td><code>outbound_rails.sync_replies</code>. Repeats hourly.</td></tr>
       <tr><td>Website visits</td><td>A tracking snippet</td><td><code>tracking.site.create</code>, <code>tracking.verify</code>, <code>tracking.activity</code>, <code>tracking.sources</code></td></tr>
       <tr><td>Coverage of all of these</td><td>n/a</td><td><code>sources.coverage</code></td></tr>
     </table></div>
@@ -3464,7 +3509,7 @@ spec:
       <li>An unsigned mapping never runs. Signing and promotion need a person other than the proposer.</li>
       <li>Signals sources must use <code>mode: append</code>.</li>
       <li>A mapped source never creates a contact's company for you. Unresolved rows mean the parent is missing.</li>
-      <li>Do not use Composio to buy data and do not use looot to read your own CRM.</li>
+      <li>Do not use connected apps to buy data and do not use looot to read your own CRM.</li>
       <li>CRM writes use the CRM's own field names, not GTM OS names.</li>
     </ul>
   </div>
@@ -3920,7 +3965,7 @@ spec:
       <tr><td>Business settings a person owns</td><td><code>brand.set</code>, <code>money.settings.set</code>, <code>deal_type.set</code>, <code>reply_labels.set</code>, <code>buying_roles.set</code>, <code>territory.upsert</code>, <code>routing.member_settings.set</code></td></tr>
       <tr><td>Go live</td><td><code>onboarding.launch</code></td></tr>
       <tr><td>Recommendations and unknown outcomes (0.2.6)</td><td><code>recommendation.accept</code>, <code>recommendation.dismiss</code>, <code>recommendation.start_mission</code>, <code>effect.reconcile</code></td></tr>
-      <tr><td>Browser consent</td><td><code>composio.oauth_start</code>, <code>composio.connect</code>, <code>connected_account.disconnect</code>, and the Google, Microsoft and Slack sign-ins. Claude gives you the link.</td></tr>
+      <tr><td>Browser consent</td><td><code>integrations.connect</code>, linking or replacing the project key, disconnecting an app, changing tool policy, <code>connected_account.disconnect</code>, and the Google, Microsoft and Slack sign-ins. Claude gives you the link.</td></tr>
       <tr><td>Irreversible</td><td><code>org.offboard</code></td></tr>
     </table></div>
     <p>Field-level guards also apply: Claude cannot switch research <code>autoApplyVerified</code> on, and cannot pass <code>toolEffects</code> to <code>mcp_servers.add</code>.</p>
@@ -4444,7 +4489,7 @@ permissions:
     <p class="goal"><b>Goal:</b> add a source or capability without writing platform code.</p>
     <div class="tbl"><table>
       <tr><th>Way</th><th>When</th><th>How</th></tr>
-      <tr><td><b>Adapter builder</b></td><td>The app is on Composio, or you have an MCP server with a read list tool, and you want records in the ontology.</td><td>Introspect, audit, propose, answer, publish, sign, activate. See <a href="#ch10-adapter">The adapter builder</a>.</td></tr>
+      <tr><td><b>Adapter builder</b></td><td>The app is a connected app, or you have an MCP server with a read list tool, and you want records in the ontology.</td><td>Introspect, audit, propose, answer, publish, sign, activate. See <a href="#ch10-adapter">The adapter builder</a>.</td></tr>
       <tr><td><b>Your own MCP server</b></td><td>You can write a small server. You want GTM OS to call it as a capability (lookups, scores) or as a source.</td><td>Add it, mark each tool Read or Write, bind a capability. See <a href="#ch10-mcp">MCP servers</a>. Build the server with your coding agent and the MCP builder skill.</td></tr>
       <tr><td><b>Code connector package</b></td><td>The built-in connectors (looot, Resend, Unipile, GSC, GA4, Cal.com, webform and others) are packages of this kind.</td><td>These are first-party <code>trusted</code> packages. A customer-built one needs a signature from a key in the instance trust set. Start with the two ways above first.</td></tr>
     </table></div>
@@ -4645,6 +4690,18 @@ gtm org export --org &lt;orgId&gt; --out ./acme-export --format parquet</code></
       <li><b>Your apps and configuration.</b> An upgrade changes no installed engine app. An owner or admin proposes an app update in <b>Settings &gt; Packages</b>, a second person approves it, and your own edits are merged in.</li>
       <li><b>Your <code>GTMOS_MASTER_KEY</code>.</b> Keep your own copy.</li>
     </ul>
+    <h4 id="ch14-update-030">Moving to 0.3.0 from 0.2.6</h4>
+    <ul>
+      <li><b>From 0.2.6 only.</b> A 0.2.5 instance goes 0.2.5, then 0.2.6, then 0.3.0. Install CLI 0.3.0 first (<code>@gtmos/cli</code>), then <code>gtm upgrade --check</code>, then <code>gtm upgrade --to 0.3.0 --dry-run</code> and <code>--yes</code>. The images come from <code>ghcr.io/ay-automate</code>; install and upgrade go through the <code>gtm</code> CLI and the published images only.</li>
+      <li><b>Migrations.</b> 27 new migrations since 0.2.6, all additive. One refreshes the installed copies of five first-party engine manifests in place. After them, <code>gtm upgrade</code> brings every organization schema to parity with the shared tables in place (values kept). An organization marked as schema tier whose data is still in the shared tables blocks the update and is named, with the fix. Organizations on a dedicated database (database or instance tier) are not migrated by any upgrade path.</li>
+      <li><b>Before upgrading:</b> list the agent keys that used <code>composio.*</code> or the newly closed operations (<code>audit.list</code> as an owner or admin, over the last weeks). From 0.3.0 they answer <code>FORBIDDEN</code> until a signed-in owner or admin grants each key its apps and tools with <code>agent.set_grants</code>. Nothing is granted automatically. An approval an outside agent proposed before the upgrade without a key on record does not run; propose it again with an agent key.</li>
+      <li>Set a real <code>UNSUBSCRIBE_TOKEN_SECRET</code> before you upgrade: in production the public default value is now refused for contact unsubscribe links too.</li>
+      <li><b>Operator steps after the upgrade:</b> set <code>PUBLIC_CONSOLE_URL</code> on the api service; link the project key in <b>Integrations &gt; Apps</b> and paste the verifier address into the project's callback verifier setting; connect again every app listed in <code>relinkNeeded</code>; set the webhook (<code>integrations.webhook.subscribe</code>); set a monthly limit; for SEO organizations, sign the three Search Console recipes or keep the native Google token, and connect Ahrefs on the organization's own account; give the keys found earlier their grants. See <a href="#ch10-integrations">Integrations in 0.3.0</a>.</li>
+      <li><b>A connect that was half way through at the upgrade</b> fails once on its return page. Start it again in <b>Integrations &gt; Apps</b>.</li>
+      <li><b>Private model endpoints</b> are refused by default once the installation holds more than one organization. Set <code>GTMOS_CUSTOM_MODEL_PRIVATE=on</code> on the api and worker services only if you accept that risk.</li>
+      <li><b>Going back to 0.2.6.</b> <code>gtm upgrade --rollback-check 0.2.6</code> is read-only and says whether you can. <code>gtm upgrade --rollback 0.2.6 --yes</code> runs the check, stops the services, runs it again, then swaps the images. Never swap by hand. It refuses while a connection type 0.2.6 does not know is stored (it prints the removal command), while an organization is on the schema tier, or while an app's records could be overwritten with another account's records.</li>
+      <li>Run <code>gtm init --refresh</code> in each project folder. Full notes: <a href="release-0.3.0.html">GTM OS 0.3.0</a>.</li>
+    </ul>
     <h4>Moving to 0.2.5 from 0.2.2, or from CLI 0.2.3 or 0.2.4 on 0.2.2 images</h4>
     <ul>
       <li>Upgrade the CLI first. This is not optional.</li>
@@ -4792,7 +4849,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><th>Job</th><th>Recipes</th></tr>
       <tr><td>Start</td><td><a href="#ch15-r01">Stand up an org from a blueprint</a>, <a href="#ch15-r02">Check your connection and your key</a>, <a href="#ch15-r03">Run the setup wizard by prompt</a></td></tr>
       <tr><td>Business logic</td><td><a href="#ch15-r04">Define the ICP and the scoring model</a>, <a href="#ch15-r05">Tune how fast intent fades</a>, <a href="#ch15-r06">Set routing and territories</a>, <a href="#ch15-r07">Build a sequence with exit rules</a>, <a href="#ch15-r08">Add suppression and consent rules</a>, <a href="#ch15-r09">Set claims, voice and proof</a>, <a href="#ch15-r10">Define a KPI and check the money</a></td></tr>
-      <tr><td>Data and connectors</td><td><a href="#ch15-r11">Import and gate a messy CSV</a>, <a href="#ch15-r12">Connect a CRM and mirror it</a>, <a href="#ch15-r13">Add a connector through Composio</a>, <a href="#ch15-r14">Add a connector through your own MCP server</a>, <a href="#ch15-r15">Price enrichment before you spend</a>, <a href="#ch15-r16">Send events out to your own endpoint</a></td></tr>
+      <tr><td>Data and connectors</td><td><a href="#ch15-r11">Import and gate a messy CSV</a>, <a href="#ch15-r12">Connect a CRM and mirror it</a>, <a href="#ch15-r13">Add a connector through a connected app</a>, <a href="#ch15-r14">Add a connector through your own MCP server</a>, <a href="#ch15-r15">Price enrichment before you spend</a>, <a href="#ch15-r16">Send events out to your own endpoint</a></td></tr>
       <tr><td>Go live and govern</td><td><a href="#ch15-r17">Take one engine from dry to live</a>, <a href="#ch15-r18">Create an agent with bounds</a>, <a href="#ch15-r19">Prepare an envelope</a>, <a href="#ch15-r20">Promote dev to staging to prod</a>, <a href="#ch15-r21">Review an approval</a></td></tr>
       <tr><td>Revenue intelligence (0.2.6)</td><td><a href="#ch15-r28">Read the funnel and name the weakest step</a>, <a href="#ch15-r29">Import through the gate</a>, <a href="#ch15-r30">Turn a check into a warning</a>, <a href="#ch15-r31">Generate recommendations</a>, <a href="#ch15-r32">Audit what an agent can do alone</a>, <a href="#ch15-r33">Settle an unknown outcome</a>, <a href="#ch15-r34">Read the board and trace a number</a>, <a href="#ch15-r35">Assess the motions and record a decision</a>, <a href="#ch15-r36">Review contacts held at rest</a>, <a href="#ch15-r37">Review risk readiness before enforcement</a>, <a href="#ch15-r38">Write your own recommendation rules</a>, <a href="#ch15-r39">Set a revenue target and read the new board tiles</a>, <a href="#ch15-r40">Plan and review a data steward bundle</a></td></tr>
       <tr><td>Build, operate and upgrade</td><td><a href="#ch15-r22">Build a Mission Control tile</a>, <a href="#ch15-r23">Add a screen</a>, <a href="#ch15-r24">Upgrade safely</a>, <a href="#ch15-r25">Roll back a definition, or the whole release</a>, <a href="#ch15-r26">Find out why nothing is being sent</a>, <a href="#ch15-r27">Trace one account end to end</a></td></tr>
@@ -4805,14 +4862,14 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
         <h4>Stand up an org from a blueprint</h4>
         <div class="code"><pre><code>We sell &lt;one sentence: who, what, how&gt;. Compare the ten blueprints with blueprint.list and blueprint.get and recommend the closest one in three lines. Check what it needs with blueprint.requirement_status. Then apply it to dev with blueprint.apply as a proposal. If it is a search blueprint, ask me for the Search Console property before you apply. List what you would change for us. Do not promote anything.</code></pre></div>
         <dl><dt>Claude does</dt><dd>Reads the catalog, recommends one (for example <code>enterprise-abm</code> for named accounts with buying committees), previews the requirements, then proposes the apply.</dd>
-        <dt>You do</dt><dd>A different admin approves the proposal in <b>Approvals</b>. Connect what the blueprint needs in <b>Integrations &gt; Connections</b>.</dd>
+        <dt>You do</dt><dd>A different admin approves the proposal in <b>Approvals</b>. Connect what the blueprint needs in <b>Integrations</b>.</dd>
         <dt>Read more</dt><dd><a href="#ch06-blueprints">Blueprints</a>, <a href="#ch05-life">Life of a definition</a></dd></dl>
       </div>
       <div class="prompt" id="ch15-r02">
         <h4>Check your connection and your key</h4>
         <div class="code"><pre><code>Check the gtmos connection. Call agent.whoami, policy.get_dry_mode and instance.readiness. Tell me who you act as, your scopes, whether you can approve, whether Dry Mode is on and which providers are live. List what you cannot do without a person. Change nothing.</code></pre></div>
         <dl><dt>Claude does</dt><dd>Runs three reads through <code>gtm_query</code> and maps each blocked task to the person who must do it.</dd>
-        <dt>You do</dt><dd>Fix anything not live in <b>Integrations &gt; Connections</b>. Mint a wider key if a scope is missing.</dd>
+        <dt>You do</dt><dd>Fix anything not live in <b>Integrations</b>. Mint a wider key if a scope is missing.</dd>
         <dt>Read more</dt><dd><a href="#ch02-claude-code">Connect Claude Code</a>, <a href="#ch04-effective">Effective authority</a>, <a href="#ch16-mcp">If the connection fails</a></dd></dl>
       </div>
       <div class="prompt" id="ch15-r03">
@@ -4890,17 +4947,17 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       </div>
       <div class="prompt" id="ch15-r12">
         <h4>Connect a CRM and mirror it</h4>
-        <div class="code"><pre><code>Check the Composio connection and link every app I already connected there. Set &lt;hubspot, salesforce, pipedrive, attio or zoho&gt; as the CRM of record and run one sync. Then audit the mirror: source row counts against what GTM OS holds, anything truncated, anything below the flag threshold. Read only after the first sync.</code></pre></div>
-        <dl><dt>Claude does</dt><dd>Runs <code>composio.status</code>, <code>composio.sync_connections</code>, <code>crm.settings.set</code>, <code>crm.sync</code>, then <code>sync.health</code> and <code>sync.completeness.run</code>.</dd>
-        <dt>You do</dt><dd>Connect Composio and the CRM app first. <code>crm.settings.set</code> needs an ACTIVE account for that CRM.</dd>
-        <dt>Read more</dt><dd><a href="#ch10-composio">Composio</a>, <a href="#ch10-crm">CRM mirror and sync health</a>, <a href="#ch16-sync">If the mirror drifts</a></dd></dl>
+        <div class="code"><pre><code>Check the integrations status and list the connected app accounts. Set &lt;hubspot, salesforce, pipedrive, attio or zoho&gt; as the CRM of record and tell me when to run one sync. Then audit the mirror: source row counts against what GTM OS holds, anything truncated, anything below the flag threshold. Read only after the first sync.</code></pre></div>
+        <dl><dt>Claude does</dt><dd>Runs <code>integrations.setup.status</code>, <code>integrations.accounts.list</code>, <code>crm.settings.set</code>, then <code>crm.sync_status</code> and <code>sync.health</code>.</dd>
+        <dt>You do</dt><dd>Link the integrations account and connect the CRM app first (<code>crm.settings.set</code> needs an active account for that CRM). Click <span class="ui">Sync now</span> on the CRM app, and run <code>sync.completeness.run</code> as a person: from 0.3.0 both are closed to agent keys.</dd>
+        <dt>Read more</dt><dd><a href="#ch10-integrations">Integrations</a>, <a href="#ch10-crm">CRM mirror and sync health</a>, <a href="#ch16-sync">If the mirror drifts</a></dd></dl>
       </div>
       <div class="prompt" id="ch15-r13">
-        <h4>Add a connector through Composio</h4>
+        <h4>Add a connector through a connected app</h4>
         <div class="code"><pre><code>Map &lt;app and list tool&gt; to &lt;signals, companies or contacts&gt; every &lt;interval&gt;, matched to contacts by &lt;email&gt;. Preview live data first with source.preview and show me the proposed field mapping before you propose it. Do not sync until the mapping is signed.</code></pre></div>
-        <dl><dt>Claude does</dt><dd>Runs <code>source.list_tools</code>, <code>source.preview</code>, <code>source.suggest_mapping</code>, then proposes the <code>definition.source_mapping</code>.</dd>
-        <dt>You do</dt><dd>Connect the app on the Composio card. A different person signs the mapping, and promotes it if prod should run it. Then ask Claude to run <code>source.sync</code>.</dd>
-        <dt>Read more</dt><dd><a href="#ch10-mapping">Source mappings</a>, <a href="#ch10-composio">Composio</a></dd></dl>
+        <dl><dt>Claude does</dt><dd>Runs <code>source.list_tools</code>, <code>source.preview</code>, <code>source.suggest_mapping</code>, then proposes the <code>definition.source_mapping</code>. From 0.3.0 these <code>source.*</code> steps need a person or a built-in agent, not an agent key; a ready-made pack (<code>integrations.pack.install</code>, beta) or <code>integrations.pack.generate</code> (people only) is the other way.</dd>
+        <dt>You do</dt><dd>Connect the app on the Apps tab. A different person signs the mapping, and promotes it if prod should run it. Then run <code>source.sync</code> as a person.</dd>
+        <dt>Read more</dt><dd><a href="#ch10-mapping">Source mappings</a>, <a href="#ch10-integrations">Integrations</a></dd></dl>
       </div>
       <div class="prompt" id="ch15-r14">
         <h4>Add a connector through your own MCP server</h4>
@@ -5112,7 +5169,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <li>Start with <code>Work in dev</code> and end with <code>Do not promote anything</code> until you have read the diff.</li>
       <li>Ask for the preview first: <code>score.rescan_preview</code>, <code>play.simulate</code>, <code>env.promote</code> with <code>preview: true</code>, <code>canon.import</code> in preview mode, <code>enrichment.enrich_accounts</code> with <code>estimate: true</code>.</li>
       <li>Say what Claude must not do. "Do not send, enrol, merge or spend" costs nothing and removes a class of surprises.</li>
-      <li>Never paste a provider key or a secret into chat. Put it in <b>Integrations &gt; Connections</b>.</li>
+      <li>Never paste a provider key or a secret into chat. Put it in <b>Integrations</b>.</li>
       <li>Ask Claude to name the environment it used. A change in <code>dev</code> is not live.</li>
     </ul>
   </div>
@@ -5130,7 +5187,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><th>Symptom</th><th>Cause</th><th>Fix</th></tr>
       <tr><td><code>VALIDATION_FAILED</code> (400)</td><td>The input does not match the schema (see <code>details.issues</code>), or a named thing does not exist.</td><td>Run <code>gtm_describe &lt;operation&gt;</code> and compare your input with the schema.</td></tr>
       <tr><td><code>UNAUTHORIZED</code> (401)</td><td>No valid session, key or agent token.</td><td>New key, re-export <code>GTMOS_AGENT_TOKEN</code>, restart. <a href="#ch16-mcp">MCP connection</a></td></tr>
-      <tr><td><code>AUTH_EXPIRED</code> (401)</td><td>A connection's sign-in expired (Composio, Google, Slack). Not your agent key.</td><td>Reconnect that connection in <b>Integrations &gt; Connections</b>.</td></tr>
+      <tr><td><code>AUTH_EXPIRED</code> (401)</td><td>A connection's sign-in expired (a connected app, Google, Slack). Not your agent key.</td><td>Reconnect that connection in <b>Integrations</b>.</td></tr>
       <tr><td><code>BUDGET_EXCEEDED</code> (402)</td><td>Spend would exceed a ledger budget.</td><td>A person raises the budget on purpose, or the call becomes an approval proposal.</td></tr>
       <tr><td><code>FORBIDDEN</code> (403)</td><td>A role, a scope, a human-only rule, four-eyes or a governance check refused it.</td><td><a href="#ch16-auth">Auth and scopes</a></td></tr>
       <tr><td><code>POLICY_DENIED</code> (403)</td><td>The organization's active gate policy denies the operation.</td><td>Read it with <code>policy.get_gate_policy</code>. A person changes the policy.</td></tr>
@@ -5301,12 +5358,12 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><td>An object is flagged below the threshold</td><td>Source row count against GTM OS count is under the flag threshold (default 60 percent).</td><td>Run <code>sync.completeness.run</code>. An owner or admin tunes it with <code>sync.completeness.settings.set</code>. <a href="#ch10-crm">CRM mirror</a></td></tr>
       <tr><td>Parity differences on amount, stage, status, email, name or domain</td><td>A sampled record differs from live.</td><td>Run <code>sync.parity_check</code> and read <code>sync.parity_results</code>.</td></tr>
       <tr><td>A stage value is held for review</td><td>An unmapped value is held, never defaulted.</td><td>Run <code>stage_map.unmapped</code> and <code>stage_map.suggest</code>. A person sets the mapping.</td></tr>
-      <tr><td><code>crm.settings.set</code> refused</td><td>No ACTIVE Composio account for that CRM.</td><td>Connect the CRM app on the Composio card first.</td></tr>
-      <tr><td><code>NOT_CONFIGURED</code> "Composio is not configured for this organization. Add your Composio API key in Integrations > Connections > Composio ..."</td><td>No Composio credential.</td><td><b>Integrations &gt; Connections &gt; Composio &gt; Connect Composio</b>, or a key under Advanced.</td></tr>
-      <tr><td><code>VALIDATION_FAILED</code> "This is a Composio user API key (uak_...) ... Nothing was saved."</td><td>A <code>uak_</code> key was pasted.</td><td>Use Connect Composio, a Connect key <code>ck_...</code>, or a project key <code>ak_...</code>.</td></tr>
-      <tr><td><code>AUTH_EXPIRED</code> "Composio sign-in expired or was revoked -- Reconnect Composio ..."</td><td>The OAuth refresh failed.</td><td>Click <b>Reconnect Composio</b> on the card.</td></tr>
-      <tr><td>"Composio: hubspot is not connected for this organization ..."</td><td>That toolkit has no ACTIVE account.</td><td>Connect it on the Composio card. Check <code>composio.status</code>.</td></tr>
-      <tr><td>An account is <code>INITIATED</code>, <code>EXPIRED</code> or <code>FAILED</code></td><td>Hosted auth was not completed. Links expire after about 10 minutes.</td><td>Reconnect from the card, then <code>composio.refresh</code>.</td></tr>
+      <tr><td><code>crm.settings.set</code> refused</td><td>No active account for that CRM.</td><td>Connect the CRM app in <b>Integrations &gt; Apps</b> first.</td></tr>
+      <tr><td>"The integrations key is not valid"</td><td>The project key was rejected.</td><td>Paste a new project key in <b>Integrations &gt; Apps</b>.</td></tr>
+      <tr><td>"This is not the right kind of integrations key"</td><td>A Connect key (<code>ck_</code>) or a sign-in credential was pasted.</td><td>Use the project key (<code>ak_</code>).</td></tr>
+      <tr><td>"... is no longer connected. Reconnect it in Integrations."</td><td>The account was disconnected or expired.</td><td>Open the app and connect again.</td></tr>
+      <tr><td>Apps made under the old sign-in do not run</td><td>They live in another project and cannot run on a project key.</td><td>Connect each app listed in <code>relinkNeeded</code> again.</td></tr>
+      <tr><td><code>FORBIDDEN</code> for an agent key on <code>composio.*</code>, <code>crm.sync</code>, <code>source.*</code> or another app-reaching operation</td><td>From 0.3.0 those are closed to agent keys.</td><td>Run it as a person, or grant the key the app (<code>agent.set_grants</code>) and use <code>integrations.read</code> or <code>integrations.act</code>.</td></tr>
       <tr><td><code>NOT_CONFIGURED</code> "MCP server "x" is not registered for this organization"</td><td>The server is not added, or the name in the binding is wrong.</td><td><code>mcp_servers.add</code> it (owner or admin), or fix the name.</td></tr>
       <tr><td><code>FORBIDDEN</code> "no declared effect" on an MCP tool</td><td>The tool is not marked Read or Write.</td><td>A person marks it (<code>mcp_servers.set_tool_effects</code>).</td></tr>
       <tr><td>"initialize failed ... did not answer with a JSON-RPC result"</td><td>The URL is not a streamable HTTP MCP endpoint, often missing <code>/mcp</code>.</td><td>Fix the URL.</td></tr>
@@ -5339,7 +5396,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><th>Line or message</th><th>Meaning</th><th>Fix</th></tr>
       <tr><td><code>LIVE</code></td><td>The provider answered.</td><td>Nothing.</td></tr>
       <tr><td><code>UNVERIF</code></td><td>Configured, not yet verified.</td><td>Run the connection's test (<code>connections.test</code>).</td></tr>
-      <tr><td><code>FAILED</code></td><td>The credential was rejected. A <code>!!</code> line shows <code>lastTestError</code>.</td><td>New credential in <b>Integrations &gt; Connections</b>.</td></tr>
+      <tr><td><code>FAILED</code></td><td>The credential was rejected. A <code>!!</code> line shows <code>lastTestError</code>.</td><td>New credential in <b>Integrations</b>.</td></tr>
       <tr><td><code>FIXTURE</code></td><td>Demo mode: fake deterministic data is served.</td><td>Never present it as real. Set <code>GTMOS_LIVE=true</code> and configure the provider.</td></tr>
       <tr><td><code>MISSING</code></td><td>Live mode, not configured. Using it fails <code>NOT_CONFIGURED</code>.</td><td>Follow the <code>-></code> line under it: the exact env var or Connection to set.</td></tr>
       <tr><td><code>OPTIONAL</code></td><td>A seam this organization does not need.</td><td>Nothing. <code>--strict</code> ignores it.</td></tr>
@@ -5405,7 +5462,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
     <p><b>T operations:</b> <code>consent.withdraw</code>, <code>deal.advance_stage</code>, <code>flow.cancel</code>, <code>lane.activate</code>, <code>play.trigger</code>.</p>
     <p><b>E operations:</b> <code>actions.book_meeting</code>, <code>actions.cancel_meeting</code>, <code>actions.send_batch</code>, <code>capability.acquire</code>, <code>capability.submit_async</code>, <code>channel.deliver</code>, <code>connections.preflight</code>, <code>connections.test</code>, <code>crm.undo_update_record</code>, <code>crm.undo_write_outcome</code>, <code>crm.update_record</code>, <code>crm.write_outcome</code>, <code>enrichment.overwrite_field</code>, <code>enrichment.undo_overwrite_field</code>, <code>identity_dq.merge_records</code>, <code>identity_dq.revise_merge</code>, <code>identity_dq.steward_bundle</code>, <code>identity_dq.unmerge_records</code>, <code>model.call</code>, <code>outreach.send_message</code>, <code>perf_ads.undo_campaign_change</code>, <code>perf_ads.update_campaign</code>, <code>runtime.execute_action</code>, <code>runtime.execute_approval</code>, <code>runtime.propose_action</code>, <code>seo_geo.publish_content_change</code>, <code>seo_geo.publish_to_cms</code>, <code>seo_geo.undo_content_change</code>, <code>seo_geo.unpublish_from_cms</code>, <code>source.undo_update_record</code>, <code>source.update_record</code>.</p>
     <h4>Operations by area</h4>
-    <p>The part before the first dot is the area. In 0.2.5 there were 109 areas and 671 operations. The list below is the 0.2.6 catalog as merged: 118 areas, 709 operations. Eight operations were added for the AI model, classification and recommendations: <code>model.connect</code>, <code>model.status</code>, <code>model.budget.set</code>, <code>classification.correct</code>, <code>classification.sweep</code>, <code>classification.taxonomies</code>, <code>recommendation.context</code> and <code>recommendation.submit</code>, so the released catalog has 717. Counts are in brackets.</p>
+    <p>The part before the first dot is the area. The lists in this card are the 0.2.6 catalog; the 0.3.0 catalog has 900 operations and adds the <code>integrations</code> area, among others. Ask Claude <code>gtm_describe</code> for the exact list on your instance. In 0.2.5 there were 109 areas and 671 operations. The list below is the 0.2.6 catalog as merged: 118 areas, 709 operations. Eight operations were added for the AI model, classification and recommendations: <code>model.connect</code>, <code>model.status</code>, <code>model.budget.set</code>, <code>classification.correct</code>, <code>classification.sweep</code>, <code>classification.taxonomies</code>, <code>recommendation.context</code> and <code>recommendation.submit</code>, so the released catalog has 717. Counts are in brackets.</p>
     <p><code>seo_geo</code> (44), <code>onboarding</code> (26), <code>agent</code> (23), <code>identity_dq</code> (19), <code>policy</code> (17), <code>enrichment</code> (16), <code>score</code> (16), <code>outreach</code> (15), <code>signals</code> (14), <code>actions</code> (13), <code>chat</code> (12), <code>composio</code> (12), <code>adapter</code> (11), <code>asks</code> (11), <code>config</code> (11), <code>connections</code> (11), <code>mission</code> (11), <code>packages</code> (11), <code>perf_ads</code> (11), <code>pipeline</code> (10), <code>pkg</code> (10), <code>recommendation</code> (10), <code>research</code> (10), <code>runtime</code> (10), <code>sequence</code> (10), <code>crm</code> (9), <code>definition</code> (9), <code>field</code> (9), <code>money</code> (9), <code>records</code> (9), <code>source</code> (9), <code>journey</code> (8), <code>proof</code> (8), <code>query</code> (8), <code>slack</code> (8), <code>studio</code> (8), <code>canon</code> (7), <code>instance</code> (7), <code>replies</code> (7), <code>sync</code> (7), <code>tracking</code> (7), <code>connected_account</code> (6), <code>plays</code> (6), <code>routing</code> (6), <code>transcripts</code> (6), <code>board</code> (5), <code>daily_update</code> (5), <code>mcp_servers</code> (5), <code>motion</code> (5), <code>notification</code> (5), <code>privacy</code> (5), <code>resolve</code> (5), <code>stage_map</code> (5), <code>activity</code> (4), <code>blueprint</code> (4), <code>capability</code> (4), <code>consent</code> (4), <code>deal</code> (4), <code>decision</code> (4), <code>delegation</code> (4), <code>env</code> (4), <code>envelope</code> (4), <code>flags</code> (4), <code>fx</code> (4), <code>monitors</code> (4), <code>org</code> (4), <code>play</code> (4), <code>roles</code> (4), <code>task</code> (4), <code>view</code> (4), <code>voice</code> (4), <code>apikey</code> (3), <code>brand</code> (3), <code>effect</code> (3), <code>funnel</code> (3), <code>ontology</code> (3), <code>sso</code> (3), <code>webhooks</code> (3), <code>account</code> (2), <code>agency</code> (2), <code>apps</code> (2), <code>auth</code> (2), <code>binding</code> (2), <code>buying_roles</code> (2), <code>customer_type</code> (2), <code>deal_type</code> (2), <code>import</code> (2), <code>lane</code> (2), <code>ledger</code> (2), <code>metric</code> (2), <code>outbound_rails</code> (2), <code>reply_labels</code> (2), <code>retention</code> (2), <code>runs</code> (2), <code>search</code> (2), <code>secret</code> (2), <code>territory</code> (2), <code>audit</code> (1), <code>autolog</code> (1), <code>broker</code> (1), <code>channel</code> (1), <code>compliance</code> (1), <code>contact</code> (1), <code>data</code> (1), <code>email</code> (1), <code>flow</code> (1), <code>governance</code> (1), <code>gtm</code> (1), <code>harness</code> (1), <code>hooks</code> (1), <code>lineage</code> (1), <code>meeting</code> (1), <code>model</code> (1), <code>observe</code> (1), <code>product_analytics</code> (1), <code>project</code> (1), <code>risk</code> (1), <code>sources</code> (1)</p>
     <div class="note">Operation lists change between releases. Ask Claude <code>gtm_describe</code> with a class or a name for the exact list on your instance.</div>
   </div>
@@ -5466,7 +5523,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><th>Kind</th><th>What it holds</th><th>Chapter</th></tr>
       <tr><td><code>definition.agent</code></td><td>An agent version's authority scopes, activatable skills and hard run bounds (steps, cost, deadline)</td><td><a href="#ch11-bounds">Chapter 11</a></td></tr>
       <tr><td><code>definition.app</code></td><td>A declarative app: routes, audiences and pages composing view types over registry operations</td><td><a href="#ch13-apps">Chapter 13</a></td></tr>
-      <tr><td><code>definition.binding</code></td><td>How a capability is acquired: backend (looot / composio / mcp / native), the provider op, price cap, verification, fallbacks</td><td><a href="#ch10-composio">Chapter 10</a></td></tr>
+      <tr><td><code>definition.binding</code></td><td>How a capability is acquired: backend (looot / composio / mcp / native), the provider op, price cap, verification, fallbacks</td><td><a href="#ch10-integrations">Chapter 10</a></td></tr>
       <tr><td><code>definition.brand_kit</code></td><td>A strict token -&gt; value override map that re-themes the console design system</td><td><a href="#ch13-apps">Chapter 13</a></td></tr>
       <tr><td><code>definition.brand_voice</code></td><td>Tone, do / don't rules and vocabulary for generated copy</td><td><a href="#ch07-claims">Chapter 7</a></td></tr>
       <tr><td><code>definition.committee_model</code></td><td>The buying committee a motion expects: required roles, champion role, recency window</td><td><a href="#ch07-qualification">Chapter 7</a></td></tr>
@@ -5494,7 +5551,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><td><code>definition.segment</code></td><td>Which accounts (or other records) a motion works: an objectType + CEL criteria</td><td><a href="#ch07-qualification">Chapter 7</a></td></tr>
       <tr><td><code>definition.sequence</code></td><td>A sequence's steps in the org's own words: ordered steps (email or LinkedIn</td><td><a href="#ch07-plays">Chapter 7</a></td></tr>
       <tr><td><code>definition.skill</code></td><td>A bounded authority grant (operations, unmask paths, cost ceiling) an agent activates one at a time</td><td><a href="#ch11-skills">Chapter 11</a></td></tr>
-      <tr><td><code>definition.source_mapping</code></td><td>How one list tool of a connected app (Composio, MCP) maps into the ontology: target object, field mappings + transforms, match keys, schedule, write-b</td><td><a href="#ch10-mapping">Chapter 10</a></td></tr>
+      <tr><td><code>definition.source_mapping</code></td><td>How one list tool of a connected app (integrations or MCP) maps into the ontology: target object, field mappings + transforms, match keys, schedule, write-b</td><td><a href="#ch10-mapping">Chapter 10</a></td></tr>
       <tr><td><code>definition.stage_machine</code></td><td>The legal states of an object and its guarded transitions (e.g</td><td><a href="#ch07-stages">Chapter 7</a></td></tr>
       <tr><td><code>definition.stage_map</code></td><td>What each value of one source's lifecycle / stage field means: a journey stage or ignore (key &lt;system&gt;.&lt;account\|contact\|deal&gt;)</td><td><a href="#ch07-stages">Chapter 7</a></td></tr>
       <tr><td><code>definition.suppression_rule</code></td><td>Who must never be contacted (CEL criteria + reason)</td><td><a href="#ch07-suppression">Chapter 7</a></td></tr>
@@ -5604,7 +5661,8 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <tr><td>Sign-in and cookies</td><td><code>GTMOS_SIGNUP_OPEN</code>, <code>GTMOS_COOKIE_DOMAIN</code>, <code>GTMOS_CROSS_SITE_COOKIES</code>, <code>GOOGLE_CLIENT_ID</code>, <code>GOOGLE_CLIENT_SECRET</code>, <code>MICROSOFT_CLIENT_ID</code>, <code>MICROSOFT_CLIENT_SECRET</code>, <code>MICROSOFT_TENANT_ID</code></td></tr>
       <tr><td>Rate limits (per minute)</td><td><code>GTMOS_RATE_LIMIT_AUTH_PER_MIN</code>, <code>GTMOS_RATE_LIMIT_OAUTH_PER_MIN</code>, <code>GTMOS_RATE_LIMIT_API_PER_MIN</code> (per session or key), <code>GTMOS_RATE_LIMIT_API_ANON_PER_MIN</code> (per IP, no credential), <code>GTMOS_RATE_LIMIT_API_IP_PER_MIN</code>, <code>MCP_MAX_BODY_BYTES</code></td></tr>
       <tr><td>Model providers</td><td><code>ANTHROPIC_API_KEY</code>, <code>OPENAI_API_KEY</code>, <code>GEMINI_API_KEY</code>, <code>OPENROUTER_API_KEY</code></td></tr>
-      <tr><td>Outside data and apps</td><td><code>LOOOT_TOKEN</code>, <code>LOOOT_MAX_COST_USD</code>, <code>COMPOSIO_API_KEY</code>, <code>COMPOSIO_WEBHOOK_SECRET</code>, <code>UNIPILE_API_KEY</code>, <code>UNIPILE_DSN</code>, <code>UNIPILE_WEBHOOK_SECRET</code>, <code>GSC_ACCESS_TOKEN</code>, <code>GSC_SITE_URL</code>, <code>GOOGLE_ADS_*</code>, <code>META_ADS_ACCESS_TOKEN</code></td></tr>
+      <tr><td>Integrations (0.3.0)</td><td><code>COMPOSIO_API_KEY</code> and <code>COMPOSIO_WEBHOOK_SECRET</code>: the instance fallback key for the integrations account (an org's own key wins) and the instance webhook secret. <code>PUBLIC_CONSOLE_URL</code> (also the verifier address), <code>GTMOS_INTEGRATIONS_VERIFIER</code> (<code>off</code> is unsafe), <code>GTMOS_INTEGRATIONS_CALL_COST_USD</code> (price per call, default 0.0003), <code>GTMOS_INTEGRATIONS_AGENT_DAILY_CAP_USD</code> (default 1.50 per rolling 24 hours, 0 blocks), <code>GTMOS_INTEGRATIONS_ACCOUNT_RATE_BURST</code> and <code>GTMOS_INTEGRATIONS_ACCOUNT_RATE_PER_SECOND</code> (default a burst of 60, then one call a second), <code>GTMOS_INTEGRATIONS_JOB_CALLS_PER_HOUR</code> (default 3000), <code>GTMOS_INTEGRATIONS_JOB_CALLS_PER_APP_PER_HOUR</code> (default 1500), <code>GTMOS_INTEGRATIONS_JOB_CALLS_MIN_PER_RUN</code> (default 3), <code>GTMOS_AHREFS_SHARED_ACCOUNT_GRACE</code> (one-release switch for the shared Ahrefs account), <code>GTMOS_CUSTOM_MODEL_PRIVATE</code> (<code>off</code> refuses private targets for a custom model endpoint, <code>on</code> allows them; default refuses once the installation holds more than one organization)</td></tr>
+      <tr><td>Outside data and apps</td><td><code>LOOOT_TOKEN</code>, <code>LOOOT_MAX_COST_USD</code>, <code>UNIPILE_API_KEY</code>, <code>UNIPILE_DSN</code>, <code>UNIPILE_WEBHOOK_SECRET</code>, <code>GSC_ACCESS_TOKEN</code>, <code>GSC_SITE_URL</code>, <code>GOOGLE_ADS_*</code>, <code>META_ADS_ACCESS_TOKEN</code></td></tr>
       <tr><td>Sending</td><td><code>RESEND_API_KEY</code>, <code>RESEND_FROM_ADDRESS</code>, <code>RESEND_WEBHOOK_SECRET</code></td></tr>
       <tr><td>System email</td><td><code>EMAIL_TRANSPORT</code> (<code>smtp</code>, <code>webhook</code>, <code>none</code>), <code>SMTP_HOST</code>, <code>SMTP_PORT</code>, <code>SMTP_SECURE</code>, <code>SMTP_USER</code>, <code>SMTP_PASS</code>, <code>EMAIL_FROM</code>, <code>RESET_PASSWORD_WEBHOOK_URL</code>, <code>VERIFICATION_EMAIL_WEBHOOK_URL</code>, <code>INVITATION_EMAIL_WEBHOOK_URL</code>, <code>OPERATOR_NUDGE_WEBHOOK_URL</code></td></tr>
       <tr><td>Fallback to instance keys</td><td><code>GTMOS_PLATFORM_CREDENTIAL_PROVIDERS</code> (replaces the default list when set)</td></tr>
@@ -5618,12 +5676,12 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <dt>Agent key</dt><dd>The credential Claude uses (<code>GTMOS_AGENT_TOKEN</code>). It acts as the agent, proposes, and can never approve.</dd>
       <dt>Approval</dt><dd>A proposed action waiting for a person other than the proposer. Proposals expire after 7 days.</dd>
       <dt>Autonomy ladder</dt><dd>Five levels, A0 Observe to A4 Mission autonomy. The default is A2 Propose. It only removes one brake. It does not turn automation on by itself.</dd>
-      <dt>Binding</dt><dd>How a capability is acquired: backend (looot, Composio, MCP or native), the provider operation, a price cap, verification and fallbacks.</dd>
+      <dt>Binding</dt><dd>How a capability is acquired: backend (looot, integrations, MCP or native), the provider operation, a price cap, verification and fallbacks.</dd>
       <dt>Blueprint</dt><dd>A ready-made set of definitions for a go-to-market motion. Ten ship in 0.2.5. Apply one in dev as a proposal, then customize.</dd>
       <dt>Canon</dt><dd>The built-in set of object types (accounts, contacts, deals and others) and the rules for editing them.</dd>
       <dt>ChangeSet</dt><dd>A bundle of definition changes proposed together, validated, approved by a different person, then published.</dd>
       <dt>Claims gate</dt><dd>A check that a stat, result or named customer in outbound copy is backed by active proof.</dd>
-      <dt>Composio</dt><dd>The way GTM OS connects to your own apps (CRM, Slack, Search Console). looot is for outside data.</dd>
+      <dt>Integrations</dt><dd>The way GTM OS connects to your own apps (CRM, Slack, Search Console and about 1,700 more), with any number of accounts per app. looot is for outside data.</dd>
       <dt>Definition</dt><dd>A signed, versioned piece of business logic. The engines read the signed version in the call's environment.</dd>
       <dt>Dry Mode</dt><dd>While on, an effect becomes a draft and nothing leaves the system. There is an organization master and one mode per engine. The stricter wins.</dd>
       <dt>Effect (E)</dt><dd>An operation that touches a customer or an outside system. It is proposed, never run directly.</dd>
@@ -5651,7 +5709,7 @@ docker compose --env-file .env -f docker-compose.yml exec -T postgres pg_restore
       <dt>Trust key</dt><dd>The name of an engine in the approval and mode system, for example <code>outreach</code> or <code>crm_writeback</code>.</dd>
     </dl>
   </div>
-  <footer>Written for GTM OS release 0.2.6 (717 operations, 35 definition kinds). When this guide and your live instance disagree, the instance wins. Refresh your project's bundled reference with <code>gtm init --refresh</code>.</footer>
+  <footer>Updated for GTM OS release 0.3.0 (900 operations, 47 definition kinds); most chapters were written for 0.2.6 (717 operations, 35 definition kinds). When this guide and your live instance disagree, the instance wins. Refresh your project's bundled reference with <code>gtm init --refresh</code>.</footer>
 </section>
 
 </main>

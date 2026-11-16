@@ -1,12 +1,30 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-03T00:21:58.762Z",
-  "expiresAt": "2027-02-01T00:21:58.762Z",
+  "generatedAt": "2026-11-16T23:41:32.526Z",
+  "expiresAt": "2027-02-14T23:41:32.526Z",
   "channels": {
-    "beta": "0.2.6",
+    "beta": "0.3.0",
     "stable": "0.2.6"
   },
   "releases": [
+    {
+      "version": "0.3.0",
+      "date": "2026-11-16T23:41:32.526Z",
+      "channel": "beta",
+      "security": false,
+      "summary": "GTM OS 0.3.0: connect any app from inside GTM OS, many accounts per app, packs and recipes (beta), honest sync status",
+      "notesUrl": "https://ay-automate.github.io/gtmos-releases/release-0.3.0.html",
+      "minCliVersion": "0.3.0",
+      "minFromVersion": "0.2.6",
+      "requiredStops": [],
+      "additiveOnly": true,
+      "images": {
+        "api": "sha256:44990409362094768c191add959a035fb2a2734b6843e779f02d8f5348ba17ac",
+        "console": "sha256:2e37a66c470234d8e0d6482187c7bbf918ae2f3f293df451c1c414f3f1c485ab",
+        "mcp": "sha256:4dc0575eca1459ca6510e4ffb28e5070d48fcaa6c8bcb53895e381ed0c3d9856",
+        "worker": "sha256:7366c8b4def854427dad0ce67c6132265298658e2f34c70f025e80e6fd2cb0a5"
+      }
+    },
     {
       "version": "0.2.6",
       "date": "2026-11-03T00:21:57.000Z",
