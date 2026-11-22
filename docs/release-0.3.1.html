@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GTM OS 0.3.1 release notes</title>
+<meta name="description" content="Release notes for GTM OS 0.3.1: what is new, what to know before you upgrade, how to upgrade, and known limits.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+<script src="assets/release-status.js"></script>
+<script src="assets/release-banner.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">G</span>GTM OS</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Overview</a>
+      <a href="videos/index.html">Videos</a>
+      <a href="user-guide.html">User guide</a>
+      <a href="product-documentation.html">Product docs</a>
+      <a href="https://github.com/ay-automate/gtmos-releases/releases">Releases</a>
+    </nav>
+    <button class="theme-btn" type="button" aria-label="Switch theme" aria-pressed="false"></button>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap page-h">
+    <p class="eyebrow">Release notes</p>
+    <h1>GTM OS 0.3.1</h1>
+  </div>
+  <div class="wrap">
+    <article class="prose">
+<p>CLI: <code>@gtmos/cli</code> 0.3.1. Images: <code>ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.3.1</code> (also tagged <code>stable</code> once the stable channel moves), plus <code>pgvector/pgvector:pg16</code>.</p>
+<p>0.3.1 is a patch release driven by a real, live setup of a brand on 0.3.0. It makes setup honest and short for one person, makes the approval and agent rules clearer and safer, lets agents do much more through MCP while keeping the very risky actions with people, and fixes the gaps the live test found in integrations, packages, the setup wizard, scoring and the console.</p>
+<p>The catalog is now 962 operations (430 Q, 360 D, 5 T, 33 E, 134 M).</p>
+<h2>Before you upgrade</h2>
+<ul>
+<li><b>Agents now run three checks directly.</b> <code>connections.test</code>, <code>connections.preflight</code> and <code>crm.sync</code> run directly with a granted agent key (limited per minute, per day and per organization). Before, an agent key got a proposal. Send <code>mode: "propose"</code> to keep the old behaviour. With Dry Mode on, an agent <code>crm.sync</code> still becomes a proposal.</li>
+<li><b>An agent never stores a key you paste in chat.</b> An agent that calls <code>connections.create</code> or <code>connections.rotate</code> now gets a request for a person to type the key (<code>connections.request_secret</code>). A person enters it in the console.</li>
+<li><b>Live email lanes need a postal address.</b> On a live instance a lane that sends email without a postal address now has its applies and sends refused. Existing lanes are not paused, but their sends are refused until you add the address.</li>
+<li><b>Scores from the stock model are provisional.</b> They are capped below qualified and never drive seeds, enrichment order or outreach. New organizations score only with a signed model (strict mode). On an existing organization, an owner can run the one-time rescore.</li>
+<li><b>The Workbench tab of the Score engine moved.</b> Anyone who had hidden the old tab sees it again.</li>
+<li><b>A step-up factor exists, and it is off by default.</b> An owner can set up an authenticator for sensitive grants. It needs its own key (<code>GTMOS_STEPUP_KEY</code>) and an email transport. Grants for agents stay off. See step-up factor.</li>
+<li><b>Setup is solo by default.</b> <code>gtm setup</code> asks for no second approver; <code>--team</code> opts in. The <code>.env</code> guard is a guard, not a guarantee, and it does NOT stop <code>gtm login --instance</code>.</li>
+<li><b>Transcripts from Gong need the Gong pack.</b> <code>transcripts.sync</code> no longer reads Gong unless the Gong pack is installed, and then it reads only the installer's own data.</li>
+<li><b>BigQuery pack version 2 needs a project id.</b> Installs of version 1 keep validating but show "install the pack again".</li>
+<li><b>Embeddings are not retried.</b> Once a record's text is sent to an embedding provider, the job is not retried by itself; an explicit <code>search.reindex_now</code> re-runs it.</li>
+</ul>
+<h2>What is new</h2>
+<ul>
+<li><b>One person can finish setup.</b> No approver account is needed; the console, the CLI and MCP all say who approves and why.</li>
+<li><b>Agents can do more.</b> Agents can lower spend caps, turn Dry Mode on, read needs through their key, propose removing a failed connection, ask a person for a secret through a one-time link, and leave "Needs a human" items. Raising a cap, turning Dry Mode off, signing, approving and running customer-facing actions stay with people.</li>
+<li><b>Honest connections.</b> Failed attempts can be retried or removed, links to connect an app finish in the console, and read-only access can be granted per app.</li>
+<li><b>Go live signing.</b> Applying a change proposes its definitions for signing in one step.</li>
+<li><b>Packages and approvals.</b> Bulk enable and promote, a clearer approval card with a risk reason, and approve-all for matching items.</li>
+<li><b>Setup wizard.</b> It shows only what is really in place, lets you add your own apps and markets, and refuses to count an agent's draft as done.</li>
+<li><b>Score and outreach.</b> A new Score cockpit with reasons, tiers, an accounts-to-create tab, next best move and feedback reason codes; read-only outreach cockpit operations; LinkedIn engagers and AI visibility on the account.</li>
+<li><b>Console.</b> Engine cards collapse, cards in a row share one height, every page scrolls, and Integrations is easier to find.</li>
+<li><b>Motions.</b> Offers, competitors and definitions as proposals, lane senders with daily caps, and page readiness in SEO.</li>
+</ul>
+<h2>Known limits</h2>
+<ul>
+<li><b>No live check against real app accounts.</b> Everything was tested against fake providers.</li>
+<li><b>Envelope grants for agents stay off.</b> The owner-signed envelope has its tables and card, but nothing enforces it yet; the next steps need this release published first. The authenticator for passkeys is not built.</li>
+<li><b>Environment-limited and per-kind agent key presets</b> cannot be expressed yet.</li>
+<li><b>Planned for 0.3.2:</b> moving the owner password out of <code>.env</code>, holding the re-index spend under Dry Mode, the other messaging channels through the messaging add-on (WhatsApp and email through it first), the remaining Ads and SEO/GEO refinements, and a review of the Gong, Calendly, BigQuery and Snowflake scoping changes.</li>
+<li><b>A few browser walks were not run before this note</b>.</li>
+</ul>
+<h2>Upgrade</h2>
+<p>An upgrade never touches, removes or loses your data. Every migration only adds, the updater takes a verified backup first, and a failed upgrade rolls back by swapping the images.</p>
+<p>0.3.1 is reached <b>from 0.3.0</b>. It needs <code>@gtmos/cli</code> 0.3.1 or newer.</p>
+<ol>
+<li><b>Upgrade the CLI first.</b><pre><code>npm i -g @gtmos/cli@latest</code></pre></li>
+<li><b>See what is available.</b> This changes nothing.<pre><code>gtm upgrade --check</code></pre></li>
+<li><b>Rehearse, then upgrade.</b> Run from your instance folder, or pass <code>--dir &lt;path&gt;</code>.<pre><code>gtm upgrade --to 0.3.1 --dry-run
+gtm upgrade --to 0.3.1</code></pre></li>
+</ol>
+<p>If anything fails, <code>gtm upgrade --rollback 0.3.0</code> swaps the images back; the database is never restored. Read "Before you upgrade" above first.</p>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>GTM OS by AY Automate. Rendered from <a href="https://github.com/ay-automate/gtmos-releases/blob/main/releases/0.3.0.md">releases/0.3.0.md</a>.</p>
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="user-guide.html#upgrade">Upgrade guide</a></li>
+      <li><a href="https://github.com/ay-automate/gtmos-releases/issues">Support</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

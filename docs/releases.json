@@ -1,12 +1,30 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-16T23:41:34.362Z",
-  "expiresAt": "2027-02-14T23:41:34.362Z",
+  "generatedAt": "2026-11-22T22:13:28.465Z",
+  "expiresAt": "2027-02-20T22:13:28.465Z",
   "channels": {
-    "beta": "0.3.0",
+    "beta": "0.3.1",
     "stable": "0.3.0"
   },
   "releases": [
+    {
+      "version": "0.3.1",
+      "date": "2026-11-22T22:13:28.465Z",
+      "channel": "beta",
+      "security": false,
+      "summary": "GTM OS 0.3.1: simpler solo setup, safer agents over MCP, and fixes from a live setup",
+      "notesUrl": "https://ay-automate.github.io/gtmos-releases/release-0.3.1.html",
+      "minCliVersion": "0.3.1",
+      "minFromVersion": "0.3.0",
+      "requiredStops": [],
+      "additiveOnly": true,
+      "images": {
+        "api": "sha256:e229cb3d49529ecd7802b55f3cf2afe3e3fc862e0b005705dfbea5b4c5929939",
+        "console": "sha256:41c044fde98fee6667a021a87b0ed08e220cf3695f1a3ee9f09dcef9b53f1e4a",
+        "mcp": "sha256:dcbac1d5fe2d9e9a695f834bddc715ef8d9a815fb14f7e2a32d4cd1bc20f3dfd",
+        "worker": "sha256:048410749965e49f954e8c50083edab3dea87ca94c65b958831f4d45cacd52b6"
+      }
+    },
     {
       "version": "0.3.0",
       "date": "2026-11-16T23:41:34.362Z",
