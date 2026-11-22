@@ -4,20 +4,20 @@ Public releases of **GTM OS**, the self-hosted operating system for go-to-market
 
 This repository holds **releases and documentation only**. The source code is not published here.
 
-## Latest: GTM OS 0.3.0 (CLI 0.3.0), 2026-11-16
+## Latest: GTM OS 0.3.1 (CLI 0.3.1), 2026-11-22
 
-0.3.0 is the stable release: a plain install and `gtm upgrade --channel stable` give you 0.3.0.
+0.3.1 is the stable release: a plain install and `gtm upgrade --channel stable` give you 0.3.1.
 
 | What | Where |
 |---|---|
-| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) 0.3.0 (`npm i -g @gtmos/cli@0.3.0`) |
-| Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.3.0` (also `stable`), listed under this repo's Packages |
-| Release notes | [releases/0.3.0.md](releases/0.3.0.md) and the [GitHub release v0.3.0](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.3.0) |
+| CLI | npm: [`@gtmos/cli`](https://www.npmjs.com/package/@gtmos/cli) 0.3.1 (`npm i -g @gtmos/cli@0.3.1`) |
+| Images | `ghcr.io/ay-automate/gtmos-{api,worker,mcp,console}:0.3.1` (also `stable`), listed under this repo's Packages |
+| Release notes | [releases/0.3.1.md](releases/0.3.1.md) and the [GitHub release v0.3.1](https://github.com/ay-automate/gtmos-releases/releases/tag/v0.3.1) |
 | Video series | https://ay-automate.github.io/gtmos-releases/videos/index.html |
 | User guide | https://ay-automate.github.io/gtmos-releases/user-guide.html |
 | Product documentation | https://ay-automate.github.io/gtmos-releases/product-documentation.html |
 
-Earlier releases are kept for history: [0.2.6](releases/0.2.6.md), [0.2.5](releases/0.2.5.md), [0.2.2](releases/0.2.2.md).
+Earlier releases are kept for history: [0.3.0](releases/0.3.0.md), [0.2.6](releases/0.2.6.md), [0.2.5](releases/0.2.5.md), [0.2.2](releases/0.2.2.md).
 
 **Before you rely on 0.3.0.** Live checks against real app accounts were not run for this release, so the new mapping packs and recipe templates are beta. You link your integrations account with a project key (`ak_`) only; there is no sign-in. 0.3.0 is reached from 0.2.6 only, agent keys that used the old `composio.*` operations need a grant after the upgrade, and organizations on a dedicated database are not migrated by the upgrade. Read the [upgrade section](releases/0.3.0.md#upgrade) first.
 
@@ -48,7 +48,7 @@ Claude installs GTM OS, creates your organization with an owner and a second app
 Manual setup, without Claude:
 
 ```bash
-gtm setup ./instance --org "Acme" --email you@acme.com --approver-email ops@acme.com --version 0.3.0
+gtm setup ./instance --org "Acme" --email you@acme.com --approver-email ops@acme.com --version 0.3.1
 ```
 
 The owner and approver passwords are saved in `./instance/.env`. Sign in to the console (http://localhost:3000), create an agent key in **Settings > Developer**, then connect the CLI and check the install:
